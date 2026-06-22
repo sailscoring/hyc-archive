@@ -1,0 +1,3833 @@
+
+
+
+<!doctype html>
+
+<head>
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta http-equiv="Cache-control" content="no-cache">
+<meta name="description" content="sailwave results">
+<meta name="viewport" content="width=device-width">
+
+<title>Sailwave results for Brass Monkeys  - Winter Series 2024 at Howth Yacht Club <br> 2024</title>
+
+<style type="text/css">
+body {font: 80% arial, helvetica, sans-serif; text-align: center;}
+.hardleft  {text-align: left; float: left;  margin: 15px 0  15px 25px;}
+.hardright {text-align: right; float: right; margin: 15px 25px 15px 0;}
+table {text-align: left; margin: 0px auto 30px auto; font-size: 1em; border-collapse: collapse; border: 1px #999 solid;}
+td, th {padding: 4px; border: 1px #999 solid; vertical-align: top;}
+.caption {padding: 5px; text-align: center; border: 0; font-weight: bold;}
+p {text-align: center;}
+.contents {text-align: left; margin-left: 20%;}
+.race {background-color: #eee;}
+.odd {background-color: #eef;}
+.natflag {border: 1px #999 solid;}
+.nattext {font-size: 0.8em;}
+.place1 {font-weight: bold; background-color: #ffffaa;}
+.place2 {font-weight: bold; background-color: #aaaaff;}
+.place3 {font-weight: bold; background-color: #ffaaaa;}
+.placen {}
+table.headertable {border: 0px;}
+table.headertable td{border: 0px;}
+</style>
+
+<script type="text/javascript">
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script>
+
+function swGetURLArgs() {
+
+  var url = location.href;
+  var qs  = url.substring(url.indexOf('?') + 1).split('&');
+
+  for(var i = 0, result = {}; i < qs.length; i++) {
+    qs[i]            = qs[i].split('=');
+    result[qs[i][0]] = decodeURIComponent(qs[i][1]);
+  }
+
+  return result;
+}
+
+//
+//  name=HighlightWins3v3
+//  dependencies=jQuery
+//  description=Highlight winning scores in summary tables.
+//  author=Jon Eskdale based on an idea by Colin Jenkins
+//  date=2016-07-04
+//  version=3.0  For use with Sailwave from V2.22.x
+//  Requires the following lines in the Results.htm file (Results.htm is in the Templates directory)
+//  string.set("summary.col.race.rank1.td",   "rank1")
+//  string.set("summary.col.race.rank2.td",   "rank2")
+//  string.set("summary.col.race.rank3.td",   "rank3")
+
+//  url=http://sailwave.com
+//  email=jon@sailwave.com
+//  twitter=eskdale
+//  comments=Edit colours to colours of your choice
+//
+
+$(document).ready(function() {
+var selectorRank1 = '.rank1';
+var selectorRank2 = '.rank2';
+var selectorRank3 = '.rank3';
+
+// Results with these codes will not get highlighted add or remove codes to your choice
+var ignoreText   = /^(?!.*\b(DNC|DNF|DNS|OCS|BFD|UFD|RET|DSQ|DGM|DNE)\b).*/i
+
+// Edit these colours to change the highlight colours for 1st, 2nd and 3rd
+var winsColour   = '#ffd700';
+var twoColour    = '#6a91c5';
+var threeColour  = '#da6841';
+
+
+// Change the background color for cells with class of rank1-3 and don't have a code specified
+$(function () {
+
+  $(selectorRank1).filter(function() {
+    return ignoreText.test($(this).text());
+  }).css("background", winsColour);
+  $(selectorRank2).filter(function() {
+        return ignoreText.test($(this).text());
+  }).css("background", twoColour);
+  $(selectorRank3).filter(function() {
+        return ignoreText.test($(this).text());
+  }).css("background", threeColour);
+
+});
+});
+</script>
+
+</head>
+
+<body>
+
+<header>
+</header>
+<table class="headertable" cellspacing="0" width="100%" cellpadding="0" border="0">
+<tbody>
+<div id="wrap">
+
+<tr>
+<td width="30%">
+<img style="display:block; height:100px;"  src="https://hyc.ie/assets/logo-5a615b18e52275b60e166edcca88c6c4.png" alt="venue burgee" />
+</td>
+
+<td width="40%" align="center">
+<h1>Brass Monkeys  - Winter Series 2024</h1>
+<h2>Howth Yacht Club <br></h2>
+</td>
+
+<td width="30%">
+<img style="display:block; height:100px;" src="https://hyc.ie/system/sponsor_logos/511/thumb/Euro_Car_Parks_square.png" alt="event burgee" align="right" />
+</td>
+</tr>
+</tbody>
+</table>
+
+<div style="clear:both;"></div>
+
+<style>
+div.applicant-break {page-break-after:always;}
+</style>
+<h3 class="seriestitle">Provisional Results as of 14:27 on December 14, 2024</h3>
+<h3 class="summarytitle" id="summaryclass_1_ns_hph">Class 1 NS HPH Fleet</h3>
+<div class="caption summarycaption">Sailed: 6, Discards: 1, To count: 5, Rating system: NHC1, Entries: 13, Scoring system: Appendix A</div>
+<table class="summarytable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="14">
+<col class="rank" />
+<col class="boat" />
+<col class="sailno" />
+<col class="helmname" />
+<col class="club" />
+<col class="rating" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="total" />
+<col class="nett" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Boat Name</th>
+<th>Sail</th>
+<th>Owner(s)</th>
+<th>Club</th>
+<th>TCF</th>
+<th><a class="racelink" href="#r1class_1_ns_hph">R1</a></th>
+<th><a class="racelink" href="#r2class_1_ns_hph">R2</a></th>
+<th><a class="racelink" href="#r3class_1_ns_hph">R3</a></th>
+<th><a class="racelink" href="#r4class_1_ns_hph">R4</a></th>
+<th><a class="racelink" href="#r5class_1_ns_hph">R5</a></th>
+<th><a class="racelink" href="#r6class_1_ns_hph">Race 6</a></th>
+<th>Total</th>
+<th>Nett</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd summaryrow">
+<td>1st</td>
+<td>Arcturus</td>
+<td>1343</td>
+<td>Peter & Declan McCabe</td>
+<td>Howth YC</td>
+<td>0.940</td>
+<td>(9.0)</td>
+<td>4.0</td>
+<td>5.0</td>
+<td class="rank1">1.0</td>
+<td class="rank1">1.0</td>
+<td class="rank3">3.0</td>
+<td>23.0</td>
+<td>14.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>2nd</td>
+<td>Tiger</td>
+<td>4077</td>
+<td>Stephen Harris</td>
+<td>Howth YC</td>
+<td>1.070</td>
+<td>6.0</td>
+<td class="rank1">1.0</td>
+<td>(8.0)</td>
+<td class="rank3">3.0</td>
+<td class="rank2">2.0</td>
+<td>7.0</td>
+<td>27.0</td>
+<td>19.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>3rd</td>
+<td>Amuse II</td>
+<td>1766</td>
+<td>Niall & Jenny OLeary</td>
+<td>Howth YC</td>
+<td>1.014</td>
+<td>5.0</td>
+<td>(10.0)</td>
+<td class="rank3">3.0</td>
+<td>6.0</td>
+<td class="rank3">3.0</td>
+<td>4.0</td>
+<td>31.0</td>
+<td>21.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>4th</td>
+<td>Mary Ellen</td>
+<td>1430</td>
+<td>Carty, Finucane & O'Byrne</td>
+<td>Howth YC</td>
+<td>0.912</td>
+<td>4.0</td>
+<td class="rank3">3.0</td>
+<td>(7.0)</td>
+<td>4.0</td>
+<td>5.0</td>
+<td>5.0</td>
+<td>28.0</td>
+<td>21.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>5th</td>
+<td>Leeuwin</td>
+<td>971</td>
+<td>Eamonn Burke & Jay Murray</td>
+<td>Howth YC</td>
+<td>0.952</td>
+<td class="rank3">3.0</td>
+<td>8.0</td>
+<td>6.0</td>
+<td>(9.0)</td>
+<td>4.0</td>
+<td class="rank2">2.0</td>
+<td>32.0</td>
+<td>23.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>6th</td>
+<td>Flexit</td>
+<td>1950</td>
+<td>Michael Carroll</td>
+<td>Howth YC</td>
+<td>0.923</td>
+<td class="rank1">1.0</td>
+<td>(14.0 DNC)</td>
+<td class="rank1">1.0</td>
+<td>8.0</td>
+<td>6.0</td>
+<td>8.0</td>
+<td>38.0</td>
+<td>24.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>7th</td>
+<td>Bandersnatch of Howth</td>
+<td>2848</td>
+<td>Kyran O'Grady</td>
+<td>Howth YC</td>
+<td>0.880</td>
+<td>(7.0)</td>
+<td class="rank2">2.0</td>
+<td class="rank2">2.0</td>
+<td>7.0</td>
+<td>7.0</td>
+<td>6.0</td>
+<td>31.0</td>
+<td>24.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>8th</td>
+<td>Out & About</td>
+<td>2070</td>
+<td>Terry McCoy</td>
+<td>Howth YC / Skerries SC</td>
+<td>0.930</td>
+<td>(11.0)</td>
+<td>5.0</td>
+<td>9.0</td>
+<td class="rank2">2.0</td>
+<td>8.0</td>
+<td class="rank1">1.0</td>
+<td>36.0</td>
+<td>25.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>9th</td>
+<td>Helms Deep</td>
+<td>3337</td>
+<td>Paul Harrison</td>
+<td>Howth YC</td>
+<td>0.927</td>
+<td>8.0</td>
+<td>9.0</td>
+<td>4.0</td>
+<td>5.0</td>
+<td>(14.0 DNC)</td>
+<td>14.0 DNC</td>
+<td>54.0</td>
+<td>40.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>10th</td>
+<td>Splashdance</td>
+<td>4073</td>
+<td>Andy George</td>
+<td>Howth YC</td>
+<td>1.054</td>
+<td class="rank2">2.0</td>
+<td>6.0</td>
+<td>(14.0 DNC)</td>
+<td>14.0 DNC</td>
+<td>14.0 DNC</td>
+<td>14.0 DNC</td>
+<td>64.0</td>
+<td>50.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>11th</td>
+<td>Wardance</td>
+<td>7360</td>
+<td>Sean Hawkshaw</td>
+<td>Howth YC</td>
+<td>0.950</td>
+<td>10.0</td>
+<td>7.0</td>
+<td>(14.0 DNC)</td>
+<td>14.0 DNC</td>
+<td>14.0 DNC</td>
+<td>14.0 DNC</td>
+<td>73.0</td>
+<td>59.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>12th</td>
+<td>An Oifig</td>
+<td>4443</td>
+<td>Gerard Smyth</td>
+<td>Skerries SC</td>
+<td>0.955</td>
+<td>(14.0 RET)</td>
+<td>11.0</td>
+<td>14.0 DNC</td>
+<td>14.0 DNC</td>
+<td>14.0 DNC</td>
+<td>14.0 DNC</td>
+<td>81.0</td>
+<td>67.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>13th</td>
+<td>Pepsi</td>
+<td>633</td>
+<td>Doug Anderson & Mark Tattersall</td>
+<td>Howth YC</td>
+<td>0.955</td>
+<td>12.0</td>
+<td>(14.0 DNC)</td>
+<td>14.0 DNC</td>
+<td>14.0 DNC</td>
+<td>14.0 DNC</td>
+<td>14.0 DNC</td>
+<td>82.0</td>
+<td>68.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="summarytitle" id="summaryclass_3_ns_hph">Class 3 NS HPH Fleet</h3>
+<div class="caption summarycaption">Sailed: 6, Discards: 1, To count: 5, Rating system: NHC1, Entries: 11, Scoring system: Appendix A</div>
+<table class="summarytable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="14">
+<col class="rank" />
+<col class="boat" />
+<col class="sailno" />
+<col class="helmname" />
+<col class="club" />
+<col class="rating" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="total" />
+<col class="nett" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Boat Name</th>
+<th>Sail</th>
+<th>Owner(s)</th>
+<th>Club</th>
+<th>TCF</th>
+<th><a class="racelink" href="#r1class_3_ns_hph">R1</a></th>
+<th><a class="racelink" href="#r2class_3_ns_hph">R2</a></th>
+<th><a class="racelink" href="#r3class_3_ns_hph">R3</a></th>
+<th><a class="racelink" href="#r4class_3_ns_hph">R4</a></th>
+<th><a class="racelink" href="#r5class_3_ns_hph">R5</a></th>
+<th><a class="racelink" href="#r6class_3_ns_hph">Race 6</a></th>
+<th>Total</th>
+<th>Nett</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd summaryrow">
+<td>1st</td>
+<td>Jokers Wild</td>
+<td>8151</td>
+<td>Flood & Greene</td>
+<td>Howth YC</td>
+<td>0.920</td>
+<td class="rank1">1.0</td>
+<td>4.0</td>
+<td>(6.0)</td>
+<td class="rank3">3.0</td>
+<td class="rank1">1.0</td>
+<td class="rank1">1.0</td>
+<td>16.0</td>
+<td>10.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>2nd</td>
+<td>Thar Saile</td>
+<td>1202</td>
+<td>Caoimhin O'Laoi</td>
+<td>Howth YC</td>
+<td>0.850</td>
+<td>(8.0)</td>
+<td class="rank1">1.0</td>
+<td class="rank3">3.0</td>
+<td class="rank2">2.0</td>
+<td class="rank3">3.0</td>
+<td class="rank3">3.0</td>
+<td>20.0</td>
+<td>12.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>3rd</td>
+<td>C'est La Vie</td>
+<td>956</td>
+<td>Flannelly, Spain & Staines</td>
+<td>Howth YC</td>
+<td>0.885</td>
+<td>6.0</td>
+<td class="rank2">2.0</td>
+<td class="rank2">2.0</td>
+<td class="rank1">1.0</td>
+<td>(7.0)</td>
+<td>4.0</td>
+<td>22.0</td>
+<td>15.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>4th</td>
+<td>Timballoo</td>
+<td>1603</td>
+<td>Lundy & Dunne</td>
+<td>Howth YC / Malahide YC</td>
+<td>0.890</td>
+<td class="rank3">3.0</td>
+<td>5.0</td>
+<td>5.0</td>
+<td>5.0</td>
+<td>(6.0)</td>
+<td class="rank2">2.0</td>
+<td>26.0</td>
+<td>20.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>5th</td>
+<td>Shenanigans</td>
+<td>791</td>
+<td>Douglas & Keane</td>
+<td>Malahide YC</td>
+<td>0.900</td>
+<td>4.0</td>
+<td>(7.0)</td>
+<td>4.0</td>
+<td>6.0</td>
+<td class="rank2">2.0</td>
+<td>7.0</td>
+<td>30.0</td>
+<td>23.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>6th</td>
+<td>Phixius</td>
+<td>11311</td>
+<td>Ray, Costello, Quigley & McShera</td>
+<td>Howth YC</td>
+<td>0.820</td>
+<td>7.0</td>
+<td class="rank3">3.0</td>
+<td class="rank1">1.0</td>
+<td>4.0</td>
+<td>(9.0)</td>
+<td>9.0</td>
+<td>33.0</td>
+<td>24.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>7th</td>
+<td>Mistoffelees</td>
+<td>1793</td>
+<td>Enda Mulvihill</td>
+<td>Howth YC</td>
+<td>0.920</td>
+<td>5.0</td>
+<td>6.0</td>
+<td>(7.0)</td>
+<td>7.0</td>
+<td>4.0</td>
+<td>6.0</td>
+<td>35.0</td>
+<td>28.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>8th</td>
+<td>Battling J</td>
+<td>4084</td>
+<td>MYC J24 Race Team</td>
+<td>Malahide YC</td>
+<td>0.970</td>
+<td class="rank2">2.0</td>
+<td>(10.0)</td>
+<td>8.0</td>
+<td>8.0</td>
+<td>5.0</td>
+<td>8.0</td>
+<td>41.0</td>
+<td>31.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>9th</td>
+<td>Panache</td>
+<td>1456</td>
+<td>Brendan Gearon</td>
+<td>Howth YC</td>
+<td>0.800</td>
+<td>11.0 RET</td>
+<td>8.0</td>
+<td>(12.0 DNC)</td>
+<td>12.0 DNC</td>
+<td>8.0</td>
+<td>5.0</td>
+<td>56.0</td>
+<td>44.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>10th</td>
+<td>Blue Roan</td>
+<td>257</td>
+<td>Greg Quirke</td>
+<td>Howth YC</td>
+<td>0.850</td>
+<td>9.0</td>
+<td>(12.0 DNC)</td>
+<td>9.0</td>
+<td>10.0 DNS</td>
+<td>12.0 DNC</td>
+<td>12.0 DNC</td>
+<td>64.0</td>
+<td>52.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>11th</td>
+<td>Badger</td>
+<td>9990</td>
+<td>Mark & Paul Rossiter</td>
+<td>Howth YC</td>
+<td>0.910</td>
+<td>(12.0 DNC)</td>
+<td>9.0</td>
+<td>12.0 DNC</td>
+<td>12.0 DNC</td>
+<td>12.0 DNC</td>
+<td>12.0 DNC</td>
+<td>69.0</td>
+<td>57.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="summarytitle" id="summaryclass_2_hph">Class 2 HPH Fleet</h3>
+<div class="caption summarycaption">Sailed: 6, Discards: 1, To count: 5, Rating system: NHC1, Entries: 7, Scoring system: Appendix A</div>
+<table class="summarytable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="14">
+<col class="rank" />
+<col class="boat" />
+<col class="sailno" />
+<col class="helmname" />
+<col class="club" />
+<col class="rating" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="total" />
+<col class="nett" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Boat Name</th>
+<th>Sail</th>
+<th>Owner(s)</th>
+<th>Club</th>
+<th>TCF</th>
+<th><a class="racelink" href="#r1class_2_hph">R1</a></th>
+<th><a class="racelink" href="#r2class_2_hph">R2</a></th>
+<th><a class="racelink" href="#r3class_2_hph">R3</a></th>
+<th><a class="racelink" href="#r4class_2_hph">R4</a></th>
+<th><a class="racelink" href="#r5class_2_hph">R5</a></th>
+<th><a class="racelink" href="#r6class_2_hph">Race 6</a></th>
+<th>Total</th>
+<th>Nett</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd summaryrow">
+<td>1st</td>
+<td>NYYC Dev Team</td>
+<td>726</td>
+<td>Darren Wright</td>
+<td>Howth YC</td>
+<td>0.930</td>
+<td class="rank1">1.0</td>
+<td class="rank2">(2.0)</td>
+<td class="rank1">1.0</td>
+<td class="rank2">2.0</td>
+<td class="rank2">2.0</td>
+<td class="rank1">1.0</td>
+<td>9.0</td>
+<td>7.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>2nd</td>
+<td>Age Before Beauty</td>
+<td>393</td>
+<td>David Cullen</td>
+<td>Howth YC</td>
+<td>0.930</td>
+<td class="rank3">3.0</td>
+<td class="rank1">1.0</td>
+<td>4.0</td>
+<td>(5.0)</td>
+<td>4.0</td>
+<td>4.0</td>
+<td>21.0</td>
+<td>16.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>3rd</td>
+<td>Fifty Shades Of Spray</td>
+<td>527</td>
+<td>Jonny Sargent & David Johnston</td>
+<td>Howth YC</td>
+<td>0.930</td>
+<td class="rank2">2.0</td>
+<td class="rank3">3.0</td>
+<td>5.0</td>
+<td class="rank1">1.0</td>
+<td>(6.0)</td>
+<td>6.0</td>
+<td>23.0</td>
+<td>17.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>4th</td>
+<td>Jawesome III</td>
+<td>260</td>
+<td>Jeremy Beshoff</td>
+<td>Howth YC</td>
+<td>0.950</td>
+<td>5.0</td>
+<td>(6.0)</td>
+<td class="rank3">3.0</td>
+<td class="rank3">3.0</td>
+<td>5.0</td>
+<td class="rank2">2.0</td>
+<td>24.0</td>
+<td>18.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>5th</td>
+<td>Any Ideas</td>
+<td>1024</td>
+<td>Philip Bryne & Linda Darbey</td>
+<td>Howth YC</td>
+<td>0.910</td>
+<td>(6.0)</td>
+<td>4.0</td>
+<td class="rank2">2.0</td>
+<td>4.0</td>
+<td class="rank3">3.0</td>
+<td>5.0</td>
+<td>24.0</td>
+<td>18.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>6th</td>
+<td>Indian</td>
+<td>1543</td>
+<td>Simon Knowles</td>
+<td>Howth YC</td>
+<td>1.002</td>
+<td>4.0</td>
+<td>5.0</td>
+<td>6.0</td>
+<td>(8.0 RET)</td>
+<td class="rank1">1.0</td>
+<td class="rank3">3.0</td>
+<td>27.0</td>
+<td>19.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>7th</td>
+<td>Chinook</td>
+<td>17793</td>
+<td>Brian Skehan</td>
+<td>Howth YC</td>
+<td>0.850</td>
+<td>(8.0 RET)</td>
+<td>7.0</td>
+<td>7.0</td>
+<td>8.0 RET</td>
+<td>7.0</td>
+<td>7.0</td>
+<td>44.0</td>
+<td>36.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r1class_1_ns_hph">R1 - Class 1 NS HPH Fleet&nbsp;-&nbsp;Nov 10th</h3>
+<div class="caption racecaption">
+Start: Start 2, Finishes: Finish time, Time: 10.35.00
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="11">
+<col class="rank" />
+<col class="boat" />
+<col class="sailno" />
+<col class="helmname" />
+<col class="club" />
+<col class="rating" />
+<col class="start" />
+<col class="finish" />
+<col class="elapsed" />
+<col class="corrected" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Boat Name</th>
+<th>Sail</th>
+<th>Owner(s)</th>
+<th>Club</th>
+<th>TCF</th>
+<th>Start</th>
+<th>Finish</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>Flexit</td>
+<td>1950</td>
+<td>Michael Carroll</td>
+<td>Howth YC</td>
+<td>0.923</td>
+<td>10.35.00</td>
+<td>12.06.40</td>
+<td>1.31.40</td>
+<td>1.24.37</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>Splashdance</td>
+<td>4073</td>
+<td>Andy George</td>
+<td>Howth YC</td>
+<td>1.054</td>
+<td>10.35.00</td>
+<td>11.55.26</td>
+<td>1.20.26</td>
+<td>1.24.47</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>Leeuwin</td>
+<td>971</td>
+<td>Eamonn Burke & Jay Murray</td>
+<td>Howth YC</td>
+<td>0.952</td>
+<td>10.35.00</td>
+<td>12.04.42</td>
+<td>1.29.42</td>
+<td>1.25.24</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>Mary Ellen</td>
+<td>1430</td>
+<td>Carty, Finucane & O'Byrne</td>
+<td>Howth YC</td>
+<td>0.912</td>
+<td>10.35.00</td>
+<td>12.08.44</td>
+<td>1.33.44</td>
+<td>1.25.29</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>Amuse II</td>
+<td>1766</td>
+<td>Niall & Jenny OLeary</td>
+<td>Howth YC</td>
+<td>1.014</td>
+<td>10.35.00</td>
+<td>11.59.51</td>
+<td>1.24.51</td>
+<td>1.26.02</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>Tiger</td>
+<td>4077</td>
+<td>Stephen Harris</td>
+<td>Howth YC</td>
+<td>1.070</td>
+<td>10.35.00</td>
+<td>11.55.25</td>
+<td>1.20.25</td>
+<td>1.26.03</td>
+<td>6.0</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>Bandersnatch of Howth</td>
+<td>2848</td>
+<td>Kyran O'Grady</td>
+<td>Howth YC</td>
+<td>0.880</td>
+<td>10.35.00</td>
+<td>12.13.26</td>
+<td>1.38.26</td>
+<td>1.26.37</td>
+<td>7.0</td>
+</tr>
+<tr class="even racerow">
+<td>8</td>
+<td>Helms Deep</td>
+<td>3337</td>
+<td>Paul Harrison</td>
+<td>Howth YC</td>
+<td>0.927</td>
+<td>10.35.00</td>
+<td>12.08.44</td>
+<td>1.33.44</td>
+<td>1.26.53</td>
+<td>8.0</td>
+</tr>
+<tr class="odd racerow">
+<td>9</td>
+<td>Arcturus</td>
+<td>1343</td>
+<td>Peter & Declan McCabe</td>
+<td>Howth YC</td>
+<td>0.940</td>
+<td>10.35.00</td>
+<td>12.10.27</td>
+<td>1.35.27</td>
+<td>1.29.43</td>
+<td>9.0</td>
+</tr>
+<tr class="even racerow">
+<td>10</td>
+<td>Wardance</td>
+<td>7360</td>
+<td>Sean Hawkshaw</td>
+<td>Howth YC</td>
+<td>0.950</td>
+<td>10.35.00</td>
+<td>12.10.33</td>
+<td>1.35.33</td>
+<td>1.30.46</td>
+<td>10.0</td>
+</tr>
+<tr class="odd racerow">
+<td>11</td>
+<td>Out & About</td>
+<td>2070</td>
+<td>Terry McCoy</td>
+<td>Howth YC / Skerries SC</td>
+<td>0.930</td>
+<td>10.35.00</td>
+<td>12.14.36</td>
+<td>1.39.36</td>
+<td>1.32.38</td>
+<td>11.0</td>
+</tr>
+<tr class="even racerow">
+<td>12</td>
+<td>Pepsi</td>
+<td>633</td>
+<td>Doug Anderson & Mark Tattersall</td>
+<td>Howth YC</td>
+<td>0.955</td>
+<td>10.35.00</td>
+<td>12.14.22</td>
+<td>1.39.22</td>
+<td>1.34.54</td>
+<td>12.0</td>
+</tr>
+<tr class="odd racerow">
+<td>13</td>
+<td>An Oifig</td>
+<td>4443</td>
+<td>Gerard Smyth</td>
+<td>Skerries SC</td>
+<td>0.955</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>RET</td>
+<td>&nbsp;</td>
+<td>14.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r2class_1_ns_hph">R2 - Class 1 NS HPH Fleet&nbsp;-&nbsp;Nov 17th</h3>
+<div class="caption racecaption">
+Start: Start 2, Finishes: Finish time, Time: 10.35.00
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="11">
+<col class="rank" />
+<col class="boat" />
+<col class="sailno" />
+<col class="helmname" />
+<col class="club" />
+<col class="rating" />
+<col class="start" />
+<col class="finish" />
+<col class="elapsed" />
+<col class="corrected" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Boat Name</th>
+<th>Sail</th>
+<th>Owner(s)</th>
+<th>Club</th>
+<th>TCF</th>
+<th>Start</th>
+<th>Finish</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>Tiger</td>
+<td>4077</td>
+<td>Stephen Harris</td>
+<td>Howth YC</td>
+<td>1.072</td>
+<td>10.35.00</td>
+<td>11.35.39</td>
+<td>1.00.39</td>
+<td>1.05.01</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>Bandersnatch of Howth</td>
+<td>2848</td>
+<td>Kyran O'Grady</td>
+<td>Howth YC</td>
+<td>0.880</td>
+<td>10.35.00</td>
+<td>11.49.12</td>
+<td>1.14.12</td>
+<td>1.05.18</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>Mary Ellen</td>
+<td>1430</td>
+<td>Carty, Finucane & O'Byrne</td>
+<td>Howth YC</td>
+<td>0.915</td>
+<td>10.35.00</td>
+<td>11.47.20</td>
+<td>1.12.20</td>
+<td>1.06.11</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>Arcturus</td>
+<td>1343</td>
+<td>Peter & Declan McCabe</td>
+<td>Howth YC</td>
+<td>0.935</td>
+<td>10.35.00</td>
+<td>11.47.34</td>
+<td>1.12.34</td>
+<td>1.07.51</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>Out & About</td>
+<td>2070</td>
+<td>Terry McCoy</td>
+<td>Howth YC / Skerries SC</td>
+<td>0.926</td>
+<td>10.35.00</td>
+<td>11.48.18</td>
+<td>1.13.18</td>
+<td>1.07.53</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>Splashdance</td>
+<td>4073</td>
+<td>Andy George</td>
+<td>Howth YC</td>
+<td>1.060</td>
+<td>10.35.00</td>
+<td>11.40.41</td>
+<td>1.05.41</td>
+<td>1.09.37</td>
+<td>6.0</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>Wardance</td>
+<td>7360</td>
+<td>Sean Hawkshaw</td>
+<td>Howth YC</td>
+<td>0.943</td>
+<td>10.35.00</td>
+<td>11.49.01</td>
+<td>1.14.01</td>
+<td>1.09.48</td>
+<td>7.0</td>
+</tr>
+<tr class="even racerow">
+<td>8</td>
+<td>Leeuwin</td>
+<td>971</td>
+<td>Eamonn Burke & Jay Murray</td>
+<td>Howth YC</td>
+<td>0.956</td>
+<td>10.35.00</td>
+<td>11.48.09</td>
+<td>1.13.09</td>
+<td>1.09.56</td>
+<td>8.0</td>
+</tr>
+<tr class="odd racerow">
+<td>9</td>
+<td>Helms Deep</td>
+<td>3337</td>
+<td>Paul Harrison</td>
+<td>Howth YC</td>
+<td>0.926</td>
+<td>10.35.00</td>
+<td>11.51.23</td>
+<td>1.16.23</td>
+<td>1.10.44</td>
+<td>9.0</td>
+</tr>
+<tr class="even racerow">
+<td>10</td>
+<td>Amuse II</td>
+<td>1766</td>
+<td>Niall & Jenny OLeary</td>
+<td>Howth YC</td>
+<td>1.016</td>
+<td>10.35.00</td>
+<td>11.45.56</td>
+<td>1.10.56</td>
+<td>1.12.04</td>
+<td>10.0</td>
+</tr>
+<tr class="odd racerow">
+<td>11</td>
+<td>An Oifig</td>
+<td>4443</td>
+<td>Gerard Smyth</td>
+<td>Skerries SC</td>
+<td>0.955</td>
+<td>10.35.00</td>
+<td>11.51.40</td>
+<td>1.16.40</td>
+<td>1.13.13</td>
+<td>11.0</td>
+</tr>
+<tr class="even racerow">
+<td>12</td>
+<td>Flexit</td>
+<td>1950</td>
+<td>Michael Carroll</td>
+<td>Howth YC</td>
+<td>0.929</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>DNC</td>
+<td>&nbsp;</td>
+<td>14.0</td>
+</tr>
+<tr class="odd racerow">
+<td>12</td>
+<td>Pepsi</td>
+<td>633</td>
+<td>Doug Anderson & Mark Tattersall</td>
+<td>Howth YC</td>
+<td>0.949</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>DNC</td>
+<td>&nbsp;</td>
+<td>14.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r3class_1_ns_hph">R3 - Class 1 NS HPH Fleet&nbsp;-&nbsp;Dec 1st</h3>
+<div class="caption racecaption">
+Start: Start 2, Finishes: Finish time, Time: 10.45.00
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="11">
+<col class="rank" />
+<col class="boat" />
+<col class="sailno" />
+<col class="helmname" />
+<col class="club" />
+<col class="rating" />
+<col class="start" />
+<col class="finish" />
+<col class="elapsed" />
+<col class="corrected" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Boat Name</th>
+<th>Sail</th>
+<th>Owner(s)</th>
+<th>Club</th>
+<th>TCF</th>
+<th>Start</th>
+<th>Finish</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>Flexit</td>
+<td>1950</td>
+<td>Michael Carroll</td>
+<td>Howth YC</td>
+<td>0.929</td>
+<td>10.45.00</td>
+<td>11.36.27</td>
+<td>0.51.27</td>
+<td>0.47.48</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>Bandersnatch of Howth</td>
+<td>2848</td>
+<td>Kyran O'Grady</td>
+<td>Howth YC</td>
+<td>0.891</td>
+<td>10.45.00</td>
+<td>11.38.54</td>
+<td>0.53.54</td>
+<td>0.48.01</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>Amuse II</td>
+<td>1766</td>
+<td>Niall & Jenny OLeary</td>
+<td>Howth YC</td>
+<td>1.011</td>
+<td>10.45.00</td>
+<td>11.32.37</td>
+<td>0.47.37</td>
+<td>0.48.08</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>Helms Deep</td>
+<td>3337</td>
+<td>Paul Harrison</td>
+<td>Howth YC</td>
+<td>0.920</td>
+<td>10.45.00</td>
+<td>11.38.29</td>
+<td>0.53.29</td>
+<td>0.49.12</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>Arcturus</td>
+<td>1343</td>
+<td>Peter & Declan McCabe</td>
+<td>Howth YC</td>
+<td>0.936</td>
+<td>10.45.00</td>
+<td>11.37.54</td>
+<td>0.52.54</td>
+<td>0.49.31</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>Leeuwin</td>
+<td>971</td>
+<td>Eamonn Burke & Jay Murray</td>
+<td>Howth YC</td>
+<td>0.952</td>
+<td>10.45.00</td>
+<td>11.37.23</td>
+<td>0.52.23</td>
+<td>0.49.52</td>
+<td>6.0</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>Mary Ellen</td>
+<td>1430</td>
+<td>Carty, Finucane & O'Byrne</td>
+<td>Howth YC</td>
+<td>0.923</td>
+<td>10.45.00</td>
+<td>11.39.34</td>
+<td>0.54.34</td>
+<td>0.50.22</td>
+<td>7.0</td>
+</tr>
+<tr class="even racerow">
+<td>8</td>
+<td>Tiger</td>
+<td>4077</td>
+<td>Stephen Harris</td>
+<td>Howth YC</td>
+<td>1.080</td>
+<td>10.45.00</td>
+<td>11.31.39</td>
+<td>0.46.39</td>
+<td>0.50.23</td>
+<td>8.0</td>
+</tr>
+<tr class="odd racerow">
+<td>9</td>
+<td>Out & About</td>
+<td>2070</td>
+<td>Terry McCoy</td>
+<td>Howth YC / Skerries SC</td>
+<td>0.927</td>
+<td>10.45.00</td>
+<td>11.40.15</td>
+<td>0.55.15</td>
+<td>0.51.13</td>
+<td>9.0</td>
+</tr>
+<tr class="even racerow">
+<td>10</td>
+<td>Splashdance</td>
+<td>4073</td>
+<td>Andy George</td>
+<td>Howth YC</td>
+<td>1.056</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>DNC</td>
+<td>&nbsp;</td>
+<td>14.0</td>
+</tr>
+<tr class="odd racerow">
+<td>10</td>
+<td>Wardance</td>
+<td>7360</td>
+<td>Sean Hawkshaw</td>
+<td>Howth YC</td>
+<td>0.939</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>DNC</td>
+<td>&nbsp;</td>
+<td>14.0</td>
+</tr>
+<tr class="even racerow">
+<td>10</td>
+<td>An Oifig</td>
+<td>4443</td>
+<td>Gerard Smyth</td>
+<td>Skerries SC</td>
+<td>0.949</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>DNC</td>
+<td>&nbsp;</td>
+<td>14.0</td>
+</tr>
+<tr class="odd racerow">
+<td>10</td>
+<td>Pepsi</td>
+<td>633</td>
+<td>Doug Anderson & Mark Tattersall</td>
+<td>Howth YC</td>
+<td>0.949</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>DNC</td>
+<td>&nbsp;</td>
+<td>14.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r4class_1_ns_hph">R4 - Class 1 NS HPH Fleet&nbsp;-&nbsp;Dec 1st</h3>
+<div class="caption racecaption">
+Start: Start 2, Finishes: Finish time, Time: 12.15.00
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="11">
+<col class="rank" />
+<col class="boat" />
+<col class="sailno" />
+<col class="helmname" />
+<col class="club" />
+<col class="rating" />
+<col class="start" />
+<col class="finish" />
+<col class="elapsed" />
+<col class="corrected" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Boat Name</th>
+<th>Sail</th>
+<th>Owner(s)</th>
+<th>Club</th>
+<th>TCF</th>
+<th>Start</th>
+<th>Finish</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>Arcturus</td>
+<td>1343</td>
+<td>Peter & Declan McCabe</td>
+<td>Howth YC</td>
+<td>0.932</td>
+<td>12.15.00</td>
+<td>12.56.40</td>
+<td>0.41.40</td>
+<td>0.38.50</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>Out & About</td>
+<td>2070</td>
+<td>Terry McCoy</td>
+<td>Howth YC / Skerries SC</td>
+<td>0.921</td>
+<td>12.15.00</td>
+<td>12.57.33</td>
+<td>0.42.33</td>
+<td>0.39.11</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>Tiger</td>
+<td>4077</td>
+<td>Stephen Harris</td>
+<td>Howth YC</td>
+<td>1.072</td>
+<td>12.15.00</td>
+<td>12.52.13</td>
+<td>0.37.13</td>
+<td>0.39.54</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>Mary Ellen</td>
+<td>1430</td>
+<td>Carty, Finucane & O'Byrne</td>
+<td>Howth YC</td>
+<td>0.917</td>
+<td>12.15.00</td>
+<td>12.59.47</td>
+<td>0.44.47</td>
+<td>0.41.04</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>Helms Deep</td>
+<td>3337</td>
+<td>Paul Harrison</td>
+<td>Howth YC</td>
+<td>0.917</td>
+<td>12.15.00</td>
+<td>13.00.01</td>
+<td>0.45.01</td>
+<td>0.41.17</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>Amuse II</td>
+<td>1766</td>
+<td>Niall & Jenny OLeary</td>
+<td>Howth YC</td>
+<td>1.014</td>
+<td>12.15.00</td>
+<td>12.56.14</td>
+<td>0.41.14</td>
+<td>0.41.49</td>
+<td>6.0</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>Bandersnatch of Howth</td>
+<td>2848</td>
+<td>Kyran O'Grady</td>
+<td>Howth YC</td>
+<td>0.894</td>
+<td>12.15.00</td>
+<td>13.01.58</td>
+<td>0.46.58</td>
+<td>0.41.59</td>
+<td>7.0</td>
+</tr>
+<tr class="even racerow">
+<td>8</td>
+<td>Flexit</td>
+<td>1950</td>
+<td>Michael Carroll</td>
+<td>Howth YC</td>
+<td>0.934</td>
+<td>12.15.00</td>
+<td>13.01.22</td>
+<td>0.46.22</td>
+<td>0.43.18</td>
+<td>8.0</td>
+</tr>
+<tr class="odd racerow">
+<td>9</td>
+<td>Leeuwin</td>
+<td>971</td>
+<td>Eamonn Burke & Jay Murray</td>
+<td>Howth YC</td>
+<td>0.947</td>
+<td>12.15.00</td>
+<td>13.00.59</td>
+<td>0.45.59</td>
+<td>0.43.33</td>
+<td>9.0</td>
+</tr>
+<tr class="even racerow">
+<td>10</td>
+<td>Splashdance</td>
+<td>4073</td>
+<td>Andy George</td>
+<td>Howth YC</td>
+<td>1.056</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>DNC</td>
+<td>&nbsp;</td>
+<td>14.0</td>
+</tr>
+<tr class="odd racerow">
+<td>10</td>
+<td>Wardance</td>
+<td>7360</td>
+<td>Sean Hawkshaw</td>
+<td>Howth YC</td>
+<td>0.939</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>DNC</td>
+<td>&nbsp;</td>
+<td>14.0</td>
+</tr>
+<tr class="even racerow">
+<td>10</td>
+<td>An Oifig</td>
+<td>4443</td>
+<td>Gerard Smyth</td>
+<td>Skerries SC</td>
+<td>0.949</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>DNC</td>
+<td>&nbsp;</td>
+<td>14.0</td>
+</tr>
+<tr class="odd racerow">
+<td>10</td>
+<td>Pepsi</td>
+<td>633</td>
+<td>Doug Anderson & Mark Tattersall</td>
+<td>Howth YC</td>
+<td>0.949</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>DNC</td>
+<td>&nbsp;</td>
+<td>14.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r5class_1_ns_hph">R5 - Class 1 NS HPH Fleet&nbsp;-&nbsp;Dec 14th</h3>
+<div class="caption racecaption">
+Start: Start 2, Finishes: Finish time, Time: 10.35.00
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="11">
+<col class="rank" />
+<col class="boat" />
+<col class="sailno" />
+<col class="helmname" />
+<col class="club" />
+<col class="rating" />
+<col class="start" />
+<col class="finish" />
+<col class="elapsed" />
+<col class="corrected" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Boat Name</th>
+<th>Sail</th>
+<th>Owner(s)</th>
+<th>Club</th>
+<th>TCF</th>
+<th>Start</th>
+<th>Finish</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>Arcturus</td>
+<td>1343</td>
+<td>Peter & Declan McCabe</td>
+<td>Howth YC</td>
+<td>0.939</td>
+<td>10.35.00</td>
+<td>11.12.45</td>
+<td>0.37.45</td>
+<td>0.35.27</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>Tiger</td>
+<td>4077</td>
+<td>Stephen Harris</td>
+<td>Howth YC</td>
+<td>1.078</td>
+<td>10.35.00</td>
+<td>11.07.56</td>
+<td>0.32.56</td>
+<td>0.35.30</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>Amuse II</td>
+<td>1766</td>
+<td>Niall & Jenny OLeary</td>
+<td>Howth YC</td>
+<td>1.009</td>
+<td>10.35.00</td>
+<td>11.10.35</td>
+<td>0.35.35</td>
+<td>0.35.54</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>Leeuwin</td>
+<td>971</td>
+<td>Eamonn Burke & Jay Murray</td>
+<td>Howth YC</td>
+<td>0.942</td>
+<td>10.35.00</td>
+<td>11.13.54</td>
+<td>0.38.54</td>
+<td>0.36.39</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>Mary Ellen</td>
+<td>1430</td>
+<td>Carty, Finucane & O'Byrne</td>
+<td>Howth YC</td>
+<td>0.915</td>
+<td>10.35.00</td>
+<td>11.15.12</td>
+<td>0.40.12</td>
+<td>0.36.47</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>Flexit</td>
+<td>1950</td>
+<td>Michael Carroll</td>
+<td>Howth YC</td>
+<td>0.929</td>
+<td>10.35.00</td>
+<td>11.14.50</td>
+<td>0.39.50</td>
+<td>0.37.00</td>
+<td>6.0</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>Bandersnatch of Howth</td>
+<td>2848</td>
+<td>Kyran O'Grady</td>
+<td>Howth YC</td>
+<td>0.889</td>
+<td>10.35.00</td>
+<td>11.17.08</td>
+<td>0.42.08</td>
+<td>0.37.27</td>
+<td>7.0</td>
+</tr>
+<tr class="even racerow">
+<td>8</td>
+<td>Out & About</td>
+<td>2070</td>
+<td>Terry McCoy</td>
+<td>Howth YC / Skerries SC</td>
+<td>0.931</td>
+<td>10.35.00</td>
+<td>11.15.55</td>
+<td>0.40.55</td>
+<td>0.38.06</td>
+<td>8.0</td>
+</tr>
+<tr class="odd racerow">
+<td>9</td>
+<td>Helms Deep</td>
+<td>3337</td>
+<td>Paul Harrison</td>
+<td>Howth YC</td>
+<td>0.914</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>DNC</td>
+<td>&nbsp;</td>
+<td>14.0</td>
+</tr>
+<tr class="even racerow">
+<td>9</td>
+<td>Splashdance</td>
+<td>4073</td>
+<td>Andy George</td>
+<td>Howth YC</td>
+<td>1.056</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>DNC</td>
+<td>&nbsp;</td>
+<td>14.0</td>
+</tr>
+<tr class="odd racerow">
+<td>9</td>
+<td>Wardance</td>
+<td>7360</td>
+<td>Sean Hawkshaw</td>
+<td>Howth YC</td>
+<td>0.939</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>DNC</td>
+<td>&nbsp;</td>
+<td>14.0</td>
+</tr>
+<tr class="even racerow">
+<td>9</td>
+<td>An Oifig</td>
+<td>4443</td>
+<td>Gerard Smyth</td>
+<td>Skerries SC</td>
+<td>0.949</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>DNC</td>
+<td>&nbsp;</td>
+<td>14.0</td>
+</tr>
+<tr class="odd racerow">
+<td>9</td>
+<td>Pepsi</td>
+<td>633</td>
+<td>Doug Anderson & Mark Tattersall</td>
+<td>Howth YC</td>
+<td>0.949</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>DNC</td>
+<td>&nbsp;</td>
+<td>14.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r6class_1_ns_hph">Race 6 - Class 1 NS HPH Fleet&nbsp;-&nbsp;Dec 14th</h3>
+<div class="caption racecaption">
+Start: Start 2, Finishes: Finish time, Time: 12.00.00
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="11">
+<col class="rank" />
+<col class="boat" />
+<col class="sailno" />
+<col class="helmname" />
+<col class="club" />
+<col class="rating" />
+<col class="start" />
+<col class="finish" />
+<col class="elapsed" />
+<col class="corrected" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Boat Name</th>
+<th>Sail</th>
+<th>Owner(s)</th>
+<th>Club</th>
+<th>TCF</th>
+<th>Start</th>
+<th>Finish</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>Out & About</td>
+<td>2070</td>
+<td>Terry McCoy</td>
+<td>Howth YC / Skerries SC</td>
+<td>0.926</td>
+<td>12.00.00</td>
+<td>12:48:04</td>
+<td>0.48.04</td>
+<td>0.44.31</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>Leeuwin</td>
+<td>971</td>
+<td>Eamonn Burke & Jay Murray</td>
+<td>Howth YC</td>
+<td>0.939</td>
+<td>12.00.00</td>
+<td>12:47:33</td>
+<td>0.47.33</td>
+<td>0.44.39</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>Arcturus</td>
+<td>1343</td>
+<td>Peter & Declan McCabe</td>
+<td>Howth YC</td>
+<td>0.944</td>
+<td>12.00.00</td>
+<td>12:47:53</td>
+<td>0.47.53</td>
+<td>0.45.12</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>Amuse II</td>
+<td>1766</td>
+<td>Niall & Jenny OLeary</td>
+<td>Howth YC</td>
+<td>1.010</td>
+<td>12.00.00</td>
+<td>12:45:38</td>
+<td>0.45.38</td>
+<td>0.46.05</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>Mary Ellen</td>
+<td>1430</td>
+<td>Carty, Finucane & O'Byrne</td>
+<td>Howth YC</td>
+<td>0.911</td>
+<td>12.00.00</td>
+<td>12:51:12</td>
+<td>0.51.12</td>
+<td>0.46.39</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>Bandersnatch of Howth</td>
+<td>2848</td>
+<td>Kyran O'Grady</td>
+<td>Howth YC</td>
+<td>0.883</td>
+<td>12.00.00</td>
+<td>12:53:21</td>
+<td>0.53.21</td>
+<td>0.47.06</td>
+<td>6.0</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>Tiger</td>
+<td>4077</td>
+<td>Stephen Harris</td>
+<td>Howth YC</td>
+<td>1.083</td>
+<td>12.00.00</td>
+<td>12:43:32</td>
+<td>0.43.32</td>
+<td>0.47.09</td>
+<td>7.0</td>
+</tr>
+<tr class="even racerow">
+<td>8</td>
+<td>Flexit</td>
+<td>1950</td>
+<td>Michael Carroll</td>
+<td>Howth YC</td>
+<td>0.924</td>
+<td>12.00.00</td>
+<td>12:52:06</td>
+<td>0.52.06</td>
+<td>0.48.08</td>
+<td>8.0</td>
+</tr>
+<tr class="odd racerow">
+<td>9</td>
+<td>Helms Deep</td>
+<td>3337</td>
+<td>Paul Harrison</td>
+<td>Howth YC</td>
+<td>0.914</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>DNC</td>
+<td>&nbsp;</td>
+<td>14.0</td>
+</tr>
+<tr class="even racerow">
+<td>9</td>
+<td>Splashdance</td>
+<td>4073</td>
+<td>Andy George</td>
+<td>Howth YC</td>
+<td>1.056</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>DNC</td>
+<td>&nbsp;</td>
+<td>14.0</td>
+</tr>
+<tr class="odd racerow">
+<td>9</td>
+<td>Wardance</td>
+<td>7360</td>
+<td>Sean Hawkshaw</td>
+<td>Howth YC</td>
+<td>0.939</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>DNC</td>
+<td>&nbsp;</td>
+<td>14.0</td>
+</tr>
+<tr class="even racerow">
+<td>9</td>
+<td>An Oifig</td>
+<td>4443</td>
+<td>Gerard Smyth</td>
+<td>Skerries SC</td>
+<td>0.949</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>DNC</td>
+<td>&nbsp;</td>
+<td>14.0</td>
+</tr>
+<tr class="odd racerow">
+<td>9</td>
+<td>Pepsi</td>
+<td>633</td>
+<td>Doug Anderson & Mark Tattersall</td>
+<td>Howth YC</td>
+<td>0.949</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>DNC</td>
+<td>&nbsp;</td>
+<td>14.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r1class_3_ns_hph">R1 - Class 3 NS HPH Fleet&nbsp;-&nbsp;Nov 10th</h3>
+<div class="caption racecaption">
+Start: Start 1, Finishes: Finish time, Time: 10.30.00
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="11">
+<col class="rank" />
+<col class="boat" />
+<col class="sailno" />
+<col class="helmname" />
+<col class="club" />
+<col class="rating" />
+<col class="start" />
+<col class="finish" />
+<col class="elapsed" />
+<col class="corrected" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Boat Name</th>
+<th>Sail</th>
+<th>Owner(s)</th>
+<th>Club</th>
+<th>TCF</th>
+<th>Start</th>
+<th>Finish</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>Jokers Wild</td>
+<td>8151</td>
+<td>Flood & Greene</td>
+<td>Howth YC</td>
+<td>0.920</td>
+<td>10.30.00</td>
+<td>11.56.54</td>
+<td>1.26.54</td>
+<td>1.19.57</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>Battling J</td>
+<td>4084</td>
+<td>MYC J24 Race Team</td>
+<td>Malahide YC</td>
+<td>0.970</td>
+<td>10.30.00</td>
+<td>11.57.46</td>
+<td>1.27.46</td>
+<td>1.25.08</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>Timballoo</td>
+<td>1603</td>
+<td>Lundy & Dunne</td>
+<td>Howth YC / Malahide YC</td>
+<td>0.890</td>
+<td>10.30.00</td>
+<td>12.10.09</td>
+<td>1.40.09</td>
+<td>1.29.08</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>Shenanigans</td>
+<td>791</td>
+<td>Douglas & Keane</td>
+<td>Malahide YC</td>
+<td>0.900</td>
+<td>10.30.00</td>
+<td>12.10.40</td>
+<td>1.40.40</td>
+<td>1.30.36</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>Mistoffelees</td>
+<td>1793</td>
+<td>Enda Mulvihill</td>
+<td>Howth YC</td>
+<td>0.920</td>
+<td>10.30.00</td>
+<td>12.08.30</td>
+<td>1.38.30</td>
+<td>1.30.37</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>C'est La Vie</td>
+<td>956</td>
+<td>Flannelly, Spain & Staines</td>
+<td>Howth YC</td>
+<td>0.885</td>
+<td>10.30.00</td>
+<td>12.14.57</td>
+<td>1.44.57</td>
+<td>1.32.53</td>
+<td>6.0</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>Phixius</td>
+<td>11311</td>
+<td>Ray, Costello, Quigley & McShera</td>
+<td>Howth YC</td>
+<td>0.820</td>
+<td>10.30.00</td>
+<td>12.28.24</td>
+<td>1.58.24</td>
+<td>1.37.05</td>
+<td>7.0</td>
+</tr>
+<tr class="even racerow">
+<td>8</td>
+<td>Thar Saile</td>
+<td>1202</td>
+<td>Caoimhin O'Laoi</td>
+<td>Howth YC</td>
+<td>0.850</td>
+<td>10.30.00</td>
+<td>12.26.15</td>
+<td>1.56.15</td>
+<td>1.38.49</td>
+<td>8.0</td>
+</tr>
+<tr class="odd racerow">
+<td>9</td>
+<td>Blue Roan</td>
+<td>257</td>
+<td>Greg Quirke</td>
+<td>Howth YC</td>
+<td>0.850</td>
+<td>10.30.00</td>
+<td>12.26.45</td>
+<td>1.56.45</td>
+<td>1.39.14</td>
+<td>9.0</td>
+</tr>
+<tr class="even racerow">
+<td>10</td>
+<td>Panache</td>
+<td>1456</td>
+<td>Brendan Gearon</td>
+<td>Howth YC</td>
+<td>0.800</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>RET</td>
+<td>&nbsp;</td>
+<td>11.0</td>
+</tr>
+<tr class="odd racerow">
+<td>11</td>
+<td>Badger</td>
+<td>9990</td>
+<td>Mark & Paul Rossiter</td>
+<td>Howth YC</td>
+<td>0.910</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>DNC</td>
+<td>&nbsp;</td>
+<td>12.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r2class_3_ns_hph">R2 - Class 3 NS HPH Fleet&nbsp;-&nbsp;Nov 17th</h3>
+<div class="caption racecaption">
+Start: Start 1, Finishes: Finish time, Time: 10.30.00
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="11">
+<col class="rank" />
+<col class="boat" />
+<col class="sailno" />
+<col class="helmname" />
+<col class="club" />
+<col class="rating" />
+<col class="start" />
+<col class="finish" />
+<col class="elapsed" />
+<col class="corrected" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Boat Name</th>
+<th>Sail</th>
+<th>Owner(s)</th>
+<th>Club</th>
+<th>TCF</th>
+<th>Start</th>
+<th>Finish</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>Thar Saile</td>
+<td>1202</td>
+<td>Caoimhin O'Laoi</td>
+<td>Howth YC</td>
+<td>0.843</td>
+<td>10.30.00</td>
+<td>11.47.32</td>
+<td>1.17.32</td>
+<td>1.05.22</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>C'est La Vie</td>
+<td>956</td>
+<td>Flannelly, Spain & Staines</td>
+<td>Howth YC</td>
+<td>0.880</td>
+<td>10.30.00</td>
+<td>11.44.55</td>
+<td>1.14.55</td>
+<td>1.05.56</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>Phixius</td>
+<td>11311</td>
+<td>Ray, Costello, Quigley & McShera</td>
+<td>Howth YC</td>
+<td>0.810</td>
+<td>10.30.00</td>
+<td>11.53.11</td>
+<td>1.23.11</td>
+<td>1.07.23</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>Jokers Wild</td>
+<td>8151</td>
+<td>Flood & Greene</td>
+<td>Howth YC</td>
+<td>0.936</td>
+<td>10.30.00</td>
+<td>11.44.39</td>
+<td>1.14.39</td>
+<td>1.09.52</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>Timballoo</td>
+<td>1603</td>
+<td>Lundy & Dunne</td>
+<td>Howth YC / Malahide YC</td>
+<td>0.892</td>
+<td>10.30.00</td>
+<td>11.48.31</td>
+<td>1.18.31</td>
+<td>1.10.02</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>Mistoffelees</td>
+<td>1793</td>
+<td>Enda Mulvihill</td>
+<td>Howth YC</td>
+<td>0.918</td>
+<td>10.30.00</td>
+<td>11.48.50</td>
+<td>1.18.50</td>
+<td>1.12.22</td>
+<td>6.0</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>Shenanigans</td>
+<td>791</td>
+<td>Douglas & Keane</td>
+<td>Malahide YC</td>
+<td>0.898</td>
+<td>10.30.00</td>
+<td>11.50.40</td>
+<td>1.20.40</td>
+<td>1.12.26</td>
+<td>7.0</td>
+</tr>
+<tr class="even racerow">
+<td>8</td>
+<td>Panache</td>
+<td>1456</td>
+<td>Brendan Gearon</td>
+<td>Howth YC</td>
+<td>0.800</td>
+<td>10.30.00</td>
+<td>12.00.51</td>
+<td>1.30.51</td>
+<td>1.12.41</td>
+<td>8.0</td>
+</tr>
+<tr class="odd racerow">
+<td>9</td>
+<td>Badger</td>
+<td>9990</td>
+<td>Mark & Paul Rossiter</td>
+<td>Howth YC</td>
+<td>0.910</td>
+<td>10.30.00</td>
+<td>11.51.37</td>
+<td>1.21.37</td>
+<td>1.14.16</td>
+<td>9.0</td>
+</tr>
+<tr class="even racerow">
+<td>10</td>
+<td>Battling J</td>
+<td>4084</td>
+<td>MYC J24 Race Team</td>
+<td>Malahide YC</td>
+<td>0.986</td>
+<td>10.30.00</td>
+<td>11.46.27</td>
+<td>1.16.27</td>
+<td>1.15.23</td>
+<td>10.0</td>
+</tr>
+<tr class="odd racerow">
+<td>11</td>
+<td>Blue Roan</td>
+<td>257</td>
+<td>Greg Quirke</td>
+<td>Howth YC</td>
+<td>0.843</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>DNC</td>
+<td>&nbsp;</td>
+<td>12.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r3class_3_ns_hph">R3 - Class 3 NS HPH Fleet&nbsp;-&nbsp;Dec 1st</h3>
+<div class="caption racecaption">
+Start: Start 1, Finishes: Finish time, Time: 10.40.00
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="11">
+<col class="rank" />
+<col class="boat" />
+<col class="sailno" />
+<col class="helmname" />
+<col class="club" />
+<col class="rating" />
+<col class="start" />
+<col class="finish" />
+<col class="elapsed" />
+<col class="corrected" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Boat Name</th>
+<th>Sail</th>
+<th>Owner(s)</th>
+<th>Club</th>
+<th>TCF</th>
+<th>Start</th>
+<th>Finish</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>Phixius</td>
+<td>11311</td>
+<td>Ray, Costello, Quigley & McShera</td>
+<td>Howth YC</td>
+<td>0.817</td>
+<td>10.40.00</td>
+<td>11.38.46</td>
+<td>0.58.46</td>
+<td>0.48.01</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>C'est La Vie</td>
+<td>956</td>
+<td>Flannelly, Spain & Staines</td>
+<td>Howth YC</td>
+<td>0.894</td>
+<td>10.40.00</td>
+<td>11.35.02</td>
+<td>0.55.02</td>
+<td>0.49.12</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>Thar Saile</td>
+<td>1202</td>
+<td>Caoimhin O'Laoi</td>
+<td>Howth YC</td>
+<td>0.851</td>
+<td>10.40.00</td>
+<td>11.38.13</td>
+<td>0.58.13</td>
+<td>0.49.33</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>Shenanigans</td>
+<td>791</td>
+<td>Douglas & Keane</td>
+<td>Malahide YC</td>
+<td>0.891</td>
+<td>10.40.00</td>
+<td>11.36.32</td>
+<td>0.56.32</td>
+<td>0.50.22</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>Timballoo</td>
+<td>1603</td>
+<td>Lundy & Dunne</td>
+<td>Howth YC / Malahide YC</td>
+<td>0.890</td>
+<td>10.40.00</td>
+<td>11.37.44</td>
+<td>0.57.44</td>
+<td>0.51.23</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>Jokers Wild</td>
+<td>8151</td>
+<td>Flood & Greene</td>
+<td>Howth YC</td>
+<td>0.934</td>
+<td>10.40.00</td>
+<td>11.35.50</td>
+<td>0.55.50</td>
+<td>0.52.09</td>
+<td>6.0</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>Mistoffelees</td>
+<td>1793</td>
+<td>Enda Mulvihill</td>
+<td>Howth YC</td>
+<td>0.911</td>
+<td>10.40.00</td>
+<td>11.37.39</td>
+<td>0.57.39</td>
+<td>0.52.31</td>
+<td>7.0</td>
+</tr>
+<tr class="even racerow">
+<td>8</td>
+<td>Battling J</td>
+<td>4084</td>
+<td>MYC J24 Race Team</td>
+<td>Malahide YC</td>
+<td>0.979</td>
+<td>10.40.00</td>
+<td>11.36.09</td>
+<td>0.56.09</td>
+<td>0.54.58</td>
+<td>8.0</td>
+</tr>
+<tr class="odd racerow">
+<td>9</td>
+<td>Blue Roan</td>
+<td>257</td>
+<td>Greg Quirke</td>
+<td>Howth YC</td>
+<td>0.843</td>
+<td>10.40.00</td>
+<td>11.46.10</td>
+<td>1.06.10</td>
+<td>0.55.47</td>
+<td>9.0</td>
+</tr>
+<tr class="even racerow">
+<td>10</td>
+<td>Panache</td>
+<td>1456</td>
+<td>Brendan Gearon</td>
+<td>Howth YC</td>
+<td>0.794</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>DNC</td>
+<td>&nbsp;</td>
+<td>12.0</td>
+</tr>
+<tr class="odd racerow">
+<td>10</td>
+<td>Badger</td>
+<td>9990</td>
+<td>Mark & Paul Rossiter</td>
+<td>Howth YC</td>
+<td>0.904</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>DNC</td>
+<td>&nbsp;</td>
+<td>12.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r4class_3_ns_hph">R4 - Class 3 NS HPH Fleet&nbsp;-&nbsp;Dec 1st</h3>
+<div class="caption racecaption">
+Start: Start 1, Finishes: Finish time, Time: 12.10.00
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="11">
+<col class="rank" />
+<col class="boat" />
+<col class="sailno" />
+<col class="helmname" />
+<col class="club" />
+<col class="rating" />
+<col class="start" />
+<col class="finish" />
+<col class="elapsed" />
+<col class="corrected" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Boat Name</th>
+<th>Sail</th>
+<th>Owner(s)</th>
+<th>Club</th>
+<th>TCF</th>
+<th>Start</th>
+<th>Finish</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>C'est La Vie</td>
+<td>956</td>
+<td>Flannelly, Spain & Staines</td>
+<td>Howth YC</td>
+<td>0.901</td>
+<td>12.10.00</td>
+<td>12.54.35</td>
+<td>0.44.35</td>
+<td>0.40.10</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>Thar Saile</td>
+<td>1202</td>
+<td>Caoimhin O'Laoi</td>
+<td>Howth YC</td>
+<td>0.856</td>
+<td>12.10.00</td>
+<td>12.57.01</td>
+<td>0.47.01</td>
+<td>0.40.15</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>Jokers Wild</td>
+<td>8151</td>
+<td>Flood & Greene</td>
+<td>Howth YC</td>
+<td>0.929</td>
+<td>12.10.00</td>
+<td>12.53.56</td>
+<td>0.43.56</td>
+<td>0.40.49</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>Phixius</td>
+<td>11311</td>
+<td>Ray, Costello, Quigley & McShera</td>
+<td>Howth YC</td>
+<td>0.824</td>
+<td>12.10.00</td>
+<td>13.00.31</td>
+<td>0.50.31</td>
+<td>0.41.38</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>Timballoo</td>
+<td>1603</td>
+<td>Lundy & Dunne</td>
+<td>Howth YC / Malahide YC</td>
+<td>0.887</td>
+<td>12.10.00</td>
+<td>12.56.57</td>
+<td>0.46.57</td>
+<td>0.41.39</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>Shenanigans</td>
+<td>791</td>
+<td>Douglas & Keane</td>
+<td>Malahide YC</td>
+<td>0.892</td>
+<td>12.10.00</td>
+<td>12.59.46</td>
+<td>0.49.46</td>
+<td>0.44.24</td>
+<td>6.0</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>Mistoffelees</td>
+<td>1793</td>
+<td>Enda Mulvihill</td>
+<td>Howth YC</td>
+<td>0.905</td>
+<td>12.10.00</td>
+<td>13.00.05</td>
+<td>0.50.05</td>
+<td>0.45.20</td>
+<td>7.0</td>
+</tr>
+<tr class="even racerow">
+<td>8</td>
+<td>Battling J</td>
+<td>4084</td>
+<td>MYC J24 Race Team</td>
+<td>Malahide YC</td>
+<td>0.973</td>
+<td>12.10.00</td>
+<td>12.59.55</td>
+<td>0.49.55</td>
+<td>0.48.34</td>
+<td>8.0</td>
+</tr>
+<tr class="odd racerow">
+<td>9</td>
+<td>Blue Roan</td>
+<td>257</td>
+<td>Greg Quirke</td>
+<td>Howth YC</td>
+<td>0.837</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>DNS</td>
+<td>&nbsp;</td>
+<td>10.0</td>
+</tr>
+<tr class="even racerow">
+<td>10</td>
+<td>Panache</td>
+<td>1456</td>
+<td>Brendan Gearon</td>
+<td>Howth YC</td>
+<td>0.794</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>DNC</td>
+<td>&nbsp;</td>
+<td>12.0</td>
+</tr>
+<tr class="odd racerow">
+<td>10</td>
+<td>Badger</td>
+<td>9990</td>
+<td>Mark & Paul Rossiter</td>
+<td>Howth YC</td>
+<td>0.904</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>DNC</td>
+<td>&nbsp;</td>
+<td>12.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r5class_3_ns_hph">R5 - Class 3 NS HPH Fleet&nbsp;-&nbsp;Dec 14th</h3>
+<div class="caption racecaption">
+Start: Start 1, Finishes: Finish time, Time: 10.30.00
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="11">
+<col class="rank" />
+<col class="boat" />
+<col class="sailno" />
+<col class="helmname" />
+<col class="club" />
+<col class="rating" />
+<col class="start" />
+<col class="finish" />
+<col class="elapsed" />
+<col class="corrected" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Boat Name</th>
+<th>Sail</th>
+<th>Owner(s)</th>
+<th>Club</th>
+<th>TCF</th>
+<th>Start</th>
+<th>Finish</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>Jokers Wild</td>
+<td>8151</td>
+<td>Flood & Greene</td>
+<td>Howth YC</td>
+<td>0.934</td>
+<td>10.30.00</td>
+<td>11.07.41</td>
+<td>0.37.41</td>
+<td>0.35.12</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>Shenanigans</td>
+<td>791</td>
+<td>Douglas & Keane</td>
+<td>Malahide YC</td>
+<td>0.882</td>
+<td>10.30.00</td>
+<td>11.10.45</td>
+<td>0.40.45</td>
+<td>0.35.56</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>Thar Saile</td>
+<td>1202</td>
+<td>Caoimhin O'Laoi</td>
+<td>Howth YC</td>
+<td>0.864</td>
+<td>10.30.00</td>
+<td>11.11.59</td>
+<td>0.41.59</td>
+<td>0.36.16</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>Mistoffelees</td>
+<td>1793</td>
+<td>Enda Mulvihill</td>
+<td>Howth YC</td>
+<td>0.892</td>
+<td>10.30.00</td>
+<td>11.10.48</td>
+<td>0.40.48</td>
+<td>0.36.24</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>Battling J</td>
+<td>4084</td>
+<td>MYC J24 Race Team</td>
+<td>Malahide YC</td>
+<td>0.961</td>
+<td>10.30.00</td>
+<td>11.08.59</td>
+<td>0.38.59</td>
+<td>0.37.28</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>Timballoo</td>
+<td>1603</td>
+<td>Lundy & Dunne</td>
+<td>Howth YC / Malahide YC</td>
+<td>0.886</td>
+<td>10.30.00</td>
+<td>11.13.14</td>
+<td>0.43.14</td>
+<td>0.38.18</td>
+<td>6.0</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>C'est La Vie</td>
+<td>956</td>
+<td>Flannelly, Spain & Staines</td>
+<td>Howth YC</td>
+<td>0.910</td>
+<td>10.30.00</td>
+<td>11.12.06</td>
+<td>0.42.06</td>
+<td>0.38.19</td>
+<td>7.0</td>
+</tr>
+<tr class="even racerow">
+<td>8</td>
+<td>Panache</td>
+<td>1456</td>
+<td>Brendan Gearon</td>
+<td>Howth YC</td>
+<td>0.794</td>
+<td>10.30.00</td>
+<td>11.21.05</td>
+<td>0.51.05</td>
+<td>0.40.34</td>
+<td>8.0</td>
+</tr>
+<tr class="odd racerow">
+<td>9</td>
+<td>Phixius</td>
+<td>11311</td>
+<td>Ray, Costello, Quigley & McShera</td>
+<td>Howth YC</td>
+<td>0.824</td>
+<td>10.30.00</td>
+<td>11.21.35</td>
+<td>0.51.35</td>
+<td>0.42.30</td>
+<td>9.0</td>
+</tr>
+<tr class="even racerow">
+<td>10</td>
+<td>Blue Roan</td>
+<td>257</td>
+<td>Greg Quirke</td>
+<td>Howth YC</td>
+<td>0.837</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>DNC</td>
+<td>&nbsp;</td>
+<td>12.0</td>
+</tr>
+<tr class="odd racerow">
+<td>10</td>
+<td>Badger</td>
+<td>9990</td>
+<td>Mark & Paul Rossiter</td>
+<td>Howth YC</td>
+<td>0.904</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>DNC</td>
+<td>&nbsp;</td>
+<td>12.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r6class_3_ns_hph">Race 6 - Class 3 NS HPH Fleet&nbsp;-&nbsp;Dec 14th</h3>
+<div class="caption racecaption">
+Start: Start 1, Finishes: Finish time, Time: 11.55.00
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="11">
+<col class="rank" />
+<col class="boat" />
+<col class="sailno" />
+<col class="helmname" />
+<col class="club" />
+<col class="rating" />
+<col class="start" />
+<col class="finish" />
+<col class="elapsed" />
+<col class="corrected" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Boat Name</th>
+<th>Sail</th>
+<th>Owner(s)</th>
+<th>Club</th>
+<th>TCF</th>
+<th>Start</th>
+<th>Finish</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>Jokers Wild</td>
+<td>8151</td>
+<td>Flood & Greene</td>
+<td>Howth YC</td>
+<td>0.948</td>
+<td>11.55.00</td>
+<td>12:43:36</td>
+<td>0.48.36</td>
+<td>0.46.04</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>Timballoo</td>
+<td>1603</td>
+<td>Lundy & Dunne</td>
+<td>Howth YC / Malahide YC</td>
+<td>0.881</td>
+<td>11.55.00</td>
+<td>12:47:23</td>
+<td>0.52.23</td>
+<td>0.46.09</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>Thar Saile</td>
+<td>1202</td>
+<td>Caoimhin O'Laoi</td>
+<td>Howth YC</td>
+<td>0.869</td>
+<td>11.55.00</td>
+<td>12:48:33</td>
+<td>0.53.33</td>
+<td>0.46.32</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>C'est La Vie</td>
+<td>956</td>
+<td>Flannelly, Spain & Staines</td>
+<td>Howth YC</td>
+<td>0.905</td>
+<td>11.55.00</td>
+<td>12:47:33</td>
+<td>0.52.33</td>
+<td>0.47.33</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>Panache</td>
+<td>1456</td>
+<td>Brendan Gearon</td>
+<td>Howth YC</td>
+<td>0.790</td>
+<td>11.55.00</td>
+<td>12:55:34</td>
+<td>1.00.34</td>
+<td>0.47.51</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>Mistoffelees</td>
+<td>1793</td>
+<td>Enda Mulvihill</td>
+<td>Howth YC</td>
+<td>0.896</td>
+<td>11.55.00</td>
+<td>12:48:45</td>
+<td>0.53.45</td>
+<td>0.48.10</td>
+<td>6.0</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>Shenanigans</td>
+<td>791</td>
+<td>Douglas & Keane</td>
+<td>Malahide YC</td>
+<td>0.889</td>
+<td>11.55.00</td>
+<td>12:49:17</td>
+<td>0.54.17</td>
+<td>0.48.15</td>
+<td>7.0</td>
+</tr>
+<tr class="even racerow">
+<td>8</td>
+<td>Battling J</td>
+<td>4084</td>
+<td>MYC J24 Race Team</td>
+<td>Malahide YC</td>
+<td>0.959</td>
+<td>11.55.00</td>
+<td>12:47:57</td>
+<td>0.52.57</td>
+<td>0.50.47</td>
+<td>8.0</td>
+</tr>
+<tr class="odd racerow">
+<td>9</td>
+<td>Phixius</td>
+<td>11311</td>
+<td>Ray, Costello, Quigley & McShera</td>
+<td>Howth YC</td>
+<td>0.818</td>
+<td>11.55.00</td>
+<td>12:57:07</td>
+<td>1.02.07</td>
+<td>0.50.49</td>
+<td>9.0</td>
+</tr>
+<tr class="even racerow">
+<td>10</td>
+<td>Blue Roan</td>
+<td>257</td>
+<td>Greg Quirke</td>
+<td>Howth YC</td>
+<td>0.837</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>DNC</td>
+<td>&nbsp;</td>
+<td>12.0</td>
+</tr>
+<tr class="odd racerow">
+<td>10</td>
+<td>Badger</td>
+<td>9990</td>
+<td>Mark & Paul Rossiter</td>
+<td>Howth YC</td>
+<td>0.904</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>DNC</td>
+<td>&nbsp;</td>
+<td>12.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r1class_2_hph">R1 - Class 2 HPH Fleet&nbsp;-&nbsp;Nov 10th</h3>
+<div class="caption racecaption">
+Start: Start 3, Finishes: Finish time, Time: 10.40.00
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="11">
+<col class="rank" />
+<col class="boat" />
+<col class="sailno" />
+<col class="helmname" />
+<col class="club" />
+<col class="rating" />
+<col class="start" />
+<col class="finish" />
+<col class="elapsed" />
+<col class="corrected" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Boat Name</th>
+<th>Sail</th>
+<th>Owner(s)</th>
+<th>Club</th>
+<th>TCF</th>
+<th>Start</th>
+<th>Finish</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>NYYC Dev Team</td>
+<td>726</td>
+<td>Darren Wright</td>
+<td>Howth YC</td>
+<td>0.930</td>
+<td>10.40.00</td>
+<td>12.15.32</td>
+<td>1.35.32</td>
+<td>1.28.51</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>Fifty Shades Of Spray</td>
+<td>527</td>
+<td>Jonny Sargent & David Johnston</td>
+<td>Howth YC</td>
+<td>0.930</td>
+<td>10.40.00</td>
+<td>12.16.50</td>
+<td>1.36.50</td>
+<td>1.30.03</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>Age Before Beauty</td>
+<td>393</td>
+<td>David Cullen</td>
+<td>Howth YC</td>
+<td>0.930</td>
+<td>10.40.00</td>
+<td>12.17.20</td>
+<td>1.37.20</td>
+<td>1.30.31</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>Indian</td>
+<td>1543</td>
+<td>Simon Knowles</td>
+<td>Howth YC</td>
+<td>1.002</td>
+<td>10.40.00</td>
+<td>12.10.47</td>
+<td>1.30.47</td>
+<td>1.30.58</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>Jawesome III</td>
+<td>260</td>
+<td>Jeremy Beshoff</td>
+<td>Howth YC</td>
+<td>0.950</td>
+<td>10.40.00</td>
+<td>12.15.56</td>
+<td>1.35.56</td>
+<td>1.31.08</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>Any Ideas</td>
+<td>1024</td>
+<td>Philip Bryne & Linda Darbey</td>
+<td>Howth YC</td>
+<td>0.910</td>
+<td>10.40.00</td>
+<td>12.25.04</td>
+<td>1.45.04</td>
+<td>1.35.37</td>
+<td>6.0</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>Chinook</td>
+<td>17793</td>
+<td>Brian Skehan</td>
+<td>Howth YC</td>
+<td>0.850</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>RET</td>
+<td>&nbsp;</td>
+<td>8.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r2class_2_hph">R2 - Class 2 HPH Fleet&nbsp;-&nbsp;Nov 17th</h3>
+<div class="caption racecaption">
+Start: Start 3, Finishes: Finish time, Time: 10.40.00
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="11">
+<col class="rank" />
+<col class="boat" />
+<col class="sailno" />
+<col class="helmname" />
+<col class="club" />
+<col class="rating" />
+<col class="start" />
+<col class="finish" />
+<col class="elapsed" />
+<col class="corrected" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Boat Name</th>
+<th>Sail</th>
+<th>Owner(s)</th>
+<th>Club</th>
+<th>TCF</th>
+<th>Start</th>
+<th>Finish</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>Age Before Beauty</td>
+<td>393</td>
+<td>David Cullen</td>
+<td>Howth YC</td>
+<td>0.930</td>
+<td>10.40.00</td>
+<td>12.01.12</td>
+<td>1.21.12</td>
+<td>1.15.31</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>NYYC Dev Team</td>
+<td>726</td>
+<td>Darren Wright</td>
+<td>Howth YC</td>
+<td>0.935</td>
+<td>10.40.00</td>
+<td>12.01.25</td>
+<td>1.21.25</td>
+<td>1.16.07</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>Fifty Shades Of Spray</td>
+<td>527</td>
+<td>Jonny Sargent & David Johnston</td>
+<td>Howth YC</td>
+<td>0.931</td>
+<td>10.40.00</td>
+<td>12.02.38</td>
+<td>1.22.38</td>
+<td>1.16.56</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>Any Ideas</td>
+<td>1024</td>
+<td>Philip Bryne & Linda Darbey</td>
+<td>Howth YC</td>
+<td>0.907</td>
+<td>10.40.00</td>
+<td>12.05.09</td>
+<td>1.25.09</td>
+<td>1.17.14</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>Indian</td>
+<td>1543</td>
+<td>Simon Knowles</td>
+<td>Howth YC</td>
+<td>1.001</td>
+<td>10.40.00</td>
+<td>11.57.48</td>
+<td>1.17.48</td>
+<td>1.17.53</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>Jawesome III</td>
+<td>260</td>
+<td>Jeremy Beshoff</td>
+<td>Howth YC</td>
+<td>0.949</td>
+<td>10.40.00</td>
+<td>12.02.23</td>
+<td>1.22.23</td>
+<td>1.18.11</td>
+<td>6.0</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>Chinook</td>
+<td>17793</td>
+<td>Brian Skehan</td>
+<td>Howth YC</td>
+<td>0.850</td>
+<td>10.40.00</td>
+<td>12.16.22</td>
+<td>1.36.22</td>
+<td>1.21.55</td>
+<td>7.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r3class_2_hph">R3 - Class 2 HPH Fleet&nbsp;-&nbsp;Dec 1st</h3>
+<div class="caption racecaption">
+Start: Start 3, Finishes: Finish time, Time: 10.50.00
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="11">
+<col class="rank" />
+<col class="boat" />
+<col class="sailno" />
+<col class="helmname" />
+<col class="club" />
+<col class="rating" />
+<col class="start" />
+<col class="finish" />
+<col class="elapsed" />
+<col class="corrected" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Boat Name</th>
+<th>Sail</th>
+<th>Owner(s)</th>
+<th>Club</th>
+<th>TCF</th>
+<th>Start</th>
+<th>Finish</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>NYYC Dev Team</td>
+<td>726</td>
+<td>Darren Wright</td>
+<td>Howth YC</td>
+<td>0.938</td>
+<td>10.50.00</td>
+<td>11.37.18</td>
+<td>0.47.18</td>
+<td>0.44.22</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>Any Ideas</td>
+<td>1024</td>
+<td>Philip Bryne & Linda Darbey</td>
+<td>Howth YC</td>
+<td>0.906</td>
+<td>10.50.00</td>
+<td>11.39.00</td>
+<td>0.49.00</td>
+<td>0.44.24</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>Jawesome III</td>
+<td>260</td>
+<td>Jeremy Beshoff</td>
+<td>Howth YC</td>
+<td>0.947</td>
+<td>10.50.00</td>
+<td>11.37.14</td>
+<td>0.47.14</td>
+<td>0.44.44</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>Age Before Beauty</td>
+<td>393</td>
+<td>David Cullen</td>
+<td>Howth YC</td>
+<td>0.935</td>
+<td>10.50.00</td>
+<td>11.39.28</td>
+<td>0.49.28</td>
+<td>0.46.15</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>Fifty Shades Of Spray</td>
+<td>527</td>
+<td>Jonny Sargent & David Johnston</td>
+<td>Howth YC</td>
+<td>0.931</td>
+<td>10.50.00</td>
+<td>11.39.46</td>
+<td>0.49.46</td>
+<td>0.46.20</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>Indian</td>
+<td>1543</td>
+<td>Simon Knowles</td>
+<td>Howth YC</td>
+<td>0.999</td>
+<td>10.50.00</td>
+<td>11.36.43</td>
+<td>0.46.43</td>
+<td>0.46.40</td>
+<td>6.0</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>Chinook</td>
+<td>17793</td>
+<td>Brian Skehan</td>
+<td>Howth YC</td>
+<td>0.846</td>
+<td>10.50.00</td>
+<td>11.47.42</td>
+<td>0.57.42</td>
+<td>0.48.49</td>
+<td>7.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r4class_2_hph">R4 - Class 2 HPH Fleet&nbsp;-&nbsp;Dec 1st</h3>
+<div class="caption racecaption">
+Start: Start 3, Finishes: Finish time, Time: 12.20.00
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="11">
+<col class="rank" />
+<col class="boat" />
+<col class="sailno" />
+<col class="helmname" />
+<col class="club" />
+<col class="rating" />
+<col class="start" />
+<col class="finish" />
+<col class="elapsed" />
+<col class="corrected" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Boat Name</th>
+<th>Sail</th>
+<th>Owner(s)</th>
+<th>Club</th>
+<th>TCF</th>
+<th>Start</th>
+<th>Finish</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>Fifty Shades Of Spray</td>
+<td>527</td>
+<td>Jonny Sargent & David Johnston</td>
+<td>Howth YC</td>
+<td>0.928</td>
+<td>12.20.00</td>
+<td>13.00.09</td>
+<td>0.40.09</td>
+<td>0.37.16</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>NYYC Dev Team</td>
+<td>726</td>
+<td>Darren Wright</td>
+<td>Howth YC</td>
+<td>0.944</td>
+<td>12.20.00</td>
+<td>12.59.42</td>
+<td>0.39.42</td>
+<td>0.37.29</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>Jawesome III</td>
+<td>260</td>
+<td>Jeremy Beshoff</td>
+<td>Howth YC</td>
+<td>0.951</td>
+<td>12.20.00</td>
+<td>12.59.26</td>
+<td>0.39.26</td>
+<td>0.37.30</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>Any Ideas</td>
+<td>1024</td>
+<td>Philip Bryne & Linda Darbey</td>
+<td>Howth YC</td>
+<td>0.912</td>
+<td>12.20.00</td>
+<td>13.02.33</td>
+<td>0.42.33</td>
+<td>0.38.48</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>Age Before Beauty</td>
+<td>393</td>
+<td>David Cullen</td>
+<td>Howth YC</td>
+<td>0.932</td>
+<td>12.20.00</td>
+<td>13.02.43</td>
+<td>0.42.43</td>
+<td>0.39.49</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>Indian</td>
+<td>1543</td>
+<td>Simon Knowles</td>
+<td>Howth YC</td>
+<td>0.994</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>RET</td>
+<td>&nbsp;</td>
+<td>8.0</td>
+</tr>
+<tr class="odd racerow">
+<td>6</td>
+<td>Chinook</td>
+<td>17793</td>
+<td>Brian Skehan</td>
+<td>Howth YC</td>
+<td>0.841</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>RET</td>
+<td>&nbsp;</td>
+<td>8.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r5class_2_hph">R5 - Class 2 HPH Fleet&nbsp;-&nbsp;Dec 14th</h3>
+<div class="caption racecaption">
+Start: Start 3, Finishes: Finish time, Time: 10.40.00
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="11">
+<col class="rank" />
+<col class="boat" />
+<col class="sailno" />
+<col class="helmname" />
+<col class="club" />
+<col class="rating" />
+<col class="start" />
+<col class="finish" />
+<col class="elapsed" />
+<col class="corrected" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Boat Name</th>
+<th>Sail</th>
+<th>Owner(s)</th>
+<th>Club</th>
+<th>TCF</th>
+<th>Start</th>
+<th>Finish</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>Indian</td>
+<td>1543</td>
+<td>Simon Knowles</td>
+<td>Howth YC</td>
+<td>0.994</td>
+<td>10.40.00</td>
+<td>11.20.39</td>
+<td>0.40.39</td>
+<td>0.40.24</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>NYYC Dev Team</td>
+<td>726</td>
+<td>Darren Wright</td>
+<td>Howth YC</td>
+<td>0.942</td>
+<td>10.40.00</td>
+<td>11.23.16</td>
+<td>0.43.16</td>
+<td>0.40.45</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>Any Ideas</td>
+<td>1024</td>
+<td>Philip Bryne & Linda Darbey</td>
+<td>Howth YC</td>
+<td>0.905</td>
+<td>10.40.00</td>
+<td>11.25.50</td>
+<td>0.45.50</td>
+<td>0.41.29</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>Age Before Beauty</td>
+<td>393</td>
+<td>David Cullen</td>
+<td>Howth YC</td>
+<td>0.926</td>
+<td>10.40.00</td>
+<td>11.25.02</td>
+<td>0.45.02</td>
+<td>0.41.42</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>Jawesome III</td>
+<td>260</td>
+<td>Jeremy Beshoff</td>
+<td>Howth YC</td>
+<td>0.949</td>
+<td>10.40.00</td>
+<td>11.24.45</td>
+<td>0.44.45</td>
+<td>0.42.28</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>Fifty Shades Of Spray</td>
+<td>527</td>
+<td>Jonny Sargent & David Johnston</td>
+<td>Howth YC</td>
+<td>0.928</td>
+<td>10.40.00</td>
+<td>11.27.11</td>
+<td>0.47.11</td>
+<td>0.43.47</td>
+<td>6.0</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>Chinook</td>
+<td>17793</td>
+<td>Brian Skehan</td>
+<td>Howth YC</td>
+<td>0.841</td>
+<td>10.40.00</td>
+<td>11.33.11</td>
+<td>0.53.11</td>
+<td>0.44.44</td>
+<td>7.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r6class_2_hph">Race 6 - Class 2 HPH Fleet&nbsp;-&nbsp;Dec 14th</h3>
+<div class="caption racecaption">
+Start: Start 3, Finishes: Finish time, Time: 12.05.00
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="11">
+<col class="rank" />
+<col class="boat" />
+<col class="sailno" />
+<col class="helmname" />
+<col class="club" />
+<col class="rating" />
+<col class="start" />
+<col class="finish" />
+<col class="elapsed" />
+<col class="corrected" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Boat Name</th>
+<th>Sail</th>
+<th>Owner(s)</th>
+<th>Club</th>
+<th>TCF</th>
+<th>Start</th>
+<th>Finish</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>NYYC Dev Team</td>
+<td>726</td>
+<td>Darren Wright</td>
+<td>Howth YC</td>
+<td>0.949</td>
+<td>12.05.00</td>
+<td>12:48:43</td>
+<td>0.43.43</td>
+<td>0.41.29</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>Jawesome III</td>
+<td>260</td>
+<td>Jeremy Beshoff</td>
+<td>Howth YC</td>
+<td>0.948</td>
+<td>12.05.00</td>
+<td>12:48:52</td>
+<td>0.43.52</td>
+<td>0.41.35</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>Indian</td>
+<td>1543</td>
+<td>Simon Knowles</td>
+<td>Howth YC</td>
+<td>1.004</td>
+<td>12.05.00</td>
+<td>12:46:35</td>
+<td>0.41.35</td>
+<td>0.41.45</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>Age Before Beauty</td>
+<td>393</td>
+<td>David Cullen</td>
+<td>Howth YC</td>
+<td>0.927</td>
+<td>12.05.00</td>
+<td>12:50:09</td>
+<td>0.45.09</td>
+<td>0.41.51</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>Any Ideas</td>
+<td>1024</td>
+<td>Philip Bryne & Linda Darbey</td>
+<td>Howth YC</td>
+<td>0.907</td>
+<td>12.05.00</td>
+<td>12:51:18</td>
+<td>0.46.18</td>
+<td>0.42.00</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>Fifty Shades Of Spray</td>
+<td>527</td>
+<td>Jonny Sargent & David Johnston</td>
+<td>Howth YC</td>
+<td>0.928</td>
+<td>12.05.00</td>
+<td>12:50:37</td>
+<td>0.45.37</td>
+<td>0.42.20</td>
+<td>6.0</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>Chinook</td>
+<td>17793</td>
+<td>Brian Skehan</td>
+<td>Howth YC</td>
+<td>0.840</td>
+<td>12.05.00</td>
+<td>12:56:20</td>
+<td>0.51.20</td>
+<td>0.43.07</td>
+<td>7.0</td>
+</tr>
+</tbody>
+</table>
+
+<p class="hardleft"><a href="https://"></a><br /><a href="mailto:"></a></p>
+<p class="hardright"><a href="https://"></a><br /><a href="mailto:"></a></p>
+<p>Sailwave Scoring Software 2.34.00<br /><a href="https://www.sailwave.com">www.sailwave.com</a></p>
+
+</div>
+
+<footer>
+</footer>
+
+<div id="scrollbottom"></div>
+
+</body>
+</html>
+
+

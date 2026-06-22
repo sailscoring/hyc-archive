@@ -1,0 +1,977 @@
+
+
+
+<!doctype html>
+
+<head>
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta http-equiv="Cache-control" content="no-cache">
+<meta name="description" content="sailwave results">
+<meta name="viewport" content="width=device-width">
+
+<title>Sailwave results for J/24 European Championships 2022 at Howth Yacht Club 2022</title>
+
+<style type="text/css">
+body {font: 80% arial, helvetica, sans-serif; text-align: center;}
+.hardleft  {text-align: left; float: left;  margin: 15px 0  15px 25px;}
+.hardright {text-align: right; float: right; margin: 15px 25px 15px 0;}
+table {text-align: left; margin: 0px auto 30px auto; font-size: 1em; border-collapse: collapse; border: 1px #999 solid;}
+td, th {padding: 4px; border: 1px #999 solid; vertical-align: top;}
+.caption {padding: 5px; text-align: center; border: 0; font-weight: bold;}
+p {text-align: center;}
+.contents {text-align: left; margin-left: 20%;}
+.race {background-color: #eee;}
+.odd {background-color: #eef;}
+.natflag {border: 1px #999 solid;}
+.nattext {font-size: 0.8em;}
+.place1 {font-weight: bold; background-color: #ffffaa;}
+.place2 {font-weight: bold; background-color: #aaaaff;}
+.place3 {font-weight: bold; background-color: #ffaaaa;}
+.placen {}
+table.headertable {border: 0px;}
+table.headertable td{border: 0px;}
+</style>
+
+<script type="text/javascript">
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script>
+
+function swGetURLArgs() {
+
+  var url = location.href;
+  var qs  = url.substring(url.indexOf('?') + 1).split('&');
+
+  for(var i = 0, result = {}; i < qs.length; i++) {
+    qs[i]            = qs[i].split('=');
+    result[qs[i][0]] = decodeURIComponent(qs[i][1]);
+  }
+
+  return result;
+}
+
+//
+//  name=HighlightWins3
+//  dependencies=jQuery
+//  description=Highlight winning scores in summary tables.
+//  author=Jon Eskdale based on an idea by Colin Jenkins
+//  date=2015-08-18
+//  version=1.6 2018-11-15
+//  url=http://sailwave.com
+//  email=jon@sailwave.com
+//  twitter=eskdale
+//  comments=Edit colours to colours of your choice
+//
+
+$(document).ready(function() {
+var winsSelector = '.summaryrace';
+var winsText     = /\b1\.0/;
+var twoText              = /\b2\.0/;
+var threeText    = /\b3\.0/;
+
+// Edit these colours to change the highlight colours for 1st, 2nd and 3rd
+var winsColour   = '#ffd700';
+var twoColour    = '#6a91c5';
+var threeColour  = '#da6841';
+//var twoColour  = '#ffe768';
+//var threeColour  = '#fff0a1';
+
+// create array of race column numbers for first table (summarytable)
+var ths = document.getElementsByTagName('col');
+var column =[];
+for (var i=0; i<ths.length; i++) {
+        if (ths[i].classList[0] === "race") {
+                column.push(i);
+        } else {
+                if (column.length !=0) {
+                        break;
+                }
+        }
+}
+//console.log(column);
+
+//  Set a class of summaryrace for all race cells in summary table body
+//
+for (var i=0; i<column.length; i++) {
+        $(".summarytable tbody tr td:nth-child(" + (column[i]+1) +")").addClass("summaryrace");
+}
+
+// Change the background color for cells with class of summaryrace and that match regular expression text
+$(function () {
+
+  $(winsSelector).filter(function() {
+    return winsText.test($(this).text());
+  }).css("background", winsColour);
+  $(winsSelector).filter(function() {
+        return twoText.test($(this).text());
+  }).css("background", twoColour);
+  $(winsSelector).filter(function() {
+        return threeText.test($(this).text());
+  }).css("background", threeColour);
+
+});
+});
+</script>
+
+</head>
+
+<body>
+
+<header>
+</header>
+<table class="headertable" cellspacing="0" width="100%" cellpadding="0" border="0">
+<tbody>
+<div id="wrap">
+
+<tr>
+<td width="30%">
+<img style="display:block; height:100px;"  src="https://hyc.ie/system/sponsor_logos/395/thumb/HYC_Logo.jpg" alt="venue burgee" />
+</td>
+
+<td width="40%" align="center">
+<h1>J/24 European Championships 2022</h1>
+<h2>Howth Yacht Club</h2>
+</td>
+
+<td width="30%">
+<img style="display:block; height:100px;" src="https://hyc.ie/system/sponsor_logos/379/thumb/J24_Ireland.jpg" alt="event burgee" align="right" />
+</td>
+</tr>
+</tbody>
+</table>
+
+<div style="clear:both;"></div>
+
+<style>
+div.applicant-break {page-break-after:always;}
+</style>
+<h3 class="seriestitle">Day 2</h3>
+<h3 class="racetitle" id="r3">Race 3</h3>
+<div class="caption racecaption">
+Start: Start 1, Finishes: Place, Time: 111300
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="9">
+<col class="rank" />
+<col class="sailno" />
+<col class="boat" />
+<col class="helmname" />
+<col class="club" />
+<col class="division" />
+<col class="helmagegroup" />
+<col class="place" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Sail No</th>
+<th>Boat Name</th>
+<th>Helm Name</th>
+<th>Club</th>
+<th>Division</th>
+<th>Age Group</th>
+<th>Place</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>ITA416</td>
+<td>La Superba</td>
+<td>MM Italiana</td>
+<td>CVA MM Italiana</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>1</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>IRL5219</td>
+<td>IL Riccio</td>
+<td>McCaldin</td>
+<td>Lough Erne YC</td>
+<td>Cor</td>
+<td>&nbsp;</td>
+<td>2</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>GBR4269</td>
+<td>Cacoon</td>
+<td>Hale</td>
+<td>Poole YC</td>
+<td>Cor</td>
+<td>Over 50</td>
+<td>3</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>GER5381</td>
+<td>Schwere Jungs</td>
+<td>Karsunke</td>
+<td>Blankeneser SC</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>4</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>GBR4248</td>
+<td>MaJic</td>
+<td>Torr</td>
+<td>Saltash SC</td>
+<td>Cor</td>
+<td>&nbsp;</td>
+<td>5</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>IRL4236</td>
+<td>KINSAILOR</td>
+<td>Kinsale YC</td>
+<td>Kinsale YC</td>
+<td>Cor</td>
+<td>Youth</td>
+<td>6</td>
+<td>6.0</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>IRL4191</td>
+<td>Janx Spirit</td>
+<td>O Loingsigh</td>
+<td>Tralee Bay SC</td>
+<td>Cor</td>
+<td>&nbsp;</td>
+<td>7</td>
+<td>7.0</td>
+</tr>
+<tr class="even racerow">
+<td>8</td>
+<td>GRE5367</td>
+<td>JMANIA</td>
+<td>Tridimas/Skotida</td>
+<td>NC Palaio Faliro</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>8</td>
+<td>8.0</td>
+</tr>
+<tr class="odd racerow">
+<td>9</td>
+<td>IRL4794</td>
+<td>Hard on Port</td>
+<td>Bailey</td>
+<td>Bray SC</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>9</td>
+<td>9.0</td>
+</tr>
+<tr class="even racerow">
+<td>10</td>
+<td>IRL3109</td>
+<td>Jade</td>
+<td>Haughton</td>
+<td>Wicklow SC</td>
+<td>Cor</td>
+<td>&nbsp;</td>
+<td>10</td>
+<td>10.0</td>
+</tr>
+<tr class="odd racerow">
+<td>11</td>
+<td>USA3746</td>
+<td>Easy Street</td>
+<td>Vaughan</td>
+<td>Corinthian YC</td>
+<td>Cor</td>
+<td>Over 50</td>
+<td>11</td>
+<td>11.0</td>
+</tr>
+<tr class="even racerow">
+<td>12</td>
+<td>USA2810</td>
+<td>Jigalo</td>
+<td>Murphy</td>
+<td>HYC</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>12</td>
+<td>12.0</td>
+</tr>
+<tr class="odd racerow">
+<td>13</td>
+<td>IRL5285</td>
+<td>Yachtzee</td>
+<td>O'Donovan</td>
+<td>Tralee Bay SC</td>
+<td>Cor</td>
+<td>Over 50</td>
+<td>13</td>
+<td>13.0</td>
+</tr>
+<tr class="even racerow">
+<td>14</td>
+<td>USA5352</td>
+<td>Amuse Bouche</td>
+<td>Dammeier</td>
+<td>Corinthian YC</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>14</td>
+<td>14.0</td>
+</tr>
+<tr class="odd racerow">
+<td>15</td>
+<td>IRL5159</td>
+<td>Jibe</td>
+<td>Fergus/Kelliher</td>
+<td>Tralee Bay SC</td>
+<td>Cor</td>
+<td>&nbsp;</td>
+<td>15</td>
+<td>15.0</td>
+</tr>
+<tr class="even racerow">
+<td>16</td>
+<td>IRL3060</td>
+<td>Headgehog</td>
+<td>Usher</td>
+<td>Greystones SC</td>
+<td>Cor</td>
+<td>Over 50</td>
+<td>16</td>
+<td>16.0</td>
+</tr>
+<tr class="odd racerow">
+<td>17</td>
+<td>GBR4266</td>
+<td>NJO2</td>
+<td>Octon</td>
+<td>JOG</td>
+<td>Cor</td>
+<td>Over 50</td>
+<td>17</td>
+<td>17.0</td>
+</tr>
+<tr class="even racerow">
+<td>18</td>
+<td>IRL5067</td>
+<td>Jedi</td>
+<td>O'Flaherty</td>
+<td>Sligo YC</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>18</td>
+<td>18.0</td>
+</tr>
+<tr class="odd racerow">
+<td>19</td>
+<td>GRE5239</td>
+<td>Legal Alien</td>
+<td>Kapnisis</td>
+<td>Heraklion SC</td>
+<td>Cor</td>
+<td>&nbsp;</td>
+<td>19</td>
+<td>19.0</td>
+</tr>
+<tr class="even racerow">
+<td>20</td>
+<td>GBR4153</td>
+<td>Jam</td>
+<td>Maddaford</td>
+<td>Saltash SC</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>20</td>
+<td>20.0</td>
+</tr>
+<tr class="odd racerow">
+<td>21</td>
+<td>IRL39</td>
+<td>Jeb Stuart</td>
+<td>Andrew Mannion</td>
+<td>Lough Ree YC</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>21</td>
+<td>21.0</td>
+</tr>
+<tr class="even racerow">
+<td>22</td>
+<td>IRL4532</td>
+<td>Jelignite</td>
+<td>Ryan</td>
+<td>Lough Ree YC</td>
+<td>&nbsp;</td>
+<td>Over 50</td>
+<td>22</td>
+<td>22.0</td>
+</tr>
+<tr class="odd racerow">
+<td>23</td>
+<td>IRL4188</td>
+<td>Jasper 2</td>
+<td>McCormack</td>
+<td>Foynes YC</td>
+<td>&nbsp;</td>
+<td>Youth</td>
+<td>23</td>
+<td>23.0</td>
+</tr>
+<tr class="even racerow">
+<td>24</td>
+<td>IRL4265</td>
+<td>Smugairle Roin</td>
+<td>Mullen</td>
+<td>Sligo YC</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>24</td>
+<td>24.0</td>
+</tr>
+<tr class="odd racerow">
+<td>25</td>
+<td>GBR4242</td>
+<td>Hitchhiker</td>
+<td>Randall</td>
+<td>Saltash SC</td>
+<td>Cor</td>
+<td>Over 50</td>
+<td>25</td>
+<td>25.0</td>
+</tr>
+<tr class="even racerow">
+<td>26</td>
+<td>IRL4104</td>
+<td>Battling J</td>
+<td>Boylan</td>
+<td>Malahide YC</td>
+<td>Cor</td>
+<td>&nbsp;</td>
+<td>26</td>
+<td>26.0</td>
+</tr>
+<tr class="odd racerow">
+<td>27</td>
+<td>IRL4533</td>
+<td>Crazy Horse</td>
+<td>Mc Bride</td>
+<td>Lough Erne YC</td>
+<td>Cor</td>
+<td>Over 50</td>
+<td>27</td>
+<td>27.0</td>
+</tr>
+<tr class="even racerow">
+<td>28</td>
+<td>IRL4202</td>
+<td>Gossip</td>
+<td>Brennan/Brennan</td>
+<td>Sligo YC/ LEYC</td>
+<td>Cor</td>
+<td>&nbsp;</td>
+<td>28</td>
+<td>28.0</td>
+</tr>
+<tr class="odd racerow">
+<td>29</td>
+<td>IRL680</td>
+<td>Kilcullen</td>
+<td>HYC U25 2</td>
+<td>HYC</td>
+<td>&nbsp;</td>
+<td>Youth</td>
+<td>29</td>
+<td>29.0</td>
+</tr>
+<tr class="even racerow">
+<td>30</td>
+<td>IRL1183</td>
+<td>Red Flag</td>
+<td>Greystones SC</td>
+<td>Greystones SC</td>
+<td>&nbsp;</td>
+<td>Youth</td>
+<td>30</td>
+<td>30.0</td>
+</tr>
+<tr class="odd racerow">
+<td>31</td>
+<td>IRL4384</td>
+<td>Proud Mary</td>
+<td>Brian McConville</td>
+<td>Carlingford Lough YC</td>
+<td>&nbsp;</td>
+<td>Over 50</td>
+<td>31</td>
+<td>31.0</td>
+</tr>
+<tr class="even racerow">
+<td>32</td>
+<td>IRL4247</td>
+<td>Headcase</td>
+<td>Mulloy/Ryan/Dicks</td>
+<td>HYC, LRYC</td>
+<td>Cor</td>
+<td>&nbsp;</td>
+<td>UFD</td>
+<td>35.0</td>
+</tr>
+<tr class="odd racerow">
+<td>32</td>
+<td>GBR4260</td>
+<td>Mojosi</td>
+<td>McDonald</td>
+<td>RYA</td>
+<td>Cor</td>
+<td>Over 50</td>
+<td>UFD</td>
+<td>35.0</td>
+</tr>
+<tr class="even racerow">
+<td>32</td>
+<td>IRL5278</td>
+<td>Hung Jury</td>
+<td>Raftery</td>
+<td>Sligo YC</td>
+<td>Cor</td>
+<td>Over 50</td>
+<td>UFD</td>
+<td>35.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r4">Race 4</h3>
+<div class="caption racecaption">
+Start: Start 1, Finishes: Place, Time: 124500
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="9">
+<col class="rank" />
+<col class="sailno" />
+<col class="boat" />
+<col class="helmname" />
+<col class="club" />
+<col class="division" />
+<col class="helmagegroup" />
+<col class="place" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Sail No</th>
+<th>Boat Name</th>
+<th>Helm Name</th>
+<th>Club</th>
+<th>Division</th>
+<th>Age Group</th>
+<th>Place</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>GRE5367</td>
+<td>JMANIA</td>
+<td>Tridimas/Skotida</td>
+<td>NC Palaio Faliro</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>1</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>USA3746</td>
+<td>Easy Street</td>
+<td>Vaughan</td>
+<td>Corinthian YC</td>
+<td>Cor</td>
+<td>Over 50</td>
+<td>2</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>IRL4247</td>
+<td>Headcase</td>
+<td>Mulloy/Ryan/Dicks</td>
+<td>HYC, LRYC</td>
+<td>Cor</td>
+<td>&nbsp;</td>
+<td>3</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>GBR4266</td>
+<td>NJO2</td>
+<td>Octon</td>
+<td>JOG</td>
+<td>Cor</td>
+<td>Over 50</td>
+<td>4</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>IRL39</td>
+<td>Jeb Stuart</td>
+<td>Andrew Mannion</td>
+<td>Lough Ree YC</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>5</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>IRL4191</td>
+<td>Janx Spirit</td>
+<td>O Loingsigh</td>
+<td>Tralee Bay SC</td>
+<td>Cor</td>
+<td>&nbsp;</td>
+<td>6</td>
+<td>6.0</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>IRL680</td>
+<td>Kilcullen</td>
+<td>HYC U25 2</td>
+<td>HYC</td>
+<td>&nbsp;</td>
+<td>Youth</td>
+<td>7</td>
+<td>7.0</td>
+</tr>
+<tr class="even racerow">
+<td>8</td>
+<td>GER5381</td>
+<td>Schwere Jungs</td>
+<td>Karsunke</td>
+<td>Blankeneser SC</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>8</td>
+<td>8.0</td>
+</tr>
+<tr class="odd racerow">
+<td>9</td>
+<td>IRL4794</td>
+<td>Hard on Port</td>
+<td>Bailey</td>
+<td>Bray SC</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>9</td>
+<td>9.0</td>
+</tr>
+<tr class="even racerow">
+<td>10</td>
+<td>GBR4269</td>
+<td>Cacoon</td>
+<td>Hale</td>
+<td>Poole YC</td>
+<td>Cor</td>
+<td>Over 50</td>
+<td>10</td>
+<td>10.0</td>
+</tr>
+<tr class="odd racerow">
+<td>11</td>
+<td>GBR4260</td>
+<td>Mojosi</td>
+<td>McDonald</td>
+<td>RYA</td>
+<td>Cor</td>
+<td>Over 50</td>
+<td>11</td>
+<td>11.0</td>
+</tr>
+<tr class="even racerow">
+<td>12</td>
+<td>IRL3109</td>
+<td>Jade</td>
+<td>Haughton</td>
+<td>Wicklow SC</td>
+<td>Cor</td>
+<td>&nbsp;</td>
+<td>12</td>
+<td>12.0</td>
+</tr>
+<tr class="odd racerow">
+<td>13</td>
+<td>GBR4242</td>
+<td>Hitchhiker</td>
+<td>Randall</td>
+<td>Saltash SC</td>
+<td>Cor</td>
+<td>Over 50</td>
+<td>13</td>
+<td>13.0</td>
+</tr>
+<tr class="even racerow">
+<td>14</td>
+<td>GBR4248</td>
+<td>MaJic</td>
+<td>Torr</td>
+<td>Saltash SC</td>
+<td>Cor</td>
+<td>&nbsp;</td>
+<td>14</td>
+<td>14.0</td>
+</tr>
+<tr class="odd racerow">
+<td>15</td>
+<td>ITA416</td>
+<td>La Superba</td>
+<td>MM Italiana</td>
+<td>CVA MM Italiana</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>15</td>
+<td>15.0</td>
+</tr>
+<tr class="even racerow">
+<td>16</td>
+<td>IRL5219</td>
+<td>IL Riccio</td>
+<td>McCaldin</td>
+<td>Lough Erne YC</td>
+<td>Cor</td>
+<td>&nbsp;</td>
+<td>16</td>
+<td>16.0</td>
+</tr>
+<tr class="odd racerow">
+<td>17</td>
+<td>IRL4265</td>
+<td>Smugairle Roin</td>
+<td>Mullen</td>
+<td>Sligo YC</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>17</td>
+<td>17.0</td>
+</tr>
+<tr class="even racerow">
+<td>18</td>
+<td>USA5352</td>
+<td>Amuse Bouche</td>
+<td>Dammeier</td>
+<td>Corinthian YC</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>18</td>
+<td>18.0</td>
+</tr>
+<tr class="odd racerow">
+<td>19</td>
+<td>IRL3060</td>
+<td>Headgehog</td>
+<td>Usher</td>
+<td>Greystones SC</td>
+<td>Cor</td>
+<td>Over 50</td>
+<td>19</td>
+<td>19.0</td>
+</tr>
+<tr class="even racerow">
+<td>20</td>
+<td>IRL5159</td>
+<td>Jibe</td>
+<td>Fergus/Kelliher</td>
+<td>Tralee Bay SC</td>
+<td>Cor</td>
+<td>&nbsp;</td>
+<td>20</td>
+<td>20.0</td>
+</tr>
+<tr class="odd racerow">
+<td>21</td>
+<td>IRL5285</td>
+<td>Yachtzee</td>
+<td>O'Donovan</td>
+<td>Tralee Bay SC</td>
+<td>Cor</td>
+<td>Over 50</td>
+<td>21</td>
+<td>21.0</td>
+</tr>
+<tr class="even racerow">
+<td>22</td>
+<td>IRL5067</td>
+<td>Jedi</td>
+<td>O'Flaherty</td>
+<td>Sligo YC</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>22</td>
+<td>22.0</td>
+</tr>
+<tr class="odd racerow">
+<td>23</td>
+<td>IRL4188</td>
+<td>Jasper 2</td>
+<td>McCormack</td>
+<td>Foynes YC</td>
+<td>&nbsp;</td>
+<td>Youth</td>
+<td>23</td>
+<td>23.0</td>
+</tr>
+<tr class="even racerow">
+<td>24</td>
+<td>GBR4153</td>
+<td>Jam</td>
+<td>Maddaford</td>
+<td>Saltash SC</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>24</td>
+<td>24.0</td>
+</tr>
+<tr class="odd racerow">
+<td>25</td>
+<td>IRL1183</td>
+<td>Red Flag</td>
+<td>Greystones SC</td>
+<td>Greystones SC</td>
+<td>&nbsp;</td>
+<td>Youth</td>
+<td>25</td>
+<td>25.0</td>
+</tr>
+<tr class="even racerow">
+<td>26</td>
+<td>GRE5239</td>
+<td>Legal Alien</td>
+<td>Kapnisis</td>
+<td>Heraklion SC</td>
+<td>Cor</td>
+<td>&nbsp;</td>
+<td>26</td>
+<td>26.0</td>
+</tr>
+<tr class="odd racerow">
+<td>27</td>
+<td>IRL4236</td>
+<td>KINSAILOR</td>
+<td>Kinsale YC</td>
+<td>Kinsale YC</td>
+<td>Cor</td>
+<td>Youth</td>
+<td>27</td>
+<td>27.0</td>
+</tr>
+<tr class="even racerow">
+<td>28</td>
+<td>USA2810</td>
+<td>Jigalo</td>
+<td>Murphy</td>
+<td>HYC</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>28</td>
+<td>28.0</td>
+</tr>
+<tr class="odd racerow">
+<td>29</td>
+<td>IRL4532</td>
+<td>Jelignite</td>
+<td>Ryan</td>
+<td>Lough Ree YC</td>
+<td>&nbsp;</td>
+<td>Over 50</td>
+<td>29</td>
+<td>29.0</td>
+</tr>
+<tr class="even racerow">
+<td>30</td>
+<td>IRL4533</td>
+<td>Crazy Horse</td>
+<td>Mc Bride</td>
+<td>Lough Erne YC</td>
+<td>Cor</td>
+<td>Over 50</td>
+<td>30</td>
+<td>30.0</td>
+</tr>
+<tr class="odd racerow">
+<td>31</td>
+<td>IRL5278</td>
+<td>Hung Jury</td>
+<td>Raftery</td>
+<td>Sligo YC</td>
+<td>Cor</td>
+<td>Over 50</td>
+<td>31</td>
+<td>31.0</td>
+</tr>
+<tr class="even racerow">
+<td>32</td>
+<td>IRL4104</td>
+<td>Battling J</td>
+<td>Boylan</td>
+<td>Malahide YC</td>
+<td>Cor</td>
+<td>&nbsp;</td>
+<td>32</td>
+<td>32.0</td>
+</tr>
+<tr class="odd racerow">
+<td>33</td>
+<td>IRL4202</td>
+<td>Gossip</td>
+<td>Brennan/Brennan</td>
+<td>Sligo YC/ LEYC</td>
+<td>Cor</td>
+<td>&nbsp;</td>
+<td>33</td>
+<td>33.0</td>
+</tr>
+<tr class="even racerow">
+<td>34</td>
+<td>IRL4384</td>
+<td>Proud Mary</td>
+<td>Brian McConville</td>
+<td>Carlingford Lough YC</td>
+<td>&nbsp;</td>
+<td>Over 50</td>
+<td>34</td>
+<td>34.0</td>
+</tr>
+</tbody>
+</table>
+
+<p class="hardleft"><a href="http://"></a><br /><a href="mailto:"></a></p>
+<p class="hardright"><a href="http://"></a><br /><a href="mailto:"></a></p>
+<p>Sailwave Scoring Software 2.29.0<br /><a href="http://www.sailwave.com">www.sailwave.com</a></p>
+
+</div>
+
+<footer>
+</footer>
+
+<div id="scrollbottom"></div>
+
+</body>
+</html>
+
+

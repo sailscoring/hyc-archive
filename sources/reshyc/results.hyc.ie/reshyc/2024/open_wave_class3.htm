@@ -1,0 +1,2167 @@
+
+
+
+<!doctype html>
+
+<head>
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta http-equiv="Cache-control" content="no-cache">
+<meta name="description" content="sailwave results">
+<meta name="viewport" content="width=device-width">
+
+<title>Sailwave results for Wave Regatta 24 - 26 May 2024 at Howth Yacht Club 2024</title>
+
+<style type="text/css">
+body {font: 80% arial, helvetica, sans-serif; text-align: center;}
+.hardleft  {text-align: left; float: left;  margin: 15px 0  15px 25px;}
+.hardright {text-align: right; float: right; margin: 15px 25px 15px 0;}
+table {text-align: left; margin: 0px auto 30px auto; font-size: 1em; border-collapse: collapse; border: 1px #999 solid;}
+td, th {padding: 4px; border: 1px #999 solid; vertical-align: top;}
+.caption {padding: 5px; text-align: center; border: 0; font-weight: bold;}
+h1 {font-size: 1.6em;}
+h2 {font-size: 1.4em;}
+h3 {font-size: 1.2em;}
+th {background-color: #ddd;}
+p {text-align: center;}
+.contents {text-align: left; margin-left: 20%;}
+.natflag {border: 1px #999 solid;}
+.nattext {font-size: 0.8em;}
+.place1 {font-weight: bold; background-color: #ffffaa;}
+.place2 {font-weight: bold; background-color: #aaaaff;}
+.place3 {font-weight: bold; background-color: #ffaaaa;}
+.placen {}
+table.headertable {border: 0px;}
+table.headertable td{border: 0px;}
+</style>
+
+<script type="text/javascript">
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script>
+
+function swGetURLArgs() {
+
+  var url = location.href;
+  var qs  = url.substring(url.indexOf('?') + 1).split('&');
+
+  for(var i = 0, result = {}; i < qs.length; i++) {
+    qs[i]            = qs[i].split('=');
+    result[qs[i][0]] = decodeURIComponent(qs[i][1]);
+  }
+
+  return result;
+}
+
+//
+//  name=HighlightWins3v3
+//  dependencies=jQuery
+//  description=Highlight winning scores in summary tables.
+//  author=Jon Eskdale based on an idea by Colin Jenkins
+//  date=2016-07-04
+//  version=3.0  For use with Sailwave from V2.22.x
+//  Requires the following lines in the Results.htm file (Results.htm is in the Templates directory)
+//  string.set("summary.col.race.rank1.td",   "rank1")
+//  string.set("summary.col.race.rank2.td",   "rank2")
+//  string.set("summary.col.race.rank3.td",   "rank3")
+
+//  url=http://sailwave.com
+//  email=jon@sailwave.com
+//  twitter=eskdale
+//  comments=Edit colours to colours of your choice
+//
+
+$(document).ready(function() {
+var selectorRank1 = '.rank1';
+var selectorRank2 = '.rank2';
+var selectorRank3 = '.rank3';
+
+// Results with these codes will not get highlighted add or remove codes to your choice
+var ignoreText   = /^(?!.*\b(DNC|DNF|DNS|OCS|BFD|UFD|RET|DSQ|DGM|DNE)\b).*/i
+
+// Edit these colours to change the highlight colours for 1st, 2nd and 3rd
+var winsColour   = '#ffd700';
+var twoColour    = '#6a91c5';
+var threeColour  = '#da6841';
+
+
+// Change the background color for cells with class of rank1-3 and don't have a code specified
+$(function () {
+
+  $(selectorRank1).filter(function() {
+    return ignoreText.test($(this).text());
+  }).css("background", winsColour);
+  $(selectorRank2).filter(function() {
+        return ignoreText.test($(this).text());
+  }).css("background", twoColour);
+  $(selectorRank3).filter(function() {
+        return ignoreText.test($(this).text());
+  }).css("background", threeColour);
+
+});
+});
+//
+//  name=ScoredSeperatelyMatrix.js
+//  dependencies=
+//  description=Shows the result tables as a matrix if they have been scored separately.
+//  Original author=Colin Jenkins
+//  url=http://op12no2.me
+//  email=op12no2@gmail.com
+//  V2 by Jon Eskdale
+//  email=jon@sailwave.com
+//  version=2.0
+//  date=2018-06-15
+
+//
+//  Please note that this effect only works when more then one or more
+//  group (e.g. fleet) has been scored separately.  There may be some
+//  other limitations.  Footers and notes are removed.  Burgees are
+//  consolidated.
+//
+
+$.fn.exists = function () {
+    return this.length !== 0;
+}
+
+function showcodes () {
+  $('h3.codestitle').fadeIn('slow');
+  $('table.codestable').fadeIn('slow');
+}
+
+function showprizes () {
+  $('h3.prizestitle').show();
+  $('table.prizestable').show();
+}
+
+function showsummary (f) {
+  hideall();
+  $(d.sum[f].title).show();
+  $(d.sum[f].caption).show();
+  $(d.sum[f].table).fadeIn('slow');
+  showcodes()
+}
+
+function showrace (f,r) {
+  hideall();
+  showcodes()
+  $(d.sum[f].races[r].title).show();
+  $(d.sum[f].races[r].caption).show();
+  $(d.sum[f].races[r].table).fadeIn('slow');
+}
+
+function hideall () {
+  $('h3.prizestitle').hide();
+  $('table.prizestable').hide();
+  hideinit();
+}
+function hideinit () {
+  $('h3.codestitle').hide();
+  $('table.codestable').hide();
+  $('h3.summarytitle').hide();
+  $('div.summarycaption').hide();
+  $('table.summarytable').hide();
+  $('h3.racetitle').hide();
+  $('div.racecaption').hide();
+  $('table.racetable').hide();
+}
+
+$(function() {
+  $('img').removeClass('hardleft');
+  $('img').removeClass('hardright');
+  $('img.hardright').remove();
+  $('p.hardright').remove();
+  $('p.hardleft').remove();
+  $('div.contents').remove();
+  $('p.seriesnotes').remove();
+  $('p.racenotes').remove();
+
+  d = {};
+
+        minrt = 10000;
+        maxrt = 0;
+        d.sum = [];
+  $('h3.summarytitle').each(function(index) {
+    if (!d.sum[index])
+      d.sum[index] = {};
+    d.sum[index].title = this;
+    console.log($(d.sum[index].title).text());
+    if ($(this).attr('id'))
+      d.sum[index].id = $(this).attr('id').replace(/summary/gi,'');
+    else
+      d.sum[index].id = 'overall';
+    //console.log($(this).attr('id'));
+    //console.log(d.sum[index].id);
+    d.sum[index].caption = $(this).next();
+    d.sum[index].table   = $(this).next().next();
+    maxraces = 100; //hack $('h3.racetitle').size();
+    minr = 10000;
+    maxr = 0;
+    //console.log(maxraces);
+    d.sum[index].races = [];
+    for (var i=0; i<maxraces; i++) {
+      var r = i + 1;
+      var id = '#r' + r + d.sum[index].id;
+      //console.log(id);
+      if ($(id).exists()) {
+        if (r > maxr)
+          maxr = r;
+                  if (r > maxrt)
+                maxrt = r;
+        if (r < minr)
+          minr = r;
+              if (r < minrt)
+                        minrt = r;
+        d.sum[index].races[r] = {};
+        d.sum[index].races[r].raceno = r;
+        d.sum[index].races[r].title = $(id);
+        d.sum[index].races[r].caption = $(id).next();
+        d.sum[index].races[r].table = $(id).next().next();
+      }
+    }
+  });
+  $('a.racelink').each(function(index) {
+    $(this).parent().html($(this).text());
+  });
+
+  hideinit();
+
+  h = '<div style="margin: 40px auto 20px; auto;" id="dynamic"><table>';
+
+  for (var f=0; f<d.sum.length; f++) {
+    var fleet = d.sum[f];
+    var races = d.sum[f].races;
+    h += '<tr><td>' + $(fleet.title).text() + '</td>';
+    var linktitle = 'Overall';
+    h += '<td><a href="#" onclick="showsummary(' + f + ');">' + linktitle + '</a></td>';
+    for (var r=minrt; r<=maxrt; r++) {
+          if (races[r]) {
+      var linktitle = $.trim(($(races[r].title).text().split('-'))[0]);
+      h += '<td>';
+      if (races[r])
+        h += '<a href="#" onclick="showrace(' + f + ',' + r + ');">' + linktitle + '</a>';
+      else
+        h += '&nbsp;';
+      h += '</td>';
+          }
+    }
+    h += '</tr>';
+  }
+
+  //h += '<tr><td><a href="#" onclick="showcodes();">Scoring codes</a></td></tr>';
+  //h += '<tr><td><a href="#" onclick="showprizes();">Prizes</a></td></tr>';
+  h += '</table></div>';
+
+  $('h3.seriestitle').append(h);
+
+});
+//
+//  name=TableSorter
+//  dependencies=jQuery (autoloads if not specified)
+//  description=Click on heading to sort table
+//  author=Jon Eskdale
+//  date=2015-08-13 / 2018-04-16
+//  version=1.2
+//  url=https://sailwave.com
+//  email=jon@sailwave.com
+//  twitter=@eskdale
+//
+
+</script>
+<link rel="stylesheet" href="https://www.sailwave.com/download/css/sorter.css">
+<script src="https://mottie.github.io/tablesorter/js/jquery.tablesorter.combined.js"></script>
+<script>
+
+$(document).ready(function()
+    {
+        // create array of race column numbers for first table (summarytable)
+        var ths = document.getElementsByTagName('col');
+        var column =[];
+        for (var i=0; i<ths.length; i++) {
+                if (ths[i].classList[0] === "race") {
+                        column.push(i);
+                } else {
+                        if (column.length !=0) {
+                                break;
+                        }
+                }
+        }
+        var patt = /\d+\.\d+/;
+        $.tablesorter.addParser({
+                id: 'race',
+                is: function(s, table, cell, $cell) {
+                        return false;
+                },
+                format: function(s, table, cell, cellIndex) {
+                        return patt.exec(s);
+                },
+                // set type, either numeric or text
+                type: 'numeric'
+        });
+
+        //  Set a class of race for all headers with race results in column for summarytable
+        //  "{sorter: 'numeric'}"
+        for (var i=0; i<column.length; i++) {
+                $(".summarytable thead tr th:nth-child(" + (column[i]+1) +")").addClass("sorter-race");
+        }
+
+
+        $(".summarytable").tablesorter({
+         theme : 'blue',
+         sortMultiSortKey: 'ctrlKey',
+         sortResetKey: 'altKey',
+         });
+}
+);
+
+
+//
+//  name=TableSorterRace
+//  dependencies=jQuery (autoloads if not specified)
+//  description=Applies tablesorter to Race tables Click on heading to sort table
+//  author=Jon Eskdale
+//  date=2023-06-22
+//  version=1.0
+//  url=https://sailwave.com
+//  email=jon@sailwave.com
+//  twitter=@eskdale
+//
+
+</script>
+<link rel="stylesheet" href="https://www.sailwave.com/download/css/sorter.css">
+<script src="https://mottie.github.io/tablesorter/js/jquery.tablesorter.combined.js"></script>
+<script>
+
+$(document).ready(function()
+    {
+        $(".racetable").tablesorter({
+         theme : 'blue',
+         sortMultiSortKey: 'ctrlKey',
+         sortResetKey: 'altKey',
+         });
+}
+);
+
+
+</script>
+
+</head>
+
+<body>
+
+<header>
+</header>
+<table class="headertable" cellspacing="0" width="100%" cellpadding="0" border="0">
+<tbody>
+<div id="wrap">
+
+<tr>
+<td width="30%">
+<img style="display:block; height:100px;"  src="https://hyc.ie/system/sponsor_logos/439/normal/HYC_Logo.jpg" alt="venue burgee" />
+</td>
+
+<td width="40%" align="center">
+<h1>Wave Regatta 24 - 26 May 2024</h1>
+<h2>Howth Yacht Club</h2>
+</td>
+
+<td width="30%">
+<img style="display:block; height:100px;" src="https://hyc.ie/system/sponsor_logos/473/normal/Wave_logo_-_without_year.png" alt="event burgee" align="right" />
+</td>
+</tr>
+</tbody>
+</table>
+
+<div style="clear:both;"></div>
+
+<style>
+div.applicant-break {page-break-after:always;}
+</style>
+<h3 class="seriestitle">Results are provisional as of 14:51 on May 26, 2024</h3>
+<h3 class="summarytitle" id="summaryclass_3_irc">Class 3 IRC Start Class</h3>
+<div class="caption summarycaption">Sailed: 4, Discards: 1, To count: 3, Rating system: TCF, Entries: 10, Scoring system: Appendix A</div>
+<table class="summarytable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="13">
+<col class="rank" />
+<col class="boat" />
+<col class="nat" />
+<col class="sailno" />
+<col class="club" />
+<col class="helmname" />
+<col class="rating" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="total" />
+<col class="nett" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Boat Name</th>
+<th>Nat</th>
+<th>Sail No</th>
+<th>Club</th>
+<th>Owner Name(s)</th>
+<th>IRC/ECHO</th>
+<th><a class="racelink" href="#r1class_3_irc">R 1 Friday</a></th>
+<th><a class="racelink" href="#r2class_3_irc">R 2 Friday</a></th>
+<th><a class="racelink" href="#r4class_3_irc">Lambay Race</a></th>
+<th><a class="racelink" href="#r5class_3_irc">R 1 Sunday</a></th>
+<th>Total</th>
+<th>Nett</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd summaryrow">
+<td>1st</td>
+<td>SNOOPY</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>IRL90210</td>
+<td>Courtown SC</td>
+<td>Joanne Hall / Martin Mahon</td>
+<td>0.897</td>
+<td>(11.0 OCS)</td>
+<td class="rank1">1.0</td>
+<td class="rank3">3.0</td>
+<td class="rank1">1.0</td>
+<td>16.0</td>
+<td>5.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>2nd</td>
+<td>Jupiter</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>5270</td>
+<td>Wicklow SC</td>
+<td>Conor Haughton, Jonny Flood, Charles Heather, Garrett Kinnane</td>
+<td>0.878</td>
+<td class="rank2">2.0</td>
+<td>(11.0 DSQ)</td>
+<td class="rank2">2.0</td>
+<td class="rank2">2.0</td>
+<td>17.0</td>
+<td>6.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>3rd</td>
+<td>Insider</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>IRL4444</td>
+<td>HYC</td>
+<td>Stephen Mullaney</td>
+<td>0.900</td>
+<td>(11.0 DSQ)</td>
+<td class="rank2">2.0</td>
+<td class="rank1">1.0</td>
+<td>5.0</td>
+<td>19.0</td>
+<td>8.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>4th</td>
+<td>Allig8r</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>FR111</td>
+<td>RStGYC</td>
+<td>Peter Levins, Brendan Foley, Colm O'Buachalla, Mark Hennessey, Patrick Ryan, Conor Twoney</td>
+<td>0.915</td>
+<td class="rank1">1.0</td>
+<td class="rank3">(3.0)</td>
+<td>5.0</td>
+<td class="rank3">3.0</td>
+<td>12.0</td>
+<td>9.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>5th</td>
+<td>Gecko</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>IRL7115</td>
+<td>HYC</td>
+<td>Kevin Darmody</td>
+<td>0.896</td>
+<td class="rank3">3.0</td>
+<td>(8.0 SCP)</td>
+<td>4.0</td>
+<td>7.0</td>
+<td>22.0</td>
+<td>14.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>6th</td>
+<td>Alliance II</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>IRL8188</td>
+<td>HYC</td>
+<td>Vincent Gaffney</td>
+<td>0.889</td>
+<td>4.0</td>
+<td>4.0</td>
+<td>6.0</td>
+<td>(6.0)</td>
+<td>20.0</td>
+<td>14.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>7th</td>
+<td>SKB</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>HKG2133</td>
+<td>ABC</td>
+<td>Charlie McAllister</td>
+<td>0.893</td>
+<td>5.0</td>
+<td>(6.0)</td>
+<td>7.0</td>
+<td>4.0</td>
+<td>22.0</td>
+<td>16.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>8th</td>
+<td>Killcullen</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>IRL 680</td>
+<td>HYC</td>
+<td>HYC K25 Team</td>
+<td>&nbsp;</td>
+<td>7.5</td>
+<td>7.5</td>
+<td>8.5</td>
+<td>(9.5)</td>
+<td>33.0</td>
+<td>23.5</td>
+</tr>
+<tr class="odd summaryrow">
+<td>8th</td>
+<td>Lazy Bones</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>158</td>
+<td>MYC</td>
+<td>Patrick Higginbotham Neil HIgginbotham</td>
+<td>&nbsp;</td>
+<td>7.5</td>
+<td>7.5</td>
+<td>8.5</td>
+<td>(9.5)</td>
+<td>33.0</td>
+<td>23.5</td>
+</tr>
+<tr class="even summaryrow">
+<td>10th</td>
+<td>Legal Alien</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>IRL4064</td>
+<td>RCYC</td>
+<td>Craig O誰eill</td>
+<td>0.878</td>
+<td>6.0</td>
+<td>(11.0 DNF)</td>
+<td>11.0 DNC</td>
+<td>8.0</td>
+<td>36.0</td>
+<td>25.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="summarytitle" id="summaryclass_3_echo">Class 3 Echo Start Class</h3>
+<div class="caption summarycaption">Sailed: 4, Discards: 1, To count: 3, Rating system: ECHO, Entries: 10, Scoring system: Appendix A</div>
+<table class="summarytable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="13">
+<col class="rank" />
+<col class="boat" />
+<col class="nat" />
+<col class="sailno" />
+<col class="club" />
+<col class="helmname" />
+<col class="rating" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="total" />
+<col class="nett" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Boat Name</th>
+<th>Nat</th>
+<th>Sail No</th>
+<th>Club</th>
+<th>Owner Name(s)</th>
+<th>IRC/ECHO</th>
+<th><a class="racelink" href="#r1class_3_echo">R 1 Friday</a></th>
+<th><a class="racelink" href="#r2class_3_echo">R 2 Friday</a></th>
+<th><a class="racelink" href="#r4class_3_echo">Lambay Race</a></th>
+<th><a class="racelink" href="#r5class_3_echo">R 1 Sunday</a></th>
+<th>Total</th>
+<th>Nett</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd summaryrow">
+<td>1st</td>
+<td>Jupiter</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>5270</td>
+<td>Wicklow SC</td>
+<td>Conor Haughton, Jonny Flood, Charles Heather, Garrett Kinnane</td>
+<td>0.880</td>
+<td class="rank1">1.0</td>
+<td>(11.0 DSQ)</td>
+<td class="rank2">2.0</td>
+<td class="rank2">2.0</td>
+<td>16.0</td>
+<td>5.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>2nd</td>
+<td>Gecko</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>IRL7115</td>
+<td>HYC</td>
+<td>Kevin Darmody</td>
+<td>0.895</td>
+<td class="rank2">2.0</td>
+<td>(10.0 SCP)</td>
+<td class="rank1">1.0</td>
+<td>5.0</td>
+<td>18.0</td>
+<td>8.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>3rd</td>
+<td>Killcullen</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>IRL 680</td>
+<td>HYC</td>
+<td>HYC K25 Team</td>
+<td>0.880</td>
+<td class="rank3">3.0</td>
+<td class="rank3">3.0</td>
+<td class="rank3">3.0</td>
+<td>(7.0)</td>
+<td>16.0</td>
+<td>9.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>4th</td>
+<td>SNOOPY</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>IRL90210</td>
+<td>Courtown SC</td>
+<td>Joanne Hall / Martin Mahon</td>
+<td>0.955</td>
+<td>(11.0 OCS)</td>
+<td class="rank2">2.0</td>
+<td>8.0</td>
+<td class="rank1">1.0</td>
+<td>22.0</td>
+<td>11.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>5th</td>
+<td>Insider</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>IRL4444</td>
+<td>HYC</td>
+<td>Stephen Mullaney</td>
+<td>0.950</td>
+<td>(11.0 DSQ)</td>
+<td class="rank1">1.0</td>
+<td>6.0</td>
+<td>6.0</td>
+<td>24.0</td>
+<td>13.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>6th</td>
+<td>Allig8r</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>FR111</td>
+<td>RStGYC</td>
+<td>Peter Levins, Brendan Foley, Colm O'Buachalla, Mark Hennessey, Patrick Ryan, Conor Twoney</td>
+<td>0.965</td>
+<td>4.0</td>
+<td>(5.0)</td>
+<td>7.0</td>
+<td class="rank3">3.0</td>
+<td>19.0</td>
+<td>14.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>7th</td>
+<td>Alliance II</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>IRL8188</td>
+<td>HYC</td>
+<td>Vincent Gaffney</td>
+<td>0.935</td>
+<td>(6.0)</td>
+<td>6.0</td>
+<td>4.0</td>
+<td>4.0</td>
+<td>20.0</td>
+<td>14.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>8th</td>
+<td>Lazy Bones</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>158</td>
+<td>MYC</td>
+<td>Patrick Higginbotham Neil HIgginbotham</td>
+<td>0.970</td>
+<td>7.0</td>
+<td>4.0</td>
+<td>5.0</td>
+<td>(8.0)</td>
+<td>24.0</td>
+<td>16.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>9th</td>
+<td>Legal Alien</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>IRL4064</td>
+<td>RCYC</td>
+<td>Craig O誰eill</td>
+<td>0.880</td>
+<td>5.0</td>
+<td>(11.0 DNF)</td>
+<td>11.0 DNC</td>
+<td>9.0</td>
+<td>36.0</td>
+<td>25.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>10th</td>
+<td>SKB</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>HKG2133</td>
+<td>ABC</td>
+<td>Charlie McAllister</td>
+<td>&nbsp;</td>
+<td>8.0</td>
+<td>8.0</td>
+<td>9.0</td>
+<td>(10.0)</td>
+<td>35.0</td>
+<td>25.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r1class_3_irc">R 1 Friday - Class 3 IRC Start Class&nbsp;-&nbsp;24/5/2024&nbsp;at&nbsp;110000</h3>
+<div class="caption racecaption">
+Start: Start 4 Class 3, Finishes: Finish time, Time: 110000
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="12">
+<col class="rank" />
+<col class="boat" />
+<col class="nat" />
+<col class="sailno" />
+<col class="club" />
+<col class="helmname" />
+<col class="rating" />
+<col class="start" />
+<col class="finish" />
+<col class="elapsed" />
+<col class="corrected" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Boat Name</th>
+<th>Nat</th>
+<th>Sail No</th>
+<th>Club</th>
+<th>Owner Name(s)</th>
+<th>IRC/ECHO</th>
+<th>Start</th>
+<th>Finish</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>Allig8r</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>FR111</td>
+<td>RStGYC</td>
+<td>Peter Levins, Brendan Foley, Colm O'Buachalla, Mark Hennessey, Patrick Ryan, Conor Twoney</td>
+<td>0.915</td>
+<td>110000</td>
+<td>12:17:55</td>
+<td>1:17:55</td>
+<td>1:11:18</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>Jupiter</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>5270</td>
+<td>Wicklow SC</td>
+<td>Conor Haughton, Jonny Flood, Charles Heather, Garrett Kinnane</td>
+<td>0.878</td>
+<td>110000</td>
+<td>12:21:29</td>
+<td>1:21:29</td>
+<td>1:11:33</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>Gecko</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>IRL7115</td>
+<td>HYC</td>
+<td>Kevin Darmody</td>
+<td>0.896</td>
+<td>110000</td>
+<td>12:20:14</td>
+<td>1:20:14</td>
+<td>1:11:53</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>Alliance II</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>IRL8188</td>
+<td>HYC</td>
+<td>Vincent Gaffney</td>
+<td>0.889</td>
+<td>110000</td>
+<td>12:22:40</td>
+<td>1:22:40</td>
+<td>1:13:29</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>SKB</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>HKG2133</td>
+<td>ABC</td>
+<td>Charlie McAllister</td>
+<td>0.893</td>
+<td>110000</td>
+<td>12:23:03</td>
+<td>1:23:03</td>
+<td>1:14:10</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>Legal Alien</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>IRL4064</td>
+<td>RCYC</td>
+<td>Craig O誰eill</td>
+<td>0.878</td>
+<td>110000</td>
+<td>12:26:15</td>
+<td>1:26:15</td>
+<td>1:15:44</td>
+<td>6.0</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>Killcullen</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>IRL 680</td>
+<td>HYC</td>
+<td>HYC K25 Team</td>
+<td>&nbsp;</td>
+<td>110000</td>
+<td>12:23:26</td>
+<td>1:23:26</td>
+<td>0:00:00</td>
+<td>7.5</td>
+</tr>
+<tr class="even racerow">
+<td>7</td>
+<td>Lazy Bones</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>158</td>
+<td>MYC</td>
+<td>Patrick Higginbotham Neil HIgginbotham</td>
+<td>&nbsp;</td>
+<td>110000</td>
+<td>12:26:30</td>
+<td>1:26:30</td>
+<td>0:00:00</td>
+<td>7.5</td>
+</tr>
+<tr class="odd racerow">
+<td>9</td>
+<td>SNOOPY</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>IRL90210</td>
+<td>Courtown SC</td>
+<td>Joanne Hall / Martin Mahon</td>
+<td>0.897</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>OCS</td>
+<td>&nbsp;</td>
+<td>11.0</td>
+</tr>
+<tr class="even racerow">
+<td>9</td>
+<td>Insider</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>IRL4444</td>
+<td>HYC</td>
+<td>Stephen Mullaney</td>
+<td>0.900</td>
+<td>110000</td>
+<td>12:17:10</td>
+<td>DSQ</td>
+<td>&nbsp;</td>
+<td>11.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r2class_3_irc">R 2 Friday - Class 3 IRC Start Class&nbsp;-&nbsp;24/5/2024</h3>
+<div class="caption racecaption">
+Start: Start 4 Class 3, Finishes: Finish time, Time: 124000
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="12">
+<col class="rank" />
+<col class="boat" />
+<col class="nat" />
+<col class="sailno" />
+<col class="club" />
+<col class="helmname" />
+<col class="rating" />
+<col class="start" />
+<col class="finish" />
+<col class="elapsed" />
+<col class="corrected" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Boat Name</th>
+<th>Nat</th>
+<th>Sail No</th>
+<th>Club</th>
+<th>Owner Name(s)</th>
+<th>IRC/ECHO</th>
+<th>Start</th>
+<th>Finish</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>SNOOPY</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>IRL90210</td>
+<td>Courtown SC</td>
+<td>Joanne Hall / Martin Mahon</td>
+<td>0.897</td>
+<td>124000</td>
+<td>14:18:43</td>
+<td>1:38:43</td>
+<td>1:28:33</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>Insider</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>IRL4444</td>
+<td>HYC</td>
+<td>Stephen Mullaney</td>
+<td>0.900</td>
+<td>124000</td>
+<td>14:18:39</td>
+<td>1:38:39</td>
+<td>1:28:47</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>Allig8r</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>FR111</td>
+<td>RStGYC</td>
+<td>Peter Levins, Brendan Foley, Colm O'Buachalla, Mark Hennessey, Patrick Ryan, Conor Twoney</td>
+<td>0.915</td>
+<td>124000</td>
+<td>14:21:54</td>
+<td>1:41:54</td>
+<td>1:33:14</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>Alliance II</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>IRL8188</td>
+<td>HYC</td>
+<td>Vincent Gaffney</td>
+<td>0.889</td>
+<td>124000</td>
+<td>14:29:07</td>
+<td>1:49:07</td>
+<td>1:37:00</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>SKB</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>HKG2133</td>
+<td>ABC</td>
+<td>Charlie McAllister</td>
+<td>0.893</td>
+<td>124000</td>
+<td>14:30:19</td>
+<td>1:50:19</td>
+<td>1:38:31</td>
+<td>6.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>Killcullen</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>IRL 680</td>
+<td>HYC</td>
+<td>HYC K25 Team</td>
+<td>&nbsp;</td>
+<td>124000</td>
+<td>14:26:22</td>
+<td>1:46:22</td>
+<td>0:00:00</td>
+<td>7.5</td>
+</tr>
+<tr class="odd racerow">
+<td>6</td>
+<td>Lazy Bones</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>158</td>
+<td>MYC</td>
+<td>Patrick Higginbotham Neil HIgginbotham</td>
+<td>&nbsp;</td>
+<td>124000</td>
+<td>14:27:19</td>
+<td>1:47:19</td>
+<td>0:00:00</td>
+<td>7.5</td>
+</tr>
+<tr class="even racerow">
+<td>8</td>
+<td>Gecko</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>IRL7115</td>
+<td>HYC</td>
+<td>Kevin Darmody</td>
+<td>0.896</td>
+<td>124000</td>
+<td>14:29:48</td>
+<td>SCP</td>
+<td>1:38:23</td>
+<td>8.0</td>
+</tr>
+<tr class="odd racerow">
+<td>9</td>
+<td>Jupiter</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>5270</td>
+<td>Wicklow SC</td>
+<td>Conor Haughton, Jonny Flood, Charles Heather, Garrett Kinnane</td>
+<td>0.878</td>
+<td>124000</td>
+<td>14:23:26</td>
+<td>DSQ</td>
+<td>&nbsp;</td>
+<td>11.0</td>
+</tr>
+<tr class="even racerow">
+<td>9</td>
+<td>Legal Alien</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>IRL4064</td>
+<td>RCYC</td>
+<td>Craig O誰eill</td>
+<td>0.878</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>DNF</td>
+<td>&nbsp;</td>
+<td>11.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r4class_3_irc">Lambay Race - Class 3 IRC Start Class&nbsp;-&nbsp;25/5/2024</h3>
+<div class="caption racecaption">
+Start: Start 4 Class 3, Finishes: Finish time, Time: 104500
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="12">
+<col class="rank" />
+<col class="boat" />
+<col class="nat" />
+<col class="sailno" />
+<col class="club" />
+<col class="helmname" />
+<col class="rating" />
+<col class="start" />
+<col class="finish" />
+<col class="elapsed" />
+<col class="corrected" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Boat Name</th>
+<th>Nat</th>
+<th>Sail No</th>
+<th>Club</th>
+<th>Owner Name(s)</th>
+<th>IRC/ECHO</th>
+<th>Start</th>
+<th>Finish</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>Insider</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>IRL4444</td>
+<td>HYC</td>
+<td>Stephen Mullaney</td>
+<td>0.900</td>
+<td>104500</td>
+<td>13:11:02</td>
+<td>2:26:02</td>
+<td>2:11:26</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>Jupiter</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>5270</td>
+<td>Wicklow SC</td>
+<td>Conor Haughton, Jonny Flood, Charles Heather, Garrett Kinnane</td>
+<td>0.878</td>
+<td>104500</td>
+<td>13:15:23</td>
+<td>2:30:23</td>
+<td>2:12:02</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>SNOOPY</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>IRL90210</td>
+<td>Courtown SC</td>
+<td>Joanne Hall / Martin Mahon</td>
+<td>0.897</td>
+<td>104500</td>
+<td>13:15:10</td>
+<td>2:30:10</td>
+<td>2:14:42</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>Gecko</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>IRL7115</td>
+<td>HYC</td>
+<td>Kevin Darmody</td>
+<td>0.896</td>
+<td>104500</td>
+<td>13:17:05</td>
+<td>2:32:05</td>
+<td>2:16:16</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>Allig8r</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>FR111</td>
+<td>RStGYC</td>
+<td>Peter Levins, Brendan Foley, Colm O'Buachalla, Mark Hennessey, Patrick Ryan, Conor Twoney</td>
+<td>0.915</td>
+<td>104500</td>
+<td>13:14:33</td>
+<td>2:29:33</td>
+<td>2:16:50</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>Alliance II</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>IRL8188</td>
+<td>HYC</td>
+<td>Vincent Gaffney</td>
+<td>0.889</td>
+<td>104500</td>
+<td>13:19:40</td>
+<td>2:34:40</td>
+<td>2:17:30</td>
+<td>6.0</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>SKB</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>HKG2133</td>
+<td>ABC</td>
+<td>Charlie McAllister</td>
+<td>0.893</td>
+<td>104500</td>
+<td>13:23:59</td>
+<td>2:38:59</td>
+<td>2:21:58</td>
+<td>7.0</td>
+</tr>
+<tr class="even racerow">
+<td>8</td>
+<td>Killcullen</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>IRL 680</td>
+<td>HYC</td>
+<td>HYC K25 Team</td>
+<td>&nbsp;</td>
+<td>104500</td>
+<td>13:17:05</td>
+<td>2:32:05</td>
+<td>0:00:00</td>
+<td>8.5</td>
+</tr>
+<tr class="odd racerow">
+<td>8</td>
+<td>Lazy Bones</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>158</td>
+<td>MYC</td>
+<td>Patrick Higginbotham Neil HIgginbotham</td>
+<td>&nbsp;</td>
+<td>104500</td>
+<td>13:20:00</td>
+<td>2:35:00</td>
+<td>0:00:00</td>
+<td>8.5</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r5class_3_irc">R 1 Sunday - Class 3 IRC Start Class</h3>
+<div class="caption racecaption">
+Start: Start 4 Class 3, Finishes: Finish time, Time: 110000
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="12">
+<col class="rank" />
+<col class="boat" />
+<col class="nat" />
+<col class="sailno" />
+<col class="club" />
+<col class="helmname" />
+<col class="rating" />
+<col class="start" />
+<col class="finish" />
+<col class="elapsed" />
+<col class="corrected" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Boat Name</th>
+<th>Nat</th>
+<th>Sail No</th>
+<th>Club</th>
+<th>Owner Name(s)</th>
+<th>IRC/ECHO</th>
+<th>Start</th>
+<th>Finish</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>SNOOPY</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>IRL90210</td>
+<td>Courtown SC</td>
+<td>Joanne Hall / Martin Mahon</td>
+<td>0.897</td>
+<td>110000</td>
+<td>11:58:45</td>
+<td>0:58:45</td>
+<td>0:52:42</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>Jupiter</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>5270</td>
+<td>Wicklow SC</td>
+<td>Conor Haughton, Jonny Flood, Charles Heather, Garrett Kinnane</td>
+<td>0.878</td>
+<td>110000</td>
+<td>12:00:11</td>
+<td>1:00:11</td>
+<td>0:52:50</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>Allig8r</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>FR111</td>
+<td>RStGYC</td>
+<td>Peter Levins, Brendan Foley, Colm O'Buachalla, Mark Hennessey, Patrick Ryan, Conor Twoney</td>
+<td>0.915</td>
+<td>110000</td>
+<td>11:59:42</td>
+<td>0:59:42</td>
+<td>0:54:38</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>SKB</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>HKG2133</td>
+<td>ABC</td>
+<td>Charlie McAllister</td>
+<td>0.893</td>
+<td>110000</td>
+<td>12:01:16</td>
+<td>1:01:16</td>
+<td>0:54:43</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>Insider</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>IRL4444</td>
+<td>HYC</td>
+<td>Stephen Mullaney</td>
+<td>0.900</td>
+<td>110000</td>
+<td>12:01:18</td>
+<td>1:01:18</td>
+<td>0:55:10</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>Alliance II</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>IRL8188</td>
+<td>HYC</td>
+<td>Vincent Gaffney</td>
+<td>0.889</td>
+<td>110000</td>
+<td>12:02:44</td>
+<td>1:02:44</td>
+<td>0:55:46</td>
+<td>6.0</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>Gecko</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>IRL7115</td>
+<td>HYC</td>
+<td>Kevin Darmody</td>
+<td>0.896</td>
+<td>110000</td>
+<td>12:03:25</td>
+<td>1:03:25</td>
+<td>0:56:49</td>
+<td>7.0</td>
+</tr>
+<tr class="even racerow">
+<td>8</td>
+<td>Legal Alien</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>IRL4064</td>
+<td>RCYC</td>
+<td>Craig O誰eill</td>
+<td>0.878</td>
+<td>110000</td>
+<td>12:11:44</td>
+<td>1:11:44</td>
+<td>1:02:59</td>
+<td>8.0</td>
+</tr>
+<tr class="odd racerow">
+<td>9</td>
+<td>Killcullen</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>IRL 680</td>
+<td>HYC</td>
+<td>HYC K25 Team</td>
+<td>&nbsp;</td>
+<td>110000</td>
+<td>12:05:16</td>
+<td>1:05:16</td>
+<td>0:00:00</td>
+<td>9.5</td>
+</tr>
+<tr class="even racerow">
+<td>9</td>
+<td>Lazy Bones</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>158</td>
+<td>MYC</td>
+<td>Patrick Higginbotham Neil HIgginbotham</td>
+<td>&nbsp;</td>
+<td>110000</td>
+<td>12:06:37</td>
+<td>1:06:37</td>
+<td>0:00:00</td>
+<td>9.5</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r1class_3_echo">R 1 Friday - Class 3 Echo Start Class&nbsp;-&nbsp;24/5/2024&nbsp;at&nbsp;110000</h3>
+<div class="caption racecaption">
+Start: Start 4 Class 3, Finishes: Finish time, Time: 110000
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="12">
+<col class="rank" />
+<col class="boat" />
+<col class="nat" />
+<col class="sailno" />
+<col class="club" />
+<col class="helmname" />
+<col class="rating" />
+<col class="start" />
+<col class="finish" />
+<col class="elapsed" />
+<col class="corrected" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Boat Name</th>
+<th>Nat</th>
+<th>Sail No</th>
+<th>Club</th>
+<th>Owner Name(s)</th>
+<th>IRC/ECHO</th>
+<th>Start</th>
+<th>Finish</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>Jupiter</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>5270</td>
+<td>Wicklow SC</td>
+<td>Conor Haughton, Jonny Flood, Charles Heather, Garrett Kinnane</td>
+<td>0.880</td>
+<td>110000</td>
+<td>12:21:29</td>
+<td>1:21:29</td>
+<td>1:11:42</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>Gecko</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>IRL7115</td>
+<td>HYC</td>
+<td>Kevin Darmody</td>
+<td>0.895</td>
+<td>110000</td>
+<td>12:20:14</td>
+<td>1:20:14</td>
+<td>1:11:49</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>Killcullen</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>IRL 680</td>
+<td>HYC</td>
+<td>HYC K25 Team</td>
+<td>0.880</td>
+<td>110000</td>
+<td>12:23:26</td>
+<td>1:23:26</td>
+<td>1:13:25</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>Allig8r</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>FR111</td>
+<td>RStGYC</td>
+<td>Peter Levins, Brendan Foley, Colm O'Buachalla, Mark Hennessey, Patrick Ryan, Conor Twoney</td>
+<td>0.965</td>
+<td>110000</td>
+<td>12:17:55</td>
+<td>1:17:55</td>
+<td>1:15:11</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>Legal Alien</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>IRL4064</td>
+<td>RCYC</td>
+<td>Craig O誰eill</td>
+<td>0.880</td>
+<td>110000</td>
+<td>12:26:15</td>
+<td>1:26:15</td>
+<td>1:15:54</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>Alliance II</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>IRL8188</td>
+<td>HYC</td>
+<td>Vincent Gaffney</td>
+<td>0.935</td>
+<td>110000</td>
+<td>12:22:40</td>
+<td>1:22:40</td>
+<td>1:17:18</td>
+<td>6.0</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>Lazy Bones</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>158</td>
+<td>MYC</td>
+<td>Patrick Higginbotham Neil HIgginbotham</td>
+<td>0.970</td>
+<td>110000</td>
+<td>12:26:30</td>
+<td>1:26:30</td>
+<td>1:23:54</td>
+<td>7.0</td>
+</tr>
+<tr class="even racerow">
+<td>8</td>
+<td>SKB</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>HKG2133</td>
+<td>ABC</td>
+<td>Charlie McAllister</td>
+<td>&nbsp;</td>
+<td>110000</td>
+<td>12:23:03</td>
+<td>1:23:03</td>
+<td>0:00:00</td>
+<td>8.0</td>
+</tr>
+<tr class="odd racerow">
+<td>9</td>
+<td>SNOOPY</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>IRL90210</td>
+<td>Courtown SC</td>
+<td>Joanne Hall / Martin Mahon</td>
+<td>0.955</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>OCS</td>
+<td>&nbsp;</td>
+<td>11.0</td>
+</tr>
+<tr class="even racerow">
+<td>9</td>
+<td>Insider</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>IRL4444</td>
+<td>HYC</td>
+<td>Stephen Mullaney</td>
+<td>0.950</td>
+<td>110000</td>
+<td>12:17:10</td>
+<td>DSQ</td>
+<td>&nbsp;</td>
+<td>11.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r2class_3_echo">R 2 Friday - Class 3 Echo Start Class&nbsp;-&nbsp;24/5/2024</h3>
+<div class="caption racecaption">
+Start: Start 4 Class 3, Finishes: Finish time, Time: 124000
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="12">
+<col class="rank" />
+<col class="boat" />
+<col class="nat" />
+<col class="sailno" />
+<col class="club" />
+<col class="helmname" />
+<col class="rating" />
+<col class="start" />
+<col class="finish" />
+<col class="elapsed" />
+<col class="corrected" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Boat Name</th>
+<th>Nat</th>
+<th>Sail No</th>
+<th>Club</th>
+<th>Owner Name(s)</th>
+<th>IRC/ECHO</th>
+<th>Start</th>
+<th>Finish</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>Insider</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>IRL4444</td>
+<td>HYC</td>
+<td>Stephen Mullaney</td>
+<td>0.950</td>
+<td>124000</td>
+<td>14:18:39</td>
+<td>1:38:39</td>
+<td>1:33:43</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>SNOOPY</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>IRL90210</td>
+<td>Courtown SC</td>
+<td>Joanne Hall / Martin Mahon</td>
+<td>0.955</td>
+<td>124000</td>
+<td>14:18:43</td>
+<td>1:38:43</td>
+<td>1:34:16</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>Killcullen</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>IRL 680</td>
+<td>HYC</td>
+<td>HYC K25 Team</td>
+<td>0.899</td>
+<td>124000</td>
+<td>14:26:22</td>
+<td>1:46:22</td>
+<td>1:35:37</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>Lazy Bones</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>158</td>
+<td>MYC</td>
+<td>Patrick Higginbotham Neil HIgginbotham</td>
+<td>0.897</td>
+<td>124000</td>
+<td>14:27:19</td>
+<td>1:47:19</td>
+<td>1:36:16</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>Allig8r</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>FR111</td>
+<td>RStGYC</td>
+<td>Peter Levins, Brendan Foley, Colm O'Buachalla, Mark Hennessey, Patrick Ryan, Conor Twoney</td>
+<td>0.968</td>
+<td>124000</td>
+<td>14:21:54</td>
+<td>1:41:54</td>
+<td>1:38:38</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>Alliance II</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>IRL8188</td>
+<td>HYC</td>
+<td>Vincent Gaffney</td>
+<td>0.919</td>
+<td>124000</td>
+<td>14:29:07</td>
+<td>1:49:07</td>
+<td>1:40:17</td>
+<td>6.0</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>SKB</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>HKG2133</td>
+<td>ABC</td>
+<td>Charlie McAllister</td>
+<td>0.000</td>
+<td>124000</td>
+<td>14:30:19</td>
+<td>1:50:19</td>
+<td>0:00:00</td>
+<td>8.0</td>
+</tr>
+<tr class="even racerow">
+<td>8</td>
+<td>Gecko</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>IRL7115</td>
+<td>HYC</td>
+<td>Kevin Darmody</td>
+<td>0.930</td>
+<td>124000</td>
+<td>14:29:48</td>
+<td>SCP</td>
+<td>1:42:07</td>
+<td>10.0</td>
+</tr>
+<tr class="odd racerow">
+<td>9</td>
+<td>Jupiter</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>5270</td>
+<td>Wicklow SC</td>
+<td>Conor Haughton, Jonny Flood, Charles Heather, Garrett Kinnane</td>
+<td>0.915</td>
+<td>124000</td>
+<td>14:23:26</td>
+<td>DSQ</td>
+<td>&nbsp;</td>
+<td>11.0</td>
+</tr>
+<tr class="even racerow">
+<td>9</td>
+<td>Legal Alien</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>IRL4064</td>
+<td>RCYC</td>
+<td>Craig O誰eill</td>
+<td>0.877</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>DNF</td>
+<td>&nbsp;</td>
+<td>11.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r4class_3_echo">Lambay Race - Class 3 Echo Start Class&nbsp;-&nbsp;25/5/2024</h3>
+<div class="caption racecaption">
+Start: Start 4 Class 3, Finishes: Finish time, Time: 104500
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="12">
+<col class="rank" />
+<col class="boat" />
+<col class="nat" />
+<col class="sailno" />
+<col class="club" />
+<col class="helmname" />
+<col class="rating" />
+<col class="start" />
+<col class="finish" />
+<col class="elapsed" />
+<col class="corrected" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Boat Name</th>
+<th>Nat</th>
+<th>Sail No</th>
+<th>Club</th>
+<th>Owner Name(s)</th>
+<th>IRC/ECHO</th>
+<th>Start</th>
+<th>Finish</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>Gecko</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>IRL7115</td>
+<td>HYC</td>
+<td>Kevin Darmody</td>
+<td>0.896</td>
+<td>104500</td>
+<td>13:17:05</td>
+<td>2:32:05</td>
+<td>2:16:16</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>Jupiter</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>5270</td>
+<td>Wicklow SC</td>
+<td>Conor Haughton, Jonny Flood, Charles Heather, Garrett Kinnane</td>
+<td>0.915</td>
+<td>104500</td>
+<td>13:15:23</td>
+<td>2:30:23</td>
+<td>2:17:36</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>Killcullen</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>IRL 680</td>
+<td>HYC</td>
+<td>HYC K25 Team</td>
+<td>0.910</td>
+<td>104500</td>
+<td>13:17:05</td>
+<td>2:32:05</td>
+<td>2:18:24</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>Alliance II</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>IRL8188</td>
+<td>HYC</td>
+<td>Vincent Gaffney</td>
+<td>0.898</td>
+<td>104500</td>
+<td>13:19:40</td>
+<td>2:34:40</td>
+<td>2:18:53</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>Lazy Bones</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>158</td>
+<td>MYC</td>
+<td>Patrick Higginbotham Neil HIgginbotham</td>
+<td>0.903</td>
+<td>104500</td>
+<td>13:20:00</td>
+<td>2:35:00</td>
+<td>2:19:58</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>Insider</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>IRL4444</td>
+<td>HYC</td>
+<td>Stephen Mullaney</td>
+<td>0.976</td>
+<td>104500</td>
+<td>13:11:02</td>
+<td>2:26:02</td>
+<td>2:22:32</td>
+<td>6.0</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>Allig8r</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>FR111</td>
+<td>RStGYC</td>
+<td>Peter Levins, Brendan Foley, Colm O'Buachalla, Mark Hennessey, Patrick Ryan, Conor Twoney</td>
+<td>0.957</td>
+<td>104500</td>
+<td>13:14:33</td>
+<td>2:29:33</td>
+<td>2:23:07</td>
+<td>7.0</td>
+</tr>
+<tr class="even racerow">
+<td>8</td>
+<td>SNOOPY</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>IRL90210</td>
+<td>Courtown SC</td>
+<td>Joanne Hall / Martin Mahon</td>
+<td>0.977</td>
+<td>104500</td>
+<td>13:15:10</td>
+<td>2:30:10</td>
+<td>2:26:43</td>
+<td>8.0</td>
+</tr>
+<tr class="odd racerow">
+<td>9</td>
+<td>SKB</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>HKG2133</td>
+<td>ABC</td>
+<td>Charlie McAllister</td>
+<td>0.000</td>
+<td>104500</td>
+<td>13:23:59</td>
+<td>2:38:59</td>
+<td>0:00:00</td>
+<td>9.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r5class_3_echo">R 1 Sunday - Class 3 Echo Start Class</h3>
+<div class="caption racecaption">
+Start: Start 4 Class 3, Finishes: Finish time, Time: 110000
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="12">
+<col class="rank" />
+<col class="boat" />
+<col class="nat" />
+<col class="sailno" />
+<col class="club" />
+<col class="helmname" />
+<col class="rating" />
+<col class="start" />
+<col class="finish" />
+<col class="elapsed" />
+<col class="corrected" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Boat Name</th>
+<th>Nat</th>
+<th>Sail No</th>
+<th>Club</th>
+<th>Owner Name(s)</th>
+<th>IRC/ECHO</th>
+<th>Start</th>
+<th>Finish</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>SNOOPY</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>IRL90210</td>
+<td>Courtown SC</td>
+<td>Joanne Hall / Martin Mahon</td>
+<td>0.946</td>
+<td>110000</td>
+<td>11:58:45</td>
+<td>0:58:45</td>
+<td>0:55:35</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>Jupiter</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>5270</td>
+<td>Wicklow SC</td>
+<td>Conor Haughton, Jonny Flood, Charles Heather, Garrett Kinnane</td>
+<td>0.929</td>
+<td>110000</td>
+<td>12:00:11</td>
+<td>1:00:11</td>
+<td>0:55:55</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>Allig8r</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>FR111</td>
+<td>RStGYC</td>
+<td>Peter Levins, Brendan Foley, Colm O'Buachalla, Mark Hennessey, Patrick Ryan, Conor Twoney</td>
+<td>0.944</td>
+<td>110000</td>
+<td>11:59:42</td>
+<td>0:59:42</td>
+<td>0:56:21</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>Alliance II</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>IRL8188</td>
+<td>HYC</td>
+<td>Vincent Gaffney</td>
+<td>0.906</td>
+<td>110000</td>
+<td>12:02:44</td>
+<td>1:02:44</td>
+<td>0:56:50</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>Gecko</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>IRL7115</td>
+<td>HYC</td>
+<td>Kevin Darmody</td>
+<td>0.917</td>
+<td>110000</td>
+<td>12:03:25</td>
+<td>1:03:25</td>
+<td>0:58:09</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>Insider</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>IRL4444</td>
+<td>HYC</td>
+<td>Stephen Mullaney</td>
+<td>0.965</td>
+<td>110000</td>
+<td>12:01:18</td>
+<td>1:01:18</td>
+<td>0:59:09</td>
+<td>6.0</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>Killcullen</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>IRL 680</td>
+<td>HYC</td>
+<td>HYC K25 Team</td>
+<td>0.920</td>
+<td>110000</td>
+<td>12:05:16</td>
+<td>1:05:16</td>
+<td>1:00:03</td>
+<td>7.0</td>
+</tr>
+<tr class="even racerow">
+<td>8</td>
+<td>Lazy Bones</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>158</td>
+<td>MYC</td>
+<td>Patrick Higginbotham Neil HIgginbotham</td>
+<td>0.905</td>
+<td>110000</td>
+<td>12:06:37</td>
+<td>1:06:37</td>
+<td>1:00:17</td>
+<td>8.0</td>
+</tr>
+<tr class="odd racerow">
+<td>9</td>
+<td>Legal Alien</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>IRL4064</td>
+<td>RCYC</td>
+<td>Craig O誰eill</td>
+<td>0.877</td>
+<td>110000</td>
+<td>12:11:44</td>
+<td>1:11:44</td>
+<td>1:02:55</td>
+<td>9.0</td>
+</tr>
+<tr class="even racerow">
+<td>10</td>
+<td>SKB</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>HKG2133</td>
+<td>ABC</td>
+<td>Charlie McAllister</td>
+<td>0.000</td>
+<td>110000</td>
+<td>12:01:16</td>
+<td>1:01:16</td>
+<td>0:00:00</td>
+<td>10.0</td>
+</tr>
+</tbody>
+</table>
+
+<p class="hardleft"><a href="https://"></a><br /><a href="mailto:"></a></p>
+<p class="hardright"><a href="https://"></a><br /><a href="mailto:"></a></p>
+<p>Sailwave Scoring Software 2.33.02<br /><a href="https://www.sailwave.com">www.sailwave.com</a></p>
+
+</div>
+
+<footer>
+</footer>
+
+<div id="scrollbottom"></div>
+
+</body>
+</html>
+
+

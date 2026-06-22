@@ -1,0 +1,1659 @@
+
+
+<!doctype html>
+
+<head>
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="description" content="sailwave results">
+<meta name="viewport" content="width=device-width">
+
+<title>Sailwave results for ILCA Ireland National (Open) Championships at Howth Yacht Club 2023</title>
+
+<style type="text/css">
+body {font: 80% arial, helvetica, sans-serif; text-align: center;}
+.hardleft  {text-align: left; float: left;  margin: 15px 0  15px 25px;}
+.hardright {text-align: right; float: right; margin: 15px 25px 15px 0;}
+table {text-align: left; margin: 0px auto 30px auto; font-size: 1em; border-collapse: collapse; border: 1px #999 solid;}
+td, th {padding: 4px; border: 1px #999 solid; vertical-align: top;}
+.caption {padding: 5px; text-align: center; border: 0; font-weight: bold;}
+p {text-align: center;}
+.contents {text-align: left; margin-left: 20%;}
+.race {background-color: #eee;}
+.odd {background-color: #eef;}
+.natflag {border: 1px #999 solid;}
+.nattext {font-size: 0.8em;}
+.place1 {font-weight: bold; background-color: #ffffaa;}
+.place2 {font-weight: bold; background-color: #aaaaff;}
+.place3 {font-weight: bold; background-color: #ffaaaa;}
+.placen {}
+</style>
+
+<script type="text/javascript">
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script>
+
+function swGetURLArgs() {
+
+  var url = location.href;
+  var qs  = url.substring(url.indexOf('?') + 1).split('&');
+
+  for(var i = 0, result = {}; i < qs.length; i++) {
+    qs[i]            = qs[i].split('=');
+    result[qs[i][0]] = decodeURIComponent(qs[i][1]);
+  }
+
+  return result;
+}
+
+//
+//  name=HighlightWins3v3
+//  dependencies=jQuery
+//  description=Highlight winning scores in summary tables.
+//  author=Jon Eskdale based on an idea by Colin Jenkins
+//  date=2016-07-04
+//  version=3.0  For use with Sailwave from V2.22.x
+//  Requires the following lines in the Results.htm file (Results.htm is in the Templates directory)
+//  string.set("summary.col.race.rank1.td",   "rank1")
+//  string.set("summary.col.race.rank2.td",   "rank2")
+//  string.set("summary.col.race.rank3.td",   "rank3")
+
+//  url=http://sailwave.com
+//  email=jon@sailwave.com
+//  twitter=eskdale
+//  comments=Edit colours to colours of your choice
+//
+
+$(document).ready(function() {
+var selectorRank1 = '.rank1';
+var selectorRank2 = '.rank2';
+var selectorRank3 = '.rank3';
+
+// Results with these codes will not get highlighted add or remove codes to your choice
+var ignoreText   = /^(?!.*\b(DNC|DNF|DNS|OCS|BFD|UFD|RET|DSQ|DGM|DNE)\b).*/i
+
+// Edit these colours to change the highlight colours for 1st, 2nd and 3rd
+var winsColour   = '#ffd700';
+var twoColour    = '#6a91c5';
+var threeColour  = '#da6841';
+
+
+// Change the background color for cells with class of rank1-3 and don't have a code specified
+$(function () {
+
+  $(selectorRank1).filter(function() {
+    return ignoreText.test($(this).text());
+  }).css("background", winsColour);
+  $(selectorRank2).filter(function() {
+        return ignoreText.test($(this).text());
+  }).css("background", twoColour);
+  $(selectorRank3).filter(function() {
+        return ignoreText.test($(this).text());
+  }).css("background", threeColour);
+
+});
+});
+</script>
+
+</head>
+
+<body>
+
+<header>
+</header>
+
+<div id="wrap">
+
+<img class="hardright" src="https://ballyholme.com/wp-content/uploads/2022/11/ILCA-Ireland-logo-1.png" alt="event burgee" />
+<img class="hardleft"  src="https://hyc.ie/assets/logo-5a615b18e52275b60e166edcca88c6c4.png" alt="venue burgee" />
+
+<h1>ILCA Ireland National (Open) Championships</h1>
+<h2>Howth Yacht Club</h2>
+
+<div style="clear:both;"></div>
+
+<h3>
+ILCA Nationals
+</h3>
+<table class="entry" cellspacing="0" cellpadding="0" border="0">
+<caption>&nbsp;</caption>
+<thead>
+<tr>
+<th>Name</th>
+<th>Class</th>
+<th>SailNo</th>
+<th>Club</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>
+Archie Duggan
+</td>
+<td>
+ILCA 4
+</td>
+<td>
+219357
+</td>
+<td>
+CHSC
+</td>
+</tr>
+<tr >
+<td>
+Ava Ennis
+</td>
+<td>
+ILCA 4
+</td>
+<td>
+211119
+</td>
+<td>
+Royal St George Yacht Club
+</td>
+</tr>
+<tr class="odd">
+<td>
+Caoilinn Geraghty McDonnell
+</td>
+<td>
+ILCA 4
+</td>
+<td>
+218535
+</td>
+<td>
+Royal St George Yacht Club
+</td>
+</tr>
+<tr >
+<td>
+Ciara McMahon
+</td>
+<td>
+ILCA 4
+</td>
+<td>
+211121
+</td>
+<td>
+Howth yacht club
+</td>
+</tr>
+<tr class="odd">
+<td>
+Conor Cronin
+</td>
+<td>
+ILCA 4
+</td>
+<td>
+191318
+</td>
+<td>
+RSTGYC
+</td>
+</tr>
+<tr >
+<td>
+Craig O'Neill Jnr
+</td>
+<td>
+ILCA 4
+</td>
+<td>
+189052
+</td>
+<td>
+Royal Cork Yacht Club
+</td>
+</tr>
+<tr class="odd">
+<td>
+Emily Cantwell
+</td>
+<td>
+ILCA 4
+</td>
+<td>
+211124
+</td>
+<td>
+Royal St George Yacht Club
+</td>
+</tr>
+<tr >
+<td>
+Eolann Miles
+</td>
+<td>
+ILCA 4
+</td>
+<td>
+185982
+</td>
+<td>
+Glandore Harbour Yacht Club
+</td>
+</tr>
+<tr class="odd">
+<td>
+Eve McCarthy
+</td>
+<td>
+ILCA 4
+</td>
+<td>
+211463
+</td>
+<td>
+Royal Cork Yacht Club
+</td>
+</tr>
+<tr >
+<td>
+Freddie Doig
+</td>
+<td>
+ILCA 4
+</td>
+<td>
+176417
+</td>
+<td>
+East Antrim Boat Club
+</td>
+</tr>
+<tr class="odd">
+<td>
+Glenda Gallagher
+</td>
+<td>
+ILCA 4
+</td>
+<td>
+219634
+</td>
+<td>
+Malahide Yacht Club
+</td>
+</tr>
+<tr >
+<td>
+Grace Gavin
+</td>
+<td>
+ILCA 4
+</td>
+<td>
+213526
+</td>
+<td>
+RStGYC
+</td>
+</tr>
+<tr class="odd">
+<td>
+Iseult Speirs
+</td>
+<td>
+ILCA 4
+</td>
+<td>
+81297
+</td>
+<td>
+Ballyholme Yacht Club
+</td>
+</tr>
+<tr >
+<td>
+James Hall
+</td>
+<td>
+ILCA 4
+</td>
+<td>
+184757
+</td>
+<td>
+National Yacht Club
+</td>
+</tr>
+<tr class="odd">
+<td>
+Kate Flood
+</td>
+<td>
+ILCA 4
+</td>
+<td>
+208735
+</td>
+<td>
+Royal St George Yacht Club
+</td>
+</tr>
+<tr >
+<td>
+Liam Duggan
+</td>
+<td>
+ILCA 4
+</td>
+<td>
+213000
+</td>
+<td>
+Royal Cork Yacht Club
+</td>
+</tr>
+<tr class="odd">
+<td>
+Lizzie Hall
+</td>
+<td>
+ILCA 4
+</td>
+<td>
+193621
+</td>
+<td>
+National Yacht Club DunLaoghaire
+</td>
+</tr>
+<tr >
+<td>
+Lucy Ives
+</td>
+<td>
+ILCA 4
+</td>
+<td>
+220768
+</td>
+<td>
+CSC
+</td>
+</tr>
+<tr class="odd">
+<td>
+Marcus Shelley
+</td>
+<td>
+ILCA 4
+</td>
+<td>
+216237
+</td>
+<td>
+Royal St George Yacht Club
+</td>
+</tr>
+<tr >
+<td>
+Max Duggan
+</td>
+<td>
+ILCA 4
+</td>
+<td>
+216887
+</td>
+<td>
+CHSC
+</td>
+</tr>
+<tr class="odd">
+<td>
+Megan O'Sullivan
+</td>
+<td>
+ILCA 4
+</td>
+<td>
+216000
+</td>
+<td>
+Royal Cork Yacht Club
+</td>
+</tr>
+<tr >
+<td>
+Patrick Foley
+</td>
+<td>
+ILCA 4
+</td>
+<td>
+211274
+</td>
+<td>
+Royal St George Yacht Club
+</td>
+</tr>
+<tr class="odd">
+<td>
+Sam Legge
+</td>
+<td>
+ILCA 4
+</td>
+<td>
+182622
+</td>
+<td>
+Royal St George Yacht Club
+</td>
+</tr>
+<tr >
+<td>
+Sarah Scott
+</td>
+<td>
+ILCA 4
+</td>
+<td>
+186012
+</td>
+<td>
+Royal St George Yacht Club
+</td>
+</tr>
+<tr class="odd">
+<td>
+Sebastian Wright
+</td>
+<td>
+ILCA 4
+</td>
+<td>
+195099
+</td>
+<td>
+Greystones
+</td>
+</tr>
+<tr >
+<td>
+Sergei Vasilev
+</td>
+<td>
+ILCA 4
+</td>
+<td>
+210978
+</td>
+<td>
+Royal St. George
+</td>
+</tr>
+<tr class="odd">
+<td>
+Shane Collins
+</td>
+<td>
+ILCA 4
+</td>
+<td>
+214224
+</td>
+<td>
+Royal Cork Yacht Club
+</td>
+</tr>
+<tr >
+<td>
+Sophia Cahill
+</td>
+<td>
+ILCA 4
+</td>
+<td>
+190762
+</td>
+<td>
+Holywood YC/Carrickfergus SC
+</td>
+</tr>
+<tr class="odd">
+<td>
+Stan O'Rourke
+</td>
+<td>
+ILCA 4
+</td>
+<td>
+216619
+</td>
+<td>
+Malahide Yacht Club
+</td>
+</tr>
+<tr >
+<td>
+Viktor Samoilovs
+</td>
+<td>
+ILCA 4
+</td>
+<td>
+190755
+</td>
+<td>
+Malahide YC / Howth YC
+</td>
+</tr>
+<tr class="odd">
+<td>
+Zita Tempany
+</td>
+<td>
+ILCA 4
+</td>
+<td>
+211122
+</td>
+<td>
+Royal St George Yacht Club
+</td>
+</tr>
+<tr >
+<td>
+Alex Swan
+</td>
+<td>
+ILCA 6
+</td>
+<td>
+210406
+</td>
+<td>
+Royal Saint George yacht club
+</td>
+</tr>
+<tr class="odd">
+<td>
+Ali Robinson
+</td>
+<td>
+ILCA 6
+</td>
+<td>
+167795
+</td>
+<td>
+Royal Saint George YC
+</td>
+</tr>
+<tr >
+<td>
+Andrew Kingston
+</td>
+<td>
+ILCA 6
+</td>
+<td>
+216618
+</td>
+<td>
+Royal Cork Yacht Club
+</td>
+</tr>
+<tr class="odd">
+<td>
+Autumn Halliday
+</td>
+<td>
+ILCA 6
+</td>
+<td>
+216766
+</td>
+<td>
+Strangford Lough Yacht Club
+</td>
+</tr>
+<tr >
+<td>
+Bobby Driscoll
+</td>
+<td>
+ILCA 6
+</td>
+<td>
+200494
+</td>
+<td>
+RNIYC
+</td>
+</tr>
+<tr class="odd">
+<td>
+Brendan Hughes
+</td>
+<td>
+ILCA 6
+</td>
+<td>
+215356
+</td>
+<td>
+Royal St George Yacht Club
+</td>
+</tr>
+<tr >
+<td>
+Brian Carroll
+</td>
+<td>
+ILCA 6
+</td>
+<td>
+216111
+</td>
+<td>
+RSGYC/RIYC
+</td>
+</tr>
+<tr class="odd">
+<td>
+Callum Jackson
+</td>
+<td>
+ILCA 6
+</td>
+<td>
+216729
+</td>
+<td>
+CYC/PYC
+</td>
+</tr>
+<tr >
+<td>
+Cathal McGrath
+</td>
+<td>
+ILCA 6
+</td>
+<td>
+219149
+</td>
+<td>
+Galway City Sailing Club
+</td>
+</tr>
+<tr class="odd">
+<td>
+Charlie Keating
+</td>
+<td>
+ILCA 6
+</td>
+<td>
+219146
+</td>
+<td>
+Howth Yacht Club
+</td>
+</tr>
+<tr >
+<td>
+Charlotte Eadie
+</td>
+<td>
+ILCA 6
+</td>
+<td>
+215244
+</td>
+<td>
+Ballyholme yatch club
+</td>
+</tr>
+<tr class="odd">
+<td>
+Christian Houlihan
+</td>
+<td>
+ILCA 6
+</td>
+<td>
+216110
+</td>
+<td>
+Royal St George Yacht Club
+</td>
+</tr>
+<tr >
+<td>
+Cillian Twomey
+</td>
+<td>
+ILCA 6
+</td>
+<td>
+220765
+</td>
+<td>
+Howth Yacht Club
+</td>
+</tr>
+<tr class="odd">
+<td>
+Cody Halliday
+</td>
+<td>
+ILCA 6
+</td>
+<td>
+209097
+</td>
+<td>
+SLYC
+</td>
+</tr>
+<tr >
+<td>
+Conor Clancy
+</td>
+<td>
+ILCA 6
+</td>
+<td>
+196738
+</td>
+<td>
+Royal St George Yacht Club
+</td>
+</tr>
+<tr class="odd">
+<td>
+Daniel O'Connor
+</td>
+<td>
+ILCA 6
+</td>
+<td>
+211260
+</td>
+<td>
+Royal St George Yacht Club
+</td>
+</tr>
+<tr >
+<td>
+Daniel Palmer
+</td>
+<td>
+ILCA 6
+</td>
+<td>
+219096
+</td>
+<td>
+Ballyholme Yacht Club
+</td>
+</tr>
+<tr class="odd">
+<td>
+Darren Griffin
+</td>
+<td>
+ILCA 6
+</td>
+<td>
+219867
+</td>
+<td>
+Royal St George Yacht Club
+</td>
+</tr>
+<tr >
+<td>
+Dylan Cassidy
+</td>
+<td>
+ILCA 6
+</td>
+<td>
+144273
+</td>
+<td>
+Howth Yacht Club
+</td>
+</tr>
+<tr class="odd">
+<td>
+Ellion Santana de Jesus
+</td>
+<td>
+ILCA 6
+</td>
+<td>
+218913
+</td>
+<td>
+Royal St George Yatch club
+</td>
+</tr>
+<tr >
+<td>
+Emma Pierce
+</td>
+<td>
+ILCA 6
+</td>
+<td>
+212519
+</td>
+<td>
+SLYC
+</td>
+</tr>
+<tr class="odd">
+<td>
+Fiachra McDonnell
+</td>
+<td>
+ILCA 6
+</td>
+<td>
+223303
+</td>
+<td>
+Royal St George Yacht Club
+</td>
+</tr>
+<tr >
+<td>
+Gavin Doig
+</td>
+<td>
+ILCA 6
+</td>
+<td>
+204042
+</td>
+<td>
+East Antrim Boat Club
+</td>
+</tr>
+<tr class="odd">
+<td>
+Hugh Cahill
+</td>
+<td>
+ILCA 6
+</td>
+<td>
+216594
+</td>
+<td>
+DBSC
+</td>
+</tr>
+<tr >
+<td>
+Hugh Delap
+</td>
+<td>
+ILCA 6
+</td>
+<td>
+183295
+</td>
+<td>
+Royal St George
+</td>
+</tr>
+<tr class="odd">
+<td>
+James Anglim
+</td>
+<td>
+ILCA 6
+</td>
+<td>
+191522
+</td>
+<td>
+Malahide
+</td>
+</tr>
+<tr >
+<td>
+Joe O'Sullivan
+</td>
+<td>
+ILCA 6
+</td>
+<td>
+215239
+</td>
+<td>
+Royal Cork Yacht Club
+</td>
+</tr>
+<tr class="odd">
+<td>
+Krzysztof Ciborowski
+</td>
+<td>
+ILCA 6
+</td>
+<td>
+216612
+</td>
+<td>
+Royal St George Yacht Club
+</td>
+</tr>
+<tr >
+<td>
+Lewis Thompson
+</td>
+<td>
+ILCA 6
+</td>
+<td>
+222543
+</td>
+<td>
+Ballyholme Y.C
+</td>
+</tr>
+<tr class="odd">
+<td>
+Matilda Murray
+</td>
+<td>
+ILCA 6
+</td>
+<td>
+189485
+</td>
+<td>
+Royal St George Yacht Club
+</td>
+</tr>
+<tr >
+<td>
+Michael Crosbie
+</td>
+<td>
+ILCA 6
+</td>
+<td>
+216390
+</td>
+<td>
+Royal Cork Yacht Club
+</td>
+</tr>
+<tr class="odd">
+<td>
+Michael Doherty
+</td>
+<td>
+ILCA 6
+</td>
+<td>
+191311
+</td>
+<td>
+Royal Cork Yacht Club
+</td>
+</tr>
+<tr >
+<td>
+Michael Norman
+</td>
+<td>
+ILCA 6
+</td>
+<td>
+219126
+</td>
+<td>
+Wicklow Sailing Club
+</td>
+</tr>
+<tr class="odd">
+<td>
+Noel Davidson
+</td>
+<td>
+ILCA 6
+</td>
+<td>
+173155
+</td>
+<td>
+Malahide Yacht Club
+</td>
+</tr>
+<tr >
+<td>
+Owen Laverty
+</td>
+<td>
+ILCA 6
+</td>
+<td>
+217487
+</td>
+<td>
+Royal St George Yacht Club
+</td>
+</tr>
+<tr class="odd">
+<td>
+Patrick Hamilton
+</td>
+<td>
+ILCA 6
+</td>
+<td>
+206890
+</td>
+<td>
+East Down Yacht Club
+</td>
+</tr>
+<tr >
+<td>
+Peter Doyle
+</td>
+<td>
+ILCA 6
+</td>
+<td>
+212113
+</td>
+<td>
+Wexford Harbour Boat and Tennis Club
+</td>
+</tr>
+<tr class="odd">
+<td>
+Peter Kenny
+</td>
+<td>
+ILCA 6
+</td>
+<td>
+216101
+</td>
+<td>
+WHBTC
+</td>
+</tr>
+<tr >
+<td>
+Peter Williams
+</td>
+<td>
+ILCA 6
+</td>
+<td>
+211126
+</td>
+<td>
+R St George YC
+</td>
+</tr>
+<tr class="odd">
+<td>
+Reuben Florisson
+</td>
+<td>
+ILCA 6
+</td>
+<td>
+220766
+</td>
+<td>
+Galway City Sailing Club
+</td>
+</tr>
+<tr >
+<td>
+Robert Jeffreys
+</td>
+<td>
+ILCA 6
+</td>
+<td>
+216200
+</td>
+<td>
+Royal Cork Yacht Club
+</td>
+</tr>
+<tr class="odd">
+<td>
+Robert Jephson
+</td>
+<td>
+ILCA 6
+</td>
+<td>
+193449
+</td>
+<td>
+Waterford Harbour Sailing Club
+</td>
+</tr>
+<tr >
+<td>
+Rocco Wright
+</td>
+<td>
+ILCA 6
+</td>
+<td>
+222839
+</td>
+<td>
+Howth Yacht Club
+</td>
+</tr>
+<tr class="odd">
+<td>
+Rodney Regan
+</td>
+<td>
+ILCA 6
+</td>
+<td>
+223111
+</td>
+<td>
+NYC
+</td>
+</tr>
+<tr >
+<td>
+Sam Ledoux
+</td>
+<td>
+ILCA 6
+</td>
+<td>
+211122
+</td>
+<td>
+RSGYC, NYC
+</td>
+</tr>
+<tr class="odd">
+<td>
+Sean Flanagan
+</td>
+<td>
+ILCA 6
+</td>
+<td>
+214859
+</td>
+<td>
+Royal st George YC
+</td>
+</tr>
+<tr >
+<td>
+Seth Walker
+</td>
+<td>
+ILCA 6
+</td>
+<td>
+211099
+</td>
+<td>
+Royal St George Yacht Club
+</td>
+</tr>
+<tr class="odd">
+<td>
+Sienna Wright
+</td>
+<td>
+ILCA 6
+</td>
+<td>
+218956
+</td>
+<td>
+Howth Yacht Club
+</td>
+</tr>
+<tr >
+<td>
+Sophie Kilmartin
+</td>
+<td>
+ILCA 6
+</td>
+<td>
+219125
+</td>
+<td>
+RSGYC & MYC
+</td>
+</tr>
+<tr class="odd">
+<td>
+Tom Coulter
+</td>
+<td>
+ILCA 6
+</td>
+<td>
+222547
+</td>
+<td>
+EABC / PYC
+</td>
+</tr>
+<tr >
+<td>
+Tom Fox
+</td>
+<td>
+ILCA 6
+</td>
+<td>
+183109
+</td>
+<td>
+Rush Sailing Club
+</td>
+</tr>
+<tr class="odd">
+<td>
+William Chouquet
+</td>
+<td>
+ILCA 6
+</td>
+<td>
+168849
+</td>
+<td>
+Malahide Yacht Club
+</td>
+</tr>
+<tr >
+<td>
+Zoe Whitford
+</td>
+<td>
+ILCA 6
+</td>
+<td>
+214563
+</td>
+<td>
+East Antrim Boat Club
+</td>
+</tr>
+<tr class="odd">
+<td>
+Adam Fermor
+</td>
+<td>
+ILCA 7
+</td>
+<td>
+211133
+</td>
+<td>
+Strangford lough yacht club
+</td>
+</tr>
+<tr >
+<td>
+Andrejs Samoilovs
+</td>
+<td>
+ILCA 7
+</td>
+<td>
+214263
+</td>
+<td>
+Malahide Yacht Club
+</td>
+</tr>
+<tr class="odd">
+<td>
+Colin Leonard
+</td>
+<td>
+ILCA 7
+</td>
+<td>
+204159
+</td>
+<td>
+Ballyholme Yacht Club
+</td>
+</tr>
+<tr >
+<td>
+Conor Byrne
+</td>
+<td>
+ILCA 7
+</td>
+<td>
+216890
+</td>
+<td>
+Royal St George Yacht Club
+</td>
+</tr>
+<tr class="odd">
+<td>
+Conor Costello
+</td>
+<td>
+ILCA 7
+</td>
+<td>
+194648
+</td>
+<td>
+Malahide Yacht Club
+</td>
+</tr>
+<tr >
+<td>
+Conor Murphy
+</td>
+<td>
+ILCA 7
+</td>
+<td>
+213141
+</td>
+<td>
+Howth Yacht Club
+</td>
+</tr>
+<tr class="odd">
+<td>
+Conrad Simpson
+</td>
+<td>
+ILCA 7
+</td>
+<td>
+219804
+</td>
+<td>
+Ballyholme YC
+</td>
+</tr>
+<tr >
+<td>
+Dan O'Connell
+</td>
+<td>
+ILCA 7
+</td>
+<td>
+219127
+</td>
+<td>
+Cove SC
+</td>
+</tr>
+<tr class="odd">
+<td>
+Daragh Kelleher
+</td>
+<td>
+ILCA 7
+</td>
+<td>
+222551
+</td>
+<td>
+Skerries SC
+</td>
+</tr>
+<tr >
+<td>
+Edward Rice
+</td>
+<td>
+ILCA 7
+</td>
+<td>
+218165
+</td>
+<td>
+Royal Cork Yacht Club
+</td>
+</tr>
+<tr class="odd">
+<td>
+Isaac Schotte
+</td>
+<td>
+ILCA 7
+</td>
+<td>
+221956
+</td>
+<td>
+RQYS
+</td>
+</tr>
+<tr >
+<td>
+Jack McMahon
+</td>
+<td>
+ILCA 7
+</td>
+<td>
+211121
+</td>
+<td>
+Howth Yacht Club
+</td>
+</tr>
+<tr class="odd">
+<td>
+James Moore
+</td>
+<td>
+ILCA 7
+</td>
+<td>
+215238
+</td>
+<td>
+Ballyholme Yacht Club
+</td>
+</tr>
+<tr >
+<td>
+James Murphy
+</td>
+<td>
+ILCA 7
+</td>
+<td>
+142283
+</td>
+<td>
+WHBTC
+</td>
+</tr>
+<tr class="odd">
+<td>
+Jamie McMahon
+</td>
+<td>
+ILCA 7
+</td>
+<td>
+216116
+</td>
+<td>
+Howth Yacht Club
+</td>
+</tr>
+<tr >
+<td>
+Jonathan O'Shaughnessy
+</td>
+<td>
+ILCA 7
+</td>
+<td>
+211467
+</td>
+<td>
+Royal Cork Yacht Club
+</td>
+</tr>
+<tr class="odd">
+<td>
+Joshua McGregor
+</td>
+<td>
+ILCA 7
+</td>
+<td>
+216979
+</td>
+<td>
+Ballyholme
+</td>
+</tr>
+<tr >
+<td>
+Kei Walker
+</td>
+<td>
+ILCA 7
+</td>
+<td>
+2106
+</td>
+<td>
+Royal St. George Yacht Club
+</td>
+</tr>
+<tr class="odd">
+<td>
+Matthew Cotter
+</td>
+<td>
+ILCA 7
+</td>
+<td>
+206827
+</td>
+<td>
+Howth Yacht Club
+</td>
+</tr>
+<tr >
+<td>
+Nick Walsh
+</td>
+<td>
+ILCA 7
+</td>
+<td>
+217533
+</td>
+<td>
+Royal Cork Yacht Club
+</td>
+</tr>
+<tr class="odd">
+<td>
+Oisin Hughes
+</td>
+<td>
+ILCA 7
+</td>
+<td>
+216711
+</td>
+<td>
+Royal St George Yacht Club
+</td>
+</tr>
+<tr >
+<td>
+Rory Lynch
+</td>
+<td>
+ILCA 7
+</td>
+<td>
+222017
+</td>
+<td>
+Baltimore SC
+</td>
+</tr>
+<tr class="odd">
+<td>
+Ross O'Leary
+</td>
+<td>
+ILCA 7
+</td>
+<td>
+219129
+</td>
+<td>
+Royal St George Yacht Club/Courtown SC
+</td>
+</tr>
+<tr >
+<td>
+Sean Bowden
+</td>
+<td>
+ILCA 7
+</td>
+<td>
+193654
+</td>
+<td>
+DMYC
+</td>
+</tr>
+</tbody>
+</table><br />
+
+<p class="hardleft"><a href="http://www.hyc.ie">www.hyc.ie</a><br /><a href="mailto:"></a></p>
+<p class="hardright"><a href="http://https://ilcaireland.com/event/nationals2023/">https://ilcaireland.com/event/nationals2023/</a><br /><a href="mailto:"></a></p>
+<p>Sailwave Scoring Software 2.29.0<br /><a href="http://www.sailwave.com">www.sailwave.com</a></p>
+
+</div>
+
+<footer>
+</footer>
+
+<div id="scrollbottom"></div>
+
+</body>
+</html>
+
+

@@ -1,0 +1,2900 @@
+
+
+
+<!doctype html>
+
+<head>
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta http-equiv="Cache-control" content="no-cache">
+<meta name="description" content="sailwave results">
+<meta name="viewport" content="width=device-width">
+
+<title>Sailwave results for Autumn League 2024 at Howth Yacht Club 2024</title>
+
+<style type="text/css">
+body {font: 80% arial, helvetica, sans-serif; text-align: center;}
+.hardleft  {text-align: left; float: left;  margin: 15px 0  15px 25px;}
+.hardright {text-align: right; float: right; margin: 15px 25px 15px 0;}
+table {text-align: left; margin: 0px auto 30px auto; font-size: 1em; border-collapse: collapse; border: 1px #999 solid;}
+td, th {padding: 4px; border: 1px #999 solid; vertical-align: top;}
+.caption {padding: 5px; text-align: center; border: 0; font-weight: bold;}
+p {text-align: center;}
+.contents {text-align: left; margin-left: 20%;}
+.race {background-color: #eee;}
+.odd {background-color: #eef;}
+.natflag {border: 1px #999 solid;}
+.nattext {font-size: 0.8em;}
+.place1 {font-weight: bold; background-color: #ffffaa;}
+.place2 {font-weight: bold; background-color: #aaaaff;}
+.place3 {font-weight: bold; background-color: #ffaaaa;}
+.placen {}
+table.headertable {border: 0px;}
+table.headertable td{border: 0px;}
+</style>
+
+<script type="text/javascript">
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script>
+
+function swGetURLArgs() {
+
+  var url = location.href;
+  var qs  = url.substring(url.indexOf('?') + 1).split('&');
+
+  for(var i = 0, result = {}; i < qs.length; i++) {
+    qs[i]            = qs[i].split('=');
+    result[qs[i][0]] = decodeURIComponent(qs[i][1]);
+  }
+
+  return result;
+}
+
+//
+//  name=HighlightWins3
+//  dependencies=jQuery
+//  description=Highlight winning scores in summary tables.
+//  author=Jon Eskdale based on an idea by Colin Jenkins
+//  date=2015-08-18
+//  version=1.6 2018-11-15
+//  url=http://sailwave.com
+//  email=jon@sailwave.com
+//  twitter=eskdale
+//  comments=Edit colours to colours of your choice
+//
+
+$(document).ready(function() {
+var winsSelector = '.summaryrace';
+var winsText     = /\b1\.0/;
+var twoText              = /\b2\.0/;
+var threeText    = /\b3\.0/;
+
+// Edit these colours to change the highlight colours for 1st, 2nd and 3rd
+var winsColour   = '#ffd700';
+var twoColour    = '#6a91c5';
+var threeColour  = '#da6841';
+//var twoColour  = '#ffe768';
+//var threeColour  = '#fff0a1';
+
+// create array of race column numbers for first table (summarytable)
+var ths = document.getElementsByTagName('col');
+var column =[];
+for (var i=0; i<ths.length; i++) {
+        if (ths[i].classList[0] === "race") {
+                column.push(i);
+        } else {
+                if (column.length !=0) {
+                        break;
+                }
+        }
+}
+//console.log(column);
+
+//  Set a class of summaryrace for all race cells in summary table body
+//
+for (var i=0; i<column.length; i++) {
+        $(".summarytable tbody tr td:nth-child(" + (column[i]+1) +")").addClass("summaryrace");
+}
+
+// Change the background color for cells with class of summaryrace and that match regular expression text
+$(function () {
+
+  $(winsSelector).filter(function() {
+    return winsText.test($(this).text());
+  }).css("background", winsColour);
+  $(winsSelector).filter(function() {
+        return twoText.test($(this).text());
+  }).css("background", twoColour);
+  $(winsSelector).filter(function() {
+        return threeText.test($(this).text());
+  }).css("background", threeColour);
+
+});
+});
+</script>
+
+</head>
+
+<body>
+
+<header>
+</header>
+<table class="headertable" cellspacing="0" width="100%" cellpadding="0" border="0">
+<tbody>
+<div id="wrap">
+
+<tr>
+<td width="30%">
+<img style="display:block; height:100px;"  src="https://hyc.ie/system/sponsor_logos/440/normal/HYC_Logo.jpg" alt="venue burgee" />
+</td>
+
+<td width="40%" align="center">
+<h1>Autumn League 2024</h1>
+<h2>Howth Yacht Club</h2>
+</td>
+
+<td width="30%">
+</td>
+</tr>
+</tbody>
+</table>
+
+<div style="clear:both;"></div>
+
+<style>
+div.applicant-break {page-break-after:always;}
+</style>
+<h3 class="seriestitle">Provisional Results as of 17:06 on October 19, 2024</h3>
+<h3 class="summarytitle" id="summaryhowth_17_scratch">Howth 17 Scratch Fleet</h3>
+<div class="caption summarycaption">Sailed: 6, Discards: 1, To count: 5, Rating system: TCF, Entries: 14, Scoring system: Appendix A</div>
+<table class="summarytable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="14">
+<col class="rank" />
+<col class="sailno" />
+<col class="boat" />
+<col class="helmname" />
+<col class="club" />
+<col class="rating" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="total" />
+<col class="nett" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Sail</th>
+<th>Boat</th>
+<th>Owner Name(s)</th>
+<th>Club</th>
+<th>Rating</th>
+<th><a class="racelink" href="#r1howth_17_scratch">R1</a><br />Sep 14</th>
+<th><a class="racelink" href="#r2howth_17_scratch">R2</a><br />Sep 21st</th>
+<th><a class="racelink" href="#r3howth_17_scratch">R3</a><br />Sep 28th</th>
+<th><a class="racelink" href="#r4howth_17_scratch">R4</a><br />Oct 12th</th>
+<th><a class="racelink" href="#r5howth_17_scratch">R5</a><br />19th Oct</th>
+<th><a class="racelink" href="#r6howth_17_scratch">R6</a><br />19th Oct</th>
+<th>Total</th>
+<th>Nett</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd summaryrow">
+<td>1st</td>
+<td>18</td>
+<td>Erica</td>
+<td>Davie Nixon</td>
+<td>Howth YC</td>
+<td>1.000</td>
+<td class="rank1">1.0</td>
+<td class="rank2">2.0</td>
+<td class="rank1">1.0</td>
+<td class="rank1">1.0</td>
+<td>6.0</td>
+<td>(8.0)</td>
+<td>19.0</td>
+<td>11.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>2nd</td>
+<td>19</td>
+<td>Isobel</td>
+<td>Brian & Conor Turvey</td>
+<td>Howth YC</td>
+<td>1.000</td>
+<td>(7.0)</td>
+<td>5.0</td>
+<td>4.0</td>
+<td class="rank3">3.0</td>
+<td class="rank3">3.0</td>
+<td class="rank2">2.0</td>
+<td>24.0</td>
+<td>17.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>3rd</td>
+<td>11</td>
+<td>Deilginis</td>
+<td>Massey, Toomey, Kenny</td>
+<td>Howth YC</td>
+<td>1.000</td>
+<td>5.0</td>
+<td class="rank1">1.0</td>
+<td>7.0</td>
+<td class="rank2">2.0</td>
+<td>(8.0)</td>
+<td class="rank3">3.0</td>
+<td>26.0</td>
+<td>18.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>4th</td>
+<td>9</td>
+<td>Hera</td>
+<td>Jane & Michael Duffy</td>
+<td>Howth YC</td>
+<td>1.000</td>
+<td class="rank3">3.0</td>
+<td>4.0</td>
+<td>(10.0)</td>
+<td>5.0</td>
+<td class="rank2">2.0</td>
+<td>4.0</td>
+<td>28.0</td>
+<td>18.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>5th</td>
+<td>21</td>
+<td>Orla</td>
+<td>Gallagher & Fitzgibbon</td>
+<td>Howth YC</td>
+<td>1.000</td>
+<td class="rank2">2.0</td>
+<td class="rank3">3.0</td>
+<td class="rank3">3.0</td>
+<td>4.0</td>
+<td>7.0</td>
+<td>(10.0)</td>
+<td>29.0</td>
+<td>19.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>6th</td>
+<td>20</td>
+<td>Sheila</td>
+<td>Mulligan / Johnston</td>
+<td>Howth YC</td>
+<td>1.000</td>
+<td>10.0</td>
+<td>(15.0 DNC)</td>
+<td>6.0</td>
+<td>8.0</td>
+<td class="rank1">1.0</td>
+<td class="rank1">1.0</td>
+<td>41.0</td>
+<td>26.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>7th</td>
+<td>16</td>
+<td>Eileen</td>
+<td>Rima Macken</td>
+<td>Howth YC</td>
+<td>1.000</td>
+<td>4.0</td>
+<td>8.0</td>
+<td class="rank2">2.0</td>
+<td>(12.0 RET)</td>
+<td>10.0</td>
+<td>5.0</td>
+<td>41.0</td>
+<td>29.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>8th</td>
+<td>12</td>
+<td>Rosemary</td>
+<td>Curley,Jones & Potter</td>
+<td>Howth YC</td>
+<td>1.000</td>
+<td>6.0</td>
+<td>7.0</td>
+<td>8.0</td>
+<td>(15.0 DNC)</td>
+<td>4.0</td>
+<td>7.0</td>
+<td>47.0</td>
+<td>32.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>9th</td>
+<td>7</td>
+<td>Aura</td>
+<td>Ian Malcolm</td>
+<td>Howth YC</td>
+<td>1.000</td>
+<td>8.0</td>
+<td>6.0</td>
+<td>9.0</td>
+<td>(12.0 RET)</td>
+<td>5.0</td>
+<td>6.0</td>
+<td>46.0</td>
+<td>34.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>10th</td>
+<td>3</td>
+<td>Leila</td>
+<td>Roddy Cooper</td>
+<td>Howth YC</td>
+<td>1.000</td>
+<td>9.0</td>
+<td>9.0</td>
+<td>(13.0)</td>
+<td>7.0</td>
+<td>11.0</td>
+<td>9.0</td>
+<td>58.0</td>
+<td>45.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>11th</td>
+<td>17</td>
+<td>Oona</td>
+<td>Peter Courtney</td>
+<td>Howth YC</td>
+<td>1.000</td>
+<td>14.0 DNF</td>
+<td>12.0 DNF</td>
+<td>12.0</td>
+<td>6.0</td>
+<td>(15.0 DNC)</td>
+<td>11.0</td>
+<td>70.0</td>
+<td>55.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>12th</td>
+<td>8</td>
+<td>Echo</td>
+<td>Bryan and Harriette Lynch</td>
+<td>Howth YC</td>
+<td>1.000</td>
+<td>11.0</td>
+<td>10.0</td>
+<td>11.0</td>
+<td>(12.0 RET)</td>
+<td>12.0</td>
+<td>12.0</td>
+<td>68.0</td>
+<td>56.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>13th</td>
+<td>1</td>
+<td>Rita</td>
+<td>Marcus Lynch & John Curley</td>
+<td>Howth YC</td>
+<td>1.000</td>
+<td>(15.0 DNC)</td>
+<td>15.0 DNC</td>
+<td>5.0</td>
+<td>15.0 DNC</td>
+<td>9.0</td>
+<td>15.0 DNC</td>
+<td>74.0</td>
+<td>59.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>14th</td>
+<td>4</td>
+<td>Zaida</td>
+<td>C & C Houlihan, A Carroll, K Hurley</td>
+<td>Howth YC</td>
+<td>1.000</td>
+<td>12.0</td>
+<td>(15.0 DNC)</td>
+<td>14.0</td>
+<td>15.0 DNC</td>
+<td>13.0</td>
+<td>13.0</td>
+<td>82.0</td>
+<td>67.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="summarytitle" id="summaryhowth_17_hph">Howth 17 HPH Fleet</h3>
+<div class="caption summarycaption">Sailed: 6, Discards: 1, To count: 5, Rating system: NHC1, Entries: 14, Scoring system: Appendix A</div>
+<table class="summarytable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="14">
+<col class="rank" />
+<col class="sailno" />
+<col class="boat" />
+<col class="helmname" />
+<col class="club" />
+<col class="rating" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="total" />
+<col class="nett" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Sail</th>
+<th>Boat</th>
+<th>Owner Name(s)</th>
+<th>Club</th>
+<th>Rating</th>
+<th><a class="racelink" href="#r1howth_17_hph">R1</a><br />Sep 14</th>
+<th><a class="racelink" href="#r2howth_17_hph">R2</a><br />Sep 21st</th>
+<th><a class="racelink" href="#r3howth_17_hph">R3</a><br />Sep 28th</th>
+<th><a class="racelink" href="#r4howth_17_hph">R4</a><br />Oct 12th</th>
+<th><a class="racelink" href="#r5howth_17_hph">R5</a><br />19th Oct</th>
+<th><a class="racelink" href="#r6howth_17_hph">R6</a><br />19th Oct</th>
+<th>Total</th>
+<th>Nett</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd summaryrow">
+<td>1st</td>
+<td>8</td>
+<td>Echo</td>
+<td>Bryan and Harriette Lynch</td>
+<td>Howth YC</td>
+<td>1.078</td>
+<td class="rank1">1.0</td>
+<td class="rank2">2.0</td>
+<td class="rank1">1.0</td>
+<td>(12.0 RET)</td>
+<td class="rank2">2.0</td>
+<td>5.0</td>
+<td>23.0</td>
+<td>11.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>2nd</td>
+<td>19</td>
+<td>Isobel</td>
+<td>Brian & Conor Turvey</td>
+<td>Howth YC</td>
+<td>1.276</td>
+<td>(11.0)</td>
+<td>5.0</td>
+<td>5.0</td>
+<td class="rank2">2.0</td>
+<td>4.0</td>
+<td class="rank2">2.0</td>
+<td>29.0</td>
+<td>18.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>3rd</td>
+<td>11</td>
+<td>Deilginis</td>
+<td>Massey, Toomey, Kenny</td>
+<td>Howth YC</td>
+<td>1.276</td>
+<td>7.0</td>
+<td class="rank1">1.0</td>
+<td>8.0</td>
+<td class="rank1">1.0</td>
+<td>(10.0)</td>
+<td class="rank3">3.0</td>
+<td>30.0</td>
+<td>20.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>4th</td>
+<td>12</td>
+<td>Rosemary</td>
+<td>Curley,Jones & Potter</td>
+<td>Howth YC</td>
+<td>1.229</td>
+<td>5.0</td>
+<td class="rank3">3.0</td>
+<td>4.0</td>
+<td>(15.0 DNC)</td>
+<td class="rank1">1.0</td>
+<td>9.0</td>
+<td>37.0</td>
+<td>22.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>5th</td>
+<td>16</td>
+<td>Eileen</td>
+<td>Rima Macken</td>
+<td>Howth YC</td>
+<td>1.224</td>
+<td class="rank3">3.0</td>
+<td>8.0</td>
+<td class="rank2">2.0</td>
+<td>(12.0 RET)</td>
+<td>8.0</td>
+<td>4.0</td>
+<td>37.0</td>
+<td>25.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>6th</td>
+<td>21</td>
+<td>Orla</td>
+<td>Gallagher & Fitzgibbon</td>
+<td>Howth YC</td>
+<td>1.273</td>
+<td class="rank2">2.0</td>
+<td>4.0</td>
+<td>6.0</td>
+<td>4.0</td>
+<td>9.0</td>
+<td>(11.0)</td>
+<td>36.0</td>
+<td>25.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>7th</td>
+<td>18</td>
+<td>Erica</td>
+<td>Davie Nixon</td>
+<td>Howth YC</td>
+<td>1.330</td>
+<td>4.0</td>
+<td>6.5</td>
+<td class="rank3">3.0</td>
+<td class="rank3">3.0</td>
+<td>12.0</td>
+<td>(13.0)</td>
+<td>41.5</td>
+<td>28.5</td>
+</tr>
+<tr class="even summaryrow">
+<td>8th</td>
+<td>20</td>
+<td>Sheila</td>
+<td>Mulligan / Johnston</td>
+<td>Howth YC</td>
+<td>1.295</td>
+<td>12.0</td>
+<td>(15.0 DNC)</td>
+<td>9.0</td>
+<td>8.0</td>
+<td class="rank3">3.0</td>
+<td class="rank1">1.0</td>
+<td>48.0</td>
+<td>33.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>9th</td>
+<td>9</td>
+<td>Hera</td>
+<td>Jane & Michael Duffy</td>
+<td>Howth YC</td>
+<td>1.330</td>
+<td>6.0</td>
+<td>10.0</td>
+<td>(14.0)</td>
+<td>6.0</td>
+<td>6.0</td>
+<td>6.0</td>
+<td>48.0</td>
+<td>34.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>10th</td>
+<td>7</td>
+<td>Aura</td>
+<td>Ian Malcolm</td>
+<td>Howth YC</td>
+<td>1.269</td>
+<td>9.0</td>
+<td>6.5</td>
+<td>7.0</td>
+<td>(12.0 RET)</td>
+<td>5.0</td>
+<td>8.0</td>
+<td>47.5</td>
+<td>35.5</td>
+</tr>
+<tr class="odd summaryrow">
+<td>11th</td>
+<td>3</td>
+<td>Leila</td>
+<td>Roddy Cooper</td>
+<td>Howth YC</td>
+<td>1.236</td>
+<td>8.0</td>
+<td>9.0</td>
+<td>(12.0)</td>
+<td>5.0</td>
+<td>7.0</td>
+<td>7.0</td>
+<td>48.0</td>
+<td>36.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>12th</td>
+<td>17</td>
+<td>Oona</td>
+<td>Peter Courtney</td>
+<td>Howth YC</td>
+<td>1.280</td>
+<td>14.0 DNF</td>
+<td>12.0 DNF</td>
+<td>13.0</td>
+<td>7.0</td>
+<td>(15.0 DNC)</td>
+<td>10.0</td>
+<td>71.0</td>
+<td>56.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>13th</td>
+<td>4</td>
+<td>Zaida</td>
+<td>C & C Houlihan, A Carroll, K Hurley</td>
+<td>Howth YC</td>
+<td>1.149</td>
+<td>10.0</td>
+<td>(15.0 DNC)</td>
+<td>11.0</td>
+<td>15.0 DNC</td>
+<td>13.0</td>
+<td>12.0</td>
+<td>76.0</td>
+<td>61.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>14th</td>
+<td>1</td>
+<td>Rita</td>
+<td>Marcus Lynch & John Curley</td>
+<td>Howth YC</td>
+<td>1.300</td>
+<td>(15.0 DNC)</td>
+<td>15.0 DNC</td>
+<td>10.0</td>
+<td>15.0 DNC</td>
+<td>11.0</td>
+<td>15.0 DNC</td>
+<td>81.0</td>
+<td>66.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r1howth_17_scratch">R1 - Howth 17 Scratch Fleet&nbsp;-&nbsp;Sep 14</h3>
+<div class="caption racecaption">
+Start: Start 3, Finishes: Finish time, Time: 15.15.00
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="10">
+<col class="rank" />
+<col class="sailno" />
+<col class="boat" />
+<col class="helmname" />
+<col class="club" />
+<col class="rating" />
+<col class="finish" />
+<col class="elapsed" />
+<col class="corrected" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Sail</th>
+<th>Boat</th>
+<th>Owner Name(s)</th>
+<th>Club</th>
+<th>Rating</th>
+<th>Finish</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>18</td>
+<td>Erica</td>
+<td>Davie Nixon</td>
+<td>Howth YC</td>
+<td>1.000</td>
+<td>16:46:07</td>
+<td>1.31.07</td>
+<td>1.31.07</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>21</td>
+<td>Orla</td>
+<td>Gallagher & Fitzgibbon</td>
+<td>Howth YC</td>
+<td>1.000</td>
+<td>16:48:35</td>
+<td>1.33.35</td>
+<td>1.33.35</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>9</td>
+<td>Hera</td>
+<td>Jane & Michael Duffy</td>
+<td>Howth YC</td>
+<td>1.000</td>
+<td>16:49:05</td>
+<td>1.34.05</td>
+<td>1.34.05</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>16</td>
+<td>Eileen</td>
+<td>Rima Macken</td>
+<td>Howth YC</td>
+<td>1.000</td>
+<td>16:52:55</td>
+<td>1.37.55</td>
+<td>1.37.55</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>11</td>
+<td>Deilginis</td>
+<td>Massey, Toomey, Kenny</td>
+<td>Howth YC</td>
+<td>1.000</td>
+<td>16:53:26</td>
+<td>1.38.26</td>
+<td>1.38.26</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>12</td>
+<td>Rosemary</td>
+<td>Curley,Jones & Potter</td>
+<td>Howth YC</td>
+<td>1.000</td>
+<td>16:55:29</td>
+<td>1.40.29</td>
+<td>1.40.29</td>
+<td>6.0</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>19</td>
+<td>Isobel</td>
+<td>Brian & Conor Turvey</td>
+<td>Howth YC</td>
+<td>1.000</td>
+<td>16:55:55</td>
+<td>1.40.55</td>
+<td>1.40.55</td>
+<td>7.0</td>
+</tr>
+<tr class="even racerow">
+<td>8</td>
+<td>7</td>
+<td>Aura</td>
+<td>Ian Malcolm</td>
+<td>Howth YC</td>
+<td>1.000</td>
+<td>16:56:04</td>
+<td>1.41.04</td>
+<td>1.41.04</td>
+<td>8.0</td>
+</tr>
+<tr class="odd racerow">
+<td>9</td>
+<td>3</td>
+<td>Leila</td>
+<td>Roddy Cooper</td>
+<td>Howth YC</td>
+<td>1.000</td>
+<td>16:57:18</td>
+<td>1.42.18</td>
+<td>1.42.18</td>
+<td>9.0</td>
+</tr>
+<tr class="even racerow">
+<td>10</td>
+<td>20</td>
+<td>Sheila</td>
+<td>Mulligan / Johnston</td>
+<td>Howth YC</td>
+<td>1.000</td>
+<td>16:58:14</td>
+<td>1.43.14</td>
+<td>1.43.14</td>
+<td>10.0</td>
+</tr>
+<tr class="odd racerow">
+<td>11</td>
+<td>8</td>
+<td>Echo</td>
+<td>Bryan and Harriette Lynch</td>
+<td>Howth YC</td>
+<td>1.000</td>
+<td>17:01:30</td>
+<td>1.46.30</td>
+<td>1.46.30</td>
+<td>11.0</td>
+</tr>
+<tr class="even racerow">
+<td>12</td>
+<td>4</td>
+<td>Zaida</td>
+<td>C & C Houlihan, A Carroll, K Hurley</td>
+<td>Howth YC</td>
+<td>1.000</td>
+<td>17:06:55</td>
+<td>1.51.55</td>
+<td>1.51.55</td>
+<td>12.0</td>
+</tr>
+<tr class="odd racerow">
+<td>13</td>
+<td>17</td>
+<td>Oona</td>
+<td>Peter Courtney</td>
+<td>Howth YC</td>
+<td>1.000</td>
+<td>&nbsp;</td>
+<td>DNF</td>
+<td>&nbsp;</td>
+<td>14.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r2howth_17_scratch">R2 - Howth 17 Scratch Fleet&nbsp;-&nbsp;Sep 21st</h3>
+<div class="caption racecaption">
+Start: Start 3, Finishes: Finish time, Time: 15.15.00
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="10">
+<col class="rank" />
+<col class="sailno" />
+<col class="boat" />
+<col class="helmname" />
+<col class="club" />
+<col class="rating" />
+<col class="finish" />
+<col class="elapsed" />
+<col class="corrected" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Sail</th>
+<th>Boat</th>
+<th>Owner Name(s)</th>
+<th>Club</th>
+<th>Rating</th>
+<th>Finish</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>11</td>
+<td>Deilginis</td>
+<td>Massey, Toomey, Kenny</td>
+<td>Howth YC</td>
+<td>1.000</td>
+<td>16.23.56</td>
+<td>1.08.56</td>
+<td>1.08.56</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>18</td>
+<td>Erica</td>
+<td>Davie Nixon</td>
+<td>Howth YC</td>
+<td>1.000</td>
+<td>16.25.08</td>
+<td>1.10.08</td>
+<td>1.10.08</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>21</td>
+<td>Orla</td>
+<td>Gallagher & Fitzgibbon</td>
+<td>Howth YC</td>
+<td>1.000</td>
+<td>16.27.14</td>
+<td>1.12.14</td>
+<td>1.12.14</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>9</td>
+<td>Hera</td>
+<td>Jane & Michael Duffy</td>
+<td>Howth YC</td>
+<td>1.000</td>
+<td>16.28.37</td>
+<td>1.13.37</td>
+<td>1.13.37</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>19</td>
+<td>Isobel</td>
+<td>Brian & Conor Turvey</td>
+<td>Howth YC</td>
+<td>1.000</td>
+<td>16.28.49</td>
+<td>1.13.49</td>
+<td>1.13.49</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>7</td>
+<td>Aura</td>
+<td>Ian Malcolm</td>
+<td>Howth YC</td>
+<td>1.000</td>
+<td>16.29.25</td>
+<td>1.14.25</td>
+<td>1.14.25</td>
+<td>6.0</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>12</td>
+<td>Rosemary</td>
+<td>Curley,Jones & Potter</td>
+<td>Howth YC</td>
+<td>1.000</td>
+<td>16.29.55</td>
+<td>1.14.55</td>
+<td>1.14.55</td>
+<td>7.0</td>
+</tr>
+<tr class="even racerow">
+<td>8</td>
+<td>16</td>
+<td>Eileen</td>
+<td>Rima Macken</td>
+<td>Howth YC</td>
+<td>1.000</td>
+<td>16.32.30</td>
+<td>1.17.30</td>
+<td>1.17.30</td>
+<td>8.0</td>
+</tr>
+<tr class="odd racerow">
+<td>9</td>
+<td>3</td>
+<td>Leila</td>
+<td>Roddy Cooper</td>
+<td>Howth YC</td>
+<td>1.000</td>
+<td>16.32.57</td>
+<td>1.17.57</td>
+<td>1.17.57</td>
+<td>9.0</td>
+</tr>
+<tr class="even racerow">
+<td>10</td>
+<td>8</td>
+<td>Echo</td>
+<td>Bryan and Harriette Lynch</td>
+<td>Howth YC</td>
+<td>1.000</td>
+<td>16.35.46</td>
+<td>1.20.46</td>
+<td>1.20.46</td>
+<td>10.0</td>
+</tr>
+<tr class="odd racerow">
+<td>11</td>
+<td>17</td>
+<td>Oona</td>
+<td>Peter Courtney</td>
+<td>Howth YC</td>
+<td>1.000</td>
+<td>&nbsp;</td>
+<td>DNF</td>
+<td>&nbsp;</td>
+<td>12.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r3howth_17_scratch">R3 - Howth 17 Scratch Fleet&nbsp;-&nbsp;Sep 28th</h3>
+<div class="caption racecaption">
+Start: Start 3, Finishes: Finish time, Time: 15.15.00
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="10">
+<col class="rank" />
+<col class="sailno" />
+<col class="boat" />
+<col class="helmname" />
+<col class="club" />
+<col class="rating" />
+<col class="finish" />
+<col class="elapsed" />
+<col class="corrected" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Sail</th>
+<th>Boat</th>
+<th>Owner Name(s)</th>
+<th>Club</th>
+<th>Rating</th>
+<th>Finish</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>18</td>
+<td>Erica</td>
+<td>Davie Nixon</td>
+<td>Howth YC</td>
+<td>1.000</td>
+<td>16.19.04</td>
+<td>1.04.04</td>
+<td>1.04.04</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>16</td>
+<td>Eileen</td>
+<td>Rima Macken</td>
+<td>Howth YC</td>
+<td>1.000</td>
+<td>16.22.45</td>
+<td>1.07.45</td>
+<td>1.07.45</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>21</td>
+<td>Orla</td>
+<td>Gallagher & Fitzgibbon</td>
+<td>Howth YC</td>
+<td>1.000</td>
+<td>16.23.37</td>
+<td>1.08.37</td>
+<td>1.08.37</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>19</td>
+<td>Isobel</td>
+<td>Brian & Conor Turvey</td>
+<td>Howth YC</td>
+<td>1.000</td>
+<td>16.24.01</td>
+<td>1.09.01</td>
+<td>1.09.01</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>1</td>
+<td>Rita</td>
+<td>Marcus Lynch & John Curley</td>
+<td>Howth YC</td>
+<td>1.000</td>
+<td>16.24.42</td>
+<td>1.09.42</td>
+<td>1.09.42</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>20</td>
+<td>Sheila</td>
+<td>Mulligan / Johnston</td>
+<td>Howth YC</td>
+<td>1.000</td>
+<td>16.24.55</td>
+<td>1.09.55</td>
+<td>1.09.55</td>
+<td>6.0</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>11</td>
+<td>Deilginis</td>
+<td>Massey, Toomey, Kenny</td>
+<td>Howth YC</td>
+<td>1.000</td>
+<td>16.25.05</td>
+<td>1.10.05</td>
+<td>1.10.05</td>
+<td>7.0</td>
+</tr>
+<tr class="even racerow">
+<td>8</td>
+<td>12</td>
+<td>Rosemary</td>
+<td>Curley,Jones & Potter</td>
+<td>Howth YC</td>
+<td>1.000</td>
+<td>16.25.35</td>
+<td>1.10.35</td>
+<td>1.10.35</td>
+<td>8.0</td>
+</tr>
+<tr class="odd racerow">
+<td>9</td>
+<td>7</td>
+<td>Aura</td>
+<td>Ian Malcolm</td>
+<td>Howth YC</td>
+<td>1.000</td>
+<td>16.26.10</td>
+<td>1.11.10</td>
+<td>1.11.10</td>
+<td>9.0</td>
+</tr>
+<tr class="even racerow">
+<td>10</td>
+<td>9</td>
+<td>Hera</td>
+<td>Jane & Michael Duffy</td>
+<td>Howth YC</td>
+<td>1.000</td>
+<td>16.26.58</td>
+<td>1.11.58</td>
+<td>1.11.58</td>
+<td>10.0</td>
+</tr>
+<tr class="odd racerow">
+<td>11</td>
+<td>8</td>
+<td>Echo</td>
+<td>Bryan and Harriette Lynch</td>
+<td>Howth YC</td>
+<td>1.000</td>
+<td>16.27.43</td>
+<td>1.12.43</td>
+<td>1.12.43</td>
+<td>11.0</td>
+</tr>
+<tr class="even racerow">
+<td>12</td>
+<td>17</td>
+<td>Oona</td>
+<td>Peter Courtney</td>
+<td>Howth YC</td>
+<td>1.000</td>
+<td>16.28.28</td>
+<td>1.13.28</td>
+<td>1.13.28</td>
+<td>12.0</td>
+</tr>
+<tr class="odd racerow">
+<td>13</td>
+<td>3</td>
+<td>Leila</td>
+<td>Roddy Cooper</td>
+<td>Howth YC</td>
+<td>1.000</td>
+<td>16.31.41</td>
+<td>1.16.41</td>
+<td>1.16.41</td>
+<td>13.0</td>
+</tr>
+<tr class="even racerow">
+<td>14</td>
+<td>4</td>
+<td>Zaida</td>
+<td>C & C Houlihan, A Carroll, K Hurley</td>
+<td>Howth YC</td>
+<td>1.000</td>
+<td>16.35.53</td>
+<td>1.20.53</td>
+<td>1.20.53</td>
+<td>14.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r4howth_17_scratch">R4 - Howth 17 Scratch Fleet&nbsp;-&nbsp;Oct 12th</h3>
+<div class="caption racecaption">
+Start: Start 3, Finishes: Finish time, Time: 13.15.00
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="10">
+<col class="rank" />
+<col class="sailno" />
+<col class="boat" />
+<col class="helmname" />
+<col class="club" />
+<col class="rating" />
+<col class="finish" />
+<col class="elapsed" />
+<col class="corrected" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Sail</th>
+<th>Boat</th>
+<th>Owner Name(s)</th>
+<th>Club</th>
+<th>Rating</th>
+<th>Finish</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>18</td>
+<td>Erica</td>
+<td>Davie Nixon</td>
+<td>Howth YC</td>
+<td>1.000</td>
+<td>14.03.59</td>
+<td>0.48.59</td>
+<td>0.48.59</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>11</td>
+<td>Deilginis</td>
+<td>Massey, Toomey, Kenny</td>
+<td>Howth YC</td>
+<td>1.000</td>
+<td>14.04.43</td>
+<td>0.49.43</td>
+<td>0.49.43</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>19</td>
+<td>Isobel</td>
+<td>Brian & Conor Turvey</td>
+<td>Howth YC</td>
+<td>1.000</td>
+<td>14.06.07</td>
+<td>0.51.07</td>
+<td>0.51.07</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>21</td>
+<td>Orla</td>
+<td>Gallagher & Fitzgibbon</td>
+<td>Howth YC</td>
+<td>1.000</td>
+<td>14.06.34</td>
+<td>0.51.34</td>
+<td>0.51.34</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>9</td>
+<td>Hera</td>
+<td>Jane & Michael Duffy</td>
+<td>Howth YC</td>
+<td>1.000</td>
+<td>14.08.13</td>
+<td>0.53.13</td>
+<td>0.53.13</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>17</td>
+<td>Oona</td>
+<td>Peter Courtney</td>
+<td>Howth YC</td>
+<td>1.000</td>
+<td>14.09.51</td>
+<td>0.54.51</td>
+<td>0.54.51</td>
+<td>6.0</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>3</td>
+<td>Leila</td>
+<td>Roddy Cooper</td>
+<td>Howth YC</td>
+<td>1.000</td>
+<td>14.10.59</td>
+<td>0.55.59</td>
+<td>0.55.59</td>
+<td>7.0</td>
+</tr>
+<tr class="even racerow">
+<td>8</td>
+<td>20</td>
+<td>Sheila</td>
+<td>Mulligan / Johnston</td>
+<td>Howth YC</td>
+<td>1.000</td>
+<td>14.11.48</td>
+<td>0.56.48</td>
+<td>0.56.48</td>
+<td>8.0</td>
+</tr>
+<tr class="odd racerow">
+<td>9</td>
+<td>16</td>
+<td>Eileen</td>
+<td>Rima Macken</td>
+<td>Howth YC</td>
+<td>1.000</td>
+<td>&nbsp;</td>
+<td>RET</td>
+<td>&nbsp;</td>
+<td>12.0</td>
+</tr>
+<tr class="even racerow">
+<td>9</td>
+<td>7</td>
+<td>Aura</td>
+<td>Ian Malcolm</td>
+<td>Howth YC</td>
+<td>1.000</td>
+<td>&nbsp;</td>
+<td>RET</td>
+<td>&nbsp;</td>
+<td>12.0</td>
+</tr>
+<tr class="odd racerow">
+<td>9</td>
+<td>8</td>
+<td>Echo</td>
+<td>Bryan and Harriette Lynch</td>
+<td>Howth YC</td>
+<td>1.000</td>
+<td>&nbsp;</td>
+<td>RET</td>
+<td>&nbsp;</td>
+<td>12.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r5howth_17_scratch">R5 - Howth 17 Scratch Fleet&nbsp;-&nbsp;19th Oct</h3>
+<div class="caption racecaption">
+Start: Start 3, Finishes: Finish time, Time: 132400
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="10">
+<col class="rank" />
+<col class="sailno" />
+<col class="boat" />
+<col class="helmname" />
+<col class="club" />
+<col class="rating" />
+<col class="finish" />
+<col class="elapsed" />
+<col class="corrected" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Sail</th>
+<th>Boat</th>
+<th>Owner Name(s)</th>
+<th>Club</th>
+<th>Rating</th>
+<th>Finish</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>20</td>
+<td>Sheila</td>
+<td>Mulligan / Johnston</td>
+<td>Howth YC</td>
+<td>1.000</td>
+<td>14:06:11</td>
+<td>0:42:11</td>
+<td>0:42:11</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>9</td>
+<td>Hera</td>
+<td>Jane & Michael Duffy</td>
+<td>Howth YC</td>
+<td>1.000</td>
+<td>14:06:17</td>
+<td>0:42:17</td>
+<td>0:42:17</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>19</td>
+<td>Isobel</td>
+<td>Brian & Conor Turvey</td>
+<td>Howth YC</td>
+<td>1.000</td>
+<td>14:06:30</td>
+<td>0:42:30</td>
+<td>0:42:30</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>12</td>
+<td>Rosemary</td>
+<td>Curley,Jones & Potter</td>
+<td>Howth YC</td>
+<td>1.000</td>
+<td>14:06:59</td>
+<td>0:42:59</td>
+<td>0:42:59</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>7</td>
+<td>Aura</td>
+<td>Ian Malcolm</td>
+<td>Howth YC</td>
+<td>1.000</td>
+<td>14:07:52</td>
+<td>0:43:52</td>
+<td>0:43:52</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>18</td>
+<td>Erica</td>
+<td>Davie Nixon</td>
+<td>Howth YC</td>
+<td>1.000</td>
+<td>14:08:12</td>
+<td>0:44:12</td>
+<td>0:44:12</td>
+<td>6.0</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>21</td>
+<td>Orla</td>
+<td>Gallagher & Fitzgibbon</td>
+<td>Howth YC</td>
+<td>1.000</td>
+<td>14:09:01</td>
+<td>0:45:01</td>
+<td>0:45:01</td>
+<td>7.0</td>
+</tr>
+<tr class="even racerow">
+<td>8</td>
+<td>11</td>
+<td>Deilginis</td>
+<td>Massey, Toomey, Kenny</td>
+<td>Howth YC</td>
+<td>1.000</td>
+<td>14:09:42</td>
+<td>0:45:42</td>
+<td>0:45:42</td>
+<td>8.0</td>
+</tr>
+<tr class="odd racerow">
+<td>9</td>
+<td>1</td>
+<td>Rita</td>
+<td>Marcus Lynch & John Curley</td>
+<td>Howth YC</td>
+<td>1.000</td>
+<td>14:10:17</td>
+<td>0:46:17</td>
+<td>0:46:17</td>
+<td>9.0</td>
+</tr>
+<tr class="even racerow">
+<td>10</td>
+<td>16</td>
+<td>Eileen</td>
+<td>Rima Macken</td>
+<td>Howth YC</td>
+<td>1.000</td>
+<td>14:10:19</td>
+<td>0:46:19</td>
+<td>0:46:19</td>
+<td>10.0</td>
+</tr>
+<tr class="odd racerow">
+<td>11</td>
+<td>3</td>
+<td>Leila</td>
+<td>Roddy Cooper</td>
+<td>Howth YC</td>
+<td>1.000</td>
+<td>14:10:50</td>
+<td>0:46:50</td>
+<td>0:46:50</td>
+<td>11.0</td>
+</tr>
+<tr class="even racerow">
+<td>12</td>
+<td>8</td>
+<td>Echo</td>
+<td>Bryan and Harriette Lynch</td>
+<td>Howth YC</td>
+<td>1.000</td>
+<td>14:11:53</td>
+<td>0:47:53</td>
+<td>0:47:53</td>
+<td>12.0</td>
+</tr>
+<tr class="odd racerow">
+<td>13</td>
+<td>4</td>
+<td>Zaida</td>
+<td>C & C Houlihan, A Carroll, K Hurley</td>
+<td>Howth YC</td>
+<td>1.000</td>
+<td>14:23:07</td>
+<td>0:59:07</td>
+<td>0:59:07</td>
+<td>13.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r6howth_17_scratch">R6 - Howth 17 Scratch Fleet&nbsp;-&nbsp;19th Oct</h3>
+<div class="caption racecaption">
+Start: Start 3, Finishes: Finish time, Time: 145500
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="10">
+<col class="rank" />
+<col class="sailno" />
+<col class="boat" />
+<col class="helmname" />
+<col class="club" />
+<col class="rating" />
+<col class="finish" />
+<col class="elapsed" />
+<col class="corrected" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Sail</th>
+<th>Boat</th>
+<th>Owner Name(s)</th>
+<th>Club</th>
+<th>Rating</th>
+<th>Finish</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>20</td>
+<td>Sheila</td>
+<td>Mulligan / Johnston</td>
+<td>Howth YC</td>
+<td>1.000</td>
+<td>15:38:16</td>
+<td>0:43:16</td>
+<td>0:43:16</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>19</td>
+<td>Isobel</td>
+<td>Brian & Conor Turvey</td>
+<td>Howth YC</td>
+<td>1.000</td>
+<td>15:38:46</td>
+<td>0:43:46</td>
+<td>0:43:46</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>11</td>
+<td>Deilginis</td>
+<td>Massey, Toomey, Kenny</td>
+<td>Howth YC</td>
+<td>1.000</td>
+<td>15:39:52</td>
+<td>0:44:52</td>
+<td>0:44:52</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>9</td>
+<td>Hera</td>
+<td>Jane & Michael Duffy</td>
+<td>Howth YC</td>
+<td>1.000</td>
+<td>15:41:30</td>
+<td>0:46:30</td>
+<td>0:46:30</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>16</td>
+<td>Eileen</td>
+<td>Rima Macken</td>
+<td>Howth YC</td>
+<td>1.000</td>
+<td>15:42:06</td>
+<td>0:47:06</td>
+<td>0:47:06</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>7</td>
+<td>Aura</td>
+<td>Ian Malcolm</td>
+<td>Howth YC</td>
+<td>1.000</td>
+<td>15:43:58</td>
+<td>0:48:58</td>
+<td>0:48:58</td>
+<td>6.0</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>12</td>
+<td>Rosemary</td>
+<td>Curley,Jones & Potter</td>
+<td>Howth YC</td>
+<td>1.000</td>
+<td>15:44:18</td>
+<td>0:49:18</td>
+<td>0:49:18</td>
+<td>7.0</td>
+</tr>
+<tr class="even racerow">
+<td>8</td>
+<td>18</td>
+<td>Erica</td>
+<td>Davie Nixon</td>
+<td>Howth YC</td>
+<td>1.000</td>
+<td>15:44:42</td>
+<td>0:49:42</td>
+<td>0:49:42</td>
+<td>8.0</td>
+</tr>
+<tr class="odd racerow">
+<td>9</td>
+<td>3</td>
+<td>Leila</td>
+<td>Roddy Cooper</td>
+<td>Howth YC</td>
+<td>1.000</td>
+<td>15:45:15</td>
+<td>0:50:15</td>
+<td>0:50:15</td>
+<td>9.0</td>
+</tr>
+<tr class="even racerow">
+<td>10</td>
+<td>21</td>
+<td>Orla</td>
+<td>Gallagher & Fitzgibbon</td>
+<td>Howth YC</td>
+<td>1.000</td>
+<td>15:45:21</td>
+<td>0:50:21</td>
+<td>0:50:21</td>
+<td>10.0</td>
+</tr>
+<tr class="odd racerow">
+<td>11</td>
+<td>17</td>
+<td>Oona</td>
+<td>Peter Courtney</td>
+<td>Howth YC</td>
+<td>1.000</td>
+<td>15:45:34</td>
+<td>0:50:34</td>
+<td>0:50:34</td>
+<td>11.0</td>
+</tr>
+<tr class="even racerow">
+<td>12</td>
+<td>8</td>
+<td>Echo</td>
+<td>Bryan and Harriette Lynch</td>
+<td>Howth YC</td>
+<td>1.000</td>
+<td>15:48:01</td>
+<td>0:53:01</td>
+<td>0:53:01</td>
+<td>12.0</td>
+</tr>
+<tr class="odd racerow">
+<td>13</td>
+<td>4</td>
+<td>Zaida</td>
+<td>C & C Houlihan, A Carroll, K Hurley</td>
+<td>Howth YC</td>
+<td>1.000</td>
+<td>15:54:30</td>
+<td>0:59:30</td>
+<td>0:59:30</td>
+<td>13.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r1howth_17_hph">R1 - Howth 17 HPH Fleet&nbsp;-&nbsp;Sep 14</h3>
+<div class="caption racecaption">
+Start: Start 3, Finishes: Finish time, Time: 15.15.00
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="10">
+<col class="rank" />
+<col class="sailno" />
+<col class="boat" />
+<col class="helmname" />
+<col class="club" />
+<col class="rating" />
+<col class="finish" />
+<col class="elapsed" />
+<col class="corrected" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Sail</th>
+<th>Boat</th>
+<th>Owner Name(s)</th>
+<th>Club</th>
+<th>Rating</th>
+<th>Finish</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>8</td>
+<td>Echo</td>
+<td>Bryan and Harriette Lynch</td>
+<td>Howth YC</td>
+<td>1.078</td>
+<td>17:01:30</td>
+<td>1.46.30</td>
+<td>1.54.48</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>21</td>
+<td>Orla</td>
+<td>Gallagher & Fitzgibbon</td>
+<td>Howth YC</td>
+<td>1.273</td>
+<td>16:48:35</td>
+<td>1.33.35</td>
+<td>1.59.08</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>16</td>
+<td>Eileen</td>
+<td>Rima Macken</td>
+<td>Howth YC</td>
+<td>1.224</td>
+<td>16:52:55</td>
+<td>1.37.55</td>
+<td>1.59.51</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>18</td>
+<td>Erica</td>
+<td>Davie Nixon</td>
+<td>Howth YC</td>
+<td>1.330</td>
+<td>16:46:07</td>
+<td>1.31.07</td>
+<td>2.01.11</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>12</td>
+<td>Rosemary</td>
+<td>Curley,Jones & Potter</td>
+<td>Howth YC</td>
+<td>1.229</td>
+<td>16:55:29</td>
+<td>1.40.29</td>
+<td>2.03.30</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>9</td>
+<td>Hera</td>
+<td>Jane & Michael Duffy</td>
+<td>Howth YC</td>
+<td>1.330</td>
+<td>16:49:05</td>
+<td>1.34.05</td>
+<td>2.05.08</td>
+<td>6.0</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>11</td>
+<td>Deilginis</td>
+<td>Massey, Toomey, Kenny</td>
+<td>Howth YC</td>
+<td>1.276</td>
+<td>16:53:26</td>
+<td>1.38.26</td>
+<td>2.05.36</td>
+<td>7.0</td>
+</tr>
+<tr class="even racerow">
+<td>8</td>
+<td>3</td>
+<td>Leila</td>
+<td>Roddy Cooper</td>
+<td>Howth YC</td>
+<td>1.236</td>
+<td>16:57:18</td>
+<td>1.42.18</td>
+<td>2.06.27</td>
+<td>8.0</td>
+</tr>
+<tr class="odd racerow">
+<td>9</td>
+<td>7</td>
+<td>Aura</td>
+<td>Ian Malcolm</td>
+<td>Howth YC</td>
+<td>1.269</td>
+<td>16:56:04</td>
+<td>1.41.04</td>
+<td>2.08.15</td>
+<td>9.0</td>
+</tr>
+<tr class="even racerow">
+<td>10</td>
+<td>4</td>
+<td>Zaida</td>
+<td>C & C Houlihan, A Carroll, K Hurley</td>
+<td>Howth YC</td>
+<td>1.149</td>
+<td>17:06:55</td>
+<td>1.51.55</td>
+<td>2.08.36</td>
+<td>10.0</td>
+</tr>
+<tr class="odd racerow">
+<td>11</td>
+<td>19</td>
+<td>Isobel</td>
+<td>Brian & Conor Turvey</td>
+<td>Howth YC</td>
+<td>1.276</td>
+<td>16:55:55</td>
+<td>1.40.55</td>
+<td>2.08.46</td>
+<td>11.0</td>
+</tr>
+<tr class="even racerow">
+<td>12</td>
+<td>20</td>
+<td>Sheila</td>
+<td>Mulligan / Johnston</td>
+<td>Howth YC</td>
+<td>1.295</td>
+<td>16:58:14</td>
+<td>1.43.14</td>
+<td>2.13.41</td>
+<td>12.0</td>
+</tr>
+<tr class="odd racerow">
+<td>13</td>
+<td>17</td>
+<td>Oona</td>
+<td>Peter Courtney</td>
+<td>Howth YC</td>
+<td>1.280</td>
+<td>&nbsp;</td>
+<td>DNF</td>
+<td>&nbsp;</td>
+<td>14.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r2howth_17_hph">R2 - Howth 17 HPH Fleet&nbsp;-&nbsp;Sep 21st</h3>
+<div class="caption racecaption">
+Start: Start 3, Finishes: Finish time, Time: 15.15.00
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="10">
+<col class="rank" />
+<col class="sailno" />
+<col class="boat" />
+<col class="helmname" />
+<col class="club" />
+<col class="rating" />
+<col class="finish" />
+<col class="elapsed" />
+<col class="corrected" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Sail</th>
+<th>Boat</th>
+<th>Owner Name(s)</th>
+<th>Club</th>
+<th>Rating</th>
+<th>Finish</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>11</td>
+<td>Deilginis</td>
+<td>Massey, Toomey, Kenny</td>
+<td>Howth YC</td>
+<td>1.272</td>
+<td>16.23.56</td>
+<td>1.08.56</td>
+<td>1.27.41</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>8</td>
+<td>Echo</td>
+<td>Bryan and Harriette Lynch</td>
+<td>Howth YC</td>
+<td>1.089</td>
+<td>16.35.46</td>
+<td>1.20.46</td>
+<td>1.27.57</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>12</td>
+<td>Rosemary</td>
+<td>Curley,Jones & Potter</td>
+<td>Howth YC</td>
+<td>1.230</td>
+<td>16.29.55</td>
+<td>1.14.55</td>
+<td>1.32.09</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>21</td>
+<td>Orla</td>
+<td>Gallagher & Fitzgibbon</td>
+<td>Howth YC</td>
+<td>1.288</td>
+<td>16.27.14</td>
+<td>1.12.14</td>
+<td>1.33.02</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>19</td>
+<td>Isobel</td>
+<td>Brian & Conor Turvey</td>
+<td>Howth YC</td>
+<td>1.267</td>
+<td>16.28.49</td>
+<td>1.13.49</td>
+<td>1.33.32</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>18</td>
+<td>Erica</td>
+<td>Davie Nixon</td>
+<td>Howth YC</td>
+<td>1.338</td>
+<td>16.25.08</td>
+<td>1.10.08</td>
+<td>1.33.50</td>
+<td>6.5</td>
+</tr>
+<tr class="odd racerow">
+<td>6</td>
+<td>7</td>
+<td>Aura</td>
+<td>Ian Malcolm</td>
+<td>Howth YC</td>
+<td>1.261</td>
+<td>16.29.25</td>
+<td>1.14.25</td>
+<td>1.33.50</td>
+<td>6.5</td>
+</tr>
+<tr class="even racerow">
+<td>8</td>
+<td>16</td>
+<td>Eileen</td>
+<td>Rima Macken</td>
+<td>Howth YC</td>
+<td>1.236</td>
+<td>16.32.30</td>
+<td>1.17.30</td>
+<td>1.35.47</td>
+<td>8.0</td>
+</tr>
+<tr class="odd racerow">
+<td>9</td>
+<td>3</td>
+<td>Leila</td>
+<td>Roddy Cooper</td>
+<td>Howth YC</td>
+<td>1.231</td>
+<td>16.32.57</td>
+<td>1.17.57</td>
+<td>1.35.57</td>
+<td>9.0</td>
+</tr>
+<tr class="even racerow">
+<td>10</td>
+<td>9</td>
+<td>Hera</td>
+<td>Jane & Michael Duffy</td>
+<td>Howth YC</td>
+<td>1.326</td>
+<td>16.28.37</td>
+<td>1.13.37</td>
+<td>1.37.37</td>
+<td>10.0</td>
+</tr>
+<tr class="odd racerow">
+<td>11</td>
+<td>17</td>
+<td>Oona</td>
+<td>Peter Courtney</td>
+<td>Howth YC</td>
+<td>1.280</td>
+<td>&nbsp;</td>
+<td>DNF</td>
+<td>&nbsp;</td>
+<td>12.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r3howth_17_hph">R3 - Howth 17 HPH Fleet&nbsp;-&nbsp;Sep 28th</h3>
+<div class="caption racecaption">
+Start: Start 3, Finishes: Finish time, Time: 15.15.00
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="10">
+<col class="rank" />
+<col class="sailno" />
+<col class="boat" />
+<col class="helmname" />
+<col class="club" />
+<col class="rating" />
+<col class="finish" />
+<col class="elapsed" />
+<col class="corrected" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Sail</th>
+<th>Boat</th>
+<th>Owner Name(s)</th>
+<th>Club</th>
+<th>Rating</th>
+<th>Finish</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>8</td>
+<td>Echo</td>
+<td>Bryan and Harriette Lynch</td>
+<td>Howth YC</td>
+<td>1.095</td>
+<td>16.27.43</td>
+<td>1.12.43</td>
+<td>1.19.37</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>16</td>
+<td>Eileen</td>
+<td>Rima Macken</td>
+<td>Howth YC</td>
+<td>1.228</td>
+<td>16.22.45</td>
+<td>1.07.45</td>
+<td>1.23.12</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>18</td>
+<td>Erica</td>
+<td>Davie Nixon</td>
+<td>Howth YC</td>
+<td>1.334</td>
+<td>16.19.04</td>
+<td>1.04.04</td>
+<td>1.25.28</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>12</td>
+<td>Rosemary</td>
+<td>Curley,Jones & Potter</td>
+<td>Howth YC</td>
+<td>1.233</td>
+<td>16.25.35</td>
+<td>1.10.35</td>
+<td>1.27.02</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>19</td>
+<td>Isobel</td>
+<td>Brian & Conor Turvey</td>
+<td>Howth YC</td>
+<td>1.265</td>
+<td>16.24.01</td>
+<td>1.09.01</td>
+<td>1.27.18</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>21</td>
+<td>Orla</td>
+<td>Gallagher & Fitzgibbon</td>
+<td>Howth YC</td>
+<td>1.288</td>
+<td>16.23.37</td>
+<td>1.08.37</td>
+<td>1.28.23</td>
+<td>6.0</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>7</td>
+<td>Aura</td>
+<td>Ian Malcolm</td>
+<td>Howth YC</td>
+<td>1.257</td>
+<td>16.26.10</td>
+<td>1.11.10</td>
+<td>1.29.27</td>
+<td>7.0</td>
+</tr>
+<tr class="even racerow">
+<td>8</td>
+<td>11</td>
+<td>Deilginis</td>
+<td>Massey, Toomey, Kenny</td>
+<td>Howth YC</td>
+<td>1.280</td>
+<td>16.25.05</td>
+<td>1.10.05</td>
+<td>1.29.42</td>
+<td>8.0</td>
+</tr>
+<tr class="odd racerow">
+<td>9</td>
+<td>20</td>
+<td>Sheila</td>
+<td>Mulligan / Johnston</td>
+<td>Howth YC</td>
+<td>1.286</td>
+<td>16.24.55</td>
+<td>1.09.55</td>
+<td>1.29.55</td>
+<td>9.0</td>
+</tr>
+<tr class="even racerow">
+<td>10</td>
+<td>1</td>
+<td>Rita</td>
+<td>Marcus Lynch & John Curley</td>
+<td>Howth YC</td>
+<td>1.300</td>
+<td>16.24.42</td>
+<td>1.09.42</td>
+<td>1.30.37</td>
+<td>10.0</td>
+</tr>
+<tr class="odd racerow">
+<td>11</td>
+<td>4</td>
+<td>Zaida</td>
+<td>C & C Houlihan, A Carroll, K Hurley</td>
+<td>Howth YC</td>
+<td>1.141</td>
+<td>16.35.53</td>
+<td>1.20.53</td>
+<td>1.32.17</td>
+<td>11.0</td>
+</tr>
+<tr class="even racerow">
+<td>12</td>
+<td>3</td>
+<td>Leila</td>
+<td>Roddy Cooper</td>
+<td>Howth YC</td>
+<td>1.223</td>
+<td>16.31.41</td>
+<td>1.16.41</td>
+<td>1.33.47</td>
+<td>12.0</td>
+</tr>
+<tr class="odd racerow">
+<td>13</td>
+<td>17</td>
+<td>Oona</td>
+<td>Peter Courtney</td>
+<td>Howth YC</td>
+<td>1.280</td>
+<td>16.28.28</td>
+<td>1.13.28</td>
+<td>1.34.02</td>
+<td>13.0</td>
+</tr>
+<tr class="even racerow">
+<td>14</td>
+<td>9</td>
+<td>Hera</td>
+<td>Jane & Michael Duffy</td>
+<td>Howth YC</td>
+<td>1.317</td>
+<td>16.26.58</td>
+<td>1.11.58</td>
+<td>1.34.47</td>
+<td>14.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r4howth_17_hph">R4 - Howth 17 HPH Fleet&nbsp;-&nbsp;Oct 12th</h3>
+<div class="caption racecaption">
+Start: Start 3, Finishes: Finish time, Time: 13.15.00
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="10">
+<col class="rank" />
+<col class="sailno" />
+<col class="boat" />
+<col class="helmname" />
+<col class="club" />
+<col class="rating" />
+<col class="finish" />
+<col class="elapsed" />
+<col class="corrected" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Sail</th>
+<th>Boat</th>
+<th>Owner Name(s)</th>
+<th>Club</th>
+<th>Rating</th>
+<th>Finish</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>11</td>
+<td>Deilginis</td>
+<td>Massey, Toomey, Kenny</td>
+<td>Howth YC</td>
+<td>1.276</td>
+<td>14.04.43</td>
+<td>0.49.43</td>
+<td>1.03.26</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>19</td>
+<td>Isobel</td>
+<td>Brian & Conor Turvey</td>
+<td>Howth YC</td>
+<td>1.269</td>
+<td>14.06.07</td>
+<td>0.51.07</td>
+<td>1.04.52</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>18</td>
+<td>Erica</td>
+<td>Davie Nixon</td>
+<td>Howth YC</td>
+<td>1.346</td>
+<td>14.03.59</td>
+<td>0.48.59</td>
+<td>1.05.56</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>21</td>
+<td>Orla</td>
+<td>Gallagher & Fitzgibbon</td>
+<td>Howth YC</td>
+<td>1.287</td>
+<td>14.06.34</td>
+<td>0.51.34</td>
+<td>1.06.22</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>3</td>
+<td>Leila</td>
+<td>Roddy Cooper</td>
+<td>Howth YC</td>
+<td>1.218</td>
+<td>14.10.59</td>
+<td>0.55.59</td>
+<td>1.08.11</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>9</td>
+<td>Hera</td>
+<td>Jane & Michael Duffy</td>
+<td>Howth YC</td>
+<td>1.310</td>
+<td>14.08.13</td>
+<td>0.53.13</td>
+<td>1.09.43</td>
+<td>6.0</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>17</td>
+<td>Oona</td>
+<td>Peter Courtney</td>
+<td>Howth YC</td>
+<td>1.274</td>
+<td>14.09.51</td>
+<td>0.54.51</td>
+<td>1.09.53</td>
+<td>7.0</td>
+</tr>
+<tr class="even racerow">
+<td>8</td>
+<td>20</td>
+<td>Sheila</td>
+<td>Mulligan / Johnston</td>
+<td>Howth YC</td>
+<td>1.282</td>
+<td>14.11.48</td>
+<td>0.56.48</td>
+<td>1.12.49</td>
+<td>8.0</td>
+</tr>
+<tr class="odd racerow">
+<td>9</td>
+<td>8</td>
+<td>Echo</td>
+<td>Bryan and Harriette Lynch</td>
+<td>Howth YC</td>
+<td>1.114</td>
+<td>&nbsp;</td>
+<td>RET</td>
+<td>&nbsp;</td>
+<td>12.0</td>
+</tr>
+<tr class="even racerow">
+<td>9</td>
+<td>16</td>
+<td>Eileen</td>
+<td>Rima Macken</td>
+<td>Howth YC</td>
+<td>1.250</td>
+<td>&nbsp;</td>
+<td>RET</td>
+<td>&nbsp;</td>
+<td>12.0</td>
+</tr>
+<tr class="odd racerow">
+<td>9</td>
+<td>7</td>
+<td>Aura</td>
+<td>Ian Malcolm</td>
+<td>Howth YC</td>
+<td>1.254</td>
+<td>&nbsp;</td>
+<td>RET</td>
+<td>&nbsp;</td>
+<td>12.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r5howth_17_hph">R5 - Howth 17 HPH Fleet&nbsp;-&nbsp;19th Oct</h3>
+<div class="caption racecaption">
+Start: Start 3, Finishes: Finish time, Time: 132400
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="10">
+<col class="rank" />
+<col class="sailno" />
+<col class="boat" />
+<col class="helmname" />
+<col class="club" />
+<col class="rating" />
+<col class="finish" />
+<col class="elapsed" />
+<col class="corrected" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Sail</th>
+<th>Boat</th>
+<th>Owner Name(s)</th>
+<th>Club</th>
+<th>Rating</th>
+<th>Finish</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>12</td>
+<td>Rosemary</td>
+<td>Curley,Jones & Potter</td>
+<td>Howth YC</td>
+<td>1.238</td>
+<td>14:06:59</td>
+<td>0:42:59</td>
+<td>0:53:13</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>8</td>
+<td>Echo</td>
+<td>Bryan and Harriette Lynch</td>
+<td>Howth YC</td>
+<td>1.114</td>
+<td>14:11:53</td>
+<td>0:47:53</td>
+<td>0:53:21</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>20</td>
+<td>Sheila</td>
+<td>Mulligan / Johnston</td>
+<td>Howth YC</td>
+<td>1.277</td>
+<td>14:06:11</td>
+<td>0:42:11</td>
+<td>0:53:52</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>19</td>
+<td>Isobel</td>
+<td>Brian & Conor Turvey</td>
+<td>Howth YC</td>
+<td>1.286</td>
+<td>14:06:30</td>
+<td>0:42:30</td>
+<td>0:54:39</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>7</td>
+<td>Aura</td>
+<td>Ian Malcolm</td>
+<td>Howth YC</td>
+<td>1.254</td>
+<td>14:07:52</td>
+<td>0:43:52</td>
+<td>0:55:01</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>9</td>
+<td>Hera</td>
+<td>Jane & Michael Duffy</td>
+<td>Howth YC</td>
+<td>1.305</td>
+<td>14:06:17</td>
+<td>0:42:17</td>
+<td>0:55:11</td>
+<td>6.0</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>3</td>
+<td>Leila</td>
+<td>Roddy Cooper</td>
+<td>Howth YC</td>
+<td>1.218</td>
+<td>14:10:50</td>
+<td>0:46:50</td>
+<td>0:57:03</td>
+<td>7.0</td>
+</tr>
+<tr class="even racerow">
+<td>8</td>
+<td>16</td>
+<td>Eileen</td>
+<td>Rima Macken</td>
+<td>Howth YC</td>
+<td>1.250</td>
+<td>14:10:19</td>
+<td>0:46:19</td>
+<td>0:57:54</td>
+<td>8.0</td>
+</tr>
+<tr class="odd racerow">
+<td>9</td>
+<td>21</td>
+<td>Orla</td>
+<td>Gallagher & Fitzgibbon</td>
+<td>Howth YC</td>
+<td>1.295</td>
+<td>14:09:01</td>
+<td>0:45:01</td>
+<td>0:58:18</td>
+<td>9.0</td>
+</tr>
+<tr class="even racerow">
+<td>10</td>
+<td>11</td>
+<td>Deilginis</td>
+<td>Massey, Toomey, Kenny</td>
+<td>Howth YC</td>
+<td>1.290</td>
+<td>14:09:42</td>
+<td>0:45:42</td>
+<td>0:58:57</td>
+<td>10.0</td>
+</tr>
+<tr class="odd racerow">
+<td>11</td>
+<td>1</td>
+<td>Rita</td>
+<td>Marcus Lynch & John Curley</td>
+<td>Howth YC</td>
+<td>1.294</td>
+<td>14:10:17</td>
+<td>0:46:17</td>
+<td>0:59:53</td>
+<td>11.0</td>
+</tr>
+<tr class="even racerow">
+<td>12</td>
+<td>18</td>
+<td>Erica</td>
+<td>Davie Nixon</td>
+<td>Howth YC</td>
+<td>1.357</td>
+<td>14:08:12</td>
+<td>0:44:12</td>
+<td>0:59:59</td>
+<td>12.0</td>
+</tr>
+<tr class="odd racerow">
+<td>13</td>
+<td>4</td>
+<td>Zaida</td>
+<td>C & C Houlihan, A Carroll, K Hurley</td>
+<td>Howth YC</td>
+<td>1.133</td>
+<td>14:23:07</td>
+<td>0:59:07</td>
+<td>1:06:59</td>
+<td>13.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r6howth_17_hph">R6 - Howth 17 HPH Fleet&nbsp;-&nbsp;19th Oct</h3>
+<div class="caption racecaption">
+Start: Start 3, Finishes: Finish time, Time: 145500
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="10">
+<col class="rank" />
+<col class="sailno" />
+<col class="boat" />
+<col class="helmname" />
+<col class="club" />
+<col class="rating" />
+<col class="finish" />
+<col class="elapsed" />
+<col class="corrected" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Sail</th>
+<th>Boat</th>
+<th>Owner Name(s)</th>
+<th>Club</th>
+<th>Rating</th>
+<th>Finish</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>20</td>
+<td>Sheila</td>
+<td>Mulligan / Johnston</td>
+<td>Howth YC</td>
+<td>1.289</td>
+<td>15:38:16</td>
+<td>0:43:16</td>
+<td>0:55:46</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>19</td>
+<td>Isobel</td>
+<td>Brian & Conor Turvey</td>
+<td>Howth YC</td>
+<td>1.292</td>
+<td>15:38:46</td>
+<td>0:43:46</td>
+<td>0:56:33</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>11</td>
+<td>Deilginis</td>
+<td>Massey, Toomey, Kenny</td>
+<td>Howth YC</td>
+<td>1.275</td>
+<td>15:39:52</td>
+<td>0:44:52</td>
+<td>0:57:12</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>16</td>
+<td>Eileen</td>
+<td>Rima Macken</td>
+<td>Howth YC</td>
+<td>1.239</td>
+<td>15:42:06</td>
+<td>0:47:06</td>
+<td>0:58:21</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>8</td>
+<td>Echo</td>
+<td>Bryan and Harriette Lynch</td>
+<td>Howth YC</td>
+<td>1.128</td>
+<td>15:48:01</td>
+<td>0:53:01</td>
+<td>0:59:48</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>9</td>
+<td>Hera</td>
+<td>Jane & Michael Duffy</td>
+<td>Howth YC</td>
+<td>1.307</td>
+<td>15:41:30</td>
+<td>0:46:30</td>
+<td>1:00:47</td>
+<td>6.0</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>3</td>
+<td>Leila</td>
+<td>Roddy Cooper</td>
+<td>Howth YC</td>
+<td>1.210</td>
+<td>15:45:15</td>
+<td>0:50:15</td>
+<td>1:00:48</td>
+<td>7.0</td>
+</tr>
+<tr class="even racerow">
+<td>8</td>
+<td>7</td>
+<td>Aura</td>
+<td>Ian Malcolm</td>
+<td>Howth YC</td>
+<td>1.257</td>
+<td>15:43:58</td>
+<td>0:48:58</td>
+<td>1:01:33</td>
+<td>8.0</td>
+</tr>
+<tr class="odd racerow">
+<td>9</td>
+<td>12</td>
+<td>Rosemary</td>
+<td>Curley,Jones & Potter</td>
+<td>Howth YC</td>
+<td>1.254</td>
+<td>15:44:18</td>
+<td>0:49:18</td>
+<td>1:01:49</td>
+<td>9.0</td>
+</tr>
+<tr class="even racerow">
+<td>10</td>
+<td>17</td>
+<td>Oona</td>
+<td>Peter Courtney</td>
+<td>Howth YC</td>
+<td>1.269</td>
+<td>15:45:34</td>
+<td>0:50:34</td>
+<td>1:04:10</td>
+<td>10.0</td>
+</tr>
+<tr class="odd racerow">
+<td>11</td>
+<td>21</td>
+<td>Orla</td>
+<td>Gallagher & Fitzgibbon</td>
+<td>Howth YC</td>
+<td>1.283</td>
+<td>15:45:21</td>
+<td>0:50:21</td>
+<td>1:04:36</td>
+<td>11.0</td>
+</tr>
+<tr class="even racerow">
+<td>12</td>
+<td>4</td>
+<td>Zaida</td>
+<td>C & C Houlihan, A Carroll, K Hurley</td>
+<td>Howth YC</td>
+<td>1.115</td>
+<td>15:54:30</td>
+<td>0:59:30</td>
+<td>1:06:21</td>
+<td>12.0</td>
+</tr>
+<tr class="odd racerow">
+<td>13</td>
+<td>18</td>
+<td>Erica</td>
+<td>Davie Nixon</td>
+<td>Howth YC</td>
+<td>1.338</td>
+<td>15:44:42</td>
+<td>0:49:42</td>
+<td>1:06:30</td>
+<td>13.0</td>
+</tr>
+</tbody>
+</table>
+
+<p class="hardleft"><a href="https://"></a><br /><a href="mailto:"></a></p>
+<p class="hardright"><a href="https://"></a><br /><a href="mailto:"></a></p>
+<p>Sailwave Scoring Software 2.34.00<br /><a href="https://www.sailwave.com">www.sailwave.com</a></p>
+
+</div>
+
+<footer>
+</footer>
+
+<div id="scrollbottom"></div>
+
+</body>
+</html>
+
+

@@ -1,0 +1,2372 @@
+
+
+
+<!doctype html>
+<html lang="en-US">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html;charset=ISO-8859-1"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="description" content="sailwave results">
+<meta name="viewport" content="width=device-width">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+
+<title>Sailwave results for 2026 Irish Fireball National Championship at Howth Yacht Club 2026</title>
+
+<style type="text/css">
+body {font: 80% arial, helvetica, sans-serif; text-align: center;}
+.hardleft  {text-align: left; float: left;  margin: 15px 0  15px 25px;}
+.hardright {text-align: right; float: right; margin: 15px 25px 15px 0;}
+table {text-align: left; margin: 0px auto 30px auto; font-size: 1em; border-collapse: collapse; border: 1px #999 solid;}
+td, th {padding: 4px; border: 1px #999 solid; vertical-align: top;}
+.caption {padding: 5px; text-align: center; border: 0; font-weight: bold;}
+p {text-align: center;}
+.contents {text-align: left; margin-left: 20%;}
+.race {background-color: #eee;}
+.odd {background-color: #eef;}
+.natflag {border: 1px #999 solid;}
+.nattext {font-size: 0.8em;}
+.place1 {font-weight: bold; background-color: #ffffaa;}
+.place2 {font-weight: bold; background-color: #aaaaff;}
+.place3 {font-weight: bold; background-color: #ffaaaa;}
+.placen {}
+table.headertable {border: 0px;}
+table.headertable td{border: 0px;}
+</style>
+
+<script type="text/javascript">
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script>
+
+function swGetURLArgs() {
+
+  var url = location.href;
+  var qs  = url.substring(url.indexOf('?') + 1).split('&');
+
+  for(var i = 0, result = {}; i < qs.length; i++) {
+    qs[i]            = qs[i].split('=');
+    result[qs[i][0]] = decodeURIComponent(qs[i][1]);
+  }
+
+  return result;
+}
+
+//
+//  name=HighlightWins3v3
+//  dependencies=jQuery
+//  description=Highlight winning scores in summary tables.
+//  author=Jon Eskdale based on an idea by Colin Jenkins
+//  date=2016-07-04
+//  version=3.0  For use with Sailwave from V2.22.x
+//  Requires the following lines in the Results.htm file (Results.htm is in the Templates directory)
+//  string.set("summary.col.race.rank1.td",   "rank1")
+//  string.set("summary.col.race.rank2.td",   "rank2")
+//  string.set("summary.col.race.rank3.td",   "rank3")
+
+//  url=http://sailwave.com
+//  email=jon@sailwave.com
+//  twitter=eskdale
+//  comments=Edit colours to colours of your choice
+//
+
+$(document).ready(function() {
+var selectorRank1 = '.rank1';
+var selectorRank2 = '.rank2';
+var selectorRank3 = '.rank3';
+
+// Results with these codes will not get highlighted add or remove codes to your choice
+var ignoreText   = /^(?!.*\b(DNC|DNF|DNS|OCS|BFD|UFD|RET|DSQ|DGM|DNE)\b).*/i
+
+// Edit these colours to change the highlight colours for 1st, 2nd and 3rd
+var winsColour   = '#ffd700';
+var twoColour    = '#6a91c5';
+var threeColour  = '#da6841';
+
+
+// Change the background color for cells with class of rank1-3 and don't have a code specified
+$(function () {
+
+  $(selectorRank1).filter(function() {
+    return ignoreText.test($(this).text());
+  }).css("background", winsColour);
+  $(selectorRank2).filter(function() {
+        return ignoreText.test($(this).text());
+  }).css("background", twoColour);
+  $(selectorRank3).filter(function() {
+        return ignoreText.test($(this).text());
+  }).css("background", threeColour);
+
+});
+});
+</script>
+<link rel="shortcut icon" type="image/ico" href="https://www.sailwave.com/favicon.ico"/>
+</head>
+
+<body>
+
+<header>
+</header>
+<table class="headertable" cellspacing="0" width="100%" cellpadding="0" border="0">
+<tbody>
+<div id="wrap">
+
+<tr>
+<td width="30%">
+<img id="venueburgee" style="display:block; height:100px;"  src="https://www.hyc.ie/system/sponsor_logos/620/normal/Howth_Yacht_Club_-_Logo_RGB.jpg" alt="venue burgee" />
+</td>
+
+<td width="40%" align="center">
+<h1>2026 Irish Fireball National Championship</h1>
+<h2>Howth Yacht Club</h2>
+</td>
+
+<td width="30%">
+<img id="eventburgee" style="display:block; height:100px;" src="https://hyc.ie/system/sponsor_logos/597/thumb/FB_Ireland_Good.jpg" alt="event burgee" align="right" />
+</td>
+</tr>
+</tbody>
+</table>
+
+<div style="clear:both;"></div>
+
+<style>
+div.applicant-break {page-break-after:always;}
+</style>
+<h3 class="seriestitle">Results are final as of 12:47 on June 22, 2026</h3>
+<h3 class="summarytitle">Overall</h3>
+<div class="caption summarycaption">Sailed: 9, Discards: 2, To count: 7, Entries: 18, Scoring system: Appendix A</div>
+<table class="summarytable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="17">
+<col class="rank" />
+<col class="sailno" />
+<col class="division" />
+<col class="helmname" />
+<col class="crewname" />
+<col class="club" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="total" />
+<col class="nett" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Sail Nr</th>
+<th>Division</th>
+<th>Helm Name</th>
+<th>Crew Name</th>
+<th>Club</th>
+<th><a class="racelink" href="#r1">R1</a></th>
+<th><a class="racelink" href="#r2">R2</a></th>
+<th><a class="racelink" href="#r3">R3</a></th>
+<th><a class="racelink" href="#r4">R4</a></th>
+<th><a class="racelink" href="#r5">R5</a></th>
+<th><a class="racelink" href="#r6">R6</a></th>
+<th><a class="racelink" href="#r7">R7</a></th>
+<th><a class="racelink" href="#r8">R8</a></th>
+<th><a class="racelink" href="#r9">R9</a></th>
+<th>Total</th>
+<th>Nett</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd summaryrow">
+<td>1st</td>
+<td>15183</td>
+<td>Gold</td>
+<td>Ewen Barry</td>
+<td>Thea Barry</td>
+<td>Monkstown Bay SC</td>
+<td  class="rank3">3.0</td>
+<td  class="rank2">2.0</td>
+<td>(4.0)</td>
+<td  class="rank1">1.0</td>
+<td  class="rank1">1.0</td>
+<td  class="rank1">1.0</td>
+<td>(6.0)</td>
+<td  class="rank1">1.0</td>
+<td  class="rank1">1.0</td>
+<td>20.0</td>
+<td>10.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>2nd</td>
+<td>14855</td>
+<td>Gold</td>
+<td>Conor Twohig</td>
+<td>Matthew Cotter</td>
+<td>Howth YC</td>
+<td>(13.0)</td>
+<td>4.0</td>
+<td  class="rank1">1.0</td>
+<td>(6.0)</td>
+<td  class="rank3">3.0</td>
+<td  class="rank2">2.0</td>
+<td  class="rank1">1.0</td>
+<td  class="rank3">3.0</td>
+<td  class="rank3">3.0</td>
+<td>36.0</td>
+<td>17.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>3rd</td>
+<td>15061</td>
+<td>Gold</td>
+<td>Noel Butler</td>
+<td>Stephen Oram</td>
+<td>National YC</td>
+<td  class="rank1">1.0</td>
+<td>(5.0)</td>
+<td  class="rank3">3.0</td>
+<td  class="rank2">2.0</td>
+<td>(4.0)</td>
+<td  class="rank3">3.0</td>
+<td>4.0</td>
+<td  class="rank2">2.0</td>
+<td>4.0</td>
+<td>28.0</td>
+<td>19.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>4th</td>
+<td>FRA 15189</td>
+<td>Gold</td>
+<td>Yoann Fouassier</td>
+<td>Jean Robillard</td>
+<td>Cercle de la Voile du Centre</td>
+<td  class="rank2">2.0</td>
+<td  class="rank1">1.0</td>
+<td>7.0</td>
+<td>(19.0 UFD)</td>
+<td>7.0</td>
+<td>5.0</td>
+<td>(19.0 UFD)</td>
+<td>5.0</td>
+<td  class="rank2">2.0</td>
+<td>67.0</td>
+<td>29.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>5th</td>
+<td>15017</td>
+<td>Gold</td>
+<td>Adrian Lee</td>
+<td>Edmund Hynes</td>
+<td>Monkstown Bay SC</td>
+<td>4.0</td>
+<td>8.0</td>
+<td>(9.0)</td>
+<td>4.0</td>
+<td>8.0</td>
+<td>(12.0)</td>
+<td  class="rank2">2.0</td>
+<td>4.0</td>
+<td>5.0</td>
+<td>56.0</td>
+<td>35.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>6th</td>
+<td>15060</td>
+<td>Silver</td>
+<td>Rachel Deasy</td>
+<td>Harry Thompson</td>
+<td>Monkstown Bay SC / Tralee Bay SC</td>
+<td>5.0</td>
+<td>(19.0 DNC)</td>
+<td>5.0</td>
+<td>(9.0)</td>
+<td  class="rank2">2.0</td>
+<td>4.0</td>
+<td>8.0</td>
+<td>8.0</td>
+<td>7.0</td>
+<td>67.0</td>
+<td>39.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>7th</td>
+<td>14938</td>
+<td>Gold</td>
+<td>Niall McGrotty</td>
+<td>Neil Cramer</td>
+<td>Skerries SC</td>
+<td>8.0</td>
+<td>(10.0)</td>
+<td>8.0</td>
+<td  class="rank3">3.0</td>
+<td>(15.0)</td>
+<td>8.0</td>
+<td  class="rank3">3.0</td>
+<td>6.0</td>
+<td>9.0</td>
+<td>70.0</td>
+<td>45.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>8th</td>
+<td>14915</td>
+<td>Gold</td>
+<td>Frank Miller</td>
+<td>Ed Butler</td>
+<td>Dun Laoghaire MYC</td>
+<td>9.0</td>
+<td>6.0</td>
+<td>6.0</td>
+<td>5.0</td>
+<td>5.0</td>
+<td>7.0</td>
+<td>12.0</td>
+<td>(13.0)</td>
+<td>(16.0)</td>
+<td>79.0</td>
+<td>50.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>9th</td>
+<td>15156</td>
+<td>Gold</td>
+<td>Jack McNaughton</td>
+<td>Kilian Mathieu</td>
+<td>Dun Laoghaire MYC / Galway Bay SC</td>
+<td>7.0</td>
+<td>12.0</td>
+<td  class="rank2">2.0</td>
+<td>(15.0)</td>
+<td>6.0</td>
+<td>6.0</td>
+<td>7.0</td>
+<td>(15.0)</td>
+<td>11.0</td>
+<td>81.0</td>
+<td>51.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>10th</td>
+<td>15016</td>
+<td>Gold</td>
+<td>Louise McKenna</td>
+<td>Hermine O'Keeffe</td>
+<td>Royal St. George YC</td>
+<td>(15.0)</td>
+<td>7.0</td>
+<td>10.0</td>
+<td>7.0</td>
+<td>(12.0)</td>
+<td>11.0</td>
+<td>5.0</td>
+<td>7.0</td>
+<td>6.0</td>
+<td>80.0</td>
+<td>53.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>11th</td>
+<td>14770</td>
+<td>Silver</td>
+<td>Brian Jones</td>
+<td>TJ O'Brien</td>
+<td>Monkstown Bay SC</td>
+<td>11.0</td>
+<td>9.0</td>
+<td>(16.0)</td>
+<td>12.0</td>
+<td>9.0</td>
+<td>9.0</td>
+<td>11.0</td>
+<td>(16.0)</td>
+<td>8.0</td>
+<td>101.0</td>
+<td>69.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>12th</td>
+<td>14740</td>
+<td>Gold</td>
+<td>Jack McDowell</td>
+<td>Hugo Micka</td>
+<td>Malahide YC</td>
+<td>12.0</td>
+<td  class="rank3">3.0</td>
+<td>11.0</td>
+<td>(13.0)</td>
+<td>11.0</td>
+<td>(13.0)</td>
+<td>13.0</td>
+<td>11.0</td>
+<td>13.0</td>
+<td>100.0</td>
+<td>74.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>13th</td>
+<td>14567</td>
+<td>Gold</td>
+<td>Jon Evans</td>
+<td>Aidan Caulfield</td>
+<td>Sligo YC</td>
+<td>6.0</td>
+<td>(14.0)</td>
+<td>12.0</td>
+<td>14.0</td>
+<td>10.0</td>
+<td>10.0</td>
+<td>(15.0)</td>
+<td>10.0</td>
+<td>14.0</td>
+<td>105.0</td>
+<td>76.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>14th</td>
+<td>14790</td>
+<td>Silver</td>
+<td>Pat McGoldrick</td>
+<td>Paul ter Horst</td>
+<td>Dun Laoghaire MYC</td>
+<td>14.0</td>
+<td>13.0</td>
+<td>15.0</td>
+<td>8.0</td>
+<td>(17.0)</td>
+<td>(19.0 DNC)</td>
+<td>10.0</td>
+<td>9.0</td>
+<td>10.0</td>
+<td>115.0</td>
+<td>79.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>15th</td>
+<td>14854</td>
+<td>Silver</td>
+<td>Cariosa Power</td>
+<td>Marie Barry</td>
+<td>National YC</td>
+<td>(17.0)</td>
+<td>11.0</td>
+<td>14.0</td>
+<td>11.0</td>
+<td>(16.0)</td>
+<td>14.0</td>
+<td>9.0</td>
+<td>12.0</td>
+<td>12.0</td>
+<td>116.0</td>
+<td>83.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>16th</td>
+<td>4676</td>
+<td>Gold</td>
+<td>Bryan Maguire</td>
+<td>Michael Keegan</td>
+<td>Royal St. George YC</td>
+<td>16.0</td>
+<td>15.0</td>
+<td>13.0</td>
+<td>10.0</td>
+<td>13.0</td>
+<td>15.0</td>
+<td>16.0</td>
+<td>(19.0 DNS)</td>
+<td>(19.0 DNC)</td>
+<td>136.0</td>
+<td>98.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>17th</td>
+<td>14683</td>
+<td>Silver</td>
+<td>Colm Breen</td>
+<td>Cormac Power Breen</td>
+<td>Dun Laoghaire MYC</td>
+<td>10.0</td>
+<td>(16.0)</td>
+<td>(17.0)</td>
+<td>16.0</td>
+<td>14.0</td>
+<td>16.0</td>
+<td>14.0</td>
+<td>14.0</td>
+<td>15.0</td>
+<td>132.0</td>
+<td>99.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>18th</td>
+<td>14663</td>
+<td>Silver</td>
+<td>Brenda Nash</td>
+<td>Glen Fisher</td>
+<td>Dun Laoghaire MYC</td>
+<td>(19.0 DNC)</td>
+<td>(19.0 DNC)</td>
+<td>19.0 DNC</td>
+<td>17.0</td>
+<td>18.0</td>
+<td>17.0</td>
+<td>17.0</td>
+<td>17.0</td>
+<td>19.0 UFD</td>
+<td>162.0</td>
+<td>124.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r1">R1&nbsp;-&nbsp;Jun 19</h3>
+<div class="caption racecaption">
+Start: Start 1, Finishes: Place, Time: 15.29.00
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="8">
+<col class="rank" />
+<col class="sailno" />
+<col class="division" />
+<col class="helmname" />
+<col class="crewname" />
+<col class="club" />
+<col class="place" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Sail Nr</th>
+<th>Division</th>
+<th>Helm Name</th>
+<th>Crew Name</th>
+<th>Club</th>
+<th>Place</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>15061</td>
+<td>Gold</td>
+<td>Noel Butler</td>
+<td>Stephen Oram</td>
+<td>National YC</td>
+<td>1</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>FRA 15189</td>
+<td>Gold</td>
+<td>Yoann Fouassier</td>
+<td>Jean Robillard</td>
+<td>Cercle de la Voile du Centre</td>
+<td>2</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>15183</td>
+<td>Gold</td>
+<td>Ewen Barry</td>
+<td>Thea Barry</td>
+<td>Monkstown Bay SC</td>
+<td>3</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>15017</td>
+<td>Gold</td>
+<td>Adrian Lee</td>
+<td>Edmund Hynes</td>
+<td>Monkstown Bay SC</td>
+<td>4</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>15060</td>
+<td>Silver</td>
+<td>Rachel Deasy</td>
+<td>Harry Thompson</td>
+<td>Monkstown Bay SC / Tralee Bay SC</td>
+<td>5</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>14567</td>
+<td>Gold</td>
+<td>Jon Evans</td>
+<td>Aidan Caulfield</td>
+<td>Sligo YC</td>
+<td>6</td>
+<td>6.0</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>15156</td>
+<td>Gold</td>
+<td>Jack McNaughton</td>
+<td>Kilian Mathieu</td>
+<td>Dun Laoghaire MYC / Galway Bay SC</td>
+<td>7</td>
+<td>7.0</td>
+</tr>
+<tr class="even racerow">
+<td>8</td>
+<td>14938</td>
+<td>Gold</td>
+<td>Niall McGrotty</td>
+<td>Neil Cramer</td>
+<td>Skerries SC</td>
+<td>8</td>
+<td>8.0</td>
+</tr>
+<tr class="odd racerow">
+<td>9</td>
+<td>14915</td>
+<td>Gold</td>
+<td>Frank Miller</td>
+<td>Ed Butler</td>
+<td>Dun Laoghaire MYC</td>
+<td>9</td>
+<td>9.0</td>
+</tr>
+<tr class="even racerow">
+<td>10</td>
+<td>14683</td>
+<td>Silver</td>
+<td>Colm Breen</td>
+<td>Cormac Power Breen</td>
+<td>Dun Laoghaire MYC</td>
+<td>10</td>
+<td>10.0</td>
+</tr>
+<tr class="odd racerow">
+<td>11</td>
+<td>14770</td>
+<td>Silver</td>
+<td>Brian Jones</td>
+<td>TJ O'Brien</td>
+<td>Monkstown Bay SC</td>
+<td>11</td>
+<td>11.0</td>
+</tr>
+<tr class="even racerow">
+<td>12</td>
+<td>14740</td>
+<td>Gold</td>
+<td>Jack McDowell</td>
+<td>Hugo Micka</td>
+<td>Malahide YC</td>
+<td>12</td>
+<td>12.0</td>
+</tr>
+<tr class="odd racerow">
+<td>13</td>
+<td>14855</td>
+<td>Gold</td>
+<td>Conor Twohig</td>
+<td>Matthew Cotter</td>
+<td>Howth YC</td>
+<td>13</td>
+<td>13.0</td>
+</tr>
+<tr class="even racerow">
+<td>14</td>
+<td>14790</td>
+<td>Silver</td>
+<td>Pat McGoldrick</td>
+<td>Paul ter Horst</td>
+<td>Dun Laoghaire MYC</td>
+<td>14</td>
+<td>14.0</td>
+</tr>
+<tr class="odd racerow">
+<td>15</td>
+<td>15016</td>
+<td>Gold</td>
+<td>Louise McKenna</td>
+<td>Hermine O'Keeffe</td>
+<td>Royal St. George YC</td>
+<td>15</td>
+<td>15.0</td>
+</tr>
+<tr class="even racerow">
+<td>16</td>
+<td>4676</td>
+<td>Gold</td>
+<td>Bryan Maguire</td>
+<td>Michael Keegan</td>
+<td>Royal St. George YC</td>
+<td>16</td>
+<td>16.0</td>
+</tr>
+<tr class="odd racerow">
+<td>17</td>
+<td>14854</td>
+<td>Silver</td>
+<td>Cariosa Power</td>
+<td>Marie Barry</td>
+<td>National YC</td>
+<td>17</td>
+<td>17.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r2">R2&nbsp;-&nbsp;Jun 20</h3>
+<div class="caption racecaption">
+Start: Start 1, Finishes: Place, Time: 11.16.00
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="8">
+<col class="rank" />
+<col class="sailno" />
+<col class="division" />
+<col class="helmname" />
+<col class="crewname" />
+<col class="club" />
+<col class="place" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Sail Nr</th>
+<th>Division</th>
+<th>Helm Name</th>
+<th>Crew Name</th>
+<th>Club</th>
+<th>Place</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>FRA 15189</td>
+<td>Gold</td>
+<td>Yoann Fouassier</td>
+<td>Jean Robillard</td>
+<td>Cercle de la Voile du Centre</td>
+<td>1</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>15183</td>
+<td>Gold</td>
+<td>Ewen Barry</td>
+<td>Thea Barry</td>
+<td>Monkstown Bay SC</td>
+<td>2</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>14740</td>
+<td>Gold</td>
+<td>Jack McDowell</td>
+<td>Hugo Micka</td>
+<td>Malahide YC</td>
+<td>3</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>14855</td>
+<td>Gold</td>
+<td>Conor Twohig</td>
+<td>Matthew Cotter</td>
+<td>Howth YC</td>
+<td>4</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>15061</td>
+<td>Gold</td>
+<td>Noel Butler</td>
+<td>Stephen Oram</td>
+<td>National YC</td>
+<td>5</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>14915</td>
+<td>Gold</td>
+<td>Frank Miller</td>
+<td>Ed Butler</td>
+<td>Dun Laoghaire MYC</td>
+<td>6</td>
+<td>6.0</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>15016</td>
+<td>Gold</td>
+<td>Louise McKenna</td>
+<td>Hermine O'Keeffe</td>
+<td>Royal St. George YC</td>
+<td>7</td>
+<td>7.0</td>
+</tr>
+<tr class="even racerow">
+<td>8</td>
+<td>15017</td>
+<td>Gold</td>
+<td>Adrian Lee</td>
+<td>Edmund Hynes</td>
+<td>Monkstown Bay SC</td>
+<td>8</td>
+<td>8.0</td>
+</tr>
+<tr class="odd racerow">
+<td>9</td>
+<td>14770</td>
+<td>Silver</td>
+<td>Brian Jones</td>
+<td>TJ O'Brien</td>
+<td>Monkstown Bay SC</td>
+<td>9</td>
+<td>9.0</td>
+</tr>
+<tr class="even racerow">
+<td>10</td>
+<td>14938</td>
+<td>Gold</td>
+<td>Niall McGrotty</td>
+<td>Neil Cramer</td>
+<td>Skerries SC</td>
+<td>10</td>
+<td>10.0</td>
+</tr>
+<tr class="odd racerow">
+<td>11</td>
+<td>14854</td>
+<td>Silver</td>
+<td>Cariosa Power</td>
+<td>Marie Barry</td>
+<td>National YC</td>
+<td>11</td>
+<td>11.0</td>
+</tr>
+<tr class="even racerow">
+<td>12</td>
+<td>15156</td>
+<td>Gold</td>
+<td>Jack McNaughton</td>
+<td>Kilian Mathieu</td>
+<td>Dun Laoghaire MYC / Galway Bay SC</td>
+<td>12</td>
+<td>12.0</td>
+</tr>
+<tr class="odd racerow">
+<td>13</td>
+<td>14790</td>
+<td>Silver</td>
+<td>Pat McGoldrick</td>
+<td>Paul ter Horst</td>
+<td>Dun Laoghaire MYC</td>
+<td>13</td>
+<td>13.0</td>
+</tr>
+<tr class="even racerow">
+<td>14</td>
+<td>14567</td>
+<td>Gold</td>
+<td>Jon Evans</td>
+<td>Aidan Caulfield</td>
+<td>Sligo YC</td>
+<td>14</td>
+<td>14.0</td>
+</tr>
+<tr class="odd racerow">
+<td>15</td>
+<td>4676</td>
+<td>Gold</td>
+<td>Bryan Maguire</td>
+<td>Michael Keegan</td>
+<td>Royal St. George YC</td>
+<td>15</td>
+<td>15.0</td>
+</tr>
+<tr class="even racerow">
+<td>16</td>
+<td>14683</td>
+<td>Silver</td>
+<td>Colm Breen</td>
+<td>Cormac Power Breen</td>
+<td>Dun Laoghaire MYC</td>
+<td>16</td>
+<td>16.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r3">R3&nbsp;-&nbsp;Jun 20</h3>
+<div class="caption racecaption">
+Start: Start 1, Finishes: Place, Time: 12.05.00
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="8">
+<col class="rank" />
+<col class="sailno" />
+<col class="division" />
+<col class="helmname" />
+<col class="crewname" />
+<col class="club" />
+<col class="place" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Sail Nr</th>
+<th>Division</th>
+<th>Helm Name</th>
+<th>Crew Name</th>
+<th>Club</th>
+<th>Place</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>14855</td>
+<td>Gold</td>
+<td>Conor Twohig</td>
+<td>Matthew Cotter</td>
+<td>Howth YC</td>
+<td>1</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>15156</td>
+<td>Gold</td>
+<td>Jack McNaughton</td>
+<td>Kilian Mathieu</td>
+<td>Dun Laoghaire MYC / Galway Bay SC</td>
+<td>2</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>15061</td>
+<td>Gold</td>
+<td>Noel Butler</td>
+<td>Stephen Oram</td>
+<td>National YC</td>
+<td>3</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>15183</td>
+<td>Gold</td>
+<td>Ewen Barry</td>
+<td>Thea Barry</td>
+<td>Monkstown Bay SC</td>
+<td>4</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>15060</td>
+<td>Silver</td>
+<td>Rachel Deasy</td>
+<td>Harry Thompson</td>
+<td>Monkstown Bay SC / Tralee Bay SC</td>
+<td>5</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>14915</td>
+<td>Gold</td>
+<td>Frank Miller</td>
+<td>Ed Butler</td>
+<td>Dun Laoghaire MYC</td>
+<td>6</td>
+<td>6.0</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>FRA 15189</td>
+<td>Gold</td>
+<td>Yoann Fouassier</td>
+<td>Jean Robillard</td>
+<td>Cercle de la Voile du Centre</td>
+<td>7</td>
+<td>7.0</td>
+</tr>
+<tr class="even racerow">
+<td>8</td>
+<td>14938</td>
+<td>Gold</td>
+<td>Niall McGrotty</td>
+<td>Neil Cramer</td>
+<td>Skerries SC</td>
+<td>8</td>
+<td>8.0</td>
+</tr>
+<tr class="odd racerow">
+<td>9</td>
+<td>15017</td>
+<td>Gold</td>
+<td>Adrian Lee</td>
+<td>Edmund Hynes</td>
+<td>Monkstown Bay SC</td>
+<td>9</td>
+<td>9.0</td>
+</tr>
+<tr class="even racerow">
+<td>10</td>
+<td>15016</td>
+<td>Gold</td>
+<td>Louise McKenna</td>
+<td>Hermine O'Keeffe</td>
+<td>Royal St. George YC</td>
+<td>10</td>
+<td>10.0</td>
+</tr>
+<tr class="odd racerow">
+<td>11</td>
+<td>14740</td>
+<td>Gold</td>
+<td>Jack McDowell</td>
+<td>Hugo Micka</td>
+<td>Malahide YC</td>
+<td>11</td>
+<td>11.0</td>
+</tr>
+<tr class="even racerow">
+<td>12</td>
+<td>14567</td>
+<td>Gold</td>
+<td>Jon Evans</td>
+<td>Aidan Caulfield</td>
+<td>Sligo YC</td>
+<td>12</td>
+<td>12.0</td>
+</tr>
+<tr class="odd racerow">
+<td>13</td>
+<td>4676</td>
+<td>Gold</td>
+<td>Bryan Maguire</td>
+<td>Michael Keegan</td>
+<td>Royal St. George YC</td>
+<td>13</td>
+<td>13.0</td>
+</tr>
+<tr class="even racerow">
+<td>14</td>
+<td>14854</td>
+<td>Silver</td>
+<td>Cariosa Power</td>
+<td>Marie Barry</td>
+<td>National YC</td>
+<td>14</td>
+<td>14.0</td>
+</tr>
+<tr class="odd racerow">
+<td>15</td>
+<td>14790</td>
+<td>Silver</td>
+<td>Pat McGoldrick</td>
+<td>Paul ter Horst</td>
+<td>Dun Laoghaire MYC</td>
+<td>15</td>
+<td>15.0</td>
+</tr>
+<tr class="even racerow">
+<td>16</td>
+<td>14770</td>
+<td>Silver</td>
+<td>Brian Jones</td>
+<td>TJ O'Brien</td>
+<td>Monkstown Bay SC</td>
+<td>16</td>
+<td>16.0</td>
+</tr>
+<tr class="odd racerow">
+<td>17</td>
+<td>14683</td>
+<td>Silver</td>
+<td>Colm Breen</td>
+<td>Cormac Power Breen</td>
+<td>Dun Laoghaire MYC</td>
+<td>17</td>
+<td>17.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r4">R4&nbsp;-&nbsp;Jun 20</h3>
+<div class="caption racecaption">
+Start: Start 1, Finishes: Place, Time: 12.59.00
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="8">
+<col class="rank" />
+<col class="sailno" />
+<col class="division" />
+<col class="helmname" />
+<col class="crewname" />
+<col class="club" />
+<col class="place" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Sail Nr</th>
+<th>Division</th>
+<th>Helm Name</th>
+<th>Crew Name</th>
+<th>Club</th>
+<th>Place</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>15183</td>
+<td>Gold</td>
+<td>Ewen Barry</td>
+<td>Thea Barry</td>
+<td>Monkstown Bay SC</td>
+<td>1</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>15061</td>
+<td>Gold</td>
+<td>Noel Butler</td>
+<td>Stephen Oram</td>
+<td>National YC</td>
+<td>2</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>14938</td>
+<td>Gold</td>
+<td>Niall McGrotty</td>
+<td>Neil Cramer</td>
+<td>Skerries SC</td>
+<td>3</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>15017</td>
+<td>Gold</td>
+<td>Adrian Lee</td>
+<td>Edmund Hynes</td>
+<td>Monkstown Bay SC</td>
+<td>4</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>14915</td>
+<td>Gold</td>
+<td>Frank Miller</td>
+<td>Ed Butler</td>
+<td>Dun Laoghaire MYC</td>
+<td>5</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>14855</td>
+<td>Gold</td>
+<td>Conor Twohig</td>
+<td>Matthew Cotter</td>
+<td>Howth YC</td>
+<td>6</td>
+<td>6.0</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>15016</td>
+<td>Gold</td>
+<td>Louise McKenna</td>
+<td>Hermine O'Keeffe</td>
+<td>Royal St. George YC</td>
+<td>7</td>
+<td>7.0</td>
+</tr>
+<tr class="even racerow">
+<td>8</td>
+<td>14790</td>
+<td>Silver</td>
+<td>Pat McGoldrick</td>
+<td>Paul ter Horst</td>
+<td>Dun Laoghaire MYC</td>
+<td>8</td>
+<td>8.0</td>
+</tr>
+<tr class="odd racerow">
+<td>9</td>
+<td>15060</td>
+<td>Silver</td>
+<td>Rachel Deasy</td>
+<td>Harry Thompson</td>
+<td>Monkstown Bay SC / Tralee Bay SC</td>
+<td>9</td>
+<td>9.0</td>
+</tr>
+<tr class="even racerow">
+<td>10</td>
+<td>4676</td>
+<td>Gold</td>
+<td>Bryan Maguire</td>
+<td>Michael Keegan</td>
+<td>Royal St. George YC</td>
+<td>10</td>
+<td>10.0</td>
+</tr>
+<tr class="odd racerow">
+<td>11</td>
+<td>14854</td>
+<td>Silver</td>
+<td>Cariosa Power</td>
+<td>Marie Barry</td>
+<td>National YC</td>
+<td>11</td>
+<td>11.0</td>
+</tr>
+<tr class="even racerow">
+<td>12</td>
+<td>14770</td>
+<td>Silver</td>
+<td>Brian Jones</td>
+<td>TJ O'Brien</td>
+<td>Monkstown Bay SC</td>
+<td>12</td>
+<td>12.0</td>
+</tr>
+<tr class="odd racerow">
+<td>13</td>
+<td>14740</td>
+<td>Gold</td>
+<td>Jack McDowell</td>
+<td>Hugo Micka</td>
+<td>Malahide YC</td>
+<td>13</td>
+<td>13.0</td>
+</tr>
+<tr class="even racerow">
+<td>14</td>
+<td>14567</td>
+<td>Gold</td>
+<td>Jon Evans</td>
+<td>Aidan Caulfield</td>
+<td>Sligo YC</td>
+<td>14</td>
+<td>14.0</td>
+</tr>
+<tr class="odd racerow">
+<td>15</td>
+<td>15156</td>
+<td>Gold</td>
+<td>Jack McNaughton</td>
+<td>Kilian Mathieu</td>
+<td>Dun Laoghaire MYC / Galway Bay SC</td>
+<td>15</td>
+<td>15.0</td>
+</tr>
+<tr class="even racerow">
+<td>16</td>
+<td>14683</td>
+<td>Silver</td>
+<td>Colm Breen</td>
+<td>Cormac Power Breen</td>
+<td>Dun Laoghaire MYC</td>
+<td>16</td>
+<td>16.0</td>
+</tr>
+<tr class="odd racerow">
+<td>17</td>
+<td>14663</td>
+<td>Silver</td>
+<td>Brenda Nash</td>
+<td>Glen Fisher</td>
+<td>Dun Laoghaire MYC</td>
+<td>17</td>
+<td>17.0</td>
+</tr>
+<tr class="even racerow">
+<td>18</td>
+<td>FRA 15189</td>
+<td>Gold</td>
+<td>Yoann Fouassier</td>
+<td>Jean Robillard</td>
+<td>Cercle de la Voile du Centre</td>
+<td>UFD</td>
+<td>19.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r5">R5&nbsp;-&nbsp;Jun 20</h3>
+<div class="caption racecaption">
+Start: Start 1, Finishes: Place, Time: 14.26.00
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="8">
+<col class="rank" />
+<col class="sailno" />
+<col class="division" />
+<col class="helmname" />
+<col class="crewname" />
+<col class="club" />
+<col class="place" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Sail Nr</th>
+<th>Division</th>
+<th>Helm Name</th>
+<th>Crew Name</th>
+<th>Club</th>
+<th>Place</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>15183</td>
+<td>Gold</td>
+<td>Ewen Barry</td>
+<td>Thea Barry</td>
+<td>Monkstown Bay SC</td>
+<td>1</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>15060</td>
+<td>Silver</td>
+<td>Rachel Deasy</td>
+<td>Harry Thompson</td>
+<td>Monkstown Bay SC / Tralee Bay SC</td>
+<td>2</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>14855</td>
+<td>Gold</td>
+<td>Conor Twohig</td>
+<td>Matthew Cotter</td>
+<td>Howth YC</td>
+<td>3</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>15061</td>
+<td>Gold</td>
+<td>Noel Butler</td>
+<td>Stephen Oram</td>
+<td>National YC</td>
+<td>4</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>14915</td>
+<td>Gold</td>
+<td>Frank Miller</td>
+<td>Ed Butler</td>
+<td>Dun Laoghaire MYC</td>
+<td>5</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>15156</td>
+<td>Gold</td>
+<td>Jack McNaughton</td>
+<td>Kilian Mathieu</td>
+<td>Dun Laoghaire MYC / Galway Bay SC</td>
+<td>6</td>
+<td>6.0</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>FRA 15189</td>
+<td>Gold</td>
+<td>Yoann Fouassier</td>
+<td>Jean Robillard</td>
+<td>Cercle de la Voile du Centre</td>
+<td>7</td>
+<td>7.0</td>
+</tr>
+<tr class="even racerow">
+<td>8</td>
+<td>15017</td>
+<td>Gold</td>
+<td>Adrian Lee</td>
+<td>Edmund Hynes</td>
+<td>Monkstown Bay SC</td>
+<td>8</td>
+<td>8.0</td>
+</tr>
+<tr class="odd racerow">
+<td>9</td>
+<td>14770</td>
+<td>Silver</td>
+<td>Brian Jones</td>
+<td>TJ O'Brien</td>
+<td>Monkstown Bay SC</td>
+<td>9</td>
+<td>9.0</td>
+</tr>
+<tr class="even racerow">
+<td>10</td>
+<td>14567</td>
+<td>Gold</td>
+<td>Jon Evans</td>
+<td>Aidan Caulfield</td>
+<td>Sligo YC</td>
+<td>10</td>
+<td>10.0</td>
+</tr>
+<tr class="odd racerow">
+<td>11</td>
+<td>14740</td>
+<td>Gold</td>
+<td>Jack McDowell</td>
+<td>Hugo Micka</td>
+<td>Malahide YC</td>
+<td>11</td>
+<td>11.0</td>
+</tr>
+<tr class="even racerow">
+<td>12</td>
+<td>15016</td>
+<td>Gold</td>
+<td>Louise McKenna</td>
+<td>Hermine O'Keeffe</td>
+<td>Royal St. George YC</td>
+<td>12</td>
+<td>12.0</td>
+</tr>
+<tr class="odd racerow">
+<td>13</td>
+<td>4676</td>
+<td>Gold</td>
+<td>Bryan Maguire</td>
+<td>Michael Keegan</td>
+<td>Royal St. George YC</td>
+<td>13</td>
+<td>13.0</td>
+</tr>
+<tr class="even racerow">
+<td>14</td>
+<td>14683</td>
+<td>Silver</td>
+<td>Colm Breen</td>
+<td>Cormac Power Breen</td>
+<td>Dun Laoghaire MYC</td>
+<td>14</td>
+<td>14.0</td>
+</tr>
+<tr class="odd racerow">
+<td>15</td>
+<td>14938</td>
+<td>Gold</td>
+<td>Niall McGrotty</td>
+<td>Neil Cramer</td>
+<td>Skerries SC</td>
+<td>15</td>
+<td>15.0</td>
+</tr>
+<tr class="even racerow">
+<td>16</td>
+<td>14854</td>
+<td>Silver</td>
+<td>Cariosa Power</td>
+<td>Marie Barry</td>
+<td>National YC</td>
+<td>16</td>
+<td>16.0</td>
+</tr>
+<tr class="odd racerow">
+<td>17</td>
+<td>14790</td>
+<td>Silver</td>
+<td>Pat McGoldrick</td>
+<td>Paul ter Horst</td>
+<td>Dun Laoghaire MYC</td>
+<td>17</td>
+<td>17.0</td>
+</tr>
+<tr class="even racerow">
+<td>18</td>
+<td>14663</td>
+<td>Silver</td>
+<td>Brenda Nash</td>
+<td>Glen Fisher</td>
+<td>Dun Laoghaire MYC</td>
+<td>18</td>
+<td>18.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r6">R6&nbsp;-&nbsp;Jun 20</h3>
+<div class="caption racecaption">
+Start: Start 1, Finishes: Place, Time: 15.35.00
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="8">
+<col class="rank" />
+<col class="sailno" />
+<col class="division" />
+<col class="helmname" />
+<col class="crewname" />
+<col class="club" />
+<col class="place" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Sail Nr</th>
+<th>Division</th>
+<th>Helm Name</th>
+<th>Crew Name</th>
+<th>Club</th>
+<th>Place</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>15183</td>
+<td>Gold</td>
+<td>Ewen Barry</td>
+<td>Thea Barry</td>
+<td>Monkstown Bay SC</td>
+<td>1</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>14855</td>
+<td>Gold</td>
+<td>Conor Twohig</td>
+<td>Matthew Cotter</td>
+<td>Howth YC</td>
+<td>2</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>15061</td>
+<td>Gold</td>
+<td>Noel Butler</td>
+<td>Stephen Oram</td>
+<td>National YC</td>
+<td>3</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>15060</td>
+<td>Silver</td>
+<td>Rachel Deasy</td>
+<td>Harry Thompson</td>
+<td>Monkstown Bay SC / Tralee Bay SC</td>
+<td>4</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>FRA 15189</td>
+<td>Gold</td>
+<td>Yoann Fouassier</td>
+<td>Jean Robillard</td>
+<td>Cercle de la Voile du Centre</td>
+<td>5</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>15156</td>
+<td>Gold</td>
+<td>Jack McNaughton</td>
+<td>Kilian Mathieu</td>
+<td>Dun Laoghaire MYC / Galway Bay SC</td>
+<td>6</td>
+<td>6.0</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>14915</td>
+<td>Gold</td>
+<td>Frank Miller</td>
+<td>Ed Butler</td>
+<td>Dun Laoghaire MYC</td>
+<td>7</td>
+<td>7.0</td>
+</tr>
+<tr class="even racerow">
+<td>8</td>
+<td>14938</td>
+<td>Gold</td>
+<td>Niall McGrotty</td>
+<td>Neil Cramer</td>
+<td>Skerries SC</td>
+<td>8</td>
+<td>8.0</td>
+</tr>
+<tr class="odd racerow">
+<td>9</td>
+<td>14770</td>
+<td>Silver</td>
+<td>Brian Jones</td>
+<td>TJ O'Brien</td>
+<td>Monkstown Bay SC</td>
+<td>9</td>
+<td>9.0</td>
+</tr>
+<tr class="even racerow">
+<td>10</td>
+<td>14567</td>
+<td>Gold</td>
+<td>Jon Evans</td>
+<td>Aidan Caulfield</td>
+<td>Sligo YC</td>
+<td>10</td>
+<td>10.0</td>
+</tr>
+<tr class="odd racerow">
+<td>11</td>
+<td>15016</td>
+<td>Gold</td>
+<td>Louise McKenna</td>
+<td>Hermine O'Keeffe</td>
+<td>Royal St. George YC</td>
+<td>11</td>
+<td>11.0</td>
+</tr>
+<tr class="even racerow">
+<td>12</td>
+<td>15017</td>
+<td>Gold</td>
+<td>Adrian Lee</td>
+<td>Edmund Hynes</td>
+<td>Monkstown Bay SC</td>
+<td>12</td>
+<td>12.0</td>
+</tr>
+<tr class="odd racerow">
+<td>13</td>
+<td>14740</td>
+<td>Gold</td>
+<td>Jack McDowell</td>
+<td>Hugo Micka</td>
+<td>Malahide YC</td>
+<td>13</td>
+<td>13.0</td>
+</tr>
+<tr class="even racerow">
+<td>14</td>
+<td>14854</td>
+<td>Silver</td>
+<td>Cariosa Power</td>
+<td>Marie Barry</td>
+<td>National YC</td>
+<td>14</td>
+<td>14.0</td>
+</tr>
+<tr class="odd racerow">
+<td>15</td>
+<td>4676</td>
+<td>Gold</td>
+<td>Bryan Maguire</td>
+<td>Michael Keegan</td>
+<td>Royal St. George YC</td>
+<td>15</td>
+<td>15.0</td>
+</tr>
+<tr class="even racerow">
+<td>16</td>
+<td>14683</td>
+<td>Silver</td>
+<td>Colm Breen</td>
+<td>Cormac Power Breen</td>
+<td>Dun Laoghaire MYC</td>
+<td>16</td>
+<td>16.0</td>
+</tr>
+<tr class="odd racerow">
+<td>17</td>
+<td>14663</td>
+<td>Silver</td>
+<td>Brenda Nash</td>
+<td>Glen Fisher</td>
+<td>Dun Laoghaire MYC</td>
+<td>17</td>
+<td>17.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r7">R7&nbsp;-&nbsp;Jun 21</h3>
+<div class="caption racecaption">
+Start: Start 1, Finishes: Place, Time: 12.05.00
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="8">
+<col class="rank" />
+<col class="sailno" />
+<col class="division" />
+<col class="helmname" />
+<col class="crewname" />
+<col class="club" />
+<col class="place" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Sail Nr</th>
+<th>Division</th>
+<th>Helm Name</th>
+<th>Crew Name</th>
+<th>Club</th>
+<th>Place</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>14855</td>
+<td>Gold</td>
+<td>Conor Twohig</td>
+<td>Matthew Cotter</td>
+<td>Howth YC</td>
+<td>1</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>15017</td>
+<td>Gold</td>
+<td>Adrian Lee</td>
+<td>Edmund Hynes</td>
+<td>Monkstown Bay SC</td>
+<td>2</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>14938</td>
+<td>Gold</td>
+<td>Niall McGrotty</td>
+<td>Neil Cramer</td>
+<td>Skerries SC</td>
+<td>3</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>15061</td>
+<td>Gold</td>
+<td>Noel Butler</td>
+<td>Stephen Oram</td>
+<td>National YC</td>
+<td>4</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>15016</td>
+<td>Gold</td>
+<td>Louise McKenna</td>
+<td>Hermine O'Keeffe</td>
+<td>Royal St. George YC</td>
+<td>5</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>15183</td>
+<td>Gold</td>
+<td>Ewen Barry</td>
+<td>Thea Barry</td>
+<td>Monkstown Bay SC</td>
+<td>6</td>
+<td>6.0</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>15156</td>
+<td>Gold</td>
+<td>Jack McNaughton</td>
+<td>Kilian Mathieu</td>
+<td>Dun Laoghaire MYC / Galway Bay SC</td>
+<td>7</td>
+<td>7.0</td>
+</tr>
+<tr class="even racerow">
+<td>8</td>
+<td>15060</td>
+<td>Silver</td>
+<td>Rachel Deasy</td>
+<td>Harry Thompson</td>
+<td>Monkstown Bay SC / Tralee Bay SC</td>
+<td>8</td>
+<td>8.0</td>
+</tr>
+<tr class="odd racerow">
+<td>9</td>
+<td>14854</td>
+<td>Silver</td>
+<td>Cariosa Power</td>
+<td>Marie Barry</td>
+<td>National YC</td>
+<td>9</td>
+<td>9.0</td>
+</tr>
+<tr class="even racerow">
+<td>10</td>
+<td>14790</td>
+<td>Silver</td>
+<td>Pat McGoldrick</td>
+<td>Paul ter Horst</td>
+<td>Dun Laoghaire MYC</td>
+<td>10</td>
+<td>10.0</td>
+</tr>
+<tr class="odd racerow">
+<td>11</td>
+<td>14770</td>
+<td>Silver</td>
+<td>Brian Jones</td>
+<td>TJ O'Brien</td>
+<td>Monkstown Bay SC</td>
+<td>11</td>
+<td>11.0</td>
+</tr>
+<tr class="even racerow">
+<td>12</td>
+<td>14915</td>
+<td>Gold</td>
+<td>Frank Miller</td>
+<td>Ed Butler</td>
+<td>Dun Laoghaire MYC</td>
+<td>12</td>
+<td>12.0</td>
+</tr>
+<tr class="odd racerow">
+<td>13</td>
+<td>14740</td>
+<td>Gold</td>
+<td>Jack McDowell</td>
+<td>Hugo Micka</td>
+<td>Malahide YC</td>
+<td>13</td>
+<td>13.0</td>
+</tr>
+<tr class="even racerow">
+<td>14</td>
+<td>14683</td>
+<td>Silver</td>
+<td>Colm Breen</td>
+<td>Cormac Power Breen</td>
+<td>Dun Laoghaire MYC</td>
+<td>14</td>
+<td>14.0</td>
+</tr>
+<tr class="odd racerow">
+<td>15</td>
+<td>14567</td>
+<td>Gold</td>
+<td>Jon Evans</td>
+<td>Aidan Caulfield</td>
+<td>Sligo YC</td>
+<td>15</td>
+<td>15.0</td>
+</tr>
+<tr class="even racerow">
+<td>16</td>
+<td>4676</td>
+<td>Gold</td>
+<td>Bryan Maguire</td>
+<td>Michael Keegan</td>
+<td>Royal St. George YC</td>
+<td>16</td>
+<td>16.0</td>
+</tr>
+<tr class="odd racerow">
+<td>17</td>
+<td>14663</td>
+<td>Silver</td>
+<td>Brenda Nash</td>
+<td>Glen Fisher</td>
+<td>Dun Laoghaire MYC</td>
+<td>17</td>
+<td>17.0</td>
+</tr>
+<tr class="even racerow">
+<td>18</td>
+<td>FRA 15189</td>
+<td>Gold</td>
+<td>Yoann Fouassier</td>
+<td>Jean Robillard</td>
+<td>Cercle de la Voile du Centre</td>
+<td>UFD</td>
+<td>19.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r8">R8&nbsp;-&nbsp;Jun 21</h3>
+<div class="caption racecaption">
+Start: Start 1, Finishes: Place, Time: 12.58.00
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="8">
+<col class="rank" />
+<col class="sailno" />
+<col class="division" />
+<col class="helmname" />
+<col class="crewname" />
+<col class="club" />
+<col class="place" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Sail Nr</th>
+<th>Division</th>
+<th>Helm Name</th>
+<th>Crew Name</th>
+<th>Club</th>
+<th>Place</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>15183</td>
+<td>Gold</td>
+<td>Ewen Barry</td>
+<td>Thea Barry</td>
+<td>Monkstown Bay SC</td>
+<td>1</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>15061</td>
+<td>Gold</td>
+<td>Noel Butler</td>
+<td>Stephen Oram</td>
+<td>National YC</td>
+<td>2</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>14855</td>
+<td>Gold</td>
+<td>Conor Twohig</td>
+<td>Matthew Cotter</td>
+<td>Howth YC</td>
+<td>3</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>15017</td>
+<td>Gold</td>
+<td>Adrian Lee</td>
+<td>Edmund Hynes</td>
+<td>Monkstown Bay SC</td>
+<td>4</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>FRA 15189</td>
+<td>Gold</td>
+<td>Yoann Fouassier</td>
+<td>Jean Robillard</td>
+<td>Cercle de la Voile du Centre</td>
+<td>5</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>14938</td>
+<td>Gold</td>
+<td>Niall McGrotty</td>
+<td>Neil Cramer</td>
+<td>Skerries SC</td>
+<td>6</td>
+<td>6.0</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>15016</td>
+<td>Gold</td>
+<td>Louise McKenna</td>
+<td>Hermine O'Keeffe</td>
+<td>Royal St. George YC</td>
+<td>7</td>
+<td>7.0</td>
+</tr>
+<tr class="even racerow">
+<td>8</td>
+<td>15060</td>
+<td>Silver</td>
+<td>Rachel Deasy</td>
+<td>Harry Thompson</td>
+<td>Monkstown Bay SC / Tralee Bay SC</td>
+<td>8</td>
+<td>8.0</td>
+</tr>
+<tr class="odd racerow">
+<td>9</td>
+<td>14790</td>
+<td>Silver</td>
+<td>Pat McGoldrick</td>
+<td>Paul ter Horst</td>
+<td>Dun Laoghaire MYC</td>
+<td>9</td>
+<td>9.0</td>
+</tr>
+<tr class="even racerow">
+<td>10</td>
+<td>14567</td>
+<td>Gold</td>
+<td>Jon Evans</td>
+<td>Aidan Caulfield</td>
+<td>Sligo YC</td>
+<td>10</td>
+<td>10.0</td>
+</tr>
+<tr class="odd racerow">
+<td>11</td>
+<td>14740</td>
+<td>Gold</td>
+<td>Jack McDowell</td>
+<td>Hugo Micka</td>
+<td>Malahide YC</td>
+<td>11</td>
+<td>11.0</td>
+</tr>
+<tr class="even racerow">
+<td>12</td>
+<td>14854</td>
+<td>Silver</td>
+<td>Cariosa Power</td>
+<td>Marie Barry</td>
+<td>National YC</td>
+<td>12</td>
+<td>12.0</td>
+</tr>
+<tr class="odd racerow">
+<td>13</td>
+<td>14915</td>
+<td>Gold</td>
+<td>Frank Miller</td>
+<td>Ed Butler</td>
+<td>Dun Laoghaire MYC</td>
+<td>13</td>
+<td>13.0</td>
+</tr>
+<tr class="even racerow">
+<td>14</td>
+<td>14683</td>
+<td>Silver</td>
+<td>Colm Breen</td>
+<td>Cormac Power Breen</td>
+<td>Dun Laoghaire MYC</td>
+<td>14</td>
+<td>14.0</td>
+</tr>
+<tr class="odd racerow">
+<td>15</td>
+<td>15156</td>
+<td>Gold</td>
+<td>Jack McNaughton</td>
+<td>Kilian Mathieu</td>
+<td>Dun Laoghaire MYC / Galway Bay SC</td>
+<td>15</td>
+<td>15.0</td>
+</tr>
+<tr class="even racerow">
+<td>16</td>
+<td>14770</td>
+<td>Silver</td>
+<td>Brian Jones</td>
+<td>TJ O'Brien</td>
+<td>Monkstown Bay SC</td>
+<td>16</td>
+<td>16.0</td>
+</tr>
+<tr class="odd racerow">
+<td>17</td>
+<td>14663</td>
+<td>Silver</td>
+<td>Brenda Nash</td>
+<td>Glen Fisher</td>
+<td>Dun Laoghaire MYC</td>
+<td>17</td>
+<td>17.0</td>
+</tr>
+<tr class="even racerow">
+<td>18</td>
+<td>4676</td>
+<td>Gold</td>
+<td>Bryan Maguire</td>
+<td>Michael Keegan</td>
+<td>Royal St. George YC</td>
+<td>DNS</td>
+<td>19.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r9">R9&nbsp;-&nbsp;Jun 21</h3>
+<div class="caption racecaption">
+Start: Start 1, Finishes: Place, Time: 13.53.00
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="8">
+<col class="rank" />
+<col class="sailno" />
+<col class="division" />
+<col class="helmname" />
+<col class="crewname" />
+<col class="club" />
+<col class="place" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Sail Nr</th>
+<th>Division</th>
+<th>Helm Name</th>
+<th>Crew Name</th>
+<th>Club</th>
+<th>Place</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>15183</td>
+<td>Gold</td>
+<td>Ewen Barry</td>
+<td>Thea Barry</td>
+<td>Monkstown Bay SC</td>
+<td>1</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>FRA 15189</td>
+<td>Gold</td>
+<td>Yoann Fouassier</td>
+<td>Jean Robillard</td>
+<td>Cercle de la Voile du Centre</td>
+<td>2</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>14855</td>
+<td>Gold</td>
+<td>Conor Twohig</td>
+<td>Matthew Cotter</td>
+<td>Howth YC</td>
+<td>3</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>15061</td>
+<td>Gold</td>
+<td>Noel Butler</td>
+<td>Stephen Oram</td>
+<td>National YC</td>
+<td>4</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>15017</td>
+<td>Gold</td>
+<td>Adrian Lee</td>
+<td>Edmund Hynes</td>
+<td>Monkstown Bay SC</td>
+<td>5</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>15016</td>
+<td>Gold</td>
+<td>Louise McKenna</td>
+<td>Hermine O'Keeffe</td>
+<td>Royal St. George YC</td>
+<td>6</td>
+<td>6.0</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>15060</td>
+<td>Silver</td>
+<td>Rachel Deasy</td>
+<td>Harry Thompson</td>
+<td>Monkstown Bay SC / Tralee Bay SC</td>
+<td>7</td>
+<td>7.0</td>
+</tr>
+<tr class="even racerow">
+<td>8</td>
+<td>14770</td>
+<td>Silver</td>
+<td>Brian Jones</td>
+<td>TJ O'Brien</td>
+<td>Monkstown Bay SC</td>
+<td>8</td>
+<td>8.0</td>
+</tr>
+<tr class="odd racerow">
+<td>9</td>
+<td>14938</td>
+<td>Gold</td>
+<td>Niall McGrotty</td>
+<td>Neil Cramer</td>
+<td>Skerries SC</td>
+<td>9</td>
+<td>9.0</td>
+</tr>
+<tr class="even racerow">
+<td>10</td>
+<td>14790</td>
+<td>Silver</td>
+<td>Pat McGoldrick</td>
+<td>Paul ter Horst</td>
+<td>Dun Laoghaire MYC</td>
+<td>10</td>
+<td>10.0</td>
+</tr>
+<tr class="odd racerow">
+<td>11</td>
+<td>15156</td>
+<td>Gold</td>
+<td>Jack McNaughton</td>
+<td>Kilian Mathieu</td>
+<td>Dun Laoghaire MYC / Galway Bay SC</td>
+<td>11</td>
+<td>11.0</td>
+</tr>
+<tr class="even racerow">
+<td>12</td>
+<td>14854</td>
+<td>Silver</td>
+<td>Cariosa Power</td>
+<td>Marie Barry</td>
+<td>National YC</td>
+<td>12</td>
+<td>12.0</td>
+</tr>
+<tr class="odd racerow">
+<td>13</td>
+<td>14740</td>
+<td>Gold</td>
+<td>Jack McDowell</td>
+<td>Hugo Micka</td>
+<td>Malahide YC</td>
+<td>13</td>
+<td>13.0</td>
+</tr>
+<tr class="even racerow">
+<td>14</td>
+<td>14567</td>
+<td>Gold</td>
+<td>Jon Evans</td>
+<td>Aidan Caulfield</td>
+<td>Sligo YC</td>
+<td>14</td>
+<td>14.0</td>
+</tr>
+<tr class="odd racerow">
+<td>15</td>
+<td>14683</td>
+<td>Silver</td>
+<td>Colm Breen</td>
+<td>Cormac Power Breen</td>
+<td>Dun Laoghaire MYC</td>
+<td>15</td>
+<td>15.0</td>
+</tr>
+<tr class="even racerow">
+<td>16</td>
+<td>14915</td>
+<td>Gold</td>
+<td>Frank Miller</td>
+<td>Ed Butler</td>
+<td>Dun Laoghaire MYC</td>
+<td>16</td>
+<td>16.0</td>
+</tr>
+<tr class="odd racerow">
+<td>17</td>
+<td>14663</td>
+<td>Silver</td>
+<td>Brenda Nash</td>
+<td>Glen Fisher</td>
+<td>Dun Laoghaire MYC</td>
+<td>UFD</td>
+<td>19.0</td>
+</tr>
+</tbody>
+</table>
+
+<p class="hardleft"><a href="https://www.hyc.ie">www.hyc.ie</a><br /><a href="mailto:"></a></p>
+<p class="hardright"><a href="https://www.hyc.ie">www.hyc.ie</a><br /><a href="mailto:office@hyc.ie">office@hyc.ie</a></p>
+<p>Sailwave Scoring Software 2.38.02<br /><a href="https://www.sailwave.com">www.sailwave.com</a></p>
+
+</div>
+
+<footer>
+</footer>
+
+<div id="scrollbottom"></div>
+
+</body>
+</html>
+
+

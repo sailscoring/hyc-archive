@@ -1,0 +1,1583 @@
+
+
+
+<!doctype html>
+
+<head>
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta http-equiv="Cache-control" content="no-cache">
+<meta name="description" content="sailwave results">
+<meta name="viewport" content="width=device-width">
+
+<title>Sailwave results for Autumn League 2023 at Howth Yacht Club 2023</title>
+
+<style type="text/css">
+body {font: 80% arial, helvetica, sans-serif; text-align: center;}
+.hardleft  {text-align: left; float: left;  margin: 15px 0  15px 25px;}
+.hardright {text-align: right; float: right; margin: 15px 25px 15px 0;}
+table {text-align: left; margin: 0px auto 30px auto; font-size: 1em; border-collapse: collapse; border: 1px #999 solid;}
+td, th {padding: 4px; border: 1px #999 solid; vertical-align: top;}
+.caption {padding: 5px; text-align: center; border: 0; font-weight: bold;}
+p {text-align: center;}
+.contents {text-align: left; margin-left: 20%;}
+.race {background-color: #eee;}
+.odd {background-color: #eef;}
+.natflag {border: 1px #999 solid;}
+.nattext {font-size: 0.8em;}
+.place1 {font-weight: bold; background-color: #ffffaa;}
+.place2 {font-weight: bold; background-color: #aaaaff;}
+.place3 {font-weight: bold; background-color: #ffaaaa;}
+.placen {}
+table.headertable {border: 0px;}
+table.headertable td{border: 0px;}
+</style>
+
+<script type="text/javascript">
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script>
+
+function swGetURLArgs() {
+
+  var url = location.href;
+  var qs  = url.substring(url.indexOf('?') + 1).split('&');
+
+  for(var i = 0, result = {}; i < qs.length; i++) {
+    qs[i]            = qs[i].split('=');
+    result[qs[i][0]] = decodeURIComponent(qs[i][1]);
+  }
+
+  return result;
+}
+
+//
+//  name=HighlightWins3
+//  dependencies=jQuery
+//  description=Highlight winning scores in summary tables.
+//  author=Jon Eskdale based on an idea by Colin Jenkins
+//  date=2015-08-18
+//  version=1.6 2018-11-15
+//  url=http://sailwave.com
+//  email=jon@sailwave.com
+//  twitter=eskdale
+//  comments=Edit colours to colours of your choice
+//
+
+$(document).ready(function() {
+var winsSelector = '.summaryrace';
+var winsText     = /\b1\.0/;
+var twoText              = /\b2\.0/;
+var threeText    = /\b3\.0/;
+
+// Edit these colours to change the highlight colours for 1st, 2nd and 3rd
+var winsColour   = '#ffd700';
+var twoColour    = '#6a91c5';
+var threeColour  = '#da6841';
+//var twoColour  = '#ffe768';
+//var threeColour  = '#fff0a1';
+
+// create array of race column numbers for first table (summarytable)
+var ths = document.getElementsByTagName('col');
+var column =[];
+for (var i=0; i<ths.length; i++) {
+        if (ths[i].classList[0] === "race") {
+                column.push(i);
+        } else {
+                if (column.length !=0) {
+                        break;
+                }
+        }
+}
+//console.log(column);
+
+//  Set a class of summaryrace for all race cells in summary table body
+//
+for (var i=0; i<column.length; i++) {
+        $(".summarytable tbody tr td:nth-child(" + (column[i]+1) +")").addClass("summaryrace");
+}
+
+// Change the background color for cells with class of summaryrace and that match regular expression text
+$(function () {
+
+  $(winsSelector).filter(function() {
+    return winsText.test($(this).text());
+  }).css("background", winsColour);
+  $(winsSelector).filter(function() {
+        return twoText.test($(this).text());
+  }).css("background", twoColour);
+  $(winsSelector).filter(function() {
+        return threeText.test($(this).text());
+  }).css("background", threeColour);
+
+});
+});
+</script>
+
+</head>
+
+<body>
+
+<header>
+</header>
+<table class="headertable" cellspacing="0" width="100%" cellpadding="0" border="0">
+<tbody>
+<div id="wrap">
+
+<tr>
+<td width="30%">
+<img style="display:block; height:100px;"  src="https://hyc.ie/system/sponsor_logos/440/normal/HYC_Logo.jpg" alt="venue burgee" />
+</td>
+
+<td width="40%" align="center">
+<h1>Autumn League 2023</h1>
+<h2>Howth Yacht Club</h2>
+</td>
+
+<td width="30%">
+<img style="display:block; height:100px;" src="https://hyc.ie/system/sponsor_logos/449/normal/Provident_CRM_monday_Lockup_logos_001.png" alt="event burgee" align="right" />
+</td>
+</tr>
+</tbody>
+</table>
+
+<div style="clear:both;"></div>
+
+<style>
+div.applicant-break {page-break-after:always;}
+</style>
+<h3 class="seriestitle">Provisional Results as of 16:48 on October 21, 2023</h3>
+<h3 class="summarytitle" id="summaryclass_5_ns_hph">Class 5 NS HPH Fleet</h3>
+<div class="caption summarycaption">Sailed: 6, Discards: 1, To count: 5, Rating system: NHC1, Entries: 9, Scoring system: Appendix A</div>
+<table class="summarytable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="15">
+<col class="rank" />
+<col class="fleet" />
+<col class="sailno" />
+<col class="boat" />
+<col class="helmname" />
+<col class="club" />
+<col class="rating" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="total" />
+<col class="nett" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Fleet</th>
+<th>Sail No</th>
+<th>Boat Name</th>
+<th>Owner Name</th>
+<th>Club</th>
+<th>Rating</th>
+<th><a class="racelink" href="#r1class_5_ns_hph">Sep 23rd</a><br />&nbsp;</th>
+<th><a class="racelink" href="#r2class_5_ns_hph">Oct 7th</a><br />&nbsp;</th>
+<th><a class="racelink" href="#r3class_5_ns_hph">Oct 14th</a><br />&nbsp;</th>
+<th><a class="racelink" href="#r4class_5_ns_hph">Oct14th R2</a><br />&nbsp;</th>
+<th><a class="racelink" href="#r5class_5_ns_hph">Oct 21st</a><br />&nbsp;</th>
+<th><a class="racelink" href="#r6class_5_ns_hph">Oct 21st R2</a><br />&nbsp;</th>
+<th>Total</th>
+<th>Nett</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd summaryrow">
+<td>1st</td>
+<td>Class 5 NS HPH</td>
+<td>100</td>
+<td>Demelza</td>
+<td>Steffi & Windsor</td>
+<td>Howth YC</td>
+<td>0.950</td>
+<td>(8.0 RET)</td>
+<td class="rank1">1.0</td>
+<td class="rank2">2.0</td>
+<td class="rank3">3.0</td>
+<td class="rank2">2.0</td>
+<td>4.0</td>
+<td>20.0</td>
+<td>12.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>2nd</td>
+<td>Class 5 NS HPH</td>
+<td>1430</td>
+<td>Mary Ellen</td>
+<td>Paul Carty</td>
+<td>Howth YC</td>
+<td>0.932</td>
+<td class="rank1">1.0</td>
+<td>4.0</td>
+<td class="rank1">1.0</td>
+<td class="rank2">2.0</td>
+<td>(5.0)</td>
+<td>5.0</td>
+<td>18.0</td>
+<td>13.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>3rd</td>
+<td>Class 5 NS HPH</td>
+<td>2848</td>
+<td>Bandersnatch</td>
+<td>Kyran O'Grady</td>
+<td>Howth YC</td>
+<td>0.905</td>
+<td class="rank3">3.0</td>
+<td class="rank3">3.0</td>
+<td>4.0</td>
+<td>(6.0)</td>
+<td class="rank1">1.0</td>
+<td>6.0</td>
+<td>23.0</td>
+<td>17.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>4th</td>
+<td>Class 5 NS HPH</td>
+<td>8151</td>
+<td>Joker's Wild</td>
+<td>L Greene & R Flood</td>
+<td>Howth YC</td>
+<td>0.929</td>
+<td>(10.0 DNC)</td>
+<td>5.0</td>
+<td class="rank3">3.0</td>
+<td>4.0</td>
+<td class="rank3">3.0</td>
+<td class="rank2">2.0</td>
+<td>27.0</td>
+<td>17.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>5th</td>
+<td>Class 5 NS HPH</td>
+<td>1603</td>
+<td>Timballoo</td>
+<td>Lundy / Dunne</td>
+<td>Howth YC / Malahide YC</td>
+<td>0.880</td>
+<td>4.0</td>
+<td class="rank2">2.0</td>
+<td>(7.0)</td>
+<td>5.0</td>
+<td>6.0</td>
+<td class="rank1">1.0</td>
+<td>25.0</td>
+<td>18.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>6th</td>
+<td>Class 5 NS HPH</td>
+<td>11311</td>
+<td>Phixius</td>
+<td>Ray, Costello, McShera, Quigley</td>
+<td>Howth YC</td>
+<td>0.900</td>
+<td>6.0</td>
+<td>(7.0)</td>
+<td>5.0</td>
+<td>7.0</td>
+<td>7.0</td>
+<td class="rank3">3.0</td>
+<td>35.0</td>
+<td>28.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>7th</td>
+<td>Class 5 NS HPH</td>
+<td>971</td>
+<td>Leeuwin</td>
+<td>Burke & Murray</td>
+<td>Howth YC</td>
+<td>0.920</td>
+<td class="rank2">2.0</td>
+<td>(10.0 DNC)</td>
+<td>9.0</td>
+<td class="rank1">1.0</td>
+<td>10.0 DNC</td>
+<td>10.0 DNC</td>
+<td>42.0</td>
+<td>32.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>8th</td>
+<td>Class 5 NS HPH</td>
+<td>1226</td>
+<td>Artful Dodger</td>
+<td>Will Hinsley</td>
+<td>Skerries SC</td>
+<td>0.865</td>
+<td>5.0</td>
+<td>8.0</td>
+<td>6.0</td>
+<td>9.0</td>
+<td>4.0</td>
+<td>(10.0 DNC)</td>
+<td>42.0</td>
+<td>32.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>9th</td>
+<td>Class 5 NS HPH</td>
+<td>1195</td>
+<td>Dobharchu</td>
+<td>K Fox / M Johnston</td>
+<td>Skerries SC</td>
+<td>0.910</td>
+<td>(10.0 DNC)</td>
+<td>6.0</td>
+<td>8.0</td>
+<td>8.0</td>
+<td>10.0 DNC</td>
+<td>10.0 DNC</td>
+<td>52.0</td>
+<td>42.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="summarytitle" id="summaryclass_5_ns_irc">Class 5 NS IRC Fleet</h3>
+<div class="caption summarycaption">Sailed: 6, Discards: 1, To count: 5, Rating system: TCF, Entries: 2, Scoring system: Appendix A</div>
+<table class="summarytable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="15">
+<col class="rank" />
+<col class="fleet" />
+<col class="sailno" />
+<col class="boat" />
+<col class="helmname" />
+<col class="club" />
+<col class="rating" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="total" />
+<col class="nett" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Fleet</th>
+<th>Sail No</th>
+<th>Boat Name</th>
+<th>Owner Name</th>
+<th>Club</th>
+<th>Rating</th>
+<th><a class="racelink" href="#r1class_5_ns_irc">Sep 23rd</a><br />&nbsp;</th>
+<th><a class="racelink" href="#r2class_5_ns_irc">Oct 7th</a><br />&nbsp;</th>
+<th><a class="racelink" href="#r3class_5_ns_irc">Oct 14th</a><br />&nbsp;</th>
+<th><a class="racelink" href="#r4class_5_ns_irc">Oct14th R2</a><br />&nbsp;</th>
+<th><a class="racelink" href="#r5class_5_ns_irc">Oct 21st</a><br />&nbsp;</th>
+<th><a class="racelink" href="#r6class_5_ns_irc">Oct 21st R2</a><br />&nbsp;</th>
+<th>Total</th>
+<th>Nett</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd summaryrow">
+<td>1st</td>
+<td>Class 5 NS IRC</td>
+<td>100</td>
+<td>Demelza</td>
+<td>Steffi & Windsor</td>
+<td>Howth YC</td>
+<td>0.872</td>
+<td class="rank2">(3.0 RET)</td>
+<td class="rank1">1.0</td>
+<td class="rank1">1.0</td>
+<td class="rank1">1.0</td>
+<td class="rank1">1.0</td>
+<td class="rank1">1.0</td>
+<td>8.0</td>
+<td>5.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>2nd</td>
+<td>Class 5 NS IRC</td>
+<td>971</td>
+<td>Leeuwin</td>
+<td>Burke & Murray</td>
+<td>Howth YC</td>
+<td>0.900</td>
+<td class="rank1">1.0</td>
+<td class="rank2">(3.0 DNC)</td>
+<td class="rank2">2.0</td>
+<td class="rank2">2.0</td>
+<td class="rank2">3.0 DNC</td>
+<td class="rank2">3.0 DNC</td>
+<td>14.0</td>
+<td>11.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r1class_5_ns_hph">Sep 23rd - Class 5 NS HPH Fleet</h3>
+<div class="caption racecaption">
+Start: Class 5, Finishes: Finish time, Time: 14.30
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="11">
+<col class="rank" />
+<col class="fleet" />
+<col class="sailno" />
+<col class="boat" />
+<col class="helmname" />
+<col class="club" />
+<col class="rating" />
+<col class="finish" />
+<col class="elapsed" />
+<col class="corrected" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Fleet</th>
+<th>Sail No</th>
+<th>Boat Name</th>
+<th>Owner Name</th>
+<th>Club</th>
+<th>Rating</th>
+<th>Finish</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>Class 5 NS HPH</td>
+<td>1430</td>
+<td>Mary Ellen</td>
+<td>Paul Carty</td>
+<td>Howth YC</td>
+<td>0.932</td>
+<td>15:35:59</td>
+<td>1.05.59</td>
+<td>1.01.30</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>Class 5 NS HPH</td>
+<td>971</td>
+<td>Leeuwin</td>
+<td>Burke & Murray</td>
+<td>Howth YC</td>
+<td>0.920</td>
+<td>15:38:59</td>
+<td>1.08.59</td>
+<td>1.03.28</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>Class 5 NS HPH</td>
+<td>2848</td>
+<td>Bandersnatch</td>
+<td>Kyran O'Grady</td>
+<td>Howth YC</td>
+<td>0.905</td>
+<td>15:42:59</td>
+<td>1.12.59</td>
+<td>1.06.03</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>Class 5 NS HPH</td>
+<td>1603</td>
+<td>Timballoo</td>
+<td>Lundy / Dunne</td>
+<td>Howth YC / Malahide YC</td>
+<td>0.880</td>
+<td>15:45:43</td>
+<td>1.15.43</td>
+<td>1.06.38</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>Class 5 NS HPH</td>
+<td>1226</td>
+<td>Artful Dodger</td>
+<td>Will Hinsley</td>
+<td>Skerries SC</td>
+<td>0.865</td>
+<td>15:50:44</td>
+<td>1.20.44</td>
+<td>1.09.50</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>Class 5 NS HPH</td>
+<td>11311</td>
+<td>Phixius</td>
+<td>Ray, Costello, McShera, Quigley</td>
+<td>Howth YC</td>
+<td>0.900</td>
+<td>15:47:46</td>
+<td>1.17.46</td>
+<td>1.09.59</td>
+<td>6.0</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>Class 5 NS HPH</td>
+<td>100</td>
+<td>Demelza</td>
+<td>Steffi & Windsor</td>
+<td>Howth YC</td>
+<td>0.950</td>
+<td>&nbsp;</td>
+<td>RET</td>
+<td>&nbsp;</td>
+<td>8.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r2class_5_ns_hph">Oct 7th - Class 5 NS HPH Fleet</h3>
+<div class="caption racecaption">
+Start: Class 5, Finishes: Finish time, Time: 14.51
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="11">
+<col class="rank" />
+<col class="fleet" />
+<col class="sailno" />
+<col class="boat" />
+<col class="helmname" />
+<col class="club" />
+<col class="rating" />
+<col class="finish" />
+<col class="elapsed" />
+<col class="corrected" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Fleet</th>
+<th>Sail No</th>
+<th>Boat Name</th>
+<th>Owner Name</th>
+<th>Club</th>
+<th>Rating</th>
+<th>Finish</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>Class 5 NS HPH</td>
+<td>100</td>
+<td>Demelza</td>
+<td>Steffi & Windsor</td>
+<td>Howth YC</td>
+<td>0.950</td>
+<td>15:13:44</td>
+<td>0.22.44</td>
+<td>0.21.36</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>Class 5 NS HPH</td>
+<td>1603</td>
+<td>Timballoo</td>
+<td>Lundy / Dunne</td>
+<td>Howth YC / Malahide YC</td>
+<td>0.876</td>
+<td>15:17:18</td>
+<td>0.26.18</td>
+<td>0.23.02</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>Class 5 NS HPH</td>
+<td>2848</td>
+<td>Bandersnatch</td>
+<td>Kyran O'Grady</td>
+<td>Howth YC</td>
+<td>0.902</td>
+<td>15:17:41</td>
+<td>0.26.41</td>
+<td>0.24.04</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>Class 5 NS HPH</td>
+<td>1430</td>
+<td>Mary Ellen</td>
+<td>Paul Carty</td>
+<td>Howth YC</td>
+<td>0.941</td>
+<td>15:16:40</td>
+<td>0.25.40</td>
+<td>0.24.09</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>Class 5 NS HPH</td>
+<td>8151</td>
+<td>Joker's Wild</td>
+<td>L Greene & R Flood</td>
+<td>Howth YC</td>
+<td>0.929</td>
+<td>15:17:04</td>
+<td>0.26.04</td>
+<td>0.24.13</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>Class 5 NS HPH</td>
+<td>1195</td>
+<td>Dobharchu</td>
+<td>K Fox / M Johnston</td>
+<td>Skerries SC</td>
+<td>0.910</td>
+<td>15:18:22</td>
+<td>0.27.22</td>
+<td>0.24.54</td>
+<td>6.0</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>Class 5 NS HPH</td>
+<td>11311</td>
+<td>Phixius</td>
+<td>Ray, Costello, McShera, Quigley</td>
+<td>Howth YC</td>
+<td>0.895</td>
+<td>15:20:17</td>
+<td>0.29.17</td>
+<td>0.26.13</td>
+<td>7.0</td>
+</tr>
+<tr class="even racerow">
+<td>8</td>
+<td>Class 5 NS HPH</td>
+<td>1226</td>
+<td>Artful Dodger</td>
+<td>Will Hinsley</td>
+<td>Skerries SC</td>
+<td>0.860</td>
+<td>15:22:12</td>
+<td>0.31.12</td>
+<td>0.26.50</td>
+<td>8.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r3class_5_ns_hph">Oct 14th - Class 5 NS HPH Fleet</h3>
+<div class="caption racecaption">
+Start: Class 5, Finishes: Finish time, Time: 14.25
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="11">
+<col class="rank" />
+<col class="fleet" />
+<col class="sailno" />
+<col class="boat" />
+<col class="helmname" />
+<col class="club" />
+<col class="rating" />
+<col class="finish" />
+<col class="elapsed" />
+<col class="corrected" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Fleet</th>
+<th>Sail No</th>
+<th>Boat Name</th>
+<th>Owner Name</th>
+<th>Club</th>
+<th>Rating</th>
+<th>Finish</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>Class 5 NS HPH</td>
+<td>1430</td>
+<td>Mary Ellen</td>
+<td>Paul Carty</td>
+<td>Howth YC</td>
+<td>0.940</td>
+<td>14:48:13</td>
+<td>0.23.13</td>
+<td>0.21.49</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>Class 5 NS HPH</td>
+<td>100</td>
+<td>Demelza</td>
+<td>Steffi & Windsor</td>
+<td>Howth YC</td>
+<td>0.967</td>
+<td>14:48:32</td>
+<td>0.23.32</td>
+<td>0.22.45</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>Class 5 NS HPH</td>
+<td>8151</td>
+<td>Joker's Wild</td>
+<td>L Greene & R Flood</td>
+<td>Howth YC</td>
+<td>0.928</td>
+<td>14:49:32</td>
+<td>0.24.32</td>
+<td>0.22.46</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>Class 5 NS HPH</td>
+<td>2848</td>
+<td>Bandersnatch</td>
+<td>Kyran O'Grady</td>
+<td>Howth YC</td>
+<td>0.902</td>
+<td>14:50:25</td>
+<td>0.25.25</td>
+<td>0.22.56</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>Class 5 NS HPH</td>
+<td>11311</td>
+<td>Phixius</td>
+<td>Ray, Costello, McShera, Quigley</td>
+<td>Howth YC</td>
+<td>0.889</td>
+<td>14:53:05</td>
+<td>0.28.05</td>
+<td>0.24.58</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>Class 5 NS HPH</td>
+<td>1226</td>
+<td>Artful Dodger</td>
+<td>Will Hinsley</td>
+<td>Skerries SC</td>
+<td>0.853</td>
+<td>14:54:31</td>
+<td>0.29.31</td>
+<td>0.25.11</td>
+<td>6.0</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>Class 5 NS HPH</td>
+<td>1603</td>
+<td>Timballoo</td>
+<td>Lundy / Dunne</td>
+<td>Howth YC / Malahide YC</td>
+<td>0.887</td>
+<td>14:54:08</td>
+<td>0.29.08</td>
+<td>0.25.50</td>
+<td>7.0</td>
+</tr>
+<tr class="even racerow">
+<td>8</td>
+<td>Class 5 NS HPH</td>
+<td>1195</td>
+<td>Dobharchu</td>
+<td>K Fox / M Johnston</td>
+<td>Skerries SC</td>
+<td>0.905</td>
+<td>14:54:14</td>
+<td>0.29.14</td>
+<td>0.26.27</td>
+<td>8.0</td>
+</tr>
+<tr class="odd racerow">
+<td>9</td>
+<td>Class 5 NS HPH</td>
+<td>971</td>
+<td>Leeuwin</td>
+<td>Burke & Murray</td>
+<td>Howth YC</td>
+<td>0.927</td>
+<td>15:03:54</td>
+<td>0.38.54</td>
+<td>0.36.04</td>
+<td>9.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r4class_5_ns_hph">Oct14th R2 - Class 5 NS HPH Fleet</h3>
+<div class="caption racecaption">
+Start: Class 5, Finishes: Finish time, Time: 15:40
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="11">
+<col class="rank" />
+<col class="fleet" />
+<col class="sailno" />
+<col class="boat" />
+<col class="helmname" />
+<col class="club" />
+<col class="rating" />
+<col class="finish" />
+<col class="elapsed" />
+<col class="corrected" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Fleet</th>
+<th>Sail No</th>
+<th>Boat Name</th>
+<th>Owner Name</th>
+<th>Club</th>
+<th>Rating</th>
+<th>Finish</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>Class 5 NS HPH</td>
+<td>971</td>
+<td>Leeuwin</td>
+<td>Burke & Murray</td>
+<td>Howth YC</td>
+<td>0.903</td>
+<td>16:21:41</td>
+<td>0:41:41</td>
+<td>0:37:38</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>Class 5 NS HPH</td>
+<td>1430</td>
+<td>Mary Ellen</td>
+<td>Paul Carty</td>
+<td>Howth YC</td>
+<td>0.965</td>
+<td>16:22:53</td>
+<td>0:42:53</td>
+<td>0:41:23</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>Class 5 NS HPH</td>
+<td>100</td>
+<td>Demelza</td>
+<td>Steffi & Windsor</td>
+<td>Howth YC</td>
+<td>0.980</td>
+<td>16:22:21</td>
+<td>0:42:21</td>
+<td>0:41:30</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>Class 5 NS HPH</td>
+<td>8151</td>
+<td>Joker's Wild</td>
+<td>L Greene & R Flood</td>
+<td>Howth YC</td>
+<td>0.940</td>
+<td>16:24:14</td>
+<td>0:44:14</td>
+<td>0:41:35</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>Class 5 NS HPH</td>
+<td>1603</td>
+<td>Timballoo</td>
+<td>Lundy / Dunne</td>
+<td>Howth YC / Malahide YC</td>
+<td>0.875</td>
+<td>16:27:35</td>
+<td>0:47:35</td>
+<td>0:41:38</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>Class 5 NS HPH</td>
+<td>2848</td>
+<td>Bandersnatch</td>
+<td>Kyran O'Grady</td>
+<td>Howth YC</td>
+<td>0.912</td>
+<td>16:26:08</td>
+<td>0:46:08</td>
+<td>0:42:04</td>
+<td>6.0</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>Class 5 NS HPH</td>
+<td>11311</td>
+<td>Phixius</td>
+<td>Ray, Costello, McShera, Quigley</td>
+<td>Howth YC</td>
+<td>0.881</td>
+<td>16:28:32</td>
+<td>0:48:32</td>
+<td>0:42:45</td>
+<td>7.0</td>
+</tr>
+<tr class="even racerow">
+<td>8</td>
+<td>Class 5 NS HPH</td>
+<td>1195</td>
+<td>Dobharchu</td>
+<td>K Fox / M Johnston</td>
+<td>Skerries SC</td>
+<td>0.890</td>
+<td>16:30:15</td>
+<td>0:50:15</td>
+<td>0:44:43</td>
+<td>8.0</td>
+</tr>
+<tr class="odd racerow">
+<td>9</td>
+<td>Class 5 NS HPH</td>
+<td>1226</td>
+<td>Artful Dodger</td>
+<td>Will Hinsley</td>
+<td>Skerries SC</td>
+<td>0.845</td>
+<td>16:35:17</td>
+<td>0:55:17</td>
+<td>0:46:43</td>
+<td>9.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r5class_5_ns_hph">Oct 21st - Class 5 NS HPH Fleet</h3>
+<div class="caption racecaption">
+Start: Class 5, Finishes: Finish time, Time: 13:25
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="11">
+<col class="rank" />
+<col class="fleet" />
+<col class="sailno" />
+<col class="boat" />
+<col class="helmname" />
+<col class="club" />
+<col class="rating" />
+<col class="finish" />
+<col class="elapsed" />
+<col class="corrected" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Fleet</th>
+<th>Sail No</th>
+<th>Boat Name</th>
+<th>Owner Name</th>
+<th>Club</th>
+<th>Rating</th>
+<th>Finish</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>Class 5 NS HPH</td>
+<td>2848</td>
+<td>Bandersnatch</td>
+<td>Kyran O'Grady</td>
+<td>Howth YC</td>
+<td>0.910</td>
+<td>13:48:02</td>
+<td>0:23:02</td>
+<td>0:20:58</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>Class 5 NS HPH</td>
+<td>100</td>
+<td>Demelza</td>
+<td>Steffi & Windsor</td>
+<td>Howth YC</td>
+<td>0.981</td>
+<td>13:46:41</td>
+<td>0:21:41</td>
+<td>0:21:16</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>Class 5 NS HPH</td>
+<td>8151</td>
+<td>Joker's Wild</td>
+<td>L Greene & R Flood</td>
+<td>Howth YC</td>
+<td>0.940</td>
+<td>13:47:48</td>
+<td>0:22:48</td>
+<td>0:21:26</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>Class 5 NS HPH</td>
+<td>1226</td>
+<td>Artful Dodger</td>
+<td>Will Hinsley</td>
+<td>Skerries SC</td>
+<td>0.838</td>
+<td>13:50:38</td>
+<td>0:25:38</td>
+<td>0:21:29</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>Class 5 NS HPH</td>
+<td>1430</td>
+<td>Mary Ellen</td>
+<td>Paul Carty</td>
+<td>Howth YC</td>
+<td>0.967</td>
+<td>13:47:16</td>
+<td>0:22:16</td>
+<td>0:21:32</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>Class 5 NS HPH</td>
+<td>1603</td>
+<td>Timballoo</td>
+<td>Lundy / Dunne</td>
+<td>Howth YC / Malahide YC</td>
+<td>0.875</td>
+<td>13:50:56</td>
+<td>0:25:56</td>
+<td>0:22:42</td>
+<td>6.0</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>Class 5 NS HPH</td>
+<td>11311</td>
+<td>Phixius</td>
+<td>Ray, Costello, McShera, Quigley</td>
+<td>Howth YC</td>
+<td>0.877</td>
+<td>13:51:24</td>
+<td>0:26:24</td>
+<td>0:23:09</td>
+<td>7.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r6class_5_ns_hph">Oct 21st R2 - Class 5 NS HPH Fleet</h3>
+<div class="caption racecaption">
+Start: Class 5, Finishes: Finish time, Time: 14:50
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="11">
+<col class="rank" />
+<col class="fleet" />
+<col class="sailno" />
+<col class="boat" />
+<col class="helmname" />
+<col class="club" />
+<col class="rating" />
+<col class="finish" />
+<col class="elapsed" />
+<col class="corrected" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Fleet</th>
+<th>Sail No</th>
+<th>Boat Name</th>
+<th>Owner Name</th>
+<th>Club</th>
+<th>Rating</th>
+<th>Finish</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>Class 5 NS HPH</td>
+<td>1603</td>
+<td>Timballoo</td>
+<td>Lundy / Dunne</td>
+<td>Howth YC / Malahide YC</td>
+<td>0.869</td>
+<td>16:06:56</td>
+<td>1:16:56</td>
+<td>1:06:51</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>Class 5 NS HPH</td>
+<td>8151</td>
+<td>Joker's Wild</td>
+<td>L Greene & R Flood</td>
+<td>Howth YC</td>
+<td>0.936</td>
+<td>16:03:44</td>
+<td>1:13:44</td>
+<td>1:09:01</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>Class 5 NS HPH</td>
+<td>11311</td>
+<td>Phixius</td>
+<td>Ray, Costello, McShera, Quigley</td>
+<td>Howth YC</td>
+<td>0.870</td>
+<td>16:09:57</td>
+<td>1:19:57</td>
+<td>1:09:33</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>Class 5 NS HPH</td>
+<td>100</td>
+<td>Demelza</td>
+<td>Steffi & Windsor</td>
+<td>Howth YC</td>
+<td>0.978</td>
+<td>16:01:34</td>
+<td>1:11:34</td>
+<td>1:10:00</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>Class 5 NS HPH</td>
+<td>1430</td>
+<td>Mary Ellen</td>
+<td>Paul Carty</td>
+<td>Howth YC</td>
+<td>0.962</td>
+<td>16:03:17</td>
+<td>1:13:17</td>
+<td>1:10:30</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>Class 5 NS HPH</td>
+<td>2848</td>
+<td>Bandersnatch</td>
+<td>Kyran O'Grady</td>
+<td>Howth YC</td>
+<td>0.912</td>
+<td>16:07:54</td>
+<td>1:17:54</td>
+<td>1:11:03</td>
+<td>6.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r1class_5_ns_irc">Sep 23rd - Class 5 NS IRC Fleet</h3>
+<div class="caption racecaption">
+Start: Class 5, Finishes: Finish time, Time: 14.30
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="11">
+<col class="rank" />
+<col class="fleet" />
+<col class="sailno" />
+<col class="boat" />
+<col class="helmname" />
+<col class="club" />
+<col class="rating" />
+<col class="finish" />
+<col class="elapsed" />
+<col class="corrected" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Fleet</th>
+<th>Sail No</th>
+<th>Boat Name</th>
+<th>Owner Name</th>
+<th>Club</th>
+<th>Rating</th>
+<th>Finish</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>Class 5 NS IRC</td>
+<td>971</td>
+<td>Leeuwin</td>
+<td>Burke & Murray</td>
+<td>Howth YC</td>
+<td>0.900</td>
+<td>15:38:59</td>
+<td>1.08.59</td>
+<td>1.02.05</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>Class 5 NS IRC</td>
+<td>100</td>
+<td>Demelza</td>
+<td>Steffi & Windsor</td>
+<td>Howth YC</td>
+<td>0.872</td>
+<td>&nbsp;</td>
+<td>RET</td>
+<td>&nbsp;</td>
+<td>3.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r2class_5_ns_irc">Oct 7th - Class 5 NS IRC Fleet</h3>
+<div class="caption racecaption">
+Start: Class 5, Finishes: Finish time, Time: 14.51
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="11">
+<col class="rank" />
+<col class="fleet" />
+<col class="sailno" />
+<col class="boat" />
+<col class="helmname" />
+<col class="club" />
+<col class="rating" />
+<col class="finish" />
+<col class="elapsed" />
+<col class="corrected" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Fleet</th>
+<th>Sail No</th>
+<th>Boat Name</th>
+<th>Owner Name</th>
+<th>Club</th>
+<th>Rating</th>
+<th>Finish</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>Class 5 NS IRC</td>
+<td>100</td>
+<td>Demelza</td>
+<td>Steffi & Windsor</td>
+<td>Howth YC</td>
+<td>0.872</td>
+<td>15:13:44</td>
+<td>0.22.44</td>
+<td>0.19.49</td>
+<td>1.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r3class_5_ns_irc">Oct 14th - Class 5 NS IRC Fleet</h3>
+<div class="caption racecaption">
+Start: Class 5, Finishes: Finish time, Time: 14.25
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="11">
+<col class="rank" />
+<col class="fleet" />
+<col class="sailno" />
+<col class="boat" />
+<col class="helmname" />
+<col class="club" />
+<col class="rating" />
+<col class="finish" />
+<col class="elapsed" />
+<col class="corrected" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Fleet</th>
+<th>Sail No</th>
+<th>Boat Name</th>
+<th>Owner Name</th>
+<th>Club</th>
+<th>Rating</th>
+<th>Finish</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>Class 5 NS IRC</td>
+<td>100</td>
+<td>Demelza</td>
+<td>Steffi & Windsor</td>
+<td>Howth YC</td>
+<td>0.872</td>
+<td>14:48:32</td>
+<td>0.23.32</td>
+<td>0.20.31</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>Class 5 NS IRC</td>
+<td>971</td>
+<td>Leeuwin</td>
+<td>Burke & Murray</td>
+<td>Howth YC</td>
+<td>0.900</td>
+<td>15:03:54</td>
+<td>0.38.54</td>
+<td>0.35.01</td>
+<td>2.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r4class_5_ns_irc">Oct14th R2 - Class 5 NS IRC Fleet</h3>
+<div class="caption racecaption">
+Start: Class 5, Finishes: Finish time, Time: 15:40
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="11">
+<col class="rank" />
+<col class="fleet" />
+<col class="sailno" />
+<col class="boat" />
+<col class="helmname" />
+<col class="club" />
+<col class="rating" />
+<col class="finish" />
+<col class="elapsed" />
+<col class="corrected" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Fleet</th>
+<th>Sail No</th>
+<th>Boat Name</th>
+<th>Owner Name</th>
+<th>Club</th>
+<th>Rating</th>
+<th>Finish</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>Class 5 NS IRC</td>
+<td>100</td>
+<td>Demelza</td>
+<td>Steffi & Windsor</td>
+<td>Howth YC</td>
+<td>0.872</td>
+<td>16:22:21</td>
+<td>0:42:21</td>
+<td>0:36:56</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>Class 5 NS IRC</td>
+<td>971</td>
+<td>Leeuwin</td>
+<td>Burke & Murray</td>
+<td>Howth YC</td>
+<td>0.900</td>
+<td>16:21:41</td>
+<td>0:41:41</td>
+<td>0:37:31</td>
+<td>2.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r5class_5_ns_irc">Oct 21st - Class 5 NS IRC Fleet</h3>
+<div class="caption racecaption">
+Start: Class 5, Finishes: Finish time, Time: 13:25
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="11">
+<col class="rank" />
+<col class="fleet" />
+<col class="sailno" />
+<col class="boat" />
+<col class="helmname" />
+<col class="club" />
+<col class="rating" />
+<col class="finish" />
+<col class="elapsed" />
+<col class="corrected" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Fleet</th>
+<th>Sail No</th>
+<th>Boat Name</th>
+<th>Owner Name</th>
+<th>Club</th>
+<th>Rating</th>
+<th>Finish</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>Class 5 NS IRC</td>
+<td>100</td>
+<td>Demelza</td>
+<td>Steffi & Windsor</td>
+<td>Howth YC</td>
+<td>0.872</td>
+<td>13:46:41</td>
+<td>0:21:41</td>
+<td>0:18:54</td>
+<td>1.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r6class_5_ns_irc">Oct 21st R2 - Class 5 NS IRC Fleet</h3>
+<div class="caption racecaption">
+Start: Class 5, Finishes: Finish time, Time: 14:50
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="11">
+<col class="rank" />
+<col class="fleet" />
+<col class="sailno" />
+<col class="boat" />
+<col class="helmname" />
+<col class="club" />
+<col class="rating" />
+<col class="finish" />
+<col class="elapsed" />
+<col class="corrected" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Fleet</th>
+<th>Sail No</th>
+<th>Boat Name</th>
+<th>Owner Name</th>
+<th>Club</th>
+<th>Rating</th>
+<th>Finish</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>Class 5 NS IRC</td>
+<td>100</td>
+<td>Demelza</td>
+<td>Steffi & Windsor</td>
+<td>Howth YC</td>
+<td>0.872</td>
+<td>16:01:34</td>
+<td>1:11:34</td>
+<td>1:02:24</td>
+<td>1.0</td>
+</tr>
+</tbody>
+</table>
+
+<p class="hardleft"><a href="http://"></a><br /><a href="mailto:"></a></p>
+<p class="hardright"><a href="http://"></a><br /><a href="mailto:"></a></p>
+<p>Sailwave Scoring Software 2.30.02<br /><a href="https://www.sailwave.com">www.sailwave.com</a></p>
+
+</div>
+
+<footer>
+</footer>
+
+<div id="scrollbottom"></div>
+
+</body>
+</html>
+
+

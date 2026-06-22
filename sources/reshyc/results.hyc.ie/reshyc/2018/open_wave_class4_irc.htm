@@ -1,0 +1,1036 @@
+
+
+
+<!doctype html>
+
+<head>
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="description" content="sailwave results">
+<meta name="viewport" content="width=device-width">
+
+<title>Sailwave results for Wave Regatta 2018 at Howth Yacht Club 2018</title>
+
+<style type="text/css">
+body {font: 67% arial, helvetica, sans-serif; text-align: center;}
+.hardleft  {text-align: left; float: left;  margin: 15px 0  0 25px;}
+.hardright {text-align: right; float: right; margin: 15px 25px 0 0;}
+table, caption {text-align: left; margin: auto; font-size: 1em; border-collapse: collapse; border: 1px #fff solid;}
+td {padding: 4px; border-right: 1px #fff solid; border-bottom: 1px #ffffff solid; vertical-align: top;}
+th {padding: 4px; border: 1px #fff solid; border-bottom: 1px #ffffff solid; vertical-align: top;}
+.caption {padding: 5px; text-align: center; border: 0; font-weight: bold;}
+h1 {font-size: 1.6em;}
+h2 {font-size: 1.4em;}
+h3 {font-size: 1.2em;}
+p {text-align: center;}
+th {background-color: #d0d0d0;}
+.contents {text-align: left; margin-left: 20%;}
+.race, .rank {text-align: center;}
+.even {background-color: #eaeaea;}
+.odd {background-color: #f4f4f4;}
+.nat {text-align: center;}
+.natflag {border: 1px #999 solid;}
+.nattext {font-size: 0.8em;}
+</style>
+
+<script type="text/javascript">
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script>
+
+function swGetURLArgs() {
+
+  var url = location.href;
+  var qs  = url.substring(url.indexOf('?') + 1).split('&');
+
+  for(var i = 0, result = {}; i < qs.length; i++) {
+    qs[i]            = qs[i].split('=');
+    result[qs[i][0]] = decodeURIComponent(qs[i][1]);
+  }
+
+  return result;
+}
+
+//#name=results
+//#author=Colin Jenkins
+//#date=2012-02-16
+//#version=1.0
+//#desc=Functions to use if scripting is turned on when publishing results.
+//#url=http://sailwave.com
+//#email=colin@sailwave.com
+//#twitter=sailwave
+
+//*****Just translate these strings to get results in a different language
+var swStr = {};
+swStr.SummaryTitle            = 'Overall';
+swStr.SummaryCaptionSailed    = 'Sailed';
+swStr.SummaryCaptionDiscards  = 'Discards';
+swStr.SummaryCaptionToCount   = 'To count';
+swStr.SummaryCaptionToQualify = 'To qualify';
+swStr.SummaryCaptionRatings   = 'Ratings';
+swStr.SummaryCaptionEntries   = 'Entries';
+swStr.SummaryCaptionScoring   = 'Scoring system';
+swStr.RacePrefix              = 'R';
+swStr.PrizesTitle             = 'Prizes';
+swStr.CodesTitle              = 'Scoring codes used';
+
+// was 'at' changed 020512
+swStr.Wordat                  = '';
+//*****End translate
+
+//*****You must declare these Sailwave assumed variables which are populated when publishing
+var swSeries             = {};
+swSeries.Title           = '';
+swSeries.Notes           = '';
+swSeries.Event           = '';
+swSeries.Venue           = '';
+var swSS                 = new Array();
+var swSummary            = {};
+swSummary.ScoringSys     = 0;
+swSummary.Field          = '';
+swSummary.Value          = '';
+swSummary.TagValue       = '';
+swSummary.FieldName      = '';
+swSummary.Entries        = 0;
+swSummary.Sailed         = 0;
+swSummary.Discards       = 0;
+swSummary.FinalsDiscards = 0;
+swSummary.ToCount        = 0;
+swSummary.ToQualify      = 0;
+var swRace               = {};
+swRace.Entries           = 0;
+swRace.Notes             = '';
+swRace.Date              = '';
+swRace.Time              = '';
+swRace.Name              = '';
+swRace.Rank              = 0;
+//*****End of assumed vars
+
+var swSpace = '&nbsp;';
+var swTwoSpaces = '&nbsp;&nbsp;';
+
+function resSeriesTitle() {
+  document.write('<h2 class="seriestitle">' + swSeries.Title + '</h2>');
+}
+
+/*
+function resSeriesNotes() {
+  document.write('<p class="seriesnotes">' + swSeries.Notes + '</p>');
+}
+*/
+
+function resSeriesNotes() {
+  document.write('<h3>' + swSeries.Notes + '</h3>');
+}
+
+function resSummaryTitle() {
+  if (swSummary.Field)
+    document.write('<h1 class="summarytitle" id="summary' + swSummary.TagValue + '">' + swSummary.Value + '<br>' + swStr.SummaryTitle + '</h1>');
+  else
+    document.write('<h3 class="summarytitle">' + swStr.SummaryTitle + '</h3>');
+}
+
+function resSummaryCaption() {
+  var h  = '';
+  var ss = swSS[swSummary.ScoringSys];
+  h += '<div class="caption summarycaption">';
+  h +=          swStr.SummaryCaptionSailed    + ': ' + swSummary.Sailed;
+  h +=   ', ' + swStr.SummaryCaptionDiscards  + ': ' + swSummary.Discards;
+  h +=   ', ' + swStr.SummaryCaptionToCount   + ': ' + swSummary.ToCount;
+  if (swSummary.ToQualify > 0)
+    h += ', ' + swStr.SummaryCaptionToQualify + ': ' + swSummary.ToQualify;
+  if (ss.RatingSystem.toLowerCase() != 'none')
+    h += ', ' + swStr.SummaryCaptionRatings   + ': ' + ss.RatingSystem;
+  h +=   ', ' + swStr.SummaryCaptionEntries   + ': ' + swSummary.Entries;
+  h +=   ', ' + swStr.SummaryCaptionScoring   + ': ' + ss.Name
+  h += '</div>'
+  document.write(h);
+}
+
+function resRaceTitle() {
+
+  var Extra = '';
+  var Race = ''
+
+  if (swRace.Name)
+    Race = swRace.Name;
+  else
+    //Race = swStr.RacePrefix + swRace.Rank
+                Race = 'Race ' + swRace.Rank
+
+  if (swRace.Date)
+    //Extra = swSpace + '-' + swSpace + swRace.Date;
+                Extra = swRace.Date;
+
+  if (swRace.Time)
+    Extra = Extra + swSpace + swStr.Wordat + swSpace + swRace.Time;
+
+  if (swSummary.Field)
+    document.write('<h2 class="racetitle" id="r' + swRace.Rank + swSummary.TagValue + '">' + Race + swTwoSpaces + '-' + swTwoSpaces + Extra + swTwoSpaces + '-' + swTwoSpaces + swSummary.Value + '</h2>');
+  else
+    document.write('<h2 class="racetitle">' + Race + swTwoSpaces + '-' + swTwoSpaces + Extra + swTwoSpaces + '-' + swTwoSpaces + swSummary.Value + '</h2>');
+}
+
+function resRaceNotes() {
+  document.write('<p class="racenotes">' + swRace.Notes + '</p>');
+}
+
+function resPrizeTitle() {
+  document.write('<h3 class="prizestitle">' + swStr.PrizesTitle + '</h3>');
+}
+
+function resCodesTitle() {
+  document.write('<h3 class="codestitle">' + swStr.CodesTitle + '</h3>');
+}
+</script>
+
+</head>
+
+<body>
+
+<header>
+</header>
+
+<div id="wrap">
+
+<img class="hardright" src="https://hyc.ie/reshyc/images/wave.jpg" alt="event burgee" />
+<img class="hardleft"  src="https://hyc.ie/reshyc/images/hyc.jpg" alt="venue burgee" />
+
+<h1>Wave Regatta 2018</h1>
+<h2>Howth Yacht Club</h2>
+
+<div style="clear:both;"></div>
+
+<style>
+div.applicant-break {page-break-after:always;}
+</style>
+<h3 class="seriestitle">Provisional Results as of 16:14 on June  3, 2018</h3>
+<h3 class="summarytitle" id="summaryclass_4_irc">Class 4 IRC Fleet</h3>
+<div class="caption summarycaption">Sailed: 5, Discards: 1, To count: 4, Rating system: TCF, Entries: 8, Scoring system: Appendix A</div>
+<table class="summarytable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="13">
+<col class="rank" />
+<col class="sailno" />
+<col class="boat" />
+<col class="helmname" />
+<col class="club" />
+<col class="rating" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="total" />
+<col class="nett" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>SailNo</th>
+<th>Boat Name</th>
+<th>Owner Name</th>
+<th>Club</th>
+<th>TCF</th>
+<th><a class="racelink" href="#r1class_4_irc">R1</a><br />01/06</th>
+<th><a class="racelink" href="#r2class_4_irc">Lambay</a><br />&nbsp;</th>
+<th><a class="racelink" href="#r3class_4_irc">R3</a><br />03/06</th>
+<th><a class="racelink" href="#r4class_4_irc">R4</a><br />&nbsp;</th>
+<th><a class="racelink" href="#r5class_4_irc">R5</a><br />03/06</th>
+<th>Total</th>
+<th>Nett</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd summaryrow">
+<td>1st</td>
+<td>3335</td>
+<td>Bite the Bullet</td>
+<td>C Bermingham</td>
+<td>HYC</td>
+<td>0.957</td>
+<td class="rank1">1.0</td>
+<td class="rank1">1.5</td>
+<td class="rank1">1.0</td>
+<td class="rank3">(3.0)</td>
+<td class="rank2">2.0</td>
+<td>8.5</td>
+<td>5.5</td>
+</tr>
+<tr class="even summaryrow">
+<td>2nd</td>
+<td>4077</td>
+<td>Tiger</td>
+<td>Harris/Hughes</td>
+<td>HYC</td>
+<td>1.042</td>
+<td>(5.0)</td>
+<td class="rank2">3.0</td>
+<td class="rank2">2.0</td>
+<td class="rank1">1.0</td>
+<td class="rank3">3.0</td>
+<td>14.0</td>
+<td>9.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>3rd</td>
+<td>8571</td>
+<td>Spellbound</td>
+<td>H&G Burrows/Skeffington</td>
+<td>HYC</td>
+<td>0.969</td>
+<td>(6.0)</td>
+<td>7.5</td>
+<td class="rank3">3.0</td>
+<td class="rank2">2.0</td>
+<td class="rank1">1.0</td>
+<td>19.5</td>
+<td>13.5</td>
+</tr>
+<tr class="even summaryrow">
+<td>4th</td>
+<td>8331</td>
+<td>Changeling</td>
+<td>K Jameson</td>
+<td>HYC</td>
+<td>0.967</td>
+<td class="rank2">2.0</td>
+<td class="rank3">4.5</td>
+<td>(4.0)</td>
+<td>4.0</td>
+<td>4.0</td>
+<td>18.5</td>
+<td>14.5</td>
+</tr>
+<tr class="odd summaryrow">
+<td>5th</td>
+<td>9400</td>
+<td>Trinculo</td>
+<td>M Fleming</td>
+<td>HYC</td>
+<td>1.01</td>
+<td>4.0</td>
+<td>6.0</td>
+<td>(6.0)</td>
+<td>5.0</td>
+<td>5.0</td>
+<td>26.0</td>
+<td>20.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>6th</td>
+<td>4073</td>
+<td>Splashdance</td>
+<td>George/Beckett</td>
+<td>HYC</td>
+<td>1.01</td>
+<td class="rank3">3.0</td>
+<td>9.0</td>
+<td>(9.0 DNS)</td>
+<td>9.0 DNS</td>
+<td>9.0 DNS</td>
+<td>39.0</td>
+<td>30.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>7th</td>
+<td>1345</td>
+<td>Samatom</td>
+<td>R Rendell</td>
+<td>HYC</td>
+<td>1.066</td>
+<td>7.0</td>
+<td>13.5 DNC</td>
+<td>5.0</td>
+<td>6.0</td>
+<td>(9.0 DNS)</td>
+<td>40.5</td>
+<td>31.5</td>
+</tr>
+<tr class="even summaryrow">
+<td>8th</td>
+<td>6001</td>
+<td>Rebellion</td>
+<td>Hughes/O'Mahony/Hanlon</td>
+<td>HYC</td>
+<td>1.047</td>
+<td>(8.0)</td>
+<td>13.5 DNC</td>
+<td>7.0</td>
+<td>7.0</td>
+<td>6.0</td>
+<td>41.5</td>
+<td>33.5</td>
+</tr>
+</tbody>
+</table>
+<div class="applicant-break"></div>
+<h3 class="racetitle" id="r1class_4_irc">R1 - Class 4 IRC Fleet&nbsp;-&nbsp;01/06</h3>
+<div class="caption racecaption">
+Start: Start 3, Finishes: Finish time, Time: 144300
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="10">
+<col class="rank" />
+<col class="sailno" />
+<col class="boat" />
+<col class="helmname" />
+<col class="club" />
+<col class="rating" />
+<col class="finish" />
+<col class="elapsed" />
+<col class="corrected" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>SailNo</th>
+<th>Boat Name</th>
+<th>Owner Name</th>
+<th>Club</th>
+<th>TCF</th>
+<th>Finish</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>3335</td>
+<td>Bite the Bullet</td>
+<td>C Bermingham</td>
+<td>HYC</td>
+<td>0.957</td>
+<td>15:28:12</td>
+<td>0:45:12</td>
+<td>0:43:15</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>8331</td>
+<td>Changeling</td>
+<td>K Jameson</td>
+<td>HYC</td>
+<td>0.967</td>
+<td>15:29:06</td>
+<td>0:46:06</td>
+<td>0:44:35</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>4073</td>
+<td>Splashdance</td>
+<td>George/Beckett</td>
+<td>HYC</td>
+<td>1.01</td>
+<td>15:30:11</td>
+<td>0:47:11</td>
+<td>0:47:39</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>9400</td>
+<td>Trinculo</td>
+<td>M Fleming</td>
+<td>HYC</td>
+<td>1.01</td>
+<td>15:32:41</td>
+<td>0:49:41</td>
+<td>0:50:11</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>4077</td>
+<td>Tiger</td>
+<td>Harris/Hughes</td>
+<td>HYC</td>
+<td>1.042</td>
+<td>15:35:21</td>
+<td>0:52:21</td>
+<td>0:54:33</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>8571</td>
+<td>Spellbound</td>
+<td>H&G Burrows/Skeffington</td>
+<td>HYC</td>
+<td>0.969</td>
+<td>15:40:15</td>
+<td>0:57:15</td>
+<td>0:55:29</td>
+<td>6.0</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>1345</td>
+<td>Samatom</td>
+<td>R Rendell</td>
+<td>HYC</td>
+<td>1.066</td>
+<td>15:36:55</td>
+<td>0:53:55</td>
+<td>0:57:29</td>
+<td>7.0</td>
+</tr>
+<tr class="even racerow">
+<td>8</td>
+<td>6001</td>
+<td>Rebellion</td>
+<td>Hughes/O'Mahony/Hanlon</td>
+<td>HYC</td>
+<td>1.047</td>
+<td>15:38:52</td>
+<td>0:55:52</td>
+<td>0:58:30</td>
+<td>8.0</td>
+</tr>
+</tbody>
+</table>
+<div class="applicant-break"></div>
+<h3 class="racetitle" id="r2class_4_irc">Lambay - Class 4 IRC Fleet</h3>
+<div class="caption racecaption">
+Start: Start 3, Finishes: Finish time, Time: 140700, Weight: 1.5
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="10">
+<col class="rank" />
+<col class="sailno" />
+<col class="boat" />
+<col class="helmname" />
+<col class="club" />
+<col class="rating" />
+<col class="finish" />
+<col class="elapsed" />
+<col class="corrected" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>SailNo</th>
+<th>Boat Name</th>
+<th>Owner Name</th>
+<th>Club</th>
+<th>TCF</th>
+<th>Finish</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>3335</td>
+<td>Bite the Bullet</td>
+<td>C Bermingham</td>
+<td>HYC</td>
+<td>0.957</td>
+<td>16:35:37</td>
+<td>2:28:37</td>
+<td>2:22:14</td>
+<td>1.5</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>4077</td>
+<td>Tiger</td>
+<td>Harris/Hughes</td>
+<td>HYC</td>
+<td>1.042</td>
+<td>16:24:05</td>
+<td>2:17:05</td>
+<td>2:22:50</td>
+<td>3.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>8331</td>
+<td>Changeling</td>
+<td>K Jameson</td>
+<td>HYC</td>
+<td>0.967</td>
+<td>16:39:34</td>
+<td>2:32:34</td>
+<td>2:27:32</td>
+<td>4.5</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>9400</td>
+<td>Trinculo</td>
+<td>M Fleming</td>
+<td>HYC</td>
+<td>1.01</td>
+<td>16:36:01</td>
+<td>2:29:01</td>
+<td>2:30:30</td>
+<td>6.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>8571</td>
+<td>Spellbound</td>
+<td>H&G Burrows/Skeffington</td>
+<td>HYC</td>
+<td>0.969</td>
+<td>17:00:29</td>
+<td>2:53:29</td>
+<td>2:48:06</td>
+<td>7.5</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>4073</td>
+<td>Splashdance</td>
+<td>George/Beckett</td>
+<td>HYC</td>
+<td>1.01</td>
+<td>17:00:46</td>
+<td>2:53:46</td>
+<td>2:55:30</td>
+<td>9.0</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>1345</td>
+<td>Samatom</td>
+<td>R Rendell</td>
+<td>HYC</td>
+<td>1.066</td>
+<td>16:03:23</td>
+<td>DNC</td>
+<td>&nbsp;</td>
+<td>13.5</td>
+</tr>
+<tr class="even racerow">
+<td>7</td>
+<td>6001</td>
+<td>Rebellion</td>
+<td>Hughes/O'Mahony/Hanlon</td>
+<td>HYC</td>
+<td>1.047</td>
+<td>16:34:44</td>
+<td>DNC</td>
+<td>&nbsp;</td>
+<td>13.5</td>
+</tr>
+</tbody>
+</table>
+<div class="applicant-break"></div>
+<h3 class="racetitle" id="r3class_4_irc">R3 - Class 4 IRC Fleet&nbsp;-&nbsp;03/06</h3>
+<div class="caption racecaption">
+Start: Start 3, Finishes: Finish time, Time: 110500
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="10">
+<col class="rank" />
+<col class="sailno" />
+<col class="boat" />
+<col class="helmname" />
+<col class="club" />
+<col class="rating" />
+<col class="finish" />
+<col class="elapsed" />
+<col class="corrected" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>SailNo</th>
+<th>Boat Name</th>
+<th>Owner Name</th>
+<th>Club</th>
+<th>TCF</th>
+<th>Finish</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>3335</td>
+<td>Bite the Bullet</td>
+<td>C Bermingham</td>
+<td>HYC</td>
+<td>0.957</td>
+<td>12:03:54</td>
+<td>0:58:54</td>
+<td>0:56:22</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>4077</td>
+<td>Tiger</td>
+<td>Harris/Hughes</td>
+<td>HYC</td>
+<td>1.042</td>
+<td>11:59:19</td>
+<td>0:54:19</td>
+<td>0:56:36</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>8571</td>
+<td>Spellbound</td>
+<td>H&G Burrows/Skeffington</td>
+<td>HYC</td>
+<td>0.969</td>
+<td>12:04:22</td>
+<td>0:59:22</td>
+<td>0:57:32</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>8331</td>
+<td>Changeling</td>
+<td>K Jameson</td>
+<td>HYC</td>
+<td>0.967</td>
+<td>12:06:32</td>
+<td>1:01:32</td>
+<td>0:59:30</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>1345</td>
+<td>Samatom</td>
+<td>R Rendell</td>
+<td>HYC</td>
+<td>1.066</td>
+<td>12:02:02</td>
+<td>0:57:02</td>
+<td>1:00:48</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>9400</td>
+<td>Trinculo</td>
+<td>M Fleming</td>
+<td>HYC</td>
+<td>1.01</td>
+<td>12:07:00</td>
+<td>1:02:00</td>
+<td>1:02:37</td>
+<td>6.0</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>6001</td>
+<td>Rebellion</td>
+<td>Hughes/O'Mahony/Hanlon</td>
+<td>HYC</td>
+<td>1.047</td>
+<td>12:10:37</td>
+<td>1:05:37</td>
+<td>1:08:42</td>
+<td>7.0</td>
+</tr>
+<tr class="even racerow">
+<td>8</td>
+<td>4073</td>
+<td>Splashdance</td>
+<td>George/Beckett</td>
+<td>HYC</td>
+<td>1.01</td>
+<td>&nbsp;</td>
+<td>DNS</td>
+<td>&nbsp;</td>
+<td>9.0</td>
+</tr>
+</tbody>
+</table>
+<div class="applicant-break"></div>
+<h3 class="racetitle" id="r4class_4_irc">R4 - Class 4 IRC Fleet</h3>
+<div class="caption racecaption">
+Start: Start 3, Finishes: Finish time, Time: 123500
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="10">
+<col class="rank" />
+<col class="sailno" />
+<col class="boat" />
+<col class="helmname" />
+<col class="club" />
+<col class="rating" />
+<col class="finish" />
+<col class="elapsed" />
+<col class="corrected" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>SailNo</th>
+<th>Boat Name</th>
+<th>Owner Name</th>
+<th>Club</th>
+<th>TCF</th>
+<th>Finish</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>4077</td>
+<td>Tiger</td>
+<td>Harris/Hughes</td>
+<td>HYC</td>
+<td>1.042</td>
+<td>13:18:15</td>
+<td>0:43:15</td>
+<td>0:45:04</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>8571</td>
+<td>Spellbound</td>
+<td>H&G Burrows/Skeffington</td>
+<td>HYC</td>
+<td>0.969</td>
+<td>13:22:59</td>
+<td>0:47:59</td>
+<td>0:46:30</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>3335</td>
+<td>Bite the Bullet</td>
+<td>C Bermingham</td>
+<td>HYC</td>
+<td>0.957</td>
+<td>13:23:36</td>
+<td>0:48:36</td>
+<td>0:46:31</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>8331</td>
+<td>Changeling</td>
+<td>K Jameson</td>
+<td>HYC</td>
+<td>0.967</td>
+<td>13:24:23</td>
+<td>0:49:23</td>
+<td>0:47:45</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>9400</td>
+<td>Trinculo</td>
+<td>M Fleming</td>
+<td>HYC</td>
+<td>1.01</td>
+<td>13:24:04</td>
+<td>0:49:04</td>
+<td>0:49:33</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>1345</td>
+<td>Samatom</td>
+<td>R Rendell</td>
+<td>HYC</td>
+<td>1.066</td>
+<td>13:22:46</td>
+<td>0:47:46</td>
+<td>0:50:55</td>
+<td>6.0</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>6001</td>
+<td>Rebellion</td>
+<td>Hughes/O'Mahony/Hanlon</td>
+<td>HYC</td>
+<td>1.047</td>
+<td>13:27:42</td>
+<td>0:52:42</td>
+<td>0:55:11</td>
+<td>7.0</td>
+</tr>
+<tr class="even racerow">
+<td>8</td>
+<td>4073</td>
+<td>Splashdance</td>
+<td>George/Beckett</td>
+<td>HYC</td>
+<td>1.01</td>
+<td>&nbsp;</td>
+<td>DNS</td>
+<td>&nbsp;</td>
+<td>9.0</td>
+</tr>
+</tbody>
+</table>
+<div class="applicant-break"></div>
+<h3 class="racetitle" id="r5class_4_irc">R5 - Class 4 IRC Fleet&nbsp;-&nbsp;03/06</h3>
+<div class="caption racecaption">
+Start: Start 3, Finishes: Finish time, Time: 140500
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="10">
+<col class="rank" />
+<col class="sailno" />
+<col class="boat" />
+<col class="helmname" />
+<col class="club" />
+<col class="rating" />
+<col class="finish" />
+<col class="elapsed" />
+<col class="corrected" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>SailNo</th>
+<th>Boat Name</th>
+<th>Owner Name</th>
+<th>Club</th>
+<th>TCF</th>
+<th>Finish</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>8571</td>
+<td>Spellbound</td>
+<td>H&G Burrows/Skeffington</td>
+<td>HYC</td>
+<td>0.969</td>
+<td>15:37:08</td>
+<td>1:32:08</td>
+<td>1:29:17</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>3335</td>
+<td>Bite the Bullet</td>
+<td>C Bermingham</td>
+<td>HYC</td>
+<td>0.957</td>
+<td>15:39:05</td>
+<td>1:34:05</td>
+<td>1:30:02</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>4077</td>
+<td>Tiger</td>
+<td>Harris/Hughes</td>
+<td>HYC</td>
+<td>1.042</td>
+<td>15:31:45</td>
+<td>1:26:45</td>
+<td>1:30:24</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>8331</td>
+<td>Changeling</td>
+<td>K Jameson</td>
+<td>HYC</td>
+<td>0.967</td>
+<td>15:42:43</td>
+<td>1:37:43</td>
+<td>1:34:30</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>9400</td>
+<td>Trinculo</td>
+<td>M Fleming</td>
+<td>HYC</td>
+<td>1.01</td>
+<td>15:41:32</td>
+<td>1:36:32</td>
+<td>1:37:30</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>6001</td>
+<td>Rebellion</td>
+<td>Hughes/O'Mahony/Hanlon</td>
+<td>HYC</td>
+<td>1.047</td>
+<td>15:49:11</td>
+<td>1:44:11</td>
+<td>1:49:05</td>
+<td>6.0</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>4073</td>
+<td>Splashdance</td>
+<td>George/Beckett</td>
+<td>HYC</td>
+<td>1.01</td>
+<td>&nbsp;</td>
+<td>DNS</td>
+<td>&nbsp;</td>
+<td>9.0</td>
+</tr>
+<tr class="even racerow">
+<td>7</td>
+<td>1345</td>
+<td>Samatom</td>
+<td>R Rendell</td>
+<td>HYC</td>
+<td>1.066</td>
+<td>&nbsp;</td>
+<td>DNS</td>
+<td>&nbsp;</td>
+<td>9.0</td>
+</tr>
+</tbody>
+</table>
+
+<p class="hardleft"><a href="http://"></a><br /><a href="mailto:"></a></p>
+<p class="hardright"><a href="http://"></a><br /><a href="mailto:"></a></p>
+<p>Sailwave Scoring Software 2.25.4<br /><a href="http://www.sailwave.com">www.sailwave.com</a></p>
+
+</div>
+
+<footer>
+</footer>
+
+<div id="scrollbottom"></div>
+
+</body>
+</html>
+
+

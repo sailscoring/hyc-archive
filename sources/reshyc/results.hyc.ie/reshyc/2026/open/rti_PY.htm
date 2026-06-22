@@ -1,0 +1,909 @@
+
+
+
+<!doctype html>
+<html lang="en-US">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html;charset=ISO-8859-1"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="description" content="sailwave results">
+<meta name="viewport" content="width=device-width">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+
+<title>Sailwave results for 2026 Round the Island Race at Howth YC 2026</title>
+
+<style type="text/css">
+body {font: 72% arial, helvetica, sans-serif; text-align: center;}
+.hardleft  {text-align: left; float: left;  margin: 15px 0 15px 25px;}
+.hardright {text-align: right; float: right; margin: 15px 25px 15px 0;}
+table {text-align: left; margin: 0px auto 30px auto; font-size: 1em; border-collapse: collapse; border: 1px #fff solid;}
+td, th {padding: 4px; border: 2px #fff solid; vertical-align: top;}
+.caption {padding: 5px; text-align: center; border: 0; font-weight: bold;}
+h1 {font-size: 1.6em;}
+h2 {font-size: 1.4em;}
+h3 {font-size: 1.2em;}
+p {text-align: center;}
+th {background-color: #aaf;}
+.contents {text-align: left; margin-left: 20%;}
+.even {background-color: #bbf;}
+.odd {background-color: #ddf;}
+.natflag {border: 1px #999 solid;}
+.nattext {font-size: 0.8em;}
+.place1 {font-weight: bold; background-color: #ffffaa;}
+.place2 {font-weight: bold; background-color: #aaaaff;}
+.place3 {font-weight: bold; background-color: #ffaaaa;}
+.placen {}
+table.headertable {border: 0px;}
+table.headertable td{border: 0px;}
+</style>
+
+<script type="text/javascript">
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script>
+
+function swGetURLArgs() {
+
+  var url = location.href;
+  var qs  = url.substring(url.indexOf('?') + 1).split('&');
+
+  for(var i = 0, result = {}; i < qs.length; i++) {
+    qs[i]            = qs[i].split('=');
+    result[qs[i][0]] = decodeURIComponent(qs[i][1]);
+  }
+
+  return result;
+}
+
+//
+//  name=HighlightWins3v3
+//  dependencies=jQuery
+//  description=Highlight winning scores in summary tables.
+//  author=Jon Eskdale based on an idea by Colin Jenkins
+//  date=2016-07-04
+//  version=3.0  For use with Sailwave from V2.22.x
+//  Requires the following lines in the Results.htm file (Results.htm is in the Templates directory)
+//  string.set("summary.col.race.rank1.td",   "rank1")
+//  string.set("summary.col.race.rank2.td",   "rank2")
+//  string.set("summary.col.race.rank3.td",   "rank3")
+
+//  url=http://sailwave.com
+//  email=jon@sailwave.com
+//  twitter=eskdale
+//  comments=Edit colours to colours of your choice
+//
+
+$(document).ready(function() {
+var selectorRank1 = '.rank1';
+var selectorRank2 = '.rank2';
+var selectorRank3 = '.rank3';
+
+// Results with these codes will not get highlighted add or remove codes to your choice
+var ignoreText   = /^(?!.*\b(DNC|DNF|DNS|OCS|BFD|UFD|RET|DSQ|DGM|DNE)\b).*/i
+
+// Edit these colours to change the highlight colours for 1st, 2nd and 3rd
+var winsColour   = '#ffd700';
+var twoColour    = '#6a91c5';
+var threeColour  = '#da6841';
+
+
+// Change the background color for cells with class of rank1-3 and don't have a code specified
+$(function () {
+
+  $(selectorRank1).filter(function() {
+    return ignoreText.test($(this).text());
+  }).css("background", winsColour);
+  $(selectorRank2).filter(function() {
+        return ignoreText.test($(this).text());
+  }).css("background", twoColour);
+  $(selectorRank3).filter(function() {
+        return ignoreText.test($(this).text());
+  }).css("background", threeColour);
+
+});
+});
+</script>
+<link rel="shortcut icon" type="image/ico" href="https://www.sailwave.com/favicon.ico"/>
+</head>
+
+<body>
+
+<header>
+</header>
+<table class="headertable" cellspacing="0" width="100%" cellpadding="0" border="0">
+<tbody>
+<div id="wrap">
+
+<tr>
+<td width="30%">
+<img id="venueburgee" style="display:block; height:100px;"  src="https://hyc.ie/system/sponsor_logos/440/normal/HYC_Logo.jpg" alt="venue burgee" />
+</td>
+
+<td width="40%" align="center">
+<h1>2026 Round the Island Race</h1>
+<h2>Howth YC</h2>
+</td>
+
+<td width="30%">
+<img id="eventburgee" style="display:block; height:100px;" src="https://hyc.ie/system/sponsor_logos/440/normal/HYC_Logo.jpg" alt="event burgee" align="right" />
+</td>
+</tr>
+</tbody>
+</table>
+
+<div style="clear:both;"></div>
+
+<style>
+div.applicant-break {page-break-after:always;}
+</style>
+<h3 class="seriestitle">Results are provisional as of 22:38 on March  7, 2026</h3>
+<h3 class="summarytitle" id="summarypy">PY Fleet</h3>
+<div class="caption summarycaption">Sailed: 1, Discards: 0, To count: 1, Rating system: PY, Entries: 33, Scoring system: Appendix A</div>
+<table class="summarytable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="9">
+<col class="rank" />
+<col class="sailno" />
+<col class="class" />
+<col class="helmname" />
+<col class="crewname" />
+<col class="club" />
+<col class="rating" />
+<col class="race" />
+<col class="total" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Sail Nr</th>
+<th>Rig/Class</th>
+<th>Helm</th>
+<th>Crew</th>
+<th>Club</th>
+<th>PY</th>
+<th><a class="racelink" href="#r1py">RTI</a> &nbsp;</th>
+<th>Total</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd summaryrow">
+<td>1st</td>
+<td>14272</td>
+<td>GP14</td>
+<td>Peter Boyle</td>
+<td>Stephen Boyle</td>
+<td>SDC</td>
+<td>1145</td>
+<td  class="rank1">1.0</td>
+<td>1.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>2nd</td>
+<td>4523</td>
+<td>RS Aero 6</td>
+<td>Daragh Sheridan</td>
+<td>&nbsp;</td>
+<td>HYC</td>
+<td>1098</td>
+<td  class="rank2">2.0</td>
+<td>2.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>3rd</td>
+<td>635</td>
+<td>Melges 15</td>
+<td>Cormac Farrelly</td>
+<td>Justin Cullen</td>
+<td>HYC</td>
+<td>994</td>
+<td  class="rank3">3.0</td>
+<td>3.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>4th</td>
+<td>4541</td>
+<td>RS Aero 6</td>
+<td>Noel Butler</td>
+<td>&nbsp;</td>
+<td>NYC</td>
+<td>1098</td>
+<td>4.0</td>
+<td>4.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>5th</td>
+<td>799</td>
+<td>Melges 15</td>
+<td>Michael Evans</td>
+<td>TBA</td>
+<td>HYC</td>
+<td>994</td>
+<td>5.0</td>
+<td>5.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>6th</td>
+<td>797</td>
+<td>Melges 15</td>
+<td>Sarah Robertson</td>
+<td>Lynne Henderson</td>
+<td>HYC</td>
+<td>994</td>
+<td>6.0</td>
+<td>6.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>7th</td>
+<td>4295</td>
+<td>RS Aero 6</td>
+<td>Roy Van Maanen</td>
+<td>&nbsp;</td>
+<td>GSC/RStGYC</td>
+<td>1098</td>
+<td>7.0</td>
+<td>7.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>8th</td>
+<td>6</td>
+<td>Finn</td>
+<td>Richard Tate</td>
+<td>&nbsp;</td>
+<td>RStGYC</td>
+<td>1049</td>
+<td>8.0</td>
+<td>8.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>9th</td>
+<td>3291</td>
+<td>RS Aero 6</td>
+<td>John Phelan</td>
+<td>&nbsp;</td>
+<td>HYC</td>
+<td>1098</td>
+<td>9.0</td>
+<td>9.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>10th</td>
+<td>3433</td>
+<td>RS Aero 6</td>
+<td>Sarah Dwyer</td>
+<td>&nbsp;</td>
+<td>RStGYC</td>
+<td>1098</td>
+<td>10.0</td>
+<td>10.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>11th</td>
+<td>804</td>
+<td>Melges 15</td>
+<td>Matthew Cotter</td>
+<td>Tom Mulligan</td>
+<td>HYC</td>
+<td>994</td>
+<td>11.0</td>
+<td>11.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>12th</td>
+<td>803</td>
+<td>Melges 15</td>
+<td>Stephen Quinn</td>
+<td>Noelle Quinn</td>
+<td>HYC</td>
+<td>994</td>
+<td>12.0</td>
+<td>12.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>13th</td>
+<td>38</td>
+<td>IDRA 14</td>
+<td>Alan Carr</td>
+<td>Orlaith Connolly</td>
+<td>HYC</td>
+<td>1124</td>
+<td>13.5</td>
+<td>13.5</td>
+</tr>
+<tr class="even summaryrow">
+<td>13th</td>
+<td>K 1078</td>
+<td>Int 14 Classic</td>
+<td>Tristan Nelson</td>
+<td>&nbsp;</td>
+<td>HYC</td>
+<td>978</td>
+<td>13.5</td>
+<td>13.5</td>
+</tr>
+<tr class="odd summaryrow">
+<td>15th</td>
+<td>4384</td>
+<td>RS Aero 6</td>
+<td>Neil Colin</td>
+<td>&nbsp;</td>
+<td>HYC</td>
+<td>1098</td>
+<td>15.0</td>
+<td>15.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>16th</td>
+<td>128</td>
+<td>IDRA 14</td>
+<td>Ryan Cairns</td>
+<td>TBC</td>
+<td>HYC</td>
+<td>1124</td>
+<td>16.0</td>
+<td>16.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>17th</td>
+<td>3948</td>
+<td>RS Aero 6</td>
+<td>Richard Watson</td>
+<td>&nbsp;</td>
+<td>HYC</td>
+<td>1098</td>
+<td>17.0</td>
+<td>17.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>18th</td>
+<td>800</td>
+<td>Melges 15</td>
+<td>Sarah McLoughlin</td>
+<td>Mark McLoughlin</td>
+<td>HYC</td>
+<td>994</td>
+<td>18.0</td>
+<td>18.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>19th</td>
+<td>161</td>
+<td>IDRA 14</td>
+<td>Pierre Long</td>
+<td>Remy/ Paul/ Marc</td>
+<td>DMYC</td>
+<td>1124</td>
+<td>19.0</td>
+<td>19.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>20th</td>
+<td>21282</td>
+<td>Enterprise</td>
+<td>Brendan Costello</td>
+<td>Conor Costello</td>
+<td>HYC</td>
+<td>1137</td>
+<td>20.0</td>
+<td>20.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>21st</td>
+<td>119</td>
+<td>IDRA 14</td>
+<td>Orla Doogue</td>
+<td>Orla Doogue</td>
+<td>HYC</td>
+<td>1124</td>
+<td>21.0</td>
+<td>21.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>22nd</td>
+<td>30</td>
+<td>IDRA 14</td>
+<td>Dan Kinlay</td>
+<td>Joseph McGuigan</td>
+<td>CY&BC</td>
+<td>1124</td>
+<td>22.0</td>
+<td>22.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>23rd</td>
+<td>114</td>
+<td>IDRA 14</td>
+<td>Dan Hannah Joey Tom</td>
+<td>Dan Hannah Joey Tom</td>
+<td>CYBC</td>
+<td>1124</td>
+<td>23.0</td>
+<td>23.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>24th</td>
+<td>1869</td>
+<td>Scorpion</td>
+<td>Finlay MacDonald</td>
+<td>S Ioan</td>
+<td>CY&BC</td>
+<td>1042</td>
+<td>24.0</td>
+<td>24.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>25th</td>
+<td>141</td>
+<td>IDRA 14</td>
+<td>Ronan O'Brien</td>
+<td>Abigeal O'Brien</td>
+<td>CY&BC</td>
+<td>1124</td>
+<td>25.0</td>
+<td>25.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>26th</td>
+<td>537</td>
+<td>Int 14</td>
+<td>Chris Bateman</td>
+<td>Olin Bateman</td>
+<td>MBSC</td>
+<td>758</td>
+<td>34.0 DNC</td>
+<td>34.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>26th</td>
+<td>4848</td>
+<td>Int Moth</td>
+<td>Ronan Wallace</td>
+<td>&nbsp;</td>
+<td>WHBTC</td>
+<td>570</td>
+<td>34.0 DNC</td>
+<td>34.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>26th</td>
+<td>1321</td>
+<td>RS Aero 5</td>
+<td>Abby Kinsella</td>
+<td>&nbsp;</td>
+<td>HYC</td>
+<td>1141</td>
+<td>34.0 DNC</td>
+<td>34.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>26th</td>
+<td>806</td>
+<td>Melges 15</td>
+<td>Charlie Robertson</td>
+<td>Sarah Robertson</td>
+<td>HYC</td>
+<td>994</td>
+<td>34.0 DNF</td>
+<td>34.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>26th</td>
+<td>23118</td>
+<td>Enterprise</td>
+<td>Kay Cornally</td>
+<td>TBC</td>
+<td>HYC</td>
+<td>1137</td>
+<td>34.0 DNC</td>
+<td>34.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>26th</td>
+<td>3187</td>
+<td>RS Aero 6</td>
+<td>Emmet Dalton</td>
+<td>&nbsp;</td>
+<td>HYC</td>
+<td>1098</td>
+<td>34.0 DNC</td>
+<td>34.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>26th</td>
+<td>99</td>
+<td>49'er</td>
+<td>Fiachra Farrelly</td>
+<td>Jamie Malcolm</td>
+<td>HYC</td>
+<td>697</td>
+<td>34.0 DNF</td>
+<td>34.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>26th</td>
+<td>801</td>
+<td>Melges 15</td>
+<td>Ronan MacDonell</td>
+<td>Eoin Kernan</td>
+<td>HYC</td>
+<td>994</td>
+<td>34.0 DNC</td>
+<td>34.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r1py">RTI - PY Fleet&nbsp;-&nbsp;Mar 7</h3>
+<div class="caption racecaption">
+Start: Start 2, Finishes: Finish time, Time: 11.53.00
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="10">
+<col class="rank" />
+<col class="sailno" />
+<col class="class" />
+<col class="helmname" />
+<col class="crewname" />
+<col class="club" />
+<col class="rating" />
+<col class="finish" />
+<col class="elapsed" />
+<col class="corrected" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Sail Nr</th>
+<th>Rig/Class</th>
+<th>Helm</th>
+<th>Crew</th>
+<th>Club</th>
+<th>PY</th>
+<th>Finish</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>14272</td>
+<td>GP14</td>
+<td>Peter Boyle</td>
+<td>Stephen Boyle</td>
+<td>SDC</td>
+<td>1145</td>
+<td>12.31.39</td>
+<td>0.38.39</td>
+<td>0.33.45</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>4523</td>
+<td>RS Aero 6</td>
+<td>Daragh Sheridan</td>
+<td>&nbsp;</td>
+<td>HYC</td>
+<td>1098</td>
+<td>12.30.29</td>
+<td>0.37.29</td>
+<td>0.34.08</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>635</td>
+<td>Melges 15</td>
+<td>Cormac Farrelly</td>
+<td>Justin Cullen</td>
+<td>HYC</td>
+<td>994</td>
+<td>12.27.26</td>
+<td>0.34.26</td>
+<td>0.34.38</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>4541</td>
+<td>RS Aero 6</td>
+<td>Noel Butler</td>
+<td>&nbsp;</td>
+<td>NYC</td>
+<td>1098</td>
+<td>12.31.11</td>
+<td>0.38.11</td>
+<td>0.34.47</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>799</td>
+<td>Melges 15</td>
+<td>Michael Evans</td>
+<td>TBA</td>
+<td>HYC</td>
+<td>994</td>
+<td>12.28.17</td>
+<td>0.35.17</td>
+<td>0.35.30</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>797</td>
+<td>Melges 15</td>
+<td>Sarah Robertson</td>
+<td>Lynne Henderson</td>
+<td>HYC</td>
+<td>994</td>
+<td>12.28.51</td>
+<td>0.35.51</td>
+<td>0.36.04</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>4295</td>
+<td>RS Aero 6</td>
+<td>Roy Van Maanen</td>
+<td>&nbsp;</td>
+<td>GSC/RStGYC</td>
+<td>1098</td>
+<td>12.32.52</td>
+<td>0.39.52</td>
+<td>0.36.19</td>
+</tr>
+<tr class="even racerow">
+<td>8</td>
+<td>6</td>
+<td>Finn</td>
+<td>Richard Tate</td>
+<td>&nbsp;</td>
+<td>RStGYC</td>
+<td>1049</td>
+<td>12.31.20</td>
+<td>0.38.20</td>
+<td>0.36.33</td>
+</tr>
+<tr class="odd racerow">
+<td>9</td>
+<td>3291</td>
+<td>RS Aero 6</td>
+<td>John Phelan</td>
+<td>&nbsp;</td>
+<td>HYC</td>
+<td>1098</td>
+<td>12.33.12</td>
+<td>0.40.12</td>
+<td>0.36.37</td>
+</tr>
+<tr class="even racerow">
+<td>10</td>
+<td>3433</td>
+<td>RS Aero 6</td>
+<td>Sarah Dwyer</td>
+<td>&nbsp;</td>
+<td>RStGYC</td>
+<td>1098</td>
+<td>12.33.43</td>
+<td>0.40.43</td>
+<td>0.37.05</td>
+</tr>
+<tr class="odd racerow">
+<td>11</td>
+<td>804</td>
+<td>Melges 15</td>
+<td>Matthew Cotter</td>
+<td>Tom Mulligan</td>
+<td>HYC</td>
+<td>994</td>
+<td>12.29.58</td>
+<td>0.36.58</td>
+<td>0.37.11</td>
+</tr>
+<tr class="even racerow">
+<td>12</td>
+<td>803</td>
+<td>Melges 15</td>
+<td>Stephen Quinn</td>
+<td>Noelle Quinn</td>
+<td>HYC</td>
+<td>994</td>
+<td>12.30.08</td>
+<td>0.37.08</td>
+<td>0.37.21</td>
+</tr>
+<tr class="odd racerow">
+<td>13</td>
+<td>38</td>
+<td>IDRA 14</td>
+<td>Alan Carr</td>
+<td>Orlaith Connolly</td>
+<td>HYC</td>
+<td>1124</td>
+<td>12.35.08</td>
+<td>0.42.08</td>
+<td>0.37.29</td>
+</tr>
+<tr class="even racerow">
+<td>13</td>
+<td>K 1078</td>
+<td>Int 14 Classic</td>
+<td>Tristan Nelson</td>
+<td>&nbsp;</td>
+<td>HYC</td>
+<td>978</td>
+<td>12.29.40</td>
+<td>0.36.40</td>
+<td>0.37.29</td>
+</tr>
+<tr class="odd racerow">
+<td>15</td>
+<td>4384</td>
+<td>RS Aero 6</td>
+<td>Neil Colin</td>
+<td>&nbsp;</td>
+<td>HYC</td>
+<td>1098</td>
+<td>12.34.43</td>
+<td>0.41.43</td>
+<td>0.38.00</td>
+</tr>
+<tr class="even racerow">
+<td>16</td>
+<td>128</td>
+<td>IDRA 14</td>
+<td>Ryan Cairns</td>
+<td>TBC</td>
+<td>HYC</td>
+<td>1124</td>
+<td>12.36.19</td>
+<td>0.43.19</td>
+<td>0.38.32</td>
+</tr>
+<tr class="odd racerow">
+<td>17</td>
+<td>3948</td>
+<td>RS Aero 6</td>
+<td>Richard Watson</td>
+<td>&nbsp;</td>
+<td>HYC</td>
+<td>1098</td>
+<td>12.35.41</td>
+<td>0.42.41</td>
+<td>0.38.52</td>
+</tr>
+<tr class="even racerow">
+<td>18</td>
+<td>800</td>
+<td>Melges 15</td>
+<td>Sarah McLoughlin</td>
+<td>Mark McLoughlin</td>
+<td>HYC</td>
+<td>994</td>
+<td>12.31.53</td>
+<td>0.38.53</td>
+<td>0.39.07</td>
+</tr>
+<tr class="odd racerow">
+<td>19</td>
+<td>161</td>
+<td>IDRA 14</td>
+<td>Pierre Long</td>
+<td>Remy/ Paul/ Marc</td>
+<td>DMYC</td>
+<td>1124</td>
+<td>12.37.13</td>
+<td>0.44.13</td>
+<td>0.39.20</td>
+</tr>
+<tr class="even racerow">
+<td>20</td>
+<td>21282</td>
+<td>Enterprise</td>
+<td>Brendan Costello</td>
+<td>Conor Costello</td>
+<td>HYC</td>
+<td>1137</td>
+<td>12.39.05</td>
+<td>0.46.05</td>
+<td>0.40.32</td>
+</tr>
+<tr class="odd racerow">
+<td>21</td>
+<td>119</td>
+<td>IDRA 14</td>
+<td>Orla Doogue</td>
+<td>Orla Doogue</td>
+<td>HYC</td>
+<td>1124</td>
+<td>12.40.10</td>
+<td>0.47.10</td>
+<td>0.41.58</td>
+</tr>
+<tr class="even racerow">
+<td>22</td>
+<td>30</td>
+<td>IDRA 14</td>
+<td>Dan Kinlay</td>
+<td>Joseph McGuigan</td>
+<td>CY&BC</td>
+<td>1124</td>
+<td>12.42.18</td>
+<td>0.49.18</td>
+<td>0.43.52</td>
+</tr>
+<tr class="odd racerow">
+<td>23</td>
+<td>114</td>
+<td>IDRA 14</td>
+<td>Dan Hannah Joey Tom</td>
+<td>Dan Hannah Joey Tom</td>
+<td>CYBC</td>
+<td>1124</td>
+<td>12.42.34</td>
+<td>0.49.34</td>
+<td>0.44.06</td>
+</tr>
+<tr class="even racerow">
+<td>24</td>
+<td>1869</td>
+<td>Scorpion</td>
+<td>Finlay MacDonald</td>
+<td>S Ioan</td>
+<td>CY&BC</td>
+<td>1042</td>
+<td>12.40.15</td>
+<td>0.47.15</td>
+<td>0.45.21</td>
+</tr>
+<tr class="odd racerow">
+<td>25</td>
+<td>141</td>
+<td>IDRA 14</td>
+<td>Ronan O'Brien</td>
+<td>Abigeal O'Brien</td>
+<td>CY&BC</td>
+<td>1124</td>
+<td>12.56.53</td>
+<td>1.03.53</td>
+<td>0.56.50</td>
+</tr>
+<tr class="even racerow">
+<td>26</td>
+<td>806</td>
+<td>Melges 15</td>
+<td>Charlie Robertson</td>
+<td>Sarah Robertson</td>
+<td>HYC</td>
+<td>994</td>
+<td>&nbsp;</td>
+<td>DNF</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="odd racerow">
+<td>26</td>
+<td>99</td>
+<td>49'er</td>
+<td>Fiachra Farrelly</td>
+<td>Jamie Malcolm</td>
+<td>HYC</td>
+<td>697</td>
+<td>&nbsp;</td>
+<td>DNF</td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+
+<p class="hardleft"><a href="https://www.hyc.ie">www.hyc.ie</a><br /><a href="mailto:"></a></p>
+<p class="hardright"><a href="https://www.hyc.ie">www.hyc.ie</a><br /><a href="mailto:"></a></p>
+<p>Sailwave Scoring Software 2.38.02<br /><a href="https://www.sailwave.com">www.sailwave.com</a></p>
+
+</div>
+
+<footer>
+</footer>
+
+<div id="scrollbottom"></div>
+
+</body>
+</html>
+
+

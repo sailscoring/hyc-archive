@@ -1,0 +1,2905 @@
+
+
+
+<!doctype html>
+
+<head>
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta http-equiv="Cache-control" content="no-cache">
+<meta name="description" content="sailwave results">
+<meta name="viewport" content="width=device-width">
+
+<title>Sailwave results for Wave Regatta 24 - 26 May 2024 at Howth Yacht Club 2024</title>
+
+<style type="text/css">
+body {font: 80% arial, helvetica, sans-serif; text-align: center;}
+.hardleft  {text-align: left; float: left;  margin: 15px 0  15px 25px;}
+.hardright {text-align: right; float: right; margin: 15px 25px 15px 0;}
+table {text-align: left; margin: 0px auto 30px auto; font-size: 1em; border-collapse: collapse; border: 1px #999 solid;}
+td, th {padding: 4px; border: 1px #999 solid; vertical-align: top;}
+.caption {padding: 5px; text-align: center; border: 0; font-weight: bold;}
+h1 {font-size: 1.6em;}
+h2 {font-size: 1.4em;}
+h3 {font-size: 1.2em;}
+th {background-color: #ddd;}
+p {text-align: center;}
+.contents {text-align: left; margin-left: 20%;}
+.natflag {border: 1px #999 solid;}
+.nattext {font-size: 0.8em;}
+.place1 {font-weight: bold; background-color: #ffffaa;}
+.place2 {font-weight: bold; background-color: #aaaaff;}
+.place3 {font-weight: bold; background-color: #ffaaaa;}
+.placen {}
+table.headertable {border: 0px;}
+table.headertable td{border: 0px;}
+</style>
+
+<script type="text/javascript">
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script>
+
+function swGetURLArgs() {
+
+  var url = location.href;
+  var qs  = url.substring(url.indexOf('?') + 1).split('&');
+
+  for(var i = 0, result = {}; i < qs.length; i++) {
+    qs[i]            = qs[i].split('=');
+    result[qs[i][0]] = decodeURIComponent(qs[i][1]);
+  }
+
+  return result;
+}
+
+//
+//  name=HighlightWins3v3
+//  dependencies=jQuery
+//  description=Highlight winning scores in summary tables.
+//  author=Jon Eskdale based on an idea by Colin Jenkins
+//  date=2016-07-04
+//  version=3.0  For use with Sailwave from V2.22.x
+//  Requires the following lines in the Results.htm file (Results.htm is in the Templates directory)
+//  string.set("summary.col.race.rank1.td",   "rank1")
+//  string.set("summary.col.race.rank2.td",   "rank2")
+//  string.set("summary.col.race.rank3.td",   "rank3")
+
+//  url=http://sailwave.com
+//  email=jon@sailwave.com
+//  twitter=eskdale
+//  comments=Edit colours to colours of your choice
+//
+
+$(document).ready(function() {
+var selectorRank1 = '.rank1';
+var selectorRank2 = '.rank2';
+var selectorRank3 = '.rank3';
+
+// Results with these codes will not get highlighted add or remove codes to your choice
+var ignoreText   = /^(?!.*\b(DNC|DNF|DNS|OCS|BFD|UFD|RET|DSQ|DGM|DNE)\b).*/i
+
+// Edit these colours to change the highlight colours for 1st, 2nd and 3rd
+var winsColour   = '#ffd700';
+var twoColour    = '#6a91c5';
+var threeColour  = '#da6841';
+
+
+// Change the background color for cells with class of rank1-3 and don't have a code specified
+$(function () {
+
+  $(selectorRank1).filter(function() {
+    return ignoreText.test($(this).text());
+  }).css("background", winsColour);
+  $(selectorRank2).filter(function() {
+        return ignoreText.test($(this).text());
+  }).css("background", twoColour);
+  $(selectorRank3).filter(function() {
+        return ignoreText.test($(this).text());
+  }).css("background", threeColour);
+
+});
+});
+//
+//  name=ScoredSeperatelyMatrix.js
+//  dependencies=
+//  description=Shows the result tables as a matrix if they have been scored separately.
+//  Original author=Colin Jenkins
+//  url=http://op12no2.me
+//  email=op12no2@gmail.com
+//  V2 by Jon Eskdale
+//  email=jon@sailwave.com
+//  version=2.0
+//  date=2018-06-15
+
+//
+//  Please note that this effect only works when more then one or more
+//  group (e.g. fleet) has been scored separately.  There may be some
+//  other limitations.  Footers and notes are removed.  Burgees are
+//  consolidated.
+//
+
+$.fn.exists = function () {
+    return this.length !== 0;
+}
+
+function showcodes () {
+  $('h3.codestitle').fadeIn('slow');
+  $('table.codestable').fadeIn('slow');
+}
+
+function showprizes () {
+  $('h3.prizestitle').show();
+  $('table.prizestable').show();
+}
+
+function showsummary (f) {
+  hideall();
+  $(d.sum[f].title).show();
+  $(d.sum[f].caption).show();
+  $(d.sum[f].table).fadeIn('slow');
+  showcodes()
+}
+
+function showrace (f,r) {
+  hideall();
+  showcodes()
+  $(d.sum[f].races[r].title).show();
+  $(d.sum[f].races[r].caption).show();
+  $(d.sum[f].races[r].table).fadeIn('slow');
+}
+
+function hideall () {
+  $('h3.prizestitle').hide();
+  $('table.prizestable').hide();
+  hideinit();
+}
+function hideinit () {
+  $('h3.codestitle').hide();
+  $('table.codestable').hide();
+  $('h3.summarytitle').hide();
+  $('div.summarycaption').hide();
+  $('table.summarytable').hide();
+  $('h3.racetitle').hide();
+  $('div.racecaption').hide();
+  $('table.racetable').hide();
+}
+
+$(function() {
+  $('img').removeClass('hardleft');
+  $('img').removeClass('hardright');
+  $('img.hardright').remove();
+  $('p.hardright').remove();
+  $('p.hardleft').remove();
+  $('div.contents').remove();
+  $('p.seriesnotes').remove();
+  $('p.racenotes').remove();
+
+  d = {};
+
+        minrt = 10000;
+        maxrt = 0;
+        d.sum = [];
+  $('h3.summarytitle').each(function(index) {
+    if (!d.sum[index])
+      d.sum[index] = {};
+    d.sum[index].title = this;
+    console.log($(d.sum[index].title).text());
+    if ($(this).attr('id'))
+      d.sum[index].id = $(this).attr('id').replace(/summary/gi,'');
+    else
+      d.sum[index].id = 'overall';
+    //console.log($(this).attr('id'));
+    //console.log(d.sum[index].id);
+    d.sum[index].caption = $(this).next();
+    d.sum[index].table   = $(this).next().next();
+    maxraces = 100; //hack $('h3.racetitle').size();
+    minr = 10000;
+    maxr = 0;
+    //console.log(maxraces);
+    d.sum[index].races = [];
+    for (var i=0; i<maxraces; i++) {
+      var r = i + 1;
+      var id = '#r' + r + d.sum[index].id;
+      //console.log(id);
+      if ($(id).exists()) {
+        if (r > maxr)
+          maxr = r;
+                  if (r > maxrt)
+                maxrt = r;
+        if (r < minr)
+          minr = r;
+              if (r < minrt)
+                        minrt = r;
+        d.sum[index].races[r] = {};
+        d.sum[index].races[r].raceno = r;
+        d.sum[index].races[r].title = $(id);
+        d.sum[index].races[r].caption = $(id).next();
+        d.sum[index].races[r].table = $(id).next().next();
+      }
+    }
+  });
+  $('a.racelink').each(function(index) {
+    $(this).parent().html($(this).text());
+  });
+
+  hideinit();
+
+  h = '<div style="margin: 40px auto 20px; auto;" id="dynamic"><table>';
+
+  for (var f=0; f<d.sum.length; f++) {
+    var fleet = d.sum[f];
+    var races = d.sum[f].races;
+    h += '<tr><td>' + $(fleet.title).text() + '</td>';
+    var linktitle = 'Overall';
+    h += '<td><a href="#" onclick="showsummary(' + f + ');">' + linktitle + '</a></td>';
+    for (var r=minrt; r<=maxrt; r++) {
+          if (races[r]) {
+      var linktitle = $.trim(($(races[r].title).text().split('-'))[0]);
+      h += '<td>';
+      if (races[r])
+        h += '<a href="#" onclick="showrace(' + f + ',' + r + ');">' + linktitle + '</a>';
+      else
+        h += '&nbsp;';
+      h += '</td>';
+          }
+    }
+    h += '</tr>';
+  }
+
+  //h += '<tr><td><a href="#" onclick="showcodes();">Scoring codes</a></td></tr>';
+  //h += '<tr><td><a href="#" onclick="showprizes();">Prizes</a></td></tr>';
+  h += '</table></div>';
+
+  $('h3.seriestitle').append(h);
+
+});
+//
+//  name=TableSorter
+//  dependencies=jQuery (autoloads if not specified)
+//  description=Click on heading to sort table
+//  author=Jon Eskdale
+//  date=2015-08-13 / 2018-04-16
+//  version=1.2
+//  url=https://sailwave.com
+//  email=jon@sailwave.com
+//  twitter=@eskdale
+//
+
+</script>
+<link rel="stylesheet" href="https://www.sailwave.com/download/css/sorter.css">
+<script src="https://mottie.github.io/tablesorter/js/jquery.tablesorter.combined.js"></script>
+<script>
+
+$(document).ready(function()
+    {
+        // create array of race column numbers for first table (summarytable)
+        var ths = document.getElementsByTagName('col');
+        var column =[];
+        for (var i=0; i<ths.length; i++) {
+                if (ths[i].classList[0] === "race") {
+                        column.push(i);
+                } else {
+                        if (column.length !=0) {
+                                break;
+                        }
+                }
+        }
+        var patt = /\d+\.\d+/;
+        $.tablesorter.addParser({
+                id: 'race',
+                is: function(s, table, cell, $cell) {
+                        return false;
+                },
+                format: function(s, table, cell, cellIndex) {
+                        return patt.exec(s);
+                },
+                // set type, either numeric or text
+                type: 'numeric'
+        });
+
+        //  Set a class of race for all headers with race results in column for summarytable
+        //  "{sorter: 'numeric'}"
+        for (var i=0; i<column.length; i++) {
+                $(".summarytable thead tr th:nth-child(" + (column[i]+1) +")").addClass("sorter-race");
+        }
+
+
+        $(".summarytable").tablesorter({
+         theme : 'blue',
+         sortMultiSortKey: 'ctrlKey',
+         sortResetKey: 'altKey',
+         });
+}
+);
+
+
+//
+//  name=TableSorterRace
+//  dependencies=jQuery (autoloads if not specified)
+//  description=Applies tablesorter to Race tables Click on heading to sort table
+//  author=Jon Eskdale
+//  date=2023-06-22
+//  version=1.0
+//  url=https://sailwave.com
+//  email=jon@sailwave.com
+//  twitter=@eskdale
+//
+
+</script>
+<link rel="stylesheet" href="https://www.sailwave.com/download/css/sorter.css">
+<script src="https://mottie.github.io/tablesorter/js/jquery.tablesorter.combined.js"></script>
+<script>
+
+$(document).ready(function()
+    {
+        $(".racetable").tablesorter({
+         theme : 'blue',
+         sortMultiSortKey: 'ctrlKey',
+         sortResetKey: 'altKey',
+         });
+}
+);
+
+
+</script>
+
+</head>
+
+<body>
+
+<header>
+</header>
+<table class="headertable" cellspacing="0" width="100%" cellpadding="0" border="0">
+<tbody>
+<div id="wrap">
+
+<tr>
+<td width="30%">
+<img style="display:block; height:100px;"  src="https://hyc.ie/system/sponsor_logos/439/normal/HYC_Logo.jpg" alt="venue burgee" />
+</td>
+
+<td width="40%" align="center">
+<h1>Wave Regatta 24 - 26 May 2024</h1>
+<h2>Howth Yacht Club</h2>
+</td>
+
+<td width="30%">
+<img style="display:block; height:100px;" src="https://hyc.ie/system/sponsor_logos/473/normal/Wave_logo_-_without_year.png" alt="event burgee" align="right" />
+</td>
+</tr>
+</tbody>
+</table>
+
+<div style="clear:both;"></div>
+
+<style>
+div.applicant-break {page-break-after:always;}
+</style>
+<h3 class="seriestitle">Results are provisional as of 13:53 on May 26, 2024</h3>
+<h3 class="summarytitle" id="summaryclass_2_echo">Class 2 Echo Start Class</h3>
+<div class="caption summarycaption">Sailed: 5, Discards: 1, To count: 4, Rating system: ECHO, Entries: 12, Scoring system: Appendix A</div>
+<table class="summarytable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="14">
+<col class="rank" />
+<col class="boat" />
+<col class="nat" />
+<col class="sailno" />
+<col class="club" />
+<col class="helmname" />
+<col class="rating" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="total" />
+<col class="nett" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Boat Name</th>
+<th>Nat</th>
+<th>Sail No</th>
+<th>Club</th>
+<th>Owner Name(s)</th>
+<th>IRC/ECHO</th>
+<th><a class="racelink" href="#r1class_2_echo">R 1 Friday</a></th>
+<th><a class="racelink" href="#r2class_2_echo">R 2 Friday</a></th>
+<th><a class="racelink" href="#r3class_2_echo">R 3 Friday</a></th>
+<th><a class="racelink" href="#r4class_2_echo">Lambay Race</a></th>
+<th><a class="racelink" href="#r5class_2_echo">R 1 Sunday</a></th>
+<th>Total</th>
+<th>Nett</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd summaryrow">
+<td>1st</td>
+<td>Impetuous</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>irl 2507</td>
+<td>HYC</td>
+<td>Noonan/Chambers</td>
+<td>0.925</td>
+<td class="rank2">2.0</td>
+<td>(7.0)</td>
+<td>4.0</td>
+<td>8.0</td>
+<td class="rank3">3.0</td>
+<td>24.0</td>
+<td>17.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>2nd</td>
+<td>Swuzzlebubble</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>KZ3494</td>
+<td>RCYC</td>
+<td>James Dwyer</td>
+<td>1.062</td>
+<td>(8.0)</td>
+<td class="rank3">3.0</td>
+<td class="rank1">1.5</td>
+<td>11.0</td>
+<td class="rank2">2.0</td>
+<td>25.5</td>
+<td>17.5</td>
+</tr>
+<tr class="odd summaryrow">
+<td>3rd</td>
+<td>No Excuse</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>IRL 1972</td>
+<td>HYC</td>
+<td>Wormald Walsh O'Neill</td>
+<td>0.970</td>
+<td>4.0</td>
+<td class="rank2">2.0</td>
+<td>11.0</td>
+<td class="rank2">2.0</td>
+<td>(13.0 DNF)</td>
+<td>32.0</td>
+<td>19.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>4th</td>
+<td>Jeneral Lee</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>IRL 6697</td>
+<td>HYC</td>
+<td>Colin & Kathy Kavanagh</td>
+<td>1.015</td>
+<td class="rank1">1.0</td>
+<td>(11.0)</td>
+<td class="rank1">1.5</td>
+<td>9.0</td>
+<td>9.0</td>
+<td>31.5</td>
+<td>20.5</td>
+</tr>
+<tr class="odd summaryrow">
+<td>5th</td>
+<td>Mata</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>2794</td>
+<td>HYC</td>
+<td>Wright/De Neve</td>
+<td>1.040</td>
+<td>(10.0)</td>
+<td class="rank1">1.0</td>
+<td class="rank3">3.0</td>
+<td>12.0</td>
+<td>5.0</td>
+<td>31.0</td>
+<td>21.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>6th</td>
+<td>Two farr</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>irl 2269</td>
+<td>Various</td>
+<td>Kelly Boardman O'Leary</td>
+<td>1.062</td>
+<td>(7.0)</td>
+<td>4.0</td>
+<td>5.0</td>
+<td>10.0</td>
+<td>4.0</td>
+<td>30.0</td>
+<td>23.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>7th</td>
+<td>Tud</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>GBR 527</td>
+<td>TUD</td>
+<td>Trinity University</td>
+<td>0.955</td>
+<td>5.5</td>
+<td>5.5</td>
+<td>(7.5)</td>
+<td>5.0</td>
+<td>7.0</td>
+<td>30.5</td>
+<td>23.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>7th</td>
+<td>&nbsp;</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>GBR 726</td>
+<td>HYC</td>
+<td>Brian Nixon</td>
+<td>0.955</td>
+<td>5.5</td>
+<td>5.5</td>
+<td>(7.5)</td>
+<td>5.0</td>
+<td>7.0</td>
+<td>30.5</td>
+<td>23.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>9th</td>
+<td>Maximus</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>IRL 7495</td>
+<td>HYC</td>
+<td>Paddy Kyne</td>
+<td>0.970</td>
+<td>12.0</td>
+<td>12.0</td>
+<td>(13.0 DNC)</td>
+<td class="rank1">1.0</td>
+<td class="rank1">1.0</td>
+<td>39.0</td>
+<td>26.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>10th</td>
+<td>Wardance</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>IRL 7360</td>
+<td>MSC</td>
+<td>Sean Hawkshaw</td>
+<td>0.970</td>
+<td>9.0</td>
+<td>9.0</td>
+<td>6.0</td>
+<td class="rank3">3.0</td>
+<td>(11.0)</td>
+<td>38.0</td>
+<td>27.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>11th</td>
+<td>Lambay Rules</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>Irl9970</td>
+<td>HYC</td>
+<td>Stephen Quinn</td>
+<td>1.015</td>
+<td class="rank3">3.0</td>
+<td>8.0</td>
+<td>(10.0)</td>
+<td>7.0</td>
+<td>10.0</td>
+<td>38.0</td>
+<td>28.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>12th</td>
+<td>Dux</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>Irl988</td>
+<td>HYC</td>
+<td>Caroline and Nico Gore-Grimes</td>
+<td>1.015</td>
+<td>(11.0)</td>
+<td>10.0</td>
+<td>9.0</td>
+<td>5.0</td>
+<td>7.0</td>
+<td>42.0</td>
+<td>31.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="summarytitle" id="summaryclass_2_irc">Class 2 IRC Start Class</h3>
+<div class="caption summarycaption">Sailed: 5, Discards: 1, To count: 4, Rating system: TCF, Entries: 12, Scoring system: Appendix A</div>
+<table class="summarytable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="14">
+<col class="rank" />
+<col class="boat" />
+<col class="nat" />
+<col class="sailno" />
+<col class="club" />
+<col class="helmname" />
+<col class="rating" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="total" />
+<col class="nett" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Boat Name</th>
+<th>Nat</th>
+<th>Sail No</th>
+<th>Club</th>
+<th>Owner Name(s)</th>
+<th>IRC/ECHO</th>
+<th><a class="racelink" href="#r1class_2_irc">R 1 Friday</a></th>
+<th><a class="racelink" href="#r2class_2_irc">R 2 Friday</a></th>
+<th><a class="racelink" href="#r3class_2_irc">R 3 Friday</a></th>
+<th><a class="racelink" href="#r4class_2_irc">Lambay Race</a></th>
+<th><a class="racelink" href="#r5class_2_irc">R 1 Sunday</a></th>
+<th>Total</th>
+<th>Nett</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd summaryrow">
+<td>1st</td>
+<td>Swuzzlebubble</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>KZ3494</td>
+<td>RCYC</td>
+<td>James Dwyer</td>
+<td>0.960</td>
+<td>(4.0)</td>
+<td class="rank2">2.0</td>
+<td class="rank1">1.0</td>
+<td class="rank1">1.5</td>
+<td class="rank1">1.0</td>
+<td>9.5</td>
+<td>5.5</td>
+</tr>
+<tr class="even summaryrow">
+<td>2nd</td>
+<td>Two farr</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>irl 2269</td>
+<td>Various</td>
+<td>Kelly Boardman O'Leary</td>
+<td>0.955</td>
+<td class="rank1">1.0</td>
+<td class="rank1">1.0</td>
+<td class="rank3">(3.0)</td>
+<td class="rank1">1.5</td>
+<td class="rank2">2.0</td>
+<td>8.5</td>
+<td>5.5</td>
+</tr>
+<tr class="odd summaryrow">
+<td>3rd</td>
+<td>Mata</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>2794</td>
+<td>HYC</td>
+<td>Wright/De Neve</td>
+<td>0.941</td>
+<td>(6.0)</td>
+<td class="rank3">3.0</td>
+<td class="rank2">2.0</td>
+<td>8.0</td>
+<td>4.0</td>
+<td>23.0</td>
+<td>17.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>4th</td>
+<td>Jeneral Lee</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>IRL 6697</td>
+<td>HYC</td>
+<td>Colin & Kathy Kavanagh</td>
+<td>0.970</td>
+<td class="rank2">2.0</td>
+<td>(7.0)</td>
+<td>4.0</td>
+<td>6.0</td>
+<td>6.0</td>
+<td>25.0</td>
+<td>18.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>5th</td>
+<td>Lambay Rules</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>Irl9970</td>
+<td>HYC</td>
+<td>Stephen Quinn</td>
+<td>0.968</td>
+<td class="rank3">3.0</td>
+<td>4.0</td>
+<td>5.0</td>
+<td>7.0</td>
+<td>(8.0)</td>
+<td>27.0</td>
+<td>19.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>6th</td>
+<td>Dux</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>Irl988</td>
+<td>HYC</td>
+<td>Caroline and Nico Gore-Grimes</td>
+<td>0.923</td>
+<td>(9.0)</td>
+<td>5.0</td>
+<td>7.0</td>
+<td>4.0</td>
+<td>5.0</td>
+<td>30.0</td>
+<td>21.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>7th</td>
+<td>No Excuse</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>IRL 1972</td>
+<td>HYC</td>
+<td>Wormald Walsh O'Neill</td>
+<td>0.920</td>
+<td>7.0</td>
+<td>6.0</td>
+<td>9.0</td>
+<td class="rank3">3.0</td>
+<td>(13.0 DNF)</td>
+<td>38.0</td>
+<td>25.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>8th</td>
+<td>Impetuous</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>irl 2507</td>
+<td>HYC</td>
+<td>Noonan/Chambers</td>
+<td>0.921</td>
+<td>8.0</td>
+<td>(9.0)</td>
+<td>6.0</td>
+<td>9.0</td>
+<td class="rank3">3.0</td>
+<td>35.0</td>
+<td>26.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>9th</td>
+<td>Maximus</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>IRL 7495</td>
+<td>HYC</td>
+<td>Paddy Kyne</td>
+<td>0.921</td>
+<td>5.0</td>
+<td>8.0</td>
+<td>10.0</td>
+<td>5.0</td>
+<td>(13.0 DNF)</td>
+<td>41.0</td>
+<td>28.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>10th</td>
+<td>&nbsp;</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>GBR 726</td>
+<td>HYC</td>
+<td>Brian Nixon</td>
+<td>0.952</td>
+<td>(11.0)</td>
+<td>10.0</td>
+<td>8.0</td>
+<td>11.0</td>
+<td>9.0</td>
+<td>49.0</td>
+<td>38.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>11th</td>
+<td>Tud</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>GBR 527</td>
+<td>TUD</td>
+<td>Trinity University</td>
+<td>0.952</td>
+<td>10.0</td>
+<td>(11.0)</td>
+<td>11.0</td>
+<td>12.0</td>
+<td>7.0</td>
+<td>51.0</td>
+<td>40.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>12th</td>
+<td>Wardance</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>IRL 7360</td>
+<td>MSC</td>
+<td>Sean Hawkshaw</td>
+<td>0.973</td>
+<td>(12.0)</td>
+<td>12.0</td>
+<td>12.0</td>
+<td>10.0</td>
+<td>10.0</td>
+<td>56.0</td>
+<td>44.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r1class_2_echo">R 1 Friday - Class 2 Echo Start Class&nbsp;-&nbsp;24/5/2024&nbsp;at&nbsp;110000</h3>
+<div class="caption racecaption">
+Start: Start 3 Class 2, Finishes: Finish time, Time: 111000
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="12">
+<col class="rank" />
+<col class="boat" />
+<col class="nat" />
+<col class="sailno" />
+<col class="club" />
+<col class="helmname" />
+<col class="rating" />
+<col class="start" />
+<col class="finish" />
+<col class="elapsed" />
+<col class="corrected" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Boat Name</th>
+<th>Nat</th>
+<th>Sail No</th>
+<th>Club</th>
+<th>Owner Name(s)</th>
+<th>IRC/ECHO</th>
+<th>Start</th>
+<th>Finish</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>Jeneral Lee</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>IRL 6697</td>
+<td>HYC</td>
+<td>Colin & Kathy Kavanagh</td>
+<td>1.015</td>
+<td>111000</td>
+<td>12:05:07</td>
+<td>0:55:07</td>
+<td>0:55:57</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>Impetuous</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>irl 2507</td>
+<td>HYC</td>
+<td>Noonan/Chambers</td>
+<td>0.925</td>
+<td>111000</td>
+<td>12:10:37</td>
+<td>1:00:37</td>
+<td>0:56:04</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>Lambay Rules</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>Irl9970</td>
+<td>HYC</td>
+<td>Stephen Quinn</td>
+<td>1.015</td>
+<td>111000</td>
+<td>12:05:15</td>
+<td>0:55:15</td>
+<td>0:56:05</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>No Excuse</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>IRL 1972</td>
+<td>HYC</td>
+<td>Wormald Walsh O'Neill</td>
+<td>0.970</td>
+<td>111000</td>
+<td>12:09:59</td>
+<td>0:59:59</td>
+<td>0:58:11</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>Tud</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>GBR 527</td>
+<td>TUD</td>
+<td>Trinity University</td>
+<td>0.955</td>
+<td>111000</td>
+<td>12:11:15</td>
+<td>1:01:15</td>
+<td>0:58:30</td>
+<td>5.5</td>
+</tr>
+<tr class="even racerow">
+<td>5</td>
+<td>&nbsp;</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>GBR 726</td>
+<td>HYC</td>
+<td>Brian Nixon</td>
+<td>0.955</td>
+<td>111000</td>
+<td>12:11:15</td>
+<td>1:01:15</td>
+<td>0:58:30</td>
+<td>5.5</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>Two farr</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>irl 2269</td>
+<td>Various</td>
+<td>Kelly Boardman O'Leary</td>
+<td>1.062</td>
+<td>111000</td>
+<td>12:05:11</td>
+<td>0:55:11</td>
+<td>0:58:36</td>
+<td>7.0</td>
+</tr>
+<tr class="even racerow">
+<td>8</td>
+<td>Swuzzlebubble</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>KZ3494</td>
+<td>RCYC</td>
+<td>James Dwyer</td>
+<td>1.062</td>
+<td>111000</td>
+<td>12:06:07</td>
+<td>0:56:07</td>
+<td>0:59:36</td>
+<td>8.0</td>
+</tr>
+<tr class="odd racerow">
+<td>9</td>
+<td>Wardance</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>IRL 7360</td>
+<td>MSC</td>
+<td>Sean Hawkshaw</td>
+<td>0.970</td>
+<td>111000</td>
+<td>12:11:45</td>
+<td>1:01:45</td>
+<td>0:59:54</td>
+<td>9.0</td>
+</tr>
+<tr class="even racerow">
+<td>10</td>
+<td>Mata</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>2794</td>
+<td>HYC</td>
+<td>Wright/De Neve</td>
+<td>1.040</td>
+<td>111000</td>
+<td>12:08:16</td>
+<td>0:58:16</td>
+<td>1:00:36</td>
+<td>10.0</td>
+</tr>
+<tr class="odd racerow">
+<td>11</td>
+<td>Dux</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>Irl988</td>
+<td>HYC</td>
+<td>Caroline and Nico Gore-Grimes</td>
+<td>1.015</td>
+<td>111000</td>
+<td>12:11:15</td>
+<td>1:01:15</td>
+<td>1:02:10</td>
+<td>11.0</td>
+</tr>
+<tr class="even racerow">
+<td>12</td>
+<td>Maximus</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>IRL 7495</td>
+<td>HYC</td>
+<td>Paddy Kyne</td>
+<td>0.970</td>
+<td>110000</td>
+<td>12:23:03</td>
+<td>1:23:03</td>
+<td>1:20:34</td>
+<td>12.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r2class_2_echo">R 2 Friday - Class 2 Echo Start Class&nbsp;-&nbsp;24/5/2024</h3>
+<div class="caption racecaption">
+Start: Start 3 Class 2, Finishes: Finish time, Time: 124700
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="12">
+<col class="rank" />
+<col class="boat" />
+<col class="nat" />
+<col class="sailno" />
+<col class="club" />
+<col class="helmname" />
+<col class="rating" />
+<col class="start" />
+<col class="finish" />
+<col class="elapsed" />
+<col class="corrected" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Boat Name</th>
+<th>Nat</th>
+<th>Sail No</th>
+<th>Club</th>
+<th>Owner Name(s)</th>
+<th>IRC/ECHO</th>
+<th>Start</th>
+<th>Finish</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>Mata</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>2794</td>
+<td>HYC</td>
+<td>Wright/De Neve</td>
+<td>1.030</td>
+<td>124700</td>
+<td>13:49:10</td>
+<td>1:02:10</td>
+<td>1:04:02</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>No Excuse</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>IRL 1972</td>
+<td>HYC</td>
+<td>Wormald Walsh O'Neill</td>
+<td>0.991</td>
+<td>124700</td>
+<td>13:52:03</td>
+<td>1:05:03</td>
+<td>1:04:28</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>Swuzzlebubble</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>KZ3494</td>
+<td>RCYC</td>
+<td>James Dwyer</td>
+<td>1.065</td>
+<td>124700</td>
+<td>13:47:40</td>
+<td>1:00:40</td>
+<td>1:04:37</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>Two farr</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>irl 2269</td>
+<td>Various</td>
+<td>Kelly Boardman O'Leary</td>
+<td>1.079</td>
+<td>124700</td>
+<td>13:46:56</td>
+<td>0:59:56</td>
+<td>1:04:40</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>Tud</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>GBR 527</td>
+<td>TUD</td>
+<td>Trinity University</td>
+<td>0.972</td>
+<td>124700</td>
+<td>13:53:46</td>
+<td>1:06:46</td>
+<td>1:04:54</td>
+<td>5.5</td>
+</tr>
+<tr class="even racerow">
+<td>5</td>
+<td>&nbsp;</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>GBR 726</td>
+<td>HYC</td>
+<td>Brian Nixon</td>
+<td>0.972</td>
+<td>124700</td>
+<td>13:53:46</td>
+<td>1:06:46</td>
+<td>1:04:54</td>
+<td>5.5</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>Impetuous</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>irl 2507</td>
+<td>HYC</td>
+<td>Noonan/Chambers</td>
+<td>0.972</td>
+<td>124700</td>
+<td>13:54:10</td>
+<td>1:07:10</td>
+<td>1:05:17</td>
+<td>7.0</td>
+</tr>
+<tr class="even racerow">
+<td>8</td>
+<td>Lambay Rules</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>Irl9970</td>
+<td>HYC</td>
+<td>Stephen Quinn</td>
+<td>1.066</td>
+<td>124700</td>
+<td>13:48:21</td>
+<td>1:01:21</td>
+<td>1:05:24</td>
+<td>8.0</td>
+</tr>
+<tr class="odd racerow">
+<td>9</td>
+<td>Wardance</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>IRL 7360</td>
+<td>MSC</td>
+<td>Sean Hawkshaw</td>
+<td>0.969</td>
+<td>124700</td>
+<td>13:54:42</td>
+<td>1:07:42</td>
+<td>1:05:36</td>
+<td>9.0</td>
+</tr>
+<tr class="even racerow">
+<td>10</td>
+<td>Dux</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>Irl988</td>
+<td>HYC</td>
+<td>Caroline and Nico Gore-Grimes</td>
+<td>0.987</td>
+<td>124700</td>
+<td>13:53:46</td>
+<td>1:06:46</td>
+<td>1:05:54</td>
+<td>10.0</td>
+</tr>
+<tr class="odd racerow">
+<td>11</td>
+<td>Jeneral Lee</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>IRL 6697</td>
+<td>HYC</td>
+<td>Colin & Kathy Kavanagh</td>
+<td>1.068</td>
+<td>124700</td>
+<td>13:49:32</td>
+<td>1:02:32</td>
+<td>1:06:47</td>
+<td>11.0</td>
+</tr>
+<tr class="even racerow">
+<td>12</td>
+<td>Maximus</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>IRL 7495</td>
+<td>HYC</td>
+<td>Paddy Kyne</td>
+<td>0.783</td>
+<td>124000</td>
+<td>14:30:19</td>
+<td>1:50:19</td>
+<td>1:26:23</td>
+<td>12.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r3class_2_echo">R 3 Friday - Class 2 Echo Start Class&nbsp;-&nbsp;24/5/2024</h3>
+<div class="caption racecaption">
+Start: Start 3 Class 2, Finishes: Finish time, Time: 142500
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="12">
+<col class="rank" />
+<col class="boat" />
+<col class="nat" />
+<col class="sailno" />
+<col class="club" />
+<col class="helmname" />
+<col class="rating" />
+<col class="start" />
+<col class="finish" />
+<col class="elapsed" />
+<col class="corrected" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Boat Name</th>
+<th>Nat</th>
+<th>Sail No</th>
+<th>Club</th>
+<th>Owner Name(s)</th>
+<th>IRC/ECHO</th>
+<th>Start</th>
+<th>Finish</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>Swuzzlebubble</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>KZ3494</td>
+<td>RCYC</td>
+<td>James Dwyer</td>
+<td>1.085</td>
+<td>142500</td>
+<td>15:22:10</td>
+<td>0:57:10</td>
+<td>1:02:02</td>
+<td>1.5</td>
+</tr>
+<tr class="even racerow">
+<td>1</td>
+<td>Jeneral Lee</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>IRL 6697</td>
+<td>HYC</td>
+<td>Colin & Kathy Kavanagh</td>
+<td>1.061</td>
+<td>142500</td>
+<td>15:23:28</td>
+<td>0:58:28</td>
+<td>1:02:02</td>
+<td>1.5</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>Mata</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>2794</td>
+<td>HYC</td>
+<td>Wright/De Neve</td>
+<td>1.056</td>
+<td>142500</td>
+<td>15:24:53</td>
+<td>0:59:53</td>
+<td>1:03:14</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>Impetuous</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>irl 2507</td>
+<td>HYC</td>
+<td>Noonan/Chambers</td>
+<td>0.982</td>
+<td>142500</td>
+<td>15:31:00</td>
+<td>1:06:00</td>
+<td>1:04:49</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>Two farr</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>irl 2269</td>
+<td>Various</td>
+<td>Kelly Boardman O'Leary</td>
+<td>1.098</td>
+<td>142500</td>
+<td>15:24:16</td>
+<td>0:59:16</td>
+<td>1:05:04</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>Wardance</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>IRL 7360</td>
+<td>MSC</td>
+<td>Sean Hawkshaw</td>
+<td>0.976</td>
+<td>142500</td>
+<td>15:32:07</td>
+<td>1:07:07</td>
+<td>1:05:30</td>
+<td>6.0</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>Tud</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>GBR 527</td>
+<td>TUD</td>
+<td>Trinity University</td>
+<td>0.987</td>
+<td>142500</td>
+<td>15:31:23</td>
+<td>1:06:23</td>
+<td>1:05:31</td>
+<td>7.5</td>
+</tr>
+<tr class="even racerow">
+<td>7</td>
+<td>&nbsp;</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>GBR 726</td>
+<td>HYC</td>
+<td>Brian Nixon</td>
+<td>0.987</td>
+<td>142500</td>
+<td>15:31:23</td>
+<td>1:06:23</td>
+<td>1:05:31</td>
+<td>7.5</td>
+</tr>
+<tr class="odd racerow">
+<td>9</td>
+<td>Dux</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>Irl988</td>
+<td>HYC</td>
+<td>Caroline and Nico Gore-Grimes</td>
+<td>0.990</td>
+<td>142500</td>
+<td>15:31:23</td>
+<td>1:06:23</td>
+<td>1:05:43</td>
+<td>9.0</td>
+</tr>
+<tr class="even racerow">
+<td>10</td>
+<td>Lambay Rules</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>Irl9970</td>
+<td>HYC</td>
+<td>Stephen Quinn</td>
+<td>1.076</td>
+<td>142500</td>
+<td>15:26:48</td>
+<td>1:01:48</td>
+<td>1:06:30</td>
+<td>10.0</td>
+</tr>
+<tr class="odd racerow">
+<td>11</td>
+<td>No Excuse</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>IRL 1972</td>
+<td>HYC</td>
+<td>Wormald Walsh O'Neill</td>
+<td>1.011</td>
+<td>142500</td>
+<td>15:35:00</td>
+<td>1:10:00</td>
+<td>1:10:46</td>
+<td>11.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r4class_2_echo">Lambay Race - Class 2 Echo Start Class&nbsp;-&nbsp;25/5/2024</h3>
+<div class="caption racecaption">
+Start: Start 3 Class 2, Finishes: Finish time, Time: 105000
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="12">
+<col class="rank" />
+<col class="boat" />
+<col class="nat" />
+<col class="sailno" />
+<col class="club" />
+<col class="helmname" />
+<col class="rating" />
+<col class="start" />
+<col class="finish" />
+<col class="elapsed" />
+<col class="corrected" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Boat Name</th>
+<th>Nat</th>
+<th>Sail No</th>
+<th>Club</th>
+<th>Owner Name(s)</th>
+<th>IRC/ECHO</th>
+<th>Start</th>
+<th>Finish</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>Maximus</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>IRL 7495</td>
+<td>HYC</td>
+<td>Paddy Kyne</td>
+<td>0.646</td>
+<td>104500</td>
+<td>13:23:59</td>
+<td>2:38:59</td>
+<td>1:42:42</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>No Excuse</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>IRL 1972</td>
+<td>HYC</td>
+<td>Wormald Walsh O'Neill</td>
+<td>0.950</td>
+<td>105000</td>
+<td>13:44:01</td>
+<td>2:54:01</td>
+<td>2:45:19</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>Wardance</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>IRL 7360</td>
+<td>MSC</td>
+<td>Sean Hawkshaw</td>
+<td>0.971</td>
+<td>105000</td>
+<td>13:43:44</td>
+<td>2:53:44</td>
+<td>2:48:42</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>Tud</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>GBR 527</td>
+<td>TUD</td>
+<td>Trinity University</td>
+<td>0.982</td>
+<td>105000</td>
+<td>13:48:10</td>
+<td>2:58:10</td>
+<td>2:54:58</td>
+<td>5.0</td>
+</tr>
+<tr class="odd racerow">
+<td>4</td>
+<td>&nbsp;</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>GBR 726</td>
+<td>HYC</td>
+<td>Brian Nixon</td>
+<td>0.982</td>
+<td>105000</td>
+<td>13:48:10</td>
+<td>2:58:10</td>
+<td>2:54:58</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>Dux</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>Irl988</td>
+<td>HYC</td>
+<td>Caroline and Nico Gore-Grimes</td>
+<td>0.982</td>
+<td>105000</td>
+<td>13:48:10</td>
+<td>2:58:10</td>
+<td>2:54:58</td>
+<td>5.0</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>Lambay Rules</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>Irl9970</td>
+<td>HYC</td>
+<td>Stephen Quinn</td>
+<td>1.058</td>
+<td>105000</td>
+<td>13:37:32</td>
+<td>2:47:32</td>
+<td>2:57:15</td>
+<td>7.0</td>
+</tr>
+<tr class="even racerow">
+<td>8</td>
+<td>Impetuous</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>irl 2507</td>
+<td>HYC</td>
+<td>Noonan/Chambers</td>
+<td>0.985</td>
+<td>105000</td>
+<td>13:53:23</td>
+<td>3:03:23</td>
+<td>3:00:38</td>
+<td>8.0</td>
+</tr>
+<tr class="odd racerow">
+<td>9</td>
+<td>Jeneral Lee</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>IRL 6697</td>
+<td>HYC</td>
+<td>Colin & Kathy Kavanagh</td>
+<td>1.100</td>
+<td>105000</td>
+<td>13:36:26</td>
+<td>2:46:26</td>
+<td>3:03:05</td>
+<td>9.0</td>
+</tr>
+<tr class="even racerow">
+<td>10</td>
+<td>Two farr</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>irl 2269</td>
+<td>Various</td>
+<td>Kelly Boardman O'Leary</td>
+<td>1.098</td>
+<td>105000</td>
+<td>13:36:47</td>
+<td>2:46:47</td>
+<td>3:03:08</td>
+<td>10.0</td>
+</tr>
+<tr class="odd racerow">
+<td>11</td>
+<td>Swuzzlebubble</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>KZ3494</td>
+<td>RCYC</td>
+<td>James Dwyer</td>
+<td>1.125</td>
+<td>105000</td>
+<td>13:35:55</td>
+<td>2:45:55</td>
+<td>3:06:39</td>
+<td>11.0</td>
+</tr>
+<tr class="even racerow">
+<td>12</td>
+<td>Mata</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>2794</td>
+<td>HYC</td>
+<td>Wright/De Neve</td>
+<td>1.079</td>
+<td>105000</td>
+<td>13:46:03</td>
+<td>2:56:03</td>
+<td>3:09:57</td>
+<td>12.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r5class_2_echo">R 1 Sunday - Class 2 Echo Start Class</h3>
+<div class="caption racecaption">
+Start: Start 3 Class 2, Finishes: Finish time, Time: 113500
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="12">
+<col class="rank" />
+<col class="boat" />
+<col class="nat" />
+<col class="sailno" />
+<col class="club" />
+<col class="helmname" />
+<col class="rating" />
+<col class="start" />
+<col class="finish" />
+<col class="elapsed" />
+<col class="corrected" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Boat Name</th>
+<th>Nat</th>
+<th>Sail No</th>
+<th>Club</th>
+<th>Owner Name(s)</th>
+<th>IRC/ECHO</th>
+<th>Start</th>
+<th>Finish</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>Maximus</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>IRL 7495</td>
+<td>HYC</td>
+<td>Paddy Kyne</td>
+<td>0.970</td>
+<td>110000</td>
+<td>12:01:16</td>
+<td>1:01:16</td>
+<td>0:59:26</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>Swuzzlebubble</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>KZ3494</td>
+<td>RCYC</td>
+<td>James Dwyer</td>
+<td>1.056</td>
+<td>113500</td>
+<td>12:39:55</td>
+<td>1:04:55</td>
+<td>1:08:33</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>Impetuous</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>irl 2507</td>
+<td>HYC</td>
+<td>Noonan/Chambers</td>
+<td>0.947</td>
+<td>113500</td>
+<td>12:47:57</td>
+<td>1:12:57</td>
+<td>1:09:05</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>Two farr</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>irl 2269</td>
+<td>Various</td>
+<td>Kelly Boardman O'Leary</td>
+<td>1.045</td>
+<td>113500</td>
+<td>12:41:51</td>
+<td>1:06:51</td>
+<td>1:09:51</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>Mata</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>2794</td>
+<td>HYC</td>
+<td>Wright/De Neve</td>
+<td>1.000</td>
+<td>113500</td>
+<td>12:47:02</td>
+<td>1:12:02</td>
+<td>1:12:02</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>Tud</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>GBR 527</td>
+<td>TUD</td>
+<td>Trinity University</td>
+<td>0.967</td>
+<td>113500</td>
+<td>12:51:00</td>
+<td>1:16:00</td>
+<td>1:13:30</td>
+<td>7.0</td>
+</tr>
+<tr class="odd racerow">
+<td>6</td>
+<td>&nbsp;</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>GBR 726</td>
+<td>HYC</td>
+<td>Brian Nixon</td>
+<td>0.967</td>
+<td>113500</td>
+<td>12:51:00</td>
+<td>1:16:00</td>
+<td>1:13:30</td>
+<td>7.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>Dux</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>Irl988</td>
+<td>HYC</td>
+<td>Caroline and Nico Gore-Grimes</td>
+<td>0.967</td>
+<td>113500</td>
+<td>12:51:00</td>
+<td>1:16:00</td>
+<td>1:13:30</td>
+<td>7.0</td>
+</tr>
+<tr class="odd racerow">
+<td>9</td>
+<td>Jeneral Lee</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>IRL 6697</td>
+<td>HYC</td>
+<td>Colin & Kathy Kavanagh</td>
+<td>1.047</td>
+<td>113500</td>
+<td>12:46:42</td>
+<td>1:11:42</td>
+<td>1:15:04</td>
+<td>9.0</td>
+</tr>
+<tr class="even racerow">
+<td>10</td>
+<td>Lambay Rules</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>Irl9970</td>
+<td>HYC</td>
+<td>Stephen Quinn</td>
+<td>1.032</td>
+<td>113500</td>
+<td>12:49:27</td>
+<td>1:14:27</td>
+<td>1:16:50</td>
+<td>10.0</td>
+</tr>
+<tr class="odd racerow">
+<td>11</td>
+<td>Wardance</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>IRL 7360</td>
+<td>MSC</td>
+<td>Sean Hawkshaw</td>
+<td>0.983</td>
+<td>113500</td>
+<td>12:54:29</td>
+<td>1:19:29</td>
+<td>1:18:08</td>
+<td>11.0</td>
+</tr>
+<tr class="even racerow">
+<td>12</td>
+<td>No Excuse</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>IRL 1972</td>
+<td>HYC</td>
+<td>Wormald Walsh O'Neill</td>
+<td>0.976</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>DNF</td>
+<td>&nbsp;</td>
+<td>13.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r1class_2_irc">R 1 Friday - Class 2 IRC Start Class&nbsp;-&nbsp;24/5/2024&nbsp;at&nbsp;110000</h3>
+<div class="caption racecaption">
+Start: Start 3 Class 2, Finishes: Finish time, Time: 111000
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="12">
+<col class="rank" />
+<col class="boat" />
+<col class="nat" />
+<col class="sailno" />
+<col class="club" />
+<col class="helmname" />
+<col class="rating" />
+<col class="start" />
+<col class="finish" />
+<col class="elapsed" />
+<col class="corrected" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Boat Name</th>
+<th>Nat</th>
+<th>Sail No</th>
+<th>Club</th>
+<th>Owner Name(s)</th>
+<th>IRC/ECHO</th>
+<th>Start</th>
+<th>Finish</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>Two farr</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>irl 2269</td>
+<td>Various</td>
+<td>Kelly Boardman O'Leary</td>
+<td>0.955</td>
+<td>111000</td>
+<td>12:05:11</td>
+<td>0:55:11</td>
+<td>0:52:42</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>Jeneral Lee</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>IRL 6697</td>
+<td>HYC</td>
+<td>Colin & Kathy Kavanagh</td>
+<td>0.970</td>
+<td>111000</td>
+<td>12:05:07</td>
+<td>0:55:07</td>
+<td>0:53:28</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>Lambay Rules</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>Irl9970</td>
+<td>HYC</td>
+<td>Stephen Quinn</td>
+<td>0.968</td>
+<td>111000</td>
+<td>12:05:15</td>
+<td>0:55:15</td>
+<td>0:53:29</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>Swuzzlebubble</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>KZ3494</td>
+<td>RCYC</td>
+<td>James Dwyer</td>
+<td>0.960</td>
+<td>111000</td>
+<td>12:06:07</td>
+<td>0:56:07</td>
+<td>0:53:52</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>Maximus</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>IRL 7495</td>
+<td>HYC</td>
+<td>Paddy Kyne</td>
+<td>0.921</td>
+<td>111000</td>
+<td>12:08:48</td>
+<td>0:58:48</td>
+<td>0:54:09</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>Mata</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>2794</td>
+<td>HYC</td>
+<td>Wright/De Neve</td>
+<td>0.941</td>
+<td>111000</td>
+<td>12:08:16</td>
+<td>0:58:16</td>
+<td>0:54:50</td>
+<td>6.0</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>No Excuse</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>IRL 1972</td>
+<td>HYC</td>
+<td>Wormald Walsh O'Neill</td>
+<td>0.920</td>
+<td>111000</td>
+<td>12:09:59</td>
+<td>0:59:59</td>
+<td>0:55:11</td>
+<td>7.0</td>
+</tr>
+<tr class="even racerow">
+<td>8</td>
+<td>Impetuous</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>irl 2507</td>
+<td>HYC</td>
+<td>Noonan/Chambers</td>
+<td>0.921</td>
+<td>111000</td>
+<td>12:10:37</td>
+<td>1:00:37</td>
+<td>0:55:50</td>
+<td>8.0</td>
+</tr>
+<tr class="odd racerow">
+<td>9</td>
+<td>Dux</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>Irl988</td>
+<td>HYC</td>
+<td>Caroline and Nico Gore-Grimes</td>
+<td>0.923</td>
+<td>111000</td>
+<td>12:11:00</td>
+<td>1:01:00</td>
+<td>0:56:18</td>
+<td>9.0</td>
+</tr>
+<tr class="even racerow">
+<td>10</td>
+<td>Tud</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>GBR 527</td>
+<td>TUD</td>
+<td>Trinity University</td>
+<td>0.952</td>
+<td>111000</td>
+<td>12:11:12</td>
+<td>1:01:12</td>
+<td>0:58:16</td>
+<td>10.0</td>
+</tr>
+<tr class="odd racerow">
+<td>11</td>
+<td>&nbsp;</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>GBR 726</td>
+<td>HYC</td>
+<td>Brian Nixon</td>
+<td>0.952</td>
+<td>111000</td>
+<td>12:11:15</td>
+<td>1:01:15</td>
+<td>0:58:19</td>
+<td>11.0</td>
+</tr>
+<tr class="even racerow">
+<td>12</td>
+<td>Wardance</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>IRL 7360</td>
+<td>MSC</td>
+<td>Sean Hawkshaw</td>
+<td>0.973</td>
+<td>111000</td>
+<td>12:11:45</td>
+<td>1:01:45</td>
+<td>1:00:05</td>
+<td>12.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r2class_2_irc">R 2 Friday - Class 2 IRC Start Class&nbsp;-&nbsp;24/5/2024</h3>
+<div class="caption racecaption">
+Start: Start 3 Class 2, Finishes: Finish time, Time: 124700
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="12">
+<col class="rank" />
+<col class="boat" />
+<col class="nat" />
+<col class="sailno" />
+<col class="club" />
+<col class="helmname" />
+<col class="rating" />
+<col class="start" />
+<col class="finish" />
+<col class="elapsed" />
+<col class="corrected" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Boat Name</th>
+<th>Nat</th>
+<th>Sail No</th>
+<th>Club</th>
+<th>Owner Name(s)</th>
+<th>IRC/ECHO</th>
+<th>Start</th>
+<th>Finish</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>Two farr</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>irl 2269</td>
+<td>Various</td>
+<td>Kelly Boardman O'Leary</td>
+<td>0.955</td>
+<td>124700</td>
+<td>13:46:56</td>
+<td>0:59:56</td>
+<td>0:57:14</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>Swuzzlebubble</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>KZ3494</td>
+<td>RCYC</td>
+<td>James Dwyer</td>
+<td>0.960</td>
+<td>124700</td>
+<td>13:47:40</td>
+<td>1:00:40</td>
+<td>0:58:14</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>Mata</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>2794</td>
+<td>HYC</td>
+<td>Wright/De Neve</td>
+<td>0.941</td>
+<td>124700</td>
+<td>13:49:10</td>
+<td>1:02:10</td>
+<td>0:58:30</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>Lambay Rules</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>Irl9970</td>
+<td>HYC</td>
+<td>Stephen Quinn</td>
+<td>0.968</td>
+<td>124700</td>
+<td>13:48:21</td>
+<td>1:01:21</td>
+<td>0:59:23</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>Dux</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>Irl988</td>
+<td>HYC</td>
+<td>Caroline and Nico Gore-Grimes</td>
+<td>0.923</td>
+<td>124700</td>
+<td>13:51:34</td>
+<td>1:04:34</td>
+<td>0:59:36</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>No Excuse</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>IRL 1972</td>
+<td>HYC</td>
+<td>Wormald Walsh O'Neill</td>
+<td>0.920</td>
+<td>124700</td>
+<td>13:52:03</td>
+<td>1:05:03</td>
+<td>0:59:51</td>
+<td>6.0</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>Jeneral Lee</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>IRL 6697</td>
+<td>HYC</td>
+<td>Colin & Kathy Kavanagh</td>
+<td>0.970</td>
+<td>124700</td>
+<td>13:49:32</td>
+<td>1:02:32</td>
+<td>1:00:39</td>
+<td>7.0</td>
+</tr>
+<tr class="even racerow">
+<td>8</td>
+<td>Maximus</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>IRL 7495</td>
+<td>HYC</td>
+<td>Paddy Kyne</td>
+<td>0.921</td>
+<td>124700</td>
+<td>13:52:56</td>
+<td>1:05:56</td>
+<td>1:00:43</td>
+<td>8.0</td>
+</tr>
+<tr class="odd racerow">
+<td>9</td>
+<td>Impetuous</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>irl 2507</td>
+<td>HYC</td>
+<td>Noonan/Chambers</td>
+<td>0.921</td>
+<td>124700</td>
+<td>13:54:10</td>
+<td>1:07:10</td>
+<td>1:01:52</td>
+<td>9.0</td>
+</tr>
+<tr class="even racerow">
+<td>10</td>
+<td>&nbsp;</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>GBR 726</td>
+<td>HYC</td>
+<td>Brian Nixon</td>
+<td>0.952</td>
+<td>124700</td>
+<td>13:53:46</td>
+<td>1:06:46</td>
+<td>1:03:34</td>
+<td>10.0</td>
+</tr>
+<tr class="odd racerow">
+<td>11</td>
+<td>Tud</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>GBR 527</td>
+<td>TUD</td>
+<td>Trinity University</td>
+<td>0.952</td>
+<td>124700</td>
+<td>13:53:49</td>
+<td>1:06:49</td>
+<td>1:03:37</td>
+<td>11.0</td>
+</tr>
+<tr class="even racerow">
+<td>12</td>
+<td>Wardance</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>IRL 7360</td>
+<td>MSC</td>
+<td>Sean Hawkshaw</td>
+<td>0.973</td>
+<td>124700</td>
+<td>13:54:42</td>
+<td>1:07:42</td>
+<td>1:05:52</td>
+<td>12.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r3class_2_irc">R 3 Friday - Class 2 IRC Start Class&nbsp;-&nbsp;24/5/2024</h3>
+<div class="caption racecaption">
+Start: Start 3 Class 2, Finishes: Finish time, Time: 142500
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="12">
+<col class="rank" />
+<col class="boat" />
+<col class="nat" />
+<col class="sailno" />
+<col class="club" />
+<col class="helmname" />
+<col class="rating" />
+<col class="start" />
+<col class="finish" />
+<col class="elapsed" />
+<col class="corrected" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Boat Name</th>
+<th>Nat</th>
+<th>Sail No</th>
+<th>Club</th>
+<th>Owner Name(s)</th>
+<th>IRC/ECHO</th>
+<th>Start</th>
+<th>Finish</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>Swuzzlebubble</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>KZ3494</td>
+<td>RCYC</td>
+<td>James Dwyer</td>
+<td>0.960</td>
+<td>142500</td>
+<td>15:22:10</td>
+<td>0:57:10</td>
+<td>0:54:53</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>Mata</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>2794</td>
+<td>HYC</td>
+<td>Wright/De Neve</td>
+<td>0.941</td>
+<td>142500</td>
+<td>15:24:53</td>
+<td>0:59:53</td>
+<td>0:56:21</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>Two farr</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>irl 2269</td>
+<td>Various</td>
+<td>Kelly Boardman O'Leary</td>
+<td>0.955</td>
+<td>142500</td>
+<td>15:24:16</td>
+<td>0:59:16</td>
+<td>0:56:36</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>Jeneral Lee</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>IRL 6697</td>
+<td>HYC</td>
+<td>Colin & Kathy Kavanagh</td>
+<td>0.970</td>
+<td>142500</td>
+<td>15:23:28</td>
+<td>0:58:28</td>
+<td>0:56:43</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>Lambay Rules</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>Irl9970</td>
+<td>HYC</td>
+<td>Stephen Quinn</td>
+<td>0.968</td>
+<td>142500</td>
+<td>15:26:48</td>
+<td>1:01:48</td>
+<td>0:59:49</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>Impetuous</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>irl 2507</td>
+<td>HYC</td>
+<td>Noonan/Chambers</td>
+<td>0.921</td>
+<td>142500</td>
+<td>15:31:00</td>
+<td>1:06:00</td>
+<td>1:00:47</td>
+<td>6.0</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>Dux</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>Irl988</td>
+<td>HYC</td>
+<td>Caroline and Nico Gore-Grimes</td>
+<td>0.923</td>
+<td>142500</td>
+<td>15:31:19</td>
+<td>1:06:19</td>
+<td>1:01:13</td>
+<td>7.0</td>
+</tr>
+<tr class="even racerow">
+<td>8</td>
+<td>&nbsp;</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>GBR 726</td>
+<td>HYC</td>
+<td>Brian Nixon</td>
+<td>0.952</td>
+<td>142500</td>
+<td>15:31:23</td>
+<td>1:06:23</td>
+<td>1:03:12</td>
+<td>8.0</td>
+</tr>
+<tr class="odd racerow">
+<td>9</td>
+<td>No Excuse</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>IRL 1972</td>
+<td>HYC</td>
+<td>Wormald Walsh O'Neill</td>
+<td>0.920</td>
+<td>142500</td>
+<td>15:35:00</td>
+<td>1:10:00</td>
+<td>1:04:24</td>
+<td>9.0</td>
+</tr>
+<tr class="even racerow">
+<td>10</td>
+<td>Maximus</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>IRL 7495</td>
+<td>HYC</td>
+<td>Paddy Kyne</td>
+<td>0.921</td>
+<td>142500</td>
+<td>15:35:37</td>
+<td>1:10:37</td>
+<td>1:05:02</td>
+<td>10.0</td>
+</tr>
+<tr class="odd racerow">
+<td>11</td>
+<td>Tud</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>GBR 527</td>
+<td>TUD</td>
+<td>Trinity University</td>
+<td>0.952</td>
+<td>142500</td>
+<td>15:33:30</td>
+<td>1:08:30</td>
+<td>1:05:13</td>
+<td>11.0</td>
+</tr>
+<tr class="even racerow">
+<td>12</td>
+<td>Wardance</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>IRL 7360</td>
+<td>MSC</td>
+<td>Sean Hawkshaw</td>
+<td>0.973</td>
+<td>142500</td>
+<td>15:32:07</td>
+<td>1:07:07</td>
+<td>1:05:18</td>
+<td>12.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r4class_2_irc">Lambay Race - Class 2 IRC Start Class&nbsp;-&nbsp;25/5/2024</h3>
+<div class="caption racecaption">
+Start: Start 3 Class 2, Finishes: Finish time, Time: 105000
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="12">
+<col class="rank" />
+<col class="boat" />
+<col class="nat" />
+<col class="sailno" />
+<col class="club" />
+<col class="helmname" />
+<col class="rating" />
+<col class="start" />
+<col class="finish" />
+<col class="elapsed" />
+<col class="corrected" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Boat Name</th>
+<th>Nat</th>
+<th>Sail No</th>
+<th>Club</th>
+<th>Owner Name(s)</th>
+<th>IRC/ECHO</th>
+<th>Start</th>
+<th>Finish</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>Swuzzlebubble</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>KZ3494</td>
+<td>RCYC</td>
+<td>James Dwyer</td>
+<td>0.960</td>
+<td>105000</td>
+<td>13:35:55</td>
+<td>2:45:55</td>
+<td>2:39:17</td>
+<td>1.5</td>
+</tr>
+<tr class="even racerow">
+<td>1</td>
+<td>Two farr</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>irl 2269</td>
+<td>Various</td>
+<td>Kelly Boardman O'Leary</td>
+<td>0.955</td>
+<td>105000</td>
+<td>13:36:47</td>
+<td>2:46:47</td>
+<td>2:39:17</td>
+<td>1.5</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>No Excuse</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>IRL 1972</td>
+<td>HYC</td>
+<td>Wormald Walsh O'Neill</td>
+<td>0.920</td>
+<td>105000</td>
+<td>13:44:01</td>
+<td>2:54:01</td>
+<td>2:40:06</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>Dux</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>Irl988</td>
+<td>HYC</td>
+<td>Caroline and Nico Gore-Grimes</td>
+<td>0.923</td>
+<td>105000</td>
+<td>13:44:02</td>
+<td>2:54:02</td>
+<td>2:40:38</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>Maximus</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>IRL 7495</td>
+<td>HYC</td>
+<td>Paddy Kyne</td>
+<td>0.921</td>
+<td>105000</td>
+<td>13:44:32</td>
+<td>2:54:32</td>
+<td>2:40:45</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>Jeneral Lee</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>IRL 6697</td>
+<td>HYC</td>
+<td>Colin & Kathy Kavanagh</td>
+<td>0.970</td>
+<td>105000</td>
+<td>13:36:26</td>
+<td>2:46:26</td>
+<td>2:41:26</td>
+<td>6.0</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>Lambay Rules</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>Irl9970</td>
+<td>HYC</td>
+<td>Stephen Quinn</td>
+<td>0.968</td>
+<td>105000</td>
+<td>13:37:32</td>
+<td>2:47:32</td>
+<td>2:42:10</td>
+<td>7.0</td>
+</tr>
+<tr class="even racerow">
+<td>8</td>
+<td>Mata</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>2794</td>
+<td>HYC</td>
+<td>Wright/De Neve</td>
+<td>0.941</td>
+<td>105000</td>
+<td>13:46:03</td>
+<td>2:56:03</td>
+<td>2:45:40</td>
+<td>8.0</td>
+</tr>
+<tr class="odd racerow">
+<td>9</td>
+<td>Impetuous</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>irl 2507</td>
+<td>HYC</td>
+<td>Noonan/Chambers</td>
+<td>0.921</td>
+<td>105000</td>
+<td>13:53:23</td>
+<td>3:03:23</td>
+<td>2:48:54</td>
+<td>9.0</td>
+</tr>
+<tr class="even racerow">
+<td>10</td>
+<td>Wardance</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>IRL 7360</td>
+<td>MSC</td>
+<td>Sean Hawkshaw</td>
+<td>0.973</td>
+<td>105000</td>
+<td>13:43:44</td>
+<td>2:53:44</td>
+<td>2:49:03</td>
+<td>10.0</td>
+</tr>
+<tr class="odd racerow">
+<td>11</td>
+<td>&nbsp;</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>GBR 726</td>
+<td>HYC</td>
+<td>Brian Nixon</td>
+<td>0.952</td>
+<td>105000</td>
+<td>13:48:10</td>
+<td>2:58:10</td>
+<td>2:49:37</td>
+<td>11.0</td>
+</tr>
+<tr class="even racerow">
+<td>12</td>
+<td>Tud</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>GBR 527</td>
+<td>TUD</td>
+<td>Trinity University</td>
+<td>0.952</td>
+<td>105000</td>
+<td>13:57:16</td>
+<td>3:07:16</td>
+<td>2:58:17</td>
+<td>12.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r5class_2_irc">R 1 Sunday - Class 2 IRC Start Class</h3>
+<div class="caption racecaption">
+Start: Start 3 Class 2, Finishes: Finish time, Time: 113500
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="12">
+<col class="rank" />
+<col class="boat" />
+<col class="nat" />
+<col class="sailno" />
+<col class="club" />
+<col class="helmname" />
+<col class="rating" />
+<col class="start" />
+<col class="finish" />
+<col class="elapsed" />
+<col class="corrected" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Boat Name</th>
+<th>Nat</th>
+<th>Sail No</th>
+<th>Club</th>
+<th>Owner Name(s)</th>
+<th>IRC/ECHO</th>
+<th>Start</th>
+<th>Finish</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>Swuzzlebubble</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>KZ3494</td>
+<td>RCYC</td>
+<td>James Dwyer</td>
+<td>0.960</td>
+<td>113500</td>
+<td>12:39:55</td>
+<td>1:04:55</td>
+<td>1:02:19</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>Two farr</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>irl 2269</td>
+<td>Various</td>
+<td>Kelly Boardman O'Leary</td>
+<td>0.955</td>
+<td>113500</td>
+<td>12:41:51</td>
+<td>1:06:51</td>
+<td>1:03:51</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>Impetuous</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>irl 2507</td>
+<td>HYC</td>
+<td>Noonan/Chambers</td>
+<td>0.921</td>
+<td>113500</td>
+<td>12:47:57</td>
+<td>1:12:57</td>
+<td>1:07:11</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>Mata</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>2794</td>
+<td>HYC</td>
+<td>Wright/De Neve</td>
+<td>0.941</td>
+<td>113500</td>
+<td>12:47:02</td>
+<td>1:12:02</td>
+<td>1:07:47</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>Dux</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>Irl988</td>
+<td>HYC</td>
+<td>Caroline and Nico Gore-Grimes</td>
+<td>0.923</td>
+<td>113500</td>
+<td>12:49:55</td>
+<td>1:14:55</td>
+<td>1:09:09</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>Jeneral Lee</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>IRL 6697</td>
+<td>HYC</td>
+<td>Colin & Kathy Kavanagh</td>
+<td>0.970</td>
+<td>113500</td>
+<td>12:46:42</td>
+<td>1:11:42</td>
+<td>1:09:33</td>
+<td>6.0</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>Tud</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>GBR 527</td>
+<td>TUD</td>
+<td>Trinity University</td>
+<td>0.952</td>
+<td>113500</td>
+<td>12:50:22</td>
+<td>1:15:22</td>
+<td>1:11:45</td>
+<td>7.0</td>
+</tr>
+<tr class="even racerow">
+<td>8</td>
+<td>Lambay Rules</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>Irl9970</td>
+<td>HYC</td>
+<td>Stephen Quinn</td>
+<td>0.968</td>
+<td>113500</td>
+<td>12:49:27</td>
+<td>1:14:27</td>
+<td>1:12:04</td>
+<td>8.0</td>
+</tr>
+<tr class="odd racerow">
+<td>9</td>
+<td>&nbsp;</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>GBR 726</td>
+<td>HYC</td>
+<td>Brian Nixon</td>
+<td>0.952</td>
+<td>113500</td>
+<td>12:51:00</td>
+<td>1:16:00</td>
+<td>1:12:21</td>
+<td>9.0</td>
+</tr>
+<tr class="even racerow">
+<td>10</td>
+<td>Wardance</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>IRL 7360</td>
+<td>MSC</td>
+<td>Sean Hawkshaw</td>
+<td>0.973</td>
+<td>113500</td>
+<td>12:54:29</td>
+<td>1:19:29</td>
+<td>1:17:20</td>
+<td>10.0</td>
+</tr>
+<tr class="odd racerow">
+<td>11</td>
+<td>No Excuse</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>IRL 1972</td>
+<td>HYC</td>
+<td>Wormald Walsh O'Neill</td>
+<td>0.920</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>DNF</td>
+<td>&nbsp;</td>
+<td>13.0</td>
+</tr>
+<tr class="even racerow">
+<td>11</td>
+<td>Maximus</td>
+<td><img class="natflag" title="IRL" src="https://www.sailwave.com/flags/small/IRL.jpg"><br><span class="nattext">IRL</span></td>
+<td>IRL 7495</td>
+<td>HYC</td>
+<td>Paddy Kyne</td>
+<td>0.921</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>DNF</td>
+<td>&nbsp;</td>
+<td>13.0</td>
+</tr>
+</tbody>
+</table>
+
+<p class="hardleft"><a href="https://"></a><br /><a href="mailto:"></a></p>
+<p class="hardright"><a href="https://"></a><br /><a href="mailto:"></a></p>
+<p>Sailwave Scoring Software 2.33.02<br /><a href="https://www.sailwave.com">www.sailwave.com</a></p>
+
+</div>
+
+<footer>
+</footer>
+
+<div id="scrollbottom"></div>
+
+</body>
+</html>
+
+

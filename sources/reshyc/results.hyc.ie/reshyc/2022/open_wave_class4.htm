@@ -1,0 +1,1551 @@
+
+
+
+<!doctype html>
+
+<head>
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="description" content="sailwave results">
+<meta name="viewport" content="width=device-width">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+
+<title>Sailwave results for Wave Regatta 2022 at Howth Yacht club 2022</title>
+
+<style type="text/css">
+body {font: 80% arial, helvetica, sans-serif; text-align: center;}
+.hardleft  {text-align: left; float: left;  margin: 15px 0  15px 25px;}
+.hardright {text-align: right; float: right; margin: 15px 25px 15px 0;}
+table {text-align: left; margin: 0px auto 30px auto; font-size: 1em; border-collapse: collapse; border: 1px #999 solid;}
+td, th {padding: 4px; border: 1px #999 solid; vertical-align: top;}
+.caption {padding: 5px; text-align: center; border: 0; font-weight: bold;}
+h1 {font-size: 1.6em;}
+h2 {font-size: 1.4em;}
+h3 {font-size: 1.2em;}
+th {background-color: #ddd;}
+p {text-align: center;}
+.contents {text-align: left; margin-left: 20%;}
+.natflag {border: 1px #999 solid;}
+.nattext {font-size: 0.8em;}
+.place1 {font-weight: bold; background-color: #ffffaa;}
+.place2 {font-weight: bold; background-color: #aaaaff;}
+.place3 {font-weight: bold; background-color: #ffaaaa;}
+.placen {}
+</style>
+
+<script type="text/javascript">
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script>
+
+function swGetURLArgs() {
+
+  var url = location.href;
+  var qs  = url.substring(url.indexOf('?') + 1).split('&');
+
+  for(var i = 0, result = {}; i < qs.length; i++) {
+    qs[i]            = qs[i].split('=');
+    result[qs[i][0]] = decodeURIComponent(qs[i][1]);
+  }
+
+  return result;
+}
+
+//
+//  name=HighlightWins3v3
+//  dependencies=jQuery
+//  description=Highlight winning scores in summary tables.
+//  author=Jon Eskdale based on an idea by Colin Jenkins
+//  date=2016-07-04
+//  version=3.0  For use with Sailwave from V2.22.x
+//  Requires the following lines in the Results.htm file (Results.htm is in the Templates directory)
+//  string.set("summary.col.race.rank1.td",   "rank1")
+//  string.set("summary.col.race.rank2.td",   "rank2")
+//  string.set("summary.col.race.rank3.td",   "rank3")
+
+//  url=http://sailwave.com
+//  email=jon@sailwave.com
+//  twitter=eskdale
+//  comments=Edit colours to colours of your choice
+//
+
+$(document).ready(function() {
+var selectorRank1 = '.rank1';
+var selectorRank2 = '.rank2';
+var selectorRank3 = '.rank3';
+
+// Results with these codes will not get highlighted add or remove codes to your choice
+var ignoreText   = /^(?!.*\b(DNC|DNF|DNS|OCS|BFD|UFD|RET|DSQ|DGM|DNE)\b).*/i
+
+// Edit these colours to change the highlight colours for 1st, 2nd and 3rd
+var winsColour   = '#ffd700';
+var twoColour    = '#6a91c5';
+var threeColour  = '#da6841';
+
+
+// Change the background color for cells with class of rank1-3 and don't have a code specified
+$(function () {
+
+  $(selectorRank1).filter(function() {
+    return ignoreText.test($(this).text());
+  }).css("background", winsColour);
+  $(selectorRank2).filter(function() {
+        return ignoreText.test($(this).text());
+  }).css("background", twoColour);
+  $(selectorRank3).filter(function() {
+        return ignoreText.test($(this).text());
+  }).css("background", threeColour);
+
+});
+});
+</script>
+
+</head>
+
+<body>
+
+<header>
+</header>
+
+<div id="wrap">
+
+<img class="hardright" src="https://hyc.ie/reshyc/images/wave.jpg" alt="event burgee" />
+<img class="hardleft"  src="https://hyc.ie/reshyc/images/hyc.jpg" alt="venue burgee" />
+
+<h1>Wave Regatta 2022</h1>
+<h2>Howth Yacht club</h2>
+
+<div style="clear:both;"></div>
+
+<style>
+div.applicant-break {page-break-after:always;}
+</style>
+<h3 class="seriestitle">Results are provisional as of 15:52 on June  5, 2022</h3>
+<h3 class="summarytitle" id="summaryclass_4_echo">Class 4 ECHO Boat Class</h3>
+<div class="caption summarycaption">Sailed: 6, Discards: 1, To count: 5, Rating system: NHC4, Entries: 5, Scoring system: Appendix A</div>
+<table class="summarytable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="17">
+<col class="rank" />
+<col class="fleet" />
+<col class="boat" />
+<col class="sailno" />
+<col class="club" />
+<col class="helmname" />
+<col class="rating" />
+<col class="newrating" />
+<col class="bownumber" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="total" />
+<col class="nett" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Boat Class</th>
+<th>Boat Name</th>
+<th>Sail No</th>
+<th>Club</th>
+<th>Owner Name</th>
+<th>Rating</th>
+<th>NewRating</th>
+<th>Sat only (Lambay)</th>
+<th><a class="racelink" href="#r1class_4_echo">R1</a></th>
+<th><a class="racelink" href="#r2class_4_echo">R2</a></th>
+<th><a class="racelink" href="#r4class_4_echo">Lambay</a></th>
+<th><a class="racelink" href="#r5class_4_echo">Sun R1</a></th>
+<th><a class="racelink" href="#r6class_4_echo">Sun R2</a></th>
+<th><a class="racelink" href="#r7class_4_echo">Sun R3</a></th>
+<th>Total</th>
+<th>Nett</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd summaryrow">
+<td>1</td>
+<td>Class 4 ECHO</td>
+<td>Bite the Bullet</td>
+<td>3335</td>
+<td>Howth Yacht Club</td>
+<td>Colm Bermingham</td>
+<td>0.960</td>
+<td>1.113</td>
+<td>&nbsp;</td>
+<td class="rank1">1.0</td>
+<td class="rank2">(2.0)</td>
+<td>9.0 DNC</td>
+<td class="rank1">1.0</td>
+<td class="rank1">1.0</td>
+<td class="rank1">1.0</td>
+<td>15.0</td>
+<td>13.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>2</td>
+<td>Class 4 ECHO</td>
+<td>White Pearl</td>
+<td>33301</td>
+<td>Malahide Yacht Club</td>
+<td>David Greene</td>
+<td>0.96</td>
+<td>0.834</td>
+<td>&nbsp;</td>
+<td class="rank2">2.5</td>
+<td class="rank3">(3.0)</td>
+<td class="rank3">4.5</td>
+<td class="rank2">2.0</td>
+<td class="rank2">2.0</td>
+<td class="rank3">3.0</td>
+<td>17.0</td>
+<td>14.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>3</td>
+<td>Class 4 ECHO</td>
+<td>Changeling</td>
+<td>8331</td>
+<td>Howth Yacht Club</td>
+<td>Kieran Jameson</td>
+<td>1.025</td>
+<td>0.996</td>
+<td>&nbsp;</td>
+<td>(5.0)</td>
+<td>5.0</td>
+<td class="rank1">1.5</td>
+<td>4.0</td>
+<td class="rank3">3.0</td>
+<td class="rank2">2.0</td>
+<td>20.5</td>
+<td>15.5</td>
+</tr>
+<tr class="even summaryrow">
+<td>4</td>
+<td>Class 4 ECHO</td>
+<td>White Lotus</td>
+<td>1333</td>
+<td>Dun Laoghaire Marina</td>
+<td>Paul Tully</td>
+<td>0.96</td>
+<td>0.974</td>
+<td>&nbsp;</td>
+<td class="rank2">2.5</td>
+<td class="rank1">1.0</td>
+<td>9.0 DNC</td>
+<td class="rank3">3.0</td>
+<td>(6.0 RET)</td>
+<td>6.0 DNC</td>
+<td>27.5</td>
+<td>21.5</td>
+</tr>
+<tr class="odd summaryrow">
+<td>5</td>
+<td>Class 4 ECHO</td>
+<td>Splashdance</td>
+<td>4073</td>
+<td>Howth Yacht Club</td>
+<td>John Beckett & Andy George</td>
+<td>1</td>
+<td>0.991</td>
+<td>&nbsp;</td>
+<td>4.0</td>
+<td>4.0</td>
+<td class="rank2">3.0</td>
+<td>(6.0 DNC)</td>
+<td>6.0 DNC</td>
+<td>6.0 DNC</td>
+<td>29.0</td>
+<td>23.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="summarytitle" id="summaryclass_4_irc">Class 4 IRC Boat Class</h3>
+<div class="caption summarycaption">Sailed: 6, Discards: 1, To count: 5, Rating system: TCF, Entries: 5, Scoring system: Appendix A</div>
+<table class="summarytable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="17">
+<col class="rank" />
+<col class="fleet" />
+<col class="boat" />
+<col class="sailno" />
+<col class="club" />
+<col class="helmname" />
+<col class="rating" />
+<col class="newrating" />
+<col class="bownumber" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="total" />
+<col class="nett" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Boat Class</th>
+<th>Boat Name</th>
+<th>Sail No</th>
+<th>Club</th>
+<th>Owner Name</th>
+<th>Rating</th>
+<th>NewRating</th>
+<th>Sat only (Lambay)</th>
+<th><a class="racelink" href="#r1class_4_irc">R1</a></th>
+<th><a class="racelink" href="#r2class_4_irc">R2</a></th>
+<th><a class="racelink" href="#r4class_4_irc">Lambay</a></th>
+<th><a class="racelink" href="#r5class_4_irc">Sun R1</a></th>
+<th><a class="racelink" href="#r6class_4_irc">Sun R2</a></th>
+<th><a class="racelink" href="#r7class_4_irc">Sun R3</a></th>
+<th>Total</th>
+<th>Nett</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd summaryrow">
+<td>1</td>
+<td>Class 4 IRC</td>
+<td>White Pearl</td>
+<td>33301</td>
+<td>Malahide Yacht Club</td>
+<td>David Greene</td>
+<td>0.939</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td class="rank2">2.0</td>
+<td class="rank3">(3.0)</td>
+<td class="rank2">3.0</td>
+<td class="rank2">2.0</td>
+<td class="rank2">2.0</td>
+<td class="rank3">3.0</td>
+<td>15.0</td>
+<td>12.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>2</td>
+<td>Class 4 IRC</td>
+<td>Bite the Bullet</td>
+<td>3335</td>
+<td>Howth Yacht Club</td>
+<td>Colm Bermingham</td>
+<td>0.953</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td class="rank1">(1.0)</td>
+<td class="rank1">1.0</td>
+<td>9.0 DNC</td>
+<td class="rank1">1.0</td>
+<td class="rank1">1.0</td>
+<td class="rank1">1.0</td>
+<td>14.0</td>
+<td>13.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>3</td>
+<td>Class 4 IRC</td>
+<td>Changeling</td>
+<td>8331</td>
+<td>Howth Yacht Club</td>
+<td>Kieran Jameson</td>
+<td>0.965</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>(4.0)</td>
+<td>4.0</td>
+<td class="rank1">1.5</td>
+<td>4.0</td>
+<td class="rank3">3.0</td>
+<td class="rank2">2.0</td>
+<td>18.5</td>
+<td>14.5</td>
+</tr>
+<tr class="even summaryrow">
+<td>4</td>
+<td>Class 4 IRC</td>
+<td>White Lotus</td>
+<td>1333</td>
+<td>Dun Laoghaire Marina</td>
+<td>Paul Tully</td>
+<td>0.949</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td class="rank3">3.0</td>
+<td class="rank2">2.0</td>
+<td>9.0 DNC</td>
+<td class="rank3">3.0</td>
+<td>(6.0 RET)</td>
+<td>6.0 DNC</td>
+<td>29.0</td>
+<td>23.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>5</td>
+<td>Class 4 IRC</td>
+<td>Splashdance</td>
+<td>4073</td>
+<td>Howth Yacht Club</td>
+<td>John Beckett & Andy George</td>
+<td>1</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>5.0</td>
+<td>5.0</td>
+<td class="rank3">4.5</td>
+<td>(6.0 DNC)</td>
+<td>6.0 DNC</td>
+<td>6.0 DNC</td>
+<td>32.5</td>
+<td>26.5</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r1class_4_echo">R1 - Class 4 ECHO Boat Class</h3>
+<div class="caption racecaption">
+Start: Class 4, Finishes: Finish time, Time: 11:05
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="12">
+<col class="rank" />
+<col class="fleet" />
+<col class="boat" />
+<col class="sailno" />
+<col class="club" />
+<col class="helmname" />
+<col class="rating" />
+<col class="newrating" />
+<col class="bownumber" />
+<col class="elapsed" />
+<col class="corrected" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Boat Class</th>
+<th>Boat Name</th>
+<th>Sail No</th>
+<th>Club</th>
+<th>Owner Name</th>
+<th>Rating</th>
+<th>NewRating</th>
+<th>Sat only (Lambay)</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>Class 4 ECHO</td>
+<td>Bite the Bullet</td>
+<td>3335</td>
+<td>Howth Yacht Club</td>
+<td>Colm Bermingham</td>
+<td>0.960</td>
+<td>1.000</td>
+<td>&nbsp;</td>
+<td>1:01:17</td>
+<td>0:58:50</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>Class 4 ECHO</td>
+<td>White Pearl</td>
+<td>33301</td>
+<td>Malahide Yacht Club</td>
+<td>David Greene</td>
+<td>0.96</td>
+<td>0.966</td>
+<td>&nbsp;</td>
+<td>1:04:13</td>
+<td>1:01:39</td>
+<td>2.5</td>
+</tr>
+<tr class="odd racerow">
+<td>2</td>
+<td>Class 4 ECHO</td>
+<td>White Lotus</td>
+<td>1333</td>
+<td>Dun Laoghaire Marina</td>
+<td>Paul Tully</td>
+<td>0.96</td>
+<td>0.966</td>
+<td>&nbsp;</td>
+<td>1:04:13</td>
+<td>1:01:39</td>
+<td>2.5</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>Class 4 ECHO</td>
+<td>Splashdance</td>
+<td>4073</td>
+<td>Howth Yacht Club</td>
+<td>John Beckett & Andy George</td>
+<td>1</td>
+<td>0.995</td>
+<td>&nbsp;</td>
+<td>1:02:32</td>
+<td>1:02:32</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>Class 4 ECHO</td>
+<td>Changeling</td>
+<td>8331</td>
+<td>Howth Yacht Club</td>
+<td>Kieran Jameson</td>
+<td>1.025</td>
+<td>0.978</td>
+<td>&nbsp;</td>
+<td>1:04:31</td>
+<td>1:06:08</td>
+<td>5.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r2class_4_echo">R2 - Class 4 ECHO Boat Class</h3>
+<div class="caption racecaption">
+Start: Class 4, Finishes: Finish time, Time: 13:11
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="12">
+<col class="rank" />
+<col class="fleet" />
+<col class="boat" />
+<col class="sailno" />
+<col class="club" />
+<col class="helmname" />
+<col class="rating" />
+<col class="newrating" />
+<col class="bownumber" />
+<col class="elapsed" />
+<col class="corrected" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Boat Class</th>
+<th>Boat Name</th>
+<th>Sail No</th>
+<th>Club</th>
+<th>Owner Name</th>
+<th>Rating</th>
+<th>NewRating</th>
+<th>Sat only (Lambay)</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>Class 4 ECHO</td>
+<td>White Lotus</td>
+<td>1333</td>
+<td>Dun Laoghaire Marina</td>
+<td>Paul Tully</td>
+<td>0.966</td>
+<td>0.977</td>
+<td>&nbsp;</td>
+<td>1:06:41</td>
+<td>1:04:25</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>Class 4 ECHO</td>
+<td>Bite the Bullet</td>
+<td>3335</td>
+<td>Howth Yacht Club</td>
+<td>Colm Bermingham</td>
+<td>1.000</td>
+<td>1.005</td>
+<td>&nbsp;</td>
+<td>1:05:01</td>
+<td>1:05:01</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>Class 4 ECHO</td>
+<td>White Pearl</td>
+<td>33301</td>
+<td>Malahide Yacht Club</td>
+<td>David Greene</td>
+<td>0.966</td>
+<td>0.968</td>
+<td>&nbsp;</td>
+<td>1:07:35</td>
+<td>1:05:17</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>Class 4 ECHO</td>
+<td>Splashdance</td>
+<td>4073</td>
+<td>Howth Yacht Club</td>
+<td>John Beckett & Andy George</td>
+<td>0.995</td>
+<td>0.993</td>
+<td>&nbsp;</td>
+<td>1:05:58</td>
+<td>1:05:38</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>Class 4 ECHO</td>
+<td>Changeling</td>
+<td>8331</td>
+<td>Howth Yacht Club</td>
+<td>Kieran Jameson</td>
+<td>0.978</td>
+<td>0.963</td>
+<td>&nbsp;</td>
+<td>1:08:19</td>
+<td>1:06:49</td>
+<td>5.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r4class_4_echo">Lambay - Class 4 ECHO Boat Class</h3>
+<div class="caption racecaption">
+Start: Class 4, Finishes: Finish time, Time: 12:10, Weight: 1.5
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="12">
+<col class="rank" />
+<col class="fleet" />
+<col class="boat" />
+<col class="sailno" />
+<col class="club" />
+<col class="helmname" />
+<col class="rating" />
+<col class="newrating" />
+<col class="bownumber" />
+<col class="elapsed" />
+<col class="corrected" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Boat Class</th>
+<th>Boat Name</th>
+<th>Sail No</th>
+<th>Club</th>
+<th>Owner Name</th>
+<th>Rating</th>
+<th>NewRating</th>
+<th>Sat only (Lambay)</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>Class 4 ECHO</td>
+<td>Changeling</td>
+<td>8331</td>
+<td>Howth Yacht Club</td>
+<td>Kieran Jameson</td>
+<td>0.963</td>
+<td>0.979</td>
+<td>&nbsp;</td>
+<td>2:16:38</td>
+<td>2:11:35</td>
+<td>1.5</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>Class 4 ECHO</td>
+<td>Splashdance</td>
+<td>4073</td>
+<td>Howth Yacht Club</td>
+<td>John Beckett & Andy George</td>
+<td>0.993</td>
+<td>0.991</td>
+<td>&nbsp;</td>
+<td>2:15:55</td>
+<td>2:14:58</td>
+<td>3.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>Class 4 ECHO</td>
+<td>White Pearl</td>
+<td>33301</td>
+<td>Malahide Yacht Club</td>
+<td>David Greene</td>
+<td>0.968</td>
+<td>0.954</td>
+<td>&nbsp;</td>
+<td>2:21:44</td>
+<td>2:17:12</td>
+<td>4.5</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r5class_4_echo">Sun R1 - Class 4 ECHO Boat Class</h3>
+<div class="caption racecaption">
+Start: Class 4, Finishes: Finish time, Time: 11:05
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="12">
+<col class="rank" />
+<col class="fleet" />
+<col class="boat" />
+<col class="sailno" />
+<col class="club" />
+<col class="helmname" />
+<col class="rating" />
+<col class="newrating" />
+<col class="bownumber" />
+<col class="elapsed" />
+<col class="corrected" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Boat Class</th>
+<th>Boat Name</th>
+<th>Sail No</th>
+<th>Club</th>
+<th>Owner Name</th>
+<th>Rating</th>
+<th>NewRating</th>
+<th>Sat only (Lambay)</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>Class 4 ECHO</td>
+<td>Bite the Bullet</td>
+<td>3335</td>
+<td>Howth Yacht Club</td>
+<td>Colm Bermingham</td>
+<td>1.005</td>
+<td>1.024</td>
+<td>&nbsp;</td>
+<td>0:44:17</td>
+<td>0:44:30</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>Class 4 ECHO</td>
+<td>White Pearl</td>
+<td>33301</td>
+<td>Malahide Yacht Club</td>
+<td>David Greene</td>
+<td>0.954</td>
+<td>0.970</td>
+<td>&nbsp;</td>
+<td>0:46:47</td>
+<td>0:44:38</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>Class 4 ECHO</td>
+<td>White Lotus</td>
+<td>1333</td>
+<td>Dun Laoghaire Marina</td>
+<td>Paul Tully</td>
+<td>0.977</td>
+<td>0.974</td>
+<td>&nbsp;</td>
+<td>0:46:53</td>
+<td>0:45:48</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>Class 4 ECHO</td>
+<td>Changeling</td>
+<td>8331</td>
+<td>Howth Yacht Club</td>
+<td>Kieran Jameson</td>
+<td>0.979</td>
+<td>0.948</td>
+<td>&nbsp;</td>
+<td>0:48:38</td>
+<td>0:47:37</td>
+<td>4.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r6class_4_echo">Sun R2 - Class 4 ECHO Boat Class</h3>
+<div class="caption racecaption">
+Start: Class 4, Finishes: Finish time, Time: 13:00
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="12">
+<col class="rank" />
+<col class="fleet" />
+<col class="boat" />
+<col class="sailno" />
+<col class="club" />
+<col class="helmname" />
+<col class="rating" />
+<col class="newrating" />
+<col class="bownumber" />
+<col class="elapsed" />
+<col class="corrected" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Boat Class</th>
+<th>Boat Name</th>
+<th>Sail No</th>
+<th>Club</th>
+<th>Owner Name</th>
+<th>Rating</th>
+<th>NewRating</th>
+<th>Sat only (Lambay)</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>Class 4 ECHO</td>
+<td>Bite the Bullet</td>
+<td>3335</td>
+<td>Howth Yacht Club</td>
+<td>Colm Bermingham</td>
+<td>1.024</td>
+<td>1.037</td>
+<td>&nbsp;</td>
+<td>0:47:19</td>
+<td>0:48:27</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>Class 4 ECHO</td>
+<td>White Pearl</td>
+<td>33301</td>
+<td>Malahide Yacht Club</td>
+<td>David Greene</td>
+<td>0.970</td>
+<td>0.972</td>
+<td>&nbsp;</td>
+<td>0:50:36</td>
+<td>0:49:05</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>Class 4 ECHO</td>
+<td>Changeling</td>
+<td>8331</td>
+<td>Howth Yacht Club</td>
+<td>Kieran Jameson</td>
+<td>0.948</td>
+<td>0.933</td>
+<td>&nbsp;</td>
+<td>0:53:05</td>
+<td>0:50:19</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>Class 4 ECHO</td>
+<td>White Lotus</td>
+<td>1333</td>
+<td>Dun Laoghaire Marina</td>
+<td>Paul Tully</td>
+<td>0.974</td>
+<td>0.974</td>
+<td>&nbsp;</td>
+<td>RET</td>
+<td>&nbsp;</td>
+<td>6.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r7class_4_echo">Sun R3 - Class 4 ECHO Boat Class</h3>
+<div class="caption racecaption">
+Start: Class 4, Finishes: Finish time, Time: 14:40
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="12">
+<col class="rank" />
+<col class="fleet" />
+<col class="boat" />
+<col class="sailno" />
+<col class="club" />
+<col class="helmname" />
+<col class="rating" />
+<col class="newrating" />
+<col class="bownumber" />
+<col class="elapsed" />
+<col class="corrected" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Boat Class</th>
+<th>Boat Name</th>
+<th>Sail No</th>
+<th>Club</th>
+<th>Owner Name</th>
+<th>Rating</th>
+<th>NewRating</th>
+<th>Sat only (Lambay)</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>Class 4 ECHO</td>
+<td>Bite the Bullet</td>
+<td>3335</td>
+<td>Howth Yacht Club</td>
+<td>Colm Bermingham</td>
+<td>1.037</td>
+<td>1.113</td>
+<td>&nbsp;</td>
+<td>0:23:25</td>
+<td>0:24:17</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>Class 4 ECHO</td>
+<td>Changeling</td>
+<td>8331</td>
+<td>Howth Yacht Club</td>
+<td>Kieran Jameson</td>
+<td>0.933</td>
+<td>0.996</td>
+<td>&nbsp;</td>
+<td>0:26:12</td>
+<td>0:24:27</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>Class 4 ECHO</td>
+<td>White Pearl</td>
+<td>33301</td>
+<td>Malahide Yacht Club</td>
+<td>David Greene</td>
+<td>0.972</td>
+<td>0.834</td>
+<td>&nbsp;</td>
+<td>0:33:50</td>
+<td>0:32:53</td>
+<td>3.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r1class_4_irc">R1 - Class 4 IRC Boat Class</h3>
+<div class="caption racecaption">
+Start: Class 4, Finishes: Finish time, Time: 11:05
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="12">
+<col class="rank" />
+<col class="fleet" />
+<col class="boat" />
+<col class="sailno" />
+<col class="club" />
+<col class="helmname" />
+<col class="rating" />
+<col class="newrating" />
+<col class="bownumber" />
+<col class="elapsed" />
+<col class="corrected" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Boat Class</th>
+<th>Boat Name</th>
+<th>Sail No</th>
+<th>Club</th>
+<th>Owner Name</th>
+<th>Rating</th>
+<th>NewRating</th>
+<th>Sat only (Lambay)</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>Class 4 IRC</td>
+<td>Bite the Bullet</td>
+<td>3335</td>
+<td>Howth Yacht Club</td>
+<td>Colm Bermingham</td>
+<td>0.953</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>1:01:17</td>
+<td>0:58:24</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>Class 4 IRC</td>
+<td>White Pearl</td>
+<td>33301</td>
+<td>Malahide Yacht Club</td>
+<td>David Greene</td>
+<td>0.939</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>1:04:13</td>
+<td>1:00:18</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>Class 4 IRC</td>
+<td>White Lotus</td>
+<td>1333</td>
+<td>Dun Laoghaire Marina</td>
+<td>Paul Tully</td>
+<td>0.949</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>1:04:13</td>
+<td>1:00:56</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>Class 4 IRC</td>
+<td>Changeling</td>
+<td>8331</td>
+<td>Howth Yacht Club</td>
+<td>Kieran Jameson</td>
+<td>0.965</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>1:04:31</td>
+<td>1:02:16</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>Class 4 IRC</td>
+<td>Splashdance</td>
+<td>4073</td>
+<td>Howth Yacht Club</td>
+<td>John Beckett & Andy George</td>
+<td>1</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>1:02:32</td>
+<td>1:02:32</td>
+<td>5.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r2class_4_irc">R2 - Class 4 IRC Boat Class</h3>
+<div class="caption racecaption">
+Start: Class 4, Finishes: Finish time, Time: 13:11
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="12">
+<col class="rank" />
+<col class="fleet" />
+<col class="boat" />
+<col class="sailno" />
+<col class="club" />
+<col class="helmname" />
+<col class="rating" />
+<col class="newrating" />
+<col class="bownumber" />
+<col class="elapsed" />
+<col class="corrected" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Boat Class</th>
+<th>Boat Name</th>
+<th>Sail No</th>
+<th>Club</th>
+<th>Owner Name</th>
+<th>Rating</th>
+<th>NewRating</th>
+<th>Sat only (Lambay)</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>Class 4 IRC</td>
+<td>Bite the Bullet</td>
+<td>3335</td>
+<td>Howth Yacht Club</td>
+<td>Colm Bermingham</td>
+<td>0.953</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>1:05:01</td>
+<td>1:01:58</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>Class 4 IRC</td>
+<td>White Lotus</td>
+<td>1333</td>
+<td>Dun Laoghaire Marina</td>
+<td>Paul Tully</td>
+<td>0.949</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>1:06:41</td>
+<td>1:03:17</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>Class 4 IRC</td>
+<td>White Pearl</td>
+<td>33301</td>
+<td>Malahide Yacht Club</td>
+<td>David Greene</td>
+<td>0.939</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>1:07:35</td>
+<td>1:03:28</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>Class 4 IRC</td>
+<td>Changeling</td>
+<td>8331</td>
+<td>Howth Yacht Club</td>
+<td>Kieran Jameson</td>
+<td>0.965</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>1:08:19</td>
+<td>1:05:56</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>Class 4 IRC</td>
+<td>Splashdance</td>
+<td>4073</td>
+<td>Howth Yacht Club</td>
+<td>John Beckett & Andy George</td>
+<td>1</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>1:05:58</td>
+<td>1:05:58</td>
+<td>5.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r4class_4_irc">Lambay - Class 4 IRC Boat Class</h3>
+<div class="caption racecaption">
+Start: Class 4, Finishes: Finish time, Time: 12:10, Weight: 1.5
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="12">
+<col class="rank" />
+<col class="fleet" />
+<col class="boat" />
+<col class="sailno" />
+<col class="club" />
+<col class="helmname" />
+<col class="rating" />
+<col class="newrating" />
+<col class="bownumber" />
+<col class="elapsed" />
+<col class="corrected" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Boat Class</th>
+<th>Boat Name</th>
+<th>Sail No</th>
+<th>Club</th>
+<th>Owner Name</th>
+<th>Rating</th>
+<th>NewRating</th>
+<th>Sat only (Lambay)</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>Class 4 IRC</td>
+<td>Changeling</td>
+<td>8331</td>
+<td>Howth Yacht Club</td>
+<td>Kieran Jameson</td>
+<td>0.965</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>2:16:38</td>
+<td>2:11:51</td>
+<td>1.5</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>Class 4 IRC</td>
+<td>White Pearl</td>
+<td>33301</td>
+<td>Malahide Yacht Club</td>
+<td>David Greene</td>
+<td>0.939</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>2:21:44</td>
+<td>2:13:05</td>
+<td>3.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>Class 4 IRC</td>
+<td>Splashdance</td>
+<td>4073</td>
+<td>Howth Yacht Club</td>
+<td>John Beckett & Andy George</td>
+<td>1</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>2:15:55</td>
+<td>2:15:55</td>
+<td>4.5</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r5class_4_irc">Sun R1 - Class 4 IRC Boat Class</h3>
+<div class="caption racecaption">
+Start: Class 4, Finishes: Finish time, Time: 11:05
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="12">
+<col class="rank" />
+<col class="fleet" />
+<col class="boat" />
+<col class="sailno" />
+<col class="club" />
+<col class="helmname" />
+<col class="rating" />
+<col class="newrating" />
+<col class="bownumber" />
+<col class="elapsed" />
+<col class="corrected" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Boat Class</th>
+<th>Boat Name</th>
+<th>Sail No</th>
+<th>Club</th>
+<th>Owner Name</th>
+<th>Rating</th>
+<th>NewRating</th>
+<th>Sat only (Lambay)</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>Class 4 IRC</td>
+<td>Bite the Bullet</td>
+<td>3335</td>
+<td>Howth Yacht Club</td>
+<td>Colm Bermingham</td>
+<td>0.953</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>0:44:17</td>
+<td>0:42:12</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>Class 4 IRC</td>
+<td>White Pearl</td>
+<td>33301</td>
+<td>Malahide Yacht Club</td>
+<td>David Greene</td>
+<td>0.939</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>0:46:47</td>
+<td>0:43:56</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>Class 4 IRC</td>
+<td>White Lotus</td>
+<td>1333</td>
+<td>Dun Laoghaire Marina</td>
+<td>Paul Tully</td>
+<td>0.949</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>0:46:53</td>
+<td>0:44:30</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>Class 4 IRC</td>
+<td>Changeling</td>
+<td>8331</td>
+<td>Howth Yacht Club</td>
+<td>Kieran Jameson</td>
+<td>0.965</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>0:48:38</td>
+<td>0:46:56</td>
+<td>4.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r6class_4_irc">Sun R2 - Class 4 IRC Boat Class</h3>
+<div class="caption racecaption">
+Start: Class 4, Finishes: Finish time, Time: 13:00
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="12">
+<col class="rank" />
+<col class="fleet" />
+<col class="boat" />
+<col class="sailno" />
+<col class="club" />
+<col class="helmname" />
+<col class="rating" />
+<col class="newrating" />
+<col class="bownumber" />
+<col class="elapsed" />
+<col class="corrected" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Boat Class</th>
+<th>Boat Name</th>
+<th>Sail No</th>
+<th>Club</th>
+<th>Owner Name</th>
+<th>Rating</th>
+<th>NewRating</th>
+<th>Sat only (Lambay)</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>Class 4 IRC</td>
+<td>Bite the Bullet</td>
+<td>3335</td>
+<td>Howth Yacht Club</td>
+<td>Colm Bermingham</td>
+<td>0.953</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>0:47:19</td>
+<td>0:45:06</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>Class 4 IRC</td>
+<td>White Pearl</td>
+<td>33301</td>
+<td>Malahide Yacht Club</td>
+<td>David Greene</td>
+<td>0.939</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>0:50:36</td>
+<td>0:47:31</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>Class 4 IRC</td>
+<td>Changeling</td>
+<td>8331</td>
+<td>Howth Yacht Club</td>
+<td>Kieran Jameson</td>
+<td>0.965</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>0:53:05</td>
+<td>0:51:14</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>Class 4 IRC</td>
+<td>White Lotus</td>
+<td>1333</td>
+<td>Dun Laoghaire Marina</td>
+<td>Paul Tully</td>
+<td>0.949</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>RET</td>
+<td>&nbsp;</td>
+<td>6.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r7class_4_irc">Sun R3 - Class 4 IRC Boat Class</h3>
+<div class="caption racecaption">
+Start: Class 4, Finishes: Finish time, Time: 14:40
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="12">
+<col class="rank" />
+<col class="fleet" />
+<col class="boat" />
+<col class="sailno" />
+<col class="club" />
+<col class="helmname" />
+<col class="rating" />
+<col class="newrating" />
+<col class="bownumber" />
+<col class="elapsed" />
+<col class="corrected" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Boat Class</th>
+<th>Boat Name</th>
+<th>Sail No</th>
+<th>Club</th>
+<th>Owner Name</th>
+<th>Rating</th>
+<th>NewRating</th>
+<th>Sat only (Lambay)</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>Class 4 IRC</td>
+<td>Bite the Bullet</td>
+<td>3335</td>
+<td>Howth Yacht Club</td>
+<td>Colm Bermingham</td>
+<td>0.953</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>0:23:25</td>
+<td>0:22:19</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>Class 4 IRC</td>
+<td>Changeling</td>
+<td>8331</td>
+<td>Howth Yacht Club</td>
+<td>Kieran Jameson</td>
+<td>0.965</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>0:26:12</td>
+<td>0:25:17</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>Class 4 IRC</td>
+<td>White Pearl</td>
+<td>33301</td>
+<td>Malahide Yacht Club</td>
+<td>David Greene</td>
+<td>0.939</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>0:33:50</td>
+<td>0:31:46</td>
+<td>3.0</td>
+</tr>
+</tbody>
+</table>
+
+<p class="hardleft"><a href="http://https://www.waveregatta.com/">https://www.waveregatta.com/</a><br /><a href="mailto:"></a></p>
+<p class="hardright"><a href="http://https://www.waveregatta.com/">https://www.waveregatta.com/</a><br /><a href="mailto:"></a></p>
+<p>Sailwave Scoring Software 2.29.7<br /><a href="http://www.sailwave.com">www.sailwave.com</a></p>
+
+</div>
+
+<footer>
+</footer>
+
+<div id="scrollbottom"></div>
+
+</body>
+</html>
+
+

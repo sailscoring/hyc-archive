@@ -1,0 +1,1706 @@
+
+
+
+<!doctype html>
+
+<head>
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta http-equiv="Cache-control" content="no-cache">
+<meta name="description" content="sailwave results">
+<meta name="viewport" content="width=device-width">
+
+<title>Sailwave results for HYC Dinghy Racing 2024 at Howth YC 2024</title>
+
+<style type="text/css">
+body {font: 80% arial, helvetica, sans-serif; text-align: center;}
+.hardleft  {text-align: left; float: left;  margin: 15px 0  15px 25px;}
+.hardright {text-align: right; float: right; margin: 15px 25px 15px 0;}
+table {text-align: left; margin: 0px auto 30px auto; font-size: 1em; border-collapse: collapse; border: 1px #999 solid;}
+td, th {padding: 4px; border: 1px #999 solid; vertical-align: top;}
+.caption {padding: 5px; text-align: center; border: 0; font-weight: bold;}
+p {text-align: center;}
+.contents {text-align: left; margin-left: 20%;}
+.race {background-color: #eee;}
+.odd {background-color: #eef;}
+.natflag {border: 1px #999 solid;}
+.nattext {font-size: 0.8em;}
+.place1 {font-weight: bold; background-color: #ffffaa;}
+.place2 {font-weight: bold; background-color: #aaaaff;}
+.place3 {font-weight: bold; background-color: #ffaaaa;}
+.placen {}
+table.headertable {border: 0px;}
+table.headertable td{border: 0px;}
+</style>
+
+<script type="text/javascript">
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script>
+
+function swGetURLArgs() {
+
+  var url = location.href;
+  var qs  = url.substring(url.indexOf('?') + 1).split('&');
+
+  for(var i = 0, result = {}; i < qs.length; i++) {
+    qs[i]            = qs[i].split('=');
+    result[qs[i][0]] = decodeURIComponent(qs[i][1]);
+  }
+
+  return result;
+}
+
+//
+//  name=HighlightWins3v3
+//  dependencies=jQuery
+//  description=Highlight winning scores in summary tables.
+//  author=Jon Eskdale based on an idea by Colin Jenkins
+//  date=2016-07-04
+//  version=3.0  For use with Sailwave from V2.22.x
+//  Requires the following lines in the Results.htm file (Results.htm is in the Templates directory)
+//  string.set("summary.col.race.rank1.td",   "rank1")
+//  string.set("summary.col.race.rank2.td",   "rank2")
+//  string.set("summary.col.race.rank3.td",   "rank3")
+
+//  url=http://sailwave.com
+//  email=jon@sailwave.com
+//  twitter=eskdale
+//  comments=Edit colours to colours of your choice
+//
+
+$(document).ready(function() {
+var selectorRank1 = '.rank1';
+var selectorRank2 = '.rank2';
+var selectorRank3 = '.rank3';
+
+// Results with these codes will not get highlighted add or remove codes to your choice
+var ignoreText   = /^(?!.*\b(DNC|DNF|DNS|OCS|BFD|UFD|RET|DSQ|DGM|DNE)\b).*/i
+
+// Edit these colours to change the highlight colours for 1st, 2nd and 3rd
+var winsColour   = '#ffd700';
+var twoColour    = '#6a91c5';
+var threeColour  = '#da6841';
+
+
+// Change the background color for cells with class of rank1-3 and don't have a code specified
+$(function () {
+
+  $(selectorRank1).filter(function() {
+    return ignoreText.test($(this).text());
+  }).css("background", winsColour);
+  $(selectorRank2).filter(function() {
+        return ignoreText.test($(this).text());
+  }).css("background", twoColour);
+  $(selectorRank3).filter(function() {
+        return ignoreText.test($(this).text());
+  }).css("background", threeColour);
+
+});
+});
+</script>
+
+</head>
+
+<body>
+
+<header>
+</header>
+<table class="headertable" cellspacing="0" width="100%" cellpadding="0" border="0">
+<tbody>
+<div id="wrap">
+
+<tr>
+<td width="30%">
+<img style="display:block; height:100px;"  src="https://hyc.ie/assets/logo-5a615b18e52275b60e166edcca88c6c4.png" alt="venue burgee" />
+</td>
+
+<td width="40%" align="center">
+<h1>HYC Dinghy Racing 2024</h1>
+<h2>Howth YC</h2>
+</td>
+
+<td width="30%">
+</td>
+</tr>
+</tbody>
+</table>
+
+<div style="clear:both;"></div>
+
+<style>
+div.applicant-break {page-break-after:always;}
+</style>
+<h3 class="seriestitle">Results are provisional as of 19:19 on September  6, 2024</h3>
+<h3 class="summarytitle" id="summarypy_class">PY Class Fleet</h3>
+<div class="caption summarycaption">Sailed: 21, Discards: 5, To count: 16, Rating system: PY, Entries: 28, Scoring system: Appendix A</div>
+<table class="summarytable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="28">
+<col class="rank" />
+<col class="class" />
+<col class="sailno" />
+<col class="helmname" />
+<col class="rating" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="total" />
+<col class="nett" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Class</th>
+<th>SailNo</th>
+<th>HelmName</th>
+<th>PY</th>
+<th>April 23rd</th>
+<th>May 2nd</th>
+<th>R3 May 9th</th>
+<th>R4</th>
+<th>R5</th>
+<th>R6 Jun 14</th>
+<th>R7 Jun 14</th>
+<th>R8</th>
+<th>R9</th>
+<th>R10 Jun 28</th>
+<th>R11 Jun 28</th>
+<th>R12 Jul 18</th>
+<th>R13 Jul 18</th>
+<th>R14 Jul 25</th>
+<th>R15 Jul 25</th>
+<th>R16 Aug 1</th>
+<th>R17 Aug 1</th>
+<th><a class="racelink" href="#r18py_class">R18 Aug 8</a></th>
+<th><a class="racelink" href="#r19py_class">R19</a></th>
+<th><a class="racelink" href="#r20py_class">R20</a></th>
+<th><a class="racelink" href="#r21py_class">R21</a></th>
+<th>Total</th>
+<th>Nett</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd summaryrow">
+<td>1st</td>
+<td>Melges 15</td>
+<td>635</td>
+<td>Cormac Farrelly</td>
+<td>973</td>
+<td class="rank2">2.0</td>
+<td>5.0</td>
+<td class="rank1">7.0 DNF</td>
+<td>7.0</td>
+<td>5.0</td>
+<td>4.0</td>
+<td class="rank3">3.0</td>
+<td>(29.0 DNC)</td>
+<td>(29.0 DNC)</td>
+<td>7.0</td>
+<td>7.0</td>
+<td>4.0</td>
+<td>6.0</td>
+<td class="rank3">3.0</td>
+<td class="rank2">2.0</td>
+<td>(29.0 DNC)</td>
+<td>6.0</td>
+<td>(29.0 DNC)</td>
+<td>(29.0 DNC)</td>
+<td class="rank3">3.0</td>
+<td class="rank2">2.0</td>
+<td>218.0</td>
+<td>73.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>2nd</td>
+<td>RS Aero 6</td>
+<td>4179</td>
+<td>Daragh Sheridan</td>
+<td>1102</td>
+<td class="rank1">1.0</td>
+<td>(29.0 DNC)</td>
+<td>(29.0 DNC)</td>
+<td class="rank1">1.0</td>
+<td class="rank1">1.0</td>
+<td>(29.0 DNC)</td>
+<td>(29.0 DNC)</td>
+<td>(29.0 DNC)</td>
+<td>29.0 DNC</td>
+<td class="rank2">2.0</td>
+<td class="rank2">2.0</td>
+<td class="rank1">1.0</td>
+<td class="rank1">1.0</td>
+<td class="rank1">1.0</td>
+<td>29.0 DNC</td>
+<td class="rank1">1.0</td>
+<td class="rank1">1.0</td>
+<td class="rank1">1.0</td>
+<td class="rank1">1.0</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>275.0</td>
+<td>130.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>3rd</td>
+<td>Melges 15</td>
+<td>799</td>
+<td>Michael Evans</td>
+<td>973</td>
+<td>(29.0 DNC)</td>
+<td>(29.0 DNC)</td>
+<td>(29.0 DNC)</td>
+<td class="rank3">3.0</td>
+<td class="rank3">3.0</td>
+<td class="rank2">2.0</td>
+<td class="rank1">1.0</td>
+<td class="rank1">1.0</td>
+<td class="rank1">1.0</td>
+<td>5.0</td>
+<td>5.0</td>
+<td class="rank2">2.0</td>
+<td class="rank2">2.0</td>
+<td class="rank2">2.0</td>
+<td class="rank1">1.0</td>
+<td>(29.0 DNC)</td>
+<td>(29.0 DNC)</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>289.0</td>
+<td>144.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>4th</td>
+<td>RS Aero 6</td>
+<td>3291</td>
+<td>John Phelan</td>
+<td>1102</td>
+<td>(29.0 DNC)</td>
+<td class="rank2">2.0</td>
+<td class="rank1">7.0 DNF</td>
+<td class="rank2">2.0</td>
+<td class="rank2">2.0</td>
+<td>(29.0 DNC)</td>
+<td>(29.0 DNC)</td>
+<td>(29.0 DNC)</td>
+<td>(29.0 DNC)</td>
+<td class="rank3">3.0</td>
+<td class="rank3">3.0</td>
+<td class="rank3">3.0</td>
+<td class="rank3">3.0</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td class="rank2">2.0</td>
+<td class="rank2">2.0</td>
+<td>5.0</td>
+<td class="rank2">2.0</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>297.0</td>
+<td>152.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>5th</td>
+<td>Melges 15</td>
+<td>807</td>
+<td>Darren Wright</td>
+<td>973</td>
+<td>(29.0 DNC)</td>
+<td>(29.0 DNC)</td>
+<td>(29.0 DNC)</td>
+<td>(29.0 DNC)</td>
+<td>(29.0 DNC)</td>
+<td>7.0</td>
+<td>4.0</td>
+<td>7.0</td>
+<td>11.0 DNF</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>12.0 RET</td>
+<td>11.0 RET</td>
+<td>9.0</td>
+<td>5.0</td>
+<td>7.0</td>
+<td>8.0</td>
+<td>6.0</td>
+<td>4.0</td>
+<td>8.0</td>
+<td>29.0 DNC</td>
+<td>331.0</td>
+<td>186.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>6th</td>
+<td>ILCA 6</td>
+<td>144273</td>
+<td>Dylan Cassidy</td>
+<td>1154</td>
+<td>(29.0 DNC)</td>
+<td>(29.0 DNC)</td>
+<td>(29.0 DNC)</td>
+<td>(29.0 DNC)</td>
+<td>(29.0 DNC)</td>
+<td class="rank1">1.0</td>
+<td class="rank2">2.0</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>4.0</td>
+<td class="rank1">1.0</td>
+<td>5.0</td>
+<td>5.0</td>
+<td>16.0 DNF</td>
+<td>29.0 DNC</td>
+<td>4.0</td>
+<td>5.0</td>
+<td class="rank3">3.0</td>
+<td>5.0</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>341.0</td>
+<td>196.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>7th</td>
+<td>RS Aero 6</td>
+<td>3187</td>
+<td>Emmet Dalton</td>
+<td>1102</td>
+<td>(29.0 DNC)</td>
+<td>4.0</td>
+<td class="rank1">7.0 DNF</td>
+<td>(29.0 DNC)</td>
+<td>(29.0 DNC)</td>
+<td>(29.0 DNC)</td>
+<td>(29.0 DNC)</td>
+<td class="rank2">2.0</td>
+<td class="rank2">2.0</td>
+<td class="rank1">1.0</td>
+<td>4.0</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>16.0 DNF</td>
+<td>29.0 DNC</td>
+<td class="rank3">3.0</td>
+<td class="rank3">3.0</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td class="rank1">1.0</td>
+<td>29.0 DNC</td>
+<td>362.0</td>
+<td>217.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>8th</td>
+<td>Melges 15</td>
+<td>802</td>
+<td>Tom McMahon</td>
+<td>973</td>
+<td>(29.0 DNC)</td>
+<td>(29.0 DNC)</td>
+<td>(29.0 DNC)</td>
+<td>6.0</td>
+<td>6.0</td>
+<td>(29.0 DNC)</td>
+<td>(29.0 DNC)</td>
+<td class="rank3">3.0</td>
+<td class="rank3">3.0</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>4.0</td>
+<td>4.0</td>
+<td>6.0</td>
+<td>7.0</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>4.0</td>
+<td class="rank1">1.0</td>
+<td>363.0</td>
+<td>218.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>9th</td>
+<td>Melges 15</td>
+<td>803</td>
+<td>Stephen Quinn</td>
+<td>973</td>
+<td>(29.0 DNC)</td>
+<td>(29.0 DNC)</td>
+<td>(29.0 DNC)</td>
+<td>4.0</td>
+<td>9.0</td>
+<td>5.0</td>
+<td>7.0</td>
+<td>4.0</td>
+<td>5.0</td>
+<td>(29.0 DNC)</td>
+<td>(29.0 DNC)</td>
+<td>7.0</td>
+<td>4.0</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td class="rank2">2.0</td>
+<td class="rank3">3.0</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>369.0</td>
+<td>224.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>10th</td>
+<td>Melges 15</td>
+<td>800</td>
+<td>Mark McLoughlin</td>
+<td>973</td>
+<td>(29.0 DNC)</td>
+<td>(29.0 DNC)</td>
+<td>(29.0 DNC)</td>
+<td>9.0</td>
+<td>4.0</td>
+<td>6.0</td>
+<td>6.0</td>
+<td>11.0 DNF</td>
+<td>11.0 DNF</td>
+<td>(29.0 DNC)</td>
+<td>(29.0 DNC)</td>
+<td>9.0</td>
+<td>9.0</td>
+<td>16.0 DNF</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>10.0 DNF</td>
+<td>6.0</td>
+<td>387.0</td>
+<td>242.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>11th</td>
+<td>ILCA 7</td>
+<td>173090</td>
+<td>Brian Tyrrell</td>
+<td>1102</td>
+<td>(29.0 DNC)</td>
+<td>(29.0 DNC)</td>
+<td>(29.0 DNC)</td>
+<td>5.0</td>
+<td>13.0 RET</td>
+<td>(29.0 DNC)</td>
+<td>(29.0 DNC)</td>
+<td>5.0</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>6.0</td>
+<td>7.0</td>
+<td>16.0 DNF</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td class="rank2">2.0</td>
+<td>5.0</td>
+<td>436.0</td>
+<td>291.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>12th</td>
+<td>Melges 15</td>
+<td>806</td>
+<td>Sarah Robertson</td>
+<td>973</td>
+<td>(29.0 DNC)</td>
+<td>(29.0 DNC)</td>
+<td>(29.0 DNC)</td>
+<td>8.0</td>
+<td>7.0</td>
+<td>(29.0 DNC)</td>
+<td>(29.0 DNC)</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>8.0</td>
+<td>8.0</td>
+<td>8.0</td>
+<td>6.0</td>
+<td>8.0</td>
+<td>9.0</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>439.0</td>
+<td>294.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>13th</td>
+<td>Melges 15</td>
+<td>797</td>
+<td>John Brereton</td>
+<td>973</td>
+<td>(29.0 DNC)</td>
+<td>(29.0 DNC)</td>
+<td>(29.0 DNC)</td>
+<td>(29.0 DNC)</td>
+<td>(29.0 DNC)</td>
+<td>8.0</td>
+<td>5.0</td>
+<td>6.0</td>
+<td>4.0</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>5.0</td>
+<td class="rank3">3.0</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>5.0</td>
+<td>29.0 DNC</td>
+<td>442.0</td>
+<td>297.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>14th</td>
+<td>Melges 15</td>
+<td>805</td>
+<td>Gary Cullen</td>
+<td>973</td>
+<td>(29.0 DNC)</td>
+<td>(29.0 DNC)</td>
+<td>(29.0 DNC)</td>
+<td>(29.0 DNC)</td>
+<td>(29.0 DNC)</td>
+<td class="rank3">3.0</td>
+<td>8.0</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>6.0</td>
+<td>6.0</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>16.0 DNF</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>7.0</td>
+<td class="rank3">3.0</td>
+<td>455.0</td>
+<td>310.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>15th</td>
+<td>B14</td>
+<td>79</td>
+<td>Jeremy Beshoff</td>
+<td>853</td>
+<td>(29.0 DNC)</td>
+<td>(29.0 DNC)</td>
+<td class="rank1">7.0 DNF</td>
+<td>10.0</td>
+<td>13.0 RET</td>
+<td>(29.0 DNC)</td>
+<td>(29.0 DNC)</td>
+<td>9.0</td>
+<td>6.0</td>
+<td>8.0</td>
+<td>8.0</td>
+<td>(29.0 DNC)</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>467.0</td>
+<td>322.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>16th</td>
+<td>RS 600</td>
+<td>789</td>
+<td>Tristan Nelson</td>
+<td>917</td>
+<td>(29.0 DNC)</td>
+<td>(29.0 DNC)</td>
+<td class="rank1">7.0 DNF</td>
+<td>(29.0 DNC)</td>
+<td>(29.0 DNC)</td>
+<td>(29.0 DNC)</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>7.0</td>
+<td>29.0 DNC</td>
+<td>5.0</td>
+<td>4.0</td>
+<td>4.0</td>
+<td>6.0</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>468.0</td>
+<td>323.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>17th</td>
+<td>B14</td>
+<td>733</td>
+<td>Sam Osborne</td>
+<td>853</td>
+<td class="rank3">3.0</td>
+<td>(29.0 DNC)</td>
+<td>(29.0 DNC)</td>
+<td>(29.0 DNC)</td>
+<td>(29.0 DNC)</td>
+<td>(29.0 DNC)</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>11.0 DNF</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>12.0 RET</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>9.0</td>
+<td>10.0</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>509.0</td>
+<td>364.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>18th</td>
+<td>Melges 15</td>
+<td>798</td>
+<td>Michael Wright</td>
+<td>973</td>
+<td>(29.0 DNC)</td>
+<td>(29.0 DNC)</td>
+<td>(29.0 DNC)</td>
+<td>(29.0 DNC)</td>
+<td>(29.0 DNC)</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>9.0 DNF</td>
+<td>7.0</td>
+<td>6.0</td>
+<td>4.0</td>
+<td>519.0</td>
+<td>374.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>19th</td>
+<td>GP14</td>
+<td>14279</td>
+<td>Katie Dwyer</td>
+<td>1138</td>
+<td>(29.0 DNC)</td>
+<td class="rank1">1.0</td>
+<td>(29.0 DNC)</td>
+<td>(29.0 DNC)</td>
+<td>(29.0 DNC)</td>
+<td>(29.0 DNC)</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>6.0</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>558.0</td>
+<td>413.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>20th</td>
+<td>ILCA 7</td>
+<td>170946</td>
+<td>Cillian Macken</td>
+<td>1102</td>
+<td>(29.0 DNC)</td>
+<td>6.0</td>
+<td>(29.0 DNC)</td>
+<td>(29.0 DNC)</td>
+<td>(29.0 DNC)</td>
+<td>(29.0 DNC)</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>9.0 DNF</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>566.0</td>
+<td>421.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>21st</td>
+<td>ILCA 4</td>
+<td>144273</td>
+<td>Dylan Cassidy</td>
+<td>1213</td>
+<td>(29.0 DNC)</td>
+<td>8.0 NSC</td>
+<td class="rank1">7.0 DNF</td>
+<td>(29.0 DNC)</td>
+<td>(29.0 DNC)</td>
+<td>(29.0 DNC)</td>
+<td>(29.0 DNC)</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>566.0</td>
+<td>421.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>22nd</td>
+<td>Enterprise</td>
+<td>23118</td>
+<td>Kay Cornally</td>
+<td>1122</td>
+<td>(29.0 DNC)</td>
+<td class="rank3">3.0</td>
+<td>(29.0 DNC)</td>
+<td>(29.0 DNC)</td>
+<td>13.0 RET</td>
+<td>(29.0 DNC)</td>
+<td>(29.0 DNC)</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>567.0</td>
+<td>422.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>23rd</td>
+<td>RS Feva</td>
+<td>1749</td>
+<td>Charlie Robertson</td>
+<td>1248</td>
+<td>(29.0 DNC)</td>
+<td>(29.0 DNC)</td>
+<td>(29.0 DNC)</td>
+<td>(29.0 DNC)</td>
+<td>(29.0 DNC)</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>10.0</td>
+<td>8.0 DNF</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>569.0</td>
+<td>424.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>24th</td>
+<td>Melges 15</td>
+<td>804</td>
+<td>HYC1</td>
+<td>973</td>
+<td>(29.0 DNC)</td>
+<td>(29.0 DNC)</td>
+<td>(29.0 DNC)</td>
+<td>(29.0 DNC)</td>
+<td>(29.0 DNC)</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>8.0</td>
+<td>11.0 DNF</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>570.0</td>
+<td>425.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>25th</td>
+<td>Melges 15</td>
+<td>796</td>
+<td>Karina Knaggs</td>
+<td>973</td>
+<td>(29.0 DNC)</td>
+<td>(29.0 DNC)</td>
+<td>(29.0 DNC)</td>
+<td>12.0 RET</td>
+<td>8.0</td>
+<td>(29.0 DNC)</td>
+<td>(29.0 DNC)</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>571.0</td>
+<td>426.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>26th</td>
+<td>Melges 15</td>
+<td>801</td>
+<td>Jim Sexton</td>
+<td>973</td>
+<td>(29.0 DNC)</td>
+<td>(29.0 DNC)</td>
+<td>(29.0 DNC)</td>
+<td>(29.0 DNC)</td>
+<td>(29.0 DNC)</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>609.0</td>
+<td>464.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>26th</td>
+<td>ILCA 6</td>
+<td>3006</td>
+<td>Carla Fagan</td>
+<td>1154</td>
+<td>(29.0 DNC)</td>
+<td>(29.0 DNC)</td>
+<td>(29.0 DNC)</td>
+<td>(29.0 DNC)</td>
+<td>(29.0 DNC)</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>609.0</td>
+<td>464.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>26th</td>
+<td>ILCA 7</td>
+<td>170378</td>
+<td>Colin Kavanagh</td>
+<td>1102</td>
+<td>(29.0 DNC)</td>
+<td>(29.0 DNC)</td>
+<td>(29.0 DNC)</td>
+<td>(29.0 DNC)</td>
+<td>(29.0 DNC)</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>29.0 DNC</td>
+<td>609.0</td>
+<td>464.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="summarytitle" id="summaryoptimist">Optimist Fleet</h3>
+<div class="caption summarycaption">Sailed: 7, Discards: 1, To count: 6, Entries: 7, Scoring system: Appendix A</div>
+<table class="summarytable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="14">
+<col class="rank" />
+<col class="class" />
+<col class="sailno" />
+<col class="helmname" />
+<col class="rating" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="total" />
+<col class="nett" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Class</th>
+<th>SailNo</th>
+<th>HelmName</th>
+<th>Rating</th>
+<th>April 23rd</th>
+<th>May 2nd</th>
+<th>R6 Jun 14</th>
+<th>R7 Jun 14</th>
+<th>R14 Jul 25</th>
+<th>R16 Aug 1</th>
+<th>R17 Aug 1</th>
+<th>Total</th>
+<th>Nett</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd summaryrow">
+<td>1st</td>
+<td>OPTIMIST</td>
+<td>1620</td>
+<td>Will Cullen</td>
+<td>1628</td>
+<td class="rank1">(8.0 DNC)</td>
+<td class="rank1">1.0</td>
+<td class="rank1">1.0</td>
+<td class="rank1">1.0</td>
+<td class="rank1">2.0 DNF</td>
+<td>8.0 DNC</td>
+<td>8.0 DNC</td>
+<td>29.0</td>
+<td>21.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>2nd</td>
+<td>OPTIMIST</td>
+<td>1579</td>
+<td>Dan Cullen</td>
+<td>1628</td>
+<td class="rank1">(8.0 DNC)</td>
+<td class="rank2">2.0</td>
+<td class="rank2">2.0</td>
+<td class="rank2">2.0</td>
+<td class="rank2">8.0 DNC</td>
+<td>8.0 DNC</td>
+<td>8.0 DNC</td>
+<td>38.0</td>
+<td>30.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>3rd</td>
+<td>OPTIMIST</td>
+<td>1074</td>
+<td>&nbsp;</td>
+<td>1628</td>
+<td class="rank1">(8.0 DNC)</td>
+<td class="rank3">8.0 DNC</td>
+<td class="rank3">8.0 DNC</td>
+<td class="rank3">8.0 DNC</td>
+<td class="rank2">8.0 DNC</td>
+<td class="rank1">1.0</td>
+<td class="rank1">1.0</td>
+<td>42.0</td>
+<td>34.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>4th</td>
+<td>OPTIMIST</td>
+<td>xxxx</td>
+<td>Harry Cahill</td>
+<td>1628</td>
+<td class="rank1">(8.0 DNC)</td>
+<td class="rank3">8.0 DNC</td>
+<td class="rank3">8.0 DNC</td>
+<td class="rank3">8.0 DNC</td>
+<td class="rank2">8.0 DNC</td>
+<td class="rank2">2.0</td>
+<td class="rank3">3.0</td>
+<td>45.0</td>
+<td>37.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>5th</td>
+<td>OPTIMIST</td>
+<td>5773</td>
+<td>&nbsp;</td>
+<td>1628</td>
+<td class="rank1">(8.0 DNC)</td>
+<td class="rank3">8.0 DNC</td>
+<td class="rank3">8.0 DNC</td>
+<td class="rank3">8.0 DNC</td>
+<td class="rank2">8.0 DNC</td>
+<td>4.0</td>
+<td class="rank2">2.0</td>
+<td>46.0</td>
+<td>38.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>6th</td>
+<td>OPTIMIST</td>
+<td>yyyy</td>
+<td>Kier Mullin</td>
+<td>1628</td>
+<td class="rank1">(8.0 DNC)</td>
+<td class="rank3">8.0 DNC</td>
+<td class="rank3">8.0 DNC</td>
+<td class="rank3">8.0 DNC</td>
+<td class="rank2">8.0 DNC</td>
+<td class="rank3">3.0</td>
+<td>5.0</td>
+<td>48.0</td>
+<td>40.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>7th</td>
+<td>OPTIMIST</td>
+<td>1362</td>
+<td>&nbsp;</td>
+<td>1628</td>
+<td class="rank1">(8.0 DNC)</td>
+<td class="rank3">8.0 DNC</td>
+<td class="rank3">8.0 DNC</td>
+<td class="rank3">8.0 DNC</td>
+<td class="rank2">8.0 DNC</td>
+<td>5.0</td>
+<td>4.0</td>
+<td>49.0</td>
+<td>41.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r18py_class">R18 Aug 8 - PY Class Fleet</h3>
+<div class="caption racecaption">
+Start: Start 1, Finishes: Finish time, Time: 190300
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="10">
+<col class="rank" />
+<col class="class" />
+<col class="sailno" />
+<col class="helmname" />
+<col class="rating" />
+<col class="start" />
+<col class="finish" />
+<col class="elapsed" />
+<col class="corrected" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Class</th>
+<th>SailNo</th>
+<th>HelmName</th>
+<th>PY</th>
+<th>Start</th>
+<th>Finish</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>RS Aero 6</td>
+<td>4179</td>
+<td>Daragh Sheridan</td>
+<td>1102</td>
+<td>190300</td>
+<td>19:30:16</td>
+<td>0:27:16</td>
+<td>0:24:45</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>Melges 15</td>
+<td>803</td>
+<td>Stephen Quinn</td>
+<td>973</td>
+<td>190300</td>
+<td>19:29:59</td>
+<td>0:26:59</td>
+<td>0:27:44</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>ILCA 6</td>
+<td>144273</td>
+<td>Dylan Cassidy</td>
+<td>1154</td>
+<td>190300</td>
+<td>19:36:37</td>
+<td>0:33:37</td>
+<td>0:29:08</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>RS 600</td>
+<td>789</td>
+<td>Tristan Nelson</td>
+<td>917</td>
+<td>190300</td>
+<td>19:29:46</td>
+<td>0:26:46</td>
+<td>0:29:11</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>RS Aero 6</td>
+<td>3291</td>
+<td>John Phelan</td>
+<td>1102</td>
+<td>190300</td>
+<td>19:35:23</td>
+<td>0:32:23</td>
+<td>0:29:23</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>Melges 15</td>
+<td>807</td>
+<td>Darren Wright</td>
+<td>973</td>
+<td>190300</td>
+<td>19:34:28</td>
+<td>0:31:28</td>
+<td>0:32:20</td>
+<td>6.0</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>Melges 15</td>
+<td>798</td>
+<td>Michael Wright</td>
+<td>973</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>DNF</td>
+<td>&nbsp;</td>
+<td>9.0</td>
+</tr>
+<tr class="even racerow">
+<td>7</td>
+<td>ILCA 7</td>
+<td>170946</td>
+<td>Cillian Macken</td>
+<td>1102</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>DNF</td>
+<td>&nbsp;</td>
+<td>9.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r19py_class">R19 - PY Class Fleet</h3>
+<div class="caption racecaption">
+Start: Start 1, Finishes: Finish time, Time: 194500
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="10">
+<col class="rank" />
+<col class="class" />
+<col class="sailno" />
+<col class="helmname" />
+<col class="rating" />
+<col class="start" />
+<col class="finish" />
+<col class="elapsed" />
+<col class="corrected" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Class</th>
+<th>SailNo</th>
+<th>HelmName</th>
+<th>PY</th>
+<th>Start</th>
+<th>Finish</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>RS Aero 6</td>
+<td>4179</td>
+<td>Daragh Sheridan</td>
+<td>1102</td>
+<td>194500</td>
+<td>20:02:24</td>
+<td>0:17:24</td>
+<td>0:15:47</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>RS Aero 6</td>
+<td>3291</td>
+<td>John Phelan</td>
+<td>1102</td>
+<td>194500</td>
+<td>20:03:59</td>
+<td>0:18:59</td>
+<td>0:17:14</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>Melges 15</td>
+<td>803</td>
+<td>Stephen Quinn</td>
+<td>973</td>
+<td>194500</td>
+<td>20:02:03</td>
+<td>0:17:03</td>
+<td>0:17:31</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>Melges 15</td>
+<td>807</td>
+<td>Darren Wright</td>
+<td>973</td>
+<td>194500</td>
+<td>20:02:20</td>
+<td>0:17:20</td>
+<td>0:17:49</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>ILCA 6</td>
+<td>144273</td>
+<td>Dylan Cassidy</td>
+<td>1154</td>
+<td>194500</td>
+<td>20:06:12</td>
+<td>0:21:12</td>
+<td>0:18:22</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>RS 600</td>
+<td>789</td>
+<td>Tristan Nelson</td>
+<td>917</td>
+<td>194500</td>
+<td>20:02:31</td>
+<td>0:17:31</td>
+<td>0:19:06</td>
+<td>6.0</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>Melges 15</td>
+<td>798</td>
+<td>Michael Wright</td>
+<td>973</td>
+<td>194500</td>
+<td>20:07:14</td>
+<td>0:22:14</td>
+<td>0:22:51</td>
+<td>7.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r20py_class">R20 - PY Class Fleet&nbsp;-&nbsp;Aug 29th</h3>
+<div class="caption racecaption">
+Start: Start 1, Finishes: Finish time, Time: 19.07.00
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="10">
+<col class="rank" />
+<col class="class" />
+<col class="sailno" />
+<col class="helmname" />
+<col class="rating" />
+<col class="start" />
+<col class="finish" />
+<col class="elapsed" />
+<col class="corrected" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Class</th>
+<th>SailNo</th>
+<th>HelmName</th>
+<th>PY</th>
+<th>Start</th>
+<th>Finish</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>RS Aero 6</td>
+<td>3187</td>
+<td>Emmet Dalton</td>
+<td>1102</td>
+<td>19.07.00</td>
+<td>19.30.48</td>
+<td>0.23.48</td>
+<td>0.21.36</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>ILCA 7</td>
+<td>173090</td>
+<td>Brian Tyrrell</td>
+<td>1102</td>
+<td>19.07.00</td>
+<td>19.32.34</td>
+<td>0.25.34</td>
+<td>0.23.12</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>Melges 15</td>
+<td>635</td>
+<td>Cormac Farrelly</td>
+<td>973</td>
+<td>19.07.00</td>
+<td>19.30.27</td>
+<td>0.23.27</td>
+<td>0.24.06</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>Melges 15</td>
+<td>802</td>
+<td>Tom McMahon</td>
+<td>973</td>
+<td>19.07.00</td>
+<td>19.30.44</td>
+<td>0.23.44</td>
+<td>0.24.24</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>Melges 15</td>
+<td>797</td>
+<td>John Brereton</td>
+<td>973</td>
+<td>19.07.00</td>
+<td>19.31.07</td>
+<td>0.24.07</td>
+<td>0.24.47</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>Melges 15</td>
+<td>798</td>
+<td>Michael Wright</td>
+<td>973</td>
+<td>19.07.00</td>
+<td>19.31.26</td>
+<td>0.24.26</td>
+<td>0.25.07</td>
+<td>6.0</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>Melges 15</td>
+<td>805</td>
+<td>Gary Cullen</td>
+<td>973</td>
+<td>19.07.00</td>
+<td>19.31.46</td>
+<td>0.24.46</td>
+<td>0.25.27</td>
+<td>7.0</td>
+</tr>
+<tr class="even racerow">
+<td>8</td>
+<td>Melges 15</td>
+<td>807</td>
+<td>Darren Wright</td>
+<td>973</td>
+<td>19.07.00</td>
+<td>19.32.09</td>
+<td>0.25.09</td>
+<td>0.25.51</td>
+<td>8.0</td>
+</tr>
+<tr class="odd racerow">
+<td>9</td>
+<td>Melges 15</td>
+<td>800</td>
+<td>Mark McLoughlin</td>
+<td>973</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>DNF</td>
+<td>&nbsp;</td>
+<td>10.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r21py_class">R21 - PY Class Fleet&nbsp;-&nbsp;Aug 29th</h3>
+<div class="caption racecaption">
+Start: Start 1, Finishes: Finish time, Time: 19.41.00
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="10">
+<col class="rank" />
+<col class="class" />
+<col class="sailno" />
+<col class="helmname" />
+<col class="rating" />
+<col class="start" />
+<col class="finish" />
+<col class="elapsed" />
+<col class="corrected" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Class</th>
+<th>SailNo</th>
+<th>HelmName</th>
+<th>PY</th>
+<th>Start</th>
+<th>Finish</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>Melges 15</td>
+<td>802</td>
+<td>Tom McMahon</td>
+<td>973</td>
+<td>19.41.00</td>
+<td>20.06.48</td>
+<td>0.25.48</td>
+<td>0.26.31</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>Melges 15</td>
+<td>635</td>
+<td>Cormac Farrelly</td>
+<td>973</td>
+<td>19.41.00</td>
+<td>20.06.56</td>
+<td>0.25.56</td>
+<td>0.26.39</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>Melges 15</td>
+<td>805</td>
+<td>Gary Cullen</td>
+<td>973</td>
+<td>19.41.00</td>
+<td>20.07.30</td>
+<td>0.26.30</td>
+<td>0.27.14</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>Melges 15</td>
+<td>798</td>
+<td>Michael Wright</td>
+<td>973</td>
+<td>19.41.00</td>
+<td>20.08.46</td>
+<td>0.27.46</td>
+<td>0.28.32</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>ILCA 7</td>
+<td>173090</td>
+<td>Brian Tyrrell</td>
+<td>1102</td>
+<td>19.41.00</td>
+<td>20.15.14</td>
+<td>0.34.14</td>
+<td>0.31.04</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>Melges 15</td>
+<td>800</td>
+<td>Mark McLoughlin</td>
+<td>973</td>
+<td>19.41.00</td>
+<td>20.16.11</td>
+<td>0.35.11</td>
+<td>0.36.10</td>
+<td>6.0</td>
+</tr>
+</tbody>
+</table>
+
+<p class="hardleft"><a href="https://"></a><br /><a href="mailto:"></a></p>
+<p class="hardright"><a href="https://"></a><br /><a href="mailto:"></a></p>
+<p>Sailwave Scoring Software 2.34.00<br /><a href="https://www.sailwave.com">www.sailwave.com</a></p>
+
+</div>
+
+<footer>
+</footer>
+
+<div id="scrollbottom"></div>
+
+</body>
+</html>
+
+

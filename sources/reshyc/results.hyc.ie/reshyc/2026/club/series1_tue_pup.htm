@@ -1,0 +1,2218 @@
+
+
+
+<!doctype html>
+<html lang="en-US">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html;charset=ISO-8859-1"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="description" content="sailwave results">
+<meta name="viewport" content="width=device-width">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+
+<title>Sailwave results for Club Racing 2026 at Tuesdays - One Designs - Series 1 2026</title>
+
+<style type="text/css">
+body {font: 80% arial, helvetica, sans-serif; text-align: center;}
+.hardleft  {text-align: left; float: left;  margin: 15px 0  15px 25px;}
+.hardright {text-align: right; float: right; margin: 15px 25px 15px 0;}
+table {text-align: left; margin: 0px auto 30px auto; font-size: 1em; border-collapse: collapse; border: 1px #999 solid;}
+td, th {padding: 4px; border: 1px #999 solid; vertical-align: top;}
+.caption {padding: 5px; text-align: center; border: 0; font-weight: bold;}
+p {text-align: center;}
+.contents {text-align: left; margin-left: 20%;}
+.race {background-color: #eee;}
+.odd {background-color: #eef;}
+.natflag {border: 1px #999 solid;}
+.nattext {font-size: 0.8em;}
+.place1 {font-weight: bold; background-color: #ffffaa;}
+.place2 {font-weight: bold; background-color: #aaaaff;}
+.place3 {font-weight: bold; background-color: #ffaaaa;}
+.placen {}
+table.headertable {border: 0px;}
+table.headertable td{border: 0px;}
+</style>
+
+<script type="text/javascript">
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script>
+
+function swGetURLArgs() {
+
+  var url = location.href;
+  var qs  = url.substring(url.indexOf('?') + 1).split('&');
+
+  for(var i = 0, result = {}; i < qs.length; i++) {
+    qs[i]            = qs[i].split('=');
+    result[qs[i][0]] = decodeURIComponent(qs[i][1]);
+  }
+
+  return result;
+}
+
+//
+//  name=HighlightWins3v3
+//  dependencies=jQuery
+//  description=Highlight winning scores in summary tables.
+//  author=Jon Eskdale based on an idea by Colin Jenkins
+//  date=2016-07-04
+//  version=3.0  For use with Sailwave from V2.22.x
+//  Requires the following lines in the Results.htm file (Results.htm is in the Templates directory)
+//  string.set("summary.col.race.rank1.td",   "rank1")
+//  string.set("summary.col.race.rank2.td",   "rank2")
+//  string.set("summary.col.race.rank3.td",   "rank3")
+
+//  url=http://sailwave.com
+//  email=jon@sailwave.com
+//  twitter=eskdale
+//  comments=Edit colours to colours of your choice
+//
+
+$(document).ready(function() {
+var selectorRank1 = '.rank1';
+var selectorRank2 = '.rank2';
+var selectorRank3 = '.rank3';
+
+// Results with these codes will not get highlighted add or remove codes to your choice
+var ignoreText   = /^(?!.*\b(DNC|DNF|DNS|OCS|BFD|UFD|RET|DSQ|DGM|DNE)\b).*/i
+
+// Edit these colours to change the highlight colours for 1st, 2nd and 3rd
+var winsColour   = '#ffd700';
+var twoColour    = '#6a91c5';
+var threeColour  = '#da6841';
+
+
+// Change the background color for cells with class of rank1-3 and don't have a code specified
+$(function () {
+
+  $(selectorRank1).filter(function() {
+    return ignoreText.test($(this).text());
+  }).css("background", winsColour);
+  $(selectorRank2).filter(function() {
+        return ignoreText.test($(this).text());
+  }).css("background", twoColour);
+  $(selectorRank3).filter(function() {
+        return ignoreText.test($(this).text());
+  }).css("background", threeColour);
+
+});
+});
+</script>
+<link rel="shortcut icon" type="image/ico" href="https://www.sailwave.com/favicon.ico"/>
+</head>
+
+<body>
+
+<header>
+</header>
+<table class="headertable" cellspacing="0" width="100%" cellpadding="0" border="0">
+<tbody>
+<div id="wrap">
+
+<tr>
+<td width="30%">
+<img id="venueburgee" style="display:block; height:100px;"  src="https://www.hyc.ie/system/sponsor_logos/620/normal/Howth_Yacht_Club_-_Logo_RGB.jpg" alt="venue burgee" />
+</td>
+
+<td width="40%" align="center">
+<h1>Club Racing 2026</h1>
+<h2>Tuesdays - One Designs - Series 1</h2>
+</td>
+
+<td width="30%">
+<img id="eventburgee" style="display:block; height:100px;" src="https://www.hyc.ie/system/sponsor_logos/620/normal/Howth_Yacht_Club_-_Logo_RGB.jpg" alt="event burgee" align="right" />
+</td>
+</tr>
+</tbody>
+</table>
+
+<div style="clear:both;"></div>
+
+<style>
+div.applicant-break {page-break-after:always;}
+</style>
+<h3 class="seriestitle">Results are provisional as of 21:40 on June  2, 2026</h3>
+<h3 class="summarytitle" id="summarypuppeteer_hph">Puppeteer HPH Fleet</h3>
+<div class="caption summarycaption">Sailed: 4, Discards: 1, To count: 3, Rating system: NHC1, Entries: 20, Scoring system: Appendix A</div>
+<table class="summarytable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="11">
+<col class="rank" />
+<col class="sailno" />
+<col class="boat" />
+<col class="helmname" />
+<col class="rating" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="total" />
+<col class="nett" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Sail Nr</th>
+<th>Name</th>
+<th>Owners</th>
+<th>NHC1</th>
+<th><a class="racelink" href="#r1puppeteer_hph">R1</a></th>
+<th><a class="racelink" href="#r2puppeteer_hph">R2</a></th>
+<th><a class="racelink" href="#r3puppeteer_hph">R3</a></th>
+<th><a class="racelink" href="#r4puppeteer_hph">R4</a></th>
+<th>Total</th>
+<th>Nett</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd summaryrow">
+<td>1st</td>
+<td>15</td>
+<td>Trick or Treat</td>
+<td>Alan Pearson / Alan Blay</td>
+<td>1.350</td>
+<td>4.0</td>
+<td data-rat="1.365" class="rank1">1.0</td>
+<td data-rat="1.383">6.0</td>
+<td data-rat="1.382">(8.0)</td>
+<td>19.0</td>
+<td>11.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>2nd</td>
+<td>1055</td>
+<td>Pinocchio</td>
+<td>Jack Mc Mahon</td>
+<td>1.325</td>
+<td>(21.0 DNC)</td>
+<td data-rat="1.325" class="rank3">3.0</td>
+<td data-rat="1.334">5.0</td>
+<td data-rat="1.334">6.0</td>
+<td>35.0</td>
+<td>14.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>3rd</td>
+<td>219</td>
+<td>Geppetto</td>
+<td>O'Reilly / McDyer</td>
+<td>1.250</td>
+<td>12.0</td>
+<td data-rat="1.233">(21.0 DNC)</td>
+<td data-rat="1.233" class="rank3">3.0</td>
+<td data-rat="1.237" class="rank1">1.0</td>
+<td>37.0</td>
+<td>16.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>4th</td>
+<td>22</td>
+<td>Weyhey</td>
+<td>Ian Dickson</td>
+<td>1.350</td>
+<td>7.0</td>
+<td data-rat="1.345">6.0</td>
+<td data-rat="1.329">(8.0)</td>
+<td data-rat="1.327" class="rank3">3.0</td>
+<td>24.0</td>
+<td>16.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>5th</td>
+<td>2021</td>
+<td>Harlequin</td>
+<td>David Clarke</td>
+<td>1.350</td>
+<td  class="rank1">1.0</td>
+<td data-rat="1.385">5.0</td>
+<td data-rat="1.376">(13.0)</td>
+<td data-rat="1.370">11.0</td>
+<td>30.0</td>
+<td>17.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>6th</td>
+<td>386</td>
+<td>Gannet</td>
+<td>Tim Chillingworth</td>
+<td>1.310</td>
+<td>(21.0 DNC)</td>
+<td data-rat="1.310">4.0</td>
+<td data-rat="1.312">11.0</td>
+<td data-rat="1.308" class="rank2">2.0</td>
+<td>38.0</td>
+<td>17.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>7th</td>
+<td>6413</td>
+<td>Yelllow Peril</td>
+<td>Neil Murphy / Conor Costello</td>
+<td>1.350</td>
+<td>(14.0)</td>
+<td data-rat="1.331" class="rank2">2.0</td>
+<td data-rat="1.345">10.0</td>
+<td data-rat="1.342">5.0</td>
+<td>31.0</td>
+<td>17.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>8th</td>
+<td>245</td>
+<td>Cara</td>
+<td>Olibhe Ni Bhraonain & Peter Wilson</td>
+<td>1.150</td>
+<td>11.0</td>
+<td data-rat="1.128">8.0</td>
+<td data-rat="1.114" class="rank1">1.0</td>
+<td data-rat="1.123">(13.0)</td>
+<td>33.0</td>
+<td>20.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>9th</td>
+<td>254</td>
+<td>Gold Dust</td>
+<td>Declan Browne</td>
+<td>1.345</td>
+<td>9.0</td>
+<td data-rat="1.326">(10.0 RET)</td>
+<td data-rat="1.326" class="rank2">2.0</td>
+<td data-rat="1.335">9.0</td>
+<td>30.0</td>
+<td>20.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>10th</td>
+<td>187</td>
+<td>Flycatcher</td>
+<td>McKeon / Dunne</td>
+<td>1.250</td>
+<td>5.0</td>
+<td data-rat="1.259">7.0</td>
+<td data-rat="1.243">9.0</td>
+<td data-rat="1.241">(14.0)</td>
+<td>35.0</td>
+<td>21.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>11th</td>
+<td>385</td>
+<td>Ibis</td>
+<td>S. Knowles</td>
+<td>1.350</td>
+<td  class="rank2">2.0</td>
+<td data-rat="1.383">(21.0 DNC)</td>
+<td data-rat="1.383">12.0</td>
+<td data-rat="1.379">12.0</td>
+<td>47.0</td>
+<td>26.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>12th</td>
+<td>5526</td>
+<td>Blue Velvet</td>
+<td>Gerard Kennedy</td>
+<td>1.275</td>
+<td>6.0</td>
+<td data-rat="1.277">(21.0 DNC)</td>
+<td data-rat="1.277">4.0</td>
+<td data-rat="1.279">19.0 DNF</td>
+<td>50.0</td>
+<td>29.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>13th</td>
+<td>20</td>
+<td>No Strings</td>
+<td>Terry Harvey</td>
+<td>1.320</td>
+<td>8.0</td>
+<td data-rat="1.312">(21.0 DNC)</td>
+<td data-rat="1.312">21.0 DNC</td>
+<td data-rat="1.312">7.0</td>
+<td>57.0</td>
+<td>36.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>14th</td>
+<td>79</td>
+<td>Mojo</td>
+<td>Francisco Martinez</td>
+<td>1.175</td>
+<td>13.0</td>
+<td data-rat="1.159">(21.0 DNC)</td>
+<td data-rat="1.159">21.0 DNC</td>
+<td data-rat="1.159">4.0</td>
+<td>59.0</td>
+<td>38.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>15th</td>
+<td>50</td>
+<td>Odyssey</td>
+<td>Roslyn & Philip Byrne</td>
+<td>1.330</td>
+<td>(21.0 DNC)</td>
+<td data-rat="1.330">21.0 DNC</td>
+<td data-rat="1.330">7.0</td>
+<td data-rat="1.328">10.0</td>
+<td>59.0</td>
+<td>38.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>16th</td>
+<td>310</td>
+<td>Nefertari</td>
+<td>Dylan Murray</td>
+<td>1.350</td>
+<td  class="rank3">3.0</td>
+<td data-rat="1.382">(21.0 DNC)</td>
+<td data-rat="1.382">21.0 DNC</td>
+<td data-rat="1.382">15.0</td>
+<td>60.0</td>
+<td>39.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>17th</td>
+<td>101</td>
+<td>Eclipse</td>
+<td>Hogan / Dyson</td>
+<td>1.200</td>
+<td>10.0</td>
+<td data-rat="1.179">(21.0 DNC)</td>
+<td data-rat="1.179">21.0 DNC</td>
+<td data-rat="1.179">21.0 DNC</td>
+<td>73.0</td>
+<td>52.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>18th</td>
+<td>34</td>
+<td>Intersceptre</td>
+<td>Matthew Knowles</td>
+<td>1.250</td>
+<td>(21.0 DNC)</td>
+<td data-rat="1.250">21.0 DNC</td>
+<td data-rat="1.250">16.0 RET</td>
+<td data-rat="1.250">19.0 DNF</td>
+<td>77.0</td>
+<td>56.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>19th</td>
+<td>318</td>
+<td>Papagena</td>
+<td>Kieran Barker</td>
+<td>1.250</td>
+<td>(21.0 DNC)</td>
+<td data-rat="1.250">21.0 DNC</td>
+<td data-rat="1.250">16.0 RET</td>
+<td data-rat="1.250">21.0 DNC</td>
+<td>79.0</td>
+<td>58.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>20th</td>
+<td>1048</td>
+<td>Ghosty Ned</td>
+<td>Donal Harkin</td>
+<td>1.210</td>
+<td>(21.0 DNC)</td>
+<td data-rat="1.210">21.0 DNC</td>
+<td data-rat="1.210">21.0 DNC</td>
+<td data-rat="1.210">19.0 DNF</td>
+<td>82.0</td>
+<td>61.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="summarytitle" id="summarypuppeteer_scr">Puppeteer Scr Fleet</h3>
+<div class="caption summarycaption">Sailed: 4, Discards: 1, To count: 3, Entries: 20, Scoring system: Appendix A</div>
+<table class="summarytable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="11">
+<col class="rank" />
+<col class="sailno" />
+<col class="boat" />
+<col class="helmname" />
+<col class="rating" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="total" />
+<col class="nett" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Sail Nr</th>
+<th>Name</th>
+<th>Owners</th>
+<th>Rating</th>
+<th><a class="racelink" href="#r1puppeteer_scr">R1</a></th>
+<th><a class="racelink" href="#r2puppeteer_scr">R2</a></th>
+<th><a class="racelink" href="#r3puppeteer_scr">R3</a></th>
+<th><a class="racelink" href="#r4puppeteer_scr">R4</a></th>
+<th>Total</th>
+<th>Nett</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd summaryrow">
+<td>1st</td>
+<td>15</td>
+<td>Trick or Treat</td>
+<td>Alan Pearson / Alan Blay</td>
+<td>&nbsp;</td>
+<td>(4.0)</td>
+<td  class="rank1">1.0</td>
+<td  class="rank1">1.0</td>
+<td  class="rank1">1.0</td>
+<td>7.0</td>
+<td>3.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>2nd</td>
+<td>6413</td>
+<td>Yellow Peril</td>
+<td>Neil Murphy / Conor Costello</td>
+<td>&nbsp;</td>
+<td>(10.0)</td>
+<td  class="rank2">2.0</td>
+<td>5.0</td>
+<td  class="rank3">3.0</td>
+<td>20.0</td>
+<td>10.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>3rd</td>
+<td>2021</td>
+<td>Harlequin</td>
+<td>David Clarke</td>
+<td>&nbsp;</td>
+<td  class="rank1">1.0</td>
+<td>4.0</td>
+<td>(8.0)</td>
+<td>6.0</td>
+<td>19.0</td>
+<td>11.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>4th</td>
+<td>1055</td>
+<td>Pinocchio</td>
+<td>Jack Mc Mahon</td>
+<td>&nbsp;</td>
+<td>(21.0 DNC)</td>
+<td  class="rank3">3.0</td>
+<td>4.0</td>
+<td>5.0</td>
+<td>33.0</td>
+<td>12.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>5th</td>
+<td>22</td>
+<td>Weyhey</td>
+<td>Ian Dickson</td>
+<td>&nbsp;</td>
+<td>5.0</td>
+<td>6.0</td>
+<td>(7.0)</td>
+<td  class="rank2">2.0</td>
+<td>20.0</td>
+<td>13.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>6th</td>
+<td>385</td>
+<td>Ibis</td>
+<td>S. Knowles</td>
+<td>&nbsp;</td>
+<td  class="rank2">2.0</td>
+<td>(21.0 DNC)</td>
+<td  class="rank3">3.0</td>
+<td>9.0</td>
+<td>35.0</td>
+<td>14.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>7th</td>
+<td>254</td>
+<td>Gold Dust</td>
+<td>Declan Browne</td>
+<td>&nbsp;</td>
+<td>9.0</td>
+<td>(10.0 RET)</td>
+<td  class="rank2">2.0</td>
+<td>7.0</td>
+<td>28.0</td>
+<td>18.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>8th</td>
+<td>386</td>
+<td>Gannet</td>
+<td>Tim Chillingworth</td>
+<td>&nbsp;</td>
+<td>(21.0 DNC)</td>
+<td>5.0</td>
+<td>9.0</td>
+<td>4.0</td>
+<td>39.0</td>
+<td>18.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>9th</td>
+<td>187</td>
+<td>Flycatcher</td>
+<td>McKeon / Dunne</td>
+<td>&nbsp;</td>
+<td>8.0</td>
+<td>7.0</td>
+<td>12.0</td>
+<td>(14.0)</td>
+<td>41.0</td>
+<td>27.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>10th</td>
+<td>219</td>
+<td>Geppetto</td>
+<td>O'Reilly / McDyer</td>
+<td>&nbsp;</td>
+<td>11.0</td>
+<td>(21.0 DNC)</td>
+<td>11.0</td>
+<td>11.0</td>
+<td>54.0</td>
+<td>33.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>11th</td>
+<td>20</td>
+<td>No Strings</td>
+<td>Terry Harvey</td>
+<td>&nbsp;</td>
+<td>6.0</td>
+<td>(21.0 DNC)</td>
+<td>21.0 DNC</td>
+<td>8.0</td>
+<td>56.0</td>
+<td>35.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>12th</td>
+<td>245</td>
+<td>Cara</td>
+<td>Olibhe Ni Bhraonain & Peter Wilson</td>
+<td>&nbsp;</td>
+<td>14.0</td>
+<td>8.0</td>
+<td>13.0</td>
+<td>(15.0)</td>
+<td>50.0</td>
+<td>35.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>13th</td>
+<td>310</td>
+<td>Nefertari</td>
+<td>Dylan Murray</td>
+<td>&nbsp;</td>
+<td  class="rank3">3.0</td>
+<td>(21.0 DNC)</td>
+<td>21.0 DNC</td>
+<td>12.0</td>
+<td>57.0</td>
+<td>36.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>14th</td>
+<td>5526</td>
+<td>Blue Velvet</td>
+<td>Gerard Kennedy</td>
+<td>&nbsp;</td>
+<td>7.0</td>
+<td>(21.0 DNC)</td>
+<td>10.0</td>
+<td>19.0 DNF</td>
+<td>57.0</td>
+<td>36.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>15th</td>
+<td>50</td>
+<td>Odyssey</td>
+<td>Roslyn & Philip Byrne</td>
+<td>&nbsp;</td>
+<td>(21.0 DNC)</td>
+<td>21.0 DNC</td>
+<td>6.0</td>
+<td>10.0</td>
+<td>58.0</td>
+<td>37.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>16th</td>
+<td>79</td>
+<td>Mojo</td>
+<td>Francisco Martinez</td>
+<td>&nbsp;</td>
+<td>13.0</td>
+<td>(21.0 DNC)</td>
+<td>21.0 DNC</td>
+<td>13.0</td>
+<td>68.0</td>
+<td>47.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>17th</td>
+<td>101</td>
+<td>Eclipse</td>
+<td>Hogan / Dyson</td>
+<td>&nbsp;</td>
+<td>12.0</td>
+<td>(21.0 DNC)</td>
+<td>21.0 DNC</td>
+<td>21.0 DNC</td>
+<td>75.0</td>
+<td>54.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>18th</td>
+<td>34</td>
+<td>Intersceptre</td>
+<td>Matthew Knowles</td>
+<td>&nbsp;</td>
+<td>(21.0 DNC)</td>
+<td>21.0 DNC</td>
+<td>16.0 RET</td>
+<td>19.0 DNF</td>
+<td>77.0</td>
+<td>56.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>19th</td>
+<td>318</td>
+<td>Papagena</td>
+<td>Kieran Barker</td>
+<td>&nbsp;</td>
+<td>(21.0 DNC)</td>
+<td>21.0 DNC</td>
+<td>16.0 RET</td>
+<td>21.0 DNC</td>
+<td>79.0</td>
+<td>58.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>20th</td>
+<td>1048</td>
+<td>Ghosty Ned</td>
+<td>Donal Harkin</td>
+<td>&nbsp;</td>
+<td>(21.0 DNC)</td>
+<td>21.0 DNC</td>
+<td>21.0 DNC</td>
+<td>19.0 DNF</td>
+<td>82.0</td>
+<td>61.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r1puppeteer_hph">R1 - Puppeteer HPH Fleet&nbsp;-&nbsp;May 5th</h3>
+<div class="caption racecaption">
+Start: Start 1, Finishes: Finish time, Time: 19.15.00
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="9">
+<col class="rank" />
+<col class="sailno" />
+<col class="boat" />
+<col class="helmname" />
+<col class="rating" />
+<col class="finish" />
+<col class="elapsed" />
+<col class="corrected" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Sail Nr</th>
+<th>Name</th>
+<th>Owners</th>
+<th>NHC1</th>
+<th>Finish</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>2021</td>
+<td>Harlequin</td>
+<td>David Clarke</td>
+<td>1.350</td>
+<td>19.43.46</td>
+<td>0.28.46</td>
+<td>0.38.50</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>385</td>
+<td>Ibis</td>
+<td>S. Knowles</td>
+<td>1.350</td>
+<td>19.43.56</td>
+<td>0.28.56</td>
+<td>0.39.04</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>310</td>
+<td>Nefertari</td>
+<td>Dylan Murray</td>
+<td>1.350</td>
+<td>19.46.55</td>
+<td>0.31.55</td>
+<td>0.43.05</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>15</td>
+<td>Trick or Treat</td>
+<td>Alan Pearson / Alan Blay</td>
+<td>1.350</td>
+<td>19.48.16</td>
+<td>0.33.16</td>
+<td>0.44.55</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>187</td>
+<td>Flycatcher</td>
+<td>McKeon / Dunne</td>
+<td>1.250</td>
+<td>19.51.20</td>
+<td>0.36.20</td>
+<td>0.45.25</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>5526</td>
+<td>Blue Velvet</td>
+<td>Gerard Kennedy</td>
+<td>1.275</td>
+<td>19.51.16</td>
+<td>0.36.16</td>
+<td>0.46.14</td>
+<td>6.0</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>22</td>
+<td>Weyhey</td>
+<td>Ian Dickson</td>
+<td>1.350</td>
+<td>19.49.54</td>
+<td>0.34.54</td>
+<td>0.47.07</td>
+<td>7.0</td>
+</tr>
+<tr class="even racerow">
+<td>8</td>
+<td>20</td>
+<td>No Strings</td>
+<td>Terry Harvey</td>
+<td>1.320</td>
+<td>19.51.00</td>
+<td>0.36.00</td>
+<td>0.47.31</td>
+<td>8.0</td>
+</tr>
+<tr class="odd racerow">
+<td>9</td>
+<td>254</td>
+<td>Gold Dust</td>
+<td>Declan Browne</td>
+<td>1.345</td>
+<td>19.52.22</td>
+<td>0.37.22</td>
+<td>0.50.15</td>
+<td>9.0</td>
+</tr>
+<tr class="even racerow">
+<td>10</td>
+<td>101</td>
+<td>Eclipse</td>
+<td>Hogan / Dyson</td>
+<td>1.200</td>
+<td>19.57.54</td>
+<td>0.42.54</td>
+<td>0.51.29</td>
+<td>10.0</td>
+</tr>
+<tr class="odd racerow">
+<td>11</td>
+<td>245</td>
+<td>Cara</td>
+<td>Olibhe Ni Bhraonain & Peter Wilson</td>
+<td>1.150</td>
+<td>20.00.22</td>
+<td>0.45.22</td>
+<td>0.52.10</td>
+<td>11.0</td>
+</tr>
+<tr class="even racerow">
+<td>12</td>
+<td>219</td>
+<td>Geppetto</td>
+<td>O'Reilly / McDyer</td>
+<td>1.250</td>
+<td>19.57.10</td>
+<td>0.42.10</td>
+<td>0.52.43</td>
+<td>12.0</td>
+</tr>
+<tr class="odd racerow">
+<td>13</td>
+<td>79</td>
+<td>Mojo</td>
+<td>Francisco Martinez</td>
+<td>1.175</td>
+<td>19.59.58</td>
+<td>0.44.58</td>
+<td>0.52.50</td>
+<td>13.0</td>
+</tr>
+<tr class="even racerow">
+<td>14</td>
+<td>6413</td>
+<td>Yelllow Peril</td>
+<td>Neil Murphy / Conor Costello</td>
+<td>1.350</td>
+<td>19.54.20</td>
+<td>0.39.20</td>
+<td>0.53.06</td>
+<td>14.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r2puppeteer_hph">R2 - Puppeteer HPH Fleet&nbsp;-&nbsp;May 12th</h3>
+<div class="caption racecaption">
+Start: Start 1, Finishes: Finish time, Time: 19.25.00
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="9">
+<col class="rank" />
+<col class="sailno" />
+<col class="boat" />
+<col class="helmname" />
+<col class="rating" />
+<col class="finish" />
+<col class="elapsed" />
+<col class="corrected" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Sail Nr</th>
+<th>Name</th>
+<th>Owners</th>
+<th>NHC1</th>
+<th>Finish</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>15</td>
+<td>Trick or Treat</td>
+<td>Alan Pearson / Alan Blay</td>
+<td>1.365</td>
+<td>20.00.27</td>
+<td>0.35.27</td>
+<td>0.48.23</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>6413</td>
+<td>Yelllow Peril</td>
+<td>Neil Murphy / Conor Costello</td>
+<td>1.331</td>
+<td>20.01.39</td>
+<td>0.36.39</td>
+<td>0.48.47</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>1055</td>
+<td>Pinocchio</td>
+<td>Jack Mc Mahon</td>
+<td>1.325</td>
+<td>20.02.15</td>
+<td>0.37.15</td>
+<td>0.49.21</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>386</td>
+<td>Gannet</td>
+<td>Tim Chillingworth</td>
+<td>1.310</td>
+<td>20.03.22</td>
+<td>0.38.22</td>
+<td>0.50.16</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>2021</td>
+<td>Harlequin</td>
+<td>David Clarke</td>
+<td>1.385</td>
+<td>20.02.45</td>
+<td>0.37.45</td>
+<td>0.52.17</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>22</td>
+<td>Weyhey</td>
+<td>Ian Dickson</td>
+<td>1.345</td>
+<td>20.05.14</td>
+<td>0.40.14</td>
+<td>0.54.07</td>
+<td>6.0</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>187</td>
+<td>Flycatcher</td>
+<td>McKeon / Dunne</td>
+<td>1.259</td>
+<td>20.08.19</td>
+<td>0.43.19</td>
+<td>0.54.32</td>
+<td>7.0</td>
+</tr>
+<tr class="even racerow">
+<td>8</td>
+<td>245</td>
+<td>Cara</td>
+<td>Olibhe Ni Bhraonain & Peter Wilson</td>
+<td>1.128</td>
+<td>20.17.11</td>
+<td>0.52.11</td>
+<td>0.58.52</td>
+<td>8.0</td>
+</tr>
+<tr class="odd racerow">
+<td>9</td>
+<td>254</td>
+<td>Gold Dust</td>
+<td>Declan Browne</td>
+<td>1.326</td>
+<td>&nbsp;</td>
+<td>RET</td>
+<td>&nbsp;</td>
+<td>10.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r3puppeteer_hph">R3 - Puppeteer HPH Fleet&nbsp;-&nbsp;May 19th</h3>
+<div class="caption racecaption">
+Start: Start 1, Finishes: Finish time, Time: 19.15.00
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="9">
+<col class="rank" />
+<col class="sailno" />
+<col class="boat" />
+<col class="helmname" />
+<col class="rating" />
+<col class="finish" />
+<col class="elapsed" />
+<col class="corrected" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Sail Nr</th>
+<th>Name</th>
+<th>Owners</th>
+<th>NHC1</th>
+<th>Finish</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>245</td>
+<td>Cara</td>
+<td>Olibhe Ni Bhraonain & Peter Wilson</td>
+<td>1.114</td>
+<td>20.47.08</td>
+<td>1.32.08</td>
+<td>1.42.38</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>254</td>
+<td>Gold Dust</td>
+<td>Declan Browne</td>
+<td>1.326</td>
+<td>20.34.40</td>
+<td>1.19.40</td>
+<td>1.45.38</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>219</td>
+<td>Geppetto</td>
+<td>O'Reilly / McDyer</td>
+<td>1.233</td>
+<td>20.41.45</td>
+<td>1.26.45</td>
+<td>1.46.58</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>5526</td>
+<td>Blue Velvet</td>
+<td>Gerard Kennedy</td>
+<td>1.277</td>
+<td>20.39.14</td>
+<td>1.24.14</td>
+<td>1.47.34</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>1055</td>
+<td>Pinocchio</td>
+<td>Jack Mc Mahon</td>
+<td>1.334</td>
+<td>20.36.02</td>
+<td>1.21.02</td>
+<td>1.48.06</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>15</td>
+<td>Trick or Treat</td>
+<td>Alan Pearson / Alan Blay</td>
+<td>1.383</td>
+<td>20.33.21</td>
+<td>1.18.21</td>
+<td>1.48.21</td>
+<td>6.0</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>50</td>
+<td>Odyssey</td>
+<td>Roslyn & Philip Byrne</td>
+<td>1.330</td>
+<td>20.36.41</td>
+<td>1.21.41</td>
+<td>1.48.38</td>
+<td>7.0</td>
+</tr>
+<tr class="even racerow">
+<td>8</td>
+<td>22</td>
+<td>Weyhey</td>
+<td>Ian Dickson</td>
+<td>1.329</td>
+<td>20.36.52</td>
+<td>1.21.52</td>
+<td>1.48.48</td>
+<td>8.0</td>
+</tr>
+<tr class="odd racerow">
+<td>9</td>
+<td>187</td>
+<td>Flycatcher</td>
+<td>McKeon / Dunne</td>
+<td>1.243</td>
+<td>20.42.41</td>
+<td>1.27.41</td>
+<td>1.48.59</td>
+<td>9.0</td>
+</tr>
+<tr class="even racerow">
+<td>10</td>
+<td>6413</td>
+<td>Yelllow Peril</td>
+<td>Neil Murphy / Conor Costello</td>
+<td>1.345</td>
+<td>20.36.14</td>
+<td>1.21.14</td>
+<td>1.49.16</td>
+<td>10.0</td>
+</tr>
+<tr class="odd racerow">
+<td>11</td>
+<td>386</td>
+<td>Gannet</td>
+<td>Tim Chillingworth</td>
+<td>1.312</td>
+<td>20.38.46</td>
+<td>1.23.46</td>
+<td>1.49.54</td>
+<td>11.0</td>
+</tr>
+<tr class="even racerow">
+<td>12</td>
+<td>385</td>
+<td>Ibis</td>
+<td>S. Knowles</td>
+<td>1.383</td>
+<td>20.35.50</td>
+<td>1.20.50</td>
+<td>1.51.48</td>
+<td>12.0</td>
+</tr>
+<tr class="odd racerow">
+<td>13</td>
+<td>2021</td>
+<td>Harlequin</td>
+<td>David Clarke</td>
+<td>1.376</td>
+<td>20.37.46</td>
+<td>1.22.46</td>
+<td>1.53.53</td>
+<td>13.0</td>
+</tr>
+<tr class="even racerow">
+<td>14</td>
+<td>34</td>
+<td>Intersceptre</td>
+<td>Matthew Knowles</td>
+<td>1.250</td>
+<td>&nbsp;</td>
+<td>RET</td>
+<td>&nbsp;</td>
+<td>16.0</td>
+</tr>
+<tr class="odd racerow">
+<td>14</td>
+<td>318</td>
+<td>Papagena</td>
+<td>Kieran Barker</td>
+<td>1.250</td>
+<td>&nbsp;</td>
+<td>RET</td>
+<td>&nbsp;</td>
+<td>16.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r4puppeteer_hph">R4 - Puppeteer HPH Fleet&nbsp;-&nbsp;Jun 2nd</h3>
+<div class="caption racecaption">
+Start: Start 1, Finishes: Finish time, Time: 19.15.00
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="9">
+<col class="rank" />
+<col class="sailno" />
+<col class="boat" />
+<col class="helmname" />
+<col class="rating" />
+<col class="finish" />
+<col class="elapsed" />
+<col class="corrected" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Sail Nr</th>
+<th>Name</th>
+<th>Owners</th>
+<th>NHC1</th>
+<th>Finish</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>219</td>
+<td>Geppetto</td>
+<td>O'Reilly / McDyer</td>
+<td>1.237</td>
+<td>20.38.42</td>
+<td>1.23.42</td>
+<td>1.43.32</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>386</td>
+<td>Gannet</td>
+<td>Tim Chillingworth</td>
+<td>1.308</td>
+<td>20.34.15</td>
+<td>1.19.15</td>
+<td>1.43.40</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>22</td>
+<td>Weyhey</td>
+<td>Ian Dickson</td>
+<td>1.327</td>
+<td>20.33.32</td>
+<td>1.18.32</td>
+<td>1.44.13</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>79</td>
+<td>Mojo</td>
+<td>Francisco Martinez</td>
+<td>1.159</td>
+<td>20.45.33</td>
+<td>1.30.33</td>
+<td>1.44.57</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>6413</td>
+<td>Yelllow Peril</td>
+<td>Neil Murphy / Conor Costello</td>
+<td>1.342</td>
+<td>20.33.44</td>
+<td>1.18.44</td>
+<td>1.45.40</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>1055</td>
+<td>Pinocchio</td>
+<td>Jack Mc Mahon</td>
+<td>1.334</td>
+<td>20.34.27</td>
+<td>1.19.27</td>
+<td>1.45.59</td>
+<td>6.0</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>20</td>
+<td>No Strings</td>
+<td>Terry Harvey</td>
+<td>1.312</td>
+<td>20.36.30</td>
+<td>1.21.30</td>
+<td>1.46.56</td>
+<td>7.0</td>
+</tr>
+<tr class="even racerow">
+<td>8</td>
+<td>15</td>
+<td>Trick or Treat</td>
+<td>Alan Pearson / Alan Blay</td>
+<td>1.382</td>
+<td>20.32.33</td>
+<td>1.17.33</td>
+<td>1.47.10</td>
+<td>8.0</td>
+</tr>
+<tr class="odd racerow">
+<td>9</td>
+<td>254</td>
+<td>Gold Dust</td>
+<td>Declan Browne</td>
+<td>1.335</td>
+<td>20.35.18</td>
+<td>1.20.18</td>
+<td>1.47.12</td>
+<td>9.0</td>
+</tr>
+<tr class="even racerow">
+<td>10</td>
+<td>50</td>
+<td>Odyssey</td>
+<td>Roslyn & Philip Byrne</td>
+<td>1.328</td>
+<td>20.36.59</td>
+<td>1.21.59</td>
+<td>1.48.52</td>
+<td>10.0</td>
+</tr>
+<tr class="odd racerow">
+<td>11</td>
+<td>2021</td>
+<td>Harlequin</td>
+<td>David Clarke</td>
+<td>1.370</td>
+<td>20.34.34</td>
+<td>1.19.34</td>
+<td>1.49.00</td>
+<td>11.0</td>
+</tr>
+<tr class="even racerow">
+<td>12</td>
+<td>385</td>
+<td>Ibis</td>
+<td>S. Knowles</td>
+<td>1.379</td>
+<td>20.36.49</td>
+<td>1.21.49</td>
+<td>1.52.50</td>
+<td>12.0</td>
+</tr>
+<tr class="odd racerow">
+<td>13</td>
+<td>245</td>
+<td>Cara</td>
+<td>Olibhe Ni Bhraonain & Peter Wilson</td>
+<td>1.123</td>
+<td>20.57.19</td>
+<td>1.42.19</td>
+<td>1.54.54</td>
+<td>13.0</td>
+</tr>
+<tr class="even racerow">
+<td>14</td>
+<td>187</td>
+<td>Flycatcher</td>
+<td>McKeon / Dunne</td>
+<td>1.241</td>
+<td>20.48.21</td>
+<td>1.33.21</td>
+<td>1.55.51</td>
+<td>14.0</td>
+</tr>
+<tr class="odd racerow">
+<td>15</td>
+<td>310</td>
+<td>Nefertari</td>
+<td>Dylan Murray</td>
+<td>1.382</td>
+<td>20.40.57</td>
+<td>1.25.57</td>
+<td>1.58.47</td>
+<td>15.0</td>
+</tr>
+<tr class="even racerow">
+<td>16</td>
+<td>5526</td>
+<td>Blue Velvet</td>
+<td>Gerard Kennedy</td>
+<td>1.279</td>
+<td>&nbsp;</td>
+<td>DNF</td>
+<td>&nbsp;</td>
+<td>19.0</td>
+</tr>
+<tr class="odd racerow">
+<td>16</td>
+<td>34</td>
+<td>Intersceptre</td>
+<td>Matthew Knowles</td>
+<td>1.250</td>
+<td>&nbsp;</td>
+<td>DNF</td>
+<td>&nbsp;</td>
+<td>19.0</td>
+</tr>
+<tr class="even racerow">
+<td>16</td>
+<td>1048</td>
+<td>Ghosty Ned</td>
+<td>Donal Harkin</td>
+<td>1.210</td>
+<td>&nbsp;</td>
+<td>DNF</td>
+<td>&nbsp;</td>
+<td>19.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r1puppeteer_scr">R1 - Puppeteer Scr Fleet&nbsp;-&nbsp;May 5th</h3>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="9">
+<col class="rank" />
+<col class="sailno" />
+<col class="boat" />
+<col class="helmname" />
+<col class="rating" />
+<col class="finish" />
+<col class="elapsed" />
+<col class="corrected" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Sail Nr</th>
+<th>Name</th>
+<th>Owners</th>
+<th>Rating</th>
+<th>Finish</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>2021</td>
+<td>Harlequin</td>
+<td>David Clarke</td>
+<td>&nbsp;</td>
+<td>19.43.46</td>
+<td>0.28.46</td>
+<td>0.28.46</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>385</td>
+<td>Ibis</td>
+<td>S. Knowles</td>
+<td>&nbsp;</td>
+<td>19.43.56</td>
+<td>0.28.56</td>
+<td>0.28.56</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>310</td>
+<td>Nefertari</td>
+<td>Dylan Murray</td>
+<td>&nbsp;</td>
+<td>19.46.55</td>
+<td>0.31.55</td>
+<td>0.31.55</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>15</td>
+<td>Trick or Treat</td>
+<td>Alan Pearson / Alan Blay</td>
+<td>&nbsp;</td>
+<td>19.48.16</td>
+<td>0.33.16</td>
+<td>0.33.16</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>22</td>
+<td>Weyhey</td>
+<td>Ian Dickson</td>
+<td>&nbsp;</td>
+<td>19.49.54</td>
+<td>0.34.54</td>
+<td>0.34.54</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>20</td>
+<td>No Strings</td>
+<td>Terry Harvey</td>
+<td>&nbsp;</td>
+<td>19.51.00</td>
+<td>0.36.00</td>
+<td>0.36.00</td>
+<td>6.0</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>5526</td>
+<td>Blue Velvet</td>
+<td>Gerard Kennedy</td>
+<td>&nbsp;</td>
+<td>19.51.16</td>
+<td>0.36.16</td>
+<td>0.36.16</td>
+<td>7.0</td>
+</tr>
+<tr class="even racerow">
+<td>8</td>
+<td>187</td>
+<td>Flycatcher</td>
+<td>McKeon / Dunne</td>
+<td>&nbsp;</td>
+<td>19.51.20</td>
+<td>0.36.20</td>
+<td>0.36.20</td>
+<td>8.0</td>
+</tr>
+<tr class="odd racerow">
+<td>9</td>
+<td>254</td>
+<td>Gold Dust</td>
+<td>Declan Browne</td>
+<td>&nbsp;</td>
+<td>19.52.22</td>
+<td>0.37.22</td>
+<td>0.37.22</td>
+<td>9.0</td>
+</tr>
+<tr class="even racerow">
+<td>10</td>
+<td>6413</td>
+<td>Yellow Peril</td>
+<td>Neil Murphy / Conor Costello</td>
+<td>&nbsp;</td>
+<td>19.54.20</td>
+<td>0.39.20</td>
+<td>0.39.20</td>
+<td>10.0</td>
+</tr>
+<tr class="odd racerow">
+<td>11</td>
+<td>219</td>
+<td>Geppetto</td>
+<td>O'Reilly / McDyer</td>
+<td>&nbsp;</td>
+<td>19.57.10</td>
+<td>0.42.10</td>
+<td>0.42.10</td>
+<td>11.0</td>
+</tr>
+<tr class="even racerow">
+<td>12</td>
+<td>101</td>
+<td>Eclipse</td>
+<td>Hogan / Dyson</td>
+<td>&nbsp;</td>
+<td>19.57.54</td>
+<td>0.42.54</td>
+<td>0.42.54</td>
+<td>12.0</td>
+</tr>
+<tr class="odd racerow">
+<td>13</td>
+<td>79</td>
+<td>Mojo</td>
+<td>Francisco Martinez</td>
+<td>&nbsp;</td>
+<td>19.59.58</td>
+<td>0.44.58</td>
+<td>0.44.58</td>
+<td>13.0</td>
+</tr>
+<tr class="even racerow">
+<td>14</td>
+<td>245</td>
+<td>Cara</td>
+<td>Olibhe Ni Bhraonain & Peter Wilson</td>
+<td>&nbsp;</td>
+<td>20.00.22</td>
+<td>0.45.22</td>
+<td>0.45.22</td>
+<td>14.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r2puppeteer_scr">R2 - Puppeteer Scr Fleet&nbsp;-&nbsp;May 12th</h3>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="9">
+<col class="rank" />
+<col class="sailno" />
+<col class="boat" />
+<col class="helmname" />
+<col class="rating" />
+<col class="finish" />
+<col class="elapsed" />
+<col class="corrected" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Sail Nr</th>
+<th>Name</th>
+<th>Owners</th>
+<th>Rating</th>
+<th>Finish</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>15</td>
+<td>Trick or Treat</td>
+<td>Alan Pearson / Alan Blay</td>
+<td>&nbsp;</td>
+<td>20.00.27</td>
+<td>0.35.27</td>
+<td>0.35.27</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>6413</td>
+<td>Yellow Peril</td>
+<td>Neil Murphy / Conor Costello</td>
+<td>&nbsp;</td>
+<td>20.01.39</td>
+<td>0.36.39</td>
+<td>0.36.39</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>1055</td>
+<td>Pinocchio</td>
+<td>Jack Mc Mahon</td>
+<td>&nbsp;</td>
+<td>20.02.15</td>
+<td>0.37.15</td>
+<td>0.37.15</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>2021</td>
+<td>Harlequin</td>
+<td>David Clarke</td>
+<td>&nbsp;</td>
+<td>20.02.45</td>
+<td>0.37.45</td>
+<td>0.37.45</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>386</td>
+<td>Gannet</td>
+<td>Tim Chillingworth</td>
+<td>&nbsp;</td>
+<td>20.03.22</td>
+<td>0.38.22</td>
+<td>0.38.22</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>22</td>
+<td>Weyhey</td>
+<td>Ian Dickson</td>
+<td>&nbsp;</td>
+<td>20.05.14</td>
+<td>0.40.14</td>
+<td>0.40.14</td>
+<td>6.0</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>187</td>
+<td>Flycatcher</td>
+<td>McKeon / Dunne</td>
+<td>&nbsp;</td>
+<td>20.08.19</td>
+<td>0.43.19</td>
+<td>0.43.19</td>
+<td>7.0</td>
+</tr>
+<tr class="even racerow">
+<td>8</td>
+<td>245</td>
+<td>Cara</td>
+<td>Olibhe Ni Bhraonain & Peter Wilson</td>
+<td>&nbsp;</td>
+<td>20.17.11</td>
+<td>0.52.11</td>
+<td>0.52.11</td>
+<td>8.0</td>
+</tr>
+<tr class="odd racerow">
+<td>9</td>
+<td>254</td>
+<td>Gold Dust</td>
+<td>Declan Browne</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>RET</td>
+<td>&nbsp;</td>
+<td>10.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r3puppeteer_scr">R3 - Puppeteer Scr Fleet&nbsp;-&nbsp;May 19th</h3>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="9">
+<col class="rank" />
+<col class="sailno" />
+<col class="boat" />
+<col class="helmname" />
+<col class="rating" />
+<col class="finish" />
+<col class="elapsed" />
+<col class="corrected" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Sail Nr</th>
+<th>Name</th>
+<th>Owners</th>
+<th>Rating</th>
+<th>Finish</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>15</td>
+<td>Trick or Treat</td>
+<td>Alan Pearson / Alan Blay</td>
+<td>&nbsp;</td>
+<td>20.33.21</td>
+<td>1.18.21</td>
+<td>1.18.21</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>254</td>
+<td>Gold Dust</td>
+<td>Declan Browne</td>
+<td>&nbsp;</td>
+<td>20.34.40</td>
+<td>1.19.40</td>
+<td>1.19.40</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>385</td>
+<td>Ibis</td>
+<td>S. Knowles</td>
+<td>&nbsp;</td>
+<td>20.35.50</td>
+<td>1.20.50</td>
+<td>1.20.50</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>1055</td>
+<td>Pinocchio</td>
+<td>Jack Mc Mahon</td>
+<td>&nbsp;</td>
+<td>20.36.02</td>
+<td>1.21.02</td>
+<td>1.21.02</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>6413</td>
+<td>Yellow Peril</td>
+<td>Neil Murphy / Conor Costello</td>
+<td>&nbsp;</td>
+<td>20.36.14</td>
+<td>1.21.14</td>
+<td>1.21.14</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>50</td>
+<td>Odyssey</td>
+<td>Roslyn & Philip Byrne</td>
+<td>&nbsp;</td>
+<td>20.36.41</td>
+<td>1.21.41</td>
+<td>1.21.41</td>
+<td>6.0</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>22</td>
+<td>Weyhey</td>
+<td>Ian Dickson</td>
+<td>&nbsp;</td>
+<td>20.36.52</td>
+<td>1.21.52</td>
+<td>1.21.52</td>
+<td>7.0</td>
+</tr>
+<tr class="even racerow">
+<td>8</td>
+<td>2021</td>
+<td>Harlequin</td>
+<td>David Clarke</td>
+<td>&nbsp;</td>
+<td>20.37.46</td>
+<td>1.22.46</td>
+<td>1.22.46</td>
+<td>8.0</td>
+</tr>
+<tr class="odd racerow">
+<td>9</td>
+<td>386</td>
+<td>Gannet</td>
+<td>Tim Chillingworth</td>
+<td>&nbsp;</td>
+<td>20.38.46</td>
+<td>1.23.46</td>
+<td>1.23.46</td>
+<td>9.0</td>
+</tr>
+<tr class="even racerow">
+<td>10</td>
+<td>5526</td>
+<td>Blue Velvet</td>
+<td>Gerard Kennedy</td>
+<td>&nbsp;</td>
+<td>20.39.14</td>
+<td>1.24.14</td>
+<td>1.24.14</td>
+<td>10.0</td>
+</tr>
+<tr class="odd racerow">
+<td>11</td>
+<td>219</td>
+<td>Geppetto</td>
+<td>O'Reilly / McDyer</td>
+<td>&nbsp;</td>
+<td>20.41.45</td>
+<td>1.26.45</td>
+<td>1.26.45</td>
+<td>11.0</td>
+</tr>
+<tr class="even racerow">
+<td>12</td>
+<td>187</td>
+<td>Flycatcher</td>
+<td>McKeon / Dunne</td>
+<td>&nbsp;</td>
+<td>20.42.41</td>
+<td>1.27.41</td>
+<td>1.27.41</td>
+<td>12.0</td>
+</tr>
+<tr class="odd racerow">
+<td>13</td>
+<td>245</td>
+<td>Cara</td>
+<td>Olibhe Ni Bhraonain & Peter Wilson</td>
+<td>&nbsp;</td>
+<td>20.47.08</td>
+<td>1.32.08</td>
+<td>1.32.08</td>
+<td>13.0</td>
+</tr>
+<tr class="even racerow">
+<td>14</td>
+<td>34</td>
+<td>Intersceptre</td>
+<td>Matthew Knowles</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>RET</td>
+<td>&nbsp;</td>
+<td>16.0</td>
+</tr>
+<tr class="odd racerow">
+<td>14</td>
+<td>318</td>
+<td>Papagena</td>
+<td>Kieran Barker</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>RET</td>
+<td>&nbsp;</td>
+<td>16.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r4puppeteer_scr">R4 - Puppeteer Scr Fleet&nbsp;-&nbsp;Jun 2nd</h3>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="9">
+<col class="rank" />
+<col class="sailno" />
+<col class="boat" />
+<col class="helmname" />
+<col class="rating" />
+<col class="finish" />
+<col class="elapsed" />
+<col class="corrected" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Sail Nr</th>
+<th>Name</th>
+<th>Owners</th>
+<th>Rating</th>
+<th>Finish</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>15</td>
+<td>Trick or Treat</td>
+<td>Alan Pearson / Alan Blay</td>
+<td>&nbsp;</td>
+<td>20.32.33</td>
+<td>1.17.33</td>
+<td>1.17.33</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>22</td>
+<td>Weyhey</td>
+<td>Ian Dickson</td>
+<td>&nbsp;</td>
+<td>20.33.32</td>
+<td>1.18.32</td>
+<td>1.18.32</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>6413</td>
+<td>Yellow Peril</td>
+<td>Neil Murphy / Conor Costello</td>
+<td>&nbsp;</td>
+<td>20.33.44</td>
+<td>1.18.44</td>
+<td>1.18.44</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>386</td>
+<td>Gannet</td>
+<td>Tim Chillingworth</td>
+<td>&nbsp;</td>
+<td>20.34.15</td>
+<td>1.19.15</td>
+<td>1.19.15</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>1055</td>
+<td>Pinocchio</td>
+<td>Jack Mc Mahon</td>
+<td>&nbsp;</td>
+<td>20.34.27</td>
+<td>1.19.27</td>
+<td>1.19.27</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>2021</td>
+<td>Harlequin</td>
+<td>David Clarke</td>
+<td>&nbsp;</td>
+<td>20.34.34</td>
+<td>1.19.34</td>
+<td>1.19.34</td>
+<td>6.0</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>254</td>
+<td>Gold Dust</td>
+<td>Declan Browne</td>
+<td>&nbsp;</td>
+<td>20.35.18</td>
+<td>1.20.18</td>
+<td>1.20.18</td>
+<td>7.0</td>
+</tr>
+<tr class="even racerow">
+<td>8</td>
+<td>20</td>
+<td>No Strings</td>
+<td>Terry Harvey</td>
+<td>&nbsp;</td>
+<td>20.36.30</td>
+<td>1.21.30</td>
+<td>1.21.30</td>
+<td>8.0</td>
+</tr>
+<tr class="odd racerow">
+<td>9</td>
+<td>385</td>
+<td>Ibis</td>
+<td>S. Knowles</td>
+<td>&nbsp;</td>
+<td>20.36.49</td>
+<td>1.21.49</td>
+<td>1.21.49</td>
+<td>9.0</td>
+</tr>
+<tr class="even racerow">
+<td>10</td>
+<td>50</td>
+<td>Odyssey</td>
+<td>Roslyn & Philip Byrne</td>
+<td>&nbsp;</td>
+<td>20.36.59</td>
+<td>1.21.59</td>
+<td>1.21.59</td>
+<td>10.0</td>
+</tr>
+<tr class="odd racerow">
+<td>11</td>
+<td>219</td>
+<td>Geppetto</td>
+<td>O'Reilly / McDyer</td>
+<td>&nbsp;</td>
+<td>20.38.42</td>
+<td>1.23.42</td>
+<td>1.23.42</td>
+<td>11.0</td>
+</tr>
+<tr class="even racerow">
+<td>12</td>
+<td>310</td>
+<td>Nefertari</td>
+<td>Dylan Murray</td>
+<td>&nbsp;</td>
+<td>20.40.57</td>
+<td>1.25.57</td>
+<td>1.25.57</td>
+<td>12.0</td>
+</tr>
+<tr class="odd racerow">
+<td>13</td>
+<td>79</td>
+<td>Mojo</td>
+<td>Francisco Martinez</td>
+<td>&nbsp;</td>
+<td>20.45.33</td>
+<td>1.30.33</td>
+<td>1.30.33</td>
+<td>13.0</td>
+</tr>
+<tr class="even racerow">
+<td>14</td>
+<td>187</td>
+<td>Flycatcher</td>
+<td>McKeon / Dunne</td>
+<td>&nbsp;</td>
+<td>20.48.21</td>
+<td>1.33.21</td>
+<td>1.33.21</td>
+<td>14.0</td>
+</tr>
+<tr class="odd racerow">
+<td>15</td>
+<td>245</td>
+<td>Cara</td>
+<td>Olibhe Ni Bhraonain & Peter Wilson</td>
+<td>&nbsp;</td>
+<td>20.57.19</td>
+<td>1.42.19</td>
+<td>1.42.19</td>
+<td>15.0</td>
+</tr>
+<tr class="even racerow">
+<td>16</td>
+<td>5526</td>
+<td>Blue Velvet</td>
+<td>Gerard Kennedy</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>DNF</td>
+<td>&nbsp;</td>
+<td>19.0</td>
+</tr>
+<tr class="odd racerow">
+<td>16</td>
+<td>34</td>
+<td>Intersceptre</td>
+<td>Matthew Knowles</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>DNF</td>
+<td>&nbsp;</td>
+<td>19.0</td>
+</tr>
+<tr class="even racerow">
+<td>16</td>
+<td>1048</td>
+<td>Ghosty Ned</td>
+<td>Donal Harkin</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>DNF</td>
+<td>&nbsp;</td>
+<td>19.0</td>
+</tr>
+</tbody>
+</table>
+
+<p class="hardleft"><a href="https://"></a><br /><a href="mailto:"></a></p>
+<p class="hardright"><a href="https://"></a><br /><a href="mailto:"></a></p>
+<p>Sailwave Scoring Software 2.38.02<br /><a href="https://www.sailwave.com">www.sailwave.com</a></p>
+
+</div>
+
+<footer>
+</footer>
+
+<div id="scrollbottom"></div>
+
+</body>
+</html>
+
+

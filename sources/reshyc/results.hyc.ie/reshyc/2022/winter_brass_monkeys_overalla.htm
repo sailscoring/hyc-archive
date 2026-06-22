@@ -1,0 +1,2396 @@
+
+
+
+<!doctype html>
+
+<head>
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta http-equiv="Cache-control" content="no-cache">
+<meta name="description" content="sailwave results">
+<meta name="viewport" content="width=device-width">
+
+<title>Sailwave results for Brass Monkeys Series Winter 2022 at Howth Yacht Club <br> 2022</title>
+
+<style type="text/css">
+body {font: 80% arial, helvetica, sans-serif; text-align: center;}
+.hardleft  {text-align: left; float: left;  margin: 15px 0  15px 25px;}
+.hardright {text-align: right; float: right; margin: 15px 25px 15px 0;}
+table {text-align: left; margin: 0px auto 30px auto; font-size: 1em; border-collapse: collapse; border: 1px #999 solid;}
+td, th {padding: 4px; border: 1px #999 solid; vertical-align: top;}
+.caption {padding: 5px; text-align: center; border: 0; font-weight: bold;}
+p {text-align: center;}
+.contents {text-align: left; margin-left: 20%;}
+.race {background-color: #eee;}
+.odd {background-color: #eef;}
+.natflag {border: 1px #999 solid;}
+.nattext {font-size: 0.8em;}
+.place1 {font-weight: bold; background-color: #ffffaa;}
+.place2 {font-weight: bold; background-color: #aaaaff;}
+.place3 {font-weight: bold; background-color: #ffaaaa;}
+.placen {}
+table.headertable {border: 0px;}
+table.headertable td{border: 0px;}
+</style>
+
+<script type="text/javascript">
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script>
+
+function swGetURLArgs() {
+
+  var url = location.href;
+  var qs  = url.substring(url.indexOf('?') + 1).split('&');
+
+  for(var i = 0, result = {}; i < qs.length; i++) {
+    qs[i]            = qs[i].split('=');
+    result[qs[i][0]] = decodeURIComponent(qs[i][1]);
+  }
+
+  return result;
+}
+
+//
+//  name=HighlightWins3v3
+//  dependencies=jQuery
+//  description=Highlight winning scores in summary tables.
+//  author=Jon Eskdale based on an idea by Colin Jenkins
+//  date=2016-07-04
+//  version=3.0  For use with Sailwave from V2.22.x
+//  Requires the following lines in the Results.htm file (Results.htm is in the Templates directory)
+//  string.set("summary.col.race.rank1.td",   "rank1")
+//  string.set("summary.col.race.rank2.td",   "rank2")
+//  string.set("summary.col.race.rank3.td",   "rank3")
+
+//  url=http://sailwave.com
+//  email=jon@sailwave.com
+//  twitter=eskdale
+//  comments=Edit colours to colours of your choice
+//
+
+$(document).ready(function() {
+var selectorRank1 = '.rank1';
+var selectorRank2 = '.rank2';
+var selectorRank3 = '.rank3';
+
+// Results with these codes will not get highlighted add or remove codes to your choice
+var ignoreText   = /^(?!.*\b(DNC|DNF|DNS|OCS|BFD|UFD|RET|DSQ|DGM|DNE)\b).*/i
+
+// Edit these colours to change the highlight colours for 1st, 2nd and 3rd
+var winsColour   = '#ffd700';
+var twoColour    = '#6a91c5';
+var threeColour  = '#da6841';
+
+
+// Change the background color for cells with class of rank1-3 and don't have a code specified
+$(function () {
+
+  $(selectorRank1).filter(function() {
+    return ignoreText.test($(this).text());
+  }).css("background", winsColour);
+  $(selectorRank2).filter(function() {
+        return ignoreText.test($(this).text());
+  }).css("background", twoColour);
+  $(selectorRank3).filter(function() {
+        return ignoreText.test($(this).text());
+  }).css("background", threeColour);
+
+});
+});
+</script>
+
+</head>
+
+<body>
+
+<header>
+</header>
+<table class="headertable" cellspacing="0" width="100%" cellpadding="0" border="0">
+<tbody>
+<div id="wrap">
+
+<tr>
+<td width="30%">
+<img style="display:block; height:100px;"  src="https://hyc.ie/assets/logo-5a615b18e52275b60e166edcca88c6c4.png" alt="venue burgee" />
+</td>
+
+<td width="40%" align="center">
+<h1>Brass Monkeys Series Winter 2022</h1>
+<h2>Howth Yacht Club <br></h2>
+</td>
+
+<td width="30%">
+</td>
+</tr>
+</tbody>
+</table>
+
+<div style="clear:both;"></div>
+
+<style>
+div.applicant-break {page-break-after:always;}
+</style>
+<h3 class="seriestitle">Provisional Results as of 13:07 on December  3, 2022</h3>
+<h3 class="summarytitle" id="summaryclass_1_hph">Class 1 HPH Fleet</h3>
+<div class="caption summarycaption">Sailed: 5, Discards: 0, To count: 5, Rating system: NHC1, Entries: 10, Scoring system: Appendix A</div>
+<table class="summarytable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="12">
+<col class="rank" />
+<col class="sailno" />
+<col class="boat" />
+<col class="helmname" />
+<col class="rating" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="total" />
+<col class="nett" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>SailNo</th>
+<th>Boat Name</th>
+<th>Owner Name</th>
+<th>TCF</th>
+<th><a class="racelink" href="#r1class_1_hph">R1</a></th>
+<th><a class="racelink" href="#r2class_1_hph">R2</a></th>
+<th><a class="racelink" href="#r3class_1_hph">R3</a></th>
+<th><a class="racelink" href="#r4class_1_hph">R4</a></th>
+<th><a class="racelink" href="#r5class_1_hph">R5</a></th>
+<th>Total</th>
+<th>Nett</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd summaryrow">
+<td>1st</td>
+<td>1343</td>
+<td>Arcturus</td>
+<td>Declan & Peter McCabe</td>
+<td>0.930</td>
+<td class="rank2">2.0</td>
+<td class="rank3">3.5</td>
+<td>4.0</td>
+<td>4.0</td>
+<td class="rank1">1.0</td>
+<td>14.5</td>
+<td>14.5</td>
+</tr>
+<tr class="even summaryrow">
+<td>2nd</td>
+<td>657</td>
+<td>Voyager</td>
+<td>Joe Carton</td>
+<td>0.940</td>
+<td class="rank3">3.0</td>
+<td>6.0</td>
+<td class="rank2">2.0</td>
+<td class="rank3">3.0</td>
+<td class="rank2">2.0</td>
+<td>16.0</td>
+<td>16.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>5th</td>
+<td>2070</td>
+<td>Out & About</td>
+<td>Terry McCoy</td>
+<td>0.935</td>
+<td>11.0 DNC</td>
+<td class="rank2">2.0</td>
+<td>5.5</td>
+<td>6.0</td>
+<td class="rank3">3.0</td>
+<td>27.5</td>
+<td>27.5</td>
+</tr>
+<tr class="even summaryrow">
+<td>8th</td>
+<td>8151</td>
+<td>Jokers Wild</td>
+<td>Flood / Greene</td>
+<td>0.930</td>
+<td>4.0</td>
+<td>11.0 DNC</td>
+<td>8.0</td>
+<td>10.0 DNF</td>
+<td>4.0</td>
+<td>37.0</td>
+<td>37.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>7th</td>
+<td>17793</td>
+<td>Chinook</td>
+<td>Brian Skehan</td>
+<td>0.920</td>
+<td>11.0 DNC</td>
+<td>7.0</td>
+<td>5.5</td>
+<td>5.0</td>
+<td>5.0</td>
+<td>33.5</td>
+<td>33.5</td>
+</tr>
+<tr class="even summaryrow">
+<td>3rd</td>
+<td>4077</td>
+<td>Tiger</td>
+<td>Harris / Hughes</td>
+<td>1.030</td>
+<td>11.0 DNC</td>
+<td class="rank1">1.0</td>
+<td class="rank1">1.0</td>
+<td class="rank1">1.0</td>
+<td>6.0</td>
+<td>20.0</td>
+<td>20.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>6th</td>
+<td>956</td>
+<td>C'est La Vie</td>
+<td>Flannelly / Spain / Staines</td>
+<td>0.930</td>
+<td>6.0</td>
+<td>5.0</td>
+<td class="rank3">3.0</td>
+<td>7.0</td>
+<td>7.0</td>
+<td>28.0</td>
+<td>28.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>10th</td>
+<td>1603</td>
+<td>Timballoo</td>
+<td>Lundy/Dunne</td>
+<td>0.900</td>
+<td>11.0 DNC</td>
+<td>11.0 DNC</td>
+<td>11.0 DNC</td>
+<td>11.0 DNC</td>
+<td>8.0</td>
+<td>52.0</td>
+<td>52.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>4th</td>
+<td>1430</td>
+<td>Mary Ellen</td>
+<td>Kevin O'Byrne</td>
+<td>0.930</td>
+<td class="rank1">1.0</td>
+<td class="rank3">3.5</td>
+<td>7.0</td>
+<td class="rank2">2.0</td>
+<td>11.0 DNC</td>
+<td>24.5</td>
+<td>24.5</td>
+</tr>
+<tr class="even summaryrow">
+<td>9th</td>
+<td>633</td>
+<td>Pepsi</td>
+<td>Anderson / Tattersall</td>
+<td>0.930</td>
+<td>5.0</td>
+<td>11.0 DNC</td>
+<td>9.0</td>
+<td>8.0</td>
+<td>11.0 DNC</td>
+<td>44.0</td>
+<td>44.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="summarytitle" id="summaryclass_2_hph">Class 2 HPH Fleet</h3>
+<div class="caption summarycaption">Sailed: 5, Discards: 0, To count: 5, Rating system: NHC1, Entries: 5, Scoring system: Appendix A</div>
+<table class="summarytable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="12">
+<col class="rank" />
+<col class="sailno" />
+<col class="boat" />
+<col class="helmname" />
+<col class="rating" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="total" />
+<col class="nett" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>SailNo</th>
+<th>Boat Name</th>
+<th>Owner Name</th>
+<th>TCF</th>
+<th><a class="racelink" href="#r1class_2_hph">R1</a></th>
+<th><a class="racelink" href="#r2class_2_hph">R2</a></th>
+<th><a class="racelink" href="#r3class_2_hph">R3</a></th>
+<th><a class="racelink" href="#r4class_2_hph">R4</a></th>
+<th><a class="racelink" href="#r5class_2_hph">R5</a></th>
+<th>Total</th>
+<th>Nett</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd summaryrow">
+<td>1st</td>
+<td>971</td>
+<td>Leeuwin</td>
+<td>Murray / Burke</td>
+<td>0.890</td>
+<td class="rank2">2.0</td>
+<td class="rank2">2.0</td>
+<td class="rank2">2.0</td>
+<td class="rank2">2.0 RDG</td>
+<td class="rank1">1.0</td>
+<td>9.0</td>
+<td>9.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>2nd</td>
+<td>7495</td>
+<td>Maximus</td>
+<td>Paddy Kyne</td>
+<td>0.925</td>
+<td class="rank3">3.0</td>
+<td class="rank1">1.0</td>
+<td class="rank1">1.0</td>
+<td class="rank3">4.0 DNF</td>
+<td class="rank2">2.0</td>
+<td>11.0</td>
+<td>11.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>3rd</td>
+<td>1543</td>
+<td>Indian</td>
+<td>Simon Knowles</td>
+<td>1.025</td>
+<td class="rank1">1.0</td>
+<td class="rank3">3.0</td>
+<td class="rank3">3.0</td>
+<td class="rank1">1.0</td>
+<td class="rank3">3.0</td>
+<td>11.0</td>
+<td>11.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>4th</td>
+<td>1551</td>
+<td>Mojo</td>
+<td>Pat O'Neill</td>
+<td>0.950</td>
+<td>4.0</td>
+<td>6.0 DNC</td>
+<td>6.0 DNC</td>
+<td>6.0 DNC</td>
+<td>6.0 DNC</td>
+<td>28.0</td>
+<td>28.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>5th</td>
+<td>1103</td>
+<td>Viking</td>
+<td>Kevin Darmody</td>
+<td>0.910</td>
+<td>6.0 DNC</td>
+<td>5.0 DNF</td>
+<td>6.0 DNC</td>
+<td>6.0 DNC</td>
+<td>6.0 DNC</td>
+<td>29.0</td>
+<td>29.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="summarytitle" id="summaryclass_3_hph">Class 3 HPH Fleet</h3>
+<div class="caption summarycaption">Sailed: 5, Discards: 0, To count: 5, Rating system: NHC1, Entries: 7, Scoring system: Appendix A</div>
+<table class="summarytable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="12">
+<col class="rank" />
+<col class="sailno" />
+<col class="boat" />
+<col class="helmname" />
+<col class="rating" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="total" />
+<col class="nett" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>SailNo</th>
+<th>Boat Name</th>
+<th>Owner Name</th>
+<th>TCF</th>
+<th><a class="racelink" href="#r1class_3_hph">R1</a></th>
+<th><a class="racelink" href="#r2class_3_hph">R2</a></th>
+<th><a class="racelink" href="#r3class_3_hph">R3</a></th>
+<th><a class="racelink" href="#r4class_3_hph">R4</a></th>
+<th><a class="racelink" href="#r5class_3_hph">R5</a></th>
+<th>Total</th>
+<th>Nett</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd summaryrow">
+<td>2nd</td>
+<td>1202</td>
+<td>Thar Saile</td>
+<td>Caoimhin O'Laoi</td>
+<td>0.895</td>
+<td>4.0</td>
+<td class="rank3">3.0</td>
+<td class="rank3">3.0</td>
+<td>4.0</td>
+<td class="rank1">1.0</td>
+<td>15.0</td>
+<td>15.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>1st</td>
+<td>9541</td>
+<td>K-Nine</td>
+<td>Mulvihill / Murphy</td>
+<td>0.905</td>
+<td class="rank2">2.0</td>
+<td>4.0</td>
+<td class="rank2">2.0</td>
+<td class="rank1">1.0</td>
+<td class="rank2">2.0</td>
+<td>11.0</td>
+<td>11.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>5th</td>
+<td>3337</td>
+<td>Helm's Deep</td>
+<td>Paul Harrison</td>
+<td>0.860</td>
+<td>5.0</td>
+<td>8.0 DNC</td>
+<td class="rank1">1.0</td>
+<td>8.0 DNC</td>
+<td class="rank3">3.0</td>
+<td>25.0</td>
+<td>25.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>4th</td>
+<td>355</td>
+<td>White Spirit</td>
+<td>Terry Kelly</td>
+<td>0.825</td>
+<td class="rank3">3.0</td>
+<td class="rank2">2.0</td>
+<td>5.0</td>
+<td class="rank3">3.0</td>
+<td>4.0</td>
+<td>17.0</td>
+<td>17.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>3rd</td>
+<td>791</td>
+<td>Shenanigans</td>
+<td>Douglas / Keane</td>
+<td>0.930</td>
+<td class="rank1">1.0</td>
+<td class="rank1">1.0</td>
+<td>4.0</td>
+<td>5.0</td>
+<td>5.0</td>
+<td>16.0</td>
+<td>16.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>6th</td>
+<td>11311</td>
+<td>Phixius</td>
+<td>Ray, Costello, Quigley, McShera</td>
+<td>0.870</td>
+<td>6.0</td>
+<td>5.0</td>
+<td>6.0</td>
+<td class="rank2">2.0</td>
+<td>6.0</td>
+<td>25.0</td>
+<td>25.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>7th</td>
+<td>1520</td>
+<td>ETE</td>
+<td>Connell / Costello</td>
+<td>0.890</td>
+<td>8.0 DNC</td>
+<td>8.0 DNC</td>
+<td>8.0 DNC</td>
+<td>8.0 DNC</td>
+<td>8.0 DNC</td>
+<td>40.0</td>
+<td>40.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r1class_1_hph">R1 - Class 1 HPH Fleet</h3>
+<div class="caption racecaption">
+Start: Start 2, Finishes: Finish time, Time: 10.35.00
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="10">
+<col class="rank" />
+<col class="sailno" />
+<col class="boat" />
+<col class="helmname" />
+<col class="rating" />
+<col class="start" />
+<col class="finish" />
+<col class="elapsed" />
+<col class="corrected" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>SailNo</th>
+<th>Boat Name</th>
+<th>Owner Name</th>
+<th>TCF</th>
+<th>Start</th>
+<th>Finish</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>1430</td>
+<td>Mary Ellen</td>
+<td>Kevin O'Byrne</td>
+<td>0.930</td>
+<td>10.35.00</td>
+<td>12:13:55</td>
+<td>1.38.55</td>
+<td>1.32.00</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>1343</td>
+<td>Arcturus</td>
+<td>Declan & Peter McCabe</td>
+<td>0.930</td>
+<td>10.35.00</td>
+<td>12:14:12</td>
+<td>1.39.12</td>
+<td>1.32.15</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>657</td>
+<td>Voyager</td>
+<td>Joe Carton</td>
+<td>0.940</td>
+<td>10.35.00</td>
+<td>12:13:25</td>
+<td>1.38.25</td>
+<td>1.32.31</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>8151</td>
+<td>Jokers Wild</td>
+<td>Flood / Greene</td>
+<td>0.930</td>
+<td>10.35.00</td>
+<td>12:15:08</td>
+<td>1.40.08</td>
+<td>1.33.07</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>633</td>
+<td>Pepsi</td>
+<td>Anderson / Tattersall</td>
+<td>0.930</td>
+<td>10.35.00</td>
+<td>12:15:12</td>
+<td>1.40.12</td>
+<td>1.33.11</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>956</td>
+<td>C'est La Vie</td>
+<td>Flannelly / Spain / Staines</td>
+<td>0.930</td>
+<td>10.35.00</td>
+<td>12:16:31</td>
+<td>1.41.31</td>
+<td>1.34.25</td>
+<td>6.0</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>2070</td>
+<td>Out & About</td>
+<td>Terry McCoy</td>
+<td>0.935</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>DNC</td>
+<td>&nbsp;</td>
+<td>11.0</td>
+</tr>
+<tr class="even racerow">
+<td>7</td>
+<td>17793</td>
+<td>Chinook</td>
+<td>Brian Skehan</td>
+<td>0.920</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>DNC</td>
+<td>&nbsp;</td>
+<td>11.0</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>4077</td>
+<td>Tiger</td>
+<td>Harris / Hughes</td>
+<td>1.030</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>DNC</td>
+<td>&nbsp;</td>
+<td>11.0</td>
+</tr>
+<tr class="even racerow">
+<td>7</td>
+<td>1603</td>
+<td>Timballoo</td>
+<td>Lundy/Dunne</td>
+<td>0.900</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>DNC</td>
+<td>&nbsp;</td>
+<td>11.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r2class_1_hph">R2 - Class 1 HPH Fleet&nbsp;-&nbsp;20th November&nbsp;at&nbsp;10.30</h3>
+<div class="caption racecaption">
+Start: Class 1, Finishes: Finish time, Time: 103500
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="10">
+<col class="rank" />
+<col class="sailno" />
+<col class="boat" />
+<col class="helmname" />
+<col class="rating" />
+<col class="start" />
+<col class="finish" />
+<col class="elapsed" />
+<col class="corrected" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>SailNo</th>
+<th>Boat Name</th>
+<th>Owner Name</th>
+<th>TCF</th>
+<th>Start</th>
+<th>Finish</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>4077</td>
+<td>Tiger</td>
+<td>Harris / Hughes</td>
+<td>1.030</td>
+<td>103500</td>
+<td>11:44:14</td>
+<td>1:09:14</td>
+<td>1:11:19</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>2070</td>
+<td>Out & About</td>
+<td>Terry McCoy</td>
+<td>0.935</td>
+<td>103500</td>
+<td>11:53:27</td>
+<td>1:18:27</td>
+<td>1:13:21</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>1343</td>
+<td>Arcturus</td>
+<td>Declan & Peter McCabe</td>
+<td>0.931</td>
+<td>103500</td>
+<td>11:56:51</td>
+<td>1:21:51</td>
+<td>1:16:12</td>
+<td>3.5</td>
+</tr>
+<tr class="even racerow">
+<td>3</td>
+<td>1430</td>
+<td>Mary Ellen</td>
+<td>Kevin O'Byrne</td>
+<td>0.932</td>
+<td>103500</td>
+<td>11:56:46</td>
+<td>1:21:46</td>
+<td>1:16:12</td>
+<td>3.5</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>956</td>
+<td>C'est La Vie</td>
+<td>Flannelly / Spain / Staines</td>
+<td>0.929</td>
+<td>103500</td>
+<td>11:57:30</td>
+<td>1:22:30</td>
+<td>1:16:39</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>657</td>
+<td>Voyager</td>
+<td>Joe Carton</td>
+<td>0.940</td>
+<td>103500</td>
+<td>11:59:26</td>
+<td>1:24:26</td>
+<td>1:19:22</td>
+<td>6.0</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>17793</td>
+<td>Chinook</td>
+<td>Brian Skehan</td>
+<td>0.920</td>
+<td>103500</td>
+<td>12:03:04</td>
+<td>1:28:04</td>
+<td>1:21:01</td>
+<td>7.0</td>
+</tr>
+<tr class="even racerow">
+<td>8</td>
+<td>8151</td>
+<td>Jokers Wild</td>
+<td>Flood / Greene</td>
+<td>0.929</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>DNC</td>
+<td>&nbsp;</td>
+<td>11.0</td>
+</tr>
+<tr class="odd racerow">
+<td>8</td>
+<td>1603</td>
+<td>Timballoo</td>
+<td>Lundy/Dunne</td>
+<td>0.900</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>DNC</td>
+<td>&nbsp;</td>
+<td>11.0</td>
+</tr>
+<tr class="even racerow">
+<td>8</td>
+<td>633</td>
+<td>Pepsi</td>
+<td>Anderson / Tattersall</td>
+<td>0.929</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>DNC</td>
+<td>&nbsp;</td>
+<td>11.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r3class_1_hph">R3 - Class 1 HPH Fleet&nbsp;-&nbsp;Nov 27</h3>
+<div class="caption racecaption">
+Start: Start 2, Finishes: Finish time, Time: 104000
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="10">
+<col class="rank" />
+<col class="sailno" />
+<col class="boat" />
+<col class="helmname" />
+<col class="rating" />
+<col class="start" />
+<col class="finish" />
+<col class="elapsed" />
+<col class="corrected" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>SailNo</th>
+<th>Boat Name</th>
+<th>Owner Name</th>
+<th>TCF</th>
+<th>Start</th>
+<th>Finish</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>4077</td>
+<td>Tiger</td>
+<td>Harris / Hughes</td>
+<td>1.038</td>
+<td>104000</td>
+<td>11:06:03</td>
+<td>0:26:03</td>
+<td>0:27:02</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>657</td>
+<td>Voyager</td>
+<td>Joe Carton</td>
+<td>0.933</td>
+<td>104000</td>
+<td>11:11:59</td>
+<td>0:31:59</td>
+<td>0:29:50</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>956</td>
+<td>C'est La Vie</td>
+<td>Flannelly / Spain / Staines</td>
+<td>0.926</td>
+<td>104000</td>
+<td>11:12:32</td>
+<td>0:32:32</td>
+<td>0:30:08</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>1343</td>
+<td>Arcturus</td>
+<td>Declan & Peter McCabe</td>
+<td>0.929</td>
+<td>104000</td>
+<td>11:12:55</td>
+<td>0:32:55</td>
+<td>0:30:35</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>2070</td>
+<td>Out & About</td>
+<td>Terry McCoy</td>
+<td>0.944</td>
+<td>104000</td>
+<td>11:13:30</td>
+<td>0:33:30</td>
+<td>0:31:37</td>
+<td>5.5</td>
+</tr>
+<tr class="even racerow">
+<td>5</td>
+<td>17793</td>
+<td>Chinook</td>
+<td>Brian Skehan</td>
+<td>0.914</td>
+<td>104000</td>
+<td>11:14:35</td>
+<td>0:34:35</td>
+<td>0:31:37</td>
+<td>5.5</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>1430</td>
+<td>Mary Ellen</td>
+<td>Kevin O'Byrne</td>
+<td>0.930</td>
+<td>104000</td>
+<td>11:14:33</td>
+<td>0:34:33</td>
+<td>0:32:08</td>
+<td>7.0</td>
+</tr>
+<tr class="even racerow">
+<td>8</td>
+<td>8151</td>
+<td>Jokers Wild</td>
+<td>Flood / Greene</td>
+<td>0.929</td>
+<td>104000</td>
+<td>11:15:37</td>
+<td>0:35:37</td>
+<td>0:33:05</td>
+<td>8.0</td>
+</tr>
+<tr class="odd racerow">
+<td>9</td>
+<td>633</td>
+<td>Pepsi</td>
+<td>Anderson / Tattersall</td>
+<td>0.929</td>
+<td>104000</td>
+<td>11:15:44</td>
+<td>0:35:44</td>
+<td>0:33:12</td>
+<td>9.0</td>
+</tr>
+<tr class="even racerow">
+<td>10</td>
+<td>1603</td>
+<td>Timballoo</td>
+<td>Lundy/Dunne</td>
+<td>0.900</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>DNC</td>
+<td>&nbsp;</td>
+<td>11.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r4class_1_hph">R4 - Class 1 HPH Fleet&nbsp;-&nbsp;Nov 27</h3>
+<div class="caption racecaption">
+Start: Start 3, Finishes: Finish time, Time: 115500
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="10">
+<col class="rank" />
+<col class="sailno" />
+<col class="boat" />
+<col class="helmname" />
+<col class="rating" />
+<col class="start" />
+<col class="finish" />
+<col class="elapsed" />
+<col class="corrected" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>SailNo</th>
+<th>Boat Name</th>
+<th>Owner Name</th>
+<th>TCF</th>
+<th>Start</th>
+<th>Finish</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>4077</td>
+<td>Tiger</td>
+<td>Harris / Hughes</td>
+<td>1.057</td>
+<td>115500</td>
+<td>12:46:21</td>
+<td>0:51:21</td>
+<td>0:54:17</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>1430</td>
+<td>Mary Ellen</td>
+<td>Kevin O'Byrne</td>
+<td>0.923</td>
+<td>115500</td>
+<td>12:54:11</td>
+<td>0:59:11</td>
+<td>0:54:38</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>657</td>
+<td>Voyager</td>
+<td>Joe Carton</td>
+<td>0.941</td>
+<td>115500</td>
+<td>12:54:37</td>
+<td>0:59:37</td>
+<td>0:56:06</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>1343</td>
+<td>Arcturus</td>
+<td>Declan & Peter McCabe</td>
+<td>0.930</td>
+<td>115500</td>
+<td>12:56:15</td>
+<td>1:01:15</td>
+<td>0:56:58</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>17793</td>
+<td>Chinook</td>
+<td>Brian Skehan</td>
+<td>0.909</td>
+<td>115500</td>
+<td>12:58:01</td>
+<td>1:03:01</td>
+<td>0:57:17</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>2070</td>
+<td>Out & About</td>
+<td>Terry McCoy</td>
+<td>0.939</td>
+<td>115500</td>
+<td>12:56:45</td>
+<td>1:01:45</td>
+<td>0:57:59</td>
+<td>6.0</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>956</td>
+<td>C'est La Vie</td>
+<td>Flannelly / Spain / Staines</td>
+<td>0.931</td>
+<td>115500</td>
+<td>12:59:01</td>
+<td>1:04:01</td>
+<td>0:59:36</td>
+<td>7.0</td>
+</tr>
+<tr class="even racerow">
+<td>8</td>
+<td>633</td>
+<td>Pepsi</td>
+<td>Anderson / Tattersall</td>
+<td>0.922</td>
+<td>115500</td>
+<td>13:01:36</td>
+<td>1:06:36</td>
+<td>1:01:24</td>
+<td>8.0</td>
+</tr>
+<tr class="odd racerow">
+<td>9</td>
+<td>8151</td>
+<td>Jokers Wild</td>
+<td>Flood / Greene</td>
+<td>0.922</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>DNF</td>
+<td>&nbsp;</td>
+<td>10.0</td>
+</tr>
+<tr class="even racerow">
+<td>10</td>
+<td>1603</td>
+<td>Timballoo</td>
+<td>Lundy/Dunne</td>
+<td>0.900</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>DNC</td>
+<td>&nbsp;</td>
+<td>11.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r5class_1_hph">R5 - Class 1 HPH Fleet&nbsp;-&nbsp;3rd Dec 22&nbsp;at&nbsp;10.30</h3>
+<div class="caption racecaption">
+Start: Start 1, Finishes: Finish time, Time: 103000
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="10">
+<col class="rank" />
+<col class="sailno" />
+<col class="boat" />
+<col class="helmname" />
+<col class="rating" />
+<col class="start" />
+<col class="finish" />
+<col class="elapsed" />
+<col class="corrected" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>SailNo</th>
+<th>Boat Name</th>
+<th>Owner Name</th>
+<th>TCF</th>
+<th>Start</th>
+<th>Finish</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>1343</td>
+<td>Arcturus</td>
+<td>Declan & Peter McCabe</td>
+<td>0.927</td>
+<td>103000</td>
+<td>11:46:48</td>
+<td>1:16:48</td>
+<td>1:11:12</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>657</td>
+<td>Voyager</td>
+<td>Joe Carton</td>
+<td>0.940</td>
+<td>103000</td>
+<td>11:46:25</td>
+<td>1:16:25</td>
+<td>1:11:50</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>2070</td>
+<td>Out & About</td>
+<td>Terry McCoy</td>
+<td>0.933</td>
+<td>103000</td>
+<td>11:49:23</td>
+<td>1:19:23</td>
+<td>1:14:04</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>8151</td>
+<td>Jokers Wild</td>
+<td>Flood / Greene</td>
+<td>0.922</td>
+<td>103000</td>
+<td>11:50:36</td>
+<td>1:20:36</td>
+<td>1:14:19</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>17793</td>
+<td>Chinook</td>
+<td>Brian Skehan</td>
+<td>0.905</td>
+<td>103000</td>
+<td>11:52:20</td>
+<td>1:22:20</td>
+<td>1:14:31</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>4077</td>
+<td>Tiger</td>
+<td>Harris / Hughes</td>
+<td>1.067</td>
+<td>103000</td>
+<td>11:40:27</td>
+<td>1:10:27</td>
+<td>1:15:10</td>
+<td>6.0</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>956</td>
+<td>C'est La Vie</td>
+<td>Flannelly / Spain / Staines</td>
+<td>0.927</td>
+<td>103000</td>
+<td>11:54:07</td>
+<td>1:24:07</td>
+<td>1:17:59</td>
+<td>7.0</td>
+</tr>
+<tr class="even racerow">
+<td>8</td>
+<td>1603</td>
+<td>Timballoo</td>
+<td>Lundy/Dunne</td>
+<td>0.900</td>
+<td>103000</td>
+<td>12:00:44</td>
+<td>1:30:44</td>
+<td>1:21:40</td>
+<td>8.0</td>
+</tr>
+<tr class="odd racerow">
+<td>9</td>
+<td>1430</td>
+<td>Mary Ellen</td>
+<td>Kevin O'Byrne</td>
+<td>0.930</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>DNC</td>
+<td>&nbsp;</td>
+<td>11.0</td>
+</tr>
+<tr class="even racerow">
+<td>9</td>
+<td>633</td>
+<td>Pepsi</td>
+<td>Anderson / Tattersall</td>
+<td>0.916</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>DNC</td>
+<td>&nbsp;</td>
+<td>11.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r1class_2_hph">R1 - Class 2 HPH Fleet</h3>
+<div class="caption racecaption">
+Start: Start 3, Finishes: Finish time, Time: 10.40.00
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="10">
+<col class="rank" />
+<col class="sailno" />
+<col class="boat" />
+<col class="helmname" />
+<col class="rating" />
+<col class="start" />
+<col class="finish" />
+<col class="elapsed" />
+<col class="corrected" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>SailNo</th>
+<th>Boat Name</th>
+<th>Owner Name</th>
+<th>TCF</th>
+<th>Start</th>
+<th>Finish</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>1543</td>
+<td>Indian</td>
+<td>Simon Knowles</td>
+<td>1.025</td>
+<td>10.40.00</td>
+<td>12:01:53</td>
+<td>1.21.53</td>
+<td>1.23.56</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>971</td>
+<td>Leeuwin</td>
+<td>Murray / Burke</td>
+<td>0.890</td>
+<td>10.40.00</td>
+<td>12:15:38</td>
+<td>1.35.38</td>
+<td>1.25.07</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>7495</td>
+<td>Maximus</td>
+<td>Paddy Kyne</td>
+<td>0.925</td>
+<td>10.40.00</td>
+<td>12:12:08</td>
+<td>1.32.08</td>
+<td>1.25.13</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>1551</td>
+<td>Mojo</td>
+<td>Pat O'Neill</td>
+<td>0.950</td>
+<td>10.40.00</td>
+<td>12:10:22</td>
+<td>1.30.22</td>
+<td>1.25.51</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>1103</td>
+<td>Viking</td>
+<td>Kevin Darmody</td>
+<td>0.910</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>DNC</td>
+<td>&nbsp;</td>
+<td>6.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r2class_2_hph">R2 - Class 2 HPH Fleet&nbsp;-&nbsp;20th November&nbsp;at&nbsp;10.30</h3>
+<div class="caption racecaption">
+Start: Class 2, Finishes: Finish time, Time: 104000
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="10">
+<col class="rank" />
+<col class="sailno" />
+<col class="boat" />
+<col class="helmname" />
+<col class="rating" />
+<col class="start" />
+<col class="finish" />
+<col class="elapsed" />
+<col class="corrected" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>SailNo</th>
+<th>Boat Name</th>
+<th>Owner Name</th>
+<th>TCF</th>
+<th>Start</th>
+<th>Finish</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>7495</td>
+<td>Maximus</td>
+<td>Paddy Kyne</td>
+<td>0.925</td>
+<td>104000</td>
+<td>11:55:22</td>
+<td>1:15:22</td>
+<td>1:09:43</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>971</td>
+<td>Leeuwin</td>
+<td>Murray / Burke</td>
+<td>0.890</td>
+<td>104000</td>
+<td>11:58:42</td>
+<td>1:18:42</td>
+<td>1:10:03</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>1543</td>
+<td>Indian</td>
+<td>Simon Knowles</td>
+<td>1.027</td>
+<td>104000</td>
+<td>11:49:24</td>
+<td>1:09:24</td>
+<td>1:11:16</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>1103</td>
+<td>Viking</td>
+<td>Kevin Darmody</td>
+<td>0.910</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>DNF</td>
+<td>&nbsp;</td>
+<td>5.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>1551</td>
+<td>Mojo</td>
+<td>Pat O'Neill</td>
+<td>0.949</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>DNC</td>
+<td>&nbsp;</td>
+<td>6.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r3class_2_hph">R3 - Class 2 HPH Fleet&nbsp;-&nbsp;Nov 27</h3>
+<div class="caption racecaption">
+Start: Start 3, Finishes: Finish time, Time: 103000
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="10">
+<col class="rank" />
+<col class="sailno" />
+<col class="boat" />
+<col class="helmname" />
+<col class="rating" />
+<col class="start" />
+<col class="finish" />
+<col class="elapsed" />
+<col class="corrected" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>SailNo</th>
+<th>Boat Name</th>
+<th>Owner Name</th>
+<th>TCF</th>
+<th>Start</th>
+<th>Finish</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>7495</td>
+<td>Maximus</td>
+<td>Paddy Kyne</td>
+<td>0.925</td>
+<td>103000</td>
+<td>11:13:31</td>
+<td>0:43:31</td>
+<td>0:40:15</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>971</td>
+<td>Leeuwin</td>
+<td>Murray / Burke</td>
+<td>0.889</td>
+<td>103000</td>
+<td>11:15:37</td>
+<td>0:45:37</td>
+<td>0:40:33</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>1543</td>
+<td>Indian</td>
+<td>Simon Knowles</td>
+<td>1.026</td>
+<td>103000</td>
+<td>11:11:17</td>
+<td>0:41:17</td>
+<td>0:42:21</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>1551</td>
+<td>Mojo</td>
+<td>Pat O'Neill</td>
+<td>0.949</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>DNC</td>
+<td>&nbsp;</td>
+<td>6.0</td>
+</tr>
+<tr class="odd racerow">
+<td>4</td>
+<td>1103</td>
+<td>Viking</td>
+<td>Kevin Darmody</td>
+<td>0.910</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>DNC</td>
+<td>&nbsp;</td>
+<td>6.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r4class_2_hph">R4 - Class 2 HPH Fleet&nbsp;-&nbsp;Nov 27</h3>
+<div class="caption racecaption">
+Start: Start 2, Finishes: Finish time, Time: 115000
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="10">
+<col class="rank" />
+<col class="sailno" />
+<col class="boat" />
+<col class="helmname" />
+<col class="rating" />
+<col class="start" />
+<col class="finish" />
+<col class="elapsed" />
+<col class="corrected" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>SailNo</th>
+<th>Boat Name</th>
+<th>Owner Name</th>
+<th>TCF</th>
+<th>Start</th>
+<th>Finish</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>1543</td>
+<td>Indian</td>
+<td>Simon Knowles</td>
+<td>1.024</td>
+<td>115000</td>
+<td>12:43:18</td>
+<td>0:53:18</td>
+<td>0:54:35</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>971</td>
+<td>Leeuwin</td>
+<td>Murray / Burke</td>
+<td>0.889</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>RDG</td>
+<td>&nbsp;</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>7495</td>
+<td>Maximus</td>
+<td>Paddy Kyne</td>
+<td>0.927</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>DNF</td>
+<td>&nbsp;</td>
+<td>4.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>1551</td>
+<td>Mojo</td>
+<td>Pat O'Neill</td>
+<td>0.949</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>DNC</td>
+<td>&nbsp;</td>
+<td>6.0</td>
+</tr>
+<tr class="odd racerow">
+<td>4</td>
+<td>1103</td>
+<td>Viking</td>
+<td>Kevin Darmody</td>
+<td>0.910</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>DNC</td>
+<td>&nbsp;</td>
+<td>6.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r5class_2_hph">R5 - Class 2 HPH Fleet&nbsp;-&nbsp;3rd Dec 22&nbsp;at&nbsp;10.30</h3>
+<div class="caption racecaption">
+Start: Start 3, Finishes: Finish time, Time: 103500
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="10">
+<col class="rank" />
+<col class="sailno" />
+<col class="boat" />
+<col class="helmname" />
+<col class="rating" />
+<col class="start" />
+<col class="finish" />
+<col class="elapsed" />
+<col class="corrected" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>SailNo</th>
+<th>Boat Name</th>
+<th>Owner Name</th>
+<th>TCF</th>
+<th>Start</th>
+<th>Finish</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>971</td>
+<td>Leeuwin</td>
+<td>Murray / Burke</td>
+<td>0.889</td>
+<td>103500</td>
+<td>11:51:57</td>
+<td>1:16:57</td>
+<td>1:08:25</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>7495</td>
+<td>Maximus</td>
+<td>Paddy Kyne</td>
+<td>0.927</td>
+<td>103500</td>
+<td>11:49:12</td>
+<td>1:14:12</td>
+<td>1:08:47</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>1543</td>
+<td>Indian</td>
+<td>Simon Knowles</td>
+<td>1.024</td>
+<td>103500</td>
+<td>11:45:52</td>
+<td>1:10:52</td>
+<td>1:12:34</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>1551</td>
+<td>Mojo</td>
+<td>Pat O'Neill</td>
+<td>0.949</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>DNC</td>
+<td>&nbsp;</td>
+<td>6.0</td>
+</tr>
+<tr class="odd racerow">
+<td>4</td>
+<td>1103</td>
+<td>Viking</td>
+<td>Kevin Darmody</td>
+<td>0.910</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>DNC</td>
+<td>&nbsp;</td>
+<td>6.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r1class_3_hph">R1 - Class 3 HPH Fleet</h3>
+<div class="caption racecaption">
+Start: Start 1, Finishes: Finish time, Time: 10.30
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="10">
+<col class="rank" />
+<col class="sailno" />
+<col class="boat" />
+<col class="helmname" />
+<col class="rating" />
+<col class="start" />
+<col class="finish" />
+<col class="elapsed" />
+<col class="corrected" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>SailNo</th>
+<th>Boat Name</th>
+<th>Owner Name</th>
+<th>TCF</th>
+<th>Start</th>
+<th>Finish</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>791</td>
+<td>Shenanigans</td>
+<td>Douglas / Keane</td>
+<td>0.930</td>
+<td>10.30</td>
+<td>11.45.33</td>
+<td>1.15.33</td>
+<td>1.10.16</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>9541</td>
+<td>K-Nine</td>
+<td>Mulvihill / Murphy</td>
+<td>0.905</td>
+<td>10.30</td>
+<td>11.48.14</td>
+<td>1.18.14</td>
+<td>1.10.48</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>355</td>
+<td>White Spirit</td>
+<td>Terry Kelly</td>
+<td>0.825</td>
+<td>10.30</td>
+<td>11:56:22</td>
+<td>1.26.22</td>
+<td>1.11.15</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>1202</td>
+<td>Thar Saile</td>
+<td>Caoimhin O'Laoi</td>
+<td>0.895</td>
+<td>10.30</td>
+<td>11.49.54</td>
+<td>1.19.54</td>
+<td>1.11.31</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>3337</td>
+<td>Helm's Deep</td>
+<td>Paul Harrison</td>
+<td>0.860</td>
+<td>10.30</td>
+<td>11:54:10</td>
+<td>1.24.10</td>
+<td>1.12.23</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>11311</td>
+<td>Phixius</td>
+<td>Ray, Costello, Quigley, McShera</td>
+<td>0.870</td>
+<td>10.30</td>
+<td>11:53:25</td>
+<td>1.23.25</td>
+<td>1.12.34</td>
+<td>6.0</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>1520</td>
+<td>ETE</td>
+<td>Connell / Costello</td>
+<td>0.890</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>DNC</td>
+<td>&nbsp;</td>
+<td>8.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r2class_3_hph">R2 - Class 3 HPH Fleet&nbsp;-&nbsp;20th November&nbsp;at&nbsp;10.30</h3>
+<div class="caption racecaption">
+Start: Class 3, Finishes: Finish time, Time: 103000
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="10">
+<col class="rank" />
+<col class="sailno" />
+<col class="boat" />
+<col class="helmname" />
+<col class="rating" />
+<col class="start" />
+<col class="finish" />
+<col class="elapsed" />
+<col class="corrected" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>SailNo</th>
+<th>Boat Name</th>
+<th>Owner Name</th>
+<th>TCF</th>
+<th>Start</th>
+<th>Finish</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>791</td>
+<td>Shenanigans</td>
+<td>Douglas / Keane</td>
+<td>0.933</td>
+<td>103000</td>
+<td>11:41:21</td>
+<td>1:11:21</td>
+<td>1:06:34</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>355</td>
+<td>White Spirit</td>
+<td>Terry Kelly</td>
+<td>0.824</td>
+<td>103000</td>
+<td>11:52:11</td>
+<td>1:22:11</td>
+<td>1:07:43</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>1202</td>
+<td>Thar Saile</td>
+<td>Caoimhin O'Laoi</td>
+<td>0.894</td>
+<td>103000</td>
+<td>11:45:48</td>
+<td>1:15:48</td>
+<td>1:07:46</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>9541</td>
+<td>K-Nine</td>
+<td>Mulvihill / Murphy</td>
+<td>0.906</td>
+<td>103000</td>
+<td>12:00:42</td>
+<td>1:30:42</td>
+<td>1:22:10</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>11311</td>
+<td>Phixius</td>
+<td>Ray, Costello, Quigley, McShera</td>
+<td>0.869</td>
+<td>103000</td>
+<td>12:10:13</td>
+<td>1:40:13</td>
+<td>1:27:05</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>3337</td>
+<td>Helm's Deep</td>
+<td>Paul Harrison</td>
+<td>0.859</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>DNC</td>
+<td>&nbsp;</td>
+<td>8.0</td>
+</tr>
+<tr class="odd racerow">
+<td>6</td>
+<td>1520</td>
+<td>ETE</td>
+<td>Connell / Costello</td>
+<td>0.890</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>DNC</td>
+<td>&nbsp;</td>
+<td>8.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r3class_3_hph">R3 - Class 3 HPH Fleet&nbsp;-&nbsp;Nov 27</h3>
+<div class="caption racecaption">
+Start: Start 1, Finishes: Finish time, Time: 103500
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="10">
+<col class="rank" />
+<col class="sailno" />
+<col class="boat" />
+<col class="helmname" />
+<col class="rating" />
+<col class="start" />
+<col class="finish" />
+<col class="elapsed" />
+<col class="corrected" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>SailNo</th>
+<th>Boat Name</th>
+<th>Owner Name</th>
+<th>TCF</th>
+<th>Start</th>
+<th>Finish</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>3337</td>
+<td>Helm's Deep</td>
+<td>Paul Harrison</td>
+<td>0.859</td>
+<td>103500</td>
+<td>11:08:22</td>
+<td>0:33:22</td>
+<td>0:28:40</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>9541</td>
+<td>K-Nine</td>
+<td>Mulvihill / Murphy</td>
+<td>0.885</td>
+<td>103500</td>
+<td>11:10:53</td>
+<td>0:35:53</td>
+<td>0:31:45</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>1202</td>
+<td>Thar Saile</td>
+<td>Caoimhin O'Laoi</td>
+<td>0.903</td>
+<td>103500</td>
+<td>11:10:39</td>
+<td>0:35:39</td>
+<td>0:32:12</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>791</td>
+<td>Shenanigans</td>
+<td>Douglas / Keane</td>
+<td>0.948</td>
+<td>103500</td>
+<td>11:09:15</td>
+<td>0:34:15</td>
+<td>0:32:28</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>355</td>
+<td>White Spirit</td>
+<td>Terry Kelly</td>
+<td>0.833</td>
+<td>103500</td>
+<td>11:15:49</td>
+<td>0:40:49</td>
+<td>0:34:00</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>11311</td>
+<td>Phixius</td>
+<td>Ray, Costello, Quigley, McShera</td>
+<td>0.857</td>
+<td>103500</td>
+<td>11:15:37</td>
+<td>0:40:37</td>
+<td>0:34:49</td>
+<td>6.0</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>1520</td>
+<td>ETE</td>
+<td>Connell / Costello</td>
+<td>0.890</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>DNC</td>
+<td>&nbsp;</td>
+<td>8.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r4class_3_hph">R4 - Class 3 HPH Fleet&nbsp;-&nbsp;Nov 27</h3>
+<div class="caption racecaption">
+Start: Start 1, Finishes: Finish time, Time: 113500
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="10">
+<col class="rank" />
+<col class="sailno" />
+<col class="boat" />
+<col class="helmname" />
+<col class="rating" />
+<col class="start" />
+<col class="finish" />
+<col class="elapsed" />
+<col class="corrected" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>SailNo</th>
+<th>Boat Name</th>
+<th>Owner Name</th>
+<th>TCF</th>
+<th>Start</th>
+<th>Finish</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>9541</td>
+<td>K-Nine</td>
+<td>Mulvihill / Murphy</td>
+<td>0.889</td>
+<td>113500</td>
+<td>12:44:19</td>
+<td>1:09:19</td>
+<td>1:01:37</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>11311</td>
+<td>Phixius</td>
+<td>Ray, Costello, Quigley, McShera</td>
+<td>0.850</td>
+<td>113500</td>
+<td>12:48:30</td>
+<td>1:13:30</td>
+<td>1:02:29</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>355</td>
+<td>White Spirit</td>
+<td>Terry Kelly</td>
+<td>0.825</td>
+<td>113500</td>
+<td>12:53:05</td>
+<td>1:18:05</td>
+<td>1:04:25</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>1202</td>
+<td>Thar Saile</td>
+<td>Caoimhin O'Laoi</td>
+<td>0.903</td>
+<td>113500</td>
+<td>12:47:47</td>
+<td>1:12:47</td>
+<td>1:05:43</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>791</td>
+<td>Shenanigans</td>
+<td>Douglas / Keane</td>
+<td>0.946</td>
+<td>113500</td>
+<td>12:45:40</td>
+<td>1:10:40</td>
+<td>1:06:51</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>3337</td>
+<td>Helm's Deep</td>
+<td>Paul Harrison</td>
+<td>0.872</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>DNC</td>
+<td>&nbsp;</td>
+<td>8.0</td>
+</tr>
+<tr class="odd racerow">
+<td>6</td>
+<td>1520</td>
+<td>ETE</td>
+<td>Connell / Costello</td>
+<td>0.890</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>DNC</td>
+<td>&nbsp;</td>
+<td>8.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r5class_3_hph">R5 - Class 3 HPH Fleet&nbsp;-&nbsp;3rd Dec 22&nbsp;at&nbsp;10.30</h3>
+<div class="caption racecaption">
+Start: Start 2, Finishes: Finish time, Time: 104000
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="10">
+<col class="rank" />
+<col class="sailno" />
+<col class="boat" />
+<col class="helmname" />
+<col class="rating" />
+<col class="start" />
+<col class="finish" />
+<col class="elapsed" />
+<col class="corrected" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>SailNo</th>
+<th>Boat Name</th>
+<th>Owner Name</th>
+<th>TCF</th>
+<th>Start</th>
+<th>Finish</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>1202</td>
+<td>Thar Saile</td>
+<td>Caoimhin O'Laoi</td>
+<td>0.900</td>
+<td>104000</td>
+<td>11:48:47</td>
+<td>1:08:47</td>
+<td>1:01:54</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>9541</td>
+<td>K-Nine</td>
+<td>Mulvihill / Murphy</td>
+<td>0.899</td>
+<td>104000</td>
+<td>11:49:14</td>
+<td>1:09:14</td>
+<td>1:02:14</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>3337</td>
+<td>Helm's Deep</td>
+<td>Paul Harrison</td>
+<td>0.872</td>
+<td>104000</td>
+<td>11:52:37</td>
+<td>1:12:37</td>
+<td>1:03:19</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>355</td>
+<td>White Spirit</td>
+<td>Terry Kelly</td>
+<td>0.825</td>
+<td>104000</td>
+<td>11:56:57</td>
+<td>1:16:57</td>
+<td>1:03:29</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>791</td>
+<td>Shenanigans</td>
+<td>Douglas / Keane</td>
+<td>0.945</td>
+<td>104000</td>
+<td>11:48:29</td>
+<td>1:08:29</td>
+<td>1:04:43</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>11311</td>
+<td>Phixius</td>
+<td>Ray, Costello, Quigley, McShera</td>
+<td>0.856</td>
+<td>104000</td>
+<td>11:58:18</td>
+<td>1:18:18</td>
+<td>1:07:01</td>
+<td>6.0</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>1520</td>
+<td>ETE</td>
+<td>Connell / Costello</td>
+<td>0.890</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>DNC</td>
+<td>&nbsp;</td>
+<td>8.0</td>
+</tr>
+</tbody>
+</table>
+
+<p class="hardleft"><a href="http://"></a><br /><a href="mailto:"></a></p>
+<p class="hardright"><a href="http://"></a><br /><a href="mailto:"></a></p>
+<p>Sailwave Scoring Software 2.29.0<br /><a href="http://www.sailwave.com">www.sailwave.com</a></p>
+
+</div>
+
+<footer>
+</footer>
+
+<div id="scrollbottom"></div>
+
+</body>
+</html>
+
+

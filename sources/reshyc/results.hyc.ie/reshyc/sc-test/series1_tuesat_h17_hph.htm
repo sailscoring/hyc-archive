@@ -1,0 +1,1236 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta name="description" content="sail scoring results">
+<meta name="viewport" content="width=device-width">
+<title>Results for Tuesdays &amp; Saturdays - Howth 17's - Series 1 at Howth Yacht Club — Howth 17 HPH</title>
+<style type="text/css">
+body {font: 80% arial, helvetica, sans-serif; text-align: center;}
+.hardleft  {text-align: left; float: left;  margin: 15px 0  15px 25px;}
+.hardright {text-align: right; float: right; margin: 15px 25px 15px 0;}
+table {text-align: left; margin: 0px auto 30px auto; font-size: 1em; border-collapse: collapse; border: 1px #999 solid;}
+td, th {padding: 4px; border: 1px #999 solid; vertical-align: top;}
+.caption {padding: 5px; text-align: center; border: 0; font-weight: bold;}
+p {text-align: center;}
+.odd {background-color: #eef;}
+table.headertable {border: 0px;}
+table.headertable td{border: 0px;}
+td.rank1 { background: #ffd700; }
+td.rank2 { background: #6a91c5; }
+td.rank3 { background: #da6841; }
+td.discard { background: #f2f2f2; }
+td.discard.rank1, td.discard.rank2, td.discard.rank3 { background: #f2f2f2; }
+td.excluded { color: #888; text-align: center; }
+table.summarytable td .rating { display: block; font-size: 0.85em; color: #666; margin-top: 1px; font-family: monospace; }
+table.summarytable td.discard .rating { color: #888; }
+table.summarytable td.seedrating { font-family: monospace; }
+td.nat { white-space: nowrap; font-family: monospace; }
+td.nat .flag { display: inline-block; width: 18px; height: 12px; margin-right: 4px; border: 1px solid #ccc; vertical-align: -2px; }
+td.nat .flag svg { display: block; width: 100%; height: 100%; }
+body.hide-nhc-detail .nhc-detail { display: none; }
+p.nhc-toggle { text-align: center; margin: 0 0 10px 0; font-size: 0.9em; }
+div.nhc-explainer { max-width: 640px; margin: 0 auto 16px auto; padding: 10px 14px; border: 1px #ccd solid; background: #f6f6fb; font-size: 0.9em; text-align: left; }
+div.nhc-explainer p { text-align: left; margin: 0 0 6px 0; }
+div.nhc-explainer p:last-child { margin-bottom: 0; }
+div.nhc-explainer .formula { font-family: monospace; }
+div.nhc-explainer dl { margin: 4px 0 0 0; }
+div.nhc-explainer dt { font-weight: bold; display: inline; }
+div.nhc-explainer dd { display: inline; margin: 0 0 0 4px; }
+div.nhc-explainer dd:after { content: ""; display: block; }
+</style>
+</head>
+<body class="hide-nhc-detail">
+<table class="headertable" cellspacing="0" width="100%" cellpadding="0" border="0">
+<tbody>
+<tr>
+<td width="30%"></td>
+<td width="40%" align="center">
+<h1>Tuesdays &amp; Saturdays - Howth 17's - Series 1</h1>
+<h2>Howth Yacht Club</h2>
+</td>
+<td width="30%"></td>
+</tr>
+</tbody>
+</table>
+<div style="clear:both;"></div>
+<style>div.applicant-break {page-break-after:always;}</style>
+<h3 class="seriestitle">Results are provisional as of 12:06 on 24 May 2026</h3>
+<h2>Howth 17 HPH</h2>
+
+<p class="nhc-toggle"><label><input type="checkbox" id="nhc-detail-toggle"> Show NHC rating calculations</label></p>
+<div class="nhc-explainer nhc-detail">
+<p><strong>NHC1</strong> is a progressive handicap. Each boat&rsquo;s TCF starts from the fleet rating list and shifts after every race based on how its corrected time compared to the fleet average. Sail Scoring implements the <em>SWNHC2015</em> algorithm (matches Sailwave NHC1 to 3 dp).</p>
+<p>For each finisher: a <em>fair TCF</em> <span class="formula">Q = O &times; P50</span> is computed (where O = 100 &divide; minutes elapsed and P50 = mean(TCF) &divide; mean(O)). The <em>comparative score</em> <span class="formula">S = Q &divide; TCF</span> measures over- or under-performance. Boats with S far from the fleet mean &mdash; outside <span class="formula">&mu;(S) &plus; 1.5&middot;&sigma;(S)</span> or <span class="formula">&mu;(S) &minus; 1.0&middot;&sigma;(S)</span>, marked &dagger; &mdash; are classified <em>extreme</em> and blend more slowly.</p>
+<p>The blend rate &alpha; depends on direction &times; extreme:</p>
+<dl>
+<dt>0.30</dt><dd>&mdash; non-extreme over-performer (TCF goes up).</dd>
+<dt>0.15</dt><dd>&mdash; non-extreme under-performer.</dd>
+<dt>0.15</dt><dd>&mdash; extreme over-performer.</dd>
+<dt>0.075</dt><dd>&mdash; extreme under-performer.</dd>
+</dl>
+<p>Column meanings:</p>
+<dl>
+<dt>Q</dt><dd>&mdash; fair TCF for this boat in this race.</dd>
+<dt>S</dt><dd>&mdash; comparative score Q &divide; TCF; &dagger; marks an extreme classification.</dd>
+<dt>&alpha;</dt><dd>&mdash; the blend rate actually applied to this boat.</dd>
+<dt>Z</dt><dd>&mdash; the blended provisional TCF before fleet-sum realignment.</dd>
+<dt>Adjustment</dt><dd>&mdash; signed shift (New TCF &minus; TCF, post-realignment).</dd>
+</dl>
+<p>Finally the whole fleet is realigned by <span class="formula">Z51 = &Sigma;TCF &divide; &Sigma;Z</span> (shown in the per-race fleet header) so the total fleet rating is preserved. <strong>New TCF = round(Z &times; Z51, 3)</strong> is the rating to apply in the next race. Non-finishers carry their TCF unchanged.</p>
+</div>
+
+<table class="summarytable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="13">
+<col class="rank" />
+<col class="sailno" />
+<col class="boatname" />
+<col class="helmname" />
+<col class="helm" />
+<col class="seedrating" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="total" />
+<col class="nett" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Sail</th>
+<th>Boat</th>
+<th>Competitor</th>
+<th>Helm</th>
+<th>NHC1</th>
+<th><a class="racelink" href="#r1">R1</a></th>
+<th><a class="racelink" href="#r2">R2</a></th>
+<th><a class="racelink" href="#r3">R3</a></th>
+<th><a class="racelink" href="#r4">R4</a></th>
+<th><a class="racelink" href="#r5">R5</a></th>
+<th>Total</th>
+<th>Nett</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd summaryrow">
+<td>1st</td>
+<td>21</td>
+<td>Orla</td>
+<td>Fitzgibbon / Gallagher</td>
+<td></td>
+<td class="seedrating">1.228</td>
+<td class="rank1">1</td>
+<td class="discard">(4)<span class="rating">1.270</span></td>
+<td class="rank3">3<span class="rating">1.272</span></td>
+<td class="rank1">1<span class="rating">1.273</span></td>
+<td class="rank2">2<span class="rating">1.284</span></td>
+<td>11</td>
+<td>7</td>
+</tr>
+<tr class="even summaryrow">
+<td>2nd</td>
+<td>11</td>
+<td>Deilginis</td>
+<td>Massey, Toomey, Kenny</td>
+<td></td>
+<td class="seedrating">1.316</td>
+<td>4</td>
+<td class="rank2">2<span class="rating">1.308</span></td>
+<td class="rank1">1<span class="rating">1.314</span></td>
+<td class="discard">(5)<span class="rating">1.317</span></td>
+<td class="rank3">3<span class="rating">1.322</span></td>
+<td>15</td>
+<td>10</td>
+</tr>
+<tr class="odd summaryrow">
+<td>3rd</td>
+<td>17</td>
+<td>Oona</td>
+<td>Peter Courtney</td>
+<td></td>
+<td class="seedrating">1.284</td>
+<td>5</td>
+<td class="rank1">1<span class="rating">1.268</span></td>
+<td>5<span class="rating">1.282</span></td>
+<td class="discard">(6)<span class="rating">1.282</span></td>
+<td>6<span class="rating">1.279</span></td>
+<td>23</td>
+<td>17</td>
+</tr>
+<tr class="even summaryrow">
+<td>4th</td>
+<td>19</td>
+<td>Isobel</td>
+<td>Brian &amp; Conor Turvey</td>
+<td></td>
+<td class="seedrating">1.312</td>
+<td>6</td>
+<td class="rank3">3<span class="rating">1.294</span></td>
+<td>7<span class="rating">1.299</span></td>
+<td class="rank2">2<span class="rating">1.296</span></td>
+<td class="discard">(8)<span class="rating">1.306</span></td>
+<td>26</td>
+<td>18</td>
+</tr>
+<tr class="odd summaryrow">
+<td>5th</td>
+<td>2</td>
+<td>Pauline</td>
+<td>O'Doherty / Kenny / McCormack</td>
+<td></td>
+<td class="seedrating">1.258</td>
+<td>8</td>
+<td class="discard">(14 DNC)</td>
+<td class="rank2">2<span class="rating">1.239</span></td>
+<td>8<span class="rating">1.241</span></td>
+<td class="rank1">1<span class="rating">1.204</span></td>
+<td>33</td>
+<td>19</td>
+</tr>
+<tr class="even summaryrow">
+<td>6th</td>
+<td>22</td>
+<td>Anna</td>
+<td>Gerard Comerford</td>
+<td></td>
+<td class="seedrating">1.300</td>
+<td>7</td>
+<td>5<span class="rating">1.281</span></td>
+<td>6<span class="rating">1.274</span></td>
+<td class="rank3">3<span class="rating">1.272</span></td>
+<td class="discard">(9)<span class="rating">1.281</span></td>
+<td>30</td>
+<td>21</td>
+</tr>
+<tr class="odd summaryrow">
+<td>7th</td>
+<td>12</td>
+<td>Rosemary</td>
+<td>Curley, Jones, Potter</td>
+<td></td>
+<td class="seedrating">1.242</td>
+<td class="rank3">3</td>
+<td class="discard">(14 DNC)</td>
+<td>4<span class="rating">1.258</span></td>
+<td>14 DNC</td>
+<td>14 DNC</td>
+<td>49</td>
+<td>35</td>
+</tr>
+<tr class="even summaryrow">
+<td>8th</td>
+<td>3</td>
+<td>Leila</td>
+<td>Roderick Cooper</td>
+<td></td>
+<td class="seedrating">1.265</td>
+<td>10 DNF</td>
+<td class="discard">(14 DNC)</td>
+<td>14 DNC</td>
+<td>4<span class="rating">1.265</span></td>
+<td>7<span class="rating">1.271</span></td>
+<td>49</td>
+<td>35</td>
+</tr>
+<tr class="odd summaryrow">
+<td>9th</td>
+<td>7</td>
+<td>Aura</td>
+<td>Ian Malcolm</td>
+<td></td>
+<td class="seedrating">1.268</td>
+<td class="rank2">2</td>
+<td class="discard">(14 DNC)</td>
+<td>14 DNC</td>
+<td>7<span class="rating">1.291</span></td>
+<td>14 DNC</td>
+<td>51</td>
+<td>37</td>
+</tr>
+<tr class="even summaryrow">
+<td>10th</td>
+<td>4</td>
+<td>Zaida</td>
+<td>Houlihan, Houlihan, Carroll, Hurley</td>
+<td></td>
+<td class="seedrating">1.193</td>
+<td class="discard">(14 DNC)</td>
+<td>14 DNC</td>
+<td>14 DNC</td>
+<td>14 DNC</td>
+<td>4<span class="rating">1.193</span></td>
+<td>60</td>
+<td>46</td>
+</tr>
+<tr class="odd summaryrow">
+<td>11th</td>
+<td>1</td>
+<td>Rita</td>
+<td>Marcus Lynch &amp; John Curley</td>
+<td></td>
+<td class="seedrating">1.279</td>
+<td class="discard">(14 DNC)</td>
+<td>14 DNC</td>
+<td>14 DNC</td>
+<td>14 DNC</td>
+<td>5<span class="rating">1.279</span></td>
+<td>61</td>
+<td>47</td>
+</tr>
+<tr class="even summaryrow">
+<td>12th</td>
+<td>14</td>
+<td>Gladys</td>
+<td>Byrne / Ferris</td>
+<td></td>
+<td class="seedrating">1.156</td>
+<td class="discard">(14 DNC)</td>
+<td>14 DNC</td>
+<td>14 DNC</td>
+<td>14 DNC</td>
+<td>14 DNC</td>
+<td>70</td>
+<td>56</td>
+</tr>
+<tr class="odd summaryrow">
+<td>12th</td>
+<td>16</td>
+<td>Eileen</td>
+<td>Rima Macken</td>
+<td></td>
+<td class="seedrating">1.249</td>
+<td class="discard">(14 DNC)</td>
+<td>14 DNC</td>
+<td>14 DNC</td>
+<td>14 DNC</td>
+<td>14 DNC</td>
+<td>70</td>
+<td>56</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r1">R1&nbsp;&mdash;&nbsp;24 May 2026 &mdash; Start: 19:05:00</h3>
+<p class="nhc-fleet-header nhc-detail" style="text-align:center; margin: 0 0 6px 0; font-size: 0.9em;">Rating system: NHC1 (SWNHC2015) &middot; Finishers: 8 &middot; μ(S) = 1.0022 &middot; σ(S) = 0.1549 &middot; extreme if S &gt; 1.2346 or S &lt; 0.8472 (4 this race) &middot; P50 = 1.001123 &middot; W51 = 0.927819 &middot; Z51 = 0.998811</p><table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="16">
+<col class="rank" />
+<col class="sailno" />
+<col class="boatname" />
+<col class="helmname" />
+<col class="helm" />
+
+<col class="finish" />
+<col class="et" />
+<col class="tcf" />
+<col class="ct" />
+<col class="newtcf" />
+<col class="fairtcf nhc-detail" />
+<col class="compscore nhc-detail" />
+<col class="alpha nhc-detail" />
+<col class="provisional nhc-detail" />
+<col class="adjustment nhc-detail" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Sail</th>
+<th>Boat</th>
+<th>Competitor</th>
+<th>Helm</th>
+<th>Finish</th>
+<th>ET</th>
+<th>TCF</th>
+<th>CT</th>
+<th>New TCF</th>
+<th class="nhc-detail">Q</th>
+<th class="nhc-detail">S</th>
+<th class="nhc-detail">α</th>
+<th class="nhc-detail">Z</th>
+<th class="nhc-detail">Adjustment</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>21</td>
+<td>Orla</td>
+<td>Fitzgibbon / Gallagher</td>
+<td></td>
+<td class="mono">20:11:00</td>
+<td class="mono">1:06:00</td>
+<td class="mono">1.228</td>
+<td class="mono">1:21:03</td>
+<td class="mono">1.270</td>
+<td class="mono nhc-detail">1.5169</td>
+<td class="mono nhc-detail">1.2352 &dagger;</td>
+<td class="mono nhc-detail">0.150</td>
+<td class="mono nhc-detail">1.2713</td>
+<td class="mono nhc-detail">+0.0420</td>
+<td>1</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>7</td>
+<td>Aura</td>
+<td>Ian Malcolm</td>
+<td></td>
+<td class="mono">20:13:45</td>
+<td class="mono">1:08:45</td>
+<td class="mono">1.268</td>
+<td class="mono">1:27:11</td>
+<td class="mono">1.291</td>
+<td class="mono nhc-detail">1.4562</td>
+<td class="mono nhc-detail">1.1484</td>
+<td class="mono nhc-detail">0.300</td>
+<td class="mono nhc-detail">1.2925</td>
+<td class="mono nhc-detail">+0.0230</td>
+<td>2</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>12</td>
+<td>Rosemary</td>
+<td>Curley, Jones, Potter</td>
+<td></td>
+<td class="mono">20:16:26</td>
+<td class="mono">1:11:26</td>
+<td class="mono">1.242</td>
+<td class="mono">1:28:43</td>
+<td class="mono">1.258</td>
+<td class="mono nhc-detail">1.4015</td>
+<td class="mono nhc-detail">1.1284</td>
+<td class="mono nhc-detail">0.300</td>
+<td class="mono nhc-detail">1.2591</td>
+<td class="mono nhc-detail">+0.0160</td>
+<td>3</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>11</td>
+<td>Deilginis</td>
+<td>Massey, Toomey, Kenny</td>
+<td></td>
+<td class="mono">20:17:58</td>
+<td class="mono">1:12:58</td>
+<td class="mono">1.316</td>
+<td class="mono">1:36:01</td>
+<td class="mono">1.308</td>
+<td class="mono nhc-detail">1.3720</td>
+<td class="mono nhc-detail">1.0426</td>
+<td class="mono nhc-detail">0.150</td>
+<td class="mono nhc-detail">1.3093</td>
+<td class="mono nhc-detail">-0.0080</td>
+<td>4</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>17</td>
+<td>Oona</td>
+<td>Peter Courtney</td>
+<td></td>
+<td class="mono">20:22:58</td>
+<td class="mono">1:17:58</td>
+<td class="mono">1.284</td>
+<td class="mono">1:40:07</td>
+<td class="mono">1.268</td>
+<td class="mono nhc-detail">1.2840</td>
+<td class="mono nhc-detail">1.0000</td>
+<td class="mono nhc-detail">0.150</td>
+<td class="mono nhc-detail">1.2699</td>
+<td class="mono nhc-detail">-0.0160</td>
+<td>5</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>19</td>
+<td>Isobel</td>
+<td>Brian &amp; Conor Turvey</td>
+<td></td>
+<td class="mono">20:36:36</td>
+<td class="mono">1:31:36</td>
+<td class="mono">1.312</td>
+<td class="mono">2:00:11</td>
+<td class="mono">1.294</td>
+<td class="mono nhc-detail">1.0929</td>
+<td class="mono nhc-detail">0.8330 &dagger;</td>
+<td class="mono nhc-detail">0.075</td>
+<td class="mono nhc-detail">1.2956</td>
+<td class="mono nhc-detail">-0.0180</td>
+<td>6</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>22</td>
+<td>Anna</td>
+<td>Gerard Comerford</td>
+<td></td>
+<td class="mono">20:39:25</td>
+<td class="mono">1:34:25</td>
+<td class="mono">1.300</td>
+<td class="mono">2:02:45</td>
+<td class="mono">1.281</td>
+<td class="mono nhc-detail">1.0603</td>
+<td class="mono nhc-detail">0.8156 &dagger;</td>
+<td class="mono nhc-detail">0.075</td>
+<td class="mono nhc-detail">1.2820</td>
+<td class="mono nhc-detail">-0.0190</td>
+<td>7</td>
+</tr>
+<tr class="even racerow">
+<td>8</td>
+<td>2</td>
+<td>Pauline</td>
+<td>O'Doherty / Kenny / McCormack</td>
+<td></td>
+<td class="mono">20:42:45</td>
+<td class="mono">1:37:45</td>
+<td class="mono">1.258</td>
+<td class="mono">2:02:58</td>
+<td class="mono">1.239</td>
+<td class="mono nhc-detail">1.0242</td>
+<td class="mono nhc-detail">0.8141 &dagger;</td>
+<td class="mono nhc-detail">0.075</td>
+<td class="mono nhc-detail">1.2405</td>
+<td class="mono nhc-detail">-0.0190</td>
+<td>8</td>
+</tr>
+<tr class="odd racerow">
+<td></td>
+<td>3</td>
+<td>Leila</td>
+<td>Roderick Cooper</td>
+<td></td>
+<td class="mono"></td>
+<td class="mono"></td>
+<td class="mono">1.265</td>
+<td class="mono"></td>
+<td class="mono">unchanged</td>
+<td class="nhc-detail"></td>
+<td class="nhc-detail"></td>
+<td class="nhc-detail"></td>
+<td class="nhc-detail"></td>
+<td class="nhc-detail"></td>
+<td>10 DNF</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r2">R2&nbsp;&mdash;&nbsp;24 May 2026 &mdash; Start: 19:05:00</h3>
+<p class="nhc-fleet-header nhc-detail" style="text-align:center; margin: 0 0 6px 0; font-size: 0.9em;">Rating system: NHC1 (SWNHC2015) &middot; Finishers: 5 &middot; μ(S) = 0.9999 &middot; σ(S) = 0.0686 &middot; extreme if S &gt; 1.1029 or S &lt; 0.9313 (1 this race) &middot; P50 = 0.815262 &middot; W51 = 0.788819 &middot; Z51 = 1.004286</p><table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="16">
+<col class="rank" />
+<col class="sailno" />
+<col class="boatname" />
+<col class="helmname" />
+<col class="helm" />
+
+<col class="finish" />
+<col class="et" />
+<col class="tcf" />
+<col class="ct" />
+<col class="newtcf" />
+<col class="fairtcf nhc-detail" />
+<col class="compscore nhc-detail" />
+<col class="alpha nhc-detail" />
+<col class="provisional nhc-detail" />
+<col class="adjustment nhc-detail" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Sail</th>
+<th>Boat</th>
+<th>Competitor</th>
+<th>Helm</th>
+<th>Finish</th>
+<th>ET</th>
+<th>TCF</th>
+<th>CT</th>
+<th>New TCF</th>
+<th class="nhc-detail">Q</th>
+<th class="nhc-detail">S</th>
+<th class="nhc-detail">α</th>
+<th class="nhc-detail">Z</th>
+<th class="nhc-detail">Adjustment</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>17</td>
+<td>Oona</td>
+<td>Peter Courtney</td>
+<td></td>
+<td class="mono">20:05:51</td>
+<td class="mono">1:00:51</td>
+<td class="mono">1.268</td>
+<td class="mono">1:17:09</td>
+<td class="mono">1.282</td>
+<td class="mono nhc-detail">1.3398</td>
+<td class="mono nhc-detail">1.0566</td>
+<td class="mono nhc-detail">0.300</td>
+<td class="mono nhc-detail">1.2765</td>
+<td class="mono nhc-detail">+0.0140</td>
+<td>1</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>11</td>
+<td>Deilginis</td>
+<td>Massey, Toomey, Kenny</td>
+<td></td>
+<td class="mono">20:05:15</td>
+<td class="mono">1:00:15</td>
+<td class="mono">1.308</td>
+<td class="mono">1:18:48</td>
+<td class="mono">1.314</td>
+<td class="mono nhc-detail">1.3531</td>
+<td class="mono nhc-detail">1.0345</td>
+<td class="mono nhc-detail">0.300</td>
+<td class="mono nhc-detail">1.3084</td>
+<td class="mono nhc-detail">+0.0060</td>
+<td>2</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>19</td>
+<td>Isobel</td>
+<td>Brian &amp; Conor Turvey</td>
+<td></td>
+<td class="mono">20:06:12</td>
+<td class="mono">1:01:12</td>
+<td class="mono">1.294</td>
+<td class="mono">1:19:12</td>
+<td class="mono">1.299</td>
+<td class="mono nhc-detail">1.3321</td>
+<td class="mono nhc-detail">1.0295</td>
+<td class="mono nhc-detail">0.150</td>
+<td class="mono nhc-detail">1.2932</td>
+<td class="mono nhc-detail">+0.0050</td>
+<td>3</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>21</td>
+<td>Orla</td>
+<td>Fitzgibbon / Gallagher</td>
+<td></td>
+<td class="mono">20:08:20</td>
+<td class="mono">1:03:20</td>
+<td class="mono">1.270</td>
+<td class="mono">1:20:26</td>
+<td class="mono">1.272</td>
+<td class="mono nhc-detail">1.2873</td>
+<td class="mono nhc-detail">1.0136</td>
+<td class="mono nhc-detail">0.150</td>
+<td class="mono nhc-detail">1.2663</td>
+<td class="mono nhc-detail">+0.0020</td>
+<td>4</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>22</td>
+<td>Anna</td>
+<td>Gerard Comerford</td>
+<td></td>
+<td class="mono">20:18:32</td>
+<td class="mono">1:13:32</td>
+<td class="mono">1.281</td>
+<td class="mono">1:34:12</td>
+<td class="mono">1.274</td>
+<td class="mono nhc-detail">1.1087</td>
+<td class="mono nhc-detail">0.8655 &dagger;</td>
+<td class="mono nhc-detail">0.075</td>
+<td class="mono nhc-detail">1.2681</td>
+<td class="mono nhc-detail">-0.0070</td>
+<td>5</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r3">R3&nbsp;&mdash;&nbsp;24 May 2026 &mdash; Start: 14:25:00</h3>
+<p class="nhc-fleet-header nhc-detail" style="text-align:center; margin: 0 0 6px 0; font-size: 0.9em;">Rating system: NHC1 (SWNHC2015) &middot; Finishers: 7 &middot; μ(S) = 1.0001 &middot; σ(S) = 0.0241 &middot; extreme if S &gt; 1.0362 or S &lt; 0.9761 (2 this race) &middot; P50 = 0.898034 &middot; W51 = 0.884776 &middot; Z51 = 1.000851</p><table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="16">
+<col class="rank" />
+<col class="sailno" />
+<col class="boatname" />
+<col class="helmname" />
+<col class="helm" />
+
+<col class="finish" />
+<col class="et" />
+<col class="tcf" />
+<col class="ct" />
+<col class="newtcf" />
+<col class="fairtcf nhc-detail" />
+<col class="compscore nhc-detail" />
+<col class="alpha nhc-detail" />
+<col class="provisional nhc-detail" />
+<col class="adjustment nhc-detail" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Sail</th>
+<th>Boat</th>
+<th>Competitor</th>
+<th>Helm</th>
+<th>Finish</th>
+<th>ET</th>
+<th>TCF</th>
+<th>CT</th>
+<th>New TCF</th>
+<th class="nhc-detail">Q</th>
+<th class="nhc-detail">S</th>
+<th class="nhc-detail">α</th>
+<th class="nhc-detail">Z</th>
+<th class="nhc-detail">Adjustment</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>11</td>
+<td>Deilginis</td>
+<td>Massey, Toomey, Kenny</td>
+<td></td>
+<td class="mono">15:32:02</td>
+<td class="mono">1:07:02</td>
+<td class="mono">1.314</td>
+<td class="mono">1:28:05</td>
+<td class="mono">1.317</td>
+<td class="mono nhc-detail">1.3397</td>
+<td class="mono nhc-detail">1.0195</td>
+<td class="mono nhc-detail">0.300</td>
+<td class="mono nhc-detail">1.3158</td>
+<td class="mono nhc-detail">+0.0030</td>
+<td>1</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>2</td>
+<td>Pauline</td>
+<td>O'Doherty / Kenny / McCormack</td>
+<td></td>
+<td class="mono">15:36:14</td>
+<td class="mono">1:11:14</td>
+<td class="mono">1.239</td>
+<td class="mono">1:28:15</td>
+<td class="mono">1.241</td>
+<td class="mono nhc-detail">1.2607</td>
+<td class="mono nhc-detail">1.0175</td>
+<td class="mono nhc-detail">0.300</td>
+<td class="mono nhc-detail">1.2399</td>
+<td class="mono nhc-detail">+0.0020</td>
+<td>2</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>21</td>
+<td>Orla</td>
+<td>Fitzgibbon / Gallagher</td>
+<td></td>
+<td class="mono">15:34:29</td>
+<td class="mono">1:09:29</td>
+<td class="mono">1.272</td>
+<td class="mono">1:28:23</td>
+<td class="mono">1.273</td>
+<td class="mono nhc-detail">1.2924</td>
+<td class="mono nhc-detail">1.0161</td>
+<td class="mono nhc-detail">0.300</td>
+<td class="mono nhc-detail">1.2724</td>
+<td class="mono nhc-detail">+0.0010</td>
+<td>3</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>12</td>
+<td>Rosemary</td>
+<td>Curley, Jones, Potter</td>
+<td></td>
+<td class="mono">15:35:36</td>
+<td class="mono">1:10:36</td>
+<td class="mono">1.258</td>
+<td class="mono">1:28:49</td>
+<td class="mono">1.258</td>
+<td class="mono nhc-detail">1.2720</td>
+<td class="mono nhc-detail">1.0111</td>
+<td class="mono nhc-detail">0.150</td>
+<td class="mono nhc-detail">1.2573</td>
+<td class="mono nhc-detail">+0.0000</td>
+<td>4</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>17</td>
+<td>Oona</td>
+<td>Peter Courtney</td>
+<td></td>
+<td class="mono">15:34:19</td>
+<td class="mono">1:09:19</td>
+<td class="mono">1.282</td>
+<td class="mono">1:28:52</td>
+<td class="mono">1.282</td>
+<td class="mono nhc-detail">1.2956</td>
+<td class="mono nhc-detail">1.0106</td>
+<td class="mono nhc-detail">0.150</td>
+<td class="mono nhc-detail">1.2812</td>
+<td class="mono nhc-detail">+0.0000</td>
+<td>5</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>22</td>
+<td>Anna</td>
+<td>Gerard Comerford</td>
+<td></td>
+<td class="mono">15:37:35</td>
+<td class="mono">1:12:35</td>
+<td class="mono">1.274</td>
+<td class="mono">1:32:28</td>
+<td class="mono">1.272</td>
+<td class="mono nhc-detail">1.2372</td>
+<td class="mono nhc-detail">0.9712 &dagger;</td>
+<td class="mono nhc-detail">0.075</td>
+<td class="mono nhc-detail">1.2712</td>
+<td class="mono nhc-detail">-0.0020</td>
+<td>6</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>19</td>
+<td>Isobel</td>
+<td>Brian &amp; Conor Turvey</td>
+<td></td>
+<td class="mono">15:37:24</td>
+<td class="mono">1:12:24</td>
+<td class="mono">1.299</td>
+<td class="mono">1:34:03</td>
+<td class="mono">1.296</td>
+<td class="mono nhc-detail">1.2404</td>
+<td class="mono nhc-detail">0.9549 &dagger;</td>
+<td class="mono nhc-detail">0.075</td>
+<td class="mono nhc-detail">1.2946</td>
+<td class="mono nhc-detail">-0.0030</td>
+<td>7</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r4">R4&nbsp;&mdash;&nbsp;24 May 2026 &mdash; Start: 19:05:00</h3>
+<p class="nhc-fleet-header nhc-detail" style="text-align:center; margin: 0 0 6px 0; font-size: 0.9em;">Rating system: NHC1 (SWNHC2015) &middot; Finishers: 8 &middot; μ(S) = 0.9983 &middot; σ(S) = 0.1591 &middot; extreme if S &gt; 1.2370 or S &lt; 0.8391 (1 this race) &middot; P50 = 0.926645 &middot; W51 = 0.876175 &middot; Z51 = 1.001777</p><table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="16">
+<col class="rank" />
+<col class="sailno" />
+<col class="boatname" />
+<col class="helmname" />
+<col class="helm" />
+
+<col class="finish" />
+<col class="et" />
+<col class="tcf" />
+<col class="ct" />
+<col class="newtcf" />
+<col class="fairtcf nhc-detail" />
+<col class="compscore nhc-detail" />
+<col class="alpha nhc-detail" />
+<col class="provisional nhc-detail" />
+<col class="adjustment nhc-detail" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Sail</th>
+<th>Boat</th>
+<th>Competitor</th>
+<th>Helm</th>
+<th>Finish</th>
+<th>ET</th>
+<th>TCF</th>
+<th>CT</th>
+<th>New TCF</th>
+<th class="nhc-detail">Q</th>
+<th class="nhc-detail">S</th>
+<th class="nhc-detail">α</th>
+<th class="nhc-detail">Z</th>
+<th class="nhc-detail">Adjustment</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>21</td>
+<td>Orla</td>
+<td>Fitzgibbon / Gallagher</td>
+<td></td>
+<td class="mono">20:12:14</td>
+<td class="mono">1:07:14</td>
+<td class="mono">1.273</td>
+<td class="mono">1:25:35</td>
+<td class="mono">1.284</td>
+<td class="mono nhc-detail">1.3783</td>
+<td class="mono nhc-detail">1.0827</td>
+<td class="mono nhc-detail">0.300</td>
+<td class="mono nhc-detail">1.2821</td>
+<td class="mono nhc-detail">+0.0110</td>
+<td>1</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>19</td>
+<td>Isobel</td>
+<td>Brian &amp; Conor Turvey</td>
+<td></td>
+<td class="mono">20:11:13</td>
+<td class="mono">1:06:13</td>
+<td class="mono">1.296</td>
+<td class="mono">1:25:49</td>
+<td class="mono">1.306</td>
+<td class="mono nhc-detail">1.3994</td>
+<td class="mono nhc-detail">1.0798</td>
+<td class="mono nhc-detail">0.300</td>
+<td class="mono nhc-detail">1.3042</td>
+<td class="mono nhc-detail">+0.0100</td>
+<td>2</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>22</td>
+<td>Anna</td>
+<td>Gerard Comerford</td>
+<td></td>
+<td class="mono">20:12:44</td>
+<td class="mono">1:07:44</td>
+<td class="mono">1.272</td>
+<td class="mono">1:26:09</td>
+<td class="mono">1.281</td>
+<td class="mono nhc-detail">1.3681</td>
+<td class="mono nhc-detail">1.0755</td>
+<td class="mono nhc-detail">0.300</td>
+<td class="mono nhc-detail">1.2785</td>
+<td class="mono nhc-detail">+0.0090</td>
+<td>3</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>3</td>
+<td>Leila</td>
+<td>Roderick Cooper</td>
+<td></td>
+<td class="mono">20:13:40</td>
+<td class="mono">1:08:40</td>
+<td class="mono">1.265</td>
+<td class="mono">1:26:52</td>
+<td class="mono">1.271</td>
+<td class="mono nhc-detail">1.3495</td>
+<td class="mono nhc-detail">1.0668</td>
+<td class="mono nhc-detail">0.300</td>
+<td class="mono nhc-detail">1.2683</td>
+<td class="mono nhc-detail">+0.0060</td>
+<td>4</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>11</td>
+<td>Deilginis</td>
+<td>Massey, Toomey, Kenny</td>
+<td></td>
+<td class="mono">20:11:07</td>
+<td class="mono">1:06:07</td>
+<td class="mono">1.317</td>
+<td class="mono">1:27:05</td>
+<td class="mono">1.322</td>
+<td class="mono nhc-detail">1.4015</td>
+<td class="mono nhc-detail">1.0642</td>
+<td class="mono nhc-detail">0.300</td>
+<td class="mono nhc-detail">1.3195</td>
+<td class="mono nhc-detail">+0.0050</td>
+<td>5</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>17</td>
+<td>Oona</td>
+<td>Peter Courtney</td>
+<td></td>
+<td class="mono">20:15:22</td>
+<td class="mono">1:10:22</td>
+<td class="mono">1.282</td>
+<td class="mono">1:30:13</td>
+<td class="mono">1.279</td>
+<td class="mono nhc-detail">1.3169</td>
+<td class="mono nhc-detail">1.0272</td>
+<td class="mono nhc-detail">0.150</td>
+<td class="mono nhc-detail">1.2765</td>
+<td class="mono nhc-detail">-0.0030</td>
+<td>6</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>7</td>
+<td>Aura</td>
+<td>Ian Malcolm</td>
+<td></td>
+<td class="mono">20:16:15</td>
+<td class="mono">1:11:15</td>
+<td class="mono">1.291</td>
+<td class="mono">1:31:59</td>
+<td class="mono">1.284</td>
+<td class="mono nhc-detail">1.3006</td>
+<td class="mono nhc-detail">1.0074</td>
+<td class="mono nhc-detail">0.150</td>
+<td class="mono nhc-detail">1.2818</td>
+<td class="mono nhc-detail">-0.0070</td>
+<td>7</td>
+</tr>
+<tr class="even racerow">
+<td>8</td>
+<td>2</td>
+<td>Pauline</td>
+<td>O'Doherty / Kenny / McCormack</td>
+<td></td>
+<td class="mono">21:13:12</td>
+<td class="mono">2:08:12</td>
+<td class="mono">1.241</td>
+<td class="mono">2:39:06</td>
+<td class="mono">1.204</td>
+<td class="mono nhc-detail">0.7228</td>
+<td class="mono nhc-detail">0.5824 &dagger;</td>
+<td class="mono nhc-detail">0.075</td>
+<td class="mono nhc-detail">1.2021</td>
+<td class="mono nhc-detail">-0.0370</td>
+<td>8</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r5">R5&nbsp;&mdash;&nbsp;24 May 2026 &mdash; Start: 14:25:00</h3>
+<p class="nhc-fleet-header nhc-detail" style="text-align:center; margin: 0 0 6px 0; font-size: 0.9em;">Rating system: NHC1 (SWNHC2015) &middot; Finishers: 9 &middot; μ(S) = 1.0002 &middot; σ(S) = 0.0203 &middot; extreme if S &gt; 1.0306 or S &lt; 0.9800 (3 this race) &middot; P50 = 1.134450 &middot; W51 = 1.131450 &middot; Z51 = 1.000657</p><table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="16">
+<col class="rank" />
+<col class="sailno" />
+<col class="boatname" />
+<col class="helmname" />
+<col class="helm" />
+
+<col class="finish" />
+<col class="et" />
+<col class="tcf" />
+<col class="ct" />
+<col class="newtcf" />
+<col class="fairtcf nhc-detail" />
+<col class="compscore nhc-detail" />
+<col class="alpha nhc-detail" />
+<col class="provisional nhc-detail" />
+<col class="adjustment nhc-detail" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Sail</th>
+<th>Boat</th>
+<th>Competitor</th>
+<th>Helm</th>
+<th>Finish</th>
+<th>ET</th>
+<th>TCF</th>
+<th>CT</th>
+<th>New TCF</th>
+<th class="nhc-detail">Q</th>
+<th class="nhc-detail">S</th>
+<th class="nhc-detail">α</th>
+<th class="nhc-detail">Z</th>
+<th class="nhc-detail">Adjustment</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>2</td>
+<td>Pauline</td>
+<td>O'Doherty / Kenny / McCormack</td>
+<td></td>
+<td class="mono">15:56:02</td>
+<td class="mono">1:31:02</td>
+<td class="mono">1.204</td>
+<td class="mono">1:49:36</td>
+<td class="mono">1.211</td>
+<td class="mono nhc-detail">1.2462</td>
+<td class="mono nhc-detail">1.0350 &dagger;</td>
+<td class="mono nhc-detail">0.150</td>
+<td class="mono nhc-detail">1.2103</td>
+<td class="mono nhc-detail">+0.0070</td>
+<td>1</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>21</td>
+<td>Orla</td>
+<td>Fitzgibbon / Gallagher</td>
+<td></td>
+<td class="mono">15:51:16</td>
+<td class="mono">1:26:16</td>
+<td class="mono">1.284</td>
+<td class="mono">1:50:46</td>
+<td class="mono">1.293</td>
+<td class="mono nhc-detail">1.3151</td>
+<td class="mono nhc-detail">1.0242</td>
+<td class="mono nhc-detail">0.300</td>
+<td class="mono nhc-detail">1.2923</td>
+<td class="mono nhc-detail">+0.0090</td>
+<td>2</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>11</td>
+<td>Deilginis</td>
+<td>Massey, Toomey, Kenny</td>
+<td></td>
+<td class="mono">15:49:31</td>
+<td class="mono">1:24:31</td>
+<td class="mono">1.322</td>
+<td class="mono">1:51:44</td>
+<td class="mono">1.328</td>
+<td class="mono nhc-detail">1.3423</td>
+<td class="mono nhc-detail">1.0153</td>
+<td class="mono nhc-detail">0.300</td>
+<td class="mono nhc-detail">1.3270</td>
+<td class="mono nhc-detail">+0.0060</td>
+<td>3</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>4</td>
+<td>Zaida</td>
+<td>Houlihan, Houlihan, Carroll, Hurley</td>
+<td></td>
+<td class="mono">15:59:44</td>
+<td class="mono">1:34:44</td>
+<td class="mono">1.193</td>
+<td class="mono">1:53:01</td>
+<td class="mono">1.194</td>
+<td class="mono nhc-detail">1.1975</td>
+<td class="mono nhc-detail">1.0038</td>
+<td class="mono nhc-detail">0.300</td>
+<td class="mono nhc-detail">1.1934</td>
+<td class="mono nhc-detail">+0.0010</td>
+<td>4</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>1</td>
+<td>Rita</td>
+<td>Marcus Lynch &amp; John Curley</td>
+<td></td>
+<td class="mono">15:53:29</td>
+<td class="mono">1:28:29</td>
+<td class="mono">1.279</td>
+<td class="mono">1:53:10</td>
+<td class="mono">1.280</td>
+<td class="mono nhc-detail">1.2821</td>
+<td class="mono nhc-detail">1.0024</td>
+<td class="mono nhc-detail">0.150</td>
+<td class="mono nhc-detail">1.2790</td>
+<td class="mono nhc-detail">+0.0010</td>
+<td>5</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>17</td>
+<td>Oona</td>
+<td>Peter Courtney</td>
+<td></td>
+<td class="mono">15:55:01</td>
+<td class="mono">1:30:01</td>
+<td class="mono">1.279</td>
+<td class="mono">1:55:08</td>
+<td class="mono">1.277</td>
+<td class="mono nhc-detail">1.2603</td>
+<td class="mono nhc-detail">0.9854</td>
+<td class="mono nhc-detail">0.150</td>
+<td class="mono nhc-detail">1.2757</td>
+<td class="mono nhc-detail">-0.0020</td>
+<td>6</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>3</td>
+<td>Leila</td>
+<td>Roderick Cooper</td>
+<td></td>
+<td class="mono">15:55:41</td>
+<td class="mono">1:30:41</td>
+<td class="mono">1.271</td>
+<td class="mono">1:55:16</td>
+<td class="mono">1.268</td>
+<td class="mono nhc-detail">1.2510</td>
+<td class="mono nhc-detail">0.9843</td>
+<td class="mono nhc-detail">0.150</td>
+<td class="mono nhc-detail">1.2675</td>
+<td class="mono nhc-detail">-0.0030</td>
+<td>7</td>
+</tr>
+<tr class="even racerow">
+<td>8</td>
+<td>19</td>
+<td>Isobel</td>
+<td>Brian &amp; Conor Turvey</td>
+<td></td>
+<td class="mono">15:53:53</td>
+<td class="mono">1:28:53</td>
+<td class="mono">1.306</td>
+<td class="mono">1:56:05</td>
+<td class="mono">1.305</td>
+<td class="mono nhc-detail">1.2763</td>
+<td class="mono nhc-detail">0.9773 &dagger;</td>
+<td class="mono nhc-detail">0.075</td>
+<td class="mono nhc-detail">1.3038</td>
+<td class="mono nhc-detail">-0.0010</td>
+<td>8</td>
+</tr>
+<tr class="odd racerow">
+<td>9</td>
+<td>22</td>
+<td>Anna</td>
+<td>Gerard Comerford</td>
+<td></td>
+<td class="mono">15:55:53</td>
+<td class="mono">1:30:53</td>
+<td class="mono">1.281</td>
+<td class="mono">1:56:25</td>
+<td class="mono">1.279</td>
+<td class="mono nhc-detail">1.2482</td>
+<td class="mono nhc-detail">0.9744 &dagger;</td>
+<td class="mono nhc-detail">0.075</td>
+<td class="mono nhc-detail">1.2785</td>
+<td class="mono nhc-detail">-0.0020</td>
+<td>9</td>
+</tr>
+</tbody>
+</table>
+<p class="hardleft"></p>
+<p class="hardright"></p>
+<p>Sail Scoring &mdash; <a href="https://sailscoring.ie" target="_top" rel="noopener">sailscoring.ie</a> &mdash; <a href="https://app.sailscoring.ie/import#data=eyJ2ZXJzaW9uIjoxLCJleHBvcnRlZEF0IjoiMjAyNi0wNS0yNFQxMTowNjo0MC4wMTNaIiwic2VyaWVzIjp7Im5hbWUiOiJUdWVzZGF5cyAmIFNhdHVyZGF5cyAtIEhvd3RoIDE3J3MgLSBTZXJpZXMgMSIsInZlbnVlIjoiSG93dGggWWFjaHQgQ2x1YiIsInN0YXJ0RGF0ZSI6IjIwMjYtMDUtMjQiLCJlbmREYXRlIjoiMjAyNi0wNS0yNCIsImRpc2NhcmRUaHJlc2hvbGRzIjpbeyJtaW5SYWNlcyI6NCwiZGlzY2FyZENvdW50IjoxfSx7Im1pblJhY2VzIjo4LCJkaXNjYXJkQ291bnQiOjJ9XSwiZG5mU2NvcmluZyI6InN0YXJ0aW5nQXJlYSIsImRpc3BsYXlGaWVsZHMiOlsiYm9hdE5hbWUiLCJoZWxtIl0sInByaW1hcnlQZXJzb25MYWJlbCI6ImNvbXBldGl0b3IiLCJzY29yaW5nTW9kZSI6ImhhbmRpY2FwIiwicHVibGlzaFJhdGluZ0NhbGN1bGF0aW9ucyI6dHJ1ZSwic2hvd1BlclJhY2VSYXRpbmdzSW5TdW1tYXJ5Ijp0cnVlfSwiZmxlZXRzIjpbeyJuYW1lIjoiSG93dGggMTcgSFBIIiwiZGlzcGxheU9yZGVyIjowLCJzY29yaW5nU3lzdGVtIjoibmhjIn0seyJuYW1lIjoiSG93dGggMTcgU2NyIiwiZGlzcGxheU9yZGVyIjoxLCJzY29yaW5nU3lzdGVtIjoic2NyYXRjaCJ9XSwiY29tcGV0aXRvcnMiOlt7InNhaWxOdW1iZXIiOiIxIiwiYm9hdE5hbWUiOiJSaXRhIiwibmFtZSI6Ik1hcmN1cyBMeW5jaCAmIEpvaG4gQ3VybGV5IiwiY2x1YiI6IiIsImdlbmRlciI6IiIsImFnZSI6bnVsbCwiZmxlZXROYW1lcyI6WyJIb3d0aCAxNyBIUEgiLCJIb3d0aCAxNyBTY3IiXSwibmhjU3RhcnRpbmdUY2YiOjEuMjc5fSx7InNhaWxOdW1iZXIiOiIxMSIsImJvYXROYW1lIjoiRGVpbGdpbmlzIiwibmFtZSI6Ik1hc3NleSwgVG9vbWV5LCBLZW5ueSIsImNsdWIiOiIiLCJnZW5kZXIiOiIiLCJhZ2UiOm51bGwsImZsZWV0TmFtZXMiOlsiSG93dGggMTcgSFBIIiwiSG93dGggMTcgU2NyIl0sIm5oY1N0YXJ0aW5nVGNmIjoxLjMxNn0seyJzYWlsTnVtYmVyIjoiMTIiLCJib2F0TmFtZSI6IlJvc2VtYXJ5IiwibmFtZSI6IkN1cmxleSwgSm9uZXMsIFBvdHRlciIsImNsdWIiOiIiLCJnZW5kZXIiOiIiLCJhZ2UiOm51bGwsImZsZWV0TmFtZXMiOlsiSG93dGggMTcgSFBIIiwiSG93dGggMTcgU2NyIl0sIm5oY1N0YXJ0aW5nVGNmIjoxLjI0Mn0seyJzYWlsTnVtYmVyIjoiMTQiLCJib2F0TmFtZSI6IkdsYWR5cyIsIm5hbWUiOiJCeXJuZSAvIEZlcnJpcyIsImNsdWIiOiIiLCJnZW5kZXIiOiIiLCJhZ2UiOm51bGwsImZsZWV0TmFtZXMiOlsiSG93dGggMTcgSFBIIiwiSG93dGggMTcgU2NyIl0sIm5oY1N0YXJ0aW5nVGNmIjoxLjE1Nn0seyJzYWlsTnVtYmVyIjoiMTYiLCJib2F0TmFtZSI6IkVpbGVlbiIsIm5hbWUiOiJSaW1hIE1hY2tlbiIsImNsdWIiOiIiLCJnZW5kZXIiOiIiLCJhZ2UiOm51bGwsImZsZWV0TmFtZXMiOlsiSG93dGggMTcgSFBIIiwiSG93dGggMTcgU2NyIl0sIm5oY1N0YXJ0aW5nVGNmIjoxLjI0OX0seyJzYWlsTnVtYmVyIjoiMTciLCJib2F0TmFtZSI6Ik9vbmEiLCJuYW1lIjoiUGV0ZXIgQ291cnRuZXkiLCJjbHViIjoiIiwiZ2VuZGVyIjoiIiwiYWdlIjpudWxsLCJmbGVldE5hbWVzIjpbIkhvd3RoIDE3IEhQSCIsIkhvd3RoIDE3IFNjciJdLCJuaGNTdGFydGluZ1RjZiI6MS4yODR9LHsic2FpbE51bWJlciI6IjE5IiwiYm9hdE5hbWUiOiJJc29iZWwiLCJuYW1lIjoiQnJpYW4gJiBDb25vciBUdXJ2ZXkiLCJjbHViIjoiIiwiZ2VuZGVyIjoiIiwiYWdlIjpudWxsLCJmbGVldE5hbWVzIjpbIkhvd3RoIDE3IEhQSCIsIkhvd3RoIDE3IFNjciJdLCJuaGNTdGFydGluZ1RjZiI6MS4zMTJ9LHsic2FpbE51bWJlciI6IjIiLCJib2F0TmFtZSI6IlBhdWxpbmUiLCJuYW1lIjoiTydEb2hlcnR5IC8gS2VubnkgLyBNY0Nvcm1hY2siLCJjbHViIjoiIiwiZ2VuZGVyIjoiIiwiYWdlIjpudWxsLCJmbGVldE5hbWVzIjpbIkhvd3RoIDE3IEhQSCIsIkhvd3RoIDE3IFNjciJdLCJuaGNTdGFydGluZ1RjZiI6MS4yNTh9LHsic2FpbE51bWJlciI6IjIxIiwiYm9hdE5hbWUiOiJPcmxhIiwibmFtZSI6IkZpdHpnaWJib24gLyBHYWxsYWdoZXIiLCJjbHViIjoiIiwiZ2VuZGVyIjoiIiwiYWdlIjpudWxsLCJmbGVldE5hbWVzIjpbIkhvd3RoIDE3IEhQSCIsIkhvd3RoIDE3IFNjciJdLCJuaGNTdGFydGluZ1RjZiI6MS4yMjh9LHsic2FpbE51bWJlciI6IjIyIiwiYm9hdE5hbWUiOiJBbm5hIiwibmFtZSI6IkdlcmFyZCBDb21lcmZvcmQiLCJjbHViIjoiIiwiZ2VuZGVyIjoiIiwiYWdlIjpudWxsLCJmbGVldE5hbWVzIjpbIkhvd3RoIDE3IEhQSCIsIkhvd3RoIDE3IFNjciJdLCJuaGNTdGFydGluZ1RjZiI6MS4zfSx7InNhaWxOdW1iZXIiOiIzIiwiYm9hdE5hbWUiOiJMZWlsYSIsIm5hbWUiOiJSb2RlcmljayBDb29wZXIiLCJjbHViIjoiIiwiZ2VuZGVyIjoiIiwiYWdlIjpudWxsLCJmbGVldE5hbWVzIjpbIkhvd3RoIDE3IEhQSCIsIkhvd3RoIDE3IFNjciJdLCJuaGNTdGFydGluZ1RjZiI6MS4yNjV9LHsic2FpbE51bWJlciI6IjQiLCJib2F0TmFtZSI6IlphaWRhIiwibmFtZSI6IkhvdWxpaGFuLCBIb3VsaWhhbiwgQ2Fycm9sbCwgSHVybGV5IiwiY2x1YiI6IiIsImdlbmRlciI6IiIsImFnZSI6bnVsbCwiZmxlZXROYW1lcyI6WyJIb3d0aCAxNyBIUEgiLCJIb3d0aCAxNyBTY3IiXSwibmhjU3RhcnRpbmdUY2YiOjEuMTkzfSx7InNhaWxOdW1iZXIiOiI3IiwiYm9hdE5hbWUiOiJBdXJhIiwibmFtZSI6IklhbiBNYWxjb2xtIiwiY2x1YiI6IiIsImdlbmRlciI6IiIsImFnZSI6bnVsbCwiZmxlZXROYW1lcyI6WyJIb3d0aCAxNyBIUEgiLCJIb3d0aCAxNyBTY3IiXSwibmhjU3RhcnRpbmdUY2YiOjEuMjY4fV0sInJhY2VzIjpbeyJyYWNlTnVtYmVyIjoxLCJkYXRlIjoiMjAyNi0wNS0yNCIsInN0YXJ0cyI6W3siZmxlZXROYW1lcyI6WyJIb3d0aCAxNyBIUEgiLCJIb3d0aCAxNyBTY3IiXSwic3RhcnRUaW1lIjoiMTk6MDU6MDAifV0sImZpbmlzaGVzIjpbeyJzYWlsTnVtYmVyIjoiMSIsInNvcnRPcmRlciI6bnVsbCwicmVzdWx0Q29kZSI6IkROQyIsInN0YXJ0UHJlc2VudCI6bnVsbH0seyJzYWlsTnVtYmVyIjoiMTEiLCJzb3J0T3JkZXIiOjMsImZpbmlzaFRpbWUiOiIyMDoxNzo1OCIsInJlc3VsdENvZGUiOm51bGwsInN0YXJ0UHJlc2VudCI6bnVsbH0seyJzYWlsTnVtYmVyIjoiMTIiLCJzb3J0T3JkZXIiOjIsImZpbmlzaFRpbWUiOiIyMDoxNjoyNiIsInJlc3VsdENvZGUiOm51bGwsInN0YXJ0UHJlc2VudCI6bnVsbH0seyJzYWlsTnVtYmVyIjoiMTQiLCJzb3J0T3JkZXIiOm51bGwsInJlc3VsdENvZGUiOiJETkMiLCJzdGFydFByZXNlbnQiOm51bGx9LHsic2FpbE51bWJlciI6IjE2Iiwic29ydE9yZGVyIjpudWxsLCJyZXN1bHRDb2RlIjoiRE5DIiwic3RhcnRQcmVzZW50IjpudWxsfSx7InNhaWxOdW1iZXIiOiIxNyIsInNvcnRPcmRlciI6NCwiZmluaXNoVGltZSI6IjIwOjIyOjU4IiwicmVzdWx0Q29kZSI6bnVsbCwic3RhcnRQcmVzZW50IjpudWxsfSx7InNhaWxOdW1iZXIiOiIxOSIsInNvcnRPcmRlciI6NSwiZmluaXNoVGltZSI6IjIwOjM2OjM2IiwicmVzdWx0Q29kZSI6bnVsbCwic3RhcnRQcmVzZW50IjpudWxsfSx7InNhaWxOdW1iZXIiOiIyIiwic29ydE9yZGVyIjo3LCJmaW5pc2hUaW1lIjoiMjA6NDI6NDUiLCJyZXN1bHRDb2RlIjpudWxsLCJzdGFydFByZXNlbnQiOm51bGx9LHsic2FpbE51bWJlciI6IjIxIiwic29ydE9yZGVyIjowLCJmaW5pc2hUaW1lIjoiMjA6MTE6MDAiLCJyZXN1bHRDb2RlIjpudWxsLCJzdGFydFByZXNlbnQiOm51bGx9LHsic2FpbE51bWJlciI6IjIyIiwic29ydE9yZGVyIjo2LCJmaW5pc2hUaW1lIjoiMjA6Mzk6MjUiLCJyZXN1bHRDb2RlIjpudWxsLCJzdGFydFByZXNlbnQiOm51bGx9LHsic2FpbE51bWJlciI6IjMiLCJzb3J0T3JkZXIiOm51bGwsInJlc3VsdENvZGUiOiJETkYiLCJzdGFydFByZXNlbnQiOm51bGx9LHsic2FpbE51bWJlciI6IjQiLCJzb3J0T3JkZXIiOm51bGwsInJlc3VsdENvZGUiOiJETkMiLCJzdGFydFByZXNlbnQiOm51bGx9LHsic2FpbE51bWJlciI6IjciLCJzb3J0T3JkZXIiOjEsImZpbmlzaFRpbWUiOiIyMDoxMzo0NSIsInJlc3VsdENvZGUiOm51bGwsInN0YXJ0UHJlc2VudCI6bnVsbH1dLCJuaGNCeUZsZWV0Ijp7Ikhvd3RoIDE3IEhQSCI6eyJmaW5pc2hlckNvdW50Ijo4LCJjdEF2Z1NlY3MiOjYxNDIuMzc1LCJtZWFuVGNmIjoxLjI3NjAwMDAwMDAwMDAwMDIsInA1MCI6MS4wMDExMjMxMzk4MjY3NDUzLCJ3NTEiOjAuOTI3ODE4ODk2OTU0MjA0LCJzTWVhbiI6MS4wMDIxNzc3NTc4MzkwNTIsInNTdGRldiI6MC4xNTQ5MzQ2NjIzMjIwNzU2LCJzSGkiOjEuMjM0NTc5NzUxMzIyMTY1NSwic0xvIjowLjg0NzI0MzA5NTUxNjk3NjUsImV4dHJlbWVDb3VudCI6NCwicmVhbGlnbm1lbnRGYWN0b3IiOjAuOTk4ODExNDkxNTA0MDI2NCwidXBkYXRlU3VwcHJlc3NlZCI6ZmFsc2UsInJvd3MiOlt7InNhaWxOdW1iZXIiOiIyMSIsInRjZkFwcGxpZWQiOjEuMjI4LCJuZXdUY2YiOjEuMjcsImZhaXJUY2YiOjEuNTE2ODUzMjQyMTYxNzM1MywiY29tcFNjb3JlIjoxLjIzNTIyMjUwOTkwMzY5MzMsImlzRXh0cmVtZSI6dHJ1ZSwiZXh0cmVtZURpcmVjdGlvbiI6ImZhc3QiLCJhbHBoYUFwcGxpZWQiOjAuMTUsInByb3Zpc2lvbmFsVGNmIjoxLjI3MTMyNzk4NjMyNDI2MDQsImFkanVzdG1lbnQiOjAuMDQyMDAwMDAwMDAwMDAwMDR9LHsic2FpbE51bWJlciI6IjciLCJ0Y2ZBcHBsaWVkIjoxLjI2OCwibmV3VGNmIjoxLjI5MSwiZmFpclRjZiI6MS40NTYxNzkxMTI0NzUyNjU5LCJjb21wU2NvcmUiOjEuMTQ4NDA2MjQwMTIyNDQ5NSwiaXNFeHRyZW1lIjpmYWxzZSwiYWxwaGFBcHBsaWVkIjowLjMsInByb3Zpc2lvbmFsVGNmIjoxLjI5MjQ2NjQyNzc2MTgzNDUsImFkanVzdG1lbnQiOjAuMDIyOTk5OTk5OTk5OTk5OTF9LHsic2FpbE51bWJlciI6IjEyIiwidGNmQXBwbGllZCI6MS4yNDIsIm5ld1RjZiI6MS4yNTgsImZhaXJUY2YiOjEuNDAxNDc4OTYzODI2NTIxNSwiY29tcFNjb3JlIjoxLjEyODQwNDk2MjgyMzI4NjIsImlzRXh0cmVtZSI6ZmFsc2UsImFscGhhQXBwbGllZCI6MC4zLCJwcm92aXNpb25hbFRjZiI6MS4yNTkwNTc5NTk1MjM0NjQsImFkanVzdG1lbnQiOjAuMDE2MDAwMDAwMDAwMDAwMDE0fSx7InNhaWxOdW1iZXIiOiIxMSIsInRjZkFwcGxpZWQiOjEuMzE2LCJuZXdUY2YiOjEuMzA4LCJmYWlyVGNmIjoxLjM3MjAyODA1ODIzNjc0NTUsImNvbXBTY29yZSI6MS4wNDI1NzQ1MTIzMzc5NTI0LCJpc0V4dHJlbWUiOmZhbHNlLCJhbHBoYUFwcGxpZWQiOjAuMTUsInByb3Zpc2lvbmFsVGNmIjoxLjMwOTMzNDgxMjA3MzcyODUsImFkanVzdG1lbnQiOi0wLjAwODAwMDAwMDAwMDAwMDAwN30seyJzYWlsTnVtYmVyIjoiMTciLCJ0Y2ZBcHBsaWVkIjoxLjI4NCwibmV3VGNmIjoxLjI2OCwiZmFpclRjZiI6MS4yODQwMzk5Mzk5MjMxNDQ4LCJjb21wU2NvcmUiOjEuMDAwMDMxMTA1ODU5MTQ3MSwiaXNFeHRyZW1lIjpmYWxzZSwiYWxwaGFBcHBsaWVkIjowLjE1LCJwcm92aXNpb25hbFRjZiI6MS4yNjk5MDI5OTQyODM2MjIsImFkanVzdG1lbnQiOi0wLjAxNjAwMDAwMDAwMDAwMDAxNH0seyJzYWlsTnVtYmVyIjoiMTkiLCJ0Y2ZBcHBsaWVkIjoxLjMxMiwibmV3VGNmIjoxLjI5NCwiZmFpclRjZiI6MS4wOTI5MjkxOTE5NTA1OTU1LCJjb21wU2NvcmUiOjAuODMzMDI1Mjk4NzQyODMxOCwiaXNFeHRyZW1lIjp0cnVlLCJleHRyZW1lRGlyZWN0aW9uIjoic2xvdyIsImFscGhhQXBwbGllZCI6MC4wNzUsInByb3Zpc2lvbmFsVGNmIjoxLjI5NTU2OTY4OTM5NjI5NDcsImFkanVzdG1lbnQiOi0wLjAxODAwMDAwMDAwMDAwMDAxNn0seyJzYWlsTnVtYmVyIjoiMjIiLCJ0Y2ZBcHBsaWVkIjoxLjMsIm5ld1RjZiI6MS4yODEsImZhaXJUY2YiOjEuMDYwMzI0NTk2NDYyNTcyLCJjb21wU2NvcmUiOjAuODE1NjM0MzA0OTcxMjA5MywiaXNFeHRyZW1lIjp0cnVlLCJleHRyZW1lRGlyZWN0aW9uIjoic2xvdyIsImFscGhhQXBwbGllZCI6MC4wNzUsInByb3Zpc2lvbmFsVGNmIjoxLjI4MjAyNDM0NDczNDY5MywiYWRqdXN0bWVudCI6LTAuMDE5MDAwMDAwMDAwMDAwMTI4fSx7InNhaWxOdW1iZXIiOiIyIiwidGNmQXBwbGllZCI6MS4yNTgsIm5ld1RjZiI6MS4yMzksImZhaXJUY2YiOjEuMDI0MTY2ODk0OTYzNDIyNCwiY29tcFNjb3JlIjowLjgxNDEyMzEyNzk1MTg0NiwiaXNFeHRyZW1lIjp0cnVlLCJleHRyZW1lRGlyZWN0aW9uIjoic2xvdyIsImFscGhhQXBwbGllZCI6MC4wNzUsInByb3Zpc2lvbmFsVGNmIjoxLjI0MDQ2MjUxNzEyMjI1NjcsImFkanVzdG1lbnQiOi0wLjAxODk5OTk5OTk5OTk5OTkwNn0seyJzYWlsTnVtYmVyIjoiMSIsInRjZkFwcGxpZWQiOjEuMjc5LCJuZXdUY2YiOjEuMjc5fSx7InNhaWxOdW1iZXIiOiIxNCIsInRjZkFwcGxpZWQiOjEuMTU2LCJuZXdUY2YiOjEuMTU2fSx7InNhaWxOdW1iZXIiOiIxNiIsInRjZkFwcGxpZWQiOjEuMjQ5LCJuZXdUY2YiOjEuMjQ5fSx7InNhaWxOdW1iZXIiOiIzIiwidGNmQXBwbGllZCI6MS4yNjUsIm5ld1RjZiI6MS4yNjV9LHsic2FpbE51bWJlciI6IjQiLCJ0Y2ZBcHBsaWVkIjoxLjE5MywibmV3VGNmIjoxLjE5M31dfX19LHsicmFjZU51bWJlciI6MiwiZGF0ZSI6IjIwMjYtMDUtMjQiLCJzdGFydHMiOlt7ImZsZWV0TmFtZXMiOlsiSG93dGggMTcgSFBIIiwiSG93dGggMTcgU2NyIl0sInN0YXJ0VGltZSI6IjE5OjA1OjAwIn1dLCJmaW5pc2hlcyI6W3sic2FpbE51bWJlciI6IjEiLCJzb3J0T3JkZXIiOm51bGwsInJlc3VsdENvZGUiOiJETkMiLCJzdGFydFByZXNlbnQiOm51bGx9LHsic2FpbE51bWJlciI6IjExIiwic29ydE9yZGVyIjowLCJmaW5pc2hUaW1lIjoiMjA6MDU6MTUiLCJyZXN1bHRDb2RlIjpudWxsLCJzdGFydFByZXNlbnQiOm51bGx9LHsic2FpbE51bWJlciI6IjEyIiwic29ydE9yZGVyIjpudWxsLCJyZXN1bHRDb2RlIjoiRE5DIiwic3RhcnRQcmVzZW50IjpudWxsfSx7InNhaWxOdW1iZXIiOiIxNCIsInNvcnRPcmRlciI6bnVsbCwicmVzdWx0Q29kZSI6IkROQyIsInN0YXJ0UHJlc2VudCI6bnVsbH0seyJzYWlsTnVtYmVyIjoiMTYiLCJzb3J0T3JkZXIiOm51bGwsInJlc3VsdENvZGUiOiJETkMiLCJzdGFydFByZXNlbnQiOm51bGx9LHsic2FpbE51bWJlciI6IjE3Iiwic29ydE9yZGVyIjoxLCJmaW5pc2hUaW1lIjoiMjA6MDU6NTEiLCJyZXN1bHRDb2RlIjpudWxsLCJzdGFydFByZXNlbnQiOm51bGx9LHsic2FpbE51bWJlciI6IjE5Iiwic29ydE9yZGVyIjoyLCJmaW5pc2hUaW1lIjoiMjA6MDY6MTIiLCJyZXN1bHRDb2RlIjpudWxsLCJzdGFydFByZXNlbnQiOm51bGx9LHsic2FpbE51bWJlciI6IjIiLCJzb3J0T3JkZXIiOm51bGwsInJlc3VsdENvZGUiOiJETkMiLCJzdGFydFByZXNlbnQiOm51bGx9LHsic2FpbE51bWJlciI6IjIxIiwic29ydE9yZGVyIjozLCJmaW5pc2hUaW1lIjoiMjA6MDg6MjAiLCJyZXN1bHRDb2RlIjpudWxsLCJzdGFydFByZXNlbnQiOm51bGx9LHsic2FpbE51bWJlciI6IjIyIiwic29ydE9yZGVyIjo0LCJmaW5pc2hUaW1lIjoiMjA6MTg6MzIiLCJyZXN1bHRDb2RlIjpudWxsLCJzdGFydFByZXNlbnQiOm51bGx9LHsic2FpbE51bWJlciI6IjMiLCJzb3J0T3JkZXIiOm51bGwsInJlc3VsdENvZGUiOiJETkMiLCJzdGFydFByZXNlbnQiOm51bGx9LHsic2FpbE51bWJlciI6IjQiLCJzb3J0T3JkZXIiOm51bGwsInJlc3VsdENvZGUiOiJETkMiLCJzdGFydFByZXNlbnQiOm51bGx9LHsic2FpbE51bWJlciI6IjciLCJzb3J0T3JkZXIiOm51bGwsInJlc3VsdENvZGUiOiJETkMiLCJzdGFydFByZXNlbnQiOm51bGx9XSwibmhjQnlGbGVldCI6eyJIb3d0aCAxNyBIUEgiOnsiZmluaXNoZXJDb3VudCI6NSwiY3RBdmdTZWNzIjo0OTE3LjQsIm1lYW5UY2YiOjEuMjg0MiwicDUwIjowLjgxNTI2MTc0MjY1OTA0MTcsInc1MSI6MC43ODg4MTg5NDE3NDI2NjQ2LCJzTWVhbiI6MC45OTk5MzI5OTE5MjU3MzY4LCJzU3RkZXYiOjAuMDY4NjE1OTMyMTc5MDAyNzksInNIaSI6MS4xMDI4NTY4OTAxOTQyNDEsInNMbyI6MC45MzEzMTcwNTk3NDY3MzQxLCJleHRyZW1lQ291bnQiOjEsInJlYWxpZ25tZW50RmFjdG9yIjoxLjAwNDI4NjM0NTg2NDc0MDksInVwZGF0ZVN1cHByZXNzZWQiOmZhbHNlLCJyb3dzIjpbeyJzYWlsTnVtYmVyIjoiMTciLCJ0Y2ZBcHBsaWVkIjoxLjI2OCwibmV3VGNmIjoxLjI4MiwiZmFpclRjZiI6MS4zMzk3ODkyMjM3NjE3Nzc3LCJjb21wU2NvcmUiOjEuMDU2NjE2MTA3MDY3NjQ4LCJpc0V4dHJlbWUiOmZhbHNlLCJhbHBoYUFwcGxpZWQiOjAuMywicHJvdmlzaW9uYWxUY2YiOjEuMjc2NTAwMDUzNDQ3NDkyOCwiYWRqdXN0bWVudCI6MC4wMTQwMDAwMDAwMDAwMDAwMTJ9LHsic2FpbE51bWJlciI6IjExIiwidGNmQXBwbGllZCI6MS4zMDgsIm5ld1RjZiI6MS4zMTQsImZhaXJUY2YiOjEuMzUzMTMxNTIzMDg1NTQ2NSwiY29tcFNjb3JlIjoxLjAzNDUwNDIyMjU0MjQ2NjgsImlzRXh0cmVtZSI6ZmFsc2UsImFscGhhQXBwbGllZCI6MC4zLCJwcm92aXNpb25hbFRjZiI6MS4zMDgzNzI5MTcwNTAyODk0LCJhZGp1c3RtZW50IjowLjAwNjAwMDAwMDAwMDAwMDAwNX0seyJzYWlsTnVtYmVyIjoiMTkiLCJ0Y2ZBcHBsaWVkIjoxLjI5NCwibmV3VGNmIjoxLjI5OSwiZmFpclRjZiI6MS4zMzIxMjcwMzA0ODg2MzAzLCJjb21wU2NvcmUiOjEuMDI5NDY0NDc0ODc1Mjk0LCJpc0V4dHJlbWUiOmZhbHNlLCJhbHBoYUFwcGxpZWQiOjAuMTUsInByb3Zpc2lvbmFsVGNmIjoxLjI5MzIzNzk3NTkxNzMxOTgsImFkanVzdG1lbnQiOjAuMDA0OTk5OTk5OTk5OTk5ODkzfSx7InNhaWxOdW1iZXIiOiIyMSIsInRjZkFwcGxpZWQiOjEuMjcsIm5ld1RjZiI6MS4yNzIsImZhaXJUY2YiOjEuMjg3MjU1MzgzMTQ1ODU1MywiY29tcFNjb3JlIjoxLjAxMzU4NjkxNTg2Mjg3OCwiaXNFeHRyZW1lIjpmYWxzZSwiYWxwaGFBcHBsaWVkIjowLjE1LCJwcm92aXNpb25hbFRjZiI6MS4yNjYzMjU1Mzg4MzM3ODg4LCJhZGp1c3RtZW50IjowLjAwMjAwMDAwMDAwMDAwMDAwMTh9LHsic2FpbE51bWJlciI6IjIyIiwidGNmQXBwbGllZCI6MS4yODEsIm5ld1RjZiI6MS4yNzQsImZhaXJUY2YiOjEuMTA4Njk2ODM5NTE4MTg5LCJjb21wU2NvcmUiOjAuODY1NDkzMjM5MjgwMzk3NSwiaXNFeHRyZW1lIjp0cnVlLCJleHRyZW1lRGlyZWN0aW9uIjoic2xvdyIsImFscGhhQXBwbGllZCI6MC4wNzUsInByb3Zpc2lvbmFsVGNmIjoxLjI2ODA3NzI2Mjk2Mzg2NDEsImFkanVzdG1lbnQiOi0wLjAwNjk5OTk5OTk5OTk5OTg5NX0seyJzYWlsTnVtYmVyIjoiMSIsInRjZkFwcGxpZWQiOjEuMjc5LCJuZXdUY2YiOjEuMjc5fSx7InNhaWxOdW1iZXIiOiIxMiIsInRjZkFwcGxpZWQiOjEuMjU4LCJuZXdUY2YiOjEuMjU4fSx7InNhaWxOdW1iZXIiOiIxNCIsInRjZkFwcGxpZWQiOjEuMTU2LCJuZXdUY2YiOjEuMTU2fSx7InNhaWxOdW1iZXIiOiIxNiIsInRjZkFwcGxpZWQiOjEuMjQ5LCJuZXdUY2YiOjEuMjQ5fSx7InNhaWxOdW1iZXIiOiIyIiwidGNmQXBwbGllZCI6MS4yMzksIm5ld1RjZiI6MS4yMzl9LHsic2FpbE51bWJlciI6IjMiLCJ0Y2ZBcHBsaWVkIjoxLjI2NSwibmV3VGNmIjoxLjI2NX0seyJzYWlsTnVtYmVyIjoiNCIsInRjZkFwcGxpZWQiOjEuMTkzLCJuZXdUY2YiOjEuMTkzfSx7InNhaWxOdW1iZXIiOiI3IiwidGNmQXBwbGllZCI6MS4yOTEsIm5ld1RjZiI6MS4yOTF9XX19fSx7InJhY2VOdW1iZXIiOjMsImRhdGUiOiIyMDI2LTA1LTI0Iiwic3RhcnRzIjpbeyJmbGVldE5hbWVzIjpbIkhvd3RoIDE3IEhQSCIsIkhvd3RoIDE3IFNjciJdLCJzdGFydFRpbWUiOiIxNDoyNTowMCJ9XSwiZmluaXNoZXMiOlt7InNhaWxOdW1iZXIiOiIxIiwic29ydE9yZGVyIjpudWxsLCJyZXN1bHRDb2RlIjoiRE5DIiwic3RhcnRQcmVzZW50IjpudWxsfSx7InNhaWxOdW1iZXIiOiIxMSIsInNvcnRPcmRlciI6MCwiZmluaXNoVGltZSI6IjE1OjMyOjAyIiwicmVzdWx0Q29kZSI6bnVsbCwic3RhcnRQcmVzZW50IjpudWxsfSx7InNhaWxOdW1iZXIiOiIxMiIsInNvcnRPcmRlciI6MywiZmluaXNoVGltZSI6IjE1OjM1OjM2IiwicmVzdWx0Q29kZSI6bnVsbCwic3RhcnRQcmVzZW50IjpudWxsfSx7InNhaWxOdW1iZXIiOiIxNCIsInNvcnRPcmRlciI6bnVsbCwicmVzdWx0Q29kZSI6IkROQyIsInN0YXJ0UHJlc2VudCI6bnVsbH0seyJzYWlsTnVtYmVyIjoiMTYiLCJzb3J0T3JkZXIiOm51bGwsInJlc3VsdENvZGUiOiJETkMiLCJzdGFydFByZXNlbnQiOm51bGx9LHsic2FpbE51bWJlciI6IjE3Iiwic29ydE9yZGVyIjoxLCJmaW5pc2hUaW1lIjoiMTU6MzQ6MTkiLCJyZXN1bHRDb2RlIjpudWxsLCJzdGFydFByZXNlbnQiOm51bGx9LHsic2FpbE51bWJlciI6IjE5Iiwic29ydE9yZGVyIjo1LCJmaW5pc2hUaW1lIjoiMTU6Mzc6MjQiLCJyZXN1bHRDb2RlIjpudWxsLCJzdGFydFByZXNlbnQiOm51bGx9LHsic2FpbE51bWJlciI6IjIiLCJzb3J0T3JkZXIiOjQsImZpbmlzaFRpbWUiOiIxNTozNjoxNCIsInJlc3VsdENvZGUiOm51bGwsInN0YXJ0UHJlc2VudCI6bnVsbH0seyJzYWlsTnVtYmVyIjoiMjEiLCJzb3J0T3JkZXIiOjIsImZpbmlzaFRpbWUiOiIxNTozNDoyOSIsInJlc3VsdENvZGUiOm51bGwsInN0YXJ0UHJlc2VudCI6bnVsbH0seyJzYWlsTnVtYmVyIjoiMjIiLCJzb3J0T3JkZXIiOjYsImZpbmlzaFRpbWUiOiIxNTozNzozNSIsInJlc3VsdENvZGUiOm51bGwsInN0YXJ0UHJlc2VudCI6bnVsbH0seyJzYWlsTnVtYmVyIjoiMyIsInNvcnRPcmRlciI6bnVsbCwicmVzdWx0Q29kZSI6IkROQyIsInN0YXJ0UHJlc2VudCI6bnVsbH0seyJzYWlsTnVtYmVyIjoiNCIsInNvcnRPcmRlciI6bnVsbCwicmVzdWx0Q29kZSI6IkROQyIsInN0YXJ0UHJlc2VudCI6bnVsbH0seyJzYWlsTnVtYmVyIjoiNyIsInNvcnRPcmRlciI6bnVsbCwicmVzdWx0Q29kZSI6IkROQyIsInN0YXJ0UHJlc2VudCI6bnVsbH1dLCJuaGNCeUZsZWV0Ijp7Ikhvd3RoIDE3IEhQSCI6eyJmaW5pc2hlckNvdW50Ijo3LCJjdEF2Z1NlY3MiOjUzOTAuNzE0Mjg1NzE0Mjg1LCJtZWFuVGNmIjoxLjI3Njg1NzE0Mjg1NzE0MywicDUwIjowLjg5ODAzMzkwMzYzMTMyODIsInc1MSI6MC44ODQ3NzU5NzcyNTU4NzY4LCJzTWVhbiI6MS4wMDAxMjE2NDk0MTM0OTE3LCJzU3RkZXYiOjAuMDI0MDU3NTIyOTcyOTYxMTY4LCJzSGkiOjEuMDM2MjA3OTMzODcyOTMzNSwic0xvIjowLjk3NjA2NDEyNjQ0MDUzMDUsImV4dHJlbWVDb3VudCI6MiwicmVhbGlnbm1lbnRGYWN0b3IiOjEuMDAwODUwOTEzMDcyMTE2NiwidXBkYXRlU3VwcHJlc3NlZCI6ZmFsc2UsInJvd3MiOlt7InNhaWxOdW1iZXIiOiIxMSIsInRjZkFwcGxpZWQiOjEuMzE0LCJuZXdUY2YiOjEuMzE3LCJmYWlyVGNmIjoxLjMzOTY4MjYwMTE0MDcxODQsImNvbXBTY29yZSI6MS4wMTk1NDUzNTg1NTQ1ODAyLCJpc0V4dHJlbWUiOmZhbHNlLCJhbHBoYUFwcGxpZWQiOjAuMywicHJvdmlzaW9uYWxUY2YiOjEuMzE1NzcxMzQ3MzU0NjkzNywiYWRqdXN0bWVudCI6MC4wMDI5OTk5OTk5OTk5OTk4OTE2fSx7InNhaWxOdW1iZXIiOiIyIiwidGNmQXBwbGllZCI6MS4yMzksIm5ld1RjZiI6MS4yNDEsImZhaXJUY2YiOjEuMjYwNjkzMzYwMjY4NTkzNywiY29tcFNjb3JlIjoxLjAxNzUwODc2NTM0OTk1NDQsImlzRXh0cmVtZSI6ZmFsc2UsImFscGhhQXBwbGllZCI6MC4zLCJwcm92aXNpb25hbFRjZiI6MS4yMzk5MjQ0MTcxODc3ODE3LCJhZGp1c3RtZW50IjowLjAwMjAwMDAwMDAwMDAwMDAwMTh9LHsic2FpbE51bWJlciI6IjIxIiwidGNmQXBwbGllZCI6MS4yNzIsIm5ld1RjZiI6MS4yNzMsImZhaXJUY2YiOjEuMjkyNDQ1MDUxOTk5OTkyNiwiY29tcFNjb3JlIjoxLjAxNjA3MzE1NDA4ODA0NDYsImlzRXh0cmVtZSI6ZmFsc2UsImFscGhhQXBwbGllZCI6MC4zLCJwcm92aXNpb25hbFRjZiI6MS4yNzI0MDkyOTY5NjgyMzY2LCJhZGp1c3RtZW50IjowLjAwMDk5OTk5OTk5OTk5OTg4OTl9LHsic2FpbE51bWJlciI6IjEyIiwidGNmQXBwbGllZCI6MS4yNTgsIm5ld1RjZiI6MS4yNTgsImZhaXJUY2YiOjEuMjcyMDAyNjk2MzYxNjU0OSwiY29tcFNjb3JlIjoxLjAxMTEzMDkxOTIwNjQwMjksImlzRXh0cmVtZSI6ZmFsc2UsImFscGhhQXBwbGllZCI6MC4xNSwicHJvdmlzaW9uYWxUY2YiOjEuMjU3MjgzNTY0NTcyNzc4MiwiYWRqdXN0bWVudCI6MH0seyJzYWlsTnVtYmVyIjoiMTciLCJ0Y2ZBcHBsaWVkIjoxLjI4MiwibmV3VGNmIjoxLjI4MiwiZmFpclRjZiI6MS4yOTU1NTI2MzgwODMxODU5LCJjb21wU2NvcmUiOjEuMDEwNTcxNDgwNTY0MTA3NSwiaXNFeHRyZW1lIjpmYWxzZSwiYWxwaGFBcHBsaWVkIjowLjE1LCJwcm92aXNpb25hbFRjZiI6MS4yODExNjM5MDQ2NzE4NjU1LCJhZGp1c3RtZW50IjowfSx7InNhaWxOdW1iZXIiOiIyMiIsInRjZkFwcGxpZWQiOjEuMjc0LCJuZXdUY2YiOjEuMjcyLCJmYWlyVGNmIjoxLjIzNzI0NTMzMjIxMzA4MTQsImNvbXBTY29yZSI6MC45NzExNTAxODIyNzA4NjQ1LCJpc0V4dHJlbWUiOnRydWUsImV4dHJlbWVEaXJlY3Rpb24iOiJzbG93IiwiYWxwaGFBcHBsaWVkIjowLjA3NSwicHJvdmlzaW9uYWxUY2YiOjEuMjcxMjQzMzk5OTE1OTgxMSwiYWRqdXN0bWVudCI6LTAuMDAyMDAwMDAwMDAwMDAwMDAxOH0seyJzYWlsTnVtYmVyIjoiMTkiLCJ0Y2ZBcHBsaWVkIjoxLjI5OSwibmV3VGNmIjoxLjI5NiwiZmFpclRjZiI6MS4yNDAzNzgzMTk5MzI3NzM2LCJjb21wU2NvcmUiOjAuOTU0ODcxNjg1ODYwNDg3OCwiaXNFeHRyZW1lIjp0cnVlLCJleHRyZW1lRGlyZWN0aW9uIjoic2xvdyIsImFscGhhQXBwbGllZCI6MC4wNzUsInByb3Zpc2lvbmFsVGNmIjoxLjI5NDYwMzM3Mzk5NDk1OCwiYWRqdXN0bWVudCI6LTAuMDAyOTk5OTk5OTk5OTk5ODkxNn0seyJzYWlsTnVtYmVyIjoiMSIsInRjZkFwcGxpZWQiOjEuMjc5LCJuZXdUY2YiOjEuMjc5fSx7InNhaWxOdW1iZXIiOiIxNCIsInRjZkFwcGxpZWQiOjEuMTU2LCJuZXdUY2YiOjEuMTU2fSx7InNhaWxOdW1iZXIiOiIxNiIsInRjZkFwcGxpZWQiOjEuMjQ5LCJuZXdUY2YiOjEuMjQ5fSx7InNhaWxOdW1iZXIiOiIzIiwidGNmQXBwbGllZCI6MS4yNjUsIm5ld1RjZiI6MS4yNjV9LHsic2FpbE51bWJlciI6IjQiLCJ0Y2ZBcHBsaWVkIjoxLjE5MywibmV3VGNmIjoxLjE5M30seyJzYWlsTnVtYmVyIjoiNyIsInRjZkFwcGxpZWQiOjEuMjkxLCJuZXdUY2YiOjEuMjkxfV19fX0seyJyYWNlTnVtYmVyIjo0LCJkYXRlIjoiMjAyNi0wNS0yNCIsInN0YXJ0cyI6W3siZmxlZXROYW1lcyI6WyJIb3d0aCAxNyBIUEgiLCJIb3d0aCAxNyBTY3IiXSwic3RhcnRUaW1lIjoiMTk6MDU6MDAifV0sImZpbmlzaGVzIjpbeyJzYWlsTnVtYmVyIjoiMSIsInNvcnRPcmRlciI6bnVsbCwicmVzdWx0Q29kZSI6IkROQyIsInN0YXJ0UHJlc2VudCI6bnVsbH0seyJzYWlsTnVtYmVyIjoiMTEiLCJzb3J0T3JkZXIiOjAsImZpbmlzaFRpbWUiOiIyMDoxMTowNyIsInJlc3VsdENvZGUiOm51bGwsInN0YXJ0UHJlc2VudCI6bnVsbH0seyJzYWlsTnVtYmVyIjoiMTIiLCJzb3J0T3JkZXIiOm51bGwsInJlc3VsdENvZGUiOiJETkMiLCJzdGFydFByZXNlbnQiOm51bGx9LHsic2FpbE51bWJlciI6IjE0Iiwic29ydE9yZGVyIjpudWxsLCJyZXN1bHRDb2RlIjoiRE5DIiwic3RhcnRQcmVzZW50IjpudWxsfSx7InNhaWxOdW1iZXIiOiIxNiIsInNvcnRPcmRlciI6bnVsbCwicmVzdWx0Q29kZSI6IkROQyIsInN0YXJ0UHJlc2VudCI6bnVsbH0seyJzYWlsTnVtYmVyIjoiMTciLCJzb3J0T3JkZXIiOjUsImZpbmlzaFRpbWUiOiIyMDoxNToyMiIsInJlc3VsdENvZGUiOm51bGwsInN0YXJ0UHJlc2VudCI6bnVsbH0seyJzYWlsTnVtYmVyIjoiMTkiLCJzb3J0T3JkZXIiOjEsImZpbmlzaFRpbWUiOiIyMDoxMToxMyIsInJlc3VsdENvZGUiOm51bGwsInN0YXJ0UHJlc2VudCI6bnVsbH0seyJzYWlsTnVtYmVyIjoiMiIsInNvcnRPcmRlciI6NywiZmluaXNoVGltZSI6IjIxOjEzOjEyIiwicmVzdWx0Q29kZSI6bnVsbCwic3RhcnRQcmVzZW50IjpudWxsfSx7InNhaWxOdW1iZXIiOiIyMSIsInNvcnRPcmRlciI6MiwiZmluaXNoVGltZSI6IjIwOjEyOjE0IiwicmVzdWx0Q29kZSI6bnVsbCwic3RhcnRQcmVzZW50IjpudWxsfSx7InNhaWxOdW1iZXIiOiIyMiIsInNvcnRPcmRlciI6MywiZmluaXNoVGltZSI6IjIwOjEyOjQ0IiwicmVzdWx0Q29kZSI6bnVsbCwic3RhcnRQcmVzZW50IjpudWxsfSx7InNhaWxOdW1iZXIiOiIzIiwic29ydE9yZGVyIjo0LCJmaW5pc2hUaW1lIjoiMjA6MTM6NDAiLCJyZXN1bHRDb2RlIjpudWxsLCJzdGFydFByZXNlbnQiOm51bGx9LHsic2FpbE51bWJlciI6IjQiLCJzb3J0T3JkZXIiOm51bGwsInJlc3VsdENvZGUiOiJETkMiLCJzdGFydFByZXNlbnQiOm51bGx9LHsic2FpbE51bWJlciI6IjciLCJzb3J0T3JkZXIiOjYsImZpbmlzaFRpbWUiOiIyMDoxNjoxNSIsInJlc3VsdENvZGUiOm51bGwsInN0YXJ0UHJlc2VudCI6bnVsbH1dLCJuaGNCeUZsZWV0Ijp7Ikhvd3RoIDE3IEhQSCI6eyJmaW5pc2hlckNvdW50Ijo4LCJjdEF2Z1NlY3MiOjU3OTYsIm1lYW5UY2YiOjEuMjc5NjI1LCJwNTAiOjAuOTI2NjQ0NjEwNjQxOTk1NywidzUxIjowLjg3NjE3NTEwNDE4ODIwMTQsInNNZWFuIjowLjk5ODI1MzE5OTA3ODE5MDksInNTdGRldiI6MC4xNTkxNDMxOTIxNzcyNjMwOCwic0hpIjoxLjIzNjk2Nzk4NzM0NDA4NTUsInNMbyI6MC44MzkxMTAwMDY5MDA5Mjc5LCJleHRyZW1lQ291bnQiOjEsInJlYWxpZ25tZW50RmFjdG9yIjoxLjAwMTc3NjczMjM4NTg3MiwidXBkYXRlU3VwcHJlc3NlZCI6ZmFsc2UsInJvd3MiOlt7InNhaWxOdW1iZXIiOiIyMSIsInRjZkFwcGxpZWQiOjEuMjczLCJuZXdUY2YiOjEuMjg0LCJmYWlyVGNmIjoxLjM3ODI1MTc3NTg2ODExNDUsImNvbXBTY29yZSI6MS4wODI2ODAxMDY3MzA2NDc3LCJpc0V4dHJlbWUiOmZhbHNlLCJhbHBoYUFwcGxpZWQiOjAuMywicHJvdmlzaW9uYWxUY2YiOjEuMjgyMDU1NjczNjU4NTkyNiwiYWRqdXN0bWVudCI6MC4wMTEwMDAwMDAwMDAwMDAxMn0seyJzYWlsTnVtYmVyIjoiMTkiLCJ0Y2ZBcHBsaWVkIjoxLjI5NiwibmV3VGNmIjoxLjMwNiwiZmFpclRjZiI6MS4zOTk0MTI5NTMzOTg0MzI3LCJjb21wU2NvcmUiOjEuMDc5NzkzOTQ1NTIzNDgyLCJpc0V4dHJlbWUiOmZhbHNlLCJhbHBoYUFwcGxpZWQiOjAuMywicHJvdmlzaW9uYWxUY2YiOjEuMzA0MTU4MjY1MTc0NjE5MywiYWRqdXN0bWVudCI6MC4wMTAwMDAwMDAwMDAwMDAwMDl9LHsic2FpbE51bWJlciI6IjIyIiwidGNmQXBwbGllZCI6MS4yNzIsIm5ld1RjZiI6MS4yODEsImZhaXJUY2YiOjEuMzY4MDc3NjczMTkxOTIyOSwiY29tcFNjb3JlIjoxLjA3NTUzMjc2MTk0MzMzNTUsImlzRXh0cmVtZSI6ZmFsc2UsImFscGhhQXBwbGllZCI6MC4zLCJwcm92aXNpb25hbFRjZiI6MS4yNzg0Njk2ODE5NzMxMjA3LCJhZGp1c3RtZW50IjowLjAwODk5OTk5OTk5OTk5OTg5N30seyJzYWlsTnVtYmVyIjoiMyIsInRjZkFwcGxpZWQiOjEuMjY1LCJuZXdUY2YiOjEuMjcxLCJmYWlyVGNmIjoxLjM0OTQ4MjQ0MjY4MjUxNzgsImNvbXBTY29yZSI6MS4wNjY3ODQ1Mzk2Njk5NzQ3LCJpc0V4dHJlbWUiOmZhbHNlLCJhbHBoYUFwcGxpZWQiOjAuMywicHJvdmlzaW9uYWxUY2YiOjEuMjY4Mjk0OTQ4NDMxNzM4MywiYWRqdXN0bWVudCI6MC4wMDYwMDAwMDAwMDAwMDAwMDV9LHsic2FpbE51bWJlciI6IjExIiwidGNmQXBwbGllZCI6MS4zMTcsIm5ld1RjZiI6MS4zMjIsImZhaXJUY2YiOjEuNDAxNTI5NTM0NjIzNjM4NywiY29tcFNjb3JlIjoxLjA2NDE4MzM5NzU4ODE4NDMsImlzRXh0cmVtZSI6ZmFsc2UsImFscGhhQXBwbGllZCI6MC4zLCJwcm92aXNpb25hbFRjZiI6MS4zMTk0NTg2NTU3OTQ5OTk0LCJhZGp1c3RtZW50IjowLjAwNTAwMDAwMDAwMDAwMDExNTV9LHsic2FpbE51bWJlciI6IjE3IiwidGNmQXBwbGllZCI6MS4yODIsIm5ld1RjZiI6MS4yNzksImZhaXJUY2YiOjEuMzE2ODgwMDcxOTY4NzI5MiwiY29tcFNjb3JlIjoxLjAyNzIwNzU0NDQzNzM4NjMsImlzRXh0cmVtZSI6ZmFsc2UsImFscGhhQXBwbGllZCI6MC4xNSwicHJvdmlzaW9uYWxUY2YiOjEuMjc2NDczNDcwODEyMjY0NSwiYWRqdXN0bWVudCI6LTAuMDAzMDAwMDAwMDAwMDAwMTEzN30seyJzYWlsTnVtYmVyIjoiNyIsInRjZkFwcGxpZWQiOjEuMjkxLCJuZXdUY2YiOjEuMjg0LCJmYWlyVGNmIjoxLjMwMDU1MzgzOTQ5NzUzNzgsImNvbXBTY29yZSI6MS4wMDc0MDAzNDA0MzE4NjUyLCJpc0V4dHJlbWUiOmZhbHNlLCJhbHBoYUFwcGxpZWQiOjAuMTUsInByb3Zpc2lvbmFsVGNmIjoxLjI4MTgwNzkxNjY3MTIwMDIsImFkanVzdG1lbnQiOi0wLjAwNjk5OTk5OTk5OTk5OTg5NX0seyJzYWlsTnVtYmVyIjoiMiIsInRjZkFwcGxpZWQiOjEuMjQxLCJuZXdUY2YiOjEuMjA0LCJmYWlyVGNmIjowLjcyMjgxMTcwODc2OTEwNzUsImNvbXBTY29yZSI6MC41ODI0NDI5NTYzMDA2NTA3LCJpc0V4dHJlbWUiOnRydWUsImV4dHJlbWVEaXJlY3Rpb24iOiJzbG93IiwiYWxwaGFBcHBsaWVkIjowLjA3NSwicHJvdmlzaW9uYWxUY2YiOjEuMjAyMTM1ODc4MTU3NjgzMiwiYWRqdXN0bWVudCI6LTAuMDM3MDAwMDAwMDAwMDAwMTQ0fSx7InNhaWxOdW1iZXIiOiIxIiwidGNmQXBwbGllZCI6MS4yNzksIm5ld1RjZiI6MS4yNzl9LHsic2FpbE51bWJlciI6IjEyIiwidGNmQXBwbGllZCI6MS4yNTgsIm5ld1RjZiI6MS4yNTh9LHsic2FpbE51bWJlciI6IjE0IiwidGNmQXBwbGllZCI6MS4xNTYsIm5ld1RjZiI6MS4xNTZ9LHsic2FpbE51bWJlciI6IjE2IiwidGNmQXBwbGllZCI6MS4yNDksIm5ld1RjZiI6MS4yNDl9LHsic2FpbE51bWJlciI6IjQiLCJ0Y2ZBcHBsaWVkIjoxLjE5MywibmV3VGNmIjoxLjE5M31dfX19LHsicmFjZU51bWJlciI6NSwiZGF0ZSI6IjIwMjYtMDUtMjQiLCJzdGFydHMiOlt7ImZsZWV0TmFtZXMiOlsiSG93dGggMTcgSFBIIiwiSG93dGggMTcgU2NyIl0sInN0YXJ0VGltZSI6IjE0OjI1OjAwIn1dLCJmaW5pc2hlcyI6W3sic2FpbE51bWJlciI6IjEiLCJzb3J0T3JkZXIiOjIsImZpbmlzaFRpbWUiOiIxNTo1MzoyOSIsInJlc3VsdENvZGUiOm51bGwsInN0YXJ0UHJlc2VudCI6bnVsbH0seyJzYWlsTnVtYmVyIjoiMTEiLCJzb3J0T3JkZXIiOjAsImZpbmlzaFRpbWUiOiIxNTo0OTozMSIsInJlc3VsdENvZGUiOm51bGwsInN0YXJ0UHJlc2VudCI6bnVsbH0seyJzYWlsTnVtYmVyIjoiMTIiLCJzb3J0T3JkZXIiOm51bGwsInJlc3VsdENvZGUiOiJETkMiLCJzdGFydFByZXNlbnQiOm51bGx9LHsic2FpbE51bWJlciI6IjE0Iiwic29ydE9yZGVyIjpudWxsLCJyZXN1bHRDb2RlIjoiRE5DIiwic3RhcnRQcmVzZW50IjpudWxsfSx7InNhaWxOdW1iZXIiOiIxNiIsInNvcnRPcmRlciI6bnVsbCwicmVzdWx0Q29kZSI6IkROQyIsInN0YXJ0UHJlc2VudCI6bnVsbH0seyJzYWlsTnVtYmVyIjoiMTciLCJzb3J0T3JkZXIiOjQsImZpbmlzaFRpbWUiOiIxNTo1NTowMSIsInJlc3VsdENvZGUiOm51bGwsInN0YXJ0UHJlc2VudCI6bnVsbH0seyJzYWlsTnVtYmVyIjoiMTkiLCJzb3J0T3JkZXIiOjMsImZpbmlzaFRpbWUiOiIxNTo1Mzo1MyIsInJlc3VsdENvZGUiOm51bGwsInN0YXJ0UHJlc2VudCI6bnVsbH0seyJzYWlsTnVtYmVyIjoiMiIsInNvcnRPcmRlciI6NywiZmluaXNoVGltZSI6IjE1OjU2OjAyIiwicmVzdWx0Q29kZSI6bnVsbCwic3RhcnRQcmVzZW50IjpudWxsfSx7InNhaWxOdW1iZXIiOiIyMSIsInNvcnRPcmRlciI6MSwiZmluaXNoVGltZSI6IjE1OjUxOjE2IiwicmVzdWx0Q29kZSI6bnVsbCwic3RhcnRQcmVzZW50IjpudWxsfSx7InNhaWxOdW1iZXIiOiIyMiIsInNvcnRPcmRlciI6NiwiZmluaXNoVGltZSI6IjE1OjU1OjUzIiwicmVzdWx0Q29kZSI6bnVsbCwic3RhcnRQcmVzZW50IjpudWxsfSx7InNhaWxOdW1iZXIiOiIzIiwic29ydE9yZGVyIjo1LCJmaW5pc2hUaW1lIjoiMTU6NTU6NDEiLCJyZXN1bHRDb2RlIjpudWxsLCJzdGFydFByZXNlbnQiOm51bGx9LHsic2FpbE51bWJlciI6IjQiLCJzb3J0T3JkZXIiOjgsImZpbmlzaFRpbWUiOiIxNTo1OTo0NCIsInJlc3VsdENvZGUiOm51bGwsInN0YXJ0UHJlc2VudCI6bnVsbH0seyJzYWlsTnVtYmVyIjoiNyIsInNvcnRPcmRlciI6bnVsbCwicmVzdWx0Q29kZSI6IkROQyIsInN0YXJ0UHJlc2VudCI6bnVsbH1dLCJuaGNCeUZsZWV0Ijp7Ikhvd3RoIDE3IEhQSCI6eyJmaW5pc2hlckNvdW50Ijo5LCJjdEF2Z1NlY3MiOjY4MDcuODg4ODg4ODg4ODg5LCJtZWFuVGNmIjoxLjI2ODc3Nzc3Nzc3Nzc3OCwicDUwIjoxLjEzNDQ1MDAwOTM3NjY2NzYsInc1MSI6MS4xMzE0NTAzMDA1MjgwODY3LCJzTWVhbiI6MS4wMDAyMzU2MDE1MjgwNDk2LCJzU3RkZXYiOjAuMDIwMjc0NjU2NDE4NzYzODE0LCJzSGkiOjEuMDMwNjQ3NTg2MTU2MTk1Miwic0xvIjowLjk3OTk2MDk0NTEwOTI4NTgsImV4dHJlbWVDb3VudCI6MywicmVhbGlnbm1lbnRGYWN0b3IiOjEuMDAwNjU2NjU1MTczNjM1MywidXBkYXRlU3VwcHJlc3NlZCI6ZmFsc2UsInJvd3MiOlt7InNhaWxOdW1iZXIiOiIyIiwidGNmQXBwbGllZCI6MS4yMDQsIm5ld1RjZiI6MS4yMTEsImZhaXJUY2YiOjEuMjQ2MTkxODgxNDA5NzQxLCJjb21wU2NvcmUiOjEuMDM1MDQzMDkwODcxODc4LCJpc0V4dHJlbWUiOnRydWUsImV4dHJlbWVEaXJlY3Rpb24iOiJmYXN0IiwiYWxwaGFBcHBsaWVkIjowLjE1LCJwcm92aXNpb25hbFRjZiI6MS4yMTAzMjg3ODIyMTE0NjEsImFkanVzdG1lbnQiOjAuMDA3MDAwMDAwMDAwMDAwMTE3fSx7InNhaWxOdW1iZXIiOiIyMSIsInRjZkFwcGxpZWQiOjEuMjg0LCJuZXdUY2YiOjEuMjkzLCJmYWlyVGNmIjoxLjMxNTA1MDI0MjcwODY1NjYsImNvbXBTY29yZSI6MS4wMjQxODI0MzIwMTYwODc3LCJpc0V4dHJlbWUiOmZhbHNlLCJhbHBoYUFwcGxpZWQiOjAuMywicHJvdmlzaW9uYWxUY2YiOjEuMjkyMjcxODk3NDAxNTc1NywiYWRqdXN0bWVudCI6MC4wMDg5OTk5OTk5OTk5OTk4OTd9LHsic2FpbE51bWJlciI6IjExIiwidGNmQXBwbGllZCI6MS4zMjIsIm5ld1RjZiI6MS4zMjgsImZhaXJUY2YiOjEuMzQyMjc5NjQwMzU4OTA0NiwiY29tcFNjb3JlIjoxLjAxNTM0MDEyMTMwMDIzMDQsImlzRXh0cmVtZSI6ZmFsc2UsImFscGhhQXBwbGllZCI6MC4zLCJwcm92aXNpb25hbFRjZiI6MS4zMjcwMTkxMTY3MzI1MDk2LCJhZGp1c3RtZW50IjowLjAwNjAwMDAwMDAwMDAwMDAwNX0seyJzYWlsTnVtYmVyIjoiNCIsInRjZkFwcGxpZWQiOjEuMTkzLCJuZXdUY2YiOjEuMTk0LCJmYWlyVGNmIjoxLjE5NzUxOTM2MjQ2NjU3MzYsImNvbXBTY29yZSI6MS4wMDM3ODgyMzM0MTcwNzc2LCJpc0V4dHJlbWUiOmZhbHNlLCJhbHBoYUFwcGxpZWQiOjAuMywicHJvdmlzaW9uYWxUY2YiOjEuMTkzNDA1ODY1NzU0ODQ3OSwiYWRqdXN0bWVudCI6MC4wMDA5OTk5OTk5OTk5OTk4ODk5fSx7InNhaWxOdW1iZXIiOiIxIiwidGNmQXBwbGllZCI6MS4yNzksIm5ld1RjZiI6MS4yOCwiZmFpclRjZiI6MS4yODIxMDU4Njg1NzQxMjA1LCJjb21wU2NvcmUiOjEuMDAyNDI4MzU2OTc3NDIwNCwiaXNFeHRyZW1lIjpmYWxzZSwiYWxwaGFBcHBsaWVkIjowLjE1LCJwcm92aXNpb25hbFRjZiI6MS4yNzg5NTczNTkyOTA4NzkyLCJhZGp1c3RtZW50IjowLjAwMTAwMDAwMDAwMDAwMDExMn0seyJzYWlsTnVtYmVyIjoiMTciLCJ0Y2ZBcHBsaWVkIjoxLjI3OSwibmV3VGNmIjoxLjI3NywiZmFpclRjZiI6MS4yNjAyNjY2Mjc3MDk2ODQzLCJjb21wU2NvcmUiOjAuOTg1MzUzMTEwMDE1MzkwNSwiaXNFeHRyZW1lIjpmYWxzZSwiYWxwaGFBcHBsaWVkIjowLjE1LCJwcm92aXNpb25hbFRjZiI6MS4yNzU2OTAxMzUyNDgxNTM2LCJhZGp1c3RtZW50IjotMC4wMDIwMDAwMDAwMDAwMDAwMDE4fSx7InNhaWxOdW1iZXIiOiIzIiwidGNmQXBwbGllZCI6MS4yNzEsIm5ld1RjZiI6MS4yNjgsImZhaXJUY2YiOjEuMjUxMDAxNjY0NDQ3NzEyOSwiY29tcFNjb3JlIjowLjk4NDI2NTY2ODMzMDIyMjcsImlzRXh0cmVtZSI6ZmFsc2UsImFscGhhQXBwbGllZCI6MC4xNSwicHJvdmlzaW9uYWxUY2YiOjEuMjY3NTA0MDY1NTE2NTAwMiwiYWRqdXN0bWVudCI6LTAuMDAyOTk5OTk5OTk5OTk5ODkxNn0seyJzYWlsTnVtYmVyIjoiMTkiLCJ0Y2ZBcHBsaWVkIjoxLjMwNiwibmV3VGNmIjoxLjMwNSwiZmFpclRjZiI6MS4yNzYzMzYwMzE1NTA3MjI4LCJjb21wU2NvcmUiOjAuOTc3Mjg2Mzk0NzU1NTMwNSwiaXNFeHRyZW1lIjp0cnVlLCJleHRyZW1lRGlyZWN0aW9uIjoic2xvdyIsImFscGhhQXBwbGllZCI6MC4wNzUsInByb3Zpc2lvbmFsVGNmIjoxLjMwMzc3NTIwMjM2NjMwNDMsImFkanVzdG1lbnQiOi0wLjAwMTAwMDAwMDAwMDAwMDExMn0seyJzYWlsTnVtYmVyIjoiMjIiLCJ0Y2ZBcHBsaWVkIjoxLjI4MSwibmV3VGNmIjoxLjI3OSwiZmFpclRjZiI6MS4yNDgyNDg2ODA3NzM4ODcsImNvbXBTY29yZSI6MC45NzQ0MzMwMDYwNjg2MDgzLCJpc0V4dHJlbWUiOnRydWUsImV4dHJlbWVEaXJlY3Rpb24iOiJzbG93IiwiYWxwaGFBcHBsaWVkIjowLjA3NSwicHJvdmlzaW9uYWxUY2YiOjEuMjc4NTQzNjUxMDU4MDQxNSwiYWRqdXN0bWVudCI6LTAuMDAyMDAwMDAwMDAwMDAwMDAxOH0seyJzYWlsTnVtYmVyIjoiMTIiLCJ0Y2ZBcHBsaWVkIjoxLjI1OCwibmV3VGNmIjoxLjI1OH0seyJzYWlsTnVtYmVyIjoiMTQiLCJ0Y2ZBcHBsaWVkIjoxLjE1NiwibmV3VGNmIjoxLjE1Nn0seyJzYWlsTnVtYmVyIjoiMTYiLCJ0Y2ZBcHBsaWVkIjoxLjI0OSwibmV3VGNmIjoxLjI0OX0seyJzYWlsTnVtYmVyIjoiNyIsInRjZkFwcGxpZWQiOjEuMjg0LCJuZXdUY2YiOjEuMjg0fV19fX1dLCJzdGFuZGluZ3MiOlt7ImZsZWV0TmFtZSI6Ikhvd3RoIDE3IEhQSCIsInJvd3MiOlt7InJhbmsiOjEsInNhaWxOdW1iZXIiOiIyMSIsIm5hbWUiOiJGaXR6Z2liYm9uIC8gR2FsbGFnaGVyIiwicmFjZVBvaW50cyI6WzEsNCwzLDEsMl0sInJhY2VDb2RlcyI6W251bGwsbnVsbCxudWxsLG51bGwsbnVsbF0sInJhY2VEaXNjYXJkcyI6W2ZhbHNlLHRydWUsZmFsc2UsZmFsc2UsZmFsc2VdLCJyYWNlUGVuYWx0eUNvZGVzIjpbbnVsbCxudWxsLG51bGwsbnVsbCxudWxsXSwicmFjZVBlbmFsdHlPdmVycmlkZXMiOltudWxsLG51bGwsbnVsbCxudWxsLG51bGxdLCJyYWNlTm9uRGlzY2FyZGFibGUiOltmYWxzZSxmYWxzZSxmYWxzZSxmYWxzZSxmYWxzZV0sInJhY2VSZWRyZXNzRmxhZ3MiOltmYWxzZSxmYWxzZSxmYWxzZSxmYWxzZSxmYWxzZV0sInJhY2VFeGNsdWRlZCI6W2ZhbHNlLGZhbHNlLGZhbHNlLGZhbHNlLGZhbHNlXSwidG90YWxQb2ludHMiOjExLCJuZXRQb2ludHMiOjd9LHsicmFuayI6Miwic2FpbE51bWJlciI6IjExIiwibmFtZSI6Ik1hc3NleSwgVG9vbWV5LCBLZW5ueSIsInJhY2VQb2ludHMiOls0LDIsMSw1LDNdLCJyYWNlQ29kZXMiOltudWxsLG51bGwsbnVsbCxudWxsLG51bGxdLCJyYWNlRGlzY2FyZHMiOltmYWxzZSxmYWxzZSxmYWxzZSx0cnVlLGZhbHNlXSwicmFjZVBlbmFsdHlDb2RlcyI6W251bGwsbnVsbCxudWxsLG51bGwsbnVsbF0sInJhY2VQZW5hbHR5T3ZlcnJpZGVzIjpbbnVsbCxudWxsLG51bGwsbnVsbCxudWxsXSwicmFjZU5vbkRpc2NhcmRhYmxlIjpbZmFsc2UsZmFsc2UsZmFsc2UsZmFsc2UsZmFsc2VdLCJyYWNlUmVkcmVzc0ZsYWdzIjpbZmFsc2UsZmFsc2UsZmFsc2UsZmFsc2UsZmFsc2VdLCJyYWNlRXhjbHVkZWQiOltmYWxzZSxmYWxzZSxmYWxzZSxmYWxzZSxmYWxzZV0sInRvdGFsUG9pbnRzIjoxNSwibmV0UG9pbnRzIjoxMH0seyJyYW5rIjozLCJzYWlsTnVtYmVyIjoiMTciLCJuYW1lIjoiUGV0ZXIgQ291cnRuZXkiLCJyYWNlUG9pbnRzIjpbNSwxLDUsNiw2XSwicmFjZUNvZGVzIjpbbnVsbCxudWxsLG51bGwsbnVsbCxudWxsXSwicmFjZURpc2NhcmRzIjpbZmFsc2UsZmFsc2UsZmFsc2UsdHJ1ZSxmYWxzZV0sInJhY2VQZW5hbHR5Q29kZXMiOltudWxsLG51bGwsbnVsbCxudWxsLG51bGxdLCJyYWNlUGVuYWx0eU92ZXJyaWRlcyI6W251bGwsbnVsbCxudWxsLG51bGwsbnVsbF0sInJhY2VOb25EaXNjYXJkYWJsZSI6W2ZhbHNlLGZhbHNlLGZhbHNlLGZhbHNlLGZhbHNlXSwicmFjZVJlZHJlc3NGbGFncyI6W2ZhbHNlLGZhbHNlLGZhbHNlLGZhbHNlLGZhbHNlXSwicmFjZUV4Y2x1ZGVkIjpbZmFsc2UsZmFsc2UsZmFsc2UsZmFsc2UsZmFsc2VdLCJ0b3RhbFBvaW50cyI6MjMsIm5ldFBvaW50cyI6MTd9LHsicmFuayI6NCwic2FpbE51bWJlciI6IjE5IiwibmFtZSI6IkJyaWFuICYgQ29ub3IgVHVydmV5IiwicmFjZVBvaW50cyI6WzYsMyw3LDIsOF0sInJhY2VDb2RlcyI6W251bGwsbnVsbCxudWxsLG51bGwsbnVsbF0sInJhY2VEaXNjYXJkcyI6W2ZhbHNlLGZhbHNlLGZhbHNlLGZhbHNlLHRydWVdLCJyYWNlUGVuYWx0eUNvZGVzIjpbbnVsbCxudWxsLG51bGwsbnVsbCxudWxsXSwicmFjZVBlbmFsdHlPdmVycmlkZXMiOltudWxsLG51bGwsbnVsbCxudWxsLG51bGxdLCJyYWNlTm9uRGlzY2FyZGFibGUiOltmYWxzZSxmYWxzZSxmYWxzZSxmYWxzZSxmYWxzZV0sInJhY2VSZWRyZXNzRmxhZ3MiOltmYWxzZSxmYWxzZSxmYWxzZSxmYWxzZSxmYWxzZV0sInJhY2VFeGNsdWRlZCI6W2ZhbHNlLGZhbHNlLGZhbHNlLGZhbHNlLGZhbHNlXSwidG90YWxQb2ludHMiOjI2LCJuZXRQb2ludHMiOjE4fSx7InJhbmsiOjUsInNhaWxOdW1iZXIiOiIyIiwibmFtZSI6Ik8nRG9oZXJ0eSAvIEtlbm55IC8gTWNDb3JtYWNrIiwicmFjZVBvaW50cyI6WzgsMTQsMiw4LDFdLCJyYWNlQ29kZXMiOltudWxsLCJETkMiLG51bGwsbnVsbCxudWxsXSwicmFjZURpc2NhcmRzIjpbZmFsc2UsdHJ1ZSxmYWxzZSxmYWxzZSxmYWxzZV0sInJhY2VQZW5hbHR5Q29kZXMiOltudWxsLG51bGwsbnVsbCxudWxsLG51bGxdLCJyYWNlUGVuYWx0eU92ZXJyaWRlcyI6W251bGwsbnVsbCxudWxsLG51bGwsbnVsbF0sInJhY2VOb25EaXNjYXJkYWJsZSI6W2ZhbHNlLGZhbHNlLGZhbHNlLGZhbHNlLGZhbHNlXSwicmFjZVJlZHJlc3NGbGFncyI6W2ZhbHNlLGZhbHNlLGZhbHNlLGZhbHNlLGZhbHNlXSwicmFjZUV4Y2x1ZGVkIjpbZmFsc2UsZmFsc2UsZmFsc2UsZmFsc2UsZmFsc2VdLCJ0b3RhbFBvaW50cyI6MzMsIm5ldFBvaW50cyI6MTl9LHsicmFuayI6Niwic2FpbE51bWJlciI6IjIyIiwibmFtZSI6IkdlcmFyZCBDb21lcmZvcmQiLCJyYWNlUG9pbnRzIjpbNyw1LDYsMyw5XSwicmFjZUNvZGVzIjpbbnVsbCxudWxsLG51bGwsbnVsbCxudWxsXSwicmFjZURpc2NhcmRzIjpbZmFsc2UsZmFsc2UsZmFsc2UsZmFsc2UsdHJ1ZV0sInJhY2VQZW5hbHR5Q29kZXMiOltudWxsLG51bGwsbnVsbCxudWxsLG51bGxdLCJyYWNlUGVuYWx0eU92ZXJyaWRlcyI6W251bGwsbnVsbCxudWxsLG51bGwsbnVsbF0sInJhY2VOb25EaXNjYXJkYWJsZSI6W2ZhbHNlLGZhbHNlLGZhbHNlLGZhbHNlLGZhbHNlXSwicmFjZVJlZHJlc3NGbGFncyI6W2ZhbHNlLGZhbHNlLGZhbHNlLGZhbHNlLGZhbHNlXSwicmFjZUV4Y2x1ZGVkIjpbZmFsc2UsZmFsc2UsZmFsc2UsZmFsc2UsZmFsc2VdLCJ0b3RhbFBvaW50cyI6MzAsIm5ldFBvaW50cyI6MjF9LHsicmFuayI6Nywic2FpbE51bWJlciI6IjEyIiwibmFtZSI6IkN1cmxleSwgSm9uZXMsIFBvdHRlciIsInJhY2VQb2ludHMiOlszLDE0LDQsMTQsMTRdLCJyYWNlQ29kZXMiOltudWxsLCJETkMiLG51bGwsIkROQyIsIkROQyJdLCJyYWNlRGlzY2FyZHMiOltmYWxzZSx0cnVlLGZhbHNlLGZhbHNlLGZhbHNlXSwicmFjZVBlbmFsdHlDb2RlcyI6W251bGwsbnVsbCxudWxsLG51bGwsbnVsbF0sInJhY2VQZW5hbHR5T3ZlcnJpZGVzIjpbbnVsbCxudWxsLG51bGwsbnVsbCxudWxsXSwicmFjZU5vbkRpc2NhcmRhYmxlIjpbZmFsc2UsZmFsc2UsZmFsc2UsZmFsc2UsZmFsc2VdLCJyYWNlUmVkcmVzc0ZsYWdzIjpbZmFsc2UsZmFsc2UsZmFsc2UsZmFsc2UsZmFsc2VdLCJyYWNlRXhjbHVkZWQiOltmYWxzZSxmYWxzZSxmYWxzZSxmYWxzZSxmYWxzZV0sInRvdGFsUG9pbnRzIjo0OSwibmV0UG9pbnRzIjozNX0seyJyYW5rIjo4LCJzYWlsTnVtYmVyIjoiMyIsIm5hbWUiOiJSb2RlcmljayBDb29wZXIiLCJyYWNlUG9pbnRzIjpbMTAsMTQsMTQsNCw3XSwicmFjZUNvZGVzIjpbIkRORiIsIkROQyIsIkROQyIsbnVsbCxudWxsXSwicmFjZURpc2NhcmRzIjpbZmFsc2UsdHJ1ZSxmYWxzZSxmYWxzZSxmYWxzZV0sInJhY2VQZW5hbHR5Q29kZXMiOltudWxsLG51bGwsbnVsbCxudWxsLG51bGxdLCJyYWNlUGVuYWx0eU92ZXJyaWRlcyI6W251bGwsbnVsbCxudWxsLG51bGwsbnVsbF0sInJhY2VOb25EaXNjYXJkYWJsZSI6W2ZhbHNlLGZhbHNlLGZhbHNlLGZhbHNlLGZhbHNlXSwicmFjZVJlZHJlc3NGbGFncyI6W2ZhbHNlLGZhbHNlLGZhbHNlLGZhbHNlLGZhbHNlXSwicmFjZUV4Y2x1ZGVkIjpbZmFsc2UsZmFsc2UsZmFsc2UsZmFsc2UsZmFsc2VdLCJ0b3RhbFBvaW50cyI6NDksIm5ldFBvaW50cyI6MzV9LHsicmFuayI6OSwic2FpbE51bWJlciI6IjciLCJuYW1lIjoiSWFuIE1hbGNvbG0iLCJyYWNlUG9pbnRzIjpbMiwxNCwxNCw3LDE0XSwicmFjZUNvZGVzIjpbbnVsbCwiRE5DIiwiRE5DIixudWxsLCJETkMiXSwicmFjZURpc2NhcmRzIjpbZmFsc2UsdHJ1ZSxmYWxzZSxmYWxzZSxmYWxzZV0sInJhY2VQZW5hbHR5Q29kZXMiOltudWxsLG51bGwsbnVsbCxudWxsLG51bGxdLCJyYWNlUGVuYWx0eU92ZXJyaWRlcyI6W251bGwsbnVsbCxudWxsLG51bGwsbnVsbF0sInJhY2VOb25EaXNjYXJkYWJsZSI6W2ZhbHNlLGZhbHNlLGZhbHNlLGZhbHNlLGZhbHNlXSwicmFjZVJlZHJlc3NGbGFncyI6W2ZhbHNlLGZhbHNlLGZhbHNlLGZhbHNlLGZhbHNlXSwicmFjZUV4Y2x1ZGVkIjpbZmFsc2UsZmFsc2UsZmFsc2UsZmFsc2UsZmFsc2VdLCJ0b3RhbFBvaW50cyI6NTEsIm5ldFBvaW50cyI6Mzd9LHsicmFuayI6MTAsInNhaWxOdW1iZXIiOiI0IiwibmFtZSI6IkhvdWxpaGFuLCBIb3VsaWhhbiwgQ2Fycm9sbCwgSHVybGV5IiwicmFjZVBvaW50cyI6WzE0LDE0LDE0LDE0LDRdLCJyYWNlQ29kZXMiOlsiRE5DIiwiRE5DIiwiRE5DIiwiRE5DIixudWxsXSwicmFjZURpc2NhcmRzIjpbdHJ1ZSxmYWxzZSxmYWxzZSxmYWxzZSxmYWxzZV0sInJhY2VQZW5hbHR5Q29kZXMiOltudWxsLG51bGwsbnVsbCxudWxsLG51bGxdLCJyYWNlUGVuYWx0eU92ZXJyaWRlcyI6W251bGwsbnVsbCxudWxsLG51bGwsbnVsbF0sInJhY2VOb25EaXNjYXJkYWJsZSI6W2ZhbHNlLGZhbHNlLGZhbHNlLGZhbHNlLGZhbHNlXSwicmFjZVJlZHJlc3NGbGFncyI6W2ZhbHNlLGZhbHNlLGZhbHNlLGZhbHNlLGZhbHNlXSwicmFjZUV4Y2x1ZGVkIjpbZmFsc2UsZmFsc2UsZmFsc2UsZmFsc2UsZmFsc2VdLCJ0b3RhbFBvaW50cyI6NjAsIm5ldFBvaW50cyI6NDZ9LHsicmFuayI6MTEsInNhaWxOdW1iZXIiOiIxIiwibmFtZSI6Ik1hcmN1cyBMeW5jaCAmIEpvaG4gQ3VybGV5IiwicmFjZVBvaW50cyI6WzE0LDE0LDE0LDE0LDVdLCJyYWNlQ29kZXMiOlsiRE5DIiwiRE5DIiwiRE5DIiwiRE5DIixudWxsXSwicmFjZURpc2NhcmRzIjpbdHJ1ZSxmYWxzZSxmYWxzZSxmYWxzZSxmYWxzZV0sInJhY2VQZW5hbHR5Q29kZXMiOltudWxsLG51bGwsbnVsbCxudWxsLG51bGxdLCJyYWNlUGVuYWx0eU92ZXJyaWRlcyI6W251bGwsbnVsbCxudWxsLG51bGwsbnVsbF0sInJhY2VOb25EaXNjYXJkYWJsZSI6W2ZhbHNlLGZhbHNlLGZhbHNlLGZhbHNlLGZhbHNlXSwicmFjZVJlZHJlc3NGbGFncyI6W2ZhbHNlLGZhbHNlLGZhbHNlLGZhbHNlLGZhbHNlXSwicmFjZUV4Y2x1ZGVkIjpbZmFsc2UsZmFsc2UsZmFsc2UsZmFsc2UsZmFsc2VdLCJ0b3RhbFBvaW50cyI6NjEsIm5ldFBvaW50cyI6NDd9LHsicmFuayI6MTIsInNhaWxOdW1iZXIiOiIxNCIsIm5hbWUiOiJCeXJuZSAvIEZlcnJpcyIsInJhY2VQb2ludHMiOlsxNCwxNCwxNCwxNCwxNF0sInJhY2VDb2RlcyI6WyJETkMiLCJETkMiLCJETkMiLCJETkMiLCJETkMiXSwicmFjZURpc2NhcmRzIjpbdHJ1ZSxmYWxzZSxmYWxzZSxmYWxzZSxmYWxzZV0sInJhY2VQZW5hbHR5Q29kZXMiOltudWxsLG51bGwsbnVsbCxudWxsLG51bGxdLCJyYWNlUGVuYWx0eU92ZXJyaWRlcyI6W251bGwsbnVsbCxudWxsLG51bGwsbnVsbF0sInJhY2VOb25EaXNjYXJkYWJsZSI6W2ZhbHNlLGZhbHNlLGZhbHNlLGZhbHNlLGZhbHNlXSwicmFjZVJlZHJlc3NGbGFncyI6W2ZhbHNlLGZhbHNlLGZhbHNlLGZhbHNlLGZhbHNlXSwicmFjZUV4Y2x1ZGVkIjpbZmFsc2UsZmFsc2UsZmFsc2UsZmFsc2UsZmFsc2VdLCJ0b3RhbFBvaW50cyI6NzAsIm5ldFBvaW50cyI6NTZ9LHsicmFuayI6MTIsInNhaWxOdW1iZXIiOiIxNiIsIm5hbWUiOiJSaW1hIE1hY2tlbiIsInJhY2VQb2ludHMiOlsxNCwxNCwxNCwxNCwxNF0sInJhY2VDb2RlcyI6WyJETkMiLCJETkMiLCJETkMiLCJETkMiLCJETkMiXSwicmFjZURpc2NhcmRzIjpbdHJ1ZSxmYWxzZSxmYWxzZSxmYWxzZSxmYWxzZV0sInJhY2VQZW5hbHR5Q29kZXMiOltudWxsLG51bGwsbnVsbCxudWxsLG51bGxdLCJyYWNlUGVuYWx0eU92ZXJyaWRlcyI6W251bGwsbnVsbCxudWxsLG51bGwsbnVsbF0sInJhY2VOb25EaXNjYXJkYWJsZSI6W2ZhbHNlLGZhbHNlLGZhbHNlLGZhbHNlLGZhbHNlXSwicmFjZVJlZHJlc3NGbGFncyI6W2ZhbHNlLGZhbHNlLGZhbHNlLGZhbHNlLGZhbHNlXSwicmFjZUV4Y2x1ZGVkIjpbZmFsc2UsZmFsc2UsZmFsc2UsZmFsc2UsZmFsc2VdLCJ0b3RhbFBvaW50cyI6NzAsIm5ldFBvaW50cyI6NTZ9XX0seyJmbGVldE5hbWUiOiJIb3d0aCAxNyBTY3IiLCJyb3dzIjpbeyJyYW5rIjoxLCJzYWlsTnVtYmVyIjoiMTEiLCJuYW1lIjoiTWFzc2V5LCBUb29tZXksIEtlbm55IiwicmFjZVBvaW50cyI6WzQsMSwxLDEsMV0sInJhY2VDb2RlcyI6W251bGwsbnVsbCxudWxsLG51bGwsbnVsbF0sInJhY2VEaXNjYXJkcyI6W3RydWUsZmFsc2UsZmFsc2UsZmFsc2UsZmFsc2VdLCJyYWNlUGVuYWx0eUNvZGVzIjpbbnVsbCxudWxsLG51bGwsbnVsbCxudWxsXSwicmFjZVBlbmFsdHlPdmVycmlkZXMiOltudWxsLG51bGwsbnVsbCxudWxsLG51bGxdLCJyYWNlTm9uRGlzY2FyZGFibGUiOltmYWxzZSxmYWxzZSxmYWxzZSxmYWxzZSxmYWxzZV0sInJhY2VSZWRyZXNzRmxhZ3MiOltmYWxzZSxmYWxzZSxmYWxzZSxmYWxzZSxmYWxzZV0sInJhY2VFeGNsdWRlZCI6W2ZhbHNlLGZhbHNlLGZhbHNlLGZhbHNlLGZhbHNlXSwidG90YWxQb2ludHMiOjgsIm5ldFBvaW50cyI6NH0seyJyYW5rIjoyLCJzYWlsTnVtYmVyIjoiMjEiLCJuYW1lIjoiRml0emdpYmJvbiAvIEdhbGxhZ2hlciIsInJhY2VQb2ludHMiOlsxLDQsMywzLDJdLCJyYWNlQ29kZXMiOltudWxsLG51bGwsbnVsbCxudWxsLG51bGxdLCJyYWNlRGlzY2FyZHMiOltmYWxzZSx0cnVlLGZhbHNlLGZhbHNlLGZhbHNlXSwicmFjZVBlbmFsdHlDb2RlcyI6W251bGwsbnVsbCxudWxsLG51bGwsbnVsbF0sInJhY2VQZW5hbHR5T3ZlcnJpZGVzIjpbbnVsbCxudWxsLG51bGwsbnVsbCxudWxsXSwicmFjZU5vbkRpc2NhcmRhYmxlIjpbZmFsc2UsZmFsc2UsZmFsc2UsZmFsc2UsZmFsc2VdLCJyYWNlUmVkcmVzc0ZsYWdzIjpbZmFsc2UsZmFsc2UsZmFsc2UsZmFsc2UsZmFsc2VdLCJyYWNlRXhjbHVkZWQiOltmYWxzZSxmYWxzZSxmYWxzZSxmYWxzZSxmYWxzZV0sInRvdGFsUG9pbnRzIjoxMywibmV0UG9pbnRzIjo5fSx7InJhbmsiOjMsInNhaWxOdW1iZXIiOiIxNyIsIm5hbWUiOiJQZXRlciBDb3VydG5leSIsInJhY2VQb2ludHMiOls1LDIsMiw2LDVdLCJyYWNlQ29kZXMiOltudWxsLG51bGwsbnVsbCxudWxsLG51bGxdLCJyYWNlRGlzY2FyZHMiOltmYWxzZSxmYWxzZSxmYWxzZSx0cnVlLGZhbHNlXSwicmFjZVBlbmFsdHlDb2RlcyI6W251bGwsbnVsbCxudWxsLG51bGwsbnVsbF0sInJhY2VQZW5hbHR5T3ZlcnJpZGVzIjpbbnVsbCxudWxsLG51bGwsbnVsbCxudWxsXSwicmFjZU5vbkRpc2NhcmRhYmxlIjpbZmFsc2UsZmFsc2UsZmFsc2UsZmFsc2UsZmFsc2VdLCJyYWNlUmVkcmVzc0ZsYWdzIjpbZmFsc2UsZmFsc2UsZmFsc2UsZmFsc2UsZmFsc2VdLCJyYWNlRXhjbHVkZWQiOltmYWxzZSxmYWxzZSxmYWxzZSxmYWxzZSxmYWxzZV0sInRvdGFsUG9pbnRzIjoyMCwibmV0UG9pbnRzIjoxNH0seyJyYW5rIjo0LCJzYWlsTnVtYmVyIjoiMTkiLCJuYW1lIjoiQnJpYW4gJiBDb25vciBUdXJ2ZXkiLCJyYWNlUG9pbnRzIjpbNiwzLDYsMiw0XSwicmFjZUNvZGVzIjpbbnVsbCxudWxsLG51bGwsbnVsbCxudWxsXSwicmFjZURpc2NhcmRzIjpbdHJ1ZSxmYWxzZSxmYWxzZSxmYWxzZSxmYWxzZV0sInJhY2VQZW5hbHR5Q29kZXMiOltudWxsLG51bGwsbnVsbCxudWxsLG51bGxdLCJyYWNlUGVuYWx0eU92ZXJyaWRlcyI6W251bGwsbnVsbCxudWxsLG51bGwsbnVsbF0sInJhY2VOb25EaXNjYXJkYWJsZSI6W2ZhbHNlLGZhbHNlLGZhbHNlLGZhbHNlLGZhbHNlXSwicmFjZVJlZHJlc3NGbGFncyI6W2ZhbHNlLGZhbHNlLGZhbHNlLGZhbHNlLGZhbHNlXSwicmFjZUV4Y2x1ZGVkIjpbZmFsc2UsZmFsc2UsZmFsc2UsZmFsc2UsZmFsc2VdLCJ0b3RhbFBvaW50cyI6MjEsIm5ldFBvaW50cyI6MTV9LHsicmFuayI6NSwic2FpbE51bWJlciI6IjIyIiwibmFtZSI6IkdlcmFyZCBDb21lcmZvcmQiLCJyYWNlUG9pbnRzIjpbNyw1LDcsNCw3XSwicmFjZUNvZGVzIjpbbnVsbCxudWxsLG51bGwsbnVsbCxudWxsXSwicmFjZURpc2NhcmRzIjpbdHJ1ZSxmYWxzZSxmYWxzZSxmYWxzZSxmYWxzZV0sInJhY2VQZW5hbHR5Q29kZXMiOltudWxsLG51bGwsbnVsbCxudWxsLG51bGxdLCJyYWNlUGVuYWx0eU92ZXJyaWRlcyI6W251bGwsbnVsbCxudWxsLG51bGwsbnVsbF0sInJhY2VOb25EaXNjYXJkYWJsZSI6W2ZhbHNlLGZhbHNlLGZhbHNlLGZhbHNlLGZhbHNlXSwicmFjZVJlZHJlc3NGbGFncyI6W2ZhbHNlLGZhbHNlLGZhbHNlLGZhbHNlLGZhbHNlXSwicmFjZUV4Y2x1ZGVkIjpbZmFsc2UsZmFsc2UsZmFsc2UsZmFsc2UsZmFsc2VdLCJ0b3RhbFBvaW50cyI6MzAsIm5ldFBvaW50cyI6MjN9LHsicmFuayI6Niwic2FpbE51bWJlciI6IjIiLCJuYW1lIjoiTydEb2hlcnR5IC8gS2VubnkgLyBNY0Nvcm1hY2siLCJyYWNlUG9pbnRzIjpbOCwxNCw1LDgsOF0sInJhY2VDb2RlcyI6W251bGwsIkROQyIsbnVsbCxudWxsLG51bGxdLCJyYWNlRGlzY2FyZHMiOltmYWxzZSx0cnVlLGZhbHNlLGZhbHNlLGZhbHNlXSwicmFjZVBlbmFsdHlDb2RlcyI6W251bGwsbnVsbCxudWxsLG51bGwsbnVsbF0sInJhY2VQZW5hbHR5T3ZlcnJpZGVzIjpbbnVsbCxudWxsLG51bGwsbnVsbCxudWxsXSwicmFjZU5vbkRpc2NhcmRhYmxlIjpbZmFsc2UsZmFsc2UsZmFsc2UsZmFsc2UsZmFsc2VdLCJyYWNlUmVkcmVzc0ZsYWdzIjpbZmFsc2UsZmFsc2UsZmFsc2UsZmFsc2UsZmFsc2VdLCJyYWNlRXhjbHVkZWQiOltmYWxzZSxmYWxzZSxmYWxzZSxmYWxzZSxmYWxzZV0sInRvdGFsUG9pbnRzIjo0MywibmV0UG9pbnRzIjoyOX0seyJyYW5rIjo3LCJzYWlsTnVtYmVyIjoiMTIiLCJuYW1lIjoiQ3VybGV5LCBKb25lcywgUG90dGVyIiwicmFjZVBvaW50cyI6WzMsMTQsNCwxNCwxNF0sInJhY2VDb2RlcyI6W251bGwsIkROQyIsbnVsbCwiRE5DIiwiRE5DIl0sInJhY2VEaXNjYXJkcyI6W2ZhbHNlLHRydWUsZmFsc2UsZmFsc2UsZmFsc2VdLCJyYWNlUGVuYWx0eUNvZGVzIjpbbnVsbCxudWxsLG51bGwsbnVsbCxudWxsXSwicmFjZVBlbmFsdHlPdmVycmlkZXMiOltudWxsLG51bGwsbnVsbCxudWxsLG51bGxdLCJyYWNlTm9uRGlzY2FyZGFibGUiOltmYWxzZSxmYWxzZSxmYWxzZSxmYWxzZSxmYWxzZV0sInJhY2VSZWRyZXNzRmxhZ3MiOltmYWxzZSxmYWxzZSxmYWxzZSxmYWxzZSxmYWxzZV0sInJhY2VFeGNsdWRlZCI6W2ZhbHNlLGZhbHNlLGZhbHNlLGZhbHNlLGZhbHNlXSwidG90YWxQb2ludHMiOjQ5LCJuZXRQb2ludHMiOjM1fSx7InJhbmsiOjgsInNhaWxOdW1iZXIiOiIzIiwibmFtZSI6IlJvZGVyaWNrIENvb3BlciIsInJhY2VQb2ludHMiOlsxMCwxNCwxNCw1LDZdLCJyYWNlQ29kZXMiOlsiRE5GIiwiRE5DIiwiRE5DIixudWxsLG51bGxdLCJyYWNlRGlzY2FyZHMiOltmYWxzZSx0cnVlLGZhbHNlLGZhbHNlLGZhbHNlXSwicmFjZVBlbmFsdHlDb2RlcyI6W251bGwsbnVsbCxudWxsLG51bGwsbnVsbF0sInJhY2VQZW5hbHR5T3ZlcnJpZGVzIjpbbnVsbCxudWxsLG51bGwsbnVsbCxudWxsXSwicmFjZU5vbkRpc2NhcmRhYmxlIjpbZmFsc2UsZmFsc2UsZmFsc2UsZmFsc2UsZmFsc2VdLCJyYWNlUmVkcmVzc0ZsYWdzIjpbZmFsc2UsZmFsc2UsZmFsc2UsZmFsc2UsZmFsc2VdLCJyYWNlRXhjbHVkZWQiOltmYWxzZSxmYWxzZSxmYWxzZSxmYWxzZSxmYWxzZV0sInRvdGFsUG9pbnRzIjo0OSwibmV0UG9pbnRzIjozNX0seyJyYW5rIjo5LCJzYWlsTnVtYmVyIjoiNyIsIm5hbWUiOiJJYW4gTWFsY29sbSIsInJhY2VQb2ludHMiOlsyLDE0LDE0LDcsMTRdLCJyYWNlQ29kZXMiOltudWxsLCJETkMiLCJETkMiLG51bGwsIkROQyJdLCJyYWNlRGlzY2FyZHMiOltmYWxzZSx0cnVlLGZhbHNlLGZhbHNlLGZhbHNlXSwicmFjZVBlbmFsdHlDb2RlcyI6W251bGwsbnVsbCxudWxsLG51bGwsbnVsbF0sInJhY2VQZW5hbHR5T3ZlcnJpZGVzIjpbbnVsbCxudWxsLG51bGwsbnVsbCxudWxsXSwicmFjZU5vbkRpc2NhcmRhYmxlIjpbZmFsc2UsZmFsc2UsZmFsc2UsZmFsc2UsZmFsc2VdLCJyYWNlUmVkcmVzc0ZsYWdzIjpbZmFsc2UsZmFsc2UsZmFsc2UsZmFsc2UsZmFsc2VdLCJyYWNlRXhjbHVkZWQiOltmYWxzZSxmYWxzZSxmYWxzZSxmYWxzZSxmYWxzZV0sInRvdGFsUG9pbnRzIjo1MSwibmV0UG9pbnRzIjozN30seyJyYW5rIjoxMCwic2FpbE51bWJlciI6IjEiLCJuYW1lIjoiTWFyY3VzIEx5bmNoICYgSm9obiBDdXJsZXkiLCJyYWNlUG9pbnRzIjpbMTQsMTQsMTQsMTQsM10sInJhY2VDb2RlcyI6WyJETkMiLCJETkMiLCJETkMiLCJETkMiLG51bGxdLCJyYWNlRGlzY2FyZHMiOlt0cnVlLGZhbHNlLGZhbHNlLGZhbHNlLGZhbHNlXSwicmFjZVBlbmFsdHlDb2RlcyI6W251bGwsbnVsbCxudWxsLG51bGwsbnVsbF0sInJhY2VQZW5hbHR5T3ZlcnJpZGVzIjpbbnVsbCxudWxsLG51bGwsbnVsbCxudWxsXSwicmFjZU5vbkRpc2NhcmRhYmxlIjpbZmFsc2UsZmFsc2UsZmFsc2UsZmFsc2UsZmFsc2VdLCJyYWNlUmVkcmVzc0ZsYWdzIjpbZmFsc2UsZmFsc2UsZmFsc2UsZmFsc2UsZmFsc2VdLCJyYWNlRXhjbHVkZWQiOltmYWxzZSxmYWxzZSxmYWxzZSxmYWxzZSxmYWxzZV0sInRvdGFsUG9pbnRzIjo1OSwibmV0UG9pbnRzIjo0NX0seyJyYW5rIjoxMSwic2FpbE51bWJlciI6IjQiLCJuYW1lIjoiSG91bGloYW4sIEhvdWxpaGFuLCBDYXJyb2xsLCBIdXJsZXkiLCJyYWNlUG9pbnRzIjpbMTQsMTQsMTQsMTQsOV0sInJhY2VDb2RlcyI6WyJETkMiLCJETkMiLCJETkMiLCJETkMiLG51bGxdLCJyYWNlRGlzY2FyZHMiOlt0cnVlLGZhbHNlLGZhbHNlLGZhbHNlLGZhbHNlXSwicmFjZVBlbmFsdHlDb2RlcyI6W251bGwsbnVsbCxudWxsLG51bGwsbnVsbF0sInJhY2VQZW5hbHR5T3ZlcnJpZGVzIjpbbnVsbCxudWxsLG51bGwsbnVsbCxudWxsXSwicmFjZU5vbkRpc2NhcmRhYmxlIjpbZmFsc2UsZmFsc2UsZmFsc2UsZmFsc2UsZmFsc2VdLCJyYWNlUmVkcmVzc0ZsYWdzIjpbZmFsc2UsZmFsc2UsZmFsc2UsZmFsc2UsZmFsc2VdLCJyYWNlRXhjbHVkZWQiOltmYWxzZSxmYWxzZSxmYWxzZSxmYWxzZSxmYWxzZV0sInRvdGFsUG9pbnRzIjo2NSwibmV0UG9pbnRzIjo1MX0seyJyYW5rIjoxMiwic2FpbE51bWJlciI6IjE0IiwibmFtZSI6IkJ5cm5lIC8gRmVycmlzIiwicmFjZVBvaW50cyI6WzE0LDE0LDE0LDE0LDE0XSwicmFjZUNvZGVzIjpbIkROQyIsIkROQyIsIkROQyIsIkROQyIsIkROQyJdLCJyYWNlRGlzY2FyZHMiOlt0cnVlLGZhbHNlLGZhbHNlLGZhbHNlLGZhbHNlXSwicmFjZVBlbmFsdHlDb2RlcyI6W251bGwsbnVsbCxudWxsLG51bGwsbnVsbF0sInJhY2VQZW5hbHR5T3ZlcnJpZGVzIjpbbnVsbCxudWxsLG51bGwsbnVsbCxudWxsXSwicmFjZU5vbkRpc2NhcmRhYmxlIjpbZmFsc2UsZmFsc2UsZmFsc2UsZmFsc2UsZmFsc2VdLCJyYWNlUmVkcmVzc0ZsYWdzIjpbZmFsc2UsZmFsc2UsZmFsc2UsZmFsc2UsZmFsc2VdLCJyYWNlRXhjbHVkZWQiOltmYWxzZSxmYWxzZSxmYWxzZSxmYWxzZSxmYWxzZV0sInRvdGFsUG9pbnRzIjo3MCwibmV0UG9pbnRzIjo1Nn0seyJyYW5rIjoxMiwic2FpbE51bWJlciI6IjE2IiwibmFtZSI6IlJpbWEgTWFja2VuIiwicmFjZVBvaW50cyI6WzE0LDE0LDE0LDE0LDE0XSwicmFjZUNvZGVzIjpbIkROQyIsIkROQyIsIkROQyIsIkROQyIsIkROQyJdLCJyYWNlRGlzY2FyZHMiOlt0cnVlLGZhbHNlLGZhbHNlLGZhbHNlLGZhbHNlXSwicmFjZVBlbmFsdHlDb2RlcyI6W251bGwsbnVsbCxudWxsLG51bGwsbnVsbF0sInJhY2VQZW5hbHR5T3ZlcnJpZGVzIjpbbnVsbCxudWxsLG51bGwsbnVsbCxudWxsXSwicmFjZU5vbkRpc2NhcmRhYmxlIjpbZmFsc2UsZmFsc2UsZmFsc2UsZmFsc2UsZmFsc2VdLCJyYWNlUmVkcmVzc0ZsYWdzIjpbZmFsc2UsZmFsc2UsZmFsc2UsZmFsc2UsZmFsc2VdLCJyYWNlRXhjbHVkZWQiOltmYWxzZSxmYWxzZSxmYWxzZSxmYWxzZSxmYWxzZV0sInRvdGFsUG9pbnRzIjo3MCwibmV0UG9pbnRzIjo1Nn1dfV19" target="_top" rel="noopener">Open in Sail Scoring</a></p>
+<script>(function(){
+var KEY='sailscoring:nhc-explain-visible';
+var cb=document.getElementById('nhc-detail-toggle');
+if(!cb)return;
+var visible=localStorage.getItem(KEY)==='true';
+if(visible){document.body.classList.remove('hide-nhc-detail');cb.checked=true;}
+cb.addEventListener('change',function(){
+  if(cb.checked){document.body.classList.remove('hide-nhc-detail');localStorage.setItem(KEY,'true');}
+  else{document.body.classList.add('hide-nhc-detail');localStorage.setItem(KEY,'false');}
+});
+})();</script>
+
+</body>
+</html>

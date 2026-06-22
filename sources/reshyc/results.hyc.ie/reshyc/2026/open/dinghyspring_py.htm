@@ -1,0 +1,2751 @@
+
+
+
+<!doctype html>
+<html lang="en-US">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html;charset=ISO-8859-1"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="description" content="sailwave results">
+<meta name="viewport" content="width=device-width">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+
+<title>Sailwave results for Dinghy Frostbite Series Spring 2026 at Howth YC 2026</title>
+
+<style type="text/css">
+body {font: 80% arial, helvetica, sans-serif; text-align: center;}
+.hardleft  {text-align: left; float: left;  margin: 15px 0  15px 25px;}
+.hardright {text-align: right; float: right; margin: 15px 25px 15px 0;}
+table {text-align: left; margin: 0px auto 30px auto; font-size: 1em; border-collapse: collapse; border: 1px #008 solid;}
+td, th {padding: 4px; border: 1px #008 solid; vertical-align: top;}
+.caption {padding: 5px; text-align: center; border: 0; font-weight: bold;}
+table {background-color: #e8e8ff;}
+h1 {font-size: 1.6em;}
+h2 {font-size: 1.4em;}
+h3 {font-size: 1.2em;}
+p {text-align: center;}
+.contents {text-align: left; margin-left: 20%;}
+.natflag {border: 1px #999 solid;}
+.nattext {font-size: 0.8em;}
+.place1 {font-weight: bold; background-color: #ffffaa;}
+.place2 {font-weight: bold; background-color: #aaaaff;}
+.place3 {font-weight: bold; background-color: #ffaaaa;}
+.placen {}
+table.headertable {background-color: #ffffff}
+table.headertable {border: 0px;}
+table.headertable td{border: 0px;}
+</style>
+
+<script type="text/javascript">
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script>
+
+function swGetURLArgs() {
+
+  var url = location.href;
+  var qs  = url.substring(url.indexOf('?') + 1).split('&');
+
+  for(var i = 0, result = {}; i < qs.length; i++) {
+    qs[i]            = qs[i].split('=');
+    result[qs[i][0]] = decodeURIComponent(qs[i][1]);
+  }
+
+  return result;
+}
+
+//
+//  name=HighlightWins3v3
+//  dependencies=jQuery
+//  description=Highlight winning scores in summary tables.
+//  author=Jon Eskdale based on an idea by Colin Jenkins
+//  date=2016-07-04
+//  version=3.0  For use with Sailwave from V2.22.x
+//  Requires the following lines in the Results.htm file (Results.htm is in the Templates directory)
+//  string.set("summary.col.race.rank1.td",   "rank1")
+//  string.set("summary.col.race.rank2.td",   "rank2")
+//  string.set("summary.col.race.rank3.td",   "rank3")
+
+//  url=http://sailwave.com
+//  email=jon@sailwave.com
+//  twitter=eskdale
+//  comments=Edit colours to colours of your choice
+//
+
+$(document).ready(function() {
+var selectorRank1 = '.rank1';
+var selectorRank2 = '.rank2';
+var selectorRank3 = '.rank3';
+
+// Results with these codes will not get highlighted add or remove codes to your choice
+var ignoreText   = /^(?!.*\b(DNC|DNF|DNS|OCS|BFD|UFD|RET|DSQ|DGM|DNE)\b).*/i
+
+// Edit these colours to change the highlight colours for 1st, 2nd and 3rd
+var winsColour   = '#ffd700';
+var twoColour    = '#6a91c5';
+var threeColour  = '#da6841';
+
+
+// Change the background color for cells with class of rank1-3 and don't have a code specified
+$(function () {
+
+  $(selectorRank1).filter(function() {
+    return ignoreText.test($(this).text());
+  }).css("background", winsColour);
+  $(selectorRank2).filter(function() {
+        return ignoreText.test($(this).text());
+  }).css("background", twoColour);
+  $(selectorRank3).filter(function() {
+        return ignoreText.test($(this).text());
+  }).css("background", threeColour);
+
+});
+});
+</script>
+<link rel="shortcut icon" type="image/ico" href="https://www.sailwave.com/favicon.ico"/>
+</head>
+
+<body>
+
+<header>
+</header>
+<table class="headertable" cellspacing="0" width="100%" cellpadding="0" border="0">
+<tbody>
+<div id="wrap">
+
+<tr>
+<td width="30%">
+<img id="venueburgee" style="display:block; height:100px;"  src="https://hyc.ie/system/sponsor_logos/439/normal/HYC_Logo.jpg" alt="venue burgee" />
+</td>
+
+<td width="40%" align="center">
+<h1>Dinghy Frostbite Series Spring 2026</h1>
+<h2>Howth YC</h2>
+</td>
+
+<td width="30%">
+<img id="eventburgee" style="display:block; height:100px;" src="https://hyc.ie/system/sponsor_logos/439/normal/HYC_Logo.jpg" alt="event burgee" align="right" />
+</td>
+</tr>
+</tbody>
+</table>
+
+<div style="clear:both;"></div>
+
+<style>
+div.applicant-break {page-break-after:always;}
+</style>
+<h3 class="seriestitle">Results are provisional as of 22:08 on March  1, 2026</h3>
+<h3 class="summarytitle" id="summarypy">PY Fleet</h3>
+<div class="caption summarycaption">Sailed: 14, Discards: 3, To count: 11, Rating system: PY, Entries: 23, Scoring system: Appendix A</div>
+<table class="summarytable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="20">
+<col class="rank" />
+<col class="sailno" />
+<col class="class" />
+<col class="helmname" />
+<col class="crewname" />
+<col class="club" />
+<col class="rating" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="total" />
+<col class="nett" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Sail Nr</th>
+<th>Class</th>
+<th>Helm Name</th>
+<th>Crew</th>
+<th>Club</th>
+<th>PY</th>
+<th><a class="racelink" href="#r4py">R4</a></th>
+<th><a class="racelink" href="#r5py">R5</a></th>
+<th><a class="racelink" href="#r6py">R6</a></th>
+<th><a class="racelink" href="#r7py">R7</a></th>
+<th><a class="racelink" href="#r8py">R8</a></th>
+<th><a class="racelink" href="#r9py">R9</a></th>
+<th><a class="racelink" href="#r10py">R10</a></th>
+<th><a class="racelink" href="#r11py">R11</a></th>
+<th><a class="racelink" href="#r12py">R12</a></th>
+<th><a class="racelink" href="#r13py">R13</a></th>
+<th><a class="racelink" href="#r14py">R14</a></th>
+<th>Total</th>
+<th>Nett</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd summaryrow">
+<td>1st</td>
+<td>4523</td>
+<td>RS Aero 6</td>
+<td>Daragh Sheridan</td>
+<td>&nbsp;</td>
+<td>HYC</td>
+<td>1099</td>
+<td  class="rank2">2.0</td>
+<td  class="rank1">2.0</td>
+<td  class="rank1">2.0</td>
+<td>(24.0 DNC)</td>
+<td>(24.0 DNC)</td>
+<td  class="rank2">2.0</td>
+<td  class="rank1">1.0</td>
+<td  class="rank1">1.0</td>
+<td  class="rank1">1.0</td>
+<td  class="rank1">1.0</td>
+<td  class="rank1">1.0</td>
+<td>65.0</td>
+<td>15.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>2nd</td>
+<td>635</td>
+<td>Melges 15</td>
+<td>Cormac Farrelly</td>
+<td>Justin Cullen</td>
+<td>HYC</td>
+<td>995</td>
+<td  class="rank3">3.0</td>
+<td>5.0 SCP</td>
+<td>5.0 SCP</td>
+<td>(6.0)</td>
+<td>6.0</td>
+<td  class="rank3">3.0</td>
+<td  class="rank3">3.0</td>
+<td  class="rank2">2.0</td>
+<td  class="rank2">2.0</td>
+<td  class="rank2">2.0</td>
+<td  class="rank2">2.0</td>
+<td>75.0</td>
+<td>35.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>3rd</td>
+<td>38</td>
+<td>IDRA 14</td>
+<td>Alan Carr</td>
+<td>Orlaith Connolly</td>
+<td>HYC</td>
+<td>1124</td>
+<td>6.0</td>
+<td>5.0</td>
+<td>5.0</td>
+<td  class="rank1">1.0</td>
+<td  class="rank2">2.0</td>
+<td>(8.0)</td>
+<td>(7.0)</td>
+<td>6.0</td>
+<td>(8.0)</td>
+<td>7.0</td>
+<td>7.0</td>
+<td>70.0</td>
+<td>47.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>4th</td>
+<td>161</td>
+<td>IDRA 14</td>
+<td>Pierre Long</td>
+<td>Remy / Paul / Marc</td>
+<td>DMYC</td>
+<td>1124</td>
+<td>7.0</td>
+<td>7.0</td>
+<td>6.0</td>
+<td  class="rank2">2.0</td>
+<td  class="rank1">1.0</td>
+<td>6.0</td>
+<td>(9.0 DNF)</td>
+<td>(9.0)</td>
+<td>6.0</td>
+<td>6.0</td>
+<td>5.0</td>
+<td>87.0</td>
+<td>59.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>5th</td>
+<td>128</td>
+<td>IDRA 14</td>
+<td>Ryan Cairns</td>
+<td>Finn O'Doherty</td>
+<td>HYC</td>
+<td>1124</td>
+<td>(24.0 DNC)</td>
+<td>8.0</td>
+<td>9.0</td>
+<td>5.0</td>
+<td  class="rank3">3.0</td>
+<td>7.0</td>
+<td>6.0</td>
+<td>(10.0)</td>
+<td>7.0</td>
+<td>8.0</td>
+<td>9.0 DNF</td>
+<td>126.5</td>
+<td>68.5</td>
+</tr>
+<tr class="even summaryrow">
+<td>6th</td>
+<td>6</td>
+<td>Finn</td>
+<td>Richard Tate</td>
+<td>&nbsp;</td>
+<td>RStGYC</td>
+<td>1049</td>
+<td>5.0</td>
+<td>6.0</td>
+<td>7.0</td>
+<td>(24.0 DNC)</td>
+<td>(24.0 DNC)</td>
+<td>4.0</td>
+<td>4.0</td>
+<td>4.0</td>
+<td>4.0</td>
+<td>(24.0 DNC)</td>
+<td>24.0 DNC</td>
+<td>143.5</td>
+<td>71.5</td>
+</tr>
+<tr class="odd summaryrow">
+<td>7th</td>
+<td>801</td>
+<td>Melges 15</td>
+<td>Ronan MacDonell</td>
+<td>Eoin Kernan</td>
+<td>HYC</td>
+<td>995</td>
+<td>12.0 UFD</td>
+<td  class="rank3">4.0</td>
+<td  class="rank3">4.0</td>
+<td>8.0</td>
+<td>10.0 RET</td>
+<td  class="rank1">1.0</td>
+<td  class="rank2">2.0</td>
+<td>(24.0 DNC)</td>
+<td>(24.0 DNC)</td>
+<td>10.0 DNF</td>
+<td>(24.0 DNC)</td>
+<td>145.0</td>
+<td>73.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>8th</td>
+<td>21282</td>
+<td>Enterprise</td>
+<td>Conor Costello</td>
+<td>Brendan Costello</td>
+<td>HYC</td>
+<td>1137</td>
+<td>12.0 UFD</td>
+<td>11.0 SCP</td>
+<td>12.0 SCP</td>
+<td  class="rank3">3.0</td>
+<td>5.0</td>
+<td>10.0 DNF</td>
+<td>5.0</td>
+<td>7.0</td>
+<td>5.0</td>
+<td>5.0</td>
+<td>6.0</td>
+<td>142.0</td>
+<td>81.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>9th</td>
+<td>806</td>
+<td>Melges 15</td>
+<td>Charlie Robertson</td>
+<td>Sarah Robertson</td>
+<td>HYC</td>
+<td>995</td>
+<td>4.0</td>
+<td>(24.0 DNC)</td>
+<td>24.0 DNC</td>
+<td>10.0 DNS</td>
+<td>8.0</td>
+<td>5.0</td>
+<td>24.0 DNC</td>
+<td>24.0 DNC</td>
+<td>24.0 DNC</td>
+<td>4.0</td>
+<td  class="rank3">3.0</td>
+<td>210.0</td>
+<td>138.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>10th</td>
+<td>804</td>
+<td>Melges 15</td>
+<td>HYC Use - not to count o/a</td>
+<td>TBC</td>
+<td>HYC</td>
+<td>995</td>
+<td  class="rank1">1.0</td>
+<td  class="rank2">3.0 SCP</td>
+<td  class="rank2">3.0 SCP</td>
+<td>6.0 SCP</td>
+<td>6.0 SCP</td>
+<td>(24.0 DNC)</td>
+<td>24.0 DNC</td>
+<td>24.0 DNC</td>
+<td>24.0 DNC</td>
+<td>24.0 DNC</td>
+<td>24.0 DNC</td>
+<td>217.0</td>
+<td>145.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>11th</td>
+<td>803</td>
+<td>Melges 15</td>
+<td>Stephen Quinn</td>
+<td>Quinn</td>
+<td>HYC</td>
+<td>995</td>
+<td>24.0 DNC</td>
+<td>24.0 DNC</td>
+<td>24.0 DNC</td>
+<td>7.0</td>
+<td>7.0</td>
+<td>24.0 DNC</td>
+<td>24.0 DNC</td>
+<td>5.0</td>
+<td  class="rank3">3.0</td>
+<td  class="rank3">3.0</td>
+<td>4.0</td>
+<td>221.0</td>
+<td>149.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>12th</td>
+<td>119</td>
+<td>IDRA 14</td>
+<td>Orla Doogue</td>
+<td>TBC</td>
+<td>HYC</td>
+<td>1124</td>
+<td>9.0</td>
+<td>(24.0 DNC)</td>
+<td>(24.0 DNC)</td>
+<td>(24.0 DNC)</td>
+<td>24.0 DNC</td>
+<td>24.0 DNC</td>
+<td>24.0 DNC</td>
+<td>24.0 DNC</td>
+<td>24.0 DNC</td>
+<td>24.0 DNC</td>
+<td>24.0 DNC</td>
+<td>269.0</td>
+<td>197.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>13th</td>
+<td>114</td>
+<td>IDRA 14</td>
+<td>Dan Hannah Joey Tom</td>
+<td>Dan Hannah Joey Tom</td>
+<td>CYBC</td>
+<td>1124</td>
+<td>8.0</td>
+<td>(24.0 DNC)</td>
+<td>24.0 DNC</td>
+<td>24.0 DNC</td>
+<td>24.0 DNC</td>
+<td>24.0 DNC</td>
+<td>24.0 DNC</td>
+<td>8.0</td>
+<td>11.0 DNF</td>
+<td>24.0 DNC</td>
+<td>24.0 DNC</td>
+<td>274.0</td>
+<td>202.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>14th</td>
+<td>3948</td>
+<td>RS Aero 6</td>
+<td>Richard Watson</td>
+<td>&nbsp;</td>
+<td>HYC</td>
+<td>1099</td>
+<td>(24.0 DNC)</td>
+<td>24.0 DNC</td>
+<td>8.0</td>
+<td>24.0 DNC</td>
+<td>24.0 DNC</td>
+<td>24.0 DNC</td>
+<td>24.0 DNC</td>
+<td>24.0 DNC</td>
+<td>24.0 DNC</td>
+<td>24.0 DNC</td>
+<td>24.0 DNC</td>
+<td>301.0</td>
+<td>229.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>15th</td>
+<td>3291</td>
+<td>RS Aero 6</td>
+<td>John Phelan</td>
+<td>&nbsp;</td>
+<td>HYC</td>
+<td>1099</td>
+<td>24.0 DNC</td>
+<td>24.0 DNC</td>
+<td>24.0 DNC</td>
+<td>24.0 DNC</td>
+<td>24.0 DNC</td>
+<td>24.0 DNC</td>
+<td>24.0 DNC</td>
+<td  class="rank3">3.0</td>
+<td>11.0 DNF</td>
+<td>24.0 DNC</td>
+<td>24.0 DNC</td>
+<td>302.0</td>
+<td>230.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>16th</td>
+<td>99</td>
+<td>49er</td>
+<td>Fiachra Farrelly</td>
+<td>Jamie Malcolm</td>
+<td>HYC</td>
+<td>697</td>
+<td>(24.0 DNC)</td>
+<td>24.0 DNC</td>
+<td>24.0 DNC</td>
+<td>24.0 DNC</td>
+<td>24.0 DNC</td>
+<td>24.0 DNC</td>
+<td>24.0 DNC</td>
+<td>24.0 DNC</td>
+<td>24.0 DNC</td>
+<td>24.0 DNC</td>
+<td>24.0 DNC</td>
+<td>319.0</td>
+<td>247.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>17th</td>
+<td>807</td>
+<td>Melges 15</td>
+<td>Darren Wright</td>
+<td>TBC</td>
+<td>HYC</td>
+<td>995</td>
+<td>24.0 DNC</td>
+<td>24.0 DNC</td>
+<td>24.0 DNC</td>
+<td>24.0 DNC</td>
+<td>24.0 DNC</td>
+<td>24.0 DNC</td>
+<td>24.0 DNC</td>
+<td>24.0 DNC</td>
+<td>24.0 DNC</td>
+<td>24.0 DNC</td>
+<td>24.0 DNC</td>
+<td>336.0</td>
+<td>264.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>17th</td>
+<td>1321</td>
+<td>RS Aero 5</td>
+<td>Abby Kinsella</td>
+<td>&nbsp;</td>
+<td>HYC</td>
+<td>1139</td>
+<td>24.0 DNC</td>
+<td>24.0 DNC</td>
+<td>24.0 DNC</td>
+<td>24.0 DNC</td>
+<td>24.0 DNC</td>
+<td>24.0 DNC</td>
+<td>24.0 DNC</td>
+<td>24.0 DNC</td>
+<td>24.0 DNC</td>
+<td>24.0 DNC</td>
+<td>24.0 DNC</td>
+<td>336.0</td>
+<td>264.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>17th</td>
+<td>805</td>
+<td>Melges 15</td>
+<td>Will Cullen</td>
+<td>Gary Cullen</td>
+<td>HYC</td>
+<td>995</td>
+<td>24.0 DNC</td>
+<td>24.0 DNC</td>
+<td>24.0 DNC</td>
+<td>24.0 DNC</td>
+<td>24.0 DNC</td>
+<td>24.0 DNC</td>
+<td>24.0 DNC</td>
+<td>24.0 DNC</td>
+<td>24.0 DNC</td>
+<td>24.0 DNC</td>
+<td>24.0 DNC</td>
+<td>336.0</td>
+<td>264.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>17th</td>
+<td>798 RS</td>
+<td>RS 600</td>
+<td>Tris Nelson</td>
+<td>&nbsp;</td>
+<td>HYC</td>
+<td>921</td>
+<td>24.0 DNC</td>
+<td>24.0 DNC</td>
+<td>24.0 DNC</td>
+<td>24.0 DNC</td>
+<td>24.0 DNC</td>
+<td>24.0 DNC</td>
+<td>24.0 DNC</td>
+<td>24.0 DNC</td>
+<td>24.0 DNC</td>
+<td>24.0 DNC</td>
+<td>24.0 DNC</td>
+<td>336.0</td>
+<td>264.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>17th</td>
+<td>23118</td>
+<td>Enterprise</td>
+<td>Kay Cornally</td>
+<td>&nbsp;</td>
+<td>HYC</td>
+<td>1137</td>
+<td>24.0 DNC</td>
+<td>24.0 DNC</td>
+<td>24.0 DNC</td>
+<td>24.0 DNC</td>
+<td>24.0 DNC</td>
+<td>24.0 DNC</td>
+<td>24.0 DNC</td>
+<td>24.0 DNC</td>
+<td>24.0 DNC</td>
+<td>24.0 DNC</td>
+<td>24.0 DNC</td>
+<td>336.0</td>
+<td>264.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>17th</td>
+<td>3187</td>
+<td>RS Aero 6</td>
+<td>Emmet Dalton</td>
+<td>&nbsp;</td>
+<td>HYC</td>
+<td>1099</td>
+<td>24.0 DNC</td>
+<td>24.0 DNC</td>
+<td>24.0 DNC</td>
+<td>24.0 DNC</td>
+<td>24.0 DNC</td>
+<td>24.0 DNC</td>
+<td>24.0 DNC</td>
+<td>24.0 DNC</td>
+<td>24.0 DNC</td>
+<td>24.0 DNC</td>
+<td>24.0 DNC</td>
+<td>336.0</td>
+<td>264.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>17th</td>
+<td>800</td>
+<td>Melges 15</td>
+<td>Sarah McLoughlin</td>
+<td>Mark McLoughlin</td>
+<td>HYC</td>
+<td>995</td>
+<td>24.0 DNC</td>
+<td>24.0 DNC</td>
+<td>24.0 DNC</td>
+<td>24.0 DNC</td>
+<td>24.0 DNC</td>
+<td>24.0 DNC</td>
+<td>24.0 DNC</td>
+<td>24.0 DNC</td>
+<td>24.0 DNC</td>
+<td>24.0 DNC</td>
+<td>24.0 DNC</td>
+<td>336.0</td>
+<td>264.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r1py">R1 - PY Fleet&nbsp;-&nbsp;04-01-2026</h3>
+<div class="caption racecaption">
+Start: Start 1, Finishes: Finish time, Time: 10:51:00
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="10">
+<col class="rank" />
+<col class="sailno" />
+<col class="class" />
+<col class="helmname" />
+<col class="crewname" />
+<col class="club" />
+<col class="rating" />
+<col class="elapsed" />
+<col class="corrected" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Sail Nr</th>
+<th>Class</th>
+<th>Helm Name</th>
+<th>Crew</th>
+<th>Club</th>
+<th>PY</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>4523</td>
+<td>RS Aero 6</td>
+<td>Daragh Sheridan</td>
+<td>&nbsp;</td>
+<td>HYC</td>
+<td>1099</td>
+<td>0:42:09</td>
+<td>0:38:21</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>801</td>
+<td>Melges 15</td>
+<td>Ronan MacDonell</td>
+<td>Eoin Kernan</td>
+<td>HYC</td>
+<td>995</td>
+<td>0:38:31</td>
+<td>0:38:43</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>128</td>
+<td>IDRA 14</td>
+<td>Ryan Cairns</td>
+<td>Finn O'Doherty</td>
+<td>HYC</td>
+<td>1124</td>
+<td>0:45:21</td>
+<td>0:40:21</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>38</td>
+<td>IDRA 14</td>
+<td>Alan Carr</td>
+<td>Orlaith Connolly</td>
+<td>HYC</td>
+<td>1124</td>
+<td>0:46:04</td>
+<td>0:40:59</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>119</td>
+<td>IDRA 14</td>
+<td>Orla Doogue</td>
+<td>TBC</td>
+<td>HYC</td>
+<td>1124</td>
+<td>0:49:04</td>
+<td>0:43:39</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>6</td>
+<td>Finn</td>
+<td>Richard Tate</td>
+<td>&nbsp;</td>
+<td>RStGYC</td>
+<td>1049</td>
+<td>0:46:10</td>
+<td>0:44:01</td>
+<td>6.0</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>99</td>
+<td>49er</td>
+<td>Fiachra Farrelly</td>
+<td>Jamie Malcolm</td>
+<td>HYC</td>
+<td>697</td>
+<td>0:31:18</td>
+<td>0:44:54</td>
+<td>7.0</td>
+</tr>
+<tr class="even racerow">
+<td>8</td>
+<td>161</td>
+<td>IDRA 14</td>
+<td>Pierre Long</td>
+<td>Remy / Paul / Marc</td>
+<td>DMYC</td>
+<td>1124</td>
+<td>0:51:04</td>
+<td>0:45:26</td>
+<td>8.0</td>
+</tr>
+<tr class="odd racerow">
+<td>9</td>
+<td>635</td>
+<td>Melges 15</td>
+<td>Cormac Farrelly</td>
+<td>Justin Cullen</td>
+<td>HYC</td>
+<td>995</td>
+<td>DNF</td>
+<td>&nbsp;</td>
+<td>10.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r2py">R2 - PY Fleet&nbsp;-&nbsp;04-01-2026</h3>
+<div class="caption racecaption">
+Start: Start 1, Finishes: Finish time, Time: 114900
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="10">
+<col class="rank" />
+<col class="sailno" />
+<col class="class" />
+<col class="helmname" />
+<col class="crewname" />
+<col class="club" />
+<col class="rating" />
+<col class="elapsed" />
+<col class="corrected" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Sail Nr</th>
+<th>Class</th>
+<th>Helm Name</th>
+<th>Crew</th>
+<th>Club</th>
+<th>PY</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>38</td>
+<td>IDRA 14</td>
+<td>Alan Carr</td>
+<td>Orlaith Connolly</td>
+<td>HYC</td>
+<td>1124</td>
+<td>0:39:15</td>
+<td>0:34:55</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>4523</td>
+<td>RS Aero 6</td>
+<td>Daragh Sheridan</td>
+<td>&nbsp;</td>
+<td>HYC</td>
+<td>1099</td>
+<td>0:38:35</td>
+<td>0:35:06</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>128</td>
+<td>IDRA 14</td>
+<td>Ryan Cairns</td>
+<td>Finn O'Doherty</td>
+<td>HYC</td>
+<td>1124</td>
+<td>0:41:16</td>
+<td>0:36:43</td>
+<td>3.5</td>
+</tr>
+<tr class="even racerow">
+<td>3</td>
+<td>6</td>
+<td>Finn</td>
+<td>Richard Tate</td>
+<td>&nbsp;</td>
+<td>RStGYC</td>
+<td>1049</td>
+<td>0:38:31</td>
+<td>0:36:43</td>
+<td>3.5</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>161</td>
+<td>IDRA 14</td>
+<td>Pierre Long</td>
+<td>Remy / Paul / Marc</td>
+<td>DMYC</td>
+<td>1124</td>
+<td>0:42:42</td>
+<td>0:37:59</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>119</td>
+<td>IDRA 14</td>
+<td>Orla Doogue</td>
+<td>TBC</td>
+<td>HYC</td>
+<td>1124</td>
+<td>0:43:28</td>
+<td>0:38:40</td>
+<td>6.0</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>801</td>
+<td>Melges 15</td>
+<td>Ronan MacDonell</td>
+<td>Eoin Kernan</td>
+<td>HYC</td>
+<td>995</td>
+<td>0:41:58</td>
+<td>0:42:11</td>
+<td>7.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r3py">R3 - PY Fleet&nbsp;-&nbsp;Jan 18</h3>
+<div class="caption racecaption">
+Start: Start 1, Finishes: Finish time, Time: 10.51.00
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="10">
+<col class="rank" />
+<col class="sailno" />
+<col class="class" />
+<col class="helmname" />
+<col class="crewname" />
+<col class="club" />
+<col class="rating" />
+<col class="elapsed" />
+<col class="corrected" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Sail Nr</th>
+<th>Class</th>
+<th>Helm Name</th>
+<th>Crew</th>
+<th>Club</th>
+<th>PY</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>4523</td>
+<td>RS Aero 6</td>
+<td>Daragh Sheridan</td>
+<td>&nbsp;</td>
+<td>HYC</td>
+<td>1099</td>
+<td>0.31.15</td>
+<td>0.28.26</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>635</td>
+<td>Melges 15</td>
+<td>Cormac Farrelly</td>
+<td>Justin Cullen</td>
+<td>HYC</td>
+<td>995</td>
+<td>0.28.41</td>
+<td>0.28.50</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>38</td>
+<td>IDRA 14</td>
+<td>Alan Carr</td>
+<td>Orlaith Connolly</td>
+<td>HYC</td>
+<td>1124</td>
+<td>0.34.03</td>
+<td>0.30.18</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>6</td>
+<td>Finn</td>
+<td>Richard Tate</td>
+<td>&nbsp;</td>
+<td>RStGYC</td>
+<td>1049</td>
+<td>0.31.52</td>
+<td>0.30.23</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>3948</td>
+<td>RS Aero 6</td>
+<td>Richard Watson</td>
+<td>&nbsp;</td>
+<td>HYC</td>
+<td>1099</td>
+<td>0.34.18</td>
+<td>0.31.13</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>804</td>
+<td>Melges 15</td>
+<td>HYC Use - not to count o/a</td>
+<td>TBC</td>
+<td>HYC</td>
+<td>995</td>
+<td>0.31.30</td>
+<td>0.31.39</td>
+<td>6.0</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>114</td>
+<td>IDRA 14</td>
+<td>Dan Hannah Joey Tom</td>
+<td>Dan Hannah Joey Tom</td>
+<td>CYBC</td>
+<td>1124</td>
+<td>0.35.41</td>
+<td>0.31.45</td>
+<td>7.0</td>
+</tr>
+<tr class="even racerow">
+<td>8</td>
+<td>806</td>
+<td>Melges 15</td>
+<td>Charlie Robertson</td>
+<td>Sarah Robertson</td>
+<td>HYC</td>
+<td>995</td>
+<td>0.31.45</td>
+<td>0.31.55</td>
+<td>8.0</td>
+</tr>
+<tr class="odd racerow">
+<td>9</td>
+<td>119</td>
+<td>IDRA 14</td>
+<td>Orla Doogue</td>
+<td>TBC</td>
+<td>HYC</td>
+<td>1124</td>
+<td>0.38.50</td>
+<td>0.34.33</td>
+<td>9.0</td>
+</tr>
+<tr class="even racerow">
+<td>10</td>
+<td>161</td>
+<td>IDRA 14</td>
+<td>Pierre Long</td>
+<td>Remy / Paul / Marc</td>
+<td>DMYC</td>
+<td>1124</td>
+<td>0.40.07</td>
+<td>0.35.41</td>
+<td>10.0</td>
+</tr>
+<tr class="odd racerow">
+<td>11</td>
+<td>801</td>
+<td>Melges 15</td>
+<td>Ronan MacDonell</td>
+<td>Eoin Kernan</td>
+<td>HYC</td>
+<td>995</td>
+<td>DNF</td>
+<td>&nbsp;</td>
+<td>13.0</td>
+</tr>
+<tr class="even racerow">
+<td>11</td>
+<td>21282</td>
+<td>Enterprise</td>
+<td>Conor Costello</td>
+<td>Brendan Costello</td>
+<td>HYC</td>
+<td>1137</td>
+<td>DNF</td>
+<td>&nbsp;</td>
+<td>13.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r4py">R4 - PY Fleet&nbsp;-&nbsp;Jan 18</h3>
+<div class="caption racecaption">
+Start: Start 1, Finishes: Finish time, Time: 12.01.00
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="10">
+<col class="rank" />
+<col class="sailno" />
+<col class="class" />
+<col class="helmname" />
+<col class="crewname" />
+<col class="club" />
+<col class="rating" />
+<col class="elapsed" />
+<col class="corrected" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Sail Nr</th>
+<th>Class</th>
+<th>Helm Name</th>
+<th>Crew</th>
+<th>Club</th>
+<th>PY</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>804</td>
+<td>Melges 15</td>
+<td>HYC Use - not to count o/a</td>
+<td>TBC</td>
+<td>HYC</td>
+<td>995</td>
+<td>0.31.06</td>
+<td>0.31.15</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>4523</td>
+<td>RS Aero 6</td>
+<td>Daragh Sheridan</td>
+<td>&nbsp;</td>
+<td>HYC</td>
+<td>1099</td>
+<td>0.34.46</td>
+<td>0.31.38</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>635</td>
+<td>Melges 15</td>
+<td>Cormac Farrelly</td>
+<td>Justin Cullen</td>
+<td>HYC</td>
+<td>995</td>
+<td>0.31.37</td>
+<td>0.31.47</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>806</td>
+<td>Melges 15</td>
+<td>Charlie Robertson</td>
+<td>Sarah Robertson</td>
+<td>HYC</td>
+<td>995</td>
+<td>0.33.32</td>
+<td>0.33.42</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>6</td>
+<td>Finn</td>
+<td>Richard Tate</td>
+<td>&nbsp;</td>
+<td>RStGYC</td>
+<td>1049</td>
+<td>0.36.03</td>
+<td>0.34.22</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>38</td>
+<td>IDRA 14</td>
+<td>Alan Carr</td>
+<td>Orlaith Connolly</td>
+<td>HYC</td>
+<td>1124</td>
+<td>0.39.39</td>
+<td>0.35.17</td>
+<td>6.0</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>161</td>
+<td>IDRA 14</td>
+<td>Pierre Long</td>
+<td>Remy / Paul / Marc</td>
+<td>DMYC</td>
+<td>1124</td>
+<td>0.40.31</td>
+<td>0.36.03</td>
+<td>7.0</td>
+</tr>
+<tr class="even racerow">
+<td>8</td>
+<td>114</td>
+<td>IDRA 14</td>
+<td>Dan Hannah Joey Tom</td>
+<td>Dan Hannah Joey Tom</td>
+<td>CYBC</td>
+<td>1124</td>
+<td>0.45.22</td>
+<td>0.40.22</td>
+<td>8.0</td>
+</tr>
+<tr class="odd racerow">
+<td>9</td>
+<td>119</td>
+<td>IDRA 14</td>
+<td>Orla Doogue</td>
+<td>TBC</td>
+<td>HYC</td>
+<td>1124</td>
+<td>0.47.39</td>
+<td>0.42.24</td>
+<td>9.0</td>
+</tr>
+<tr class="even racerow">
+<td>10</td>
+<td>801</td>
+<td>Melges 15</td>
+<td>Ronan MacDonell</td>
+<td>Eoin Kernan</td>
+<td>HYC</td>
+<td>995</td>
+<td>UFD</td>
+<td>&nbsp;</td>
+<td>12.0</td>
+</tr>
+<tr class="odd racerow">
+<td>10</td>
+<td>21282</td>
+<td>Enterprise</td>
+<td>Conor Costello</td>
+<td>Brendan Costello</td>
+<td>HYC</td>
+<td>1137</td>
+<td>UFD</td>
+<td>&nbsp;</td>
+<td>12.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r5py">R5 - PY Fleet&nbsp;-&nbsp;Jan 25</h3>
+<div class="caption racecaption">
+Start: Start 1, Finishes: Finish time, Time: 105100
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="10">
+<col class="rank" />
+<col class="sailno" />
+<col class="class" />
+<col class="helmname" />
+<col class="crewname" />
+<col class="club" />
+<col class="rating" />
+<col class="elapsed" />
+<col class="corrected" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Sail Nr</th>
+<th>Class</th>
+<th>Helm Name</th>
+<th>Crew</th>
+<th>Club</th>
+<th>PY</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>4523</td>
+<td>RS Aero 6</td>
+<td>Daragh Sheridan</td>
+<td>&nbsp;</td>
+<td>HYC</td>
+<td>1099</td>
+<td>0:38:57</td>
+<td>0:35:26</td>
+<td>2.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>804</td>
+<td>Melges 15</td>
+<td>HYC Use - not to count o/a</td>
+<td>TBC</td>
+<td>HYC</td>
+<td>995</td>
+<td>SCP</td>
+<td>0:34:52</td>
+<td>3.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>801</td>
+<td>Melges 15</td>
+<td>Ronan MacDonell</td>
+<td>Eoin Kernan</td>
+<td>HYC</td>
+<td>995</td>
+<td>0:36:08</td>
+<td>0:36:19</td>
+<td>4.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>635</td>
+<td>Melges 15</td>
+<td>Cormac Farrelly</td>
+<td>Justin Cullen</td>
+<td>HYC</td>
+<td>995</td>
+<td>SCP</td>
+<td>0:36:10</td>
+<td>5.0</td>
+</tr>
+<tr class="odd racerow">
+<td>4</td>
+<td>38</td>
+<td>IDRA 14</td>
+<td>Alan Carr</td>
+<td>Orlaith Connolly</td>
+<td>HYC</td>
+<td>1124</td>
+<td>0:44:39</td>
+<td>0:39:43</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>6</td>
+<td>Finn</td>
+<td>Richard Tate</td>
+<td>&nbsp;</td>
+<td>RStGYC</td>
+<td>1049</td>
+<td>0:41:41</td>
+<td>0:39:44</td>
+<td>6.0</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>161</td>
+<td>IDRA 14</td>
+<td>Pierre Long</td>
+<td>Remy / Paul / Marc</td>
+<td>DMYC</td>
+<td>1124</td>
+<td>0:45:36</td>
+<td>0:40:34</td>
+<td>7.0</td>
+</tr>
+<tr class="even racerow">
+<td>8</td>
+<td>128</td>
+<td>IDRA 14</td>
+<td>Ryan Cairns</td>
+<td>Finn O'Doherty</td>
+<td>HYC</td>
+<td>1124</td>
+<td>0:47:42</td>
+<td>0:42:26</td>
+<td>8.0</td>
+</tr>
+<tr class="odd racerow">
+<td>9</td>
+<td>21282</td>
+<td>Enterprise</td>
+<td>Conor Costello</td>
+<td>Brendan Costello</td>
+<td>HYC</td>
+<td>1137</td>
+<td>SCP</td>
+<td>0:42:32</td>
+<td>11.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r6py">R6 - PY Fleet&nbsp;-&nbsp;Jan 25</h3>
+<div class="caption racecaption">
+Start: Start 1, Finishes: Finish time, Time: 114800
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="10">
+<col class="rank" />
+<col class="sailno" />
+<col class="class" />
+<col class="helmname" />
+<col class="crewname" />
+<col class="club" />
+<col class="rating" />
+<col class="elapsed" />
+<col class="corrected" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Sail Nr</th>
+<th>Class</th>
+<th>Helm Name</th>
+<th>Crew</th>
+<th>Club</th>
+<th>PY</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>4523</td>
+<td>RS Aero 6</td>
+<td>Daragh Sheridan</td>
+<td>&nbsp;</td>
+<td>HYC</td>
+<td>1099</td>
+<td>0:36:04</td>
+<td>0:32:49</td>
+<td>2.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>804</td>
+<td>Melges 15</td>
+<td>HYC Use - not to count o/a</td>
+<td>TBC</td>
+<td>HYC</td>
+<td>995</td>
+<td>SCP</td>
+<td>0:32:38</td>
+<td>3.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>801</td>
+<td>Melges 15</td>
+<td>Ronan MacDonell</td>
+<td>Eoin Kernan</td>
+<td>HYC</td>
+<td>995</td>
+<td>0:34:23</td>
+<td>0:34:33</td>
+<td>4.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>635</td>
+<td>Melges 15</td>
+<td>Cormac Farrelly</td>
+<td>Justin Cullen</td>
+<td>HYC</td>
+<td>995</td>
+<td>SCP</td>
+<td>0:33:07</td>
+<td>5.0</td>
+</tr>
+<tr class="odd racerow">
+<td>4</td>
+<td>38</td>
+<td>IDRA 14</td>
+<td>Alan Carr</td>
+<td>Orlaith Connolly</td>
+<td>HYC</td>
+<td>1124</td>
+<td>0:39:48</td>
+<td>0:35:25</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>161</td>
+<td>IDRA 14</td>
+<td>Pierre Long</td>
+<td>Remy / Paul / Marc</td>
+<td>DMYC</td>
+<td>1124</td>
+<td>0:40:04</td>
+<td>0:35:39</td>
+<td>6.0</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>6</td>
+<td>Finn</td>
+<td>Richard Tate</td>
+<td>&nbsp;</td>
+<td>RStGYC</td>
+<td>1049</td>
+<td>0:37:54</td>
+<td>0:36:08</td>
+<td>7.0</td>
+</tr>
+<tr class="even racerow">
+<td>8</td>
+<td>3948</td>
+<td>RS Aero 6</td>
+<td>Richard Watson</td>
+<td>&nbsp;</td>
+<td>HYC</td>
+<td>1099</td>
+<td>0:40:39</td>
+<td>0:36:59</td>
+<td>8.0</td>
+</tr>
+<tr class="odd racerow">
+<td>9</td>
+<td>128</td>
+<td>IDRA 14</td>
+<td>Ryan Cairns</td>
+<td>Finn O'Doherty</td>
+<td>HYC</td>
+<td>1124</td>
+<td>0:43:01</td>
+<td>0:38:16</td>
+<td>9.0</td>
+</tr>
+<tr class="even racerow">
+<td>10</td>
+<td>21282</td>
+<td>Enterprise</td>
+<td>Conor Costello</td>
+<td>Brendan Costello</td>
+<td>HYC</td>
+<td>1137</td>
+<td>SCP</td>
+<td>0:38:22</td>
+<td>12.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r7py">R7 - PY Fleet&nbsp;-&nbsp;1st Feb</h3>
+<div class="caption racecaption">
+Start: Start 1, Finishes: Finish time, Time: 104700
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="10">
+<col class="rank" />
+<col class="sailno" />
+<col class="class" />
+<col class="helmname" />
+<col class="crewname" />
+<col class="club" />
+<col class="rating" />
+<col class="elapsed" />
+<col class="corrected" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Sail Nr</th>
+<th>Class</th>
+<th>Helm Name</th>
+<th>Crew</th>
+<th>Club</th>
+<th>PY</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>38</td>
+<td>IDRA 14</td>
+<td>Alan Carr</td>
+<td>Orlaith Connolly</td>
+<td>HYC</td>
+<td>1124</td>
+<td>0:54:40</td>
+<td>0:48:38</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>161</td>
+<td>IDRA 14</td>
+<td>Pierre Long</td>
+<td>Remy / Paul / Marc</td>
+<td>DMYC</td>
+<td>1124</td>
+<td>0:55:17</td>
+<td>0:49:11</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>21282</td>
+<td>Enterprise</td>
+<td>Conor Costello</td>
+<td>Brendan Costello</td>
+<td>HYC</td>
+<td>1137</td>
+<td>0:56:43</td>
+<td>0:49:53</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>128</td>
+<td>IDRA 14</td>
+<td>Ryan Cairns</td>
+<td>Finn O'Doherty</td>
+<td>HYC</td>
+<td>1124</td>
+<td>0:56:34</td>
+<td>0:50:20</td>
+<td>5.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>635</td>
+<td>Melges 15</td>
+<td>Cormac Farrelly</td>
+<td>Justin Cullen</td>
+<td>HYC</td>
+<td>995</td>
+<td>0:51:01</td>
+<td>0:51:16</td>
+<td>6.0</td>
+</tr>
+<tr class="even racerow">
+<td>5</td>
+<td>804</td>
+<td>Melges 15</td>
+<td>HYC Use - not to count o/a</td>
+<td>TBC</td>
+<td>HYC</td>
+<td>995</td>
+<td>SCP</td>
+<td>0:49:56</td>
+<td>6.0</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>803</td>
+<td>Melges 15</td>
+<td>Stephen Quinn</td>
+<td>Quinn</td>
+<td>HYC</td>
+<td>995</td>
+<td>0:51:16</td>
+<td>0:51:31</td>
+<td>7.0</td>
+</tr>
+<tr class="even racerow">
+<td>8</td>
+<td>801</td>
+<td>Melges 15</td>
+<td>Ronan MacDonell</td>
+<td>Eoin Kernan</td>
+<td>HYC</td>
+<td>995</td>
+<td>0:51:23</td>
+<td>0:51:38</td>
+<td>8.0</td>
+</tr>
+<tr class="odd racerow">
+<td>9</td>
+<td>806</td>
+<td>Melges 15</td>
+<td>Charlie Robertson</td>
+<td>Sarah Robertson</td>
+<td>HYC</td>
+<td>995</td>
+<td>DNS</td>
+<td>&nbsp;</td>
+<td>10.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r8py">R8 - PY Fleet&nbsp;-&nbsp;1st Feb</h3>
+<div class="caption racecaption">
+Start: Start 1, Finishes: Finish time, Time: 114900
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="10">
+<col class="rank" />
+<col class="sailno" />
+<col class="class" />
+<col class="helmname" />
+<col class="crewname" />
+<col class="club" />
+<col class="rating" />
+<col class="elapsed" />
+<col class="corrected" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Sail Nr</th>
+<th>Class</th>
+<th>Helm Name</th>
+<th>Crew</th>
+<th>Club</th>
+<th>PY</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>161</td>
+<td>IDRA 14</td>
+<td>Pierre Long</td>
+<td>Remy / Paul / Marc</td>
+<td>DMYC</td>
+<td>1124</td>
+<td>0:32:53</td>
+<td>0:29:15</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>38</td>
+<td>IDRA 14</td>
+<td>Alan Carr</td>
+<td>Orlaith Connolly</td>
+<td>HYC</td>
+<td>1124</td>
+<td>0:33:13</td>
+<td>0:29:33</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>128</td>
+<td>IDRA 14</td>
+<td>Ryan Cairns</td>
+<td>Finn O'Doherty</td>
+<td>HYC</td>
+<td>1124</td>
+<td>0:33:58</td>
+<td>0:30:13</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>21282</td>
+<td>Enterprise</td>
+<td>Conor Costello</td>
+<td>Brendan Costello</td>
+<td>HYC</td>
+<td>1137</td>
+<td>0:34:59</td>
+<td>0:30:46</td>
+<td>5.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>635</td>
+<td>Melges 15</td>
+<td>Cormac Farrelly</td>
+<td>Justin Cullen</td>
+<td>HYC</td>
+<td>995</td>
+<td>0:32:39</td>
+<td>0:32:49</td>
+<td>6.0</td>
+</tr>
+<tr class="even racerow">
+<td>5</td>
+<td>804</td>
+<td>Melges 15</td>
+<td>HYC Use - not to count o/a</td>
+<td>TBC</td>
+<td>HYC</td>
+<td>995</td>
+<td>SCP</td>
+<td>0:30:35</td>
+<td>6.0</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>803</td>
+<td>Melges 15</td>
+<td>Stephen Quinn</td>
+<td>Quinn</td>
+<td>HYC</td>
+<td>995</td>
+<td>0:33:17</td>
+<td>0:33:27</td>
+<td>7.0</td>
+</tr>
+<tr class="even racerow">
+<td>8</td>
+<td>806</td>
+<td>Melges 15</td>
+<td>Charlie Robertson</td>
+<td>Sarah Robertson</td>
+<td>HYC</td>
+<td>995</td>
+<td>0:37:20</td>
+<td>0:37:31</td>
+<td>8.0</td>
+</tr>
+<tr class="odd racerow">
+<td>9</td>
+<td>801</td>
+<td>Melges 15</td>
+<td>Ronan MacDonell</td>
+<td>Eoin Kernan</td>
+<td>HYC</td>
+<td>995</td>
+<td>RET</td>
+<td>&nbsp;</td>
+<td>10.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r9py">R9 - PY Fleet&nbsp;-&nbsp;Feb 15</h3>
+<div class="caption racecaption">
+Start: Start 2, Finishes: Finish time, Time: 10.51.00
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="10">
+<col class="rank" />
+<col class="sailno" />
+<col class="class" />
+<col class="helmname" />
+<col class="crewname" />
+<col class="club" />
+<col class="rating" />
+<col class="elapsed" />
+<col class="corrected" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Sail Nr</th>
+<th>Class</th>
+<th>Helm Name</th>
+<th>Crew</th>
+<th>Club</th>
+<th>PY</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>801</td>
+<td>Melges 15</td>
+<td>Ronan MacDonell</td>
+<td>Eoin Kernan</td>
+<td>HYC</td>
+<td>995</td>
+<td>0.25.09</td>
+<td>0.25.17</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>4523</td>
+<td>RS Aero 6</td>
+<td>Daragh Sheridan</td>
+<td>&nbsp;</td>
+<td>HYC</td>
+<td>1099</td>
+<td>0.28.07</td>
+<td>0.25.35</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>635</td>
+<td>Melges 15</td>
+<td>Cormac Farrelly</td>
+<td>Justin Cullen</td>
+<td>HYC</td>
+<td>995</td>
+<td>0.25.59</td>
+<td>0.26.07</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>6</td>
+<td>Finn</td>
+<td>Richard Tate</td>
+<td>&nbsp;</td>
+<td>RStGYC</td>
+<td>1049</td>
+<td>0.29.58</td>
+<td>0.28.34</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>806</td>
+<td>Melges 15</td>
+<td>Charlie Robertson</td>
+<td>Sarah Robertson</td>
+<td>HYC</td>
+<td>995</td>
+<td>0.29.36</td>
+<td>0.29.45</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>161</td>
+<td>IDRA 14</td>
+<td>Pierre Long</td>
+<td>Remy / Paul / Marc</td>
+<td>DMYC</td>
+<td>1124</td>
+<td>0.34.08</td>
+<td>0.30.22</td>
+<td>6.0</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>128</td>
+<td>IDRA 14</td>
+<td>Ryan Cairns</td>
+<td>Finn O'Doherty</td>
+<td>HYC</td>
+<td>1124</td>
+<td>0.34.44</td>
+<td>0.30.54</td>
+<td>7.0</td>
+</tr>
+<tr class="even racerow">
+<td>8</td>
+<td>38</td>
+<td>IDRA 14</td>
+<td>Alan Carr</td>
+<td>Orlaith Connolly</td>
+<td>HYC</td>
+<td>1124</td>
+<td>0.35.49</td>
+<td>0.31.52</td>
+<td>8.0</td>
+</tr>
+<tr class="odd racerow">
+<td>9</td>
+<td>21282</td>
+<td>Enterprise</td>
+<td>Conor Costello</td>
+<td>Brendan Costello</td>
+<td>HYC</td>
+<td>1137</td>
+<td>DNF</td>
+<td>&nbsp;</td>
+<td>10.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r10py">R10 - PY Fleet&nbsp;-&nbsp;Feb 15</h3>
+<div class="caption racecaption">
+Start: Start 2, Finishes: Finish time, Time: 114200
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="10">
+<col class="rank" />
+<col class="sailno" />
+<col class="class" />
+<col class="helmname" />
+<col class="crewname" />
+<col class="club" />
+<col class="rating" />
+<col class="elapsed" />
+<col class="corrected" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Sail Nr</th>
+<th>Class</th>
+<th>Helm Name</th>
+<th>Crew</th>
+<th>Club</th>
+<th>PY</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>4523</td>
+<td>RS Aero 6</td>
+<td>Daragh Sheridan</td>
+<td>&nbsp;</td>
+<td>HYC</td>
+<td>1099</td>
+<td>0:24:57</td>
+<td>0:22:42</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>801</td>
+<td>Melges 15</td>
+<td>Ronan MacDonell</td>
+<td>Eoin Kernan</td>
+<td>HYC</td>
+<td>995</td>
+<td>0:24:30</td>
+<td>0:24:37</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>635</td>
+<td>Melges 15</td>
+<td>Cormac Farrelly</td>
+<td>Justin Cullen</td>
+<td>HYC</td>
+<td>995</td>
+<td>0:25:27</td>
+<td>0:25:35</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>6</td>
+<td>Finn</td>
+<td>Richard Tate</td>
+<td>&nbsp;</td>
+<td>RStGYC</td>
+<td>1049</td>
+<td>0:27:45</td>
+<td>0:26:27</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>21282</td>
+<td>Enterprise</td>
+<td>Conor Costello</td>
+<td>Brendan Costello</td>
+<td>HYC</td>
+<td>1137</td>
+<td>0:31:55</td>
+<td>0:28:04</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>128</td>
+<td>IDRA 14</td>
+<td>Ryan Cairns</td>
+<td>Finn O'Doherty</td>
+<td>HYC</td>
+<td>1124</td>
+<td>0:32:49</td>
+<td>0:29:12</td>
+<td>6.0</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>38</td>
+<td>IDRA 14</td>
+<td>Alan Carr</td>
+<td>Orlaith Connolly</td>
+<td>HYC</td>
+<td>1124</td>
+<td>0:33:46</td>
+<td>0:30:02</td>
+<td>7.0</td>
+</tr>
+<tr class="even racerow">
+<td>8</td>
+<td>161</td>
+<td>IDRA 14</td>
+<td>Pierre Long</td>
+<td>Remy / Paul / Marc</td>
+<td>DMYC</td>
+<td>1124</td>
+<td>DNF</td>
+<td>&nbsp;</td>
+<td>9.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r11py">R11 - PY Fleet&nbsp;-&nbsp;Feb 22</h3>
+<div class="caption racecaption">
+Start: Start 2, Finishes: Finish time, Time: 10:57:00
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="10">
+<col class="rank" />
+<col class="sailno" />
+<col class="class" />
+<col class="helmname" />
+<col class="crewname" />
+<col class="club" />
+<col class="rating" />
+<col class="elapsed" />
+<col class="corrected" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Sail Nr</th>
+<th>Class</th>
+<th>Helm Name</th>
+<th>Crew</th>
+<th>Club</th>
+<th>PY</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>4523</td>
+<td>RS Aero 6</td>
+<td>Daragh Sheridan</td>
+<td>&nbsp;</td>
+<td>HYC</td>
+<td>1099</td>
+<td>0:37:24</td>
+<td>0:34:02</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>635</td>
+<td>Melges 15</td>
+<td>Cormac Farrelly</td>
+<td>Justin Cullen</td>
+<td>HYC</td>
+<td>995</td>
+<td>0:35:40</td>
+<td>0:35:51</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>3291</td>
+<td>RS Aero 6</td>
+<td>John Phelan</td>
+<td>&nbsp;</td>
+<td>HYC</td>
+<td>1099</td>
+<td>0:41:06</td>
+<td>0:37:24</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>6</td>
+<td>Finn</td>
+<td>Richard Tate</td>
+<td>&nbsp;</td>
+<td>RStGYC</td>
+<td>1049</td>
+<td>0:40:03</td>
+<td>0:38:11</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>803</td>
+<td>Melges 15</td>
+<td>Stephen Quinn</td>
+<td>Quinn</td>
+<td>HYC</td>
+<td>995</td>
+<td>0:38:28</td>
+<td>0:38:40</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>38</td>
+<td>IDRA 14</td>
+<td>Alan Carr</td>
+<td>Orlaith Connolly</td>
+<td>HYC</td>
+<td>1124</td>
+<td>0:48:01</td>
+<td>0:42:43</td>
+<td>6.0</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>21282</td>
+<td>Enterprise</td>
+<td>Conor Costello</td>
+<td>Brendan Costello</td>
+<td>HYC</td>
+<td>1137</td>
+<td>0:49:04</td>
+<td>0:43:09</td>
+<td>7.0</td>
+</tr>
+<tr class="even racerow">
+<td>8</td>
+<td>114</td>
+<td>IDRA 14</td>
+<td>Dan Hannah Joey Tom</td>
+<td>Dan Hannah Joey Tom</td>
+<td>CYBC</td>
+<td>1124</td>
+<td>0:51:25</td>
+<td>0:45:45</td>
+<td>8.0</td>
+</tr>
+<tr class="odd racerow">
+<td>9</td>
+<td>161</td>
+<td>IDRA 14</td>
+<td>Pierre Long</td>
+<td>Remy / Paul / Marc</td>
+<td>DMYC</td>
+<td>1124</td>
+<td>0:52:00</td>
+<td>0:46:16</td>
+<td>9.0</td>
+</tr>
+<tr class="even racerow">
+<td>10</td>
+<td>128</td>
+<td>IDRA 14</td>
+<td>Ryan Cairns</td>
+<td>Finn O'Doherty</td>
+<td>HYC</td>
+<td>1124</td>
+<td>0:53:00</td>
+<td>0:47:09</td>
+<td>10.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r12py">R12 - PY Fleet&nbsp;-&nbsp;Feb 22</h3>
+<div class="caption racecaption">
+Start: Start 2, Finishes: Finish time, Time: 115700
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="10">
+<col class="rank" />
+<col class="sailno" />
+<col class="class" />
+<col class="helmname" />
+<col class="crewname" />
+<col class="club" />
+<col class="rating" />
+<col class="elapsed" />
+<col class="corrected" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Sail Nr</th>
+<th>Class</th>
+<th>Helm Name</th>
+<th>Crew</th>
+<th>Club</th>
+<th>PY</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>4523</td>
+<td>RS Aero 6</td>
+<td>Daragh Sheridan</td>
+<td>&nbsp;</td>
+<td>HYC</td>
+<td>1099</td>
+<td>0:31:40</td>
+<td>0:28:49</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>635</td>
+<td>Melges 15</td>
+<td>Cormac Farrelly</td>
+<td>Justin Cullen</td>
+<td>HYC</td>
+<td>995</td>
+<td>0:29:24</td>
+<td>0:29:33</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>803</td>
+<td>Melges 15</td>
+<td>Stephen Quinn</td>
+<td>Quinn</td>
+<td>HYC</td>
+<td>995</td>
+<td>0:32:30</td>
+<td>0:32:40</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>6</td>
+<td>Finn</td>
+<td>Richard Tate</td>
+<td>&nbsp;</td>
+<td>RStGYC</td>
+<td>1049</td>
+<td>0:34:24</td>
+<td>0:32:48</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>21282</td>
+<td>Enterprise</td>
+<td>Conor Costello</td>
+<td>Brendan Costello</td>
+<td>HYC</td>
+<td>1137</td>
+<td>0:38:16</td>
+<td>0:33:39</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>161</td>
+<td>IDRA 14</td>
+<td>Pierre Long</td>
+<td>Remy / Paul / Marc</td>
+<td>DMYC</td>
+<td>1124</td>
+<td>0:38:06</td>
+<td>0:33:54</td>
+<td>6.0</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>128</td>
+<td>IDRA 14</td>
+<td>Ryan Cairns</td>
+<td>Finn O'Doherty</td>
+<td>HYC</td>
+<td>1124</td>
+<td>0:38:39</td>
+<td>0:34:23</td>
+<td>7.0</td>
+</tr>
+<tr class="even racerow">
+<td>8</td>
+<td>38</td>
+<td>IDRA 14</td>
+<td>Alan Carr</td>
+<td>Orlaith Connolly</td>
+<td>HYC</td>
+<td>1124</td>
+<td>0:41:24</td>
+<td>0:36:50</td>
+<td>8.0</td>
+</tr>
+<tr class="odd racerow">
+<td>9</td>
+<td>114</td>
+<td>IDRA 14</td>
+<td>Dan Hannah Joey Tom</td>
+<td>Dan Hannah Joey Tom</td>
+<td>CYBC</td>
+<td>1124</td>
+<td>DNF</td>
+<td>&nbsp;</td>
+<td>11.0</td>
+</tr>
+<tr class="even racerow">
+<td>9</td>
+<td>3291</td>
+<td>RS Aero 6</td>
+<td>John Phelan</td>
+<td>&nbsp;</td>
+<td>HYC</td>
+<td>1099</td>
+<td>DNF</td>
+<td>&nbsp;</td>
+<td>11.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r13py">R13 - PY Fleet&nbsp;-&nbsp;Mar 1</h3>
+<div class="caption racecaption">
+Start: Start 2, Finishes: Finish time, Time: 10.57.00
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="10">
+<col class="rank" />
+<col class="sailno" />
+<col class="class" />
+<col class="helmname" />
+<col class="crewname" />
+<col class="club" />
+<col class="rating" />
+<col class="elapsed" />
+<col class="corrected" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Sail Nr</th>
+<th>Class</th>
+<th>Helm Name</th>
+<th>Crew</th>
+<th>Club</th>
+<th>PY</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>4523</td>
+<td>RS Aero 6</td>
+<td>Daragh Sheridan</td>
+<td>&nbsp;</td>
+<td>HYC</td>
+<td>1099</td>
+<td>0.30.04</td>
+<td>0.27.21</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>635</td>
+<td>Melges 15</td>
+<td>Cormac Farrelly</td>
+<td>Justin Cullen</td>
+<td>HYC</td>
+<td>995</td>
+<td>0.31.04</td>
+<td>0.31.13</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>803</td>
+<td>Melges 15</td>
+<td>Stephen Quinn</td>
+<td>Quinn</td>
+<td>HYC</td>
+<td>995</td>
+<td>0.31.19</td>
+<td>0.31.28</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>806</td>
+<td>Melges 15</td>
+<td>Charlie Robertson</td>
+<td>Sarah Robertson</td>
+<td>HYC</td>
+<td>995</td>
+<td>0.31.51</td>
+<td>0.32.01</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>21282</td>
+<td>Enterprise</td>
+<td>Conor Costello</td>
+<td>Brendan Costello</td>
+<td>HYC</td>
+<td>1137</td>
+<td>0.38.20</td>
+<td>0.33.43</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>161</td>
+<td>IDRA 14</td>
+<td>Pierre Long</td>
+<td>Remy / Paul / Marc</td>
+<td>DMYC</td>
+<td>1124</td>
+<td>0.40.32</td>
+<td>0.36.04</td>
+<td>6.0</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>38</td>
+<td>IDRA 14</td>
+<td>Alan Carr</td>
+<td>Orlaith Connolly</td>
+<td>HYC</td>
+<td>1124</td>
+<td>0.43.20</td>
+<td>0.38.33</td>
+<td>7.0</td>
+</tr>
+<tr class="even racerow">
+<td>8</td>
+<td>128</td>
+<td>IDRA 14</td>
+<td>Ryan Cairns</td>
+<td>Finn O'Doherty</td>
+<td>HYC</td>
+<td>1124</td>
+<td>0.43.50</td>
+<td>0.39.00</td>
+<td>8.0</td>
+</tr>
+<tr class="odd racerow">
+<td>9</td>
+<td>801</td>
+<td>Melges 15</td>
+<td>Ronan MacDonell</td>
+<td>Eoin Kernan</td>
+<td>HYC</td>
+<td>995</td>
+<td>DNF</td>
+<td>&nbsp;</td>
+<td>10.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r14py">R14 - PY Fleet&nbsp;-&nbsp;Mar 1</h3>
+<div class="caption racecaption">
+Start: Start 2, Finishes: Finish time, Time: 11.45.00
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="10">
+<col class="rank" />
+<col class="sailno" />
+<col class="class" />
+<col class="helmname" />
+<col class="crewname" />
+<col class="club" />
+<col class="rating" />
+<col class="elapsed" />
+<col class="corrected" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Sail Nr</th>
+<th>Class</th>
+<th>Helm Name</th>
+<th>Crew</th>
+<th>Club</th>
+<th>PY</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>4523</td>
+<td>RS Aero 6</td>
+<td>Daragh Sheridan</td>
+<td>&nbsp;</td>
+<td>HYC</td>
+<td>1099</td>
+<td>0.26.32</td>
+<td>0.24.09</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>635</td>
+<td>Melges 15</td>
+<td>Cormac Farrelly</td>
+<td>Justin Cullen</td>
+<td>HYC</td>
+<td>995</td>
+<td>0.25.55</td>
+<td>0.26.03</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>806</td>
+<td>Melges 15</td>
+<td>Charlie Robertson</td>
+<td>Sarah Robertson</td>
+<td>HYC</td>
+<td>995</td>
+<td>0.26.43</td>
+<td>0.26.51</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>803</td>
+<td>Melges 15</td>
+<td>Stephen Quinn</td>
+<td>Quinn</td>
+<td>HYC</td>
+<td>995</td>
+<td>0.26.51</td>
+<td>0.26.59</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>161</td>
+<td>IDRA 14</td>
+<td>Pierre Long</td>
+<td>Remy / Paul / Marc</td>
+<td>DMYC</td>
+<td>1124</td>
+<td>0.32.24</td>
+<td>0.28.50</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>21282</td>
+<td>Enterprise</td>
+<td>Conor Costello</td>
+<td>Brendan Costello</td>
+<td>HYC</td>
+<td>1137</td>
+<td>0.32.53</td>
+<td>0.28.55</td>
+<td>6.0</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>38</td>
+<td>IDRA 14</td>
+<td>Alan Carr</td>
+<td>Orlaith Connolly</td>
+<td>HYC</td>
+<td>1124</td>
+<td>0.33.30</td>
+<td>0.29.48</td>
+<td>7.0</td>
+</tr>
+<tr class="even racerow">
+<td>8</td>
+<td>128</td>
+<td>IDRA 14</td>
+<td>Ryan Cairns</td>
+<td>Finn O'Doherty</td>
+<td>HYC</td>
+<td>1124</td>
+<td>DNF</td>
+<td>&nbsp;</td>
+<td>9.0</td>
+</tr>
+</tbody>
+</table>
+
+<p class="hardleft"><a href="https://www.hyc.ie">www.hyc.ie</a><br /><a href="mailto:"></a></p>
+<p class="hardright"><a href="https://www.hyc.ie">www.hyc.ie</a><br /><a href="mailto:"></a></p>
+<p>Sailwave Scoring Software 2.38.02<br /><a href="https://www.sailwave.com">www.sailwave.com</a></p>
+
+</div>
+
+<footer>
+</footer>
+
+<div id="scrollbottom"></div>
+
+</body>
+</html>
+
+

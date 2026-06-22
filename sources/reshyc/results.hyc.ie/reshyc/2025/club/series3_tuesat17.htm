@@ -1,0 +1,1855 @@
+
+
+
+<!doctype html>
+
+<head>
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta http-equiv="Cache-control" content="no-cache">
+<meta name="description" content="sailwave results">
+<meta name="viewport" content="width=device-width">
+
+<title>Sailwave results for Club Racing 2025 at Tuesdays & Saturdays - Howth 17's - Series 3 2025</title>
+
+<style type="text/css">
+body {font: 80% arial, helvetica, sans-serif; text-align: center;}
+.hardleft  {text-align: left; float: left;  margin: 15px 0  15px 25px;}
+.hardright {text-align: right; float: right; margin: 15px 25px 15px 0;}
+table {text-align: left; margin: 0px auto 30px auto; font-size: 1em; border-collapse: collapse; border: 1px #999 solid;}
+td, th {padding: 4px; border: 1px #999 solid; vertical-align: top;}
+.caption {padding: 5px; text-align: center; border: 0; font-weight: bold;}
+p {text-align: center;}
+.contents {text-align: left; margin-left: 20%;}
+.race {background-color: #eee;}
+.odd {background-color: #eef;}
+.natflag {border: 1px #999 solid;}
+.nattext {font-size: 0.8em;}
+.place1 {font-weight: bold; background-color: #ffffaa;}
+.place2 {font-weight: bold; background-color: #aaaaff;}
+.place3 {font-weight: bold; background-color: #ffaaaa;}
+.placen {}
+table.headertable {border: 0px;}
+table.headertable td{border: 0px;}
+</style>
+
+<script type="text/javascript">
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script>
+
+function swGetURLArgs() {
+
+  var url = location.href;
+  var qs  = url.substring(url.indexOf('?') + 1).split('&');
+
+  for(var i = 0, result = {}; i < qs.length; i++) {
+    qs[i]            = qs[i].split('=');
+    result[qs[i][0]] = decodeURIComponent(qs[i][1]);
+  }
+
+  return result;
+}
+
+//
+//  name=HighlightWins3
+//  dependencies=jQuery
+//  description=Highlight winning scores in summary tables.
+//  author=Jon Eskdale based on an idea by Colin Jenkins
+//  date=2015-08-18
+//  version=1.6 2018-11-15
+//  url=http://sailwave.com
+//  email=jon@sailwave.com
+//  twitter=eskdale
+//  comments=Edit colours to colours of your choice
+//
+
+$(document).ready(function() {
+var winsSelector = '.summaryrace';
+var winsText     = /\b1\.0/;
+var twoText              = /\b2\.0/;
+var threeText    = /\b3\.0/;
+
+// Edit these colours to change the highlight colours for 1st, 2nd and 3rd
+var winsColour   = '#ffd700';
+var twoColour    = '#6a91c5';
+var threeColour  = '#da6841';
+//var twoColour  = '#ffe768';
+//var threeColour  = '#fff0a1';
+
+// create array of race column numbers for first table (summarytable)
+var ths = document.getElementsByTagName('col');
+var column =[];
+for (var i=0; i<ths.length; i++) {
+        if (ths[i].classList[0] === "race") {
+                column.push(i);
+        } else {
+                if (column.length !=0) {
+                        break;
+                }
+        }
+}
+//console.log(column);
+
+//  Set a class of summaryrace for all race cells in summary table body
+//
+for (var i=0; i<column.length; i++) {
+        $(".summarytable tbody tr td:nth-child(" + (column[i]+1) +")").addClass("summaryrace");
+}
+
+// Change the background color for cells with class of summaryrace and that match regular expression text
+$(function () {
+
+  $(winsSelector).filter(function() {
+    return winsText.test($(this).text());
+  }).css("background", winsColour);
+  $(winsSelector).filter(function() {
+        return twoText.test($(this).text());
+  }).css("background", twoColour);
+  $(winsSelector).filter(function() {
+        return threeText.test($(this).text());
+  }).css("background", threeColour);
+
+});
+});
+</script>
+
+</head>
+
+<body>
+
+<header>
+</header>
+<table class="headertable" cellspacing="0" width="100%" cellpadding="0" border="0">
+<tbody>
+<div id="wrap">
+
+<tr>
+<td width="30%">
+<img style="display:block; height:100px;"  src="https://hyc.ie/assets/logo-5a615b18e52275b60e166edcca88c6c4.png" alt="venue burgee" />
+</td>
+
+<td width="40%" align="center">
+<h1>Club Racing 2025</h1>
+<h2>Tuesdays & Saturdays - Howth 17's - Series 3</h2>
+</td>
+
+<td width="30%">
+<img style="display:block; height:100px;" src="https://hyc.ie/assets/logo-5a615b18e52275b60e166edcca88c6c4.png" alt="event burgee" align="right" />
+</td>
+</tr>
+</tbody>
+</table>
+
+<div style="clear:both;"></div>
+
+<style>
+div.applicant-break {page-break-after:always;}
+</style>
+<h3 class="seriestitle">Results are provisional as of 16:51 on August 16, 2025</h3>
+<h3 class="summarytitle" id="summary_17_footer_hph">17 Footer HPH Fleet</h3>
+<div class="caption summarycaption">Sailed: 4, Discards: 1, To count: 3, Rating system: NHC1, Entries: 17, Scoring system: Appendix A</div>
+<table class="summarytable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="11">
+<col class="rank" />
+<col class="sailno" />
+<col class="boat" />
+<col class="helmname" />
+<col class="rating" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="total" />
+<col class="nett" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Sail</th>
+<th>Boat</th>
+<th>Entrant</th>
+<th>Rating</th>
+<th><a class="racelink" href="#r1_17_footer_hph">R1</a><br />Jul 22</th>
+<th><a class="racelink" href="#r2_17_footer_hph">R2</a><br />Aug 2</th>
+<th><a class="racelink" href="#r3_17_footer_hph">R3</a><br />Aug 5</th>
+<th><a class="racelink" href="#r4_17_footer_hph">R4</a><br />Aug 16</th>
+<th>Total</th>
+<th>Nett</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd summaryrow">
+<td>1st</td>
+<td>19</td>
+<td>Isobel</td>
+<td>Brian & Conor Turvey</td>
+<td>1.291</td>
+<td class="rank2">2.0</td>
+<td>5.0</td>
+<td class="rank3">3.0</td>
+<td>(7.0)</td>
+<td>17.0</td>
+<td>10.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>2nd</td>
+<td>21</td>
+<td>Orla</td>
+<td>Gallagher & Fitzgibbon</td>
+<td>1.259</td>
+<td>5.0</td>
+<td>6.0</td>
+<td class="rank1">1.0</td>
+<td>(10.0)</td>
+<td>22.0</td>
+<td>12.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>3rd</td>
+<td>20</td>
+<td>Sheila</td>
+<td>David Mulligan & Andy Johnston</td>
+<td>1.299</td>
+<td>(9.0)</td>
+<td>8.0</td>
+<td>4.0</td>
+<td class="rank2">2.0</td>
+<td>23.0</td>
+<td>14.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>4th</td>
+<td>12</td>
+<td>Rosemary</td>
+<td>Curley, Jones & Potter</td>
+<td>1.237</td>
+<td class="rank3">3.0</td>
+<td>7.0</td>
+<td>(18.0 DNC)</td>
+<td>4.0</td>
+<td>32.0</td>
+<td>14.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>5th</td>
+<td>18</td>
+<td>Erica</td>
+<td>Davie Nixon</td>
+<td>1.354</td>
+<td>7.0</td>
+<td>(9.0)</td>
+<td class="rank2">2.0</td>
+<td>9.0</td>
+<td>27.0</td>
+<td>18.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>6th</td>
+<td>11</td>
+<td>Deilginis</td>
+<td>Massey, Toomey & Kenny</td>
+<td>1.326</td>
+<td>8.0</td>
+<td>(10.0)</td>
+<td>5.0</td>
+<td>8.0</td>
+<td>31.0</td>
+<td>21.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>7th</td>
+<td>4</td>
+<td>Zaida</td>
+<td>Houlihan, Houlihan, Carroll & Hurley</td>
+<td>1.189</td>
+<td>(18.0 DNC)</td>
+<td class="rank2">2.0</td>
+<td>18.0 DNC</td>
+<td class="rank3">3.0</td>
+<td>41.0</td>
+<td>23.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>8th</td>
+<td>8</td>
+<td>Echo</td>
+<td>B & H Lynch</td>
+<td>1.148</td>
+<td>12.0</td>
+<td class="rank1">1.0</td>
+<td>(18.0 DNC)</td>
+<td>12.0 RET</td>
+<td>43.0</td>
+<td>25.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>9th</td>
+<td>2</td>
+<td>Pauline</td>
+<td>O'Doherty, Kenny & McCormack</td>
+<td>1.243</td>
+<td>4.0</td>
+<td class="rank3">3.0</td>
+<td>(18.0 DNC)</td>
+<td>18.0 DNC</td>
+<td>43.0</td>
+<td>25.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>10th</td>
+<td>3</td>
+<td>Leila</td>
+<td>Roderick Cooper</td>
+<td>1.246</td>
+<td>13.0</td>
+<td>12.0 DNF</td>
+<td>(18.0 DNC)</td>
+<td class="rank1">1.0</td>
+<td>44.0</td>
+<td>26.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>11th</td>
+<td>6</td>
+<td>Anita</td>
+<td>David O'Connell</td>
+<td>1.097</td>
+<td class="rank1">1.0</td>
+<td>(18.0 DNC)</td>
+<td>8.0 OCS</td>
+<td>18.0 DNC</td>
+<td>45.0</td>
+<td>27.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>12th</td>
+<td>16</td>
+<td>Eileen</td>
+<td>Rima Macken</td>
+<td>1.257</td>
+<td>6.0</td>
+<td>(18.0 DNC)</td>
+<td>18.0 DNC</td>
+<td>5.0</td>
+<td>47.0</td>
+<td>29.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>13th</td>
+<td>7</td>
+<td>Aura</td>
+<td>Ian Malcolm</td>
+<td>1.300</td>
+<td>(18.0 DNC)</td>
+<td>18.0 DNC</td>
+<td>6.0</td>
+<td>6.0</td>
+<td>48.0</td>
+<td>30.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>14th</td>
+<td>1</td>
+<td>Rita</td>
+<td>Marcus Lynch & John Curley</td>
+<td>1.286</td>
+<td>10.0</td>
+<td>4.0</td>
+<td>(18.0 DNC)</td>
+<td>18.0 DNC</td>
+<td>50.0</td>
+<td>32.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>15th</td>
+<td>14</td>
+<td>Gladys</td>
+<td>Byrne & Ferris</td>
+<td>1.171</td>
+<td>11.0</td>
+<td>(18.0 DNC)</td>
+<td>18.0 DNC</td>
+<td>18.0 DNC</td>
+<td>65.0</td>
+<td>47.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>16th</td>
+<td>17</td>
+<td>Oona</td>
+<td>Peter Courtney</td>
+<td>1.228</td>
+<td>(18.0 DNC)</td>
+<td>18.0 DNC</td>
+<td>18.0 DNC</td>
+<td>18.0 DNC</td>
+<td>72.0</td>
+<td>54.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>16th</td>
+<td>5</td>
+<td>Silvermoon</td>
+<td>Susan Morgan</td>
+<td>1.000</td>
+<td>(18.0 DNC)</td>
+<td>18.0 DNC</td>
+<td>18.0 DNC</td>
+<td>18.0 DNC</td>
+<td>72.0</td>
+<td>54.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="summarytitle" id="summary_17_footer_scratch">17 Footer Scratch Fleet</h3>
+<div class="caption summarycaption">Sailed: 4, Discards: 1, To count: 3, Rating system: TCF, Entries: 17, Scoring system: Appendix A</div>
+<table class="summarytable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="11">
+<col class="rank" />
+<col class="sailno" />
+<col class="boat" />
+<col class="helmname" />
+<col class="rating" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="total" />
+<col class="nett" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Sail</th>
+<th>Boat</th>
+<th>Entrant</th>
+<th>Rating</th>
+<th><a class="racelink" href="#r1_17_footer_scratch">R1</a><br />Jul 22</th>
+<th><a class="racelink" href="#r2_17_footer_scratch">R2</a><br />Aug 2</th>
+<th><a class="racelink" href="#r3_17_footer_scratch">R3</a><br />Aug 5</th>
+<th><a class="racelink" href="#r4_17_footer_scratch">R4</a><br />Aug 16</th>
+<th>Total</th>
+<th>Nett</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd summaryrow">
+<td>1st</td>
+<td>18</td>
+<td>Erica</td>
+<td>Davie Nixon</td>
+<td>1.000</td>
+<td class="rank2">(2.0)</td>
+<td class="rank1">1.0</td>
+<td class="rank1">1.0</td>
+<td class="rank1">1.0</td>
+<td>5.0</td>
+<td>3.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>2nd</td>
+<td>19</td>
+<td>Isobel</td>
+<td>Brian & Conor Turvey</td>
+<td>1.000</td>
+<td class="rank1">1.0</td>
+<td class="rank2">(2.0)</td>
+<td class="rank2">2.0</td>
+<td class="rank2">2.0</td>
+<td>7.0</td>
+<td>5.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>3rd</td>
+<td>21</td>
+<td>Orla</td>
+<td>Gallagher & Fitzgibbon</td>
+<td>1.000</td>
+<td class="rank3">3.0</td>
+<td>5.0</td>
+<td class="rank3">3.0</td>
+<td>(9.0)</td>
+<td>20.0</td>
+<td>11.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>4th</td>
+<td>20</td>
+<td>Sheila</td>
+<td>David Mulligan & Andy Johnston</td>
+<td>1.000</td>
+<td>(9.0)</td>
+<td>4.0</td>
+<td>5.0</td>
+<td class="rank3">3.0</td>
+<td>21.0</td>
+<td>12.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>5th</td>
+<td>11</td>
+<td>Deilginis</td>
+<td>Massey, Toomey & Kenny</td>
+<td>1.000</td>
+<td>(8.0)</td>
+<td class="rank3">3.0</td>
+<td>4.0</td>
+<td>5.0</td>
+<td>20.0</td>
+<td>12.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>6th</td>
+<td>12</td>
+<td>Rosemary</td>
+<td>Curley, Jones & Potter</td>
+<td>1.000</td>
+<td>4.0</td>
+<td>8.0</td>
+<td>(18.0 DNC)</td>
+<td>6.0</td>
+<td>36.0</td>
+<td>18.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>7th</td>
+<td>7</td>
+<td>Aura</td>
+<td>Ian Malcolm</td>
+<td>1.000</td>
+<td>(18.0 DNC)</td>
+<td>18.0 DNC</td>
+<td>6.0</td>
+<td>4.0</td>
+<td>46.0</td>
+<td>28.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>8th</td>
+<td>2</td>
+<td>Pauline</td>
+<td>O'Doherty, Kenny & McCormack</td>
+<td>1.000</td>
+<td>5.0</td>
+<td>6.0</td>
+<td>(18.0 DNC)</td>
+<td>18.0 DNC</td>
+<td>47.0</td>
+<td>29.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>9th</td>
+<td>6</td>
+<td>Anita</td>
+<td>David O'Connell</td>
+<td>1.000</td>
+<td>6.0</td>
+<td>(18.0 DNC)</td>
+<td>8.0 OCS</td>
+<td>18.0 DNC</td>
+<td>50.0</td>
+<td>32.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>10th</td>
+<td>3</td>
+<td>Leila</td>
+<td>Roderick Cooper</td>
+<td>1.000</td>
+<td>13.0</td>
+<td>12.0 DNF</td>
+<td>(18.0 DNC)</td>
+<td>7.0</td>
+<td>50.0</td>
+<td>32.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>11th</td>
+<td>16</td>
+<td>Eileen</td>
+<td>Rima Macken</td>
+<td>1.000</td>
+<td>7.0</td>
+<td>(18.0 DNC)</td>
+<td>18.0 DNC</td>
+<td>8.0</td>
+<td>51.0</td>
+<td>33.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>12th</td>
+<td>8</td>
+<td>Echo</td>
+<td>B & H Lynch</td>
+<td>1.000</td>
+<td>12.0</td>
+<td>10.0</td>
+<td>(18.0 DNC)</td>
+<td>12.0 RET</td>
+<td>52.0</td>
+<td>34.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>13th</td>
+<td>1</td>
+<td>Rita</td>
+<td>Marcus Lynch & John Curley</td>
+<td>1.000</td>
+<td>10.0</td>
+<td>7.0</td>
+<td>(18.0 DNC)</td>
+<td>18.0 DNC</td>
+<td>53.0</td>
+<td>35.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>14th</td>
+<td>4</td>
+<td>Zaida</td>
+<td>Houlihan, Houlihan, Carroll & Hurley</td>
+<td>1.000</td>
+<td>(18.0 DNC)</td>
+<td>9.0</td>
+<td>18.0 DNC</td>
+<td>10.0</td>
+<td>55.0</td>
+<td>37.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>15th</td>
+<td>14</td>
+<td>Gladys</td>
+<td>Byrne & Ferris</td>
+<td>1.000</td>
+<td>11.0</td>
+<td>(18.0 DNC)</td>
+<td>18.0 DNC</td>
+<td>18.0 DNC</td>
+<td>65.0</td>
+<td>47.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>16th</td>
+<td>17</td>
+<td>Oona</td>
+<td>Peter Courtney</td>
+<td>1.000</td>
+<td>(18.0 DNC)</td>
+<td>18.0 DNC</td>
+<td>18.0 DNC</td>
+<td>18.0 DNC</td>
+<td>72.0</td>
+<td>54.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>16th</td>
+<td>5</td>
+<td>Silvermoon</td>
+<td>Susan Morgan</td>
+<td>1.000</td>
+<td>(18.0 DNC)</td>
+<td>18.0 DNC</td>
+<td>18.0 DNC</td>
+<td>18.0 DNC</td>
+<td>72.0</td>
+<td>54.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r1_17_footer_hph">R1 - 17 Footer HPH Fleet&nbsp;-&nbsp;Jul 22</h3>
+<div class="caption racecaption">
+Start: H17s, Finishes: Finish time, Time: 19.05.00
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="9">
+<col class="rank" />
+<col class="sailno" />
+<col class="boat" />
+<col class="helmname" />
+<col class="rating" />
+<col class="finish" />
+<col class="elapsed" />
+<col class="corrected" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Sail</th>
+<th>Boat</th>
+<th>Entrant</th>
+<th>Rating</th>
+<th>Finish</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>6</td>
+<td>Anita</td>
+<td>David O'Connell</td>
+<td>1.097</td>
+<td>19.52.52</td>
+<td>0.47.52</td>
+<td>0.52.31</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>19</td>
+<td>Isobel</td>
+<td>Brian & Conor Turvey</td>
+<td>1.291</td>
+<td>19.49.25</td>
+<td>0.44.25</td>
+<td>0.57.21</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>12</td>
+<td>Rosemary</td>
+<td>Curley, Jones & Potter</td>
+<td>1.237</td>
+<td>19.52.02</td>
+<td>0.47.02</td>
+<td>0.58.11</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>2</td>
+<td>Pauline</td>
+<td>O'Doherty, Kenny & McCormack</td>
+<td>1.243</td>
+<td>19.52.10</td>
+<td>0.47.10</td>
+<td>0.58.38</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>21</td>
+<td>Orla</td>
+<td>Gallagher & Fitzgibbon</td>
+<td>1.259</td>
+<td>19.52.01</td>
+<td>0.47.01</td>
+<td>0.59.12</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>16</td>
+<td>Eileen</td>
+<td>Rima Macken</td>
+<td>1.257</td>
+<td>19.53.34</td>
+<td>0.48.34</td>
+<td>1.01.03</td>
+<td>6.0</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>18</td>
+<td>Erica</td>
+<td>Davie Nixon</td>
+<td>1.354</td>
+<td>19.50.41</td>
+<td>0.45.41</td>
+<td>1.01.51</td>
+<td>7.0</td>
+</tr>
+<tr class="even racerow">
+<td>8</td>
+<td>11</td>
+<td>Deilginis</td>
+<td>Massey, Toomey & Kenny</td>
+<td>1.326</td>
+<td>19.55.13</td>
+<td>0.50.13</td>
+<td>1.06.35</td>
+<td>8.0</td>
+</tr>
+<tr class="odd racerow">
+<td>9</td>
+<td>20</td>
+<td>Sheila</td>
+<td>David Mulligan & Andy Johnston</td>
+<td>1.299</td>
+<td>19.57.11</td>
+<td>0.52.11</td>
+<td>1.07.47</td>
+<td>9.0</td>
+</tr>
+<tr class="even racerow">
+<td>10</td>
+<td>1</td>
+<td>Rita</td>
+<td>Marcus Lynch & John Curley</td>
+<td>1.286</td>
+<td>19.58.42</td>
+<td>0.53.42</td>
+<td>1.09.03</td>
+<td>10.0</td>
+</tr>
+<tr class="odd racerow">
+<td>11</td>
+<td>14</td>
+<td>Gladys</td>
+<td>Byrne & Ferris</td>
+<td>1.171</td>
+<td>20.08.00</td>
+<td>1.03.00</td>
+<td>1.13.46</td>
+<td>11.0</td>
+</tr>
+<tr class="even racerow">
+<td>12</td>
+<td>8</td>
+<td>Echo</td>
+<td>B & H Lynch</td>
+<td>1.148</td>
+<td>20.10.41</td>
+<td>1.05.41</td>
+<td>1.15.24</td>
+<td>12.0</td>
+</tr>
+<tr class="odd racerow">
+<td>13</td>
+<td>3</td>
+<td>Leila</td>
+<td>Roderick Cooper</td>
+<td>1.246</td>
+<td>20.11.48</td>
+<td>1.06.48</td>
+<td>1.23.14</td>
+<td>13.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r2_17_footer_hph">R2 - 17 Footer HPH Fleet&nbsp;-&nbsp;Aug 2</h3>
+<div class="caption racecaption">
+Start: H17s, Finishes: Finish time, Time: 14.25.00
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="9">
+<col class="rank" />
+<col class="sailno" />
+<col class="boat" />
+<col class="helmname" />
+<col class="rating" />
+<col class="finish" />
+<col class="elapsed" />
+<col class="corrected" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Sail</th>
+<th>Boat</th>
+<th>Entrant</th>
+<th>Rating</th>
+<th>Finish</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>8</td>
+<td>Echo</td>
+<td>B & H Lynch</td>
+<td>1.132</td>
+<td>16.05.33</td>
+<td>1.40.33</td>
+<td>1.53.49</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>4</td>
+<td>Zaida</td>
+<td>Houlihan, Houlihan, Carroll & Hurley</td>
+<td>1.189</td>
+<td>16.04.55</td>
+<td>1.39.55</td>
+<td>1.58.48</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>2</td>
+<td>Pauline</td>
+<td>O'Doherty, Kenny & McCormack</td>
+<td>1.261</td>
+<td>16.01.18</td>
+<td>1.36.18</td>
+<td>2.01.26</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>1</td>
+<td>Rita</td>
+<td>Marcus Lynch & John Curley</td>
+<td>1.263</td>
+<td>16.01.33</td>
+<td>1.36.33</td>
+<td>2.01.57</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>19</td>
+<td>Isobel</td>
+<td>Brian & Conor Turvey</td>
+<td>1.319</td>
+<td>15.57.37</td>
+<td>1.32.37</td>
+<td>2.02.10</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>21</td>
+<td>Orla</td>
+<td>Gallagher & Fitzgibbon</td>
+<td>1.274</td>
+<td>16.01.08</td>
+<td>1.36.08</td>
+<td>2.02.28</td>
+<td>6.0</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>12</td>
+<td>Rosemary</td>
+<td>Curley, Jones & Potter</td>
+<td>1.258</td>
+<td>16.02.27</td>
+<td>1.37.27</td>
+<td>2.02.36</td>
+<td>7.0</td>
+</tr>
+<tr class="even racerow">
+<td>8</td>
+<td>20</td>
+<td>Sheila</td>
+<td>David Mulligan & Andy Johnston</td>
+<td>1.279</td>
+<td>16.01.07</td>
+<td>1.36.07</td>
+<td>2.02.56</td>
+<td>8.0</td>
+</tr>
+<tr class="odd racerow">
+<td>9</td>
+<td>18</td>
+<td>Erica</td>
+<td>Davie Nixon</td>
+<td>1.351</td>
+<td>15.56.56</td>
+<td>1.31.56</td>
+<td>2.04.12</td>
+<td>9.0</td>
+</tr>
+<tr class="even racerow">
+<td>10</td>
+<td>11</td>
+<td>Deilginis</td>
+<td>Massey, Toomey & Kenny</td>
+<td>1.309</td>
+<td>16.00.39</td>
+<td>1.35.39</td>
+<td>2.05.12</td>
+<td>10.0</td>
+</tr>
+<tr class="odd racerow">
+<td>11</td>
+<td>3</td>
+<td>Leila</td>
+<td>Roderick Cooper</td>
+<td>1.221</td>
+<td>&nbsp;</td>
+<td>DNF</td>
+<td>&nbsp;</td>
+<td>12.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r3_17_footer_hph">R3 - 17 Footer HPH Fleet&nbsp;-&nbsp;Aug 5</h3>
+<div class="caption racecaption">
+Start: H17s, Finishes: Finish time, Time: 19.05.00
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="9">
+<col class="rank" />
+<col class="sailno" />
+<col class="boat" />
+<col class="helmname" />
+<col class="rating" />
+<col class="finish" />
+<col class="elapsed" />
+<col class="corrected" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Sail</th>
+<th>Boat</th>
+<th>Entrant</th>
+<th>Rating</th>
+<th>Finish</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>21</td>
+<td>Orla</td>
+<td>Gallagher & Fitzgibbon</td>
+<td>1.272</td>
+<td>20.14.32</td>
+<td>1.09.32</td>
+<td>1.28.27</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>18</td>
+<td>Erica</td>
+<td>Davie Nixon</td>
+<td>1.346</td>
+<td>20.11.48</td>
+<td>1.06.48</td>
+<td>1.29.55</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>19</td>
+<td>Isobel</td>
+<td>Brian & Conor Turvey</td>
+<td>1.317</td>
+<td>20.13.18</td>
+<td>1.08.18</td>
+<td>1.29.57</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>20</td>
+<td>Sheila</td>
+<td>David Mulligan & Andy Johnston</td>
+<td>1.276</td>
+<td>20.16.29</td>
+<td>1.11.29</td>
+<td>1.31.13</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>11</td>
+<td>Deilginis</td>
+<td>Massey, Toomey & Kenny</td>
+<td>1.304</td>
+<td>20.16.20</td>
+<td>1.11.20</td>
+<td>1.33.01</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>7</td>
+<td>Aura</td>
+<td>Ian Malcolm</td>
+<td>1.300</td>
+<td>20.17.15</td>
+<td>1.12.15</td>
+<td>1.33.56</td>
+<td>6.0</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>6</td>
+<td>Anita</td>
+<td>David O'Connell</td>
+<td>1.130</td>
+<td>&nbsp;</td>
+<td>OCS</td>
+<td>&nbsp;</td>
+<td>8.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r4_17_footer_hph">R4 - 17 Footer HPH Fleet&nbsp;-&nbsp;Aug 16</h3>
+<div class="caption racecaption">
+Start: H17s, Finishes: Finish time, Time: 14.25.00
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="9">
+<col class="rank" />
+<col class="sailno" />
+<col class="boat" />
+<col class="helmname" />
+<col class="rating" />
+<col class="finish" />
+<col class="elapsed" />
+<col class="corrected" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Sail</th>
+<th>Boat</th>
+<th>Entrant</th>
+<th>Rating</th>
+<th>Finish</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>3</td>
+<td>Leila</td>
+<td>Roderick Cooper</td>
+<td>1.221</td>
+<td>16.24.05</td>
+<td>1.59.05</td>
+<td>2.25.24</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>20</td>
+<td>Sheila</td>
+<td>David Mulligan & Andy Johnston</td>
+<td>1.276</td>
+<td>16.20.43</td>
+<td>1.55.43</td>
+<td>2.27.39</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>4</td>
+<td>Zaida</td>
+<td>Houlihan, Houlihan, Carroll & Hurley</td>
+<td>1.197</td>
+<td>16.29.08</td>
+<td>2.04.08</td>
+<td>2.28.35</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>12</td>
+<td>Rosemary</td>
+<td>Curley, Jones & Potter</td>
+<td>1.255</td>
+<td>16.23.26</td>
+<td>1.58.26</td>
+<td>2.28.38</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>16</td>
+<td>Eileen</td>
+<td>Rima Macken</td>
+<td>1.260</td>
+<td>16.25.26</td>
+<td>2.00.26</td>
+<td>2.31.45</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>7</td>
+<td>Aura</td>
+<td>Ian Malcolm</td>
+<td>1.300</td>
+<td>16.21.59</td>
+<td>1.56.59</td>
+<td>2.32.05</td>
+<td>6.0</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>19</td>
+<td>Isobel</td>
+<td>Brian & Conor Turvey</td>
+<td>1.320</td>
+<td>16.20.42</td>
+<td>1.55.42</td>
+<td>2.32.43</td>
+<td>7.0</td>
+</tr>
+<tr class="even racerow">
+<td>8</td>
+<td>11</td>
+<td>Deilginis</td>
+<td>Massey, Toomey & Kenny</td>
+<td>1.305</td>
+<td>16.22.38</td>
+<td>1.57.38</td>
+<td>2.33.31</td>
+<td>8.0</td>
+</tr>
+<tr class="odd racerow">
+<td>9</td>
+<td>18</td>
+<td>Erica</td>
+<td>Davie Nixon</td>
+<td>1.349</td>
+<td>16.20.36</td>
+<td>1.55.36</td>
+<td>2.35.57</td>
+<td>9.0</td>
+</tr>
+<tr class="even racerow">
+<td>10</td>
+<td>21</td>
+<td>Orla</td>
+<td>Gallagher & Fitzgibbon</td>
+<td>1.281</td>
+<td>16.28.07</td>
+<td>2.03.07</td>
+<td>2.37.43</td>
+<td>10.0</td>
+</tr>
+<tr class="odd racerow">
+<td>11</td>
+<td>8</td>
+<td>Echo</td>
+<td>B & H Lynch</td>
+<td>1.142</td>
+<td>&nbsp;</td>
+<td>RET</td>
+<td>&nbsp;</td>
+<td>12.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r1_17_footer_scratch">R1 - 17 Footer Scratch Fleet&nbsp;-&nbsp;Jul 22</h3>
+<div class="caption racecaption">
+Start: H17s, Finishes: Finish time, Time: 19.05.00
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="9">
+<col class="rank" />
+<col class="sailno" />
+<col class="boat" />
+<col class="helmname" />
+<col class="rating" />
+<col class="finish" />
+<col class="elapsed" />
+<col class="corrected" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Sail</th>
+<th>Boat</th>
+<th>Entrant</th>
+<th>Rating</th>
+<th>Finish</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>19</td>
+<td>Isobel</td>
+<td>Brian & Conor Turvey</td>
+<td>1.000</td>
+<td>19.49.25</td>
+<td>0.44.25</td>
+<td>0.44.25</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>18</td>
+<td>Erica</td>
+<td>Davie Nixon</td>
+<td>1.000</td>
+<td>19.50.41</td>
+<td>0.45.41</td>
+<td>0.45.41</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>21</td>
+<td>Orla</td>
+<td>Gallagher & Fitzgibbon</td>
+<td>1.000</td>
+<td>19.52.01</td>
+<td>0.47.01</td>
+<td>0.47.01</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>12</td>
+<td>Rosemary</td>
+<td>Curley, Jones & Potter</td>
+<td>1.000</td>
+<td>19.52.02</td>
+<td>0.47.02</td>
+<td>0.47.02</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>2</td>
+<td>Pauline</td>
+<td>O'Doherty, Kenny & McCormack</td>
+<td>1.000</td>
+<td>19.52.10</td>
+<td>0.47.10</td>
+<td>0.47.10</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>6</td>
+<td>Anita</td>
+<td>David O'Connell</td>
+<td>1.000</td>
+<td>19.52.52</td>
+<td>0.47.52</td>
+<td>0.47.52</td>
+<td>6.0</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>16</td>
+<td>Eileen</td>
+<td>Rima Macken</td>
+<td>1.000</td>
+<td>19.53.34</td>
+<td>0.48.34</td>
+<td>0.48.34</td>
+<td>7.0</td>
+</tr>
+<tr class="even racerow">
+<td>8</td>
+<td>11</td>
+<td>Deilginis</td>
+<td>Massey, Toomey & Kenny</td>
+<td>1.000</td>
+<td>19.55.13</td>
+<td>0.50.13</td>
+<td>0.50.13</td>
+<td>8.0</td>
+</tr>
+<tr class="odd racerow">
+<td>9</td>
+<td>20</td>
+<td>Sheila</td>
+<td>David Mulligan & Andy Johnston</td>
+<td>1.000</td>
+<td>19.57.11</td>
+<td>0.52.11</td>
+<td>0.52.11</td>
+<td>9.0</td>
+</tr>
+<tr class="even racerow">
+<td>10</td>
+<td>1</td>
+<td>Rita</td>
+<td>Marcus Lynch & John Curley</td>
+<td>1.000</td>
+<td>19.58.42</td>
+<td>0.53.42</td>
+<td>0.53.42</td>
+<td>10.0</td>
+</tr>
+<tr class="odd racerow">
+<td>11</td>
+<td>14</td>
+<td>Gladys</td>
+<td>Byrne & Ferris</td>
+<td>1.000</td>
+<td>20.08.00</td>
+<td>1.03.00</td>
+<td>1.03.00</td>
+<td>11.0</td>
+</tr>
+<tr class="even racerow">
+<td>12</td>
+<td>8</td>
+<td>Echo</td>
+<td>B & H Lynch</td>
+<td>1.000</td>
+<td>20.10.41</td>
+<td>1.05.41</td>
+<td>1.05.41</td>
+<td>12.0</td>
+</tr>
+<tr class="odd racerow">
+<td>13</td>
+<td>3</td>
+<td>Leila</td>
+<td>Roderick Cooper</td>
+<td>1.000</td>
+<td>20.11.48</td>
+<td>1.06.48</td>
+<td>1.06.48</td>
+<td>13.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r2_17_footer_scratch">R2 - 17 Footer Scratch Fleet&nbsp;-&nbsp;Aug 2</h3>
+<div class="caption racecaption">
+Start: H17s, Finishes: Finish time, Time: 14.25.00
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="9">
+<col class="rank" />
+<col class="sailno" />
+<col class="boat" />
+<col class="helmname" />
+<col class="rating" />
+<col class="finish" />
+<col class="elapsed" />
+<col class="corrected" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Sail</th>
+<th>Boat</th>
+<th>Entrant</th>
+<th>Rating</th>
+<th>Finish</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>18</td>
+<td>Erica</td>
+<td>Davie Nixon</td>
+<td>1.000</td>
+<td>15.56.56</td>
+<td>1.31.56</td>
+<td>1.31.56</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>19</td>
+<td>Isobel</td>
+<td>Brian & Conor Turvey</td>
+<td>1.000</td>
+<td>15.57.37</td>
+<td>1.32.37</td>
+<td>1.32.37</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>11</td>
+<td>Deilginis</td>
+<td>Massey, Toomey & Kenny</td>
+<td>1.000</td>
+<td>16.00.39</td>
+<td>1.35.39</td>
+<td>1.35.39</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>20</td>
+<td>Sheila</td>
+<td>David Mulligan & Andy Johnston</td>
+<td>1.000</td>
+<td>16.01.07</td>
+<td>1.36.07</td>
+<td>1.36.07</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>21</td>
+<td>Orla</td>
+<td>Gallagher & Fitzgibbon</td>
+<td>1.000</td>
+<td>16.01.08</td>
+<td>1.36.08</td>
+<td>1.36.08</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>2</td>
+<td>Pauline</td>
+<td>O'Doherty, Kenny & McCormack</td>
+<td>1.000</td>
+<td>16.01.18</td>
+<td>1.36.18</td>
+<td>1.36.18</td>
+<td>6.0</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>1</td>
+<td>Rita</td>
+<td>Marcus Lynch & John Curley</td>
+<td>1.000</td>
+<td>16.01.33</td>
+<td>1.36.33</td>
+<td>1.36.33</td>
+<td>7.0</td>
+</tr>
+<tr class="even racerow">
+<td>8</td>
+<td>12</td>
+<td>Rosemary</td>
+<td>Curley, Jones & Potter</td>
+<td>1.000</td>
+<td>16.02.27</td>
+<td>1.37.27</td>
+<td>1.37.27</td>
+<td>8.0</td>
+</tr>
+<tr class="odd racerow">
+<td>9</td>
+<td>4</td>
+<td>Zaida</td>
+<td>Houlihan, Houlihan, Carroll & Hurley</td>
+<td>1.000</td>
+<td>16.04.55</td>
+<td>1.39.55</td>
+<td>1.39.55</td>
+<td>9.0</td>
+</tr>
+<tr class="even racerow">
+<td>10</td>
+<td>8</td>
+<td>Echo</td>
+<td>B & H Lynch</td>
+<td>1.000</td>
+<td>16.05.33</td>
+<td>1.40.33</td>
+<td>1.40.33</td>
+<td>10.0</td>
+</tr>
+<tr class="odd racerow">
+<td>11</td>
+<td>3</td>
+<td>Leila</td>
+<td>Roderick Cooper</td>
+<td>1.000</td>
+<td>&nbsp;</td>
+<td>DNF</td>
+<td>&nbsp;</td>
+<td>12.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r3_17_footer_scratch">R3 - 17 Footer Scratch Fleet&nbsp;-&nbsp;Aug 5</h3>
+<div class="caption racecaption">
+Start: H17s, Finishes: Finish time, Time: 19.05.00
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="9">
+<col class="rank" />
+<col class="sailno" />
+<col class="boat" />
+<col class="helmname" />
+<col class="rating" />
+<col class="finish" />
+<col class="elapsed" />
+<col class="corrected" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Sail</th>
+<th>Boat</th>
+<th>Entrant</th>
+<th>Rating</th>
+<th>Finish</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>18</td>
+<td>Erica</td>
+<td>Davie Nixon</td>
+<td>1.000</td>
+<td>20.11.48</td>
+<td>1.06.48</td>
+<td>1.06.48</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>19</td>
+<td>Isobel</td>
+<td>Brian & Conor Turvey</td>
+<td>1.000</td>
+<td>20.13.18</td>
+<td>1.08.18</td>
+<td>1.08.18</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>21</td>
+<td>Orla</td>
+<td>Gallagher & Fitzgibbon</td>
+<td>1.000</td>
+<td>20.14.32</td>
+<td>1.09.32</td>
+<td>1.09.32</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>11</td>
+<td>Deilginis</td>
+<td>Massey, Toomey & Kenny</td>
+<td>1.000</td>
+<td>20.16.20</td>
+<td>1.11.20</td>
+<td>1.11.20</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>20</td>
+<td>Sheila</td>
+<td>David Mulligan & Andy Johnston</td>
+<td>1.000</td>
+<td>20.16.29</td>
+<td>1.11.29</td>
+<td>1.11.29</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>7</td>
+<td>Aura</td>
+<td>Ian Malcolm</td>
+<td>1.000</td>
+<td>20.17.15</td>
+<td>1.12.15</td>
+<td>1.12.15</td>
+<td>6.0</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>6</td>
+<td>Anita</td>
+<td>David O'Connell</td>
+<td>1.000</td>
+<td>&nbsp;</td>
+<td>OCS</td>
+<td>&nbsp;</td>
+<td>8.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r4_17_footer_scratch">R4 - 17 Footer Scratch Fleet&nbsp;-&nbsp;Aug 16</h3>
+<div class="caption racecaption">
+Start: H17s, Finishes: Finish time, Time: 14.25.00
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="9">
+<col class="rank" />
+<col class="sailno" />
+<col class="boat" />
+<col class="helmname" />
+<col class="rating" />
+<col class="finish" />
+<col class="elapsed" />
+<col class="corrected" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Sail</th>
+<th>Boat</th>
+<th>Entrant</th>
+<th>Rating</th>
+<th>Finish</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>18</td>
+<td>Erica</td>
+<td>Davie Nixon</td>
+<td>1.000</td>
+<td>16.20.36</td>
+<td>1.55.36</td>
+<td>1.55.36</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>19</td>
+<td>Isobel</td>
+<td>Brian & Conor Turvey</td>
+<td>1.000</td>
+<td>16.20.42</td>
+<td>1.55.42</td>
+<td>1.55.42</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>20</td>
+<td>Sheila</td>
+<td>David Mulligan & Andy Johnston</td>
+<td>1.000</td>
+<td>16.20.43</td>
+<td>1.55.43</td>
+<td>1.55.43</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>7</td>
+<td>Aura</td>
+<td>Ian Malcolm</td>
+<td>1.000</td>
+<td>16.21.59</td>
+<td>1.56.59</td>
+<td>1.56.59</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>11</td>
+<td>Deilginis</td>
+<td>Massey, Toomey & Kenny</td>
+<td>1.000</td>
+<td>16.22.38</td>
+<td>1.57.38</td>
+<td>1.57.38</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>12</td>
+<td>Rosemary</td>
+<td>Curley, Jones & Potter</td>
+<td>1.000</td>
+<td>16.23.26</td>
+<td>1.58.26</td>
+<td>1.58.26</td>
+<td>6.0</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>3</td>
+<td>Leila</td>
+<td>Roderick Cooper</td>
+<td>1.000</td>
+<td>16.24.05</td>
+<td>1.59.05</td>
+<td>1.59.05</td>
+<td>7.0</td>
+</tr>
+<tr class="even racerow">
+<td>8</td>
+<td>16</td>
+<td>Eileen</td>
+<td>Rima Macken</td>
+<td>1.000</td>
+<td>16.25.26</td>
+<td>2.00.26</td>
+<td>2.00.26</td>
+<td>8.0</td>
+</tr>
+<tr class="odd racerow">
+<td>9</td>
+<td>21</td>
+<td>Orla</td>
+<td>Gallagher & Fitzgibbon</td>
+<td>1.000</td>
+<td>16.28.07</td>
+<td>2.03.07</td>
+<td>2.03.07</td>
+<td>9.0</td>
+</tr>
+<tr class="even racerow">
+<td>10</td>
+<td>4</td>
+<td>Zaida</td>
+<td>Houlihan, Houlihan, Carroll & Hurley</td>
+<td>1.000</td>
+<td>16.29.08</td>
+<td>2.04.08</td>
+<td>2.04.08</td>
+<td>10.0</td>
+</tr>
+<tr class="odd racerow">
+<td>11</td>
+<td>8</td>
+<td>Echo</td>
+<td>B & H Lynch</td>
+<td>1.000</td>
+<td>&nbsp;</td>
+<td>RET</td>
+<td>&nbsp;</td>
+<td>12.0</td>
+</tr>
+</tbody>
+</table>
+
+<p class="hardleft"><a href="https://"></a><br /><a href="mailto:"></a></p>
+<p class="hardright"><a href="https://"></a><br /><a href="mailto:"></a></p>
+<p>Sailwave Scoring Software 2.37.00<br /><a href="https://www.sailwave.com">www.sailwave.com</a></p>
+
+</div>
+
+<footer>
+</footer>
+
+<div id="scrollbottom"></div>
+
+</body>
+</html>
+
+

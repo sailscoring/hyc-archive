@@ -1,0 +1,1062 @@
+
+
+
+<!doctype html><head>
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="description" content="sailwave results">
+<meta name="viewport" content="width=device-width">
+
+<title>Sailwave results for &nbsp;<br>Brass Monkey Winter 2013 at Howth Yacht Club 2013</title>
+
+
+
+<style type="text/css">
+body {font: 67% arial, helvetica, sans-serif; text-align: center;}
+.hardleft  {text-align: left; float: left;  margin: 15px 0  0 25px;}
+.hardright {text-align: right; float: right; margin: 15px 25px 0 0;}
+table, caption {text-align: left; margin: auto; font-size: 1em; border-collapse: collapse; border: 1px #fff solid;}
+td {padding: 4px; border-right: 1px #fff solid; border-bottom: 1px #ffffff solid; vertical-align: top;}
+th {padding: 4px; border: 1px #fff solid; border-bottom: 1px #ffffff solid; vertical-align: top;}
+.caption {padding: 5px; text-align: center; border: 0; font-weight: bold;}
+h1 {font-size: 1.6em;}
+h2 {font-size: 1.4em;}
+h3 {font-size: 1.2em;}
+p {text-align: center;}
+th {background-color: #d0d0d0;}
+.contents {text-align: left; margin-left: 20%;}
+.race, .rank {text-align: center;}
+.even {background-color: #eaeaea;}
+.odd {background-color: #f4f4f4;}
+.nat {text-align: center;}
+.natflag {border: 1px #999 solid;}
+.nattext {font-size: 0.8em;}
+</style>
+
+<script type="text/javascript">
+//#name=results
+//#author=Colin Jenkins
+//#date=2012-02-16
+//#version=1.0
+//#desc=Functions to use if scripting is turned on when publishing results.
+//#url=http://sailwave.com
+//#email=colin@sailwave.com
+//#twitter=sailwave
+
+//*****Just translate these strings to get results in a different language
+var swStr = {};
+swStr.SummaryTitle            = 'Overall';
+swStr.SummaryCaptionSailed    = 'Sailed';
+swStr.SummaryCaptionDiscards  = 'Discards';
+swStr.SummaryCaptionToCount   = 'To count';
+swStr.SummaryCaptionToQualify = 'To qualify';
+swStr.SummaryCaptionRatings   = 'Ratings';
+swStr.SummaryCaptionEntries   = 'Entries';
+swStr.SummaryCaptionScoring   = 'Scoring system';
+swStr.RacePrefix              = 'R';
+swStr.PrizesTitle             = 'Prizes';
+swStr.CodesTitle              = 'Scoring codes used';
+
+// was 'at' changed 020512
+swStr.Wordat                  = '';
+//*****End translate
+
+//*****You must declare these Sailwave assumed variables which are populated when publishing
+var swSeries             = {};
+swSeries.Title           = '';
+swSeries.Notes           = '';
+swSeries.Event           = '';
+swSeries.Venue           = '';
+var swSS                 = new Array();
+var swSummary            = {};
+swSummary.ScoringSys     = 0;
+swSummary.Field          = '';
+swSummary.Value          = '';
+swSummary.TagValue       = '';
+swSummary.FieldName      = '';
+swSummary.Entries        = 0;
+swSummary.Sailed         = 0;
+swSummary.Discards       = 0;
+swSummary.FinalsDiscards = 0;
+swSummary.ToCount        = 0;
+swSummary.ToQualify      = 0;
+var swRace               = {};
+swRace.Entries           = 0;
+swRace.Notes             = '';
+swRace.Date              = '';
+swRace.Time              = '';
+swRace.Name              = '';
+swRace.Rank              = 0;
+//*****End of assumed vars
+
+var swSpace = '&nbsp;';
+var swTwoSpaces = '&nbsp;&nbsp;';
+
+function resSeriesTitle() {
+  document.write('<h2 class="seriestitle">' + swSeries.Title + '</h2>');
+}
+
+/*
+function resSeriesNotes() {
+  document.write('<p class="seriesnotes">' + swSeries.Notes + '</p>');
+}
+*/
+
+function resSeriesNotes() {
+  document.write('<h3>' + swSeries.Notes + '</h3>');
+}
+
+function resSummaryTitle() {
+  if (swSummary.Field)
+    document.write('<h1 class="summarytitle" id="summary' + swSummary.TagValue + '">' + swSummary.Value + '<br>' + swStr.SummaryTitle + '</h1>');
+  else
+    document.write('<h3 class="summarytitle">' + swStr.SummaryTitle + '</h3>');
+}
+
+function resSummaryCaption() {
+  var h  = '';
+  var ss = swSS[swSummary.ScoringSys];
+  h += '<div class="caption summarycaption">';
+  h +=          swStr.SummaryCaptionSailed    + ': ' + swSummary.Sailed;
+  h +=   ', ' + swStr.SummaryCaptionDiscards  + ': ' + swSummary.Discards;
+  h +=   ', ' + swStr.SummaryCaptionToCount   + ': ' + swSummary.ToCount;
+  if (swSummary.ToQualify > 0)
+    h += ', ' + swStr.SummaryCaptionToQualify + ': ' + swSummary.ToQualify;
+  if (ss.RatingSystem.toLowerCase() != 'none')
+    h += ', ' + swStr.SummaryCaptionRatings   + ': ' + ss.RatingSystem;
+  h +=   ', ' + swStr.SummaryCaptionEntries   + ': ' + swSummary.Entries;
+  h +=   ', ' + swStr.SummaryCaptionScoring   + ': ' + ss.Name
+  h += '</div>'
+  document.write(h);
+}
+
+function resRaceTitle() {
+
+  var Extra = '';
+  var Race = ''
+
+  if (swRace.Name)
+    Race = swRace.Name;
+  else
+    //Race = swStr.RacePrefix + swRace.Rank
+                Race = 'Race ' + swRace.Rank
+
+  if (swRace.Date)
+    //Extra = swSpace + '-' + swSpace + swRace.Date;
+                Extra = swRace.Date;
+
+  if (swRace.Time)
+    Extra = Extra + swSpace + swStr.Wordat + swSpace + swRace.Time;
+
+  if (swSummary.Field)
+    document.write('<h2 class="racetitle" id="r' + swRace.Rank + swSummary.TagValue + '">' + Race + swTwoSpaces + '-' + swTwoSpaces + Extra + swTwoSpaces + '-' + swTwoSpaces + swSummary.Value + '</h2>');
+  else
+    document.write('<h2 class="racetitle">' + Race + swTwoSpaces + '-' + swTwoSpaces + Extra + swTwoSpaces + '-' + swTwoSpaces + swSummary.Value + '</h2>');
+}
+
+function resRaceNotes() {
+  document.write('<p class="racenotes">' + swRace.Notes + '</p>');
+}
+
+function resPrizeTitle() {
+  document.write('<h3 class="prizestitle">' + swStr.PrizesTitle + '</h3>');
+}
+
+function resCodesTitle() {
+  document.write('<h3 class="codestitle">' + swStr.CodesTitle + '</h3>');
+}
+</script>
+
+</head>
+
+<body>
+
+<header>
+</header>
+
+<div id="wrap">
+
+<img class="hardright" src="images/eventRight.jpg" alt="event burgee" />
+<img class="hardleft"  src="images/venueLeft.jpg" alt="venue burgee" />
+
+<h1>&nbsp;<br>Brass Monkey Winter 2013</h1>
+<h2>Howth Yacht Club</h2>
+
+<div style="clear:both;"></div>
+
+<style>
+div.applicant-break {page-break-after:always;}
+</style>
+<h3 class="seriestitle">Results as of 18:10 on December  7, 2013</h3>
+<h3 class="summarytitle" id="summaryclass_2">Class 2 Fleet</h3>
+<div class="caption summarycaption">Sailed: 6, Discards: 1, To count: 5, Rating system: TCF, Entries: 8, Scoring system: Appendix A</div>
+<table class="summarytable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="13">
+<col class="rank" />
+<col class="sailno" />
+<col class="boat" />
+<col class="helmname" />
+<col class="rating" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="total" />
+<col class="nett" />
+</colgroup>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Sailno</th>
+<th>Boat name</th>
+<th>Owner name</th>
+<th>hcap</th>
+<th><a class="racelink" href="#r1class_2">R1</a><br />3/11</th>
+<th><a class="racelink" href="#r2class_2">R2</a><br />10/11</th>
+<th><a class="racelink" href="#r3class_2">R3</a><br />17/11</th>
+<th><a class="racelink" href="#r4class_2">R4</a><br />24/11</th>
+<th><a class="racelink" href="#r5class_2">R5</a><br />01/12</th>
+<th><a class="racelink" href="#r6class_2">R6</a><br />7/12</th>
+<th>Total</th>
+<th>Nett</th>
+</tr>
+<tr class="odd summaryrow">
+<td>1st</td>
+<td>1103</td>
+<td>Viking</td>
+<td>Patterson/Darmody</td>
+<td>0.880</td>
+<td>3.0</td>
+<td>1.0</td>
+<td>1.0</td>
+<td>1.0</td>
+<td>(5.0)</td>
+<td>4.0</td>
+<td>15.0</td>
+<td>10.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>2nd</td>
+<td>956</td>
+<td>C'est la vie</td>
+<td>Flannelly, Spain, Staines</td>
+<td>0.883</td>
+<td>1.0</td>
+<td>2.0</td>
+<td>8.0 OCS</td>
+<td>(9.0 DNC)</td>
+<td>3.0</td>
+<td>2.0</td>
+<td>25.0</td>
+<td>16.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>3rd</td>
+<td>7495</td>
+<td>Maximus</td>
+<td>Paddy Kyne</td>
+<td>1.000</td>
+<td>(9.0 DNC)</td>
+<td>5.0</td>
+<td>4.0</td>
+<td>2.0</td>
+<td>2.0</td>
+<td>3.0</td>
+<td>25.0</td>
+<td>16.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>4th</td>
+<td>100</td>
+<td>Demelza</td>
+<td>Ennis & Lauden</td>
+<td>0.960</td>
+<td>4.0</td>
+<td>(9.0 DNC)</td>
+<td>6.0</td>
+<td>3.0</td>
+<td>1.0</td>
+<td>5.0</td>
+<td>28.0</td>
+<td>19.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>5th</td>
+<td>3131</td>
+<td>Rum Doodle</td>
+<td>Chris O'Dea</td>
+<td>0.848</td>
+<td>2.0</td>
+<td>3.0</td>
+<td>3.0</td>
+<td>5.0</td>
+<td>6.0</td>
+<td>(9.0 DNC)</td>
+<td>28.0</td>
+<td>19.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>6th</td>
+<td>7963</td>
+<td>Walter Mitty</td>
+<td>S & D Mullaney</td>
+<td>1.000</td>
+<td>(9.0 DNC)</td>
+<td>6.0</td>
+<td>2.0</td>
+<td>4.0</td>
+<td>9.0 DNC</td>
+<td>1.0</td>
+<td>31.0</td>
+<td>22.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>7th</td>
+<td>187</td>
+<td>Flycatcher</td>
+<td>Dillon/Wright</td>
+<td>1.000</td>
+<td>(9.0 DNC)</td>
+<td>7.0</td>
+<td>7.0</td>
+<td>6.0</td>
+<td>4.0</td>
+<td>6.0</td>
+<td>39.0</td>
+<td>30.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>8th</td>
+<td>1</td>
+<td>Outcast</td>
+<td>Fred Connolly</td>
+<td>1.000</td>
+<td>(9.0 DNC)</td>
+<td>4.0</td>
+<td>5.0</td>
+<td>9.0 DNC</td>
+<td>9.0 DNC</td>
+<td>7.0</td>
+<td>43.0</td>
+<td>34.0</td>
+</tr>
+</table>
+<div class="applicant-break"></div>
+<h3 class="racetitle" id="r1class_2">R1 - Class 2 Fleet&nbsp;-&nbsp;3/11</h3>
+<div class="caption racecaption">
+Start: Start 1, Finishes: Finish time, Time: 103000
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="9">
+<col class="rank" />
+<col class="sailno" />
+<col class="boat" />
+<col class="helmname" />
+<col class="rating" />
+<col class="finish" />
+<col class="elapsed" />
+<col class="corrected" />
+<col class="points" />
+</colgroup>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Sailno</th>
+<th>Boat name</th>
+<th>Owner name</th>
+<th>hcap</th>
+<th>Finish</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+<tr class="odd racerow">
+<td>1</td>
+<td>956</td>
+<td>C'est la vie</td>
+<td>Flannelly, Spain, Staines</td>
+<td>0.883</td>
+<td>120047</td>
+<td>1:30:47</td>
+<td>1:20:10</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>3131</td>
+<td>Rum Doodle</td>
+<td>Chris O'Dea</td>
+<td>0.848</td>
+<td>120928</td>
+<td>1:39:28</td>
+<td>1:24:21</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>1103</td>
+<td>Viking</td>
+<td>Patterson/Darmody</td>
+<td>0.880</td>
+<td>120922</td>
+<td>1:39:22</td>
+<td>1:27:27</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>100</td>
+<td>Demelza</td>
+<td>Ennis & Lauden</td>
+<td>0.960</td>
+<td>120351</td>
+<td>1:33:51</td>
+<td>1:30:06</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>7495</td>
+<td>Maximus</td>
+<td>Paddy Kyne</td>
+<td>1.000</td>
+<td>&nbsp;</td>
+<td>DNC</td>
+<td>&nbsp;</td>
+<td>9.0</td>
+</tr>
+<tr class="even racerow">
+<td>5</td>
+<td>7963</td>
+<td>Walter Mitty</td>
+<td>S & D Mullaney</td>
+<td>1.000</td>
+<td>&nbsp;</td>
+<td>DNC</td>
+<td>&nbsp;</td>
+<td>9.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>187</td>
+<td>Flycatcher</td>
+<td>Dillon/Wright</td>
+<td>1.000</td>
+<td>&nbsp;</td>
+<td>DNC</td>
+<td>&nbsp;</td>
+<td>9.0</td>
+</tr>
+<tr class="even racerow">
+<td>5</td>
+<td>1</td>
+<td>Outcast</td>
+<td>Fred Connolly</td>
+<td>1.000</td>
+<td>&nbsp;</td>
+<td>DNC</td>
+<td>&nbsp;</td>
+<td>9.0</td>
+</tr>
+</table>
+<div class="applicant-break"></div>
+<h3 class="racetitle" id="r2class_2">R2 - Class 2 Fleet&nbsp;-&nbsp;10/11</h3>
+<div class="caption racecaption">
+Start: Start 3, Finishes: Finish time, Time: 103000
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="9">
+<col class="rank" />
+<col class="sailno" />
+<col class="boat" />
+<col class="helmname" />
+<col class="rating" />
+<col class="finish" />
+<col class="elapsed" />
+<col class="corrected" />
+<col class="points" />
+</colgroup>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Sailno</th>
+<th>Boat name</th>
+<th>Owner name</th>
+<th>hcap</th>
+<th>Finish</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+<tr class="odd racerow">
+<td>1</td>
+<td>1103</td>
+<td>Viking</td>
+<td>Patterson/Darmody</td>
+<td>0.880</td>
+<td>120913</td>
+<td>1:39:13</td>
+<td>1:27:19</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>956</td>
+<td>C'est la vie</td>
+<td>Flannelly, Spain, Staines</td>
+<td>0.883</td>
+<td>121136</td>
+<td>1:41:36</td>
+<td>1:29:43</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>3131</td>
+<td>Rum Doodle</td>
+<td>Chris O'Dea</td>
+<td>0.848</td>
+<td>121609</td>
+<td>1:46:09</td>
+<td>1:30:01</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>1</td>
+<td>Outcast</td>
+<td>Fred Connolly</td>
+<td>1.000</td>
+<td>120434</td>
+<td>1:34:34</td>
+<td>1:34:34</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>7495</td>
+<td>Maximus</td>
+<td>Paddy Kyne</td>
+<td>1.000</td>
+<td>120824</td>
+<td>1:38:24</td>
+<td>1:38:24</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>7963</td>
+<td>Walter Mitty</td>
+<td>S & D Mullaney</td>
+<td>1.000</td>
+<td>122145</td>
+<td>1:51:45</td>
+<td>1:51:45</td>
+<td>6.0</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>187</td>
+<td>Flycatcher</td>
+<td>Dillon/Wright</td>
+<td>1.000</td>
+<td>122755</td>
+<td>1:57:55</td>
+<td>1:57:55</td>
+<td>7.0</td>
+</tr>
+<tr class="even racerow">
+<td>8</td>
+<td>100</td>
+<td>Demelza</td>
+<td>Ennis & Lauden</td>
+<td>0.960</td>
+<td>&nbsp;</td>
+<td>DNC</td>
+<td>&nbsp;</td>
+<td>9.0</td>
+</tr>
+</table>
+<div class="applicant-break"></div>
+<h3 class="racetitle" id="r3class_2">R3 - Class 2 Fleet&nbsp;-&nbsp;17/11</h3>
+<div class="caption racecaption">
+Start: Start 1, Finishes: Finish time, Time: 103000
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="9">
+<col class="rank" />
+<col class="sailno" />
+<col class="boat" />
+<col class="helmname" />
+<col class="rating" />
+<col class="finish" />
+<col class="elapsed" />
+<col class="corrected" />
+<col class="points" />
+</colgroup>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Sailno</th>
+<th>Boat name</th>
+<th>Owner name</th>
+<th>hcap</th>
+<th>Finish</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+<tr class="odd racerow">
+<td>1</td>
+<td>1103</td>
+<td>Viking</td>
+<td>Patterson/Darmody</td>
+<td>0.834</td>
+<td>113651</td>
+<td>1:06:51</td>
+<td>0:55:45</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>7963</td>
+<td>Walter Mitty</td>
+<td>S & D Mullaney</td>
+<td>0.884</td>
+<td>113345</td>
+<td>1:03:45</td>
+<td>0:56:21</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>3131</td>
+<td>Rum Doodle</td>
+<td>Chris O'Dea</td>
+<td>0.837</td>
+<td>113959</td>
+<td>1:09:59</td>
+<td>0:58:35</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>7495</td>
+<td>Maximus</td>
+<td>Paddy Kyne</td>
+<td>0.913</td>
+<td>113417</td>
+<td>1:04:17</td>
+<td>0:58:41</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>1</td>
+<td>Outcast</td>
+<td>Fred Connolly</td>
+<td>0.923</td>
+<td>113359</td>
+<td>1:03:59</td>
+<td>0:59:03</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>100</td>
+<td>Demelza</td>
+<td>Ennis & Lauden</td>
+<td>0.909</td>
+<td>113827</td>
+<td>1:08:27</td>
+<td>1:02:13</td>
+<td>6.0</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>187</td>
+<td>Flycatcher</td>
+<td>Dillon/Wright</td>
+<td>0.822</td>
+<td>114606</td>
+<td>1:16:06</td>
+<td>1:02:33</td>
+<td>7.0</td>
+</tr>
+<tr class="even racerow">
+<td>8</td>
+<td>956</td>
+<td>C'est la vie</td>
+<td>Flannelly, Spain, Staines</td>
+<td>0.862</td>
+<td>&nbsp;</td>
+<td>OCS</td>
+<td>&nbsp;</td>
+<td>8.0</td>
+</tr>
+</table>
+<div class="applicant-break"></div>
+<h3 class="racetitle" id="r4class_2">R4 - Class 2 Fleet&nbsp;-&nbsp;24/11</h3>
+<div class="caption racecaption">
+Start: Start 1, Finishes: Finish time, Time: 103000
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="9">
+<col class="rank" />
+<col class="sailno" />
+<col class="boat" />
+<col class="helmname" />
+<col class="rating" />
+<col class="finish" />
+<col class="elapsed" />
+<col class="corrected" />
+<col class="points" />
+</colgroup>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Sailno</th>
+<th>Boat name</th>
+<th>Owner name</th>
+<th>hcap</th>
+<th>Finish</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+<tr class="odd racerow">
+<td>1</td>
+<td>1103</td>
+<td>Viking</td>
+<td>Patterson/Darmody</td>
+<td>0.834</td>
+<td>114213</td>
+<td>1:12:13</td>
+<td>1:00:14</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>7495</td>
+<td>Maximus</td>
+<td>Paddy Kyne</td>
+<td>0.913</td>
+<td>114025</td>
+<td>1:10:25</td>
+<td>1:04:17</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>100</td>
+<td>Demelza</td>
+<td>Ennis & Lauden</td>
+<td>0.909</td>
+<td>114108</td>
+<td>1:11:08</td>
+<td>1:04:40</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>7963</td>
+<td>Walter Mitty</td>
+<td>S & D Mullaney</td>
+<td>0.884</td>
+<td>114627</td>
+<td>1:16:27</td>
+<td>1:07:35</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>3131</td>
+<td>Rum Doodle</td>
+<td>Chris O'Dea</td>
+<td>0.837</td>
+<td>115254</td>
+<td>1:22:54</td>
+<td>1:09:23</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>187</td>
+<td>Flycatcher</td>
+<td>Dillon/Wright</td>
+<td>0.822</td>
+<td>115915</td>
+<td>1:29:15</td>
+<td>1:13:22</td>
+<td>6.0</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>956</td>
+<td>C'est la vie</td>
+<td>Flannelly, Spain, Staines</td>
+<td>0.862</td>
+<td>&nbsp;</td>
+<td>DNC</td>
+<td>&nbsp;</td>
+<td>9.0</td>
+</tr>
+<tr class="even racerow">
+<td>7</td>
+<td>1</td>
+<td>Outcast</td>
+<td>Fred Connolly</td>
+<td>0.923</td>
+<td>&nbsp;</td>
+<td>DNC</td>
+<td>&nbsp;</td>
+<td>9.0</td>
+</tr>
+</table>
+<div class="applicant-break"></div>
+<h3 class="racetitle" id="r5class_2">R5 - Class 2 Fleet&nbsp;-&nbsp;01/12</h3>
+<div class="caption racecaption">
+Start: Start 1, Finishes: Finish time, Time: 103000
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="9">
+<col class="rank" />
+<col class="sailno" />
+<col class="boat" />
+<col class="helmname" />
+<col class="rating" />
+<col class="finish" />
+<col class="elapsed" />
+<col class="corrected" />
+<col class="points" />
+</colgroup>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Sailno</th>
+<th>Boat name</th>
+<th>Owner name</th>
+<th>hcap</th>
+<th>Finish</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+<tr class="odd racerow">
+<td>1</td>
+<td>100</td>
+<td>Demelza</td>
+<td>Ennis & Lauden</td>
+<td>0.909</td>
+<td>11:27:38</td>
+<td>0:57:38</td>
+<td>0:52:23</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>7495</td>
+<td>Maximus</td>
+<td>Paddy Kyne</td>
+<td>0.941</td>
+<td>11:27:12</td>
+<td>0:57:12</td>
+<td>0:53:50</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>956</td>
+<td>C'est la vie</td>
+<td>Flannelly, Spain, Staines</td>
+<td>0.932</td>
+<td>11:28:52</td>
+<td>0:58:52</td>
+<td>0:54:52</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>187</td>
+<td>Flycatcher</td>
+<td>Dillon/Wright</td>
+<td>0.779</td>
+<td>11:45:51</td>
+<td>1:15:51</td>
+<td>0:59:05</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>1103</td>
+<td>Viking</td>
+<td>Patterson/Darmody</td>
+<td>0.900</td>
+<td>11:35:57</td>
+<td>1:05:57</td>
+<td>0:59:21</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>3131</td>
+<td>Rum Doodle</td>
+<td>Chris O'Dea</td>
+<td>0.840</td>
+<td>11:40:57</td>
+<td>1:10:57</td>
+<td>0:59:36</td>
+<td>6.0</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>7963</td>
+<td>Walter Mitty</td>
+<td>S & D Mullaney</td>
+<td>0.890</td>
+<td>&nbsp;</td>
+<td>DNC</td>
+<td>&nbsp;</td>
+<td>9.0</td>
+</tr>
+<tr class="even racerow">
+<td>7</td>
+<td>1</td>
+<td>Outcast</td>
+<td>Fred Connolly</td>
+<td>0.980</td>
+<td>&nbsp;</td>
+<td>DNC</td>
+<td>&nbsp;</td>
+<td>9.0</td>
+</tr>
+</table>
+<div class="applicant-break"></div>
+<h3 class="racetitle" id="r6class_2">R6 - Class 2 Fleet&nbsp;-&nbsp;7/12</h3>
+<div class="caption racecaption">
+Start: Start 1, Finishes: Finish time, Time: 103000
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="9">
+<col class="rank" />
+<col class="sailno" />
+<col class="boat" />
+<col class="helmname" />
+<col class="rating" />
+<col class="finish" />
+<col class="elapsed" />
+<col class="corrected" />
+<col class="points" />
+</colgroup>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Sailno</th>
+<th>Boat name</th>
+<th>Owner name</th>
+<th>hcap</th>
+<th>Finish</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+<tr class="odd racerow">
+<td>1</td>
+<td>7963</td>
+<td>Walter Mitty</td>
+<td>S & D Mullaney</td>
+<td>0.890</td>
+<td>11:51:10</td>
+<td>1:21:10</td>
+<td>1:12:14</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>956</td>
+<td>C'est la vie</td>
+<td>Flannelly, Spain, Staines</td>
+<td>0.932</td>
+<td>11:49:42</td>
+<td>1:19:42</td>
+<td>1:14:17</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>7495</td>
+<td>Maximus</td>
+<td>Paddy Kyne</td>
+<td>0.941</td>
+<td>11:49:34</td>
+<td>1:19:34</td>
+<td>1:14:52</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>1103</td>
+<td>Viking</td>
+<td>Patterson/Darmody</td>
+<td>0.900</td>
+<td>11:54:27</td>
+<td>1:24:27</td>
+<td>1:16:00</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>100</td>
+<td>Demelza</td>
+<td>Ennis & Lauden</td>
+<td>0.909</td>
+<td>11:53:51</td>
+<td>1:23:51</td>
+<td>1:16:13</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>187</td>
+<td>Flycatcher</td>
+<td>Dillon/Wright</td>
+<td>0.779</td>
+<td>12:09:34</td>
+<td>1:39:34</td>
+<td>1:17:34</td>
+<td>6.0</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>1</td>
+<td>Outcast</td>
+<td>Fred Connolly</td>
+<td>0.980</td>
+<td>11:49:33</td>
+<td>1:19:33</td>
+<td>1:17:58</td>
+<td>7.0</td>
+</tr>
+<tr class="even racerow">
+<td>8</td>
+<td>3131</td>
+<td>Rum Doodle</td>
+<td>Chris O'Dea</td>
+<td>0.840</td>
+<td>&nbsp;</td>
+<td>DNC</td>
+<td>&nbsp;</td>
+<td>9.0</td>
+</tr>
+</table>
+
+<p class="hardleft"><a href="http://"></a><br /><a href="mailto:"></a></p>
+<p class="hardright"><a href="http://www.hyc.ie">www.hyc.ie</a><br /><a href="mailto:results@hyc.ie">results@hyc.ie</a></p>
+<p>Sailwave Scoring Software 2.13.3<br /><a href="http://www.sailwave.com">www.sailwave.com</a></p>
+
+</div>
+
+<footer>
+</footer>
+
+<div id="scrollbottom"></div>
+
+</body>
+</html>
+
+

@@ -1,0 +1,3364 @@
+
+
+<!doctype html>
+
+<head>
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="description" content="sailwave results">
+<meta name="viewport" content="width=device-width">
+
+<title>Sailwave results for Autumn League 2013 at Howth Yacht Club <br>Offshore 2013</title>
+
+<style type="text/css">
+body {font: 67% arial, helvetica, sans-serif; text-align: center;}
+.hardleft  {text-align: left; float: left;  margin: 15px 0  0 25px;}
+.hardright {text-align: right; float: right; margin: 15px 25px 0 0;}
+table, caption {text-align: left; margin: auto; font-size: 1em; border-collapse: collapse; border: 1px #fff solid;}
+td {padding: 4px; border-right: 1px #fff solid; border-bottom: 1px #ffffff solid; vertical-align: top;}
+th {padding: 4px; border: 1px #fff solid; border-bottom: 1px #ffffff solid; vertical-align: top;}
+.caption {padding: 5px; text-align: center; border: 0; font-weight: bold;}
+h1 {font-size: 1.6em;}
+h2 {font-size: 1.4em;}
+h3 {font-size: 1.2em;}
+p {text-align: center;}
+th {background-color: #d0d0d0;}
+.contents {text-align: left; margin-left: 20%;}
+.race, .rank {text-align: center;}
+.even {background-color: #eaeaea;}
+.odd {background-color: #f4f4f4;}
+.nat {text-align: center;}
+.natflag {border: 1px #999 solid;}
+.nattext {font-size: 0.8em;}
+</style>
+
+<script type="text/javascript">
+//#name=results
+//#author=Colin Jenkins
+//#date=2012-02-16
+//#version=1.0
+//#desc=Functions to use if scripting is turned on when publishing results.
+//#url=http://sailwave.com
+//#email=colin@sailwave.com
+//#twitter=sailwave
+
+//*****Just translate these strings to get results in a different language
+var swStr = {};
+swStr.SummaryTitle            = 'Overall';
+swStr.SummaryCaptionSailed    = 'Sailed';
+swStr.SummaryCaptionDiscards  = 'Discards';
+swStr.SummaryCaptionToCount   = 'To count';
+swStr.SummaryCaptionToQualify = 'To qualify';
+swStr.SummaryCaptionRatings   = 'Ratings';
+swStr.SummaryCaptionEntries   = 'Entries';
+swStr.SummaryCaptionScoring   = 'Scoring system';
+swStr.RacePrefix              = 'R';
+swStr.PrizesTitle             = 'Prizes';
+swStr.CodesTitle              = 'Scoring codes used';
+
+// was 'at' changed 020512
+swStr.Wordat                  = '';
+//*****End translate
+
+//*****You must declare these Sailwave assumed variables which are populated when publishing
+var swSeries             = {};
+swSeries.Title           = '';
+swSeries.Notes           = '';
+swSeries.Event           = '';
+swSeries.Venue           = '';
+var swSS                 = new Array();
+var swSummary            = {};
+swSummary.ScoringSys     = 0;
+swSummary.Field          = '';
+swSummary.Value          = '';
+swSummary.TagValue       = '';
+swSummary.FieldName      = '';
+swSummary.Entries        = 0;
+swSummary.Sailed         = 0;
+swSummary.Discards       = 0;
+swSummary.FinalsDiscards = 0;
+swSummary.ToCount        = 0;
+swSummary.ToQualify      = 0;
+var swRace               = {};
+swRace.Entries           = 0;
+swRace.Notes             = '';
+swRace.Date              = '';
+swRace.Time              = '';
+swRace.Name              = '';
+swRace.Rank              = 0;
+//*****End of assumed vars
+
+var swSpace = '&nbsp;';
+var swTwoSpaces = '&nbsp;&nbsp;';
+
+function resSeriesTitle() {
+document.write('<h2 class="seriestitle">' + swSeries.Title + '</h2>');
+}
+
+/*
+function resSeriesNotes() {
+document.write('<p class="seriesnotes">' + swSeries.Notes + '</p>');
+}
+*/
+
+function resSeriesNotes() {
+document.write('<h3>' + swSeries.Notes + '</h3>');
+}
+
+function resSummaryTitle() {
+if (swSummary.Field)
+document.write('<h1 class="summarytitle" id="summary' + swSummary.TagValue + '">' + swSummary.Value + '<br>' + swStr.SummaryTitle + '</h1>');
+else
+document.write('<h3 class="summarytitle">' + swStr.SummaryTitle + '</h3>');
+}
+
+function resSummaryCaption() {
+var h  = '';
+var ss = swSS[swSummary.ScoringSys];
+h += '<div class="caption summarycaption">';
+h +=          swStr.SummaryCaptionSailed    + ': ' + swSummary.Sailed;
+h +=   ', ' + swStr.SummaryCaptionDiscards  + ': ' + swSummary.Discards;
+h +=   ', ' + swStr.SummaryCaptionToCount   + ': ' + swSummary.ToCount;
+if (swSummary.ToQualify > 0)
+h += ', ' + swStr.SummaryCaptionToQualify + ': ' + swSummary.ToQualify;
+if (ss.RatingSystem.toLowerCase() != 'none')
+h += ', ' + swStr.SummaryCaptionRatings   + ': ' + ss.RatingSystem;
+h +=   ', ' + swStr.SummaryCaptionEntries   + ': ' + swSummary.Entries;
+h +=   ', ' + swStr.SummaryCaptionScoring   + ': ' + ss.Name
+h += '</div>'
+document.write(h);
+}
+
+function resRaceTitle() {
+
+var Extra = '';
+var Race = ''
+
+if (swRace.Name)
+Race = swRace.Name;
+else
+//Race = swStr.RacePrefix + swRace.Rank
+Race = 'Race ' + swRace.Rank
+
+if (swRace.Date)
+//Extra = swSpace + '-' + swSpace + swRace.Date;
+Extra = swRace.Date;
+
+if (swRace.Time)
+Extra = Extra + swSpace + swStr.Wordat + swSpace + swRace.Time;
+
+if (swSummary.Field)
+document.write('<h2 class="racetitle" id="r' + swRace.Rank + swSummary.TagValue + '">' + Race + swTwoSpaces + '-' + swTwoSpaces + Extra + swTwoSpaces + '-' + swTwoSpaces + swSummary.Value + '</h2>');
+else
+document.write('<h2 class="racetitle">' + Race + swTwoSpaces + '-' + swTwoSpaces + Extra + swTwoSpaces + '-' + swTwoSpaces + swSummary.Value + '</h2>');
+}
+
+function resRaceNotes() {
+document.write('<p class="racenotes">' + swRace.Notes + '</p>');
+}
+
+function resPrizeTitle() {
+document.write('<h3 class="prizestitle">' + swStr.PrizesTitle + '</h3>');
+}
+
+function resCodesTitle() {
+document.write('<h3 class="codestitle">' + swStr.CodesTitle + '</h3>');
+}
+</script>
+
+</head>
+
+<body>
+
+<header>
+</header>
+
+<div id="wrap">
+
+
+<h1>Autumn League 2013</h1>
+<h2>Howth Yacht Club <br>Offshore</h2>
+
+<div style="clear:both;"></div>
+
+<h3 class="seriestitle">Provisional Results as of 16:03 on October 19, 2013</h3>
+<h3 class="summarytitle" id="summaryclass-3-echo">Class 3 Echo Class</h3>
+<div class="caption summarycaption">Sailed: 5, Discards: 1, To count: 4, Ratings: TCF, Entries: 17, Scoring system: Appendix A</div>
+<table class="summarytable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="13">
+<col class="rank" />
+<col class="sailno" />
+<col class="boat" />
+<col class="helmname" />
+<col class="club" />
+<col class="rating" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="total" />
+<col class="nett" />
+</colgroup>
+<tr>
+<th>Rank</th>
+<th>SailNo</th>
+<th>Boat</th>
+<th>HelmName</th>
+<th>Club</th>
+<th>TCF</th>
+<th>
+<a class="racelink" href="#r2class-3-echo">R2</a><br />22/09</th>
+<th>
+<a class="racelink" href="#r3class-3-echo">R3</a><br />29/9</th>
+<th>
+<a class="racelink" href="#r4class-3-echo">R4</a><br />06/10</th>
+<th>
+<a class="racelink" href="#r5class-3-echo">R5</a><br />13/10</th>
+<th>
+<a class="racelink" href="#r6class-3-echo">R6</a><br />19/10</th>
+<th>Total</th>
+<th>Nett</th>
+</tr>
+<tr class="odd summaryrow">
+<td>1st</td>
+<td>6136</td>
+<td>Starlet</td>
+<td>Bourke/McGirr/Maher</td>
+<td>HYC</td>
+<td>0.886</td>
+<td>1.0</td>
+<td>2.0</td>
+<td>2.0</td>
+<td>5.0</td>
+<td>(10.0)</td>
+<td>20.0</td>
+<td>10.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>2nd</td>
+<td>9265</td>
+<td>Toy Yot</td>
+<td>Team Toy Yot</td>
+<td>HYC</td>
+<td>0.830</td>
+<td>3.0</td>
+<td>3.0</td>
+<td>5.0</td>
+<td>1.0</td>
+<td>(15.0)</td>
+<td>27.0</td>
+<td>12.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>3rd</td>
+<td>1311</td>
+<td>Holly</td>
+<td>B McMahon</td>
+<td>HYC</td>
+<td>0.790</td>
+<td>2.0</td>
+<td>7.0</td>
+<td>4.0</td>
+<td>4.0</td>
+<td>(11.0)</td>
+<td>28.0</td>
+<td>17.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>4th</td>
+<td>8188</td>
+<td>Alliance 11</td>
+<td>V Gaffney</td>
+<td>HYC</td>
+<td>0.913</td>
+<td>(6.0)</td>
+<td>4.0</td>
+<td>6.0</td>
+<td>6.0</td>
+<td>5.0</td>
+<td>27.0</td>
+<td>21.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>5th</td>
+<td>4794</td>
+<td>Hard on Port</td>
+<td>F O'Driscoll</td>
+<td>HYC</td>
+<td>0.946</td>
+<td>4.0</td>
+<td>5.0</td>
+<td>10.0</td>
+<td>(11.0)</td>
+<td>3.0</td>
+<td>33.0</td>
+<td>22.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>6th</td>
+<td>791</td>
+<td>Shenanigans</td>
+<td>Douglas/Keane</td>
+<td>MYC</td>
+<td>0.891</td>
+<td>(14.0)</td>
+<td>11.0</td>
+<td>9.0</td>
+<td>2.0</td>
+<td>1.0</td>
+<td>37.0</td>
+<td>23.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>7th</td>
+<td>3052</td>
+<td>Tobago</td>
+<td>Ray/Costello/Quigley</td>
+<td>MYC</td>
+<td>0.879</td>
+<td>(12.0)</td>
+<td>10.0</td>
+<td>8.0</td>
+<td>3.0</td>
+<td>4.0</td>
+<td>37.0</td>
+<td>25.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>8th</td>
+<td>581</td>
+<td>Hellyhunter</td>
+<td>L McMurtry</td>
+<td>HYC</td>
+<td>0.756</td>
+<td>11.0</td>
+<td>6.0</td>
+<td>1.0</td>
+<td>10.0</td>
+<td>(13.0)</td>
+<td>41.0</td>
+<td>28.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>9th</td>
+<td>680</td>
+<td>Euro Car Parks</td>
+<td>HYC U25 Team</td>
+<td>HYC</td>
+<td>0.950</td>
+<td>5.0</td>
+<td>8.0</td>
+<td>12.0</td>
+<td>(18.0 RAF)</td>
+<td>6.0</td>
+<td>49.0</td>
+<td>31.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>10th</td>
+<td>6556</td>
+<td>Challenger</td>
+<td>P Rossiter</td>
+<td>HYC</td>
+<td>0.761</td>
+<td>(18.0 DNC)</td>
+<td>1.0</td>
+<td>3.0</td>
+<td>12.0</td>
+<td>16.0</td>
+<td>50.0</td>
+<td>32.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>11th</td>
+<td>4202</td>
+<td>Gossip</td>
+<td>Barron/Meredith/Rowley</td>
+<td>HYC</td>
+<td>0.943</td>
+<td>8.0</td>
+<td>9.0</td>
+<td>(11.0)</td>
+<td>8.0</td>
+<td>7.0</td>
+<td>43.0</td>
+<td>32.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>12th</td>
+<td>4218</td>
+<td>Jelignite</td>
+<td>Finbarr Ryan</td>
+<td>LRSC</td>
+<td>0.925</td>
+<td>(18.0 DNC)</td>
+<td>13.0</td>
+<td>14.0</td>
+<td>9.0</td>
+<td>2.0</td>
+<td>56.0</td>
+<td>38.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>13th</td>
+<td>418</td>
+<td>J Guevara</td>
+<td>John Hasson</td>
+<td>LSYC</td>
+<td>0.938</td>
+<td>7.0</td>
+<td>(18.0 DNC)</td>
+<td>18.0 DNC</td>
+<td>7.0</td>
+<td>9.0</td>
+<td>59.0</td>
+<td>41.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>14th</td>
+<td>1654</td>
+<td>Goyave</td>
+<td>R Camier</td>
+<td>MYC</td>
+<td>0.910</td>
+<td>10.0</td>
+<td>12.0</td>
+<td>7.0</td>
+<td>(13.0)</td>
+<td>12.0</td>
+<td>54.0</td>
+<td>41.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>15th</td>
+<td>911</td>
+<td>Rossinver</td>
+<td>C Scott</td>
+<td>HYC</td>
+<td>0.896</td>
+<td>13.0</td>
+<td>14.0</td>
+<td>13.0</td>
+<td>(18.0 DNC)</td>
+<td>8.0</td>
+<td>66.0</td>
+<td>48.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>16th</td>
+<td>1688</td>
+<td>Sea Esta</td>
+<td>P Mitchell</td>
+<td>HYC</td>
+<td>0.801</td>
+<td>15.0</td>
+<td>(18.0 DNC)</td>
+<td>15.0</td>
+<td>14.0</td>
+<td>14.0</td>
+<td>76.0</td>
+<td>58.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>17th</td>
+<td>191</td>
+<td>Jebus</td>
+<td>E Dalton</td>
+<td>HYC</td>
+<td>0.916</td>
+<td>9.0</td>
+<td>(18.0 DNF)</td>
+<td>18.0 DNC</td>
+<td>18.0 DNC</td>
+<td>18.0 DNC</td>
+<td>81.0</td>
+<td>63.0</td>
+</tr>
+</table>
+<h3 class="racetitle" id="r2class-3-echo">R2 - Class 3 Echo Class&nbsp;-&nbsp;22/09</h3>
+<div class="caption racecaption">
+Start: Start 5, Finishes: Finish time, Time: 113500
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="10">
+<col class="rank" />
+<col class="sailno" />
+<col class="boat" />
+<col class="helmname" />
+<col class="club" />
+<col class="rating" />
+<col class="racefinish" />
+<col class="raceelapsed" />
+<col class="racecorrected" />
+<col class="nett" />
+</colgroup>
+<tr>
+<th>Rank</th>
+<th>SailNo</th>
+<th>Boat</th>
+<th>HelmName</th>
+<th>Club</th>
+<th>TCF</th>
+<th>Finish</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+<tr class="odd racerow">
+<td>
+1
+</td>
+<td>
+6136
+</td>
+<td>
+Starlet
+</td>
+<td>
+Bourke/McGirr/Maher
+</td>
+<td>
+HYC
+</td>
+<td>
+0.886
+</td>
+<td>
+125206
+</td>
+<td>
+1:17:06
+</td>
+<td>
+1:08:19
+</td>
+<td>
+1.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+2
+</td>
+<td>
+1311
+</td>
+<td>
+Holly
+</td>
+<td>
+B McMahon
+</td>
+<td>
+HYC
+</td>
+<td>
+0.790
+</td>
+<td>
+130240
+</td>
+<td>
+1:27:40
+</td>
+<td>
+1:09:15
+</td>
+<td>
+2.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+3
+</td>
+<td>
+9265
+</td>
+<td>
+Toy Yot
+</td>
+<td>
+Team Toy Yot
+</td>
+<td>
+HYC
+</td>
+<td>
+0.830
+</td>
+<td>
+125849
+</td>
+<td>
+1:23:49
+</td>
+<td>
+1:09:34
+</td>
+<td>
+3.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+4
+</td>
+<td>
+4794
+</td>
+<td>
+Hard on Port
+</td>
+<td>
+F O'Driscoll
+</td>
+<td>
+HYC
+</td>
+<td>
+0.946
+</td>
+<td>
+124912
+</td>
+<td>
+1:14:12
+</td>
+<td>
+1:10:12
+</td>
+<td>
+4.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+5
+</td>
+<td>
+680
+</td>
+<td>
+Euro Car Parks
+</td>
+<td>
+HYC U25 Team
+</td>
+<td>
+HYC
+</td>
+<td>
+0.950
+</td>
+<td>
+124858
+</td>
+<td>
+1:13:58
+</td>
+<td>
+1:10:16
+</td>
+<td>
+5.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+6
+</td>
+<td>
+8188
+</td>
+<td>
+Alliance 11
+</td>
+<td>
+V Gaffney
+</td>
+<td>
+HYC
+</td>
+<td>
+0.913
+</td>
+<td>
+125251
+</td>
+<td>
+1:17:51
+</td>
+<td>
+1:11:05
+</td>
+<td>
+6.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+7
+</td>
+<td>
+418
+</td>
+<td>
+J Guevara
+</td>
+<td>
+John Hasson
+</td>
+<td>
+LSYC
+</td>
+<td>
+0.938
+</td>
+<td>
+125123
+</td>
+<td>
+1:16:23
+</td>
+<td>
+1:11:39
+</td>
+<td>
+7.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+8
+</td>
+<td>
+4202
+</td>
+<td>
+Gossip
+</td>
+<td>
+Barron/Meredith/Rowley
+</td>
+<td>
+HYC
+</td>
+<td>
+0.943
+</td>
+<td>
+125122
+</td>
+<td>
+1:16:22
+</td>
+<td>
+1:12:01
+</td>
+<td>
+8.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+9
+</td>
+<td>
+191
+</td>
+<td>
+Jebus
+</td>
+<td>
+E Dalton
+</td>
+<td>
+HYC
+</td>
+<td>
+0.916
+</td>
+<td>
+125352
+</td>
+<td>
+1:18:52
+</td>
+<td>
+1:12:15
+</td>
+<td>
+9.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+10
+</td>
+<td>
+1654
+</td>
+<td>
+Goyave
+</td>
+<td>
+R Camier
+</td>
+<td>
+MYC
+</td>
+<td>
+0.910
+</td>
+<td>
+125445
+</td>
+<td>
+1:19:45
+</td>
+<td>
+1:12:34
+</td>
+<td>
+10.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+11
+</td>
+<td>
+581
+</td>
+<td>
+Hellyhunter
+</td>
+<td>
+L McMurtry
+</td>
+<td>
+HYC
+</td>
+<td>
+0.756
+</td>
+<td>
+131120
+</td>
+<td>
+1:36:20
+</td>
+<td>
+1:12:50
+</td>
+<td>
+11.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+12
+</td>
+<td>
+3052
+</td>
+<td>
+Tobago
+</td>
+<td>
+Ray/Costello/Quigley
+</td>
+<td>
+MYC
+</td>
+<td>
+0.879
+</td>
+<td>
+130120
+</td>
+<td>
+1:26:20
+</td>
+<td>
+1:15:53
+</td>
+<td>
+12.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+13
+</td>
+<td>
+911
+</td>
+<td>
+Rossinver
+</td>
+<td>
+C Scott
+</td>
+<td>
+HYC
+</td>
+<td>
+0.896
+</td>
+<td>
+130215
+</td>
+<td>
+1:27:15
+</td>
+<td>
+1:18:11
+</td>
+<td>
+13.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+14
+</td>
+<td>
+791
+</td>
+<td>
+Shenanigans
+</td>
+<td>
+Douglas/Keane
+</td>
+<td>
+MYC
+</td>
+<td>
+0.891
+</td>
+<td>
+130511
+</td>
+<td>
+1:30:11
+</td>
+<td>
+1:20:21
+</td>
+<td>
+14.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+15
+</td>
+<td>
+1688
+</td>
+<td>
+Sea Esta
+</td>
+<td>
+P Mitchell
+</td>
+<td>
+HYC
+</td>
+<td>
+0.801
+</td>
+<td>
+131059
+</td>
+<td>
+1:50:59
+</td>
+<td>
+1:28:54
+</td>
+<td>
+15.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+16
+</td>
+<td>
+6556
+</td>
+<td>
+Challenger
+</td>
+<td>
+P Rossiter
+</td>
+<td>
+HYC
+</td>
+<td>
+0.761
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+18.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+16
+</td>
+<td>
+4218
+</td>
+<td>
+Jelignite
+</td>
+<td>
+Finbarr Ryan
+</td>
+<td>
+LRSC
+</td>
+<td>
+0.925
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+18.0
+</td>
+</tr>
+</table>
+<h3 class="racetitle" id="r3class-3-echo">R3 - Class 3 Echo Class&nbsp;-&nbsp;29/9</h3>
+<div class="caption racecaption">
+Start: Start 5, Finishes: Finish time, Time: 112000
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="10">
+<col class="rank" />
+<col class="sailno" />
+<col class="boat" />
+<col class="helmname" />
+<col class="club" />
+<col class="rating" />
+<col class="racefinish" />
+<col class="raceelapsed" />
+<col class="racecorrected" />
+<col class="nett" />
+</colgroup>
+<tr>
+<th>Rank</th>
+<th>SailNo</th>
+<th>Boat</th>
+<th>HelmName</th>
+<th>Club</th>
+<th>TCF</th>
+<th>Finish</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+<tr class="odd racerow">
+<td>
+1
+</td>
+<td>
+6556
+</td>
+<td>
+Challenger
+</td>
+<td>
+P Rossiter
+</td>
+<td>
+HYC
+</td>
+<td>
+0.761
+</td>
+<td>
+130837
+</td>
+<td>
+1:48:37
+</td>
+<td>
+1:22:39
+</td>
+<td>
+1.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+2
+</td>
+<td>
+6136
+</td>
+<td>
+Starlet
+</td>
+<td>
+Bourke/McGirr/Maher
+</td>
+<td>
+HYC
+</td>
+<td>
+0.886
+</td>
+<td>
+125619
+</td>
+<td>
+1:36:19
+</td>
+<td>
+1:25:20
+</td>
+<td>
+2.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+3
+</td>
+<td>
+9265
+</td>
+<td>
+Toy Yot
+</td>
+<td>
+Team Toy Yot
+</td>
+<td>
+HYC
+</td>
+<td>
+0.830
+</td>
+<td>
+130328
+</td>
+<td>
+1:43:28
+</td>
+<td>
+1:25:53
+</td>
+<td>
+3.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+4
+</td>
+<td>
+8188
+</td>
+<td>
+Alliance 11
+</td>
+<td>
+V Gaffney
+</td>
+<td>
+HYC
+</td>
+<td>
+0.913
+</td>
+<td>
+125411
+</td>
+<td>
+1:34:11
+</td>
+<td>
+1:25:59
+</td>
+<td>
+4.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+5
+</td>
+<td>
+4794
+</td>
+<td>
+Hard on Port
+</td>
+<td>
+F O'Driscoll
+</td>
+<td>
+HYC
+</td>
+<td>
+0.946
+</td>
+<td>
+125215
+</td>
+<td>
+1:32:15
+</td>
+<td>
+1:27:16
+</td>
+<td>
+5.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+6
+</td>
+<td>
+581
+</td>
+<td>
+Hellyhunter
+</td>
+<td>
+L McMurtry
+</td>
+<td>
+HYC
+</td>
+<td>
+0.756
+</td>
+<td>
+131552
+</td>
+<td>
+1:55:52
+</td>
+<td>
+1:27:36
+</td>
+<td>
+6.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+7
+</td>
+<td>
+1311
+</td>
+<td>
+Holly
+</td>
+<td>
+B McMahon
+</td>
+<td>
+HYC
+</td>
+<td>
+0.790
+</td>
+<td>
+131137
+</td>
+<td>
+1:51:37
+</td>
+<td>
+1:28:11
+</td>
+<td>
+7.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+8
+</td>
+<td>
+680
+</td>
+<td>
+Euro Car Parks
+</td>
+<td>
+HYC U25 Team
+</td>
+<td>
+HYC
+</td>
+<td>
+0.950
+</td>
+<td>
+125523
+</td>
+<td>
+1:35:23
+</td>
+<td>
+1:30:37
+</td>
+<td>
+8.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+9
+</td>
+<td>
+4202
+</td>
+<td>
+Gossip
+</td>
+<td>
+Barron/Meredith/Rowley
+</td>
+<td>
+HYC
+</td>
+<td>
+0.943
+</td>
+<td>
+125740
+</td>
+<td>
+1:37:40
+</td>
+<td>
+1:32:06
+</td>
+<td>
+9.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+10
+</td>
+<td>
+3052
+</td>
+<td>
+Tobago
+</td>
+<td>
+Ray/Costello/Quigley
+</td>
+<td>
+MYC
+</td>
+<td>
+0.879
+</td>
+<td>
+130542
+</td>
+<td>
+1:45:42
+</td>
+<td>
+1:32:55
+</td>
+<td>
+10.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+11
+</td>
+<td>
+791
+</td>
+<td>
+Shenanigans
+</td>
+<td>
+Douglas/Keane
+</td>
+<td>
+MYC
+</td>
+<td>
+0.891
+</td>
+<td>
+130514
+</td>
+<td>
+1:45:14
+</td>
+<td>
+1:33:46
+</td>
+<td>
+11.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+12
+</td>
+<td>
+1654
+</td>
+<td>
+Goyave
+</td>
+<td>
+R Camier
+</td>
+<td>
+MYC
+</td>
+<td>
+0.910
+</td>
+<td>
+130332
+</td>
+<td>
+1:43:32
+</td>
+<td>
+1:34:13
+</td>
+<td>
+12.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+13
+</td>
+<td>
+4218
+</td>
+<td>
+Jelignite
+</td>
+<td>
+Finbarr Ryan
+</td>
+<td>
+LRSC
+</td>
+<td>
+0.925
+</td>
+<td>
+130651
+</td>
+<td>
+1:46:51
+</td>
+<td>
+1:38:50
+</td>
+<td>
+13.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+14
+</td>
+<td>
+911
+</td>
+<td>
+Rossinver
+</td>
+<td>
+C Scott
+</td>
+<td>
+HYC
+</td>
+<td>
+0.896
+</td>
+<td>
+131054
+</td>
+<td>
+1:50:54
+</td>
+<td>
+1:39:22
+</td>
+<td>
+14.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+15
+</td>
+<td>
+418
+</td>
+<td>
+J Guevara
+</td>
+<td>
+John Hasson
+</td>
+<td>
+LSYC
+</td>
+<td>
+0.938
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+18.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+15
+</td>
+<td>
+1688
+</td>
+<td>
+Sea Esta
+</td>
+<td>
+P Mitchell
+</td>
+<td>
+HYC
+</td>
+<td>
+0.801
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+18.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+15
+</td>
+<td>
+191
+</td>
+<td>
+Jebus
+</td>
+<td>
+E Dalton
+</td>
+<td>
+HYC
+</td>
+<td>
+0.916
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNF
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+18.0
+</td>
+</tr>
+</table>
+<h3 class="racetitle" id="r4class-3-echo">R4 - Class 3 Echo Class&nbsp;-&nbsp;06/10</h3>
+<div class="caption racecaption">
+Start: Start 5, Finishes: Finish time, Time: 113500
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="10">
+<col class="rank" />
+<col class="sailno" />
+<col class="boat" />
+<col class="helmname" />
+<col class="club" />
+<col class="rating" />
+<col class="racefinish" />
+<col class="raceelapsed" />
+<col class="racecorrected" />
+<col class="nett" />
+</colgroup>
+<tr>
+<th>Rank</th>
+<th>SailNo</th>
+<th>Boat</th>
+<th>HelmName</th>
+<th>Club</th>
+<th>TCF</th>
+<th>Finish</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+<tr class="odd racerow">
+<td>
+1
+</td>
+<td>
+581
+</td>
+<td>
+Hellyhunter
+</td>
+<td>
+L McMurtry
+</td>
+<td>
+HYC
+</td>
+<td>
+0.756
+</td>
+<td>
+125322
+</td>
+<td>
+1:18:22
+</td>
+<td>
+0:59:15
+</td>
+<td>
+1.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+2
+</td>
+<td>
+6136
+</td>
+<td>
+Starlet
+</td>
+<td>
+Bourke/McGirr/Maher
+</td>
+<td>
+HYC
+</td>
+<td>
+0.886
+</td>
+<td>
+124158
+</td>
+<td>
+1:06:58
+</td>
+<td>
+0:59:20
+</td>
+<td>
+2.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+3
+</td>
+<td>
+6556
+</td>
+<td>
+Challenger
+</td>
+<td>
+P Rossiter
+</td>
+<td>
+HYC
+</td>
+<td>
+0.761
+</td>
+<td>
+125509
+</td>
+<td>
+1:20:09
+</td>
+<td>
+1:01:00
+</td>
+<td>
+3.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+4
+</td>
+<td>
+1311
+</td>
+<td>
+Holly
+</td>
+<td>
+B McMahon
+</td>
+<td>
+HYC
+</td>
+<td>
+0.790
+</td>
+<td>
+125217
+</td>
+<td>
+1:17:17
+</td>
+<td>
+1:01:03
+</td>
+<td>
+4.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+5
+</td>
+<td>
+9265
+</td>
+<td>
+Toy Yot
+</td>
+<td>
+Team Toy Yot
+</td>
+<td>
+HYC
+</td>
+<td>
+0.830
+</td>
+<td>
+124907
+</td>
+<td>
+1:14:07
+</td>
+<td>
+1:01:31
+</td>
+<td>
+5.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+6
+</td>
+<td>
+8188
+</td>
+<td>
+Alliance 11
+</td>
+<td>
+V Gaffney
+</td>
+<td>
+HYC
+</td>
+<td>
+0.913
+</td>
+<td>
+124244
+</td>
+<td>
+1:07:44
+</td>
+<td>
+1:01:50
+</td>
+<td>
+6.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+7
+</td>
+<td>
+1654
+</td>
+<td>
+Goyave
+</td>
+<td>
+R Camier
+</td>
+<td>
+MYC
+</td>
+<td>
+0.910
+</td>
+<td>
+124515
+</td>
+<td>
+1:10:15
+</td>
+<td>
+1:03:56
+</td>
+<td>
+7.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+8
+</td>
+<td>
+3052
+</td>
+<td>
+Tobago
+</td>
+<td>
+Ray/Costello/Quigley
+</td>
+<td>
+MYC
+</td>
+<td>
+0.879
+</td>
+<td>
+124751
+</td>
+<td>
+1:12:51
+</td>
+<td>
+1:04:02
+</td>
+<td>
+8.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+9
+</td>
+<td>
+791
+</td>
+<td>
+Shenanigans
+</td>
+<td>
+Douglas/Keane
+</td>
+<td>
+MYC
+</td>
+<td>
+0.891
+</td>
+<td>
+124839
+</td>
+<td>
+1:13:39
+</td>
+<td>
+1:05:37
+</td>
+<td>
+9.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+10
+</td>
+<td>
+4794
+</td>
+<td>
+Hard on Port
+</td>
+<td>
+F O'Driscoll
+</td>
+<td>
+HYC
+</td>
+<td>
+0.946
+</td>
+<td>
+124437
+</td>
+<td>
+1:09:37
+</td>
+<td>
+1:05:51
+</td>
+<td>
+10.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+11
+</td>
+<td>
+4202
+</td>
+<td>
+Gossip
+</td>
+<td>
+Barron/Meredith/Rowley
+</td>
+<td>
+HYC
+</td>
+<td>
+0.943
+</td>
+<td>
+124457
+</td>
+<td>
+1:09:57
+</td>
+<td>
+1:05:58
+</td>
+<td>
+11.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+12
+</td>
+<td>
+680
+</td>
+<td>
+Euro Car Parks
+</td>
+<td>
+HYC U25 Team
+</td>
+<td>
+HYC
+</td>
+<td>
+0.950
+</td>
+<td>
+124505
+</td>
+<td>
+1:10:05
+</td>
+<td>
+1:06:35
+</td>
+<td>
+12.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+13
+</td>
+<td>
+911
+</td>
+<td>
+Rossinver
+</td>
+<td>
+C Scott
+</td>
+<td>
+HYC
+</td>
+<td>
+0.896
+</td>
+<td>
+124927
+</td>
+<td>
+1:14:27
+</td>
+<td>
+1:06:42
+</td>
+<td>
+13.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+14
+</td>
+<td>
+4218
+</td>
+<td>
+Jelignite
+</td>
+<td>
+Finbarr Ryan
+</td>
+<td>
+LRSC
+</td>
+<td>
+0.925
+</td>
+<td>
+125255
+</td>
+<td>
+1:17:55
+</td>
+<td>
+1:12:04
+</td>
+<td>
+14.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+15
+</td>
+<td>
+1688
+</td>
+<td>
+Sea Esta
+</td>
+<td>
+P Mitchell
+</td>
+<td>
+HYC
+</td>
+<td>
+0.801
+</td>
+<td>
+125626
+</td>
+<td>
+1:36:26
+</td>
+<td>
+1:17:15
+</td>
+<td>
+15.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+16
+</td>
+<td>
+418
+</td>
+<td>
+J Guevara
+</td>
+<td>
+John Hasson
+</td>
+<td>
+LSYC
+</td>
+<td>
+0.938
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+18.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+16
+</td>
+<td>
+191
+</td>
+<td>
+Jebus
+</td>
+<td>
+E Dalton
+</td>
+<td>
+HYC
+</td>
+<td>
+0.916
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+18.0
+</td>
+</tr>
+</table>
+<h3 class="racetitle" id="r5class-3-echo">R5 - Class 3 Echo Class&nbsp;-&nbsp;13/10</h3>
+<div class="caption racecaption">
+Start: Start 5, Finishes: Finish time, Time: 112000
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="10">
+<col class="rank" />
+<col class="sailno" />
+<col class="boat" />
+<col class="helmname" />
+<col class="club" />
+<col class="rating" />
+<col class="racefinish" />
+<col class="raceelapsed" />
+<col class="racecorrected" />
+<col class="nett" />
+</colgroup>
+<tr>
+<th>Rank</th>
+<th>SailNo</th>
+<th>Boat</th>
+<th>HelmName</th>
+<th>Club</th>
+<th>TCF</th>
+<th>Finish</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+<tr class="odd racerow">
+<td>
+1
+</td>
+<td>
+9265
+</td>
+<td>
+Toy Yot
+</td>
+<td>
+Team Toy Yot
+</td>
+<td>
+HYC
+</td>
+<td>
+0.860
+</td>
+<td>
+125049
+</td>
+<td>
+1:30:49
+</td>
+<td>
+1:18:06
+</td>
+<td>
+1.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+2
+</td>
+<td>
+791
+</td>
+<td>
+Shenanigans
+</td>
+<td>
+Douglas/Keane
+</td>
+<td>
+MYC
+</td>
+<td>
+0.858
+</td>
+<td>
+125127
+</td>
+<td>
+1:31:27
+</td>
+<td>
+1:18:28
+</td>
+<td>
+2.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+3
+</td>
+<td>
+3052
+</td>
+<td>
+Tobago
+</td>
+<td>
+Ray/Costello/Quigley
+</td>
+<td>
+MYC
+</td>
+<td>
+0.865
+</td>
+<td>
+125051
+</td>
+<td>
+1:30:51
+</td>
+<td>
+1:18:35
+</td>
+<td>
+3.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+4
+</td>
+<td>
+1311
+</td>
+<td>
+Holly
+</td>
+<td>
+B McMahon
+</td>
+<td>
+HYC
+</td>
+<td>
+0.816
+</td>
+<td>
+125659
+</td>
+<td>
+1:36:59
+</td>
+<td>
+1:19:08
+</td>
+<td>
+4.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+5
+</td>
+<td>
+6136
+</td>
+<td>
+Starlet
+</td>
+<td>
+Bourke/McGirr/Maher
+</td>
+<td>
+HYC
+</td>
+<td>
+0.933
+</td>
+<td>
+124522
+</td>
+<td>
+1:25:22
+</td>
+<td>
+1:19:39
+</td>
+<td>
+5.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+6
+</td>
+<td>
+8188
+</td>
+<td>
+Alliance 11
+</td>
+<td>
+V Gaffney
+</td>
+<td>
+HYC
+</td>
+<td>
+0.940
+</td>
+<td>
+124456
+</td>
+<td>
+1:24:56
+</td>
+<td>
+1:19:50
+</td>
+<td>
+6.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+7
+</td>
+<td>
+418
+</td>
+<td>
+J Guevara
+</td>
+<td>
+John Hasson
+</td>
+<td>
+LSYC
+</td>
+<td>
+0.935
+</td>
+<td>
+124618
+</td>
+<td>
+1:26:18
+</td>
+<td>
+1:20:41
+</td>
+<td>
+7.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+8
+</td>
+<td>
+4202
+</td>
+<td>
+Gossip
+</td>
+<td>
+Barron/Meredith/Rowley
+</td>
+<td>
+HYC
+</td>
+<td>
+0.935
+</td>
+<td>
+124650
+</td>
+<td>
+1:26:50
+</td>
+<td>
+1:21:11
+</td>
+<td>
+8.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+9
+</td>
+<td>
+4218
+</td>
+<td>
+Jelignite
+</td>
+<td>
+Finbarr Ryan
+</td>
+<td>
+LRSC
+</td>
+<td>
+0.866
+</td>
+<td>
+125419
+</td>
+<td>
+1:34:19
+</td>
+<td>
+1:21:41
+</td>
+<td>
+9.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+10
+</td>
+<td>
+581
+</td>
+<td>
+Hellyhunter
+</td>
+<td>
+L McMurtry
+</td>
+<td>
+HYC
+</td>
+<td>
+0.779
+</td>
+<td>
+130500
+</td>
+<td>
+1:45:00
+</td>
+<td>
+1:21:48
+</td>
+<td>
+10.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+11
+</td>
+<td>
+4794
+</td>
+<td>
+Hard on Port
+</td>
+<td>
+F O'Driscoll
+</td>
+<td>
+HYC
+</td>
+<td>
+0.958
+</td>
+<td>
+124611
+</td>
+<td>
+1:26:11
+</td>
+<td>
+1:22:34
+</td>
+<td>
+11.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+12
+</td>
+<td>
+6556
+</td>
+<td>
+Challenger
+</td>
+<td>
+P Rossiter
+</td>
+<td>
+HYC
+</td>
+<td>
+0.800
+</td>
+<td>
+130726
+</td>
+<td>
+1:47:26
+</td>
+<td>
+1:25:57
+</td>
+<td>
+12.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+13
+</td>
+<td>
+1654
+</td>
+<td>
+Goyave
+</td>
+<td>
+R Camier
+</td>
+<td>
+MYC
+</td>
+<td>
+0.932
+</td>
+<td>
+125501
+</td>
+<td>
+1:35:01
+</td>
+<td>
+1:28:33
+</td>
+<td>
+13.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+14
+</td>
+<td>
+1688
+</td>
+<td>
+Sea Esta
+</td>
+<td>
+P Mitchell
+</td>
+<td>
+HYC
+</td>
+<td>
+0.801
+</td>
+<td>
+131235
+</td>
+<td>
+1:52:35
+</td>
+<td>
+1:30:11
+</td>
+<td>
+14.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+15
+</td>
+<td>
+680
+</td>
+<td>
+Euro Car Parks
+</td>
+<td>
+HYC U25 Team
+</td>
+<td>
+HYC
+</td>
+<td>
+0.950
+</td>
+<td>
+124906
+</td>
+<td>
+RAF
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+18.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+15
+</td>
+<td>
+911
+</td>
+<td>
+Rossinver
+</td>
+<td>
+C Scott
+</td>
+<td>
+HYC
+</td>
+<td>
+0.852
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+18.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+15
+</td>
+<td>
+191
+</td>
+<td>
+Jebus
+</td>
+<td>
+E Dalton
+</td>
+<td>
+HYC
+</td>
+<td>
+0.910
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+18.0
+</td>
+</tr>
+</table>
+<h3 class="racetitle" id="r6class-3-echo">R6 - Class 3 Echo Class&nbsp;-&nbsp;19/10</h3>
+<div class="caption racecaption">
+Start: Start 5, Finishes: Finish time, Time: 125000
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="10">
+<col class="rank" />
+<col class="sailno" />
+<col class="boat" />
+<col class="helmname" />
+<col class="club" />
+<col class="rating" />
+<col class="racefinish" />
+<col class="raceelapsed" />
+<col class="racecorrected" />
+<col class="nett" />
+</colgroup>
+<tr>
+<th>Rank</th>
+<th>SailNo</th>
+<th>Boat</th>
+<th>HelmName</th>
+<th>Club</th>
+<th>TCF</th>
+<th>Finish</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+<tr class="odd racerow">
+<td>
+1
+</td>
+<td>
+791
+</td>
+<td>
+Shenanigans
+</td>
+<td>
+Douglas/Keane
+</td>
+<td>
+MYC
+</td>
+<td>
+0.858
+</td>
+<td>
+144850
+</td>
+<td>
+1:58:50
+</td>
+<td>
+1:41:58
+</td>
+<td>
+1.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+2
+</td>
+<td>
+4218
+</td>
+<td>
+Jelignite
+</td>
+<td>
+Finbarr Ryan
+</td>
+<td>
+LRSC
+</td>
+<td>
+0.866
+</td>
+<td>
+144940
+</td>
+<td>
+1:59:40
+</td>
+<td>
+1:43:38
+</td>
+<td>
+2.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+3
+</td>
+<td>
+4794
+</td>
+<td>
+Hard on Port
+</td>
+<td>
+F O'Driscoll
+</td>
+<td>
+HYC
+</td>
+<td>
+0.958
+</td>
+<td>
+143825
+</td>
+<td>
+1:48:25
+</td>
+<td>
+1:43:52
+</td>
+<td>
+3.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+4
+</td>
+<td>
+3052
+</td>
+<td>
+Tobago
+</td>
+<td>
+Ray/Costello/Quigley
+</td>
+<td>
+MYC
+</td>
+<td>
+0.865
+</td>
+<td>
+145012
+</td>
+<td>
+2:00:12
+</td>
+<td>
+1:43:58
+</td>
+<td>
+4.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+5
+</td>
+<td>
+8188
+</td>
+<td>
+Alliance 11
+</td>
+<td>
+V Gaffney
+</td>
+<td>
+HYC
+</td>
+<td>
+0.940
+</td>
+<td>
+144037
+</td>
+<td>
+1:50:37
+</td>
+<td>
+1:43:59
+</td>
+<td>
+5.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+6
+</td>
+<td>
+680
+</td>
+<td>
+Euro Car Parks
+</td>
+<td>
+HYC U25 Team
+</td>
+<td>
+HYC
+</td>
+<td>
+0.950
+</td>
+<td>
+144124
+</td>
+<td>
+1:51:24
+</td>
+<td>
+1:45:50
+</td>
+<td>
+6.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+7
+</td>
+<td>
+4202
+</td>
+<td>
+Gossip
+</td>
+<td>
+Barron/Meredith/Rowley
+</td>
+<td>
+HYC
+</td>
+<td>
+0.935
+</td>
+<td>
+144321
+</td>
+<td>
+1:53:21
+</td>
+<td>
+1:45:59
+</td>
+<td>
+7.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+8
+</td>
+<td>
+911
+</td>
+<td>
+Rossinver
+</td>
+<td>
+C Scott
+</td>
+<td>
+HYC
+</td>
+<td>
+0.852
+</td>
+<td>
+145537
+</td>
+<td>
+2:05:37
+</td>
+<td>
+1:47:02
+</td>
+<td>
+8.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+9
+</td>
+<td>
+418
+</td>
+<td>
+J Guevara
+</td>
+<td>
+John Hasson
+</td>
+<td>
+LSYC
+</td>
+<td>
+0.935
+</td>
+<td>
+144514
+</td>
+<td>
+1:55:14
+</td>
+<td>
+1:47:45
+</td>
+<td>
+9.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+10
+</td>
+<td>
+6136
+</td>
+<td>
+Starlet
+</td>
+<td>
+Bourke/McGirr/Maher
+</td>
+<td>
+HYC
+</td>
+<td>
+0.933
+</td>
+<td>
+144600
+</td>
+<td>
+1:56:00
+</td>
+<td>
+1:48:14
+</td>
+<td>
+10.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+11
+</td>
+<td>
+1311
+</td>
+<td>
+Holly
+</td>
+<td>
+B McMahon
+</td>
+<td>
+HYC
+</td>
+<td>
+0.816
+</td>
+<td>
+150520
+</td>
+<td>
+2:15:20
+</td>
+<td>
+1:50:26
+</td>
+<td>
+11.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+12
+</td>
+<td>
+1654
+</td>
+<td>
+Goyave
+</td>
+<td>
+R Camier
+</td>
+<td>
+MYC
+</td>
+<td>
+0.932
+</td>
+<td>
+144835
+</td>
+<td>
+1:58:35
+</td>
+<td>
+1:50:31
+</td>
+<td>
+12.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+13
+</td>
+<td>
+581
+</td>
+<td>
+Hellyhunter
+</td>
+<td>
+L McMurtry
+</td>
+<td>
+HYC
+</td>
+<td>
+0.779
+</td>
+<td>
+151449
+</td>
+<td>
+2:24:49
+</td>
+<td>
+1:52:49
+</td>
+<td>
+13.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+14
+</td>
+<td>
+1688
+</td>
+<td>
+Sea Esta
+</td>
+<td>
+P Mitchell
+</td>
+<td>
+HYC
+</td>
+<td>
+0.801
+</td>
+<td>
+151331
+</td>
+<td>
+2:23:31
+</td>
+<td>
+1:54:57
+</td>
+<td>
+14.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+15
+</td>
+<td>
+9265
+</td>
+<td>
+Toy Yot
+</td>
+<td>
+Team Toy Yot
+</td>
+<td>
+HYC
+</td>
+<td>
+0.860
+</td>
+<td>
+150615
+</td>
+<td>
+2:16:15
+</td>
+<td>
+1:57:11
+</td>
+<td>
+15.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+16
+</td>
+<td>
+6556
+</td>
+<td>
+Challenger
+</td>
+<td>
+P Rossiter
+</td>
+<td>
+HYC
+</td>
+<td>
+0.800
+</td>
+<td>
+151641
+</td>
+<td>
+2:26:41
+</td>
+<td>
+1:57:21
+</td>
+<td>
+16.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+17
+</td>
+<td>
+191
+</td>
+<td>
+Jebus
+</td>
+<td>
+E Dalton
+</td>
+<td>
+HYC
+</td>
+<td>
+0.910
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+18.0
+</td>
+</tr>
+</table>
+
+<p class="hardleft"><a href="http://"></a><br /><a href="mailto:"></a></p>
+<p class="hardright"><a href="http://"></a><br /><a href="mailto:"></a></p>
+<p>Sailwave Scoring Software 2.5.1<br /><a href="http://www.sailwave.com">www.sailwave.com</a></p>
+
+</div>
+
+<footer>
+</footer>
+
+<div id="scrollbottom"></div>
+
+</body>
+</html>
+
+

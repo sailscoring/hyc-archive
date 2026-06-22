@@ -1,0 +1,409 @@
+
+
+
+<!doctype html>
+
+<head>
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="description" content="sailwave results">
+<meta name="viewport" content="width=device-width">
+
+<title>Sailwave results for WAVE Regatta 2020 -  Inshore Fleet at Howth Yacht Club<br>Inshore 2020</title>
+
+<style type="text/css">
+body {font: 67% arial, helvetica, sans-serif; text-align: center;}
+.hardleft  {text-align: left; float: left;  margin: 15px 0  0 25px;}
+.hardright {text-align: right; float: right; margin: 15px 25px 0 0;}
+table, caption {text-align: left; margin: auto; font-size: 1em; border-collapse: collapse; border: 1px #fff solid;}
+td {padding: 4px; border-right: 1px #fff solid; border-bottom: 1px #ffffff solid; vertical-align: top;}
+th {padding: 4px; border: 1px #fff solid; border-bottom: 1px #ffffff solid; vertical-align: top;}
+.caption {padding: 5px; text-align: center; border: 0; font-weight: bold;}
+h1 {font-size: 1.6em;}
+h2 {font-size: 1.4em;}
+h3 {font-size: 1.2em;}
+p {text-align: center;}
+th {background-color: #d0d0d0;}
+.contents {text-align: left; margin-left: 20%;}
+.race, .rank {text-align: center;}
+.even {background-color: #eaeaea;}
+.odd {background-color: #f4f4f4;}
+.nat {text-align: center;}
+.natflag {border: 1px #999 solid;}
+.nattext {font-size: 0.8em;}
+</style>
+
+<script type="text/javascript">
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script>
+
+function swGetURLArgs() {
+
+  var url = location.href;
+  var qs  = url.substring(url.indexOf('?') + 1).split('&');
+
+  for(var i = 0, result = {}; i < qs.length; i++) {
+    qs[i]            = qs[i].split('=');
+    result[qs[i][0]] = decodeURIComponent(qs[i][1]);
+  }
+
+  return result;
+}
+
+//#name=results
+//#author=Colin Jenkins
+//#date=2012-02-16
+//#version=1.0
+//#desc=Functions to use if scripting is turned on when publishing results.
+//#url=http://sailwave.com
+//#email=colin@sailwave.com
+//#twitter=sailwave
+
+//*****Just translate these strings to get results in a different language
+var swStr = {};
+swStr.SummaryTitle            = 'Overall';
+swStr.SummaryCaptionSailed    = 'Sailed';
+swStr.SummaryCaptionDiscards  = 'Discards';
+swStr.SummaryCaptionToCount   = 'To count';
+swStr.SummaryCaptionToQualify = 'To qualify';
+swStr.SummaryCaptionRatings   = 'Ratings';
+swStr.SummaryCaptionEntries   = 'Entries';
+swStr.SummaryCaptionScoring   = 'Scoring system';
+swStr.RacePrefix              = 'R';
+swStr.PrizesTitle             = 'Prizes';
+swStr.CodesTitle              = 'Scoring codes used';
+
+// was 'at' changed 020512
+swStr.Wordat                  = '';
+//*****End translate
+
+//*****You must declare these Sailwave assumed variables which are populated when publishing
+var swSeries             = {};
+swSeries.Title           = '';
+swSeries.Notes           = '';
+swSeries.Event           = '';
+swSeries.Venue           = '';
+var swSS                 = new Array();
+var swSummary            = {};
+swSummary.ScoringSys     = 0;
+swSummary.Field          = '';
+swSummary.Value          = '';
+swSummary.TagValue       = '';
+swSummary.FieldName      = '';
+swSummary.Entries        = 0;
+swSummary.Sailed         = 0;
+swSummary.Discards       = 0;
+swSummary.FinalsDiscards = 0;
+swSummary.ToCount        = 0;
+swSummary.ToQualify      = 0;
+var swRace               = {};
+swRace.Entries           = 0;
+swRace.Notes             = '';
+swRace.Date              = '';
+swRace.Time              = '';
+swRace.Name              = '';
+swRace.Rank              = 0;
+//*****End of assumed vars
+
+var swSpace = '&nbsp;';
+var swTwoSpaces = '&nbsp;&nbsp;';
+
+function resSeriesTitle() {
+  document.write('<h2 class="seriestitle">' + swSeries.Title + '</h2>');
+}
+
+/*
+function resSeriesNotes() {
+  document.write('<p class="seriesnotes">' + swSeries.Notes + '</p>');
+}
+*/
+
+function resSeriesNotes() {
+  document.write('<h3>' + swSeries.Notes + '</h3>');
+}
+
+function resSummaryTitle() {
+  if (swSummary.Field)
+    document.write('<h1 class="summarytitle" id="summary' + swSummary.TagValue + '">' + swSummary.Value + '<br>' + swStr.SummaryTitle + '</h1>');
+  else
+    document.write('<h3 class="summarytitle">' + swStr.SummaryTitle + '</h3>');
+}
+
+function resSummaryCaption() {
+  var h  = '';
+  var ss = swSS[swSummary.ScoringSys];
+  h += '<div class="caption summarycaption">';
+  h +=          swStr.SummaryCaptionSailed    + ': ' + swSummary.Sailed;
+  h +=   ', ' + swStr.SummaryCaptionDiscards  + ': ' + swSummary.Discards;
+  h +=   ', ' + swStr.SummaryCaptionToCount   + ': ' + swSummary.ToCount;
+  if (swSummary.ToQualify > 0)
+    h += ', ' + swStr.SummaryCaptionToQualify + ': ' + swSummary.ToQualify;
+  if (ss.RatingSystem.toLowerCase() != 'none')
+    h += ', ' + swStr.SummaryCaptionRatings   + ': ' + ss.RatingSystem;
+  h +=   ', ' + swStr.SummaryCaptionEntries   + ': ' + swSummary.Entries;
+  h +=   ', ' + swStr.SummaryCaptionScoring   + ': ' + ss.Name
+  h += '</div>'
+  document.write(h);
+}
+
+function resRaceTitle() {
+
+  var Extra = '';
+  var Race = ''
+
+  if (swRace.Name)
+    Race = swRace.Name;
+  else
+    //Race = swStr.RacePrefix + swRace.Rank
+                Race = 'Race ' + swRace.Rank
+
+  if (swRace.Date)
+    //Extra = swSpace + '-' + swSpace + swRace.Date;
+                Extra = swRace.Date;
+
+  if (swRace.Time)
+    Extra = Extra + swSpace + swStr.Wordat + swSpace + swRace.Time;
+
+  if (swSummary.Field)
+    document.write('<h2 class="racetitle" id="r' + swRace.Rank + swSummary.TagValue + '">' + Race + swTwoSpaces + '-' + swTwoSpaces + Extra + swTwoSpaces + '-' + swTwoSpaces + swSummary.Value + '</h2>');
+  else
+    document.write('<h2 class="racetitle">' + Race + swTwoSpaces + '-' + swTwoSpaces + Extra + swTwoSpaces + '-' + swTwoSpaces + swSummary.Value + '</h2>');
+}
+
+function resRaceNotes() {
+  document.write('<p class="racenotes">' + swRace.Notes + '</p>');
+}
+
+function resPrizeTitle() {
+  document.write('<h3 class="prizestitle">' + swStr.PrizesTitle + '</h3>');
+}
+
+function resCodesTitle() {
+  document.write('<h3 class="codestitle">' + swStr.CodesTitle + '</h3>');
+}
+</script>
+
+</head>
+
+<body>
+
+<header>
+</header>
+
+<div id="wrap">
+
+<img class="hardright" src="https://hyc.ie/reshyc/images/wave.jpg" alt="event burgee" />
+<img class="hardleft"  src="https://hyc.ie/reshyc/images/hyc.jpg" alt="venue burgee" />
+
+<h1>WAVE Regatta 2020 -  Inshore Fleet</h1>
+<h2>Howth Yacht Club<br>Inshore</h2>
+
+<div style="clear:both;"></div>
+
+<style>
+div.applicant-break {page-break-after:always;}
+</style>
+<h3 class="seriestitle">Provisional Results as of 11:03 on February 24, 2020</h3>
+<h3 class="racetitle" id="r1puppeteer_22_hcap">R1 - Puppeteer 22 Hcap Fleet&nbsp;-&nbsp;04/06</h3>
+<div class="caption racecaption">
+Start: Start 4, Finishes: Finish time, Time: 120500
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="9">
+<col class="rank" />
+<col class="tally" />
+<col class="sailno" />
+<col class="boat" />
+<col class="helmname" />
+<col class="club" />
+<col class="rating" />
+<col class="place" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>ScrPze</th>
+<th>SailNo</th>
+<th>Boat Name</th>
+<th>Owner Name</th>
+<th>Club</th>
+<th>TCF</th>
+<th>Place</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>&nbsp;</td>
+<td>N</td>
+<td>1</td>
+<td>Shiggy</td>
+<td>G Kennedy</td>
+<td>HYC</td>
+<td>0.988</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="even racerow">
+<td>&nbsp;</td>
+<td>N</td>
+<td>22</td>
+<td>Weyhey</td>
+<td>M McKeon</td>
+<td>HYC</td>
+<td>0.992</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="odd racerow">
+<td>&nbsp;</td>
+<td>N</td>
+<td>69</td>
+<td>Mojo</td>
+<td>F Martinez</td>
+<td>HYC</td>
+<td>1.000</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="even racerow">
+<td>&nbsp;</td>
+<td>N</td>
+<td>101</td>
+<td>Eclipse</td>
+<td>A & R Hegarty</td>
+<td>HYC</td>
+<td>1.001</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="odd racerow">
+<td>&nbsp;</td>
+<td>N</td>
+<td>174</td>
+<td>Arcturus</td>
+<td>McAuliffe/McDermott</td>
+<td>HYC</td>
+<td>0.980</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="even racerow">
+<td>&nbsp;</td>
+<td>N</td>
+<td>187</td>
+<td>Flycatcher</td>
+<td>F Dillon</td>
+<td>HYC</td>
+<td>0.997</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="odd racerow">
+<td>&nbsp;</td>
+<td>N</td>
+<td>219</td>
+<td>Geppetto</td>
+<td>O'Reilly/McDyer</td>
+<td>HYC</td>
+<td>1.002</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="even racerow">
+<td>&nbsp;</td>
+<td>N</td>
+<td>254</td>
+<td>Gold Dust</td>
+<td>Walls/Browne</td>
+<td>HYC</td>
+<td>1.012</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="odd racerow">
+<td>&nbsp;</td>
+<td>N</td>
+<td>385</td>
+<td>Ibis</td>
+<td>S Sheridan</td>
+<td>HYC</td>
+<td>1.011</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="even racerow">
+<td>&nbsp;</td>
+<td>N</td>
+<td>386</td>
+<td>Gannet</td>
+<td>T Chillingworth</td>
+<td>HYC</td>
+<td>1.000</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="odd racerow">
+<td>&nbsp;</td>
+<td>N</td>
+<td>520</td>
+<td>Cloud 9</td>
+<td>C Feeley</td>
+<td>HYC</td>
+<td>0.986</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="even racerow">
+<td>&nbsp;</td>
+<td>N</td>
+<td>2021</td>
+<td>Harlequin</td>
+<td>Clarke/Egan</td>
+<td>HYC</td>
+<td>1.008</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="odd racerow">
+<td>&nbsp;</td>
+<td>N</td>
+<td>5526</td>
+<td>Blue Velvet</td>
+<td>C & K Kavanagh</td>
+<td>HYC</td>
+<td>1.011</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="even racerow">
+<td>&nbsp;</td>
+<td>N</td>
+<td>6413</td>
+<td>Yellow Peril</td>
+<td>Murphy/Costello</td>
+<td>HYC</td>
+<td>1.012</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+
+<p class="hardleft"><a href="http://"></a><br /><a href="mailto:"></a></p>
+<p class="hardright"><a href="http://"></a><br /><a href="mailto:"></a></p>
+<p>Sailwave Scoring Software 2.28.1<br /><a href="http://www.sailwave.com">www.sailwave.com</a></p>
+
+</div>
+
+<footer>
+</footer>
+
+<div id="scrollbottom"></div>
+
+</body>
+</html>
+
+

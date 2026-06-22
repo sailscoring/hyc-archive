@@ -1,0 +1,981 @@
+
+
+<!doctype html>
+
+<head>
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="description" content="sailwave results">
+<meta name="viewport" content="width=device-width">
+
+<title>Sailwave results for Howth Yacht Club at Lambay Races 2013</title>
+
+<style type="text/css">
+body {font: 67% arial, helvetica, sans-serif; text-align: center;}
+.hardleft  {text-align: left; float: left;  margin: 15px 0  0 25px;}
+.hardright {text-align: right; float: right; margin: 15px 25px 0 0;}
+table, caption {text-align: left; margin: auto; font-size: 1em; border-collapse: collapse; border: 1px #fff solid;}
+td {padding: 4px; border-right: 1px #fff solid; border-bottom: 1px #ffffff solid; vertical-align: top;}
+th {padding: 4px; border: 1px #fff solid; border-bottom: 1px #ffffff solid; vertical-align: top;}
+.caption {padding: 5px; text-align: center; border: 0; font-weight: bold;}
+h1 {font-size: 1.6em;}
+h2 {font-size: 1.4em;}
+h3 {font-size: 1.2em;}
+p {text-align: center;}
+th {background-color: #d0d0d0;}
+.contents {text-align: left; margin-left: 20%;}
+.race, .rank {text-align: center;}
+.even {background-color: #eaeaea;}
+.odd {background-color: #f4f4f4;}
+.nat {text-align: center;}
+.natflag {border: 1px #999 solid;}
+.nattext {font-size: 0.8em;}
+</style>
+
+<script type="text/javascript">
+//#name=results
+//#author=Colin Jenkins
+//#date=2012-02-16
+//#version=1.0
+//#desc=Functions to use if scripting is turned on when publishing results.
+//#url=http://sailwave.com
+//#email=colin@sailwave.com
+//#twitter=sailwave
+
+//*****Just translate these strings to get results in a different language
+var swStr = {};
+swStr.SummaryTitle            = 'Overall';
+swStr.SummaryCaptionSailed    = 'Sailed';
+swStr.SummaryCaptionDiscards  = 'Discards';
+swStr.SummaryCaptionToCount   = 'To count';
+swStr.SummaryCaptionToQualify = 'To qualify';
+swStr.SummaryCaptionRatings   = 'Ratings';
+swStr.SummaryCaptionEntries   = 'Entries';
+swStr.SummaryCaptionScoring   = 'Scoring system';
+swStr.RacePrefix              = 'R';
+swStr.PrizesTitle             = 'Prizes';
+swStr.CodesTitle              = 'Scoring codes used';
+
+// was 'at' changed 020512
+swStr.Wordat                  = '';
+//*****End translate
+
+//*****You must declare these Sailwave assumed variables which are populated when publishing
+var swSeries             = {};
+swSeries.Title           = '';
+swSeries.Notes           = '';
+swSeries.Event           = '';
+swSeries.Venue           = '';
+var swSS                 = new Array();
+var swSummary            = {};
+swSummary.ScoringSys     = 0;
+swSummary.Field          = '';
+swSummary.Value          = '';
+swSummary.TagValue       = '';
+swSummary.FieldName      = '';
+swSummary.Entries        = 0;
+swSummary.Sailed         = 0;
+swSummary.Discards       = 0;
+swSummary.FinalsDiscards = 0;
+swSummary.ToCount        = 0;
+swSummary.ToQualify      = 0;
+var swRace               = {};
+swRace.Entries           = 0;
+swRace.Notes             = '';
+swRace.Date              = '';
+swRace.Time              = '';
+swRace.Name              = '';
+swRace.Rank              = 0;
+//*****End of assumed vars
+
+var swSpace = '&nbsp;';
+
+function resSeriesTitle() {
+document.write('<h2 class="seriestitle">' + swSeries.Title + '</h2>');
+}
+
+/*
+function resSeriesNotes() {
+document.write('<p class="seriesnotes">' + swSeries.Notes + '</p>');
+}
+*/
+
+function resSeriesNotes() {
+document.write('<h3>' + swSeries.Notes + '</h3>');
+}
+
+function resSummaryTitle() {
+if (swSummary.Field)
+document.write('<h1 class="summarytitle" id="summary' + swSummary.TagValue + '">' + swSummary.Value + '<br>' + swStr.SummaryTitle + '</h1>');
+else
+document.write('<h1 class="summarytitle">' + swStr.SummaryTitle + '</h1>');
+}
+
+function resSummaryCaption() {
+var h  = '';
+var ss = swSS[swSummary.ScoringSys];
+h += '<div class="caption summarycaption">';
+h +=          swStr.SummaryCaptionSailed    + ': ' + swSummary.Sailed;
+h +=   ', ' + swStr.SummaryCaptionDiscards  + ': ' + swSummary.Discards;
+h +=   ', ' + swStr.SummaryCaptionToCount   + ': ' + swSummary.ToCount;
+if (swSummary.ToQualify > 0)
+h += ', ' + swStr.SummaryCaptionToQualify + ': ' + swSummary.ToQualify;
+if (ss.RatingSystem.toLowerCase() != 'none')
+h += ', ' + swStr.SummaryCaptionRatings   + ': ' + ss.RatingSystem;
+h +=   ', ' + swStr.SummaryCaptionEntries   + ': ' + swSummary.Entries;
+h +=   ', ' + swStr.SummaryCaptionScoring   + ': ' + ss.Name
+h += '</div>'
+document.write(h);
+}
+
+function resRaceTitle() {
+
+var Extra = '';
+var Race = ''
+
+if (swRace.Name)
+Race = swRace.Name;
+else
+//Race = swStr.RacePrefix + swRace.Rank
+Race = 'Race ' + swRace.Rank
+
+if (swRace.Date)
+//Extra = swSpace + '-' + swSpace + swRace.Date;
+Extra = swRace.Date;
+
+if (swRace.Time)
+Extra = Extra + swSpace + swStr.Wordat + swSpace + swRace.Time;
+
+if (swSummary.Field)
+document.write('<h2 class="racetitle" id="r' + swRace.Rank + swSummary.TagValue + '">' + Race + swSpace + swSpace + '-' + swSpace + swSpace + swSummary.Value + '</h2>');
+else
+document.write('<h2 class="racetitle">' + Race + swSummary.Value + '</h2>');
+}
+
+function resRaceNotes() {
+document.write('<p class="racenotes">' + swRace.Notes + '</p>');
+}
+
+function resPrizeTitle() {
+document.write('<h3 class="prizestitle">' + swStr.PrizesTitle + '</h3>');
+}
+
+function resCodesTitle() {
+document.write('<h3 class="codestitle">' + swStr.CodesTitle + '</h3>');
+}
+</script>
+
+</head>
+
+<body>
+
+<header>
+</header>
+
+<div id="wrap">
+
+<img class="hardright" src="images/eventRight.jpg" alt="event burgee" />
+<img class="hardleft"  src="images/venueLeft.jpg" alt="venue burgee" />
+
+<h1>Howth Yacht Club</h1>
+<h2>Lambay Races 2013</h2>
+
+<div style="clear:both;"></div>
+
+<script type="text/javascript">
+swSeries.Title = '';
+swSeries.Notes = '';
+swSeries.Event = 'Howth Yacht Club';
+swSeries.Venue = 'Lambay Races';
+swSS[27] = {};
+swSS[27].Name = 'Appendix A';
+swSS[27].Field = 'Class';
+swSS[27].Value = '';
+swSS[27].Notes = '';
+swSS[27].HighPointFormula = '';
+swSS[27].LowPointFormula = '';
+swSS[27].CustomLowPoints = '';
+swSS[27].CustomHighPoints = '';
+swSS[27].QualProfile = '';
+swSS[27].DiscardProfile = '0,0,0,1,1,1';
+swSS[27].RaceTies = 'Averaged';
+swSS[27].PointsAccumulation = 'Sum';
+swSS[27].PointsPlaces = '1';
+swSS[27].PointsSystem = 'Low point';
+swSS[27].RatingSystem = 'TCF';
+swSS[27].RatSysA = '';
+swSS[27].RatSysB = '';
+swSS[27].CExpr = '';
+swSS[27].EExpr = '';
+swSS[27].RExpr = '';
+swSS[27].RatingMode = 'No';
+swSS[27].WindStrengths = '0-1,2-3,4,5-9';
+swSS[27].WindIndexedA = '';
+swSS[27].WindIndexedB = '';
+swSS[27].UpdateRatings = 'No';
+swSS[27].BackCalcPercent = '0';
+swSS[27].TieA81 = 'Yes';
+swSS[27].TieA81Discardss = 'No';
+swSS[27].TieA82 = 'Yes';
+swSS[27].TieA82Back = 'No';
+swSS[27].TieA82Starts = 'No';
+swSS[27].TieB8 = 'No';
+swSS[27].TieFinals = 'No';
+swSS[27].Flights = 'No';
+swSS[27].Finals = 'No';
+swSS[27].FinalsFirst = '0';
+swSS[27].FinalsStickyQ = 'No';
+swSS[27].FinalsDiscardP = '';
+swSS[27].LowWeight = 'Yes';
+swSS[27].Medal = 'No';
+swSS[27].MedalMax = '10';
+swSS[27].MedalRace = '6';
+swSS[27].MedalYesNotDiscardable = 'Yes';
+swSS[27].MedalYesMultiply = 'Yes';
+swSS[27].MedalYesTie = 'Yes';
+swSS[27].MedalNoNotDiscardable = 'Yes';
+swSS[27].MedalNoMultiply = 'Yes';
+swSS[27].MedalNoTie = 'Yes';
+</script>
+<script type="text/javascript">
+resSeriesTitle();
+</script>
+<script type="text/javascript">
+swSummary.Entries = 21;
+swSummary.Field = 'Class';
+swSummary.FieldName = 'class';
+swSummary.Value = 'Class 2 Echo';
+swSummary.TagValue = 'class-2-echo';
+swSummary.ScoringSys = 27;
+</script>
+<script type="text/javascript">
+swRace.Entries = 21;
+swRace.Notes = '';
+swRace.Date = '8/6';
+swRace.Time = '';
+swRace.Name = 'R1';
+swRace.Rank = 1;
+</script>
+<script type="text/javascript">
+resRaceTitle();
+</script>
+<script type="text/javascript">
+resRaceNotes();
+</script>
+<div class="caption racecaption">
+Start: Start 2, Finishes: Finish time, Time: 120500
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="10">
+<col class="rank" />
+<col class="sailno" />
+<col class="boat" />
+<col class="helmname" />
+<col class="club" />
+<col class="rating" />
+<col class="racefinish" />
+<col class="raceelapsed" />
+<col class="racecorrected" />
+<col class="nett" />
+</colgroup>
+<tr>
+<th>Rank</th>
+<th>sailno</th>
+<th>Boat name</th>
+<th>owner</th>
+<th>club</th>
+<th>hcap</th>
+<th>Finish</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+<tr class="odd racerow">
+<td>
+1
+</td>
+<td>
+988
+</td>
+<td>
+Dux
+</td>
+<td>
+A Gore-Grimes
+</td>
+<td>
+HYC
+</td>
+<td>
+0.956
+</td>
+<td>
+145341
+</td>
+<td>
+2:48:41
+</td>
+<td>
+2:41:16
+</td>
+<td>
+1.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+2
+</td>
+<td>
+2588
+</td>
+<td>
+Rosie
+</td>
+<td>
+R Dickson
+</td>
+<td>
+MYC
+</td>
+<td>
+0.911
+</td>
+<td>
+150742
+</td>
+<td>
+3:02:42
+</td>
+<td>
+2:46:26
+</td>
+<td>
+2.5
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+2
+</td>
+<td>
+2507
+</td>
+<td>
+Impetuous
+</td>
+<td>
+Noonan/Chambers
+</td>
+<td>
+HYC
+</td>
+<td>
+0.967
+</td>
+<td>
+145707
+</td>
+<td>
+2:52:07
+</td>
+<td>
+2:46:26
+</td>
+<td>
+2.5
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+4
+</td>
+<td>
+1411
+</td>
+<td>
+Toughnut
+</td>
+<td>
+D Skehan
+</td>
+<td>
+HYC
+</td>
+<td>
+0.980
+</td>
+<td>
+145605
+</td>
+<td>
+2:51:05
+</td>
+<td>
+2:47:40
+</td>
+<td>
+4.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+5
+</td>
+<td>
+8094
+</td>
+<td>
+King One
+</td>
+<td>
+D Cullen
+</td>
+<td>
+HYC
+</td>
+<td>
+1.027
+</td>
+<td>
+145142
+</td>
+<td>
+2:46:42
+</td>
+<td>
+2:51:12
+</td>
+<td>
+5.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+6
+</td>
+<td>
+1132
+</td>
+<td>
+Sunburn
+</td>
+<td>
+I Byrne
+</td>
+<td>
+HYC
+</td>
+<td>
+0.974
+</td>
+<td>
+150351
+</td>
+<td>
+2:58:51
+</td>
+<td>
+2:54:12
+</td>
+<td>
+6.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+7
+</td>
+<td>
+657
+</td>
+<td>
+Voyager
+</td>
+<td>
+J Carton
+</td>
+<td>
+HYC
+</td>
+<td>
+0.994
+</td>
+<td>
+150022
+</td>
+<td>
+2:55:22
+</td>
+<td>
+2:54:19
+</td>
+<td>
+7.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+8
+</td>
+<td>
+9219
+</td>
+<td>
+Makutu
+</td>
+<td>
+Doyle/Others
+</td>
+<td>
+HYC
+</td>
+<td>
+1.053
+</td>
+<td>
+145223
+</td>
+<td>
+2:47:23
+</td>
+<td>
+2:56:15
+</td>
+<td>
+8.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+9
+</td>
+<td>
+5522
+</td>
+<td>
+The Big Picture
+</td>
+<td>
+Evans/Heffernan
+</td>
+<td>
+HYC
+</td>
+<td>
+0.994
+</td>
+<td>
+150224
+</td>
+<td>
+2:57:24
+</td>
+<td>
+2:56:20
+</td>
+<td>
+9.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+10
+</td>
+<td>
+25078
+</td>
+<td>
+MiniMumm
+</td>
+<td>
+Cobbe/McDonald
+</td>
+<td>
+HYC
+</td>
+<td>
+0.998
+</td>
+<td>
+150230
+</td>
+<td>
+2:57:30
+</td>
+<td>
+2:57:09
+</td>
+<td>
+10.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+11
+</td>
+<td>
+3007
+</td>
+<td>
+30 Something
+</td>
+<td>
+Kavanagh/Gaffney/Lubline
+</td>
+<td>
+RStGYC
+</td>
+<td>
+1.032
+</td>
+<td>
+150110
+</td>
+<td>
+2:56:10
+</td>
+<td>
+3:01:48
+</td>
+<td>
+11.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+12
+</td>
+<td>
+521
+</td>
+<td>
+Bendemeer
+</td>
+<td>
+Power/Casey
+</td>
+<td>
+RStGYC
+</td>
+<td>
+0.935
+</td>
+<td>
+151940
+</td>
+<td>
+3:14:40
+</td>
+<td>
+3:02:01
+</td>
+<td>
+12.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+13
+</td>
+<td>
+1103
+</td>
+<td>
+Viking
+</td>
+<td>
+K Darmody
+</td>
+<td>
+HYC
+</td>
+<td>
+1.010
+</td>
+<td>
+151016
+</td>
+<td>
+3:05:16
+</td>
+<td>
+3:07:07
+</td>
+<td>
+13.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+14
+</td>
+<td>
+5507
+</td>
+<td>
+Peridot
+</td>
+<td>
+J McCann
+</td>
+<td>
+RIYC
+</td>
+<td>
+0.934
+</td>
+<td>
+152524
+</td>
+<td>
+3:20:24
+</td>
+<td>
+3:07:10
+</td>
+<td>
+14.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+15
+</td>
+<td>
+7495
+</td>
+<td>
+Maximus
+</td>
+<td>
+P Kyne
+</td>
+<td>
+HYC
+</td>
+<td>
+0.925
+</td>
+<td>
+152727
+</td>
+<td>
+3:22:27
+</td>
+<td>
+3:07:16
+</td>
+<td>
+15.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+16
+</td>
+<td>
+2004
+</td>
+<td>
+Magic
+</td>
+<td>
+D Espey
+</td>
+<td>
+RIYC
+</td>
+<td>
+1.032
+</td>
+<td>
+150929
+</td>
+<td>
+3:04:29
+</td>
+<td>
+3:10:23
+</td>
+<td>
+16.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+17
+</td>
+<td>
+7317
+</td>
+<td>
+Attitude
+</td>
+<td>
+Milner/Sugar
+</td>
+<td>
+RIYC
+</td>
+<td>
+1.032
+</td>
+<td>
+151024
+</td>
+<td>
+3:05:24
+</td>
+<td>
+3:11:20
+</td>
+<td>
+17.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+18
+</td>
+<td>
+6662
+</td>
+<td>
+Bluefin Two
+</td>
+<td>
+M & B Bryson
+</td>
+<td>
+NYC
+</td>
+<td>
+1.032
+</td>
+<td>
+151459
+</td>
+<td>
+3:09:59
+</td>
+<td>
+3:16:04
+</td>
+<td>
+18.5
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+18
+</td>
+<td>
+5795
+</td>
+<td>
+Obsession
+</td>
+<td>
+Despard/O'Cathain
+</td>
+<td>
+NYC
+</td>
+<td>
+0.989
+</td>
+<td>
+152315
+</td>
+<td>
+3:18:15
+</td>
+<td>
+3:16:04
+</td>
+<td>
+18.5
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+20
+</td>
+<td>
+28181
+</td>
+<td>
+Xtra Time
+</td>
+<td>
+P & M Arthurs
+</td>
+<td>
+MYC
+</td>
+<td>
+0.935
+</td>
+<td>
+153507
+</td>
+<td>
+3:30:07
+</td>
+<td>
+3:16:28
+</td>
+<td>
+20.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+21
+</td>
+<td>
+956
+</td>
+<td>
+C'est la Vie
+</td>
+<td>
+Flannelly/Spain/Stains
+</td>
+<td>
+HYC
+</td>
+<td>
+0.897
+</td>
+<td>
+155006
+</td>
+<td>
+3:45:06
+</td>
+<td>
+3:21:55
+</td>
+<td>
+21.0
+</td>
+</tr>
+</table>
+
+<p class="hardleft"><a href="http://"></a><br /><a href="mailto:"></a></p>
+<p class="hardright"><a href="http://www.hyc.ie">www.hyc.ie</a><br /><a href="mailto:"></a></p>
+<p>Sailwave Scoring Software 2.5.1<br /><a href="http://www.sailwave.com">www.sailwave.com</a></p>
+
+</div>
+
+<footer>
+</footer>
+
+<div id="scrollbottom"></div>
+
+</body>
+</html>
+
+

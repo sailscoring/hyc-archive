@@ -1,0 +1,2735 @@
+
+
+
+<!doctype html>
+
+<head>
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta http-equiv="Cache-control" content="no-cache">
+<meta name="description" content="sailwave results">
+<meta name="viewport" content="width=device-width">
+
+<title>Sailwave results for GP14 Leinster Championships at Howth YC 2024</title>
+
+<style type="text/css">
+body {font: 80% arial, helvetica, sans-serif; text-align: center;}
+.hardleft  {text-align: left; float: left;  margin: 15px 0  15px 25px;}
+.hardright {text-align: right; float: right; margin: 15px 25px 15px 0;}
+table {text-align: left; margin: 0px auto 30px auto; font-size: 1em; border-collapse: collapse; border: 1px #999 solid;}
+td, th {padding: 4px; border: 1px #999 solid; vertical-align: top;}
+.caption {padding: 5px; text-align: center; border: 0; font-weight: bold;}
+p {text-align: center;}
+.contents {text-align: left; margin-left: 20%;}
+.race {background-color: #eee;}
+.odd {background-color: #eef;}
+.natflag {border: 1px #999 solid;}
+.nattext {font-size: 0.8em;}
+.place1 {font-weight: bold; background-color: #ffffaa;}
+.place2 {font-weight: bold; background-color: #aaaaff;}
+.place3 {font-weight: bold; background-color: #ffaaaa;}
+.placen {}
+table.headertable {border: 0px;}
+table.headertable td{border: 0px;}
+</style>
+
+<script type="text/javascript">
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script>
+
+function swGetURLArgs() {
+
+  var url = location.href;
+  var qs  = url.substring(url.indexOf('?') + 1).split('&');
+
+  for(var i = 0, result = {}; i < qs.length; i++) {
+    qs[i]            = qs[i].split('=');
+    result[qs[i][0]] = decodeURIComponent(qs[i][1]);
+  }
+
+  return result;
+}
+
+//
+//  name=HighlightWins3v3
+//  dependencies=jQuery
+//  description=Highlight winning scores in summary tables.
+//  author=Jon Eskdale based on an idea by Colin Jenkins
+//  date=2016-07-04
+//  version=3.0  For use with Sailwave from V2.22.x
+//  Requires the following lines in the Results.htm file (Results.htm is in the Templates directory)
+//  string.set("summary.col.race.rank1.td",   "rank1")
+//  string.set("summary.col.race.rank2.td",   "rank2")
+//  string.set("summary.col.race.rank3.td",   "rank3")
+
+//  url=http://sailwave.com
+//  email=jon@sailwave.com
+//  twitter=eskdale
+//  comments=Edit colours to colours of your choice
+//
+
+$(document).ready(function() {
+var selectorRank1 = '.rank1';
+var selectorRank2 = '.rank2';
+var selectorRank3 = '.rank3';
+
+// Results with these codes will not get highlighted add or remove codes to your choice
+var ignoreText   = /^(?!.*\b(DNC|DNF|DNS|OCS|BFD|UFD|RET|DSQ|DGM|DNE)\b).*/i
+
+// Edit these colours to change the highlight colours for 1st, 2nd and 3rd
+var winsColour   = '#ffd700';
+var twoColour    = '#6a91c5';
+var threeColour  = '#da6841';
+
+
+// Change the background color for cells with class of rank1-3 and don't have a code specified
+$(function () {
+
+  $(selectorRank1).filter(function() {
+    return ignoreText.test($(this).text());
+  }).css("background", winsColour);
+  $(selectorRank2).filter(function() {
+        return ignoreText.test($(this).text());
+  }).css("background", twoColour);
+  $(selectorRank3).filter(function() {
+        return ignoreText.test($(this).text());
+  }).css("background", threeColour);
+
+});
+});
+</script>
+
+</head>
+
+<body>
+
+<header>
+</header>
+<table class="headertable" cellspacing="0" width="100%" cellpadding="0" border="0">
+<tbody>
+<div id="wrap">
+
+<tr>
+<td width="30%">
+<img style="display:block; height:100px;"  src="https://hyc.ie/system/sponsor_logos/439/normal/HYC_Logo.jpg" alt="venue burgee" />
+</td>
+
+<td width="40%" align="center">
+<h1>GP14 Leinster Championships</h1>
+<h2>Howth YC</h2>
+</td>
+
+<td width="30%">
+<img style="display:block; height:100px;" src="https://i0.wp.com/sdc.ie/wp-content/uploads/2023/07/GP14-Ireland-251x.png?fit=251%2C131&ssl=1" alt="event burgee" align="right" />
+</td>
+</tr>
+</tbody>
+</table>
+
+<div style="clear:both;"></div>
+
+<style>
+div.applicant-break {page-break-after:always;}
+</style>
+<h3 class="seriestitle">Results are provisional as of 19:47 on June  1, 2024</h3>
+<h3 class="summarytitle" id="summarygold">Gold FLEET</h3>
+<div class="caption summarycaption">Sailed: 4, Discards: 1, To count: 3, Entries: 18, Scoring system: Appendix A</div>
+<table class="summarytable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="15">
+<col class="rank" />
+<col class="sailno" />
+<col class="boat" />
+<col class="helmname" />
+<col class="crewname" />
+<col class="club" />
+<col class="fleet" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="total" />
+<col class="nett" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>SAIL NUMBER</th>
+<th>BOAT NAME</th>
+<th>HELM</th>
+<th>CREW</th>
+<th>CLUB</th>
+<th>FLEET</th>
+<th><a class="racelink" href="#r1gold">R1</a></th>
+<th><a class="racelink" href="#r2gold">R2</a></th>
+<th><a class="racelink" href="#r3gold">R3</a></th>
+<th><a class="racelink" href="#r4gold">R4</a></th>
+<th>R5</th>
+<th>R6</th>
+<th>Total</th>
+<th>Nett</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd summaryrow">
+<td>1st</td>
+<td>14</td>
+<td>You Go Boss</td>
+<td>Colman Grimes</td>
+<td>Ross Gingles</td>
+<td>Skerries SC</td>
+<td>Gold</td>
+<td>(9.0)</td>
+<td class="rank2">2.0</td>
+<td class="rank3">3.0</td>
+<td class="rank1">1.0</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>15.0</td>
+<td>6.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>2nd</td>
+<td>14242</td>
+<td>Ron</td>
+<td>Ross Kearney</td>
+<td>Daniel Nelson</td>
+<td>Royal North Of Ireland YC</td>
+<td>Gold</td>
+<td class="rank2">2.0</td>
+<td>(7.0)</td>
+<td>4.0</td>
+<td class="rank2">2.0</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>15.0</td>
+<td>8.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>3rd</td>
+<td>14272</td>
+<td>n/a</td>
+<td>Sean Craig</td>
+<td>Stephen Boyle</td>
+<td>Sutton DC</td>
+<td>Gold</td>
+<td>(4.0)</td>
+<td class="rank3">3.0</td>
+<td class="rank2">2.0</td>
+<td class="rank3">3.0</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>12.0</td>
+<td>8.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>4th</td>
+<td>14203</td>
+<td>Rufus</td>
+<td>Diana Kissane</td>
+<td>Graham Curran</td>
+<td>Howth YC</td>
+<td>Gold</td>
+<td>(13.0)</td>
+<td>4.0</td>
+<td class="rank1">1.0</td>
+<td>4.0</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>22.0</td>
+<td>9.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>5th</td>
+<td>14275</td>
+<td>YinTang</td>
+<td>Hugh Gill</td>
+<td>Richard Street</td>
+<td>Sutton DC</td>
+<td>Gold</td>
+<td class="rank3">3.0</td>
+<td class="rank1">1.0</td>
+<td>7.0</td>
+<td>(10.0)</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>21.0</td>
+<td>11.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>6th</td>
+<td>13624</td>
+<td>Curved Gold</td>
+<td>Chris Bateman</td>
+<td>Kate Neville</td>
+<td>Monkstown Bay SC</td>
+<td>Gold</td>
+<td>6.0</td>
+<td>9.0</td>
+<td>(10.0)</td>
+<td>8.0</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>33.0</td>
+<td>23.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>7th</td>
+<td>14235</td>
+<td>Wally</td>
+<td>Alan Blay</td>
+<td>Hugh McNally</td>
+<td>Howth YC/Sutton DC</td>
+<td>Gold</td>
+<td>5.0</td>
+<td>13.0</td>
+<td>6.0</td>
+<td>(16.0)</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>40.0</td>
+<td>24.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>8th</td>
+<td>14247</td>
+<td>None</td>
+<td>John McGuinness</td>
+<td>Donal McGuinness</td>
+<td>Moville BC</td>
+<td>Gold</td>
+<td class="rank1">1.0</td>
+<td>(14.0)</td>
+<td>11.0</td>
+<td>13.0</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>39.0</td>
+<td>25.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>9th</td>
+<td>1427 / 14271</td>
+<td>n/a</td>
+<td>Paddy O'Connor</td>
+<td>Brendan Brogan</td>
+<td>Sligo YC</td>
+<td>Gold</td>
+<td>(11.0)</td>
+<td>11.0</td>
+<td>8.0</td>
+<td>7.0</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>37.0</td>
+<td>26.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>10th</td>
+<td>14279</td>
+<td>Solaro</td>
+<td>Katie Dwyer</td>
+<td>Michelle Rowley</td>
+<td>Howth YC / Sutton DC</td>
+<td>Gold</td>
+<td>15.0</td>
+<td>8.0</td>
+<td>5.0</td>
+<td>(17.0)</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>45.0</td>
+<td>28.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>11th</td>
+<td>14219</td>
+<td>Trouble on the way</td>
+<td>Curly Morris</td>
+<td>Rachael Stewart</td>
+<td>East Antrim BC</td>
+<td>Gold</td>
+<td>8.0</td>
+<td>6.0</td>
+<td>(16.0)</td>
+<td>14.0</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>44.0</td>
+<td>28.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>12th</td>
+<td>14165</td>
+<td>The Wrong Trousers</td>
+<td>Conor Twohig</td>
+<td>Matthew Cotter</td>
+<td>Howth YC / Sutton DC</td>
+<td>Gold</td>
+<td>10.0</td>
+<td>(15.0)</td>
+<td>9.0</td>
+<td>9.0</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>43.0</td>
+<td>28.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>13th</td>
+<td>13981</td>
+<td>Cloud Nine</td>
+<td>Sam Street</td>
+<td>Josh Lloyd</td>
+<td>Blessington SC</td>
+<td>Gold</td>
+<td>(14.0)</td>
+<td>12.0</td>
+<td>12.0</td>
+<td>5.0</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>43.0</td>
+<td>29.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>14th</td>
+<td>14237</td>
+<td>;-)</td>
+<td>JP McCaldin</td>
+<td>Carolyn McCaldin</td>
+<td>Lough Erne YC</td>
+<td>Gold</td>
+<td>(19.0 DNF)</td>
+<td>5.0</td>
+<td>14.0</td>
+<td>12.0</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>50.0</td>
+<td>31.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>15th</td>
+<td>14214</td>
+<td>None</td>
+<td>Keith Louden</td>
+<td>Mateo Louden</td>
+<td>Lough Foyle YC</td>
+<td>Gold</td>
+<td>12.0</td>
+<td>10.0</td>
+<td>(15.0)</td>
+<td>11.0</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>48.0</td>
+<td>33.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>16th</td>
+<td>13939</td>
+<td>Winston</td>
+<td>Ewan McMahon</td>
+<td>Jim McMahon</td>
+<td>Howth YC</td>
+<td>Gold</td>
+<td>(17.0)</td>
+<td>17.0</td>
+<td>13.0</td>
+<td>6.0</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>53.0</td>
+<td>36.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>17th</td>
+<td>14215</td>
+<td>Ghost Light</td>
+<td>Ruan O'Tiarnaigh</td>
+<td>Charlotte O'Tiarnaigh</td>
+<td>Sutton DC/Royal Ulster YC</td>
+<td>Gold</td>
+<td>7.0</td>
+<td>16.0</td>
+<td>(19.0 DNF)</td>
+<td>19.0 DNF</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>61.0</td>
+<td>42.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>18th</td>
+<td>14185</td>
+<td>No Name</td>
+<td>Rob Lee</td>
+<td>Stephen Lynch</td>
+<td>Greystones SC</td>
+<td>Gold</td>
+<td>16.0</td>
+<td>(19.0 OCS)</td>
+<td>17.0</td>
+<td>15.0</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>67.0</td>
+<td>48.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="summarytitle" id="summarysilver">Silver FLEET</h3>
+<div class="caption summarycaption">Sailed: 4, Discards: 1, To count: 3, Entries: 6, Scoring system: Appendix A</div>
+<table class="summarytable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="15">
+<col class="rank" />
+<col class="sailno" />
+<col class="boat" />
+<col class="helmname" />
+<col class="crewname" />
+<col class="club" />
+<col class="fleet" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="total" />
+<col class="nett" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>SAIL NUMBER</th>
+<th>BOAT NAME</th>
+<th>HELM</th>
+<th>CREW</th>
+<th>CLUB</th>
+<th>FLEET</th>
+<th><a class="racelink" href="#r1silver">R1</a></th>
+<th><a class="racelink" href="#r2silver">R2</a></th>
+<th><a class="racelink" href="#r3silver">R3</a></th>
+<th><a class="racelink" href="#r4silver">R4</a></th>
+<th>R5</th>
+<th>R6</th>
+<th>Total</th>
+<th>Nett</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd summaryrow">
+<td>1st</td>
+<td>14068 / 14203</td>
+<td>Red Boat</td>
+<td>David Evans</td>
+<td>William Draper</td>
+<td>Sligo YC</td>
+<td>Silver</td>
+<td class="rank2">(2.0)</td>
+<td class="rank1">1.0</td>
+<td class="rank1">1.0</td>
+<td class="rank1">1.0</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>5.0</td>
+<td>3.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>2nd</td>
+<td>13977</td>
+<td>Lil Yachty</td>
+<td>David Johnston</td>
+<td>Ben Dover</td>
+<td>Sutton DC</td>
+<td>Silver</td>
+<td class="rank3">(3.0)</td>
+<td class="rank3">3.0</td>
+<td class="rank2">2.0</td>
+<td class="rank2">2.0</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>10.0</td>
+<td>7.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>3rd</td>
+<td>13907</td>
+<td>none</td>
+<td>Jon Evans</td>
+<td>Una l'Estrange</td>
+<td>Sligo YC</td>
+<td>Silver</td>
+<td class="rank1">1.0</td>
+<td>4.0</td>
+<td>4.0</td>
+<td>(6.0)</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>15.0</td>
+<td>9.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>4th</td>
+<td>14257</td>
+<td>Enigma</td>
+<td>Sam Wray</td>
+<td>Luke Henderson</td>
+<td>Sligo YC</td>
+<td>Silver</td>
+<td>4.0</td>
+<td class="rank2">2.0</td>
+<td>(7.0 DNS)</td>
+<td>5.0</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>18.0</td>
+<td>11.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>5th</td>
+<td>14225</td>
+<td>Gringer Sails Again</td>
+<td>Cathal Sheridan</td>
+<td>David Cooke</td>
+<td>Skerries SC</td>
+<td>Silver</td>
+<td>(5.0)</td>
+<td>5.0</td>
+<td class="rank3">3.0</td>
+<td>4.0</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>17.0</td>
+<td>12.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>6th</td>
+<td>14271</td>
+<td>Ice and slice</td>
+<td>Brian Morrison</td>
+<td>Owen O'Donnell</td>
+<td>Lough Erne YC</td>
+<td>Silver</td>
+<td>(6.0)</td>
+<td>6.0</td>
+<td>5.0</td>
+<td class="rank3">3.0</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>20.0</td>
+<td>14.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="summarytitle" id="summarybronze">Bronze FLEET</h3>
+<div class="caption summarycaption">Sailed: 4, Discards: 1, To count: 3, Entries: 10, Scoring system: Appendix A</div>
+<table class="summarytable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="15">
+<col class="rank" />
+<col class="sailno" />
+<col class="boat" />
+<col class="helmname" />
+<col class="crewname" />
+<col class="club" />
+<col class="fleet" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="total" />
+<col class="nett" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>SAIL NUMBER</th>
+<th>BOAT NAME</th>
+<th>HELM</th>
+<th>CREW</th>
+<th>CLUB</th>
+<th>FLEET</th>
+<th><a class="racelink" href="#r1bronze">R1</a></th>
+<th><a class="racelink" href="#r2bronze">R2</a></th>
+<th><a class="racelink" href="#r3bronze">R3</a></th>
+<th><a class="racelink" href="#r4bronze">R4</a></th>
+<th>R5</th>
+<th>R6</th>
+<th>Total</th>
+<th>Nett</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd summaryrow">
+<td>1st</td>
+<td>1424</td>
+<td>Robbers Dog</td>
+<td>Rory Higgins</td>
+<td>Chris Clayton</td>
+<td>Royal North Of Ireland YC</td>
+<td>Bronze</td>
+<td class="rank1">(1.0)</td>
+<td class="rank1">1.0</td>
+<td class="rank1">1.0</td>
+<td class="rank1">1.0</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>4.0</td>
+<td>3.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>2nd</td>
+<td>14036</td>
+<td>N/A</td>
+<td>Riaghan Boardman</td>
+<td>Maedbh Butterly</td>
+<td>Rush SC</td>
+<td>Bronze</td>
+<td class="rank3">3.0</td>
+<td class="rank2">2.0</td>
+<td>(5.0)</td>
+<td class="rank2">2.0</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>12.0</td>
+<td>7.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>3rd</td>
+<td>13353</td>
+<td>8Ball</td>
+<td>Des MacMahon</td>
+<td>Lara Sunday</td>
+<td>Cullaun SC</td>
+<td>Bronze</td>
+<td>(4.0)</td>
+<td>4.0</td>
+<td class="rank2">2.0</td>
+<td class="rank3">3.0</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>13.0</td>
+<td>9.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>4th</td>
+<td>13308</td>
+<td>n/a</td>
+<td>Jack McMahon</td>
+<td>Isobel O'Grady</td>
+<td>Howth YC</td>
+<td>Bronze</td>
+<td class="rank2">2.0</td>
+<td>(6.0)</td>
+<td>4.0</td>
+<td>6.0</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>18.0</td>
+<td>12.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>5th</td>
+<td>14284</td>
+<td>Smoke on the water</td>
+<td>Michael Collender</td>
+<td>Brian Walker</td>
+<td>Mullingar SC</td>
+<td>Bronze</td>
+<td>(5.0)</td>
+<td>5.0</td>
+<td class="rank3">3.0</td>
+<td>4.0</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>17.0</td>
+<td>12.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>6th</td>
+<td>13865</td>
+<td>Boatzart</td>
+<td>Jennifer Bryce</td>
+<td>Vivika Timmer</td>
+<td>Newtownards SC /Donaghadee SC</td>
+<td>Bronze</td>
+<td>6.0</td>
+<td>(7.0)</td>
+<td>6.0</td>
+<td>5.0</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>24.0</td>
+<td>17.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>7th</td>
+<td>13238</td>
+<td>Mr Mobius</td>
+<td>George Fitzgerald</td>
+<td>Frank Mulqueen</td>
+<td>Cullaun SC</td>
+<td>Bronze</td>
+<td>7.0</td>
+<td>(9.0)</td>
+<td>7.0</td>
+<td>9.0</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>32.0</td>
+<td>23.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>8th</td>
+<td>14041</td>
+<td>K2</td>
+<td>Paul Soffe</td>
+<td>Gerry Blacoe (Sat), Neil Soffe (Sun)</td>
+<td>Malahide YC</td>
+<td>Bronze</td>
+<td>(9.0)</td>
+<td>8.0</td>
+<td>8.0</td>
+<td>7.0</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>32.0</td>
+<td>23.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>9th</td>
+<td>13207</td>
+<td>Pig</td>
+<td>Denis Cully</td>
+<td>Ollie Lloyd</td>
+<td>Blessington SC</td>
+<td>Bronze</td>
+<td>(11.0 DNF)</td>
+<td class="rank3">3.0</td>
+<td>11.0 DNF</td>
+<td>11.0 DNC</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>36.0</td>
+<td>25.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>10th</td>
+<td>13569</td>
+<td>Flatspin</td>
+<td>Tadhg McCarthy</td>
+<td>Deirdre Foley</td>
+<td>Greystones SC</td>
+<td>Bronze</td>
+<td>8.0</td>
+<td>(10.0)</td>
+<td>9.0</td>
+<td>8.0</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>35.0</td>
+<td>25.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r1gold">R1 - Gold FLEET</h3>
+<div class="caption racecaption">
+Start: Start 1, Finishes: Place
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="9">
+<col class="rank" />
+<col class="sailno" />
+<col class="boat" />
+<col class="helmname" />
+<col class="crewname" />
+<col class="club" />
+<col class="fleet" />
+<col class="place" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>SAIL NUMBER</th>
+<th>BOAT NAME</th>
+<th>HELM</th>
+<th>CREW</th>
+<th>CLUB</th>
+<th>FLEET</th>
+<th>Place</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>14247</td>
+<td>None</td>
+<td>John McGuinness</td>
+<td>Donal McGuinness</td>
+<td>Moville BC</td>
+<td>Gold</td>
+<td>1</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>14242</td>
+<td>Ron</td>
+<td>Ross Kearney</td>
+<td>Daniel Nelson</td>
+<td>Royal North Of Ireland YC</td>
+<td>Gold</td>
+<td>2</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>14275</td>
+<td>YinTang</td>
+<td>Hugh Gill</td>
+<td>Richard Street</td>
+<td>Sutton DC</td>
+<td>Gold</td>
+<td>3</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>14272</td>
+<td>n/a</td>
+<td>Sean Craig</td>
+<td>Stephen Boyle</td>
+<td>Sutton DC</td>
+<td>Gold</td>
+<td>4</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>14235</td>
+<td>Wally</td>
+<td>Alan Blay</td>
+<td>Hugh McNally</td>
+<td>Howth YC/Sutton DC</td>
+<td>Gold</td>
+<td>5</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>13624</td>
+<td>Curved Gold</td>
+<td>Chris Bateman</td>
+<td>Kate Neville</td>
+<td>Monkstown Bay SC</td>
+<td>Gold</td>
+<td>6</td>
+<td>6.0</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>14215</td>
+<td>Ghost Light</td>
+<td>Ruan O'Tiarnaigh</td>
+<td>Charlotte O'Tiarnaigh</td>
+<td>Sutton DC/Royal Ulster YC</td>
+<td>Gold</td>
+<td>7</td>
+<td>7.0</td>
+</tr>
+<tr class="even racerow">
+<td>8</td>
+<td>14219</td>
+<td>Trouble on the way</td>
+<td>Curly Morris</td>
+<td>Rachael Stewart</td>
+<td>East Antrim BC</td>
+<td>Gold</td>
+<td>8</td>
+<td>8.0</td>
+</tr>
+<tr class="odd racerow">
+<td>9</td>
+<td>14</td>
+<td>You Go Boss</td>
+<td>Colman Grimes</td>
+<td>Ross Gingles</td>
+<td>Skerries SC</td>
+<td>Gold</td>
+<td>10</td>
+<td>9.0</td>
+</tr>
+<tr class="even racerow">
+<td>10</td>
+<td>14165</td>
+<td>The Wrong Trousers</td>
+<td>Conor Twohig</td>
+<td>Matthew Cotter</td>
+<td>Howth YC / Sutton DC</td>
+<td>Gold</td>
+<td>11</td>
+<td>10.0</td>
+</tr>
+<tr class="odd racerow">
+<td>11</td>
+<td>1427 / 14271</td>
+<td>n/a</td>
+<td>Paddy O'Connor</td>
+<td>Brendan Brogan</td>
+<td>Sligo YC</td>
+<td>Gold</td>
+<td>14</td>
+<td>11.0</td>
+</tr>
+<tr class="even racerow">
+<td>12</td>
+<td>14214</td>
+<td>None</td>
+<td>Keith Louden</td>
+<td>Mateo Louden</td>
+<td>Lough Foyle YC</td>
+<td>Gold</td>
+<td>15</td>
+<td>12.0</td>
+</tr>
+<tr class="odd racerow">
+<td>13</td>
+<td>14203</td>
+<td>Rufus</td>
+<td>Diana Kissane</td>
+<td>Graham Curran</td>
+<td>Howth YC</td>
+<td>Gold</td>
+<td>16</td>
+<td>13.0</td>
+</tr>
+<tr class="even racerow">
+<td>14</td>
+<td>13981</td>
+<td>Cloud Nine</td>
+<td>Sam Street</td>
+<td>Josh Lloyd</td>
+<td>Blessington SC</td>
+<td>Gold</td>
+<td>18</td>
+<td>14.0</td>
+</tr>
+<tr class="odd racerow">
+<td>15</td>
+<td>14279</td>
+<td>Solaro</td>
+<td>Katie Dwyer</td>
+<td>Michelle Rowley</td>
+<td>Howth YC / Sutton DC</td>
+<td>Gold</td>
+<td>19</td>
+<td>15.0</td>
+</tr>
+<tr class="even racerow">
+<td>16</td>
+<td>14185</td>
+<td>No Name</td>
+<td>Rob Lee</td>
+<td>Stephen Lynch</td>
+<td>Greystones SC</td>
+<td>Gold</td>
+<td>20</td>
+<td>16.0</td>
+</tr>
+<tr class="odd racerow">
+<td>17</td>
+<td>13939</td>
+<td>Winston</td>
+<td>Ewan McMahon</td>
+<td>Jim McMahon</td>
+<td>Howth YC</td>
+<td>Gold</td>
+<td>22</td>
+<td>17.0</td>
+</tr>
+<tr class="even racerow">
+<td>18</td>
+<td>14237</td>
+<td>;-)</td>
+<td>JP McCaldin</td>
+<td>Carolyn McCaldin</td>
+<td>Lough Erne YC</td>
+<td>Gold</td>
+<td>DNF</td>
+<td>19.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r2gold">R2 - Gold FLEET</h3>
+<div class="caption racecaption">
+Start: Start 1, Finishes: Place
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="9">
+<col class="rank" />
+<col class="sailno" />
+<col class="boat" />
+<col class="helmname" />
+<col class="crewname" />
+<col class="club" />
+<col class="fleet" />
+<col class="place" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>SAIL NUMBER</th>
+<th>BOAT NAME</th>
+<th>HELM</th>
+<th>CREW</th>
+<th>CLUB</th>
+<th>FLEET</th>
+<th>Place</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>14275</td>
+<td>YinTang</td>
+<td>Hugh Gill</td>
+<td>Richard Street</td>
+<td>Sutton DC</td>
+<td>Gold</td>
+<td>1</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>14</td>
+<td>You Go Boss</td>
+<td>Colman Grimes</td>
+<td>Ross Gingles</td>
+<td>Skerries SC</td>
+<td>Gold</td>
+<td>3</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>14272</td>
+<td>n/a</td>
+<td>Sean Craig</td>
+<td>Stephen Boyle</td>
+<td>Sutton DC</td>
+<td>Gold</td>
+<td>4</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>14203</td>
+<td>Rufus</td>
+<td>Diana Kissane</td>
+<td>Graham Curran</td>
+<td>Howth YC</td>
+<td>Gold</td>
+<td>5</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>14237</td>
+<td>;-)</td>
+<td>JP McCaldin</td>
+<td>Carolyn McCaldin</td>
+<td>Lough Erne YC</td>
+<td>Gold</td>
+<td>6</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>14219</td>
+<td>Trouble on the way</td>
+<td>Curly Morris</td>
+<td>Rachael Stewart</td>
+<td>East Antrim BC</td>
+<td>Gold</td>
+<td>7</td>
+<td>6.0</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>14242</td>
+<td>Ron</td>
+<td>Ross Kearney</td>
+<td>Daniel Nelson</td>
+<td>Royal North Of Ireland YC</td>
+<td>Gold</td>
+<td>8</td>
+<td>7.0</td>
+</tr>
+<tr class="even racerow">
+<td>8</td>
+<td>14279</td>
+<td>Solaro</td>
+<td>Katie Dwyer</td>
+<td>Michelle Rowley</td>
+<td>Howth YC / Sutton DC</td>
+<td>Gold</td>
+<td>9</td>
+<td>8.0</td>
+</tr>
+<tr class="odd racerow">
+<td>9</td>
+<td>13624</td>
+<td>Curved Gold</td>
+<td>Chris Bateman</td>
+<td>Kate Neville</td>
+<td>Monkstown Bay SC</td>
+<td>Gold</td>
+<td>10</td>
+<td>9.0</td>
+</tr>
+<tr class="even racerow">
+<td>10</td>
+<td>14214</td>
+<td>None</td>
+<td>Keith Louden</td>
+<td>Mateo Louden</td>
+<td>Lough Foyle YC</td>
+<td>Gold</td>
+<td>11</td>
+<td>10.0</td>
+</tr>
+<tr class="odd racerow">
+<td>11</td>
+<td>1427 / 14271</td>
+<td>n/a</td>
+<td>Paddy O'Connor</td>
+<td>Brendan Brogan</td>
+<td>Sligo YC</td>
+<td>Gold</td>
+<td>12</td>
+<td>11.0</td>
+</tr>
+<tr class="even racerow">
+<td>12</td>
+<td>13981</td>
+<td>Cloud Nine</td>
+<td>Sam Street</td>
+<td>Josh Lloyd</td>
+<td>Blessington SC</td>
+<td>Gold</td>
+<td>15</td>
+<td>12.0</td>
+</tr>
+<tr class="odd racerow">
+<td>13</td>
+<td>14235</td>
+<td>Wally</td>
+<td>Alan Blay</td>
+<td>Hugh McNally</td>
+<td>Howth YC/Sutton DC</td>
+<td>Gold</td>
+<td>16</td>
+<td>13.0</td>
+</tr>
+<tr class="even racerow">
+<td>14</td>
+<td>14247</td>
+<td>None</td>
+<td>John McGuinness</td>
+<td>Donal McGuinness</td>
+<td>Moville BC</td>
+<td>Gold</td>
+<td>17</td>
+<td>14.0</td>
+</tr>
+<tr class="odd racerow">
+<td>15</td>
+<td>14165</td>
+<td>The Wrong Trousers</td>
+<td>Conor Twohig</td>
+<td>Matthew Cotter</td>
+<td>Howth YC / Sutton DC</td>
+<td>Gold</td>
+<td>18</td>
+<td>15.0</td>
+</tr>
+<tr class="even racerow">
+<td>16</td>
+<td>14215</td>
+<td>Ghost Light</td>
+<td>Ruan O'Tiarnaigh</td>
+<td>Charlotte O'Tiarnaigh</td>
+<td>Sutton DC/Royal Ulster YC</td>
+<td>Gold</td>
+<td>19</td>
+<td>16.0</td>
+</tr>
+<tr class="odd racerow">
+<td>17</td>
+<td>13939</td>
+<td>Winston</td>
+<td>Ewan McMahon</td>
+<td>Jim McMahon</td>
+<td>Howth YC</td>
+<td>Gold</td>
+<td>21</td>
+<td>17.0</td>
+</tr>
+<tr class="even racerow">
+<td>18</td>
+<td>14185</td>
+<td>No Name</td>
+<td>Rob Lee</td>
+<td>Stephen Lynch</td>
+<td>Greystones SC</td>
+<td>Gold</td>
+<td>OCS</td>
+<td>19.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r3gold">R3 - Gold FLEET</h3>
+<div class="caption racecaption">
+Start: Start 1, Finishes: Place
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="9">
+<col class="rank" />
+<col class="sailno" />
+<col class="boat" />
+<col class="helmname" />
+<col class="crewname" />
+<col class="club" />
+<col class="fleet" />
+<col class="place" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>SAIL NUMBER</th>
+<th>BOAT NAME</th>
+<th>HELM</th>
+<th>CREW</th>
+<th>CLUB</th>
+<th>FLEET</th>
+<th>Place</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>14203</td>
+<td>Rufus</td>
+<td>Diana Kissane</td>
+<td>Graham Curran</td>
+<td>Howth YC</td>
+<td>Gold</td>
+<td>1</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>14272</td>
+<td>n/a</td>
+<td>Sean Craig</td>
+<td>Stephen Boyle</td>
+<td>Sutton DC</td>
+<td>Gold</td>
+<td>2</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>14</td>
+<td>You Go Boss</td>
+<td>Colman Grimes</td>
+<td>Ross Gingles</td>
+<td>Skerries SC</td>
+<td>Gold</td>
+<td>3</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>14242</td>
+<td>Ron</td>
+<td>Ross Kearney</td>
+<td>Daniel Nelson</td>
+<td>Royal North Of Ireland YC</td>
+<td>Gold</td>
+<td>4</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>14279</td>
+<td>Solaro</td>
+<td>Katie Dwyer</td>
+<td>Michelle Rowley</td>
+<td>Howth YC / Sutton DC</td>
+<td>Gold</td>
+<td>6</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>14235</td>
+<td>Wally</td>
+<td>Alan Blay</td>
+<td>Hugh McNally</td>
+<td>Howth YC/Sutton DC</td>
+<td>Gold</td>
+<td>7</td>
+<td>6.0</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>14275</td>
+<td>YinTang</td>
+<td>Hugh Gill</td>
+<td>Richard Street</td>
+<td>Sutton DC</td>
+<td>Gold</td>
+<td>8</td>
+<td>7.0</td>
+</tr>
+<tr class="even racerow">
+<td>8</td>
+<td>1427 / 14271</td>
+<td>n/a</td>
+<td>Paddy O'Connor</td>
+<td>Brendan Brogan</td>
+<td>Sligo YC</td>
+<td>Gold</td>
+<td>9</td>
+<td>8.0</td>
+</tr>
+<tr class="odd racerow">
+<td>9</td>
+<td>14165</td>
+<td>The Wrong Trousers</td>
+<td>Conor Twohig</td>
+<td>Matthew Cotter</td>
+<td>Howth YC / Sutton DC</td>
+<td>Gold</td>
+<td>10</td>
+<td>9.0</td>
+</tr>
+<tr class="even racerow">
+<td>10</td>
+<td>13624</td>
+<td>Curved Gold</td>
+<td>Chris Bateman</td>
+<td>Kate Neville</td>
+<td>Monkstown Bay SC</td>
+<td>Gold</td>
+<td>11</td>
+<td>10.0</td>
+</tr>
+<tr class="odd racerow">
+<td>11</td>
+<td>14247</td>
+<td>None</td>
+<td>John McGuinness</td>
+<td>Donal McGuinness</td>
+<td>Moville BC</td>
+<td>Gold</td>
+<td>13</td>
+<td>11.0</td>
+</tr>
+<tr class="even racerow">
+<td>12</td>
+<td>13981</td>
+<td>Cloud Nine</td>
+<td>Sam Street</td>
+<td>Josh Lloyd</td>
+<td>Blessington SC</td>
+<td>Gold</td>
+<td>15</td>
+<td>12.0</td>
+</tr>
+<tr class="odd racerow">
+<td>13</td>
+<td>13939</td>
+<td>Winston</td>
+<td>Ewan McMahon</td>
+<td>Jim McMahon</td>
+<td>Howth YC</td>
+<td>Gold</td>
+<td>16</td>
+<td>13.0</td>
+</tr>
+<tr class="even racerow">
+<td>14</td>
+<td>14237</td>
+<td>;-)</td>
+<td>JP McCaldin</td>
+<td>Carolyn McCaldin</td>
+<td>Lough Erne YC</td>
+<td>Gold</td>
+<td>17</td>
+<td>14.0</td>
+</tr>
+<tr class="odd racerow">
+<td>15</td>
+<td>14214</td>
+<td>None</td>
+<td>Keith Louden</td>
+<td>Mateo Louden</td>
+<td>Lough Foyle YC</td>
+<td>Gold</td>
+<td>21</td>
+<td>15.0</td>
+</tr>
+<tr class="even racerow">
+<td>16</td>
+<td>14219</td>
+<td>Trouble on the way</td>
+<td>Curly Morris</td>
+<td>Rachael Stewart</td>
+<td>East Antrim BC</td>
+<td>Gold</td>
+<td>23</td>
+<td>16.0</td>
+</tr>
+<tr class="odd racerow">
+<td>17</td>
+<td>14185</td>
+<td>No Name</td>
+<td>Rob Lee</td>
+<td>Stephen Lynch</td>
+<td>Greystones SC</td>
+<td>Gold</td>
+<td>28</td>
+<td>17.0</td>
+</tr>
+<tr class="even racerow">
+<td>18</td>
+<td>14215</td>
+<td>Ghost Light</td>
+<td>Ruan O'Tiarnaigh</td>
+<td>Charlotte O'Tiarnaigh</td>
+<td>Sutton DC/Royal Ulster YC</td>
+<td>Gold</td>
+<td>DNF</td>
+<td>19.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r4gold">R4 - Gold FLEET</h3>
+<div class="caption racecaption">
+Start: Start 1, Finishes: Place
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="9">
+<col class="rank" />
+<col class="sailno" />
+<col class="boat" />
+<col class="helmname" />
+<col class="crewname" />
+<col class="club" />
+<col class="fleet" />
+<col class="place" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>SAIL NUMBER</th>
+<th>BOAT NAME</th>
+<th>HELM</th>
+<th>CREW</th>
+<th>CLUB</th>
+<th>FLEET</th>
+<th>Place</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>14</td>
+<td>You Go Boss</td>
+<td>Colman Grimes</td>
+<td>Ross Gingles</td>
+<td>Skerries SC</td>
+<td>Gold</td>
+<td>1</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>14242</td>
+<td>Ron</td>
+<td>Ross Kearney</td>
+<td>Daniel Nelson</td>
+<td>Royal North Of Ireland YC</td>
+<td>Gold</td>
+<td>2</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>14272</td>
+<td>n/a</td>
+<td>Sean Craig</td>
+<td>Stephen Boyle</td>
+<td>Sutton DC</td>
+<td>Gold</td>
+<td>3</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>14203</td>
+<td>Rufus</td>
+<td>Diana Kissane</td>
+<td>Graham Curran</td>
+<td>Howth YC</td>
+<td>Gold</td>
+<td>4</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>13981</td>
+<td>Cloud Nine</td>
+<td>Sam Street</td>
+<td>Josh Lloyd</td>
+<td>Blessington SC</td>
+<td>Gold</td>
+<td>5</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>13939</td>
+<td>Winston</td>
+<td>Ewan McMahon</td>
+<td>Jim McMahon</td>
+<td>Howth YC</td>
+<td>Gold</td>
+<td>6</td>
+<td>6.0</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>1427 / 14271</td>
+<td>n/a</td>
+<td>Paddy O'Connor</td>
+<td>Brendan Brogan</td>
+<td>Sligo YC</td>
+<td>Gold</td>
+<td>10</td>
+<td>7.0</td>
+</tr>
+<tr class="even racerow">
+<td>8</td>
+<td>13624</td>
+<td>Curved Gold</td>
+<td>Chris Bateman</td>
+<td>Kate Neville</td>
+<td>Monkstown Bay SC</td>
+<td>Gold</td>
+<td>11</td>
+<td>8.0</td>
+</tr>
+<tr class="odd racerow">
+<td>9</td>
+<td>14165</td>
+<td>The Wrong Trousers</td>
+<td>Conor Twohig</td>
+<td>Matthew Cotter</td>
+<td>Howth YC / Sutton DC</td>
+<td>Gold</td>
+<td>12</td>
+<td>9.0</td>
+</tr>
+<tr class="even racerow">
+<td>10</td>
+<td>14275</td>
+<td>YinTang</td>
+<td>Hugh Gill</td>
+<td>Richard Street</td>
+<td>Sutton DC</td>
+<td>Gold</td>
+<td>13</td>
+<td>10.0</td>
+</tr>
+<tr class="odd racerow">
+<td>11</td>
+<td>14214</td>
+<td>None</td>
+<td>Keith Louden</td>
+<td>Mateo Louden</td>
+<td>Lough Foyle YC</td>
+<td>Gold</td>
+<td>15</td>
+<td>11.0</td>
+</tr>
+<tr class="even racerow">
+<td>12</td>
+<td>14237</td>
+<td>;-)</td>
+<td>JP McCaldin</td>
+<td>Carolyn McCaldin</td>
+<td>Lough Erne YC</td>
+<td>Gold</td>
+<td>19</td>
+<td>12.0</td>
+</tr>
+<tr class="odd racerow">
+<td>13</td>
+<td>14247</td>
+<td>None</td>
+<td>John McGuinness</td>
+<td>Donal McGuinness</td>
+<td>Moville BC</td>
+<td>Gold</td>
+<td>20</td>
+<td>13.0</td>
+</tr>
+<tr class="even racerow">
+<td>14</td>
+<td>14219</td>
+<td>Trouble on the way</td>
+<td>Curly Morris</td>
+<td>Rachael Stewart</td>
+<td>East Antrim BC</td>
+<td>Gold</td>
+<td>21</td>
+<td>14.0</td>
+</tr>
+<tr class="odd racerow">
+<td>15</td>
+<td>14185</td>
+<td>No Name</td>
+<td>Rob Lee</td>
+<td>Stephen Lynch</td>
+<td>Greystones SC</td>
+<td>Gold</td>
+<td>22</td>
+<td>15.0</td>
+</tr>
+<tr class="even racerow">
+<td>16</td>
+<td>14235</td>
+<td>Wally</td>
+<td>Alan Blay</td>
+<td>Hugh McNally</td>
+<td>Howth YC/Sutton DC</td>
+<td>Gold</td>
+<td>23</td>
+<td>16.0</td>
+</tr>
+<tr class="odd racerow">
+<td>17</td>
+<td>14279</td>
+<td>Solaro</td>
+<td>Katie Dwyer</td>
+<td>Michelle Rowley</td>
+<td>Howth YC / Sutton DC</td>
+<td>Gold</td>
+<td>27</td>
+<td>17.0</td>
+</tr>
+<tr class="even racerow">
+<td>18</td>
+<td>14215</td>
+<td>Ghost Light</td>
+<td>Ruan O'Tiarnaigh</td>
+<td>Charlotte O'Tiarnaigh</td>
+<td>Sutton DC/Royal Ulster YC</td>
+<td>Gold</td>
+<td>DNF</td>
+<td>19.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r1silver">R1 - Silver FLEET</h3>
+<div class="caption racecaption">
+Start: Start 1, Finishes: Place
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="9">
+<col class="rank" />
+<col class="sailno" />
+<col class="boat" />
+<col class="helmname" />
+<col class="crewname" />
+<col class="club" />
+<col class="fleet" />
+<col class="place" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>SAIL NUMBER</th>
+<th>BOAT NAME</th>
+<th>HELM</th>
+<th>CREW</th>
+<th>CLUB</th>
+<th>FLEET</th>
+<th>Place</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>13907</td>
+<td>none</td>
+<td>Jon Evans</td>
+<td>Una l'Estrange</td>
+<td>Sligo YC</td>
+<td>Silver</td>
+<td>9</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>14068 / 14203</td>
+<td>Red Boat</td>
+<td>David Evans</td>
+<td>William Draper</td>
+<td>Sligo YC</td>
+<td>Silver</td>
+<td>13</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>13977</td>
+<td>Lil Yachty</td>
+<td>David Johnston</td>
+<td>Ben Dover</td>
+<td>Sutton DC</td>
+<td>Silver</td>
+<td>17</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>14257</td>
+<td>Enigma</td>
+<td>Sam Wray</td>
+<td>Luke Henderson</td>
+<td>Sligo YC</td>
+<td>Silver</td>
+<td>21</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>14225</td>
+<td>Gringer Sails Again</td>
+<td>Cathal Sheridan</td>
+<td>David Cooke</td>
+<td>Skerries SC</td>
+<td>Silver</td>
+<td>25</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>14271</td>
+<td>Ice and slice</td>
+<td>Brian Morrison</td>
+<td>Owen O'Donnell</td>
+<td>Lough Erne YC</td>
+<td>Silver</td>
+<td>27</td>
+<td>6.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r2silver">R2 - Silver FLEET</h3>
+<div class="caption racecaption">
+Start: Start 1, Finishes: Place
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="9">
+<col class="rank" />
+<col class="sailno" />
+<col class="boat" />
+<col class="helmname" />
+<col class="crewname" />
+<col class="club" />
+<col class="fleet" />
+<col class="place" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>SAIL NUMBER</th>
+<th>BOAT NAME</th>
+<th>HELM</th>
+<th>CREW</th>
+<th>CLUB</th>
+<th>FLEET</th>
+<th>Place</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>14068 / 14203</td>
+<td>Red Boat</td>
+<td>David Evans</td>
+<td>William Draper</td>
+<td>Sligo YC</td>
+<td>Silver</td>
+<td>2</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>14257</td>
+<td>Enigma</td>
+<td>Sam Wray</td>
+<td>Luke Henderson</td>
+<td>Sligo YC</td>
+<td>Silver</td>
+<td>13</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>13977</td>
+<td>Lil Yachty</td>
+<td>David Johnston</td>
+<td>Ben Dover</td>
+<td>Sutton DC</td>
+<td>Silver</td>
+<td>14</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>13907</td>
+<td>none</td>
+<td>Jon Evans</td>
+<td>Una l'Estrange</td>
+<td>Sligo YC</td>
+<td>Silver</td>
+<td>24</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>14225</td>
+<td>Gringer Sails Again</td>
+<td>Cathal Sheridan</td>
+<td>David Cooke</td>
+<td>Skerries SC</td>
+<td>Silver</td>
+<td>25</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>14271</td>
+<td>Ice and slice</td>
+<td>Brian Morrison</td>
+<td>Owen O'Donnell</td>
+<td>Lough Erne YC</td>
+<td>Silver</td>
+<td>26</td>
+<td>6.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r3silver">R3 - Silver FLEET</h3>
+<div class="caption racecaption">
+Start: Start 1, Finishes: Place
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="9">
+<col class="rank" />
+<col class="sailno" />
+<col class="boat" />
+<col class="helmname" />
+<col class="crewname" />
+<col class="club" />
+<col class="fleet" />
+<col class="place" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>SAIL NUMBER</th>
+<th>BOAT NAME</th>
+<th>HELM</th>
+<th>CREW</th>
+<th>CLUB</th>
+<th>FLEET</th>
+<th>Place</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>14068 / 14203</td>
+<td>Red Boat</td>
+<td>David Evans</td>
+<td>William Draper</td>
+<td>Sligo YC</td>
+<td>Silver</td>
+<td>5</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>13977</td>
+<td>Lil Yachty</td>
+<td>David Johnston</td>
+<td>Ben Dover</td>
+<td>Sutton DC</td>
+<td>Silver</td>
+<td>12</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>14225</td>
+<td>Gringer Sails Again</td>
+<td>Cathal Sheridan</td>
+<td>David Cooke</td>
+<td>Skerries SC</td>
+<td>Silver</td>
+<td>18</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>13907</td>
+<td>none</td>
+<td>Jon Evans</td>
+<td>Una l'Estrange</td>
+<td>Sligo YC</td>
+<td>Silver</td>
+<td>19</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>14271</td>
+<td>Ice and slice</td>
+<td>Brian Morrison</td>
+<td>Owen O'Donnell</td>
+<td>Lough Erne YC</td>
+<td>Silver</td>
+<td>22</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>14257</td>
+<td>Enigma</td>
+<td>Sam Wray</td>
+<td>Luke Henderson</td>
+<td>Sligo YC</td>
+<td>Silver</td>
+<td>DNS</td>
+<td>7.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r4silver">R4 - Silver FLEET</h3>
+<div class="caption racecaption">
+Start: Start 1, Finishes: Place
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="9">
+<col class="rank" />
+<col class="sailno" />
+<col class="boat" />
+<col class="helmname" />
+<col class="crewname" />
+<col class="club" />
+<col class="fleet" />
+<col class="place" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>SAIL NUMBER</th>
+<th>BOAT NAME</th>
+<th>HELM</th>
+<th>CREW</th>
+<th>CLUB</th>
+<th>FLEET</th>
+<th>Place</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>14068 / 14203</td>
+<td>Red Boat</td>
+<td>David Evans</td>
+<td>William Draper</td>
+<td>Sligo YC</td>
+<td>Silver</td>
+<td>7</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>13977</td>
+<td>Lil Yachty</td>
+<td>David Johnston</td>
+<td>Ben Dover</td>
+<td>Sutton DC</td>
+<td>Silver</td>
+<td>14</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>14271</td>
+<td>Ice and slice</td>
+<td>Brian Morrison</td>
+<td>Owen O'Donnell</td>
+<td>Lough Erne YC</td>
+<td>Silver</td>
+<td>16</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>14225</td>
+<td>Gringer Sails Again</td>
+<td>Cathal Sheridan</td>
+<td>David Cooke</td>
+<td>Skerries SC</td>
+<td>Silver</td>
+<td>17</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>14257</td>
+<td>Enigma</td>
+<td>Sam Wray</td>
+<td>Luke Henderson</td>
+<td>Sligo YC</td>
+<td>Silver</td>
+<td>18</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>13907</td>
+<td>none</td>
+<td>Jon Evans</td>
+<td>Una l'Estrange</td>
+<td>Sligo YC</td>
+<td>Silver</td>
+<td>25</td>
+<td>6.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r1bronze">R1 - Bronze FLEET</h3>
+<div class="caption racecaption">
+Start: Start 1, Finishes: Place
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="9">
+<col class="rank" />
+<col class="sailno" />
+<col class="boat" />
+<col class="helmname" />
+<col class="crewname" />
+<col class="club" />
+<col class="fleet" />
+<col class="place" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>SAIL NUMBER</th>
+<th>BOAT NAME</th>
+<th>HELM</th>
+<th>CREW</th>
+<th>CLUB</th>
+<th>FLEET</th>
+<th>Place</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>1424</td>
+<td>Robbers Dog</td>
+<td>Rory Higgins</td>
+<td>Chris Clayton</td>
+<td>Royal North Of Ireland YC</td>
+<td>Bronze</td>
+<td>12</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>13308</td>
+<td>n/a</td>
+<td>Jack McMahon</td>
+<td>Isobel O'Grady</td>
+<td>Howth YC</td>
+<td>Bronze</td>
+<td>23</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>14036</td>
+<td>N/A</td>
+<td>Riaghan Boardman</td>
+<td>Maedbh Butterly</td>
+<td>Rush SC</td>
+<td>Bronze</td>
+<td>24</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>13353</td>
+<td>8Ball</td>
+<td>Des MacMahon</td>
+<td>Lara Sunday</td>
+<td>Cullaun SC</td>
+<td>Bronze</td>
+<td>26</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>14284</td>
+<td>Smoke on the water</td>
+<td>Michael Collender</td>
+<td>Brian Walker</td>
+<td>Mullingar SC</td>
+<td>Bronze</td>
+<td>28</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>13865</td>
+<td>Boatzart</td>
+<td>Jennifer Bryce</td>
+<td>Vivika Timmer</td>
+<td>Newtownards SC /Donaghadee SC</td>
+<td>Bronze</td>
+<td>29</td>
+<td>6.0</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>13238</td>
+<td>Mr Mobius</td>
+<td>George Fitzgerald</td>
+<td>Frank Mulqueen</td>
+<td>Cullaun SC</td>
+<td>Bronze</td>
+<td>30</td>
+<td>7.0</td>
+</tr>
+<tr class="even racerow">
+<td>8</td>
+<td>13569</td>
+<td>Flatspin</td>
+<td>Tadhg McCarthy</td>
+<td>Deirdre Foley</td>
+<td>Greystones SC</td>
+<td>Bronze</td>
+<td>31</td>
+<td>8.0</td>
+</tr>
+<tr class="odd racerow">
+<td>9</td>
+<td>14041</td>
+<td>K2</td>
+<td>Paul Soffe</td>
+<td>Gerry Blacoe (Sat), Neil Soffe (Sun)</td>
+<td>Malahide YC</td>
+<td>Bronze</td>
+<td>32</td>
+<td>9.0</td>
+</tr>
+<tr class="even racerow">
+<td>10</td>
+<td>13207</td>
+<td>Pig</td>
+<td>Denis Cully</td>
+<td>Ollie Lloyd</td>
+<td>Blessington SC</td>
+<td>Bronze</td>
+<td>DNF</td>
+<td>11.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r2bronze">R2 - Bronze FLEET</h3>
+<div class="caption racecaption">
+Start: Start 1, Finishes: Place
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="9">
+<col class="rank" />
+<col class="sailno" />
+<col class="boat" />
+<col class="helmname" />
+<col class="crewname" />
+<col class="club" />
+<col class="fleet" />
+<col class="place" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>SAIL NUMBER</th>
+<th>BOAT NAME</th>
+<th>HELM</th>
+<th>CREW</th>
+<th>CLUB</th>
+<th>FLEET</th>
+<th>Place</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>1424</td>
+<td>Robbers Dog</td>
+<td>Rory Higgins</td>
+<td>Chris Clayton</td>
+<td>Royal North Of Ireland YC</td>
+<td>Bronze</td>
+<td>20</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>14036</td>
+<td>N/A</td>
+<td>Riaghan Boardman</td>
+<td>Maedbh Butterly</td>
+<td>Rush SC</td>
+<td>Bronze</td>
+<td>22</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>13207</td>
+<td>Pig</td>
+<td>Denis Cully</td>
+<td>Ollie Lloyd</td>
+<td>Blessington SC</td>
+<td>Bronze</td>
+<td>23</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>13353</td>
+<td>8Ball</td>
+<td>Des MacMahon</td>
+<td>Lara Sunday</td>
+<td>Cullaun SC</td>
+<td>Bronze</td>
+<td>27</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>14284</td>
+<td>Smoke on the water</td>
+<td>Michael Collender</td>
+<td>Brian Walker</td>
+<td>Mullingar SC</td>
+<td>Bronze</td>
+<td>28</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>13308</td>
+<td>n/a</td>
+<td>Jack McMahon</td>
+<td>Isobel O'Grady</td>
+<td>Howth YC</td>
+<td>Bronze</td>
+<td>29</td>
+<td>6.0</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>13865</td>
+<td>Boatzart</td>
+<td>Jennifer Bryce</td>
+<td>Vivika Timmer</td>
+<td>Newtownards SC /Donaghadee SC</td>
+<td>Bronze</td>
+<td>30</td>
+<td>7.0</td>
+</tr>
+<tr class="even racerow">
+<td>8</td>
+<td>14041</td>
+<td>K2</td>
+<td>Paul Soffe</td>
+<td>Gerry Blacoe (Sat), Neil Soffe (Sun)</td>
+<td>Malahide YC</td>
+<td>Bronze</td>
+<td>31</td>
+<td>8.0</td>
+</tr>
+<tr class="odd racerow">
+<td>9</td>
+<td>13238</td>
+<td>Mr Mobius</td>
+<td>George Fitzgerald</td>
+<td>Frank Mulqueen</td>
+<td>Cullaun SC</td>
+<td>Bronze</td>
+<td>32</td>
+<td>9.0</td>
+</tr>
+<tr class="even racerow">
+<td>10</td>
+<td>13569</td>
+<td>Flatspin</td>
+<td>Tadhg McCarthy</td>
+<td>Deirdre Foley</td>
+<td>Greystones SC</td>
+<td>Bronze</td>
+<td>33</td>
+<td>10.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r3bronze">R3 - Bronze FLEET</h3>
+<div class="caption racecaption">
+Start: Start 1, Finishes: Place
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="9">
+<col class="rank" />
+<col class="sailno" />
+<col class="boat" />
+<col class="helmname" />
+<col class="crewname" />
+<col class="club" />
+<col class="fleet" />
+<col class="place" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>SAIL NUMBER</th>
+<th>BOAT NAME</th>
+<th>HELM</th>
+<th>CREW</th>
+<th>CLUB</th>
+<th>FLEET</th>
+<th>Place</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>1424</td>
+<td>Robbers Dog</td>
+<td>Rory Higgins</td>
+<td>Chris Clayton</td>
+<td>Royal North Of Ireland YC</td>
+<td>Bronze</td>
+<td>14</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>13353</td>
+<td>8Ball</td>
+<td>Des MacMahon</td>
+<td>Lara Sunday</td>
+<td>Cullaun SC</td>
+<td>Bronze</td>
+<td>20</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>14284</td>
+<td>Smoke on the water</td>
+<td>Michael Collender</td>
+<td>Brian Walker</td>
+<td>Mullingar SC</td>
+<td>Bronze</td>
+<td>24</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>13308</td>
+<td>n/a</td>
+<td>Jack McMahon</td>
+<td>Isobel O'Grady</td>
+<td>Howth YC</td>
+<td>Bronze</td>
+<td>25</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>14036</td>
+<td>N/A</td>
+<td>Riaghan Boardman</td>
+<td>Maedbh Butterly</td>
+<td>Rush SC</td>
+<td>Bronze</td>
+<td>26</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>13865</td>
+<td>Boatzart</td>
+<td>Jennifer Bryce</td>
+<td>Vivika Timmer</td>
+<td>Newtownards SC /Donaghadee SC</td>
+<td>Bronze</td>
+<td>27</td>
+<td>6.0</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>13238</td>
+<td>Mr Mobius</td>
+<td>George Fitzgerald</td>
+<td>Frank Mulqueen</td>
+<td>Cullaun SC</td>
+<td>Bronze</td>
+<td>29</td>
+<td>7.0</td>
+</tr>
+<tr class="even racerow">
+<td>8</td>
+<td>14041</td>
+<td>K2</td>
+<td>Paul Soffe</td>
+<td>Gerry Blacoe (Sat), Neil Soffe (Sun)</td>
+<td>Malahide YC</td>
+<td>Bronze</td>
+<td>30</td>
+<td>8.0</td>
+</tr>
+<tr class="odd racerow">
+<td>9</td>
+<td>13569</td>
+<td>Flatspin</td>
+<td>Tadhg McCarthy</td>
+<td>Deirdre Foley</td>
+<td>Greystones SC</td>
+<td>Bronze</td>
+<td>31</td>
+<td>9.0</td>
+</tr>
+<tr class="even racerow">
+<td>10</td>
+<td>13207</td>
+<td>Pig</td>
+<td>Denis Cully</td>
+<td>Ollie Lloyd</td>
+<td>Blessington SC</td>
+<td>Bronze</td>
+<td>DNF</td>
+<td>11.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r4bronze">R4 - Bronze FLEET</h3>
+<div class="caption racecaption">
+Start: Start 1, Finishes: Place
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="9">
+<col class="rank" />
+<col class="sailno" />
+<col class="boat" />
+<col class="helmname" />
+<col class="crewname" />
+<col class="club" />
+<col class="fleet" />
+<col class="place" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>SAIL NUMBER</th>
+<th>BOAT NAME</th>
+<th>HELM</th>
+<th>CREW</th>
+<th>CLUB</th>
+<th>FLEET</th>
+<th>Place</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>1424</td>
+<td>Robbers Dog</td>
+<td>Rory Higgins</td>
+<td>Chris Clayton</td>
+<td>Royal North Of Ireland YC</td>
+<td>Bronze</td>
+<td>8</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>14036</td>
+<td>N/A</td>
+<td>Riaghan Boardman</td>
+<td>Maedbh Butterly</td>
+<td>Rush SC</td>
+<td>Bronze</td>
+<td>9</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>13353</td>
+<td>8Ball</td>
+<td>Des MacMahon</td>
+<td>Lara Sunday</td>
+<td>Cullaun SC</td>
+<td>Bronze</td>
+<td>24</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>14284</td>
+<td>Smoke on the water</td>
+<td>Michael Collender</td>
+<td>Brian Walker</td>
+<td>Mullingar SC</td>
+<td>Bronze</td>
+<td>26</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>13865</td>
+<td>Boatzart</td>
+<td>Jennifer Bryce</td>
+<td>Vivika Timmer</td>
+<td>Newtownards SC /Donaghadee SC</td>
+<td>Bronze</td>
+<td>28</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>13308</td>
+<td>n/a</td>
+<td>Jack McMahon</td>
+<td>Isobel O'Grady</td>
+<td>Howth YC</td>
+<td>Bronze</td>
+<td>29</td>
+<td>6.0</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>14041</td>
+<td>K2</td>
+<td>Paul Soffe</td>
+<td>Gerry Blacoe (Sat), Neil Soffe (Sun)</td>
+<td>Malahide YC</td>
+<td>Bronze</td>
+<td>30</td>
+<td>7.0</td>
+</tr>
+<tr class="even racerow">
+<td>8</td>
+<td>13569</td>
+<td>Flatspin</td>
+<td>Tadhg McCarthy</td>
+<td>Deirdre Foley</td>
+<td>Greystones SC</td>
+<td>Bronze</td>
+<td>31</td>
+<td>8.0</td>
+</tr>
+<tr class="odd racerow">
+<td>9</td>
+<td>13238</td>
+<td>Mr Mobius</td>
+<td>George Fitzgerald</td>
+<td>Frank Mulqueen</td>
+<td>Cullaun SC</td>
+<td>Bronze</td>
+<td>32</td>
+<td>9.0</td>
+</tr>
+<tr class="even racerow">
+<td>10</td>
+<td>13207</td>
+<td>Pig</td>
+<td>Denis Cully</td>
+<td>Ollie Lloyd</td>
+<td>Blessington SC</td>
+<td>Bronze</td>
+<td>DNC</td>
+<td>11.0</td>
+</tr>
+</tbody>
+</table>
+
+<p class="hardleft"><a href="https://"></a><br /><a href="mailto:"></a></p>
+<p class="hardright"><a href="https://"></a><br /><a href="mailto:"></a></p>
+<p>Sailwave Scoring Software 2.33.00<br /><a href="https://www.sailwave.com">www.sailwave.com</a></p>
+
+</div>
+
+<footer>
+</footer>
+
+<div id="scrollbottom"></div>
+
+</body>
+</html>
+
+

@@ -1,0 +1,1401 @@
+
+
+
+<!doctype html>
+
+<head>
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="description" content="sailwave results">
+<meta name="viewport" content="width=device-width">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+
+<title>Sailwave results for Wave Regatta 2022 at Howth Yacht club 2022</title>
+
+<style type="text/css">
+body {font: 80% arial, helvetica, sans-serif; text-align: center;}
+.hardleft  {text-align: left; float: left;  margin: 15px 0  15px 25px;}
+.hardright {text-align: right; float: right; margin: 15px 25px 15px 0;}
+table {text-align: left; margin: 0px auto 30px auto; font-size: 1em; border-collapse: collapse; border: 1px #999 solid;}
+td, th {padding: 4px; border: 1px #999 solid; vertical-align: top;}
+.caption {padding: 5px; text-align: center; border: 0; font-weight: bold;}
+h1 {font-size: 1.6em;}
+h2 {font-size: 1.4em;}
+h3 {font-size: 1.2em;}
+th {background-color: #ddd;}
+p {text-align: center;}
+.contents {text-align: left; margin-left: 20%;}
+.natflag {border: 1px #999 solid;}
+.nattext {font-size: 0.8em;}
+.place1 {font-weight: bold; background-color: #ffffaa;}
+.place2 {font-weight: bold; background-color: #aaaaff;}
+.place3 {font-weight: bold; background-color: #ffaaaa;}
+.placen {}
+</style>
+
+<script type="text/javascript">
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script>
+
+function swGetURLArgs() {
+
+  var url = location.href;
+  var qs  = url.substring(url.indexOf('?') + 1).split('&');
+
+  for(var i = 0, result = {}; i < qs.length; i++) {
+    qs[i]            = qs[i].split('=');
+    result[qs[i][0]] = decodeURIComponent(qs[i][1]);
+  }
+
+  return result;
+}
+
+//
+//  name=HighlightWins3v3
+//  dependencies=jQuery
+//  description=Highlight winning scores in summary tables.
+//  author=Jon Eskdale based on an idea by Colin Jenkins
+//  date=2016-07-04
+//  version=3.0  For use with Sailwave from V2.22.x
+//  Requires the following lines in the Results.htm file (Results.htm is in the Templates directory)
+//  string.set("summary.col.race.rank1.td",   "rank1")
+//  string.set("summary.col.race.rank2.td",   "rank2")
+//  string.set("summary.col.race.rank3.td",   "rank3")
+
+//  url=http://sailwave.com
+//  email=jon@sailwave.com
+//  twitter=eskdale
+//  comments=Edit colours to colours of your choice
+//
+
+$(document).ready(function() {
+var selectorRank1 = '.rank1';
+var selectorRank2 = '.rank2';
+var selectorRank3 = '.rank3';
+
+// Results with these codes will not get highlighted add or remove codes to your choice
+var ignoreText   = /^(?!.*\b(DNC|DNF|DNS|OCS|BFD|UFD|RET|DSQ|DGM|DNE)\b).*/i
+
+// Edit these colours to change the highlight colours for 1st, 2nd and 3rd
+var winsColour   = '#ffd700';
+var twoColour    = '#6a91c5';
+var threeColour  = '#da6841';
+
+
+// Change the background color for cells with class of rank1-3 and don't have a code specified
+$(function () {
+
+  $(selectorRank1).filter(function() {
+    return ignoreText.test($(this).text());
+  }).css("background", winsColour);
+  $(selectorRank2).filter(function() {
+        return ignoreText.test($(this).text());
+  }).css("background", twoColour);
+  $(selectorRank3).filter(function() {
+        return ignoreText.test($(this).text());
+  }).css("background", threeColour);
+
+});
+});
+</script>
+
+</head>
+
+<body>
+
+<header>
+</header>
+
+<div id="wrap">
+
+<img class="hardright" src="https://hyc.ie/reshyc/images/wave.jpg" alt="event burgee" />
+<img class="hardleft"  src="https://hyc.ie/reshyc/images/hyc.jpg" alt="venue burgee" />
+
+<h1>Wave Regatta 2022</h1>
+<h2>Howth Yacht club</h2>
+
+<div style="clear:both;"></div>
+
+<style>
+div.applicant-break {page-break-after:always;}
+</style>
+<h3 class="seriestitle">Results are provisional as of 15:53 on June  5, 2022</h3>
+<h3 class="summarytitle" id="summaryclass_5_echo">Class 5 ECHO Boat Class</h3>
+<div class="caption summarycaption">Sailed: 6, Discards: 1, To count: 5, Rating system: NHC4, Entries: 4, Scoring system: Appendix A</div>
+<table class="summarytable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="17">
+<col class="rank" />
+<col class="fleet" />
+<col class="boat" />
+<col class="sailno" />
+<col class="club" />
+<col class="helmname" />
+<col class="rating" />
+<col class="newrating" />
+<col class="bownumber" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="total" />
+<col class="nett" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Boat Class</th>
+<th>Boat Name</th>
+<th>Sail No</th>
+<th>Club</th>
+<th>Owner Name</th>
+<th>Rating</th>
+<th>NewRating</th>
+<th>Sat only (Lambay)</th>
+<th><a class="racelink" href="#r1class_5_echo">R1</a></th>
+<th><a class="racelink" href="#r2class_5_echo">R2</a></th>
+<th><a class="racelink" href="#r4class_5_echo">Lambay</a></th>
+<th><a class="racelink" href="#r5class_5_echo">Sun R1</a></th>
+<th><a class="racelink" href="#r6class_5_echo">Sun R2</a></th>
+<th><a class="racelink" href="#r7class_5_echo">Sun R3</a></th>
+<th>Total</th>
+<th>Nett</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd summaryrow">
+<td>1</td>
+<td>Class 5 ECHO</td>
+<td>Toughnut</td>
+<td>1411</td>
+<td>Howth Yacht Club</td>
+<td>Dermot Skehan</td>
+<td>0.94</td>
+<td>0.970</td>
+<td>&nbsp;</td>
+<td class="rank1">1.0</td>
+<td class="rank1">1.0</td>
+<td class="rank2">3.0</td>
+<td class="rank3">(3.0)</td>
+<td class="rank1">1.0</td>
+<td class="rank3">3.0</td>
+<td>12.0</td>
+<td>9.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>2</td>
+<td>Class 5 ECHO</td>
+<td>Out&About</td>
+<td>2070</td>
+<td>Howth Yacht Club</td>
+<td>Terry McCoy</td>
+<td>0.925</td>
+<td>0.892</td>
+<td>&nbsp;</td>
+<td>(4.0)</td>
+<td>4.0</td>
+<td class="rank1">1.5</td>
+<td class="rank1">1.0</td>
+<td class="rank3">3.0</td>
+<td class="rank1">1.0</td>
+<td>14.5</td>
+<td>10.5</td>
+</tr>
+<tr class="odd summaryrow">
+<td>3</td>
+<td>Class 5 ECHO</td>
+<td>Demelza</td>
+<td>100</td>
+<td>Howth Yacht Club</td>
+<td>Steffi Ennis</td>
+<td>0.89</td>
+<td>0.914</td>
+<td>&nbsp;</td>
+<td class="rank2">(2.0)</td>
+<td class="rank2">2.0</td>
+<td class="rank3">7.5 DNC</td>
+<td class="rank2">2.0</td>
+<td class="rank2">2.0</td>
+<td class="rank2">2.0</td>
+<td>17.5</td>
+<td>15.5</td>
+</tr>
+<tr class="even summaryrow">
+<td>4</td>
+<td>Class 5 ECHO</td>
+<td>Voyager</td>
+<td>657</td>
+<td>Howth Yacht Club</td>
+<td>Joe Carton</td>
+<td>0.93</td>
+<td>0.908</td>
+<td>&nbsp;</td>
+<td class="rank3">3.0</td>
+<td class="rank3">3.0</td>
+<td class="rank3">7.5 DNC</td>
+<td>(5.0 RET)</td>
+<td>5.0 DNC</td>
+<td>5.0 DNC</td>
+<td>28.5</td>
+<td>23.5</td>
+</tr>
+</tbody>
+</table>
+<h3 class="summarytitle" id="summaryclass_5_irc">Class 5 IRC Boat Class</h3>
+<div class="caption summarycaption">Sailed: 6, Discards: 1, To count: 5, Rating system: TCF, Entries: 4, Scoring system: Appendix A</div>
+<table class="summarytable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="17">
+<col class="rank" />
+<col class="fleet" />
+<col class="boat" />
+<col class="sailno" />
+<col class="club" />
+<col class="helmname" />
+<col class="rating" />
+<col class="newrating" />
+<col class="bownumber" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="total" />
+<col class="nett" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Boat Class</th>
+<th>Boat Name</th>
+<th>Sail No</th>
+<th>Club</th>
+<th>Owner Name</th>
+<th>Rating</th>
+<th>NewRating</th>
+<th>Sat only (Lambay)</th>
+<th><a class="racelink" href="#r1class_5_irc">R1</a></th>
+<th><a class="racelink" href="#r2class_5_irc">R2</a></th>
+<th><a class="racelink" href="#r4class_5_irc">Lambay</a></th>
+<th><a class="racelink" href="#r5class_5_irc">Sun R1</a></th>
+<th><a class="racelink" href="#r6class_5_irc">Sun R2</a></th>
+<th><a class="racelink" href="#r7class_5_irc">Sun R3</a></th>
+<th>Total</th>
+<th>Nett</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd summaryrow">
+<td>1</td>
+<td>Class 5 IRC</td>
+<td>Toughnut</td>
+<td>1411</td>
+<td>Howth Yacht Club</td>
+<td>Dermot Skehan</td>
+<td>0.924</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td class="rank1">1.0</td>
+<td class="rank1">1.0</td>
+<td class="rank1">1.5</td>
+<td class="rank2">(2.0)</td>
+<td class="rank1">1.0</td>
+<td class="rank1">1.0</td>
+<td>7.5</td>
+<td>5.5</td>
+</tr>
+<tr class="even summaryrow">
+<td>2</td>
+<td>Class 5 IRC</td>
+<td>Demelza</td>
+<td>100</td>
+<td>Howth Yacht Club</td>
+<td>Steffi Ennis</td>
+<td>0.876</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td class="rank2">(2.0)</td>
+<td class="rank2">2.0</td>
+<td class="rank3">7.5 DNC</td>
+<td class="rank1">1.0</td>
+<td class="rank2">2.0</td>
+<td class="rank2">2.0</td>
+<td>16.5</td>
+<td>14.5</td>
+</tr>
+<tr class="odd summaryrow">
+<td>3</td>
+<td>Class 5 IRC</td>
+<td>Out&About</td>
+<td>2070</td>
+<td>Howth Yacht Club</td>
+<td>Terry McCoy</td>
+<td>0.915</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>(4.0)</td>
+<td>4.0</td>
+<td class="rank2">3.0</td>
+<td class="rank3">3.0</td>
+<td class="rank3">3.0</td>
+<td class="rank3">3.0</td>
+<td>20.0</td>
+<td>16.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>4</td>
+<td>Class 5 IRC</td>
+<td>Voyager</td>
+<td>657</td>
+<td>Howth Yacht Club</td>
+<td>Joe Carton</td>
+<td>0.920</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td class="rank3">3.0</td>
+<td class="rank3">3.0</td>
+<td class="rank3">7.5 DNC</td>
+<td>(5.0 RET)</td>
+<td>5.0 DNC</td>
+<td>5.0 DNC</td>
+<td>28.5</td>
+<td>23.5</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r1class_5_echo">R1 - Class 5 ECHO Boat Class</h3>
+<div class="caption racecaption">
+Start: Class 5, Finishes: Finish time, Time: 11:10
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="12">
+<col class="rank" />
+<col class="fleet" />
+<col class="boat" />
+<col class="sailno" />
+<col class="club" />
+<col class="helmname" />
+<col class="rating" />
+<col class="newrating" />
+<col class="bownumber" />
+<col class="elapsed" />
+<col class="corrected" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Boat Class</th>
+<th>Boat Name</th>
+<th>Sail No</th>
+<th>Club</th>
+<th>Owner Name</th>
+<th>Rating</th>
+<th>NewRating</th>
+<th>Sat only (Lambay)</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>Class 5 ECHO</td>
+<td>Toughnut</td>
+<td>1411</td>
+<td>Howth Yacht Club</td>
+<td>Dermot Skehan</td>
+<td>0.94</td>
+<td>0.967</td>
+<td>&nbsp;</td>
+<td>1:03:43</td>
+<td>0:59:54</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>Class 5 ECHO</td>
+<td>Demelza</td>
+<td>100</td>
+<td>Howth Yacht Club</td>
+<td>Steffi Ennis</td>
+<td>0.89</td>
+<td>0.911</td>
+<td>&nbsp;</td>
+<td>1:07:41</td>
+<td>1:00:14</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>Class 5 ECHO</td>
+<td>Voyager</td>
+<td>657</td>
+<td>Howth Yacht Club</td>
+<td>Joe Carton</td>
+<td>0.93</td>
+<td>0.917</td>
+<td>&nbsp;</td>
+<td>1:08:04</td>
+<td>1:03:18</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>Class 5 ECHO</td>
+<td>Out&About</td>
+<td>2070</td>
+<td>Howth Yacht Club</td>
+<td>Terry McCoy</td>
+<td>0.925</td>
+<td>0.890</td>
+<td>&nbsp;</td>
+<td>1:10:46</td>
+<td>1:05:28</td>
+<td>4.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r2class_5_echo">R2 - Class 5 ECHO Boat Class</h3>
+<div class="caption racecaption">
+Start: Class 5, Finishes: Finish time, Time: 13:16
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="12">
+<col class="rank" />
+<col class="fleet" />
+<col class="boat" />
+<col class="sailno" />
+<col class="club" />
+<col class="helmname" />
+<col class="rating" />
+<col class="newrating" />
+<col class="bownumber" />
+<col class="elapsed" />
+<col class="corrected" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Boat Class</th>
+<th>Boat Name</th>
+<th>Sail No</th>
+<th>Club</th>
+<th>Owner Name</th>
+<th>Rating</th>
+<th>NewRating</th>
+<th>Sat only (Lambay)</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>Class 5 ECHO</td>
+<td>Toughnut</td>
+<td>1411</td>
+<td>Howth Yacht Club</td>
+<td>Dermot Skehan</td>
+<td>0.967</td>
+<td>0.994</td>
+<td>&nbsp;</td>
+<td>1:07:07</td>
+<td>1:04:54</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>Class 5 ECHO</td>
+<td>Demelza</td>
+<td>100</td>
+<td>Howth Yacht Club</td>
+<td>Steffi Ennis</td>
+<td>0.911</td>
+<td>0.929</td>
+<td>&nbsp;</td>
+<td>1:11:59</td>
+<td>1:05:35</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>Class 5 ECHO</td>
+<td>Voyager</td>
+<td>657</td>
+<td>Howth Yacht Club</td>
+<td>Joe Carton</td>
+<td>0.917</td>
+<td>0.908</td>
+<td>&nbsp;</td>
+<td>1:14:22</td>
+<td>1:08:12</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>Class 5 ECHO</td>
+<td>Out&About</td>
+<td>2070</td>
+<td>Howth Yacht Club</td>
+<td>Terry McCoy</td>
+<td>0.890</td>
+<td>0.853</td>
+<td>&nbsp;</td>
+<td>1:20:03</td>
+<td>1:11:15</td>
+<td>4.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r4class_5_echo">Lambay - Class 5 ECHO Boat Class</h3>
+<div class="caption racecaption">
+Start: Class 5, Finishes: Finish time, Time: 12:15, Weight: 1.5
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="12">
+<col class="rank" />
+<col class="fleet" />
+<col class="boat" />
+<col class="sailno" />
+<col class="club" />
+<col class="helmname" />
+<col class="rating" />
+<col class="newrating" />
+<col class="bownumber" />
+<col class="elapsed" />
+<col class="corrected" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Boat Class</th>
+<th>Boat Name</th>
+<th>Sail No</th>
+<th>Club</th>
+<th>Owner Name</th>
+<th>Rating</th>
+<th>NewRating</th>
+<th>Sat only (Lambay)</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>Class 5 ECHO</td>
+<td>Out&About</td>
+<td>2070</td>
+<td>Howth Yacht Club</td>
+<td>Terry McCoy</td>
+<td>0.853</td>
+<td>0.864</td>
+<td>&nbsp;</td>
+<td>2:36:48</td>
+<td>2:13:45</td>
+<td>1.5</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>Class 5 ECHO</td>
+<td>Toughnut</td>
+<td>1411</td>
+<td>Howth Yacht Club</td>
+<td>Dermot Skehan</td>
+<td>0.994</td>
+<td>0.983</td>
+<td>&nbsp;</td>
+<td>2:19:04</td>
+<td>2:18:14</td>
+<td>3.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r5class_5_echo">Sun R1 - Class 5 ECHO Boat Class</h3>
+<div class="caption racecaption">
+Start: Class 5, Finishes: Finish time, Time: 11:10
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="12">
+<col class="rank" />
+<col class="fleet" />
+<col class="boat" />
+<col class="sailno" />
+<col class="club" />
+<col class="helmname" />
+<col class="rating" />
+<col class="newrating" />
+<col class="bownumber" />
+<col class="elapsed" />
+<col class="corrected" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Boat Class</th>
+<th>Boat Name</th>
+<th>Sail No</th>
+<th>Club</th>
+<th>Owner Name</th>
+<th>Rating</th>
+<th>NewRating</th>
+<th>Sat only (Lambay)</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>Class 5 ECHO</td>
+<td>Out&About</td>
+<td>2070</td>
+<td>Howth Yacht Club</td>
+<td>Terry McCoy</td>
+<td>0.864</td>
+<td>0.902</td>
+<td>&nbsp;</td>
+<td>0:49:44</td>
+<td>0:42:58</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>Class 5 ECHO</td>
+<td>Demelza</td>
+<td>100</td>
+<td>Howth Yacht Club</td>
+<td>Steffi Ennis</td>
+<td>0.929</td>
+<td>0.912</td>
+<td>&nbsp;</td>
+<td>0:50:09</td>
+<td>0:46:35</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>Class 5 ECHO</td>
+<td>Toughnut</td>
+<td>1411</td>
+<td>Howth Yacht Club</td>
+<td>Dermot Skehan</td>
+<td>0.983</td>
+<td>0.962</td>
+<td>&nbsp;</td>
+<td>0:47:37</td>
+<td>0:46:48</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>Class 5 ECHO</td>
+<td>Voyager</td>
+<td>657</td>
+<td>Howth Yacht Club</td>
+<td>Joe Carton</td>
+<td>0.908</td>
+<td>0.908</td>
+<td>&nbsp;</td>
+<td>RET</td>
+<td>&nbsp;</td>
+<td>5.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r6class_5_echo">Sun R2 - Class 5 ECHO Boat Class</h3>
+<div class="caption racecaption">
+Start: Class 5, Finishes: Finish time, Time: 13:05
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="12">
+<col class="rank" />
+<col class="fleet" />
+<col class="boat" />
+<col class="sailno" />
+<col class="club" />
+<col class="helmname" />
+<col class="rating" />
+<col class="newrating" />
+<col class="bownumber" />
+<col class="elapsed" />
+<col class="corrected" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Boat Class</th>
+<th>Boat Name</th>
+<th>Sail No</th>
+<th>Club</th>
+<th>Owner Name</th>
+<th>Rating</th>
+<th>NewRating</th>
+<th>Sat only (Lambay)</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>Class 5 ECHO</td>
+<td>Toughnut</td>
+<td>1411</td>
+<td>Howth Yacht Club</td>
+<td>Dermot Skehan</td>
+<td>0.962</td>
+<td>0.975</td>
+<td>&nbsp;</td>
+<td>0:49:59</td>
+<td>0:48:05</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>Class 5 ECHO</td>
+<td>Demelza</td>
+<td>100</td>
+<td>Howth Yacht Club</td>
+<td>Steffi Ennis</td>
+<td>0.912</td>
+<td>0.914</td>
+<td>&nbsp;</td>
+<td>0:53:30</td>
+<td>0:48:48</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>Class 5 ECHO</td>
+<td>Out&About</td>
+<td>2070</td>
+<td>Howth Yacht Club</td>
+<td>Terry McCoy</td>
+<td>0.902</td>
+<td>0.887</td>
+<td>&nbsp;</td>
+<td>0:55:28</td>
+<td>0:50:02</td>
+<td>3.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r7class_5_echo">Sun R3 - Class 5 ECHO Boat Class</h3>
+<div class="caption racecaption">
+Start: Class 5, Finishes: Finish time, Time: 14:45
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="12">
+<col class="rank" />
+<col class="fleet" />
+<col class="boat" />
+<col class="sailno" />
+<col class="club" />
+<col class="helmname" />
+<col class="rating" />
+<col class="newrating" />
+<col class="bownumber" />
+<col class="elapsed" />
+<col class="corrected" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Boat Class</th>
+<th>Boat Name</th>
+<th>Sail No</th>
+<th>Club</th>
+<th>Owner Name</th>
+<th>Rating</th>
+<th>NewRating</th>
+<th>Sat only (Lambay)</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>Class 5 ECHO</td>
+<td>Out&About</td>
+<td>2070</td>
+<td>Howth Yacht Club</td>
+<td>Terry McCoy</td>
+<td>0.887</td>
+<td>0.892</td>
+<td>&nbsp;</td>
+<td>0:27:06</td>
+<td>0:24:02</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>Class 5 ECHO</td>
+<td>Demelza</td>
+<td>100</td>
+<td>Howth Yacht Club</td>
+<td>Steffi Ennis</td>
+<td>0.914</td>
+<td>0.914</td>
+<td>&nbsp;</td>
+<td>0:26:29</td>
+<td>0:24:12</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>Class 5 ECHO</td>
+<td>Toughnut</td>
+<td>1411</td>
+<td>Howth Yacht Club</td>
+<td>Dermot Skehan</td>
+<td>0.975</td>
+<td>0.970</td>
+<td>&nbsp;</td>
+<td>0:24:59</td>
+<td>0:24:22</td>
+<td>3.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r1class_5_irc">R1 - Class 5 IRC Boat Class</h3>
+<div class="caption racecaption">
+Start: Class 5, Finishes: Finish time, Time: 11:10
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="12">
+<col class="rank" />
+<col class="fleet" />
+<col class="boat" />
+<col class="sailno" />
+<col class="club" />
+<col class="helmname" />
+<col class="rating" />
+<col class="newrating" />
+<col class="bownumber" />
+<col class="elapsed" />
+<col class="corrected" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Boat Class</th>
+<th>Boat Name</th>
+<th>Sail No</th>
+<th>Club</th>
+<th>Owner Name</th>
+<th>Rating</th>
+<th>NewRating</th>
+<th>Sat only (Lambay)</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>Class 5 IRC</td>
+<td>Toughnut</td>
+<td>1411</td>
+<td>Howth Yacht Club</td>
+<td>Dermot Skehan</td>
+<td>0.924</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>1:03:43</td>
+<td>0:58:52</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>Class 5 IRC</td>
+<td>Demelza</td>
+<td>100</td>
+<td>Howth Yacht Club</td>
+<td>Steffi Ennis</td>
+<td>0.876</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>1:07:41</td>
+<td>0:59:17</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>Class 5 IRC</td>
+<td>Voyager</td>
+<td>657</td>
+<td>Howth Yacht Club</td>
+<td>Joe Carton</td>
+<td>0.920</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>1:08:04</td>
+<td>1:02:37</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>Class 5 IRC</td>
+<td>Out&About</td>
+<td>2070</td>
+<td>Howth Yacht Club</td>
+<td>Terry McCoy</td>
+<td>0.915</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>1:10:46</td>
+<td>1:04:45</td>
+<td>4.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r2class_5_irc">R2 - Class 5 IRC Boat Class</h3>
+<div class="caption racecaption">
+Start: Class 5, Finishes: Finish time, Time: 13:16
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="12">
+<col class="rank" />
+<col class="fleet" />
+<col class="boat" />
+<col class="sailno" />
+<col class="club" />
+<col class="helmname" />
+<col class="rating" />
+<col class="newrating" />
+<col class="bownumber" />
+<col class="elapsed" />
+<col class="corrected" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Boat Class</th>
+<th>Boat Name</th>
+<th>Sail No</th>
+<th>Club</th>
+<th>Owner Name</th>
+<th>Rating</th>
+<th>NewRating</th>
+<th>Sat only (Lambay)</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>Class 5 IRC</td>
+<td>Toughnut</td>
+<td>1411</td>
+<td>Howth Yacht Club</td>
+<td>Dermot Skehan</td>
+<td>0.924</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>1:07:07</td>
+<td>1:02:01</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>Class 5 IRC</td>
+<td>Demelza</td>
+<td>100</td>
+<td>Howth Yacht Club</td>
+<td>Steffi Ennis</td>
+<td>0.876</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>1:11:59</td>
+<td>1:03:03</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>Class 5 IRC</td>
+<td>Voyager</td>
+<td>657</td>
+<td>Howth Yacht Club</td>
+<td>Joe Carton</td>
+<td>0.920</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>1:14:22</td>
+<td>1:08:25</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>Class 5 IRC</td>
+<td>Out&About</td>
+<td>2070</td>
+<td>Howth Yacht Club</td>
+<td>Terry McCoy</td>
+<td>0.915</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>1:20:03</td>
+<td>1:13:15</td>
+<td>4.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r4class_5_irc">Lambay - Class 5 IRC Boat Class</h3>
+<div class="caption racecaption">
+Start: Class 5, Finishes: Finish time, Time: 12:15, Weight: 1.5
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="12">
+<col class="rank" />
+<col class="fleet" />
+<col class="boat" />
+<col class="sailno" />
+<col class="club" />
+<col class="helmname" />
+<col class="rating" />
+<col class="newrating" />
+<col class="bownumber" />
+<col class="elapsed" />
+<col class="corrected" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Boat Class</th>
+<th>Boat Name</th>
+<th>Sail No</th>
+<th>Club</th>
+<th>Owner Name</th>
+<th>Rating</th>
+<th>NewRating</th>
+<th>Sat only (Lambay)</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>Class 5 IRC</td>
+<td>Toughnut</td>
+<td>1411</td>
+<td>Howth Yacht Club</td>
+<td>Dermot Skehan</td>
+<td>0.924</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>2:19:04</td>
+<td>2:08:30</td>
+<td>1.5</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>Class 5 IRC</td>
+<td>Out&About</td>
+<td>2070</td>
+<td>Howth Yacht Club</td>
+<td>Terry McCoy</td>
+<td>0.915</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>2:36:48</td>
+<td>2:23:28</td>
+<td>3.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r5class_5_irc">Sun R1 - Class 5 IRC Boat Class</h3>
+<div class="caption racecaption">
+Start: Class 5, Finishes: Finish time, Time: 11:10
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="12">
+<col class="rank" />
+<col class="fleet" />
+<col class="boat" />
+<col class="sailno" />
+<col class="club" />
+<col class="helmname" />
+<col class="rating" />
+<col class="newrating" />
+<col class="bownumber" />
+<col class="elapsed" />
+<col class="corrected" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Boat Class</th>
+<th>Boat Name</th>
+<th>Sail No</th>
+<th>Club</th>
+<th>Owner Name</th>
+<th>Rating</th>
+<th>NewRating</th>
+<th>Sat only (Lambay)</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>Class 5 IRC</td>
+<td>Demelza</td>
+<td>100</td>
+<td>Howth Yacht Club</td>
+<td>Steffi Ennis</td>
+<td>0.876</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>0:50:09</td>
+<td>0:43:56</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>Class 5 IRC</td>
+<td>Toughnut</td>
+<td>1411</td>
+<td>Howth Yacht Club</td>
+<td>Dermot Skehan</td>
+<td>0.924</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>0:47:37</td>
+<td>0:44:00</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>Class 5 IRC</td>
+<td>Out&About</td>
+<td>2070</td>
+<td>Howth Yacht Club</td>
+<td>Terry McCoy</td>
+<td>0.915</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>0:49:44</td>
+<td>0:45:30</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>Class 5 IRC</td>
+<td>Voyager</td>
+<td>657</td>
+<td>Howth Yacht Club</td>
+<td>Joe Carton</td>
+<td>0.920</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>RET</td>
+<td>&nbsp;</td>
+<td>5.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r6class_5_irc">Sun R2 - Class 5 IRC Boat Class</h3>
+<div class="caption racecaption">
+Start: Class 5, Finishes: Finish time, Time: 13:05
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="12">
+<col class="rank" />
+<col class="fleet" />
+<col class="boat" />
+<col class="sailno" />
+<col class="club" />
+<col class="helmname" />
+<col class="rating" />
+<col class="newrating" />
+<col class="bownumber" />
+<col class="elapsed" />
+<col class="corrected" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Boat Class</th>
+<th>Boat Name</th>
+<th>Sail No</th>
+<th>Club</th>
+<th>Owner Name</th>
+<th>Rating</th>
+<th>NewRating</th>
+<th>Sat only (Lambay)</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>Class 5 IRC</td>
+<td>Toughnut</td>
+<td>1411</td>
+<td>Howth Yacht Club</td>
+<td>Dermot Skehan</td>
+<td>0.924</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>0:49:59</td>
+<td>0:46:11</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>Class 5 IRC</td>
+<td>Demelza</td>
+<td>100</td>
+<td>Howth Yacht Club</td>
+<td>Steffi Ennis</td>
+<td>0.876</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>0:53:30</td>
+<td>0:46:52</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>Class 5 IRC</td>
+<td>Out&About</td>
+<td>2070</td>
+<td>Howth Yacht Club</td>
+<td>Terry McCoy</td>
+<td>0.915</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>0:55:28</td>
+<td>0:50:45</td>
+<td>3.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r7class_5_irc">Sun R3 - Class 5 IRC Boat Class</h3>
+<div class="caption racecaption">
+Start: Class 5, Finishes: Finish time, Time: 14:45
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="12">
+<col class="rank" />
+<col class="fleet" />
+<col class="boat" />
+<col class="sailno" />
+<col class="club" />
+<col class="helmname" />
+<col class="rating" />
+<col class="newrating" />
+<col class="bownumber" />
+<col class="elapsed" />
+<col class="corrected" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Boat Class</th>
+<th>Boat Name</th>
+<th>Sail No</th>
+<th>Club</th>
+<th>Owner Name</th>
+<th>Rating</th>
+<th>NewRating</th>
+<th>Sat only (Lambay)</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>Class 5 IRC</td>
+<td>Toughnut</td>
+<td>1411</td>
+<td>Howth Yacht Club</td>
+<td>Dermot Skehan</td>
+<td>0.924</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>0:24:59</td>
+<td>0:23:05</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>Class 5 IRC</td>
+<td>Demelza</td>
+<td>100</td>
+<td>Howth Yacht Club</td>
+<td>Steffi Ennis</td>
+<td>0.876</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>0:26:29</td>
+<td>0:23:12</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>Class 5 IRC</td>
+<td>Out&About</td>
+<td>2070</td>
+<td>Howth Yacht Club</td>
+<td>Terry McCoy</td>
+<td>0.915</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>0:27:06</td>
+<td>0:24:48</td>
+<td>3.0</td>
+</tr>
+</tbody>
+</table>
+
+<p class="hardleft"><a href="http://https://www.waveregatta.com/">https://www.waveregatta.com/</a><br /><a href="mailto:"></a></p>
+<p class="hardright"><a href="http://https://www.waveregatta.com/">https://www.waveregatta.com/</a><br /><a href="mailto:"></a></p>
+<p>Sailwave Scoring Software 2.29.7<br /><a href="http://www.sailwave.com">www.sailwave.com</a></p>
+
+</div>
+
+<footer>
+</footer>
+
+<div id="scrollbottom"></div>
+
+</body>
+</html>
+
+

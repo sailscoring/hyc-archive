@@ -1,0 +1,1241 @@
+
+
+
+<!doctype html>
+
+<head>
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta http-equiv="Cache-control" content="no-cache">
+<meta name="description" content="sailwave results">
+<meta name="viewport" content="width=device-width">
+
+<title>Sailwave results for Beshoff Motors Autumn League 2022 at HYC 2022</title>
+
+<style type="text/css">
+body {font: 80% arial, helvetica, sans-serif; text-align: center;}
+.hardleft  {text-align: left; float: left;  margin: 15px 0  15px 25px;}
+.hardright {text-align: right; float: right; margin: 15px 25px 15px 0;}
+table {text-align: left; margin: 0px auto 30px auto; font-size: 1em; border-collapse: collapse; border: 1px #999 solid;}
+td, th {padding: 4px; border: 1px #999 solid; vertical-align: top;}
+.caption {padding: 5px; text-align: center; border: 0; font-weight: bold;}
+p {text-align: center;}
+.contents {text-align: left; margin-left: 20%;}
+.race {background-color: #eee;}
+.odd {background-color: #eef;}
+.natflag {border: 1px #999 solid;}
+.nattext {font-size: 0.8em;}
+.place1 {font-weight: bold; background-color: #ffffaa;}
+.place2 {font-weight: bold; background-color: #aaaaff;}
+.place3 {font-weight: bold; background-color: #ffaaaa;}
+.placen {}
+table.headertable {border: 0px;}
+table.headertable td{border: 0px;}
+</style>
+
+<script type="text/javascript">
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script>
+
+function swGetURLArgs() {
+
+  var url = location.href;
+  var qs  = url.substring(url.indexOf('?') + 1).split('&');
+
+  for(var i = 0, result = {}; i < qs.length; i++) {
+    qs[i]            = qs[i].split('=');
+    result[qs[i][0]] = decodeURIComponent(qs[i][1]);
+  }
+
+  return result;
+}
+
+//
+//  name=HighlightWins3
+//  dependencies=jQuery
+//  description=Highlight winning scores in summary tables.
+//  author=Jon Eskdale based on an idea by Colin Jenkins
+//  date=2015-08-18
+//  version=1.6 2018-11-15
+//  url=http://sailwave.com
+//  email=jon@sailwave.com
+//  twitter=eskdale
+//  comments=Edit colours to colours of your choice
+//
+
+$(document).ready(function() {
+var winsSelector = '.summaryrace';
+var winsText     = /\b1\.0/;
+var twoText              = /\b2\.0/;
+var threeText    = /\b3\.0/;
+
+// Edit these colours to change the highlight colours for 1st, 2nd and 3rd
+var winsColour   = '#ffd700';
+var twoColour    = '#6a91c5';
+var threeColour  = '#da6841';
+//var twoColour  = '#ffe768';
+//var threeColour  = '#fff0a1';
+
+// create array of race column numbers for first table (summarytable)
+var ths = document.getElementsByTagName('col');
+var column =[];
+for (var i=0; i<ths.length; i++) {
+        if (ths[i].classList[0] === "race") {
+                column.push(i);
+        } else {
+                if (column.length !=0) {
+                        break;
+                }
+        }
+}
+//console.log(column);
+
+//  Set a class of summaryrace for all race cells in summary table body
+//
+for (var i=0; i<column.length; i++) {
+        $(".summarytable tbody tr td:nth-child(" + (column[i]+1) +")").addClass("summaryrace");
+}
+
+// Change the background color for cells with class of summaryrace and that match regular expression text
+$(function () {
+
+  $(winsSelector).filter(function() {
+    return winsText.test($(this).text());
+  }).css("background", winsColour);
+  $(winsSelector).filter(function() {
+        return twoText.test($(this).text());
+  }).css("background", twoColour);
+  $(winsSelector).filter(function() {
+        return threeText.test($(this).text());
+  }).css("background", threeColour);
+
+});
+});
+//
+//  name=HighlightDiscards
+//  dependencies=jQuery
+//  description=Highlight discard scores in summary tables where discards are in ().
+//  author=Jon Eskdale
+//  date=2018-11-11
+//  version=1.1
+//  url=http://sailwave.com
+//  email=jon@sailwave.com
+//  twitter=eskdale
+//  comments=Edit colours to colours of your choice
+//
+
+$(document).ready(function() {
+var discardSelector = '.summaryrace';
+var discardText     = /\b\)/;
+
+// Edit these colours to change the highlight colours for 1st, 2nd and 3rd
+var discardColour   = '#f2f2f2';
+
+// create array of race column numbers for first table (summarytable)
+var ths = document.getElementsByTagName('col');
+var column =[];
+for (var i=0; i<ths.length; i++) {
+        if (ths[i].classList[0] === "race") {
+                column.push(i);
+        } else {
+                if (column.length !=0) {
+                        break;
+                }
+        }
+}
+//console.log(column);
+
+//  Set a class of summaryrace for all race cells in summary table body
+//
+for (var i=0; i<column.length; i++) {
+        $(".summarytable tbody tr td:nth-child(" + (column[i]+1) +")").addClass("summaryrace");
+}
+
+// Change the background color for cells with class of summaryrace and that match regular expression text
+$(function () {
+
+  $(discardSelector).filter(function() {
+    return discardText.test($(this).text());
+  }).css("background", discardColour);
+
+});
+});
+</script>
+
+</head>
+
+<body>
+
+<header>
+</header>
+<table class="headertable" cellspacing="0" width="100%" cellpadding="0" border="0">
+<tbody>
+<div id="wrap">
+
+<tr>
+<td width="30%">
+<img style="display:block; height:100px;"  src="https://hyc.ie/assets/logo-5a615b18e52275b60e166edcca88c6c4.png" alt="venue burgee" />
+</td>
+
+<td width="40%" align="center">
+<h1>Beshoff Motors Autumn League 2022</h1>
+<h2>HYC</h2>
+</td>
+
+<td width="30%">
+<img style="display:block; height:100px;" src="https://hyc.ie/system/sponsor_logos/398/thumb/Beshoff_Motors_logo.jpg" alt="event burgee" align="right" />
+</td>
+</tr>
+</tbody>
+</table>
+
+<div style="clear:both;"></div>
+
+<style>
+div.applicant-break {page-break-after:always;}
+</style>
+<h3 class="seriestitle">Results are provisional as of 16:24 on October 22, 2022</h3>
+<h3 class="summarytitle" id="summaryclass_2_irc">Class 2 IRC Fleet</h3>
+<div class="caption summarycaption">Sailed: 7, Discards: 1, To count: 6, Rating system: TCF, Entries: 6, Scoring system: Appendix A</div>
+<table class="summarytable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="15">
+<col class="rank" />
+<col class="boat" />
+<col class="sailno" />
+<col class="club" />
+<col class="helmname" />
+<col class="rating" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="total" />
+<col class="nett" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Boat Name</th>
+<th>Sail No</th>
+<th>Club</th>
+<th>Owner Name</th>
+<th>Rating</th>
+<th>Race1</th>
+<th>Race2</th>
+<th>Race3</th>
+<th>Race4</th>
+<th><a class="racelink" href="#r5class_2_irc">Race5</a></th>
+<th><a class="racelink" href="#r6class_2_irc">Race6</a></th>
+<th><a class="racelink" href="#r7class_2_irc">Race7</a></th>
+<th>Total</th>
+<th>Nett</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd summaryrow">
+<td>1st</td>
+<td>Maximus</td>
+<td>7495</td>
+<td>HYC</td>
+<td>Paddy Kyne</td>
+<td>0.925</td>
+<td>(4.0)</td>
+<td class="rank1">1.0</td>
+<td class="rank1">1.0</td>
+<td class="rank2">2.0</td>
+<td class="rank3">3.0</td>
+<td class="rank3">3.0</td>
+<td class="rank2">2.0</td>
+<td>16.0</td>
+<td>12.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>2nd</td>
+<td>Impetuous</td>
+<td>2507</td>
+<td>HYC</td>
+<td>Fergal Noonan/Robert Chambers</td>
+<td>0.925</td>
+<td class="rank1">1.0</td>
+<td>4.0</td>
+<td class="rank2">2.0</td>
+<td>4.0</td>
+<td class="rank1">1.0</td>
+<td class="rank1">1.0</td>
+<td>(5.0)</td>
+<td>18.0</td>
+<td>13.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>3rd</td>
+<td>Dux</td>
+<td>988</td>
+<td>HYC</td>
+<td>Caroline & Nico Gore-Grimes</td>
+<td>0.924</td>
+<td class="rank2">2.0</td>
+<td class="rank2">2.0</td>
+<td class="rank3">3.0</td>
+<td class="rank1">1.0</td>
+<td>(5.0)</td>
+<td>4.0</td>
+<td class="rank1">1.0</td>
+<td>18.0</td>
+<td>13.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>4th</td>
+<td>No Excuse</td>
+<td>1972</td>
+<td>HYC</td>
+<td>Wormald, Walsh, O'Neill</td>
+<td>0.922</td>
+<td>(5.0)</td>
+<td class="rank3">3.0</td>
+<td>4.0</td>
+<td class="rank3">3.0</td>
+<td class="rank2">2.0</td>
+<td>5.0</td>
+<td class="rank3">3.0</td>
+<td>25.0</td>
+<td>20.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>5th</td>
+<td>Xebec</td>
+<td>3022</td>
+<td>HYC</td>
+<td>Bourke McgGrr Ball</td>
+<td>0.923</td>
+<td class="rank3">3.0</td>
+<td>(6.0)</td>
+<td>6.0</td>
+<td>5.0</td>
+<td>4.0</td>
+<td class="rank2">2.0</td>
+<td>4.0</td>
+<td>30.0</td>
+<td>24.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>6th</td>
+<td>Viking</td>
+<td>1103</td>
+<td>HYC</td>
+<td>Kevin Darmody</td>
+<td>0.921</td>
+<td>(6.0)</td>
+<td>5.0</td>
+<td>5.0</td>
+<td>6.0</td>
+<td>6.0</td>
+<td>6.0</td>
+<td>6.0</td>
+<td>40.0</td>
+<td>34.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="summarytitle" id="summaryclass_2_hph">Class 2 HPH Fleet</h3>
+<div class="caption summarycaption">Sailed: 7, Discards: 1, To count: 6, Rating system: NHC1, Entries: 7, Scoring system: Appendix A</div>
+<table class="summarytable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="15">
+<col class="rank" />
+<col class="boat" />
+<col class="sailno" />
+<col class="club" />
+<col class="helmname" />
+<col class="rating" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="total" />
+<col class="nett" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Boat Name</th>
+<th>Sail No</th>
+<th>Club</th>
+<th>Owner Name</th>
+<th>Rating</th>
+<th>Race1</th>
+<th>Race2</th>
+<th>Race3</th>
+<th>Race4</th>
+<th><a class="racelink" href="#r5class_2_hph">Race5</a></th>
+<th><a class="racelink" href="#r6class_2_hph">Race6</a></th>
+<th><a class="racelink" href="#r7class_2_hph">Race7</a></th>
+<th>Total</th>
+<th>Nett</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd summaryrow">
+<td>1st</td>
+<td>Maximus</td>
+<td>7495</td>
+<td>HYC</td>
+<td>Paddy Kyne</td>
+<td>0.928</td>
+<td>(4.0)</td>
+<td class="rank1">1.0</td>
+<td class="rank1">1.0</td>
+<td class="rank1">1.0</td>
+<td class="rank3">3.0</td>
+<td class="rank3">3.0</td>
+<td>4.0</td>
+<td>17.0</td>
+<td>13.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>2nd</td>
+<td>Impetuous</td>
+<td>2507</td>
+<td>HYC</td>
+<td>Fergal Noonan/Robert Chambers</td>
+<td>0.925</td>
+<td class="rank1">1.0</td>
+<td class="rank3">3.0</td>
+<td class="rank2">2.0</td>
+<td>(6.0)</td>
+<td class="rank1">1.0</td>
+<td class="rank2">2.0</td>
+<td>6.0</td>
+<td>21.0</td>
+<td>15.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>3rd</td>
+<td>Xebec</td>
+<td>3022</td>
+<td>HYC</td>
+<td>Bourke McGirr Ball</td>
+<td>0.924</td>
+<td class="rank2">2.0</td>
+<td>(6.0)</td>
+<td>6.0</td>
+<td>5.0</td>
+<td>4.0</td>
+<td class="rank1">1.0</td>
+<td class="rank1">1.0</td>
+<td>25.0</td>
+<td>19.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>4th</td>
+<td>No Excuse</td>
+<td>1972</td>
+<td>HYC</td>
+<td>Wormald, Walsh, O'Neill</td>
+<td>0.935</td>
+<td>5.0</td>
+<td class="rank2">2.0</td>
+<td>5.0</td>
+<td class="rank3">3.0</td>
+<td class="rank2">2.0</td>
+<td>(6.0)</td>
+<td class="rank2">2.0</td>
+<td>25.0</td>
+<td>19.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>5th</td>
+<td>Dux</td>
+<td>988</td>
+<td>HYC</td>
+<td>Caroline & Nico Gore-Grimes</td>
+<td>0.950</td>
+<td class="rank3">3.0</td>
+<td>4.0</td>
+<td>4.0</td>
+<td class="rank2">2.0</td>
+<td>(6.0)</td>
+<td>5.0</td>
+<td class="rank3">3.0</td>
+<td>27.0</td>
+<td>21.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>6th</td>
+<td>Viking</td>
+<td>1103</td>
+<td>HYC</td>
+<td>Kevin Darmody</td>
+<td>0.910</td>
+<td>6.0</td>
+<td>5.0</td>
+<td class="rank3">3.0</td>
+<td>4.0</td>
+<td>5.0</td>
+<td>(7.0)</td>
+<td>7.0</td>
+<td>37.0</td>
+<td>30.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>7th</td>
+<td>Pepperbox</td>
+<td>4123</td>
+<td>HYC</td>
+<td>Cormac Farrelly</td>
+<td>0.905</td>
+<td>7.0</td>
+<td>(8.0 DNC)</td>
+<td>8.0 DNC</td>
+<td>8.0 DNC</td>
+<td>8.0 OCS</td>
+<td>4.0</td>
+<td>5.0</td>
+<td>48.0</td>
+<td>40.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r5class_2_irc">Race5 - Class 2 IRC Fleet&nbsp;-&nbsp;8th October</h3>
+<div class="caption racecaption">
+Start: Class 2, Finishes: Finish time, Time: 141000
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="11">
+<col class="rank" />
+<col class="boat" />
+<col class="sailno" />
+<col class="club" />
+<col class="helmname" />
+<col class="rating" />
+<col class="start" />
+<col class="finish" />
+<col class="elapsed" />
+<col class="corrected" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Boat Name</th>
+<th>Sail No</th>
+<th>Club</th>
+<th>Owner Name</th>
+<th>Rating</th>
+<th>Start</th>
+<th>Finish</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>Impetuous</td>
+<td>2507</td>
+<td>HYC</td>
+<td>Fergal Noonan/Robert Chambers</td>
+<td>0.925</td>
+<td>141000</td>
+<td>14:53:21</td>
+<td>0:43:21</td>
+<td>0:40:06</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>No Excuse</td>
+<td>1972</td>
+<td>HYC</td>
+<td>Wormald, Walsh, O'Neill</td>
+<td>0.922</td>
+<td>141000</td>
+<td>14:54:09</td>
+<td>0:44:09</td>
+<td>0:40:42</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>Maximus</td>
+<td>7495</td>
+<td>HYC</td>
+<td>Paddy Kyne</td>
+<td>0.925</td>
+<td>141000</td>
+<td>14:54:37</td>
+<td>0:44:37</td>
+<td>0:41:16</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>Xebec</td>
+<td>3022</td>
+<td>HYC</td>
+<td>Bourke McgGrr Ball</td>
+<td>0.923</td>
+<td>141000</td>
+<td>14:56:19</td>
+<td>0:46:19</td>
+<td>0:42:45</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>Dux</td>
+<td>988</td>
+<td>HYC</td>
+<td>Caroline & Nico Gore-Grimes</td>
+<td>0.924</td>
+<td>141000</td>
+<td>14:57:56</td>
+<td>0:47:56</td>
+<td>0:44:17</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>Viking</td>
+<td>1103</td>
+<td>HYC</td>
+<td>Kevin Darmody</td>
+<td>0.921</td>
+<td>141000</td>
+<td>14:59:09</td>
+<td>0:49:09</td>
+<td>0:45:16</td>
+<td>6.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r6class_2_irc">Race6 - Class 2 IRC Fleet&nbsp;-&nbsp;8th October</h3>
+<div class="caption racecaption">
+Start: Class 2, Finishes: Finish time, Time: 153600
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="11">
+<col class="rank" />
+<col class="boat" />
+<col class="sailno" />
+<col class="club" />
+<col class="helmname" />
+<col class="rating" />
+<col class="start" />
+<col class="finish" />
+<col class="elapsed" />
+<col class="corrected" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Boat Name</th>
+<th>Sail No</th>
+<th>Club</th>
+<th>Owner Name</th>
+<th>Rating</th>
+<th>Start</th>
+<th>Finish</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>Impetuous</td>
+<td>2507</td>
+<td>HYC</td>
+<td>Fergal Noonan/Robert Chambers</td>
+<td>0.925</td>
+<td>153600</td>
+<td>16:30:20</td>
+<td>0:54:20</td>
+<td>0:50:16</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>Xebec</td>
+<td>3022</td>
+<td>HYC</td>
+<td>Bourke McgGrr Ball</td>
+<td>0.923</td>
+<td>153600</td>
+<td>16:30:59</td>
+<td>0:54:59</td>
+<td>0:50:45</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>Maximus</td>
+<td>7495</td>
+<td>HYC</td>
+<td>Paddy Kyne</td>
+<td>0.925</td>
+<td>153600</td>
+<td>16:31:33</td>
+<td>0:55:33</td>
+<td>0:51:23</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>Dux</td>
+<td>988</td>
+<td>HYC</td>
+<td>Caroline & Nico Gore-Grimes</td>
+<td>0.924</td>
+<td>153600</td>
+<td>16:31:44</td>
+<td>0:55:44</td>
+<td>0:51:30</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>No Excuse</td>
+<td>1972</td>
+<td>HYC</td>
+<td>Wormald, Walsh, O'Neill</td>
+<td>0.922</td>
+<td>153600</td>
+<td>16:36:37</td>
+<td>1:00:37</td>
+<td>0:55:53</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>Viking</td>
+<td>1103</td>
+<td>HYC</td>
+<td>Kevin Darmody</td>
+<td>0.921</td>
+<td>153600</td>
+<td>16:42:30</td>
+<td>1:06:30</td>
+<td>1:01:15</td>
+<td>6.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r7class_2_irc">Race7 - Class 2 IRC Fleet&nbsp;-&nbsp;22nd of October</h3>
+<div class="caption racecaption">
+Start: Class 2, Finishes: Finish time, Time: 132600
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="11">
+<col class="rank" />
+<col class="boat" />
+<col class="sailno" />
+<col class="club" />
+<col class="helmname" />
+<col class="rating" />
+<col class="start" />
+<col class="finish" />
+<col class="elapsed" />
+<col class="corrected" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Boat Name</th>
+<th>Sail No</th>
+<th>Club</th>
+<th>Owner Name</th>
+<th>Rating</th>
+<th>Start</th>
+<th>Finish</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>Dux</td>
+<td>988</td>
+<td>HYC</td>
+<td>Caroline & Nico Gore-Grimes</td>
+<td>0.924</td>
+<td>132600</td>
+<td>15:09:45</td>
+<td>1:43:45</td>
+<td>1:35:52</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>Maximus</td>
+<td>7495</td>
+<td>HYC</td>
+<td>Paddy Kyne</td>
+<td>0.925</td>
+<td>132600</td>
+<td>15:10:26</td>
+<td>1:44:26</td>
+<td>1:36:36</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>No Excuse</td>
+<td>1972</td>
+<td>HYC</td>
+<td>Wormald, Walsh, O'Neill</td>
+<td>0.922</td>
+<td>132600</td>
+<td>15:11:01</td>
+<td>1:45:01</td>
+<td>1:36:50</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>Xebec</td>
+<td>3022</td>
+<td>HYC</td>
+<td>Bourke McgGrr Ball</td>
+<td>0.923</td>
+<td>132600</td>
+<td>15:10:59</td>
+<td>1:44:59</td>
+<td>1:36:54</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>Impetuous</td>
+<td>2507</td>
+<td>HYC</td>
+<td>Fergal Noonan/Robert Chambers</td>
+<td>0.925</td>
+<td>132600</td>
+<td>15:12:10</td>
+<td>1:46:10</td>
+<td>1:38:12</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>Viking</td>
+<td>1103</td>
+<td>HYC</td>
+<td>Kevin Darmody</td>
+<td>0.921</td>
+<td>132600</td>
+<td>15:21:43</td>
+<td>1:55:43</td>
+<td>1:46:35</td>
+<td>6.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r5class_2_hph">Race5 - Class 2 HPH Fleet&nbsp;-&nbsp;8th October</h3>
+<div class="caption racecaption">
+Start: Class 2, Finishes: Finish time, Time: 141000
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="11">
+<col class="rank" />
+<col class="boat" />
+<col class="sailno" />
+<col class="club" />
+<col class="helmname" />
+<col class="rating" />
+<col class="start" />
+<col class="finish" />
+<col class="elapsed" />
+<col class="corrected" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Boat Name</th>
+<th>Sail No</th>
+<th>Club</th>
+<th>Owner Name</th>
+<th>Rating</th>
+<th>Start</th>
+<th>Finish</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>Impetuous</td>
+<td>2507</td>
+<td>HYC</td>
+<td>Fergal Noonan/Robert Chambers</td>
+<td>0.934</td>
+<td>141000</td>
+<td>14:53:21</td>
+<td>0:43:21</td>
+<td>0:40:29</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>No Excuse</td>
+<td>1972</td>
+<td>HYC</td>
+<td>Wormald, Walsh, O'Neill</td>
+<td>0.928</td>
+<td>141000</td>
+<td>14:54:09</td>
+<td>0:44:09</td>
+<td>0:40:58</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>Maximus</td>
+<td>7495</td>
+<td>HYC</td>
+<td>Paddy Kyne</td>
+<td>0.942</td>
+<td>141000</td>
+<td>14:54:37</td>
+<td>0:44:37</td>
+<td>0:42:02</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>Xebec</td>
+<td>3022</td>
+<td>HYC</td>
+<td>Bourke McGirr Ball</td>
+<td>0.919</td>
+<td>141000</td>
+<td>14:56:19</td>
+<td>0:46:19</td>
+<td>0:42:34</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>Viking</td>
+<td>1103</td>
+<td>HYC</td>
+<td>Kevin Darmody</td>
+<td>0.897</td>
+<td>141000</td>
+<td>14:59:09</td>
+<td>0:49:09</td>
+<td>0:44:05</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>Dux</td>
+<td>988</td>
+<td>HYC</td>
+<td>Caroline & Nico Gore-Grimes</td>
+<td>0.953</td>
+<td>141000</td>
+<td>14:57:56</td>
+<td>0:47:56</td>
+<td>0:45:41</td>
+<td>6.0</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>Pepperbox</td>
+<td>4123</td>
+<td>HYC</td>
+<td>Cormac Farrelly</td>
+<td>0.899</td>
+<td>141000</td>
+<td>14:58:50</td>
+<td>OCS</td>
+<td>&nbsp;</td>
+<td>8.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r6class_2_hph">Race6 - Class 2 HPH Fleet&nbsp;-&nbsp;8th October</h3>
+<div class="caption racecaption">
+Start: Class 2, Finishes: Finish time, Time: 153600
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="11">
+<col class="rank" />
+<col class="boat" />
+<col class="sailno" />
+<col class="club" />
+<col class="helmname" />
+<col class="rating" />
+<col class="start" />
+<col class="finish" />
+<col class="elapsed" />
+<col class="corrected" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Boat Name</th>
+<th>Sail No</th>
+<th>Club</th>
+<th>Owner Name</th>
+<th>Rating</th>
+<th>Start</th>
+<th>Finish</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>Xebec</td>
+<td>3022</td>
+<td>HYC</td>
+<td>Bourke McGirr Ball</td>
+<td>0.916</td>
+<td>153600</td>
+<td>16:30:59</td>
+<td>0:54:59</td>
+<td>0:50:22</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>Impetuous</td>
+<td>2507</td>
+<td>HYC</td>
+<td>Fergal Noonan/Robert Chambers</td>
+<td>0.943</td>
+<td>153600</td>
+<td>16:30:20</td>
+<td>0:54:20</td>
+<td>0:51:14</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>Maximus</td>
+<td>7495</td>
+<td>HYC</td>
+<td>Paddy Kyne</td>
+<td>0.941</td>
+<td>153600</td>
+<td>16:31:33</td>
+<td>0:55:33</td>
+<td>0:52:16</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>Pepperbox</td>
+<td>4123</td>
+<td>HYC</td>
+<td>Cormac Farrelly</td>
+<td>0.899</td>
+<td>153600</td>
+<td>16:34:12</td>
+<td>0:58:12</td>
+<td>0:52:19</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>Dux</td>
+<td>988</td>
+<td>HYC</td>
+<td>Caroline & Nico Gore-Grimes</td>
+<td>0.947</td>
+<td>153600</td>
+<td>16:31:44</td>
+<td>0:55:44</td>
+<td>0:52:47</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>No Excuse</td>
+<td>1972</td>
+<td>HYC</td>
+<td>Wormald, Walsh, O'Neill</td>
+<td>0.934</td>
+<td>153600</td>
+<td>16:36:37</td>
+<td>1:00:37</td>
+<td>0:56:37</td>
+<td>6.0</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>Viking</td>
+<td>1103</td>
+<td>HYC</td>
+<td>Kevin Darmody</td>
+<td>0.890</td>
+<td>153600</td>
+<td>16:42:30</td>
+<td>1:06:30</td>
+<td>0:59:11</td>
+<td>7.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r7class_2_hph">Race7 - Class 2 HPH Fleet&nbsp;-&nbsp;22nd of October</h3>
+<div class="caption racecaption">
+Start: Class 2, Finishes: Finish time, Time: 132600
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="11">
+<col class="rank" />
+<col class="boat" />
+<col class="sailno" />
+<col class="club" />
+<col class="helmname" />
+<col class="rating" />
+<col class="start" />
+<col class="finish" />
+<col class="elapsed" />
+<col class="corrected" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Boat Name</th>
+<th>Sail No</th>
+<th>Club</th>
+<th>Owner Name</th>
+<th>Rating</th>
+<th>Start</th>
+<th>Finish</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>Xebec</td>
+<td>3022</td>
+<td>HYC</td>
+<td>Bourke McGirr Ball</td>
+<td>0.925</td>
+<td>132600</td>
+<td>15:10:59</td>
+<td>1:44:59</td>
+<td>1:37:07</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>No Excuse</td>
+<td>1972</td>
+<td>HYC</td>
+<td>Wormald, Walsh, O'Neill</td>
+<td>0.932</td>
+<td>132600</td>
+<td>15:11:01</td>
+<td>1:45:01</td>
+<td>1:37:53</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>Dux</td>
+<td>988</td>
+<td>HYC</td>
+<td>Caroline & Nico Gore-Grimes</td>
+<td>0.946</td>
+<td>132600</td>
+<td>15:09:45</td>
+<td>1:43:45</td>
+<td>1:38:09</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>Maximus</td>
+<td>7495</td>
+<td>HYC</td>
+<td>Paddy Kyne</td>
+<td>0.941</td>
+<td>132600</td>
+<td>15:10:26</td>
+<td>1:44:26</td>
+<td>1:38:16</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>Pepperbox</td>
+<td>4123</td>
+<td>HYC</td>
+<td>Cormac Farrelly</td>
+<td>0.899</td>
+<td>132600</td>
+<td>15:17:43</td>
+<td>1:51:43</td>
+<td>1:40:26</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>Impetuous</td>
+<td>2507</td>
+<td>HYC</td>
+<td>Fergal Noonan/Robert Chambers</td>
+<td>0.948</td>
+<td>132600</td>
+<td>15:12:10</td>
+<td>1:46:10</td>
+<td>1:40:39</td>
+<td>6.0</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>Viking</td>
+<td>1103</td>
+<td>HYC</td>
+<td>Kevin Darmody</td>
+<td>0.885</td>
+<td>132600</td>
+<td>15:21:43</td>
+<td>1:55:43</td>
+<td>1:42:25</td>
+<td>7.0</td>
+</tr>
+</tbody>
+</table>
+<p class="hardleft"><a href="http://https://hyc.ie">https://hyc.ie</a><br /><a href="mailto:"></a></p>
+<p class="hardright"><a href="http://"></a><br /><a href="mailto:"></a></p>
+<p>Sailwave Scoring Software 2.29.0<br /><a href="http://www.sailwave.com">www.sailwave.com</a></p>
+
+</div>
+
+<footer>
+</footer>
+
+<div id="scrollbottom"></div>
+
+</body>
+</html>
+
+

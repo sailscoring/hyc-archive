@@ -1,0 +1,1087 @@
+
+
+
+<!doctype html>
+
+<head>
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta http-equiv="Cache-control" content="no-cache">
+<meta name="description" content="sailwave results">
+<meta name="viewport" content="width=device-width">
+
+<title>Sailwave results for Lambay Races 2023 at Howth Yacht Club 2023</title>
+
+<style type="text/css">
+body {font: 80% arial, helvetica, sans-serif; text-align: center;}
+.hardleft  {text-align: left; float: left;  margin: 15px 0  15px 25px;}
+.hardright {text-align: right; float: right; margin: 15px 25px 15px 0;}
+table {text-align: left; margin: 0px auto 30px auto; font-size: 1em; border-collapse: collapse; border: 1px #999 solid;}
+td, th {padding: 4px; border: 1px #999 solid; vertical-align: top;}
+.caption {padding: 5px; text-align: center; border: 0; font-weight: bold;}
+p {text-align: center;}
+.contents {text-align: left; margin-left: 20%;}
+.race {background-color: #eee;}
+.odd {background-color: #eef;}
+.natflag {border: 1px #999 solid;}
+.nattext {font-size: 0.8em;}
+.place1 {font-weight: bold; background-color: #ffffaa;}
+.place2 {font-weight: bold; background-color: #aaaaff;}
+.place3 {font-weight: bold; background-color: #ffaaaa;}
+.placen {}
+table.headertable {border: 0px;}
+table.headertable td{border: 0px;}
+</style>
+
+<script type="text/javascript">
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script>
+
+function swGetURLArgs() {
+
+  var url = location.href;
+  var qs  = url.substring(url.indexOf('?') + 1).split('&');
+
+  for(var i = 0, result = {}; i < qs.length; i++) {
+    qs[i]            = qs[i].split('=');
+    result[qs[i][0]] = decodeURIComponent(qs[i][1]);
+  }
+
+  return result;
+}
+
+//
+//  name=HighlightWins3v3
+//  dependencies=jQuery
+//  description=Highlight winning scores in summary tables.
+//  author=Jon Eskdale based on an idea by Colin Jenkins
+//  date=2016-07-04
+//  version=3.0  For use with Sailwave from V2.22.x
+//  Requires the following lines in the Results.htm file (Results.htm is in the Templates directory)
+//  string.set("summary.col.race.rank1.td",   "rank1")
+//  string.set("summary.col.race.rank2.td",   "rank2")
+//  string.set("summary.col.race.rank3.td",   "rank3")
+
+//  url=http://sailwave.com
+//  email=jon@sailwave.com
+//  twitter=eskdale
+//  comments=Edit colours to colours of your choice
+//
+
+$(document).ready(function() {
+var selectorRank1 = '.rank1';
+var selectorRank2 = '.rank2';
+var selectorRank3 = '.rank3';
+
+// Results with these codes will not get highlighted add or remove codes to your choice
+var ignoreText   = /^(?!.*\b(DNC|DNF|DNS|OCS|BFD|UFD|RET|DSQ|DGM|DNE)\b).*/i
+
+// Edit these colours to change the highlight colours for 1st, 2nd and 3rd
+var winsColour   = '#ffd700';
+var twoColour    = '#6a91c5';
+var threeColour  = '#da6841';
+
+
+// Change the background color for cells with class of rank1-3 and don't have a code specified
+$(function () {
+
+  $(selectorRank1).filter(function() {
+    return ignoreText.test($(this).text());
+  }).css("background", winsColour);
+  $(selectorRank2).filter(function() {
+        return ignoreText.test($(this).text());
+  }).css("background", twoColour);
+  $(selectorRank3).filter(function() {
+        return ignoreText.test($(this).text());
+  }).css("background", threeColour);
+
+});
+});
+</script>
+
+</head>
+
+<body>
+
+<header>
+</header>
+<table class="headertable" cellspacing="0" width="100%" cellpadding="0" border="0">
+<tbody>
+<div id="wrap">
+
+<tr>
+<td width="30%">
+<img style="display:block; height:100px;"  src="https://hyc.ie/assets/logo-5a615b18e52275b60e166edcca88c6c4.png" alt="venue burgee" />
+</td>
+
+<td width="40%" align="center">
+<h1>Lambay Races 2023</h1>
+<h2>Howth Yacht Club</h2>
+</td>
+
+<td width="30%">
+<img style="display:block; height:100px;" src="https://hyc.ie/assets/logo-5a615b18e52275b60e166edcca88c6c4.png" alt="event burgee" align="right" />
+</td>
+</tr>
+</tbody>
+</table>
+
+<div style="clear:both;"></div>
+
+<style>
+div.applicant-break {page-break-after:always;}
+</style>
+<h3 class="seriestitle">Results are provisional as of 17:33 on June  3, 2023</h3>
+<h3 class="summarytitle" id="summaryhowth_17_hph">Howth 17 HPH Fleet</h3>
+<div class="caption summarycaption">Sailed: 1, Discards: 0, To count: 1, Rating system: TCF, Entries: 16, Scoring system: Appendix A</div>
+<table class="summarytable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="10">
+<col class="rank" />
+<col class="fleet" />
+<col class="sailno" />
+<col class="boat" />
+<col class="helmname" />
+<col class="club" />
+<col class="rating" />
+<col class="race" />
+<col class="total" />
+<col class="nett" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Fleet</th>
+<th>SailNo</th>
+<th>boat</th>
+<th>Owner</th>
+<th>Club</th>
+<th>Rating</th>
+<th><a class="racelink" href="#r1howth_17_hph">Lambay Race</a></th>
+<th>Total</th>
+<th>Nett</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd summaryrow">
+<td>1st</td>
+<td>Howth 17 HPH</td>
+<td>4</td>
+<td>Zaida</td>
+<td>C & C Houlihan, K Hurley, A Carroll</td>
+<td>Howth Yacht Club</td>
+<td>0.965</td>
+<td class="rank1">1.0</td>
+<td>1.0</td>
+<td>1.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>2nd</td>
+<td>Howth 17 HPH</td>
+<td>5</td>
+<td>Silvermoon</td>
+<td>Susan Morgan</td>
+<td>Howth Yacht Club</td>
+<td>0.950</td>
+<td class="rank2">2.0</td>
+<td>2.0</td>
+<td>2.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>3rd</td>
+<td>Howth 17 HPH</td>
+<td>15</td>
+<td>Bobolink</td>
+<td>Doyle/Finnegan/Walsh</td>
+<td>Howth Yacht Club</td>
+<td>0.965</td>
+<td class="rank3">3.0</td>
+<td>3.0</td>
+<td>3.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>4th</td>
+<td>Howth 17 HPH</td>
+<td>20</td>
+<td>Shiela</td>
+<td>David Mulligan/Andy Johnston</td>
+<td>Howth Yacht Club</td>
+<td>1.100</td>
+<td>4.0</td>
+<td>4.0</td>
+<td>4.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>5th</td>
+<td>Howth 17 HPH</td>
+<td>16</td>
+<td>Eileen</td>
+<td>Rima Macken</td>
+<td>Howth Yacht Club</td>
+<td>1.100</td>
+<td>5.0</td>
+<td>5.0</td>
+<td>5.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>6th</td>
+<td>Howth 17 HPH</td>
+<td>3</td>
+<td>Leila</td>
+<td>Roddy Cooper</td>
+<td>Howth Yacht Club</td>
+<td>1.200</td>
+<td>6.0</td>
+<td>6.0</td>
+<td>6.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>7th</td>
+<td>Howth 17 HPH</td>
+<td>18</td>
+<td>Erica</td>
+<td>Davie Nixon</td>
+<td>Howth Yacht Club</td>
+<td>1.350</td>
+<td>7.0</td>
+<td>7.0</td>
+<td>7.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>8th</td>
+<td>Howth 17 HPH</td>
+<td>9</td>
+<td>Hera</td>
+<td>Jane & Michael Duffy</td>
+<td>Howth Yacht Club</td>
+<td>1.350</td>
+<td>8.0</td>
+<td>8.0</td>
+<td>8.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>9th</td>
+<td>Howth 17 HPH</td>
+<td>12</td>
+<td>Rosemary</td>
+<td>Curley,Jones,Potter</td>
+<td>Howth Yacht Club</td>
+<td>1.350</td>
+<td>9.0</td>
+<td>9.0</td>
+<td>9.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>10th</td>
+<td>Howth 17 HPH</td>
+<td>19</td>
+<td>Isobel</td>
+<td>Brian & Conor Turvey</td>
+<td>Howth Yacht Club</td>
+<td>1.350</td>
+<td>10.0</td>
+<td>10.0</td>
+<td>10.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>11th</td>
+<td>Howth 17 HPH</td>
+<td>21</td>
+<td>Orla</td>
+<td>Gallagher & Fitzgibbon</td>
+<td>Howth Yacht Club</td>
+<td>1.350</td>
+<td>11.0</td>
+<td>11.0</td>
+<td>11.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>12th</td>
+<td>Howth 17 HPH</td>
+<td>17</td>
+<td>Oona</td>
+<td>Peter Courtney</td>
+<td>Howth Yacht Club</td>
+<td>1.350</td>
+<td>12.0</td>
+<td>12.0</td>
+<td>12.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>13th</td>
+<td>Howth 17 HPH</td>
+<td>7</td>
+<td>Aura</td>
+<td>Ian Malcolm</td>
+<td>Howth Yacht Club</td>
+<td>1.350</td>
+<td>13.0</td>
+<td>13.0</td>
+<td>13.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>14th</td>
+<td>Howth 17 HPH</td>
+<td>14</td>
+<td>Gladys</td>
+<td>Eddie Ferris & Ian Byrne</td>
+<td>Howth Yacht Club</td>
+<td>1.200</td>
+<td>14.0</td>
+<td>14.0</td>
+<td>14.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>15th</td>
+<td>Howth 17 HPH</td>
+<td>1</td>
+<td>Rita</td>
+<td>Marcus Lynch & John Curley</td>
+<td>Howth Yacht Club</td>
+<td>1.350</td>
+<td>15.0</td>
+<td>15.0</td>
+<td>15.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>16th</td>
+<td>Howth 17 HPH</td>
+<td>11</td>
+<td>Deilginis</td>
+<td>Massey/Toomey/Kenny</td>
+<td>Howth Yacht Club</td>
+<td>1.350</td>
+<td>16.0</td>
+<td>16.0</td>
+<td>16.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="summarytitle" id="summaryhowth_17_scr">Howth 17 SCR Fleet</h3>
+<div class="caption summarycaption">Sailed: 1, Discards: 0, To count: 1, Rating system: TCF, Entries: 16, Scoring system: Appendix A</div>
+<table class="summarytable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="10">
+<col class="rank" />
+<col class="fleet" />
+<col class="sailno" />
+<col class="boat" />
+<col class="helmname" />
+<col class="club" />
+<col class="rating" />
+<col class="race" />
+<col class="total" />
+<col class="nett" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Fleet</th>
+<th>SailNo</th>
+<th>boat</th>
+<th>Owner</th>
+<th>Club</th>
+<th>Rating</th>
+<th><a class="racelink" href="#r1howth_17_scr">Lambay Race</a></th>
+<th>Total</th>
+<th>Nett</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd summaryrow">
+<td>1st</td>
+<td>Howth 17 SCR</td>
+<td>18</td>
+<td>Erica</td>
+<td>Davie Nixon</td>
+<td>Howth Yacht Club</td>
+<td>1.000</td>
+<td class="rank1">1.0</td>
+<td>1.0</td>
+<td>1.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>2nd</td>
+<td>Howth 17 SCR</td>
+<td>9</td>
+<td>Hera</td>
+<td>Jane & Michael Duffy</td>
+<td>Howth Yacht Club</td>
+<td>1.000</td>
+<td class="rank2">2.0</td>
+<td>2.0</td>
+<td>2.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>3rd</td>
+<td>Howth 17 SCR</td>
+<td>12</td>
+<td>Rosemary</td>
+<td>Curley, Jones, Potter</td>
+<td>Howth Yacht Club</td>
+<td>1.000</td>
+<td class="rank3">3.0</td>
+<td>3.0</td>
+<td>3.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>4th</td>
+<td>Howth 17 SCR</td>
+<td>19</td>
+<td>Isobel</td>
+<td>Brian and Conor Turvey</td>
+<td>Howth Yacht Club</td>
+<td>1.000</td>
+<td>4.0</td>
+<td>4.0</td>
+<td>4.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>5th</td>
+<td>Howth 17 SCR</td>
+<td>20</td>
+<td>Shiela</td>
+<td>David Mulligan/Andy Johnston</td>
+<td>Howth Yacht Club</td>
+<td>1.000</td>
+<td>5.0</td>
+<td>5.0</td>
+<td>5.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>6th</td>
+<td>Howth 17 SCR</td>
+<td>21</td>
+<td>Orla</td>
+<td>Gallagher & Fitzgibbon</td>
+<td>Howth Yacht Club</td>
+<td>1.000</td>
+<td>6.0</td>
+<td>6.0</td>
+<td>6.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>7th</td>
+<td>Howth 17 SCR</td>
+<td>17</td>
+<td>Oona</td>
+<td>Peter Courtney</td>
+<td>Howth Yacht Club</td>
+<td>1.000</td>
+<td>7.0</td>
+<td>7.0</td>
+<td>7.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>8th</td>
+<td>Howth 17 SCR</td>
+<td>7</td>
+<td>Aura</td>
+<td>Ian Malcolm</td>
+<td>Howth Yacht Club</td>
+<td>1.000</td>
+<td>8.0</td>
+<td>8.0</td>
+<td>8.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>9th</td>
+<td>Howth 17 SCR</td>
+<td>3</td>
+<td>Leila</td>
+<td>Roddy Cooper</td>
+<td>Howth Yacht Club</td>
+<td>1.000</td>
+<td>9.0</td>
+<td>9.0</td>
+<td>9.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>10th</td>
+<td>Howth 17 SCR</td>
+<td>16</td>
+<td>Eileen</td>
+<td>Rima macken</td>
+<td>Howth Yacht Club</td>
+<td>1.000</td>
+<td>10.0</td>
+<td>10.0</td>
+<td>10.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>11th</td>
+<td>Howth 17 SCR</td>
+<td>1</td>
+<td>Rita</td>
+<td>John Curley / Marcus Lynch</td>
+<td>Howth Yacht Club</td>
+<td>1.000</td>
+<td>11.0</td>
+<td>11.0</td>
+<td>11.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>12th</td>
+<td>Howth 17 SCR</td>
+<td>11</td>
+<td>Deilginis</td>
+<td>Massey/Toomey/Kenny</td>
+<td>Howth Yacht Club</td>
+<td>1.000</td>
+<td>12.0</td>
+<td>12.0</td>
+<td>12.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>13th</td>
+<td>Howth 17 SCR</td>
+<td>4</td>
+<td>Zaida</td>
+<td>C & C Houlihan, K Hurley, A Carroll</td>
+<td>Howth Yacht Club</td>
+<td>1.000</td>
+<td>13.0</td>
+<td>13.0</td>
+<td>13.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>14th</td>
+<td>Howth 17 SCR</td>
+<td>15</td>
+<td>Bobolink</td>
+<td>Doyle/Finnegan/Walsh</td>
+<td>Howth Yacht Club</td>
+<td>1.000</td>
+<td>14.0</td>
+<td>14.0</td>
+<td>14.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>15th</td>
+<td>Howth 17 SCR</td>
+<td>5</td>
+<td>Silvermoon</td>
+<td>Susan Morgan</td>
+<td>Howth Yacht Club</td>
+<td>1.000</td>
+<td>15.0</td>
+<td>15.0</td>
+<td>15.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>16th</td>
+<td>Howth 17 SCR</td>
+<td>14</td>
+<td>Gladys</td>
+<td>Eddie Ferris & Ian Byrne</td>
+<td>Howth Yacht Club</td>
+<td>1.000</td>
+<td>16.0</td>
+<td>16.0</td>
+<td>16.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r1howth_17_hph">Lambay Race - Howth 17 HPH Fleet&nbsp;-&nbsp;3rd June&nbsp;at&nbsp;120000</h3>
+<div class="caption racecaption">
+Start: Start 7, Finishes: Finish time, Time: 121500
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="11">
+<col class="rank" />
+<col class="fleet" />
+<col class="sailno" />
+<col class="boat" />
+<col class="helmname" />
+<col class="club" />
+<col class="rating" />
+<col class="finish" />
+<col class="elapsed" />
+<col class="corrected" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Fleet</th>
+<th>SailNo</th>
+<th>boat</th>
+<th>Owner</th>
+<th>Club</th>
+<th>Rating</th>
+<th>Finish</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>Howth 17 HPH</td>
+<td>4</td>
+<td>Zaida</td>
+<td>C & C Houlihan, K Hurley, A Carroll</td>
+<td>Howth Yacht Club</td>
+<td>0.965</td>
+<td>16:17:33</td>
+<td>4:02:33</td>
+<td>3:54:04</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>Howth 17 HPH</td>
+<td>5</td>
+<td>Silvermoon</td>
+<td>Susan Morgan</td>
+<td>Howth Yacht Club</td>
+<td>0.950</td>
+<td>16:31:31</td>
+<td>4:16:31</td>
+<td>4:03:41</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>Howth 17 HPH</td>
+<td>15</td>
+<td>Bobolink</td>
+<td>Doyle/Finnegan/Walsh</td>
+<td>Howth Yacht Club</td>
+<td>0.965</td>
+<td>16:28:28</td>
+<td>4:13:28</td>
+<td>4:04:36</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>Howth 17 HPH</td>
+<td>20</td>
+<td>Shiela</td>
+<td>David Mulligan/Andy Johnston</td>
+<td>Howth Yacht Club</td>
+<td>1.100</td>
+<td>15:58:48</td>
+<td>3:43:48</td>
+<td>4:06:11</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>Howth 17 HPH</td>
+<td>16</td>
+<td>Eileen</td>
+<td>Rima Macken</td>
+<td>Howth Yacht Club</td>
+<td>1.100</td>
+<td>16:11:12</td>
+<td>3:56:12</td>
+<td>4:19:49</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>Howth 17 HPH</td>
+<td>3</td>
+<td>Leila</td>
+<td>Roddy Cooper</td>
+<td>Howth Yacht Club</td>
+<td>1.200</td>
+<td>16:05:28</td>
+<td>3:50:28</td>
+<td>4:36:34</td>
+<td>6.0</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>Howth 17 HPH</td>
+<td>18</td>
+<td>Erica</td>
+<td>Davie Nixon</td>
+<td>Howth Yacht Club</td>
+<td>1.350</td>
+<td>15:53:44</td>
+<td>3:38:44</td>
+<td>4:55:17</td>
+<td>7.0</td>
+</tr>
+<tr class="even racerow">
+<td>8</td>
+<td>Howth 17 HPH</td>
+<td>9</td>
+<td>Hera</td>
+<td>Jane & Michael Duffy</td>
+<td>Howth Yacht Club</td>
+<td>1.350</td>
+<td>15:57:38</td>
+<td>3:42:38</td>
+<td>5:00:33</td>
+<td>8.0</td>
+</tr>
+<tr class="odd racerow">
+<td>9</td>
+<td>Howth 17 HPH</td>
+<td>12</td>
+<td>Rosemary</td>
+<td>Curley,Jones,Potter</td>
+<td>Howth Yacht Club</td>
+<td>1.350</td>
+<td>15:58:41</td>
+<td>3:43:41</td>
+<td>5:01:58</td>
+<td>9.0</td>
+</tr>
+<tr class="even racerow">
+<td>10</td>
+<td>Howth 17 HPH</td>
+<td>19</td>
+<td>Isobel</td>
+<td>Brian & Conor Turvey</td>
+<td>Howth Yacht Club</td>
+<td>1.350</td>
+<td>15:58:43</td>
+<td>3:43:43</td>
+<td>5:02:01</td>
+<td>10.0</td>
+</tr>
+<tr class="odd racerow">
+<td>11</td>
+<td>Howth 17 HPH</td>
+<td>21</td>
+<td>Orla</td>
+<td>Gallagher & Fitzgibbon</td>
+<td>Howth Yacht Club</td>
+<td>1.350</td>
+<td>16:00:00</td>
+<td>3:45:00</td>
+<td>5:03:45</td>
+<td>11.0</td>
+</tr>
+<tr class="even racerow">
+<td>12</td>
+<td>Howth 17 HPH</td>
+<td>17</td>
+<td>Oona</td>
+<td>Peter Courtney</td>
+<td>Howth Yacht Club</td>
+<td>1.350</td>
+<td>16:00:11</td>
+<td>3:45:11</td>
+<td>5:04:00</td>
+<td>12.0</td>
+</tr>
+<tr class="odd racerow">
+<td>13</td>
+<td>Howth 17 HPH</td>
+<td>7</td>
+<td>Aura</td>
+<td>Ian Malcolm</td>
+<td>Howth Yacht Club</td>
+<td>1.350</td>
+<td>16:00:30</td>
+<td>3:45:30</td>
+<td>5:04:26</td>
+<td>13.0</td>
+</tr>
+<tr class="even racerow">
+<td>14</td>
+<td>Howth 17 HPH</td>
+<td>14</td>
+<td>Gladys</td>
+<td>Eddie Ferris & Ian Byrne</td>
+<td>Howth Yacht Club</td>
+<td>1.200</td>
+<td>16:33:02</td>
+<td>4:18:02</td>
+<td>5:09:38</td>
+<td>14.0</td>
+</tr>
+<tr class="odd racerow">
+<td>15</td>
+<td>Howth 17 HPH</td>
+<td>1</td>
+<td>Rita</td>
+<td>Marcus Lynch & John Curley</td>
+<td>Howth Yacht Club</td>
+<td>1.350</td>
+<td>16:11:57</td>
+<td>3:56:57</td>
+<td>5:19:53</td>
+<td>15.0</td>
+</tr>
+<tr class="even racerow">
+<td>16</td>
+<td>Howth 17 HPH</td>
+<td>11</td>
+<td>Deilginis</td>
+<td>Massey/Toomey/Kenny</td>
+<td>Howth Yacht Club</td>
+<td>1.350</td>
+<td>16:12:13</td>
+<td>3:57:13</td>
+<td>5:20:15</td>
+<td>16.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r1howth_17_scr">Lambay Race - Howth 17 SCR Fleet&nbsp;-&nbsp;3rd June&nbsp;at&nbsp;120000</h3>
+<div class="caption racecaption">
+Start: Start 7, Finishes: Finish time, Time: 121500
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="11">
+<col class="rank" />
+<col class="fleet" />
+<col class="sailno" />
+<col class="boat" />
+<col class="helmname" />
+<col class="club" />
+<col class="rating" />
+<col class="finish" />
+<col class="elapsed" />
+<col class="corrected" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Fleet</th>
+<th>SailNo</th>
+<th>boat</th>
+<th>Owner</th>
+<th>Club</th>
+<th>Rating</th>
+<th>Finish</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>Howth 17 SCR</td>
+<td>18</td>
+<td>Erica</td>
+<td>Davie Nixon</td>
+<td>Howth Yacht Club</td>
+<td>1.000</td>
+<td>15:53:44</td>
+<td>3:38:44</td>
+<td>3:38:44</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>Howth 17 SCR</td>
+<td>9</td>
+<td>Hera</td>
+<td>Jane & Michael Duffy</td>
+<td>Howth Yacht Club</td>
+<td>1.000</td>
+<td>15:57:38</td>
+<td>3:42:38</td>
+<td>3:42:38</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>Howth 17 SCR</td>
+<td>12</td>
+<td>Rosemary</td>
+<td>Curley, Jones, Potter</td>
+<td>Howth Yacht Club</td>
+<td>1.000</td>
+<td>15:58:41</td>
+<td>3:43:41</td>
+<td>3:43:41</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>Howth 17 SCR</td>
+<td>19</td>
+<td>Isobel</td>
+<td>Brian and Conor Turvey</td>
+<td>Howth Yacht Club</td>
+<td>1.000</td>
+<td>15:58:43</td>
+<td>3:43:43</td>
+<td>3:43:43</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>Howth 17 SCR</td>
+<td>20</td>
+<td>Shiela</td>
+<td>David Mulligan/Andy Johnston</td>
+<td>Howth Yacht Club</td>
+<td>1.000</td>
+<td>15:58:48</td>
+<td>3:43:48</td>
+<td>3:43:48</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>Howth 17 SCR</td>
+<td>21</td>
+<td>Orla</td>
+<td>Gallagher & Fitzgibbon</td>
+<td>Howth Yacht Club</td>
+<td>1.000</td>
+<td>16:00:00</td>
+<td>3:45:00</td>
+<td>3:45:00</td>
+<td>6.0</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>Howth 17 SCR</td>
+<td>17</td>
+<td>Oona</td>
+<td>Peter Courtney</td>
+<td>Howth Yacht Club</td>
+<td>1.000</td>
+<td>16:00:11</td>
+<td>3:45:11</td>
+<td>3:45:11</td>
+<td>7.0</td>
+</tr>
+<tr class="even racerow">
+<td>8</td>
+<td>Howth 17 SCR</td>
+<td>7</td>
+<td>Aura</td>
+<td>Ian Malcolm</td>
+<td>Howth Yacht Club</td>
+<td>1.000</td>
+<td>16:00:30</td>
+<td>3:45:30</td>
+<td>3:45:30</td>
+<td>8.0</td>
+</tr>
+<tr class="odd racerow">
+<td>9</td>
+<td>Howth 17 SCR</td>
+<td>3</td>
+<td>Leila</td>
+<td>Roddy Cooper</td>
+<td>Howth Yacht Club</td>
+<td>1.000</td>
+<td>16:05:28</td>
+<td>3:50:28</td>
+<td>3:50:28</td>
+<td>9.0</td>
+</tr>
+<tr class="even racerow">
+<td>10</td>
+<td>Howth 17 SCR</td>
+<td>16</td>
+<td>Eileen</td>
+<td>Rima macken</td>
+<td>Howth Yacht Club</td>
+<td>1.000</td>
+<td>16:11:12</td>
+<td>3:56:12</td>
+<td>3:56:12</td>
+<td>10.0</td>
+</tr>
+<tr class="odd racerow">
+<td>11</td>
+<td>Howth 17 SCR</td>
+<td>1</td>
+<td>Rita</td>
+<td>John Curley / Marcus Lynch</td>
+<td>Howth Yacht Club</td>
+<td>1.000</td>
+<td>16:11:57</td>
+<td>3:56:57</td>
+<td>3:56:57</td>
+<td>11.0</td>
+</tr>
+<tr class="even racerow">
+<td>12</td>
+<td>Howth 17 SCR</td>
+<td>11</td>
+<td>Deilginis</td>
+<td>Massey/Toomey/Kenny</td>
+<td>Howth Yacht Club</td>
+<td>1.000</td>
+<td>16:12:13</td>
+<td>3:57:13</td>
+<td>3:57:13</td>
+<td>12.0</td>
+</tr>
+<tr class="odd racerow">
+<td>13</td>
+<td>Howth 17 SCR</td>
+<td>4</td>
+<td>Zaida</td>
+<td>C & C Houlihan, K Hurley, A Carroll</td>
+<td>Howth Yacht Club</td>
+<td>1.000</td>
+<td>16:17:33</td>
+<td>4:02:33</td>
+<td>4:02:33</td>
+<td>13.0</td>
+</tr>
+<tr class="even racerow">
+<td>14</td>
+<td>Howth 17 SCR</td>
+<td>15</td>
+<td>Bobolink</td>
+<td>Doyle/Finnegan/Walsh</td>
+<td>Howth Yacht Club</td>
+<td>1.000</td>
+<td>16:28:28</td>
+<td>4:13:28</td>
+<td>4:13:28</td>
+<td>14.0</td>
+</tr>
+<tr class="odd racerow">
+<td>15</td>
+<td>Howth 17 SCR</td>
+<td>5</td>
+<td>Silvermoon</td>
+<td>Susan Morgan</td>
+<td>Howth Yacht Club</td>
+<td>1.000</td>
+<td>16:31:31</td>
+<td>4:16:31</td>
+<td>4:16:31</td>
+<td>15.0</td>
+</tr>
+<tr class="even racerow">
+<td>16</td>
+<td>Howth 17 SCR</td>
+<td>14</td>
+<td>Gladys</td>
+<td>Eddie Ferris & Ian Byrne</td>
+<td>Howth Yacht Club</td>
+<td>1.000</td>
+<td>16:33:02</td>
+<td>4:18:02</td>
+<td>4:18:02</td>
+<td>16.0</td>
+</tr>
+</tbody>
+</table>
+
+<p class="hardleft"><a href="http://www.hyc.ie">www.hyc.ie</a><br /><a href="mailto:"></a></p>
+<p class="hardright"><a href="http://"></a><br /><a href="mailto:"></a></p>
+<p>Sailwave Scoring Software 2.29.0<br /><a href="http://www.sailwave.com">www.sailwave.com</a></p>
+
+</div>
+
+<footer>
+</footer>
+
+<div id="scrollbottom"></div>
+
+</body>
+</html>
+
+

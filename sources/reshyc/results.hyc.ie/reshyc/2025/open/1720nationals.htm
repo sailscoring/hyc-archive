@@ -1,0 +1,1846 @@
+
+
+
+<!doctype html>
+
+<head>
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta http-equiv="Cache-control" content="no-cache">
+<meta name="description" content="sailwave results">
+<meta name="viewport" content="width=device-width">
+
+<title>Sailwave results for 2025 1720 National Championships at Howth Yacht Club 2025</title>
+
+<style type="text/css">
+body {font: 80% arial, helvetica, sans-serif; text-align: center;}
+.hardleft  {text-align: left; float: left;  margin: 15px 0  15px 25px;}
+.hardright {text-align: right; float: right; margin: 15px 25px 15px 0;}
+table {text-align: left; margin: 0px auto 30px auto; font-size: 1em; border-collapse: collapse; border: 1px #999 solid;}
+td, th {padding: 4px; border: 1px #999 solid; vertical-align: top;}
+.caption {padding: 5px; text-align: center; border: 0; font-weight: bold;}
+p {text-align: center;}
+.contents {text-align: left; margin-left: 20%;}
+.race {background-color: #eee;}
+.odd {background-color: #eef;}
+.natflag {border: 1px #999 solid;}
+.nattext {font-size: 0.8em;}
+.place1 {font-weight: bold; background-color: #ffffaa;}
+.place2 {font-weight: bold; background-color: #aaaaff;}
+.place3 {font-weight: bold; background-color: #ffaaaa;}
+.placen {}
+table.headertable {border: 0px;}
+table.headertable td{border: 0px;}
+</style>
+
+<script type="text/javascript">
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script>
+
+function swGetURLArgs() {
+
+  var url = location.href;
+  var qs  = url.substring(url.indexOf('?') + 1).split('&');
+
+  for(var i = 0, result = {}; i < qs.length; i++) {
+    qs[i]            = qs[i].split('=');
+    result[qs[i][0]] = decodeURIComponent(qs[i][1]);
+  }
+
+  return result;
+}
+
+//
+//  name=HighlightWins3
+//  dependencies=jQuery
+//  description=Highlight winning scores in summary tables.
+//  author=Jon Eskdale based on an idea by Colin Jenkins
+//  date=2015-08-18
+//  version=1.6 2018-11-15
+//  url=http://sailwave.com
+//  email=jon@sailwave.com
+//  twitter=eskdale
+//  comments=Edit colours to colours of your choice
+//
+
+$(document).ready(function() {
+var winsSelector = '.summaryrace';
+var winsText     = /\b1\.0/;
+var twoText              = /\b2\.0/;
+var threeText    = /\b3\.0/;
+
+// Edit these colours to change the highlight colours for 1st, 2nd and 3rd
+var winsColour   = '#ffd700';
+var twoColour    = '#6a91c5';
+var threeColour  = '#da6841';
+//var twoColour  = '#ffe768';
+//var threeColour  = '#fff0a1';
+
+// create array of race column numbers for first table (summarytable)
+var ths = document.getElementsByTagName('col');
+var column =[];
+for (var i=0; i<ths.length; i++) {
+        if (ths[i].classList[0] === "race") {
+                column.push(i);
+        } else {
+                if (column.length !=0) {
+                        break;
+                }
+        }
+}
+//console.log(column);
+
+//  Set a class of summaryrace for all race cells in summary table body
+//
+for (var i=0; i<column.length; i++) {
+        $(".summarytable tbody tr td:nth-child(" + (column[i]+1) +")").addClass("summaryrace");
+}
+
+// Change the background color for cells with class of summaryrace and that match regular expression text
+$(function () {
+
+  $(winsSelector).filter(function() {
+    return winsText.test($(this).text());
+  }).css("background", winsColour);
+  $(winsSelector).filter(function() {
+        return twoText.test($(this).text());
+  }).css("background", twoColour);
+  $(winsSelector).filter(function() {
+        return threeText.test($(this).text());
+  }).css("background", threeColour);
+
+});
+});
+</script>
+
+</head>
+
+<body>
+
+<header>
+</header>
+<table class="headertable" cellspacing="0" width="100%" cellpadding="0" border="0">
+<tbody>
+<div id="wrap">
+
+<tr>
+<td width="30%">
+<img style="display:block; height:100px;"  src="https://hyc.ie/assets/logo-5a615b18e52275b60e166edcca88c6c4.png" alt="venue burgee" />
+</td>
+
+<td width="40%" align="center">
+<h1>2025 1720 National Championships</h1>
+<h2>Howth Yacht Club</h2>
+</td>
+
+<td width="30%">
+</td>
+</tr>
+</tbody>
+</table>
+
+<div style="clear:both;"></div>
+
+<style>
+div.applicant-break {page-break-after:always;}
+</style>
+<h3 class="seriestitle">Results are provisional as of 14:28 on August 23, 2025</h3>
+<h3 class="summarytitle" id="summary_1720">1720 Fleet</h3>
+<div class="caption summarycaption">Sailed: 9, Discards: 1, To count: 8, Entries: 14, Scoring system: Appendix A</div>
+<table class="summarytable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="16">
+<col class="rank" />
+<col class="sailno" />
+<col class="boat" />
+<col class="helmname" />
+<col class="club" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="total" />
+<col class="nett" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Sail Nr</th>
+<th>Boat Name</th>
+<th>Owner</th>
+<th>Club</th>
+<th><a class="racelink" href="#r1_1720">R1</a><br />Aug 21</th>
+<th><a class="racelink" href="#r2_1720">R2</a><br />Aug 21</th>
+<th><a class="racelink" href="#r3_1720">R3</a><br />Aug 22</th>
+<th><a class="racelink" href="#r4_1720">R4</a><br />Aug 22</th>
+<th><a class="racelink" href="#r5_1720">R5</a><br />Aug 22</th>
+<th><a class="racelink" href="#r6_1720">R6</a><br />Aug 22</th>
+<th><a class="racelink" href="#r7_1720">R7</a><br />Aug 23</th>
+<th><a class="racelink" href="#r8_1720">R8</a><br />Aug 23</th>
+<th><a class="racelink" href="#r9_1720">R9</a><br />Aug 23</th>
+<th>Total</th>
+<th>Nett</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd summaryrow">
+<td>1st</td>
+<td>2000</td>
+<td>Rope Dock Atara</td>
+<td>McBearlas</td>
+<td>Howth YC</td>
+<td>4.0</td>
+<td class="rank1">1.0</td>
+<td>6.0</td>
+<td class="rank1">1.0</td>
+<td class="rank2">2.0</td>
+<td class="rank1">1.0</td>
+<td>(8.0)</td>
+<td class="rank2">2.0</td>
+<td class="rank1">1.0</td>
+<td>26.0</td>
+<td>18.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>2nd</td>
+<td>2888</td>
+<td>LemonCello</td>
+<td>Robert Dix</td>
+<td>Howth YC</td>
+<td class="rank2">2.0</td>
+<td class="rank2">2.0</td>
+<td>(7.0)</td>
+<td class="rank3">3.0</td>
+<td>6.0</td>
+<td class="rank2">2.0</td>
+<td class="rank3">3.0</td>
+<td class="rank3">3.0</td>
+<td>4.0</td>
+<td>32.0</td>
+<td>25.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>3rd</td>
+<td>2020</td>
+<td>Dutch Gold</td>
+<td>Michael O'Sullivan</td>
+<td>Kinsale YC</td>
+<td>(10.0)</td>
+<td>6.0</td>
+<td>4.0</td>
+<td>4.0</td>
+<td>4.0</td>
+<td>4.0</td>
+<td class="rank2">2.0</td>
+<td class="rank1">1.0</td>
+<td>6.0</td>
+<td>41.0</td>
+<td>31.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>4th</td>
+<td>1784</td>
+<td>Mo</td>
+<td>Aidan Lynch</td>
+<td>Baltimore SC</td>
+<td class="rank3">3.0</td>
+<td>8.0</td>
+<td>(10.0)</td>
+<td>6.0</td>
+<td class="rank1">1.0</td>
+<td class="rank3">3.0</td>
+<td>5.0</td>
+<td>5.0</td>
+<td>5.0</td>
+<td>46.0</td>
+<td>36.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>5th</td>
+<td>1848</td>
+<td>Root 1</td>
+<td>Julian Hughes</td>
+<td>Waterford Harbour SC</td>
+<td class="rank1">1.0</td>
+<td>7.4 RDG</td>
+<td>9.0</td>
+<td class="rank2">2.0</td>
+<td>(15.0 DSQ)</td>
+<td>10.0</td>
+<td class="rank1">1.0</td>
+<td>4.0</td>
+<td class="rank3">3.0</td>
+<td>52.4</td>
+<td>37.4</td>
+</tr>
+<tr class="even summaryrow">
+<td>6th</td>
+<td>1725</td>
+<td>Optique</td>
+<td>Colin Byrne</td>
+<td>Royal Irish YC</td>
+<td>5.0</td>
+<td>6.0 RDG</td>
+<td>5.0</td>
+<td>(10.0)</td>
+<td class="rank3">3.0</td>
+<td>7.0</td>
+<td>9.0</td>
+<td>10.0</td>
+<td>8.0</td>
+<td>63.0</td>
+<td>53.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>7th</td>
+<td>1812</td>
+<td>El Diablo</td>
+<td>Ben Scallan</td>
+<td>Wexford Harbour BTC</td>
+<td>9.0</td>
+<td>5.0</td>
+<td>13.0</td>
+<td>7.0</td>
+<td>8.0</td>
+<td>11.0</td>
+<td>4.0</td>
+<td>(15.0 OCS)</td>
+<td class="rank2">2.0</td>
+<td>74.0</td>
+<td>59.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>8th</td>
+<td>1797</td>
+<td>After Midnight</td>
+<td>Team After Midnight</td>
+<td>Galway Bay SC</td>
+<td>(11.0)</td>
+<td>4.0</td>
+<td class="rank3">3.0</td>
+<td>5.0</td>
+<td>10.0</td>
+<td>9.0</td>
+<td>11.0</td>
+<td>11.0</td>
+<td>7.0</td>
+<td>71.0</td>
+<td>60.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>9th</td>
+<td>1715</td>
+<td>Cranky Pants</td>
+<td>Martin Breen</td>
+<td>Galway Bay SC</td>
+<td>(12.0)</td>
+<td>9.0</td>
+<td class="rank2">2.0</td>
+<td>11.0</td>
+<td>7.0</td>
+<td>8.0</td>
+<td>10.0</td>
+<td>8.0</td>
+<td>11.0</td>
+<td>78.0</td>
+<td>66.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>10th</td>
+<td>1772</td>
+<td>Heroes and villains</td>
+<td>Gary Rhodes</td>
+<td>Royal Cork YC</td>
+<td>(14.0)</td>
+<td>13.0</td>
+<td class="rank1">1.0</td>
+<td>12.0</td>
+<td>13.0</td>
+<td>6.0</td>
+<td>7.0</td>
+<td>7.0</td>
+<td>9.0</td>
+<td>82.0</td>
+<td>68.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>11th</td>
+<td>1775</td>
+<td>No Show</td>
+<td>Andrew George Boyle</td>
+<td>Lough Derg YC / Royal Irish YC</td>
+<td>6.0</td>
+<td>(14.0)</td>
+<td>8.0</td>
+<td>8.0</td>
+<td>11.0</td>
+<td>5.0</td>
+<td>6.0</td>
+<td>13.0</td>
+<td>13.0</td>
+<td>84.0</td>
+<td>70.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>12th</td>
+<td>1710</td>
+<td>Reach Around</td>
+<td>Horgan Swan</td>
+<td>Lough Ree YC</td>
+<td>13.0</td>
+<td class="rank3">3.0</td>
+<td>12.0</td>
+<td>9.0</td>
+<td>5.0</td>
+<td>(15.0 UFD)</td>
+<td>13.0</td>
+<td>6.0</td>
+<td>12.0</td>
+<td>88.0</td>
+<td>73.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>13th</td>
+<td>1770</td>
+<td>Matthews Helly Hansen</td>
+<td>Matthews Family</td>
+<td>Kinsale YC</td>
+<td>7.0</td>
+<td>7.0</td>
+<td>(15.0 DNF)</td>
+<td>15.0 UFD</td>
+<td>9.0</td>
+<td>15.0 UFD</td>
+<td>12.0</td>
+<td>9.0</td>
+<td>10.0</td>
+<td>99.0</td>
+<td>84.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>14th</td>
+<td>1706</td>
+<td>Hijinks</td>
+<td>Brian Forde</td>
+<td>Galway Bay SC</td>
+<td>8.0</td>
+<td>12.0</td>
+<td>11.0</td>
+<td>(15.0 UFD)</td>
+<td>12.0</td>
+<td>12.0</td>
+<td>14.0</td>
+<td>12.0</td>
+<td>14.0</td>
+<td>110.0</td>
+<td>95.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r1_1720">R1 - 1720 Fleet&nbsp;-&nbsp;Aug 21</h3>
+<div class="caption racecaption">
+Start: Start 1, Finishes: Place, Time: 14.14.00
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="7">
+<col class="rank" />
+<col class="sailno" />
+<col class="boat" />
+<col class="helmname" />
+<col class="club" />
+<col class="place" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Sail Nr</th>
+<th>Boat Name</th>
+<th>Owner</th>
+<th>Club</th>
+<th>Place</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>1848</td>
+<td>Root 1</td>
+<td>Julian Hughes</td>
+<td>Waterford Harbour SC</td>
+<td>1</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>2888</td>
+<td>LemonCello</td>
+<td>Robert Dix</td>
+<td>Howth YC</td>
+<td>2</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>1784</td>
+<td>Mo</td>
+<td>Aidan Lynch</td>
+<td>Baltimore SC</td>
+<td>3</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>2000</td>
+<td>Rope Dock Atara</td>
+<td>McBearlas</td>
+<td>Howth YC</td>
+<td>4</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>1725</td>
+<td>Optique</td>
+<td>Colin Byrne</td>
+<td>Royal Irish YC</td>
+<td>5</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>1775</td>
+<td>No Show</td>
+<td>Andrew George Boyle</td>
+<td>Lough Derg YC / Royal Irish YC</td>
+<td>6</td>
+<td>6.0</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>1770</td>
+<td>Matthews Helly Hansen</td>
+<td>Matthews Family</td>
+<td>Kinsale YC</td>
+<td>7</td>
+<td>7.0</td>
+</tr>
+<tr class="even racerow">
+<td>8</td>
+<td>1706</td>
+<td>Hijinks</td>
+<td>Brian Forde</td>
+<td>Galway Bay SC</td>
+<td>8</td>
+<td>8.0</td>
+</tr>
+<tr class="odd racerow">
+<td>9</td>
+<td>1812</td>
+<td>El Diablo</td>
+<td>Ben Scallan</td>
+<td>Wexford Harbour BTC</td>
+<td>9</td>
+<td>9.0</td>
+</tr>
+<tr class="even racerow">
+<td>10</td>
+<td>2020</td>
+<td>Dutch Gold</td>
+<td>Michael O'Sullivan</td>
+<td>Kinsale YC</td>
+<td>10</td>
+<td>10.0</td>
+</tr>
+<tr class="odd racerow">
+<td>11</td>
+<td>1797</td>
+<td>After Midnight</td>
+<td>Team After Midnight</td>
+<td>Galway Bay SC</td>
+<td>11</td>
+<td>11.0</td>
+</tr>
+<tr class="even racerow">
+<td>12</td>
+<td>1715</td>
+<td>Cranky Pants</td>
+<td>Martin Breen</td>
+<td>Galway Bay SC</td>
+<td>12</td>
+<td>12.0</td>
+</tr>
+<tr class="odd racerow">
+<td>13</td>
+<td>1710</td>
+<td>Reach Around</td>
+<td>Horgan Swan</td>
+<td>Lough Ree YC</td>
+<td>13</td>
+<td>13.0</td>
+</tr>
+<tr class="even racerow">
+<td>14</td>
+<td>1772</td>
+<td>Heroes and villains</td>
+<td>Gary Rhodes</td>
+<td>Royal Cork YC</td>
+<td>14</td>
+<td>14.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r2_1720">R2 - 1720 Fleet&nbsp;-&nbsp;Aug 21</h3>
+<div class="caption racecaption">
+Start: Start 1, Finishes: Place, Time: 15.11.00
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="7">
+<col class="rank" />
+<col class="sailno" />
+<col class="boat" />
+<col class="helmname" />
+<col class="club" />
+<col class="place" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Sail Nr</th>
+<th>Boat Name</th>
+<th>Owner</th>
+<th>Club</th>
+<th>Place</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>2000</td>
+<td>Rope Dock Atara</td>
+<td>McBearlas</td>
+<td>Howth YC</td>
+<td>1</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>2888</td>
+<td>LemonCello</td>
+<td>Robert Dix</td>
+<td>Howth YC</td>
+<td>2</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>1710</td>
+<td>Reach Around</td>
+<td>Horgan Swan</td>
+<td>Lough Ree YC</td>
+<td>3</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>1797</td>
+<td>After Midnight</td>
+<td>Team After Midnight</td>
+<td>Galway Bay SC</td>
+<td>4</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>1812</td>
+<td>El Diablo</td>
+<td>Ben Scallan</td>
+<td>Wexford Harbour BTC</td>
+<td>5</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>2020</td>
+<td>Dutch Gold</td>
+<td>Michael O'Sullivan</td>
+<td>Kinsale YC</td>
+<td>6</td>
+<td>6.0</td>
+</tr>
+<tr class="odd racerow">
+<td>6</td>
+<td>1725</td>
+<td>Optique</td>
+<td>Colin Byrne</td>
+<td>Royal Irish YC</td>
+<td>RDG</td>
+<td>6.0</td>
+</tr>
+<tr class="even racerow">
+<td>8</td>
+<td>1770</td>
+<td>Matthews Helly Hansen</td>
+<td>Matthews Family</td>
+<td>Kinsale YC</td>
+<td>7</td>
+<td>7.0</td>
+</tr>
+<tr class="odd racerow">
+<td>9</td>
+<td>1848</td>
+<td>Root 1</td>
+<td>Julian Hughes</td>
+<td>Waterford Harbour SC</td>
+<td>RDG</td>
+<td>7.4</td>
+</tr>
+<tr class="even racerow">
+<td>10</td>
+<td>1784</td>
+<td>Mo</td>
+<td>Aidan Lynch</td>
+<td>Baltimore SC</td>
+<td>8</td>
+<td>8.0</td>
+</tr>
+<tr class="odd racerow">
+<td>11</td>
+<td>1715</td>
+<td>Cranky Pants</td>
+<td>Martin Breen</td>
+<td>Galway Bay SC</td>
+<td>9</td>
+<td>9.0</td>
+</tr>
+<tr class="even racerow">
+<td>12</td>
+<td>1706</td>
+<td>Hijinks</td>
+<td>Brian Forde</td>
+<td>Galway Bay SC</td>
+<td>12</td>
+<td>12.0</td>
+</tr>
+<tr class="odd racerow">
+<td>13</td>
+<td>1772</td>
+<td>Heroes and villains</td>
+<td>Gary Rhodes</td>
+<td>Royal Cork YC</td>
+<td>13</td>
+<td>13.0</td>
+</tr>
+<tr class="even racerow">
+<td>14</td>
+<td>1775</td>
+<td>No Show</td>
+<td>Andrew George Boyle</td>
+<td>Lough Derg YC / Royal Irish YC</td>
+<td>14</td>
+<td>14.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r3_1720">R3 - 1720 Fleet&nbsp;-&nbsp;Aug 22</h3>
+<div class="caption racecaption">
+Start: Start 1, Finishes: Place, Time: 11.00.00
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="7">
+<col class="rank" />
+<col class="sailno" />
+<col class="boat" />
+<col class="helmname" />
+<col class="club" />
+<col class="place" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Sail Nr</th>
+<th>Boat Name</th>
+<th>Owner</th>
+<th>Club</th>
+<th>Place</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>1772</td>
+<td>Heroes and villains</td>
+<td>Gary Rhodes</td>
+<td>Royal Cork YC</td>
+<td>1</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>1715</td>
+<td>Cranky Pants</td>
+<td>Martin Breen</td>
+<td>Galway Bay SC</td>
+<td>2</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>1797</td>
+<td>After Midnight</td>
+<td>Team After Midnight</td>
+<td>Galway Bay SC</td>
+<td>3</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>2020</td>
+<td>Dutch Gold</td>
+<td>Michael O'Sullivan</td>
+<td>Kinsale YC</td>
+<td>4</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>1725</td>
+<td>Optique</td>
+<td>Colin Byrne</td>
+<td>Royal Irish YC</td>
+<td>5</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>2000</td>
+<td>Rope Dock Atara</td>
+<td>McBearlas</td>
+<td>Howth YC</td>
+<td>6</td>
+<td>6.0</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>2888</td>
+<td>LemonCello</td>
+<td>Robert Dix</td>
+<td>Howth YC</td>
+<td>7</td>
+<td>7.0</td>
+</tr>
+<tr class="even racerow">
+<td>8</td>
+<td>1775</td>
+<td>No Show</td>
+<td>Andrew George Boyle</td>
+<td>Lough Derg YC / Royal Irish YC</td>
+<td>8</td>
+<td>8.0</td>
+</tr>
+<tr class="odd racerow">
+<td>9</td>
+<td>1848</td>
+<td>Root 1</td>
+<td>Julian Hughes</td>
+<td>Waterford Harbour SC</td>
+<td>9</td>
+<td>9.0</td>
+</tr>
+<tr class="even racerow">
+<td>10</td>
+<td>1784</td>
+<td>Mo</td>
+<td>Aidan Lynch</td>
+<td>Baltimore SC</td>
+<td>10</td>
+<td>10.0</td>
+</tr>
+<tr class="odd racerow">
+<td>11</td>
+<td>1706</td>
+<td>Hijinks</td>
+<td>Brian Forde</td>
+<td>Galway Bay SC</td>
+<td>11</td>
+<td>11.0</td>
+</tr>
+<tr class="even racerow">
+<td>12</td>
+<td>1710</td>
+<td>Reach Around</td>
+<td>Horgan Swan</td>
+<td>Lough Ree YC</td>
+<td>12</td>
+<td>12.0</td>
+</tr>
+<tr class="odd racerow">
+<td>13</td>
+<td>1812</td>
+<td>El Diablo</td>
+<td>Ben Scallan</td>
+<td>Wexford Harbour BTC</td>
+<td>13</td>
+<td>13.0</td>
+</tr>
+<tr class="even racerow">
+<td>14</td>
+<td>1770</td>
+<td>Matthews Helly Hansen</td>
+<td>Matthews Family</td>
+<td>Kinsale YC</td>
+<td>DNF</td>
+<td>15.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r4_1720">R4 - 1720 Fleet&nbsp;-&nbsp;Aug 22</h3>
+<div class="caption racecaption">
+Start: Start 1, Finishes: Place, Time: 13.05.00
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="7">
+<col class="rank" />
+<col class="sailno" />
+<col class="boat" />
+<col class="helmname" />
+<col class="club" />
+<col class="place" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Sail Nr</th>
+<th>Boat Name</th>
+<th>Owner</th>
+<th>Club</th>
+<th>Place</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>2000</td>
+<td>Rope Dock Atara</td>
+<td>McBearlas</td>
+<td>Howth YC</td>
+<td>1</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>1848</td>
+<td>Root 1</td>
+<td>Julian Hughes</td>
+<td>Waterford Harbour SC</td>
+<td>2</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>2888</td>
+<td>LemonCello</td>
+<td>Robert Dix</td>
+<td>Howth YC</td>
+<td>3</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>2020</td>
+<td>Dutch Gold</td>
+<td>Michael O'Sullivan</td>
+<td>Kinsale YC</td>
+<td>4</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>1797</td>
+<td>After Midnight</td>
+<td>Team After Midnight</td>
+<td>Galway Bay SC</td>
+<td>5</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>1784</td>
+<td>Mo</td>
+<td>Aidan Lynch</td>
+<td>Baltimore SC</td>
+<td>6</td>
+<td>6.0</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>1812</td>
+<td>El Diablo</td>
+<td>Ben Scallan</td>
+<td>Wexford Harbour BTC</td>
+<td>7</td>
+<td>7.0</td>
+</tr>
+<tr class="even racerow">
+<td>8</td>
+<td>1775</td>
+<td>No Show</td>
+<td>Andrew George Boyle</td>
+<td>Lough Derg YC / Royal Irish YC</td>
+<td>8</td>
+<td>8.0</td>
+</tr>
+<tr class="odd racerow">
+<td>9</td>
+<td>1710</td>
+<td>Reach Around</td>
+<td>Horgan Swan</td>
+<td>Lough Ree YC</td>
+<td>9</td>
+<td>9.0</td>
+</tr>
+<tr class="even racerow">
+<td>10</td>
+<td>1725</td>
+<td>Optique</td>
+<td>Colin Byrne</td>
+<td>Royal Irish YC</td>
+<td>10</td>
+<td>10.0</td>
+</tr>
+<tr class="odd racerow">
+<td>11</td>
+<td>1715</td>
+<td>Cranky Pants</td>
+<td>Martin Breen</td>
+<td>Galway Bay SC</td>
+<td>11</td>
+<td>11.0</td>
+</tr>
+<tr class="even racerow">
+<td>12</td>
+<td>1772</td>
+<td>Heroes and villains</td>
+<td>Gary Rhodes</td>
+<td>Royal Cork YC</td>
+<td>12</td>
+<td>12.0</td>
+</tr>
+<tr class="odd racerow">
+<td>13</td>
+<td>1770</td>
+<td>Matthews Helly Hansen</td>
+<td>Matthews Family</td>
+<td>Kinsale YC</td>
+<td>UFD</td>
+<td>15.0</td>
+</tr>
+<tr class="even racerow">
+<td>13</td>
+<td>1706</td>
+<td>Hijinks</td>
+<td>Brian Forde</td>
+<td>Galway Bay SC</td>
+<td>UFD</td>
+<td>15.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r5_1720">R5 - 1720 Fleet&nbsp;-&nbsp;Aug 22</h3>
+<div class="caption racecaption">
+Start: Start 1, Finishes: Place, Time: 14.05.00
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="7">
+<col class="rank" />
+<col class="sailno" />
+<col class="boat" />
+<col class="helmname" />
+<col class="club" />
+<col class="place" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Sail Nr</th>
+<th>Boat Name</th>
+<th>Owner</th>
+<th>Club</th>
+<th>Place</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>1784</td>
+<td>Mo</td>
+<td>Aidan Lynch</td>
+<td>Baltimore SC</td>
+<td>1</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>2000</td>
+<td>Rope Dock Atara</td>
+<td>McBearlas</td>
+<td>Howth YC</td>
+<td>2</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>1725</td>
+<td>Optique</td>
+<td>Colin Byrne</td>
+<td>Royal Irish YC</td>
+<td>3</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>2020</td>
+<td>Dutch Gold</td>
+<td>Michael O'Sullivan</td>
+<td>Kinsale YC</td>
+<td>4</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>1710</td>
+<td>Reach Around</td>
+<td>Horgan Swan</td>
+<td>Lough Ree YC</td>
+<td>5</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>2888</td>
+<td>LemonCello</td>
+<td>Robert Dix</td>
+<td>Howth YC</td>
+<td>6</td>
+<td>6.0</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>1715</td>
+<td>Cranky Pants</td>
+<td>Martin Breen</td>
+<td>Galway Bay SC</td>
+<td>7</td>
+<td>7.0</td>
+</tr>
+<tr class="even racerow">
+<td>8</td>
+<td>1812</td>
+<td>El Diablo</td>
+<td>Ben Scallan</td>
+<td>Wexford Harbour BTC</td>
+<td>9</td>
+<td>8.0</td>
+</tr>
+<tr class="odd racerow">
+<td>9</td>
+<td>1770</td>
+<td>Matthews Helly Hansen</td>
+<td>Matthews Family</td>
+<td>Kinsale YC</td>
+<td>10</td>
+<td>9.0</td>
+</tr>
+<tr class="even racerow">
+<td>10</td>
+<td>1797</td>
+<td>After Midnight</td>
+<td>Team After Midnight</td>
+<td>Galway Bay SC</td>
+<td>11</td>
+<td>10.0</td>
+</tr>
+<tr class="odd racerow">
+<td>11</td>
+<td>1775</td>
+<td>No Show</td>
+<td>Andrew George Boyle</td>
+<td>Lough Derg YC / Royal Irish YC</td>
+<td>12</td>
+<td>11.0</td>
+</tr>
+<tr class="even racerow">
+<td>12</td>
+<td>1706</td>
+<td>Hijinks</td>
+<td>Brian Forde</td>
+<td>Galway Bay SC</td>
+<td>13</td>
+<td>12.0</td>
+</tr>
+<tr class="odd racerow">
+<td>13</td>
+<td>1772</td>
+<td>Heroes and villains</td>
+<td>Gary Rhodes</td>
+<td>Royal Cork YC</td>
+<td>14</td>
+<td>13.0</td>
+</tr>
+<tr class="even racerow">
+<td>14</td>
+<td>1848</td>
+<td>Root 1</td>
+<td>Julian Hughes</td>
+<td>Waterford Harbour SC</td>
+<td>DSQ</td>
+<td>15.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r6_1720">R6 - 1720 Fleet&nbsp;-&nbsp;Aug 22</h3>
+<div class="caption racecaption">
+Start: Start 1, Finishes: Place, Time: 15.12.00
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="7">
+<col class="rank" />
+<col class="sailno" />
+<col class="boat" />
+<col class="helmname" />
+<col class="club" />
+<col class="place" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Sail Nr</th>
+<th>Boat Name</th>
+<th>Owner</th>
+<th>Club</th>
+<th>Place</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>2000</td>
+<td>Rope Dock Atara</td>
+<td>McBearlas</td>
+<td>Howth YC</td>
+<td>1</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>2888</td>
+<td>LemonCello</td>
+<td>Robert Dix</td>
+<td>Howth YC</td>
+<td>2</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>1784</td>
+<td>Mo</td>
+<td>Aidan Lynch</td>
+<td>Baltimore SC</td>
+<td>3</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>2020</td>
+<td>Dutch Gold</td>
+<td>Michael O'Sullivan</td>
+<td>Kinsale YC</td>
+<td>4</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>1775</td>
+<td>No Show</td>
+<td>Andrew George Boyle</td>
+<td>Lough Derg YC / Royal Irish YC</td>
+<td>5</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>1772</td>
+<td>Heroes and villains</td>
+<td>Gary Rhodes</td>
+<td>Royal Cork YC</td>
+<td>6</td>
+<td>6.0</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>1725</td>
+<td>Optique</td>
+<td>Colin Byrne</td>
+<td>Royal Irish YC</td>
+<td>7</td>
+<td>7.0</td>
+</tr>
+<tr class="even racerow">
+<td>8</td>
+<td>1715</td>
+<td>Cranky Pants</td>
+<td>Martin Breen</td>
+<td>Galway Bay SC</td>
+<td>8</td>
+<td>8.0</td>
+</tr>
+<tr class="odd racerow">
+<td>9</td>
+<td>1797</td>
+<td>After Midnight</td>
+<td>Team After Midnight</td>
+<td>Galway Bay SC</td>
+<td>9</td>
+<td>9.0</td>
+</tr>
+<tr class="even racerow">
+<td>10</td>
+<td>1848</td>
+<td>Root 1</td>
+<td>Julian Hughes</td>
+<td>Waterford Harbour SC</td>
+<td>10</td>
+<td>10.0</td>
+</tr>
+<tr class="odd racerow">
+<td>11</td>
+<td>1812</td>
+<td>El Diablo</td>
+<td>Ben Scallan</td>
+<td>Wexford Harbour BTC</td>
+<td>11</td>
+<td>11.0</td>
+</tr>
+<tr class="even racerow">
+<td>12</td>
+<td>1706</td>
+<td>Hijinks</td>
+<td>Brian Forde</td>
+<td>Galway Bay SC</td>
+<td>12</td>
+<td>12.0</td>
+</tr>
+<tr class="odd racerow">
+<td>13</td>
+<td>1710</td>
+<td>Reach Around</td>
+<td>Horgan Swan</td>
+<td>Lough Ree YC</td>
+<td>UFD</td>
+<td>15.0</td>
+</tr>
+<tr class="even racerow">
+<td>13</td>
+<td>1770</td>
+<td>Matthews Helly Hansen</td>
+<td>Matthews Family</td>
+<td>Kinsale YC</td>
+<td>UFD</td>
+<td>15.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r7_1720">R7 - 1720 Fleet&nbsp;-&nbsp;Aug 23</h3>
+<div class="caption racecaption">
+Start: Start 1, Finishes: Place, Time: 11.08.00
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="7">
+<col class="rank" />
+<col class="sailno" />
+<col class="boat" />
+<col class="helmname" />
+<col class="club" />
+<col class="place" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Sail Nr</th>
+<th>Boat Name</th>
+<th>Owner</th>
+<th>Club</th>
+<th>Place</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>1848</td>
+<td>Root 1</td>
+<td>Julian Hughes</td>
+<td>Waterford Harbour SC</td>
+<td>1</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>2020</td>
+<td>Dutch Gold</td>
+<td>Michael O'Sullivan</td>
+<td>Kinsale YC</td>
+<td>2</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>2888</td>
+<td>LemonCello</td>
+<td>Robert Dix</td>
+<td>Howth YC</td>
+<td>3</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>1812</td>
+<td>El Diablo</td>
+<td>Ben Scallan</td>
+<td>Wexford Harbour BTC</td>
+<td>4</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>1784</td>
+<td>Mo</td>
+<td>Aidan Lynch</td>
+<td>Baltimore SC</td>
+<td>5</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>1775</td>
+<td>No Show</td>
+<td>Andrew George Boyle</td>
+<td>Lough Derg YC / Royal Irish YC</td>
+<td>6</td>
+<td>6.0</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>1772</td>
+<td>Heroes and villains</td>
+<td>Gary Rhodes</td>
+<td>Royal Cork YC</td>
+<td>7</td>
+<td>7.0</td>
+</tr>
+<tr class="even racerow">
+<td>8</td>
+<td>2000</td>
+<td>Rope Dock Atara</td>
+<td>McBearlas</td>
+<td>Howth YC</td>
+<td>8</td>
+<td>8.0</td>
+</tr>
+<tr class="odd racerow">
+<td>9</td>
+<td>1725</td>
+<td>Optique</td>
+<td>Colin Byrne</td>
+<td>Royal Irish YC</td>
+<td>9</td>
+<td>9.0</td>
+</tr>
+<tr class="even racerow">
+<td>10</td>
+<td>1715</td>
+<td>Cranky Pants</td>
+<td>Martin Breen</td>
+<td>Galway Bay SC</td>
+<td>10</td>
+<td>10.0</td>
+</tr>
+<tr class="odd racerow">
+<td>11</td>
+<td>1797</td>
+<td>After Midnight</td>
+<td>Team After Midnight</td>
+<td>Galway Bay SC</td>
+<td>11</td>
+<td>11.0</td>
+</tr>
+<tr class="even racerow">
+<td>12</td>
+<td>1770</td>
+<td>Matthews Helly Hansen</td>
+<td>Matthews Family</td>
+<td>Kinsale YC</td>
+<td>12</td>
+<td>12.0</td>
+</tr>
+<tr class="odd racerow">
+<td>13</td>
+<td>1710</td>
+<td>Reach Around</td>
+<td>Horgan Swan</td>
+<td>Lough Ree YC</td>
+<td>13</td>
+<td>13.0</td>
+</tr>
+<tr class="even racerow">
+<td>14</td>
+<td>1706</td>
+<td>Hijinks</td>
+<td>Brian Forde</td>
+<td>Galway Bay SC</td>
+<td>14</td>
+<td>14.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r8_1720">R8 - 1720 Fleet&nbsp;-&nbsp;Aug 23</h3>
+<div class="caption racecaption">
+Start: Start 1, Finishes: Place, Time: 12.20.00
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="7">
+<col class="rank" />
+<col class="sailno" />
+<col class="boat" />
+<col class="helmname" />
+<col class="club" />
+<col class="place" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Sail Nr</th>
+<th>Boat Name</th>
+<th>Owner</th>
+<th>Club</th>
+<th>Place</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>2020</td>
+<td>Dutch Gold</td>
+<td>Michael O'Sullivan</td>
+<td>Kinsale YC</td>
+<td>1</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>2000</td>
+<td>Rope Dock Atara</td>
+<td>McBearlas</td>
+<td>Howth YC</td>
+<td>2</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>2888</td>
+<td>LemonCello</td>
+<td>Robert Dix</td>
+<td>Howth YC</td>
+<td>3</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>1848</td>
+<td>Root 1</td>
+<td>Julian Hughes</td>
+<td>Waterford Harbour SC</td>
+<td>4</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>1784</td>
+<td>Mo</td>
+<td>Aidan Lynch</td>
+<td>Baltimore SC</td>
+<td>5</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>1710</td>
+<td>Reach Around</td>
+<td>Horgan Swan</td>
+<td>Lough Ree YC</td>
+<td>6</td>
+<td>6.0</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>1772</td>
+<td>Heroes and villains</td>
+<td>Gary Rhodes</td>
+<td>Royal Cork YC</td>
+<td>7</td>
+<td>7.0</td>
+</tr>
+<tr class="even racerow">
+<td>8</td>
+<td>1715</td>
+<td>Cranky Pants</td>
+<td>Martin Breen</td>
+<td>Galway Bay SC</td>
+<td>8</td>
+<td>8.0</td>
+</tr>
+<tr class="odd racerow">
+<td>9</td>
+<td>1770</td>
+<td>Matthews Helly Hansen</td>
+<td>Matthews Family</td>
+<td>Kinsale YC</td>
+<td>9</td>
+<td>9.0</td>
+</tr>
+<tr class="even racerow">
+<td>10</td>
+<td>1725</td>
+<td>Optique</td>
+<td>Colin Byrne</td>
+<td>Royal Irish YC</td>
+<td>10</td>
+<td>10.0</td>
+</tr>
+<tr class="odd racerow">
+<td>11</td>
+<td>1797</td>
+<td>After Midnight</td>
+<td>Team After Midnight</td>
+<td>Galway Bay SC</td>
+<td>11</td>
+<td>11.0</td>
+</tr>
+<tr class="even racerow">
+<td>12</td>
+<td>1706</td>
+<td>Hijinks</td>
+<td>Brian Forde</td>
+<td>Galway Bay SC</td>
+<td>12</td>
+<td>12.0</td>
+</tr>
+<tr class="odd racerow">
+<td>13</td>
+<td>1775</td>
+<td>No Show</td>
+<td>Andrew George Boyle</td>
+<td>Lough Derg YC / Royal Irish YC</td>
+<td>13</td>
+<td>13.0</td>
+</tr>
+<tr class="even racerow">
+<td>14</td>
+<td>1812</td>
+<td>El Diablo</td>
+<td>Ben Scallan</td>
+<td>Wexford Harbour BTC</td>
+<td>OCS</td>
+<td>15.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r9_1720">R9 - 1720 Fleet&nbsp;-&nbsp;Aug 23</h3>
+<div class="caption racecaption">
+Start: Start 1, Finishes: Place, Time: 13.31.00
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="7">
+<col class="rank" />
+<col class="sailno" />
+<col class="boat" />
+<col class="helmname" />
+<col class="club" />
+<col class="place" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Sail Nr</th>
+<th>Boat Name</th>
+<th>Owner</th>
+<th>Club</th>
+<th>Place</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>2000</td>
+<td>Rope Dock Atara</td>
+<td>McBearlas</td>
+<td>Howth YC</td>
+<td>1</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>1812</td>
+<td>El Diablo</td>
+<td>Ben Scallan</td>
+<td>Wexford Harbour BTC</td>
+<td>2</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>1848</td>
+<td>Root 1</td>
+<td>Julian Hughes</td>
+<td>Waterford Harbour SC</td>
+<td>3</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>2888</td>
+<td>LemonCello</td>
+<td>Robert Dix</td>
+<td>Howth YC</td>
+<td>4</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>1784</td>
+<td>Mo</td>
+<td>Aidan Lynch</td>
+<td>Baltimore SC</td>
+<td>5</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>2020</td>
+<td>Dutch Gold</td>
+<td>Michael O'Sullivan</td>
+<td>Kinsale YC</td>
+<td>6</td>
+<td>6.0</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>1797</td>
+<td>After Midnight</td>
+<td>Team After Midnight</td>
+<td>Galway Bay SC</td>
+<td>7</td>
+<td>7.0</td>
+</tr>
+<tr class="even racerow">
+<td>8</td>
+<td>1725</td>
+<td>Optique</td>
+<td>Colin Byrne</td>
+<td>Royal Irish YC</td>
+<td>8</td>
+<td>8.0</td>
+</tr>
+<tr class="odd racerow">
+<td>9</td>
+<td>1772</td>
+<td>Heroes and villains</td>
+<td>Gary Rhodes</td>
+<td>Royal Cork YC</td>
+<td>9</td>
+<td>9.0</td>
+</tr>
+<tr class="even racerow">
+<td>10</td>
+<td>1770</td>
+<td>Matthews Helly Hansen</td>
+<td>Matthews Family</td>
+<td>Kinsale YC</td>
+<td>10</td>
+<td>10.0</td>
+</tr>
+<tr class="odd racerow">
+<td>11</td>
+<td>1715</td>
+<td>Cranky Pants</td>
+<td>Martin Breen</td>
+<td>Galway Bay SC</td>
+<td>11</td>
+<td>11.0</td>
+</tr>
+<tr class="even racerow">
+<td>12</td>
+<td>1710</td>
+<td>Reach Around</td>
+<td>Horgan Swan</td>
+<td>Lough Ree YC</td>
+<td>12</td>
+<td>12.0</td>
+</tr>
+<tr class="odd racerow">
+<td>13</td>
+<td>1775</td>
+<td>No Show</td>
+<td>Andrew George Boyle</td>
+<td>Lough Derg YC / Royal Irish YC</td>
+<td>13</td>
+<td>13.0</td>
+</tr>
+<tr class="even racerow">
+<td>14</td>
+<td>1706</td>
+<td>Hijinks</td>
+<td>Brian Forde</td>
+<td>Galway Bay SC</td>
+<td>14</td>
+<td>14.0</td>
+</tr>
+</tbody>
+</table>
+
+<p class="hardleft"><a href="https://"></a><br /><a href="mailto:"></a></p>
+<p class="hardright"><a href="https://"></a><br /><a href="mailto:"></a></p>
+<p>Sailwave Scoring Software 2.37.00<br /><a href="https://www.sailwave.com">www.sailwave.com</a></p>
+
+</div>
+
+<footer>
+</footer>
+
+<div id="scrollbottom"></div>
+
+</body>
+</html>
+
+

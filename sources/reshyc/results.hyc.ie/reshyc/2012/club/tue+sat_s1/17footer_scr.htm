@@ -1,0 +1,1526 @@
+
+
+<!doctype html>
+
+<head>
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="description" content="sailwave results">
+<meta name="viewport" content="width=device-width">
+
+<title>Sailwave results for Tuesday + Saturday Series 1 at  2012</title>
+
+<style type="text/css">
+body {font: 67% arial, helvetica, sans-serif; text-align: center;}
+.hardleft  {text-align: left; float: left;  margin: 15px 0  0 25px;}
+.hardright {text-align: right; float: right; margin: 15px 25px 0 0;}
+table, caption {text-align: left; margin: auto; font-size: 1em; border-collapse: collapse; border: 1px #fff solid;}
+td {padding: 4px; border-right: 1px #fff solid; border-bottom: 1px #ffffff solid; vertical-align: top;}
+th {padding: 4px; border: 1px #fff solid; border-bottom: 1px #ffffff solid; vertical-align: top;}
+.caption {padding: 5px; text-align: center; border: 0; font-weight: bold;}
+h1 {font-size: 1.6em;}
+h2 {font-size: 1.4em;}
+h3 {font-size: 1.2em;}
+p {text-align: center;}
+th {background-color: #d0d0d0;}
+.contents {text-align: left; margin-left: 20%;}
+.race, .rank {text-align: center;}
+.even {background-color: #eaeaea;}
+.odd {background-color: #f4f4f4;}
+.nat {text-align: center;}
+.natflag {border: 1px #999 solid;}
+.nattext {font-size: 0.8em;}
+</style>
+
+<script type="text/javascript">
+//#name=results
+//#author=Colin Jenkins
+//#date=2012-02-16
+//#version=1.0
+//#desc=Functions to use if scripting is turned on when publishing results.
+//#url=http://sailwave.com
+//#email=colin@sailwave.com
+//#twitter=sailwave
+
+//*****Just translate these strings to get results in a different language
+var swStr = {};
+swStr.SummaryTitle            = 'Overall';
+swStr.SummaryCaptionSailed    = 'Sailed';
+swStr.SummaryCaptionDiscards  = 'Discards';
+swStr.SummaryCaptionToCount   = 'To count';
+swStr.SummaryCaptionToQualify = 'To qualify';
+swStr.SummaryCaptionRatings   = 'Ratings';
+swStr.SummaryCaptionEntries   = 'Entries';
+swStr.SummaryCaptionScoring   = 'Scoring system';
+swStr.RacePrefix              = 'R';
+swStr.PrizesTitle             = 'Prizes';
+swStr.CodesTitle              = 'Scoring codes used';
+
+// was 'at' changed 020512
+swStr.Wordat                  = '';
+//*****End translate
+
+//*****You must declare these Sailwave assumed variables which are populated when publishing
+var swSeries             = {};
+swSeries.Title           = '';
+swSeries.Notes           = '';
+swSeries.Event           = '';
+swSeries.Venue           = '';
+var swSS                 = new Array();
+var swSummary            = {};
+swSummary.ScoringSys     = 0;
+swSummary.Field          = '';
+swSummary.Value          = '';
+swSummary.TagValue       = '';
+swSummary.FieldName      = '';
+swSummary.Entries        = 0;
+swSummary.Sailed         = 0;
+swSummary.Discards       = 0;
+swSummary.FinalsDiscards = 0;
+swSummary.ToCount        = 0;
+swSummary.ToQualify      = 0;
+var swRace               = {};
+swRace.Entries           = 0;
+swRace.Notes             = '';
+swRace.Date              = '';
+swRace.Time              = '';
+swRace.Name              = '';
+swRace.Rank              = 0;
+//*****End of assumed vars
+
+var swSpace = '&nbsp;';
+var swTwoSpaces = '&nbsp;&nbsp;';
+
+function resSeriesTitle() {
+document.write('<h2 class="seriestitle">' + swSeries.Title + '</h2>');
+}
+
+/*
+function resSeriesNotes() {
+document.write('<p class="seriesnotes">' + swSeries.Notes + '</p>');
+}
+*/
+
+function resSeriesNotes() {
+document.write('<h3>' + swSeries.Notes + '</h3>');
+}
+
+function resSummaryTitle() {
+if (swSummary.Field)
+document.write('<h1 class="summarytitle" id="summary' + swSummary.TagValue + '">' + swSummary.Value + '<br>' + swStr.SummaryTitle + '</h1>');
+else
+document.write('<h3 class="summarytitle">' + swStr.SummaryTitle + '</h3>');
+}
+
+function resSummaryCaption() {
+var h  = '';
+var ss = swSS[swSummary.ScoringSys];
+h += '<div class="caption summarycaption">';
+h +=          swStr.SummaryCaptionSailed    + ': ' + swSummary.Sailed;
+h +=   ', ' + swStr.SummaryCaptionDiscards  + ': ' + swSummary.Discards;
+h +=   ', ' + swStr.SummaryCaptionToCount   + ': ' + swSummary.ToCount;
+if (swSummary.ToQualify > 0)
+h += ', ' + swStr.SummaryCaptionToQualify + ': ' + swSummary.ToQualify;
+if (ss.RatingSystem.toLowerCase() != 'none')
+h += ', ' + swStr.SummaryCaptionRatings   + ': ' + ss.RatingSystem;
+h +=   ', ' + swStr.SummaryCaptionEntries   + ': ' + swSummary.Entries;
+h +=   ', ' + swStr.SummaryCaptionScoring   + ': ' + ss.Name
+h += '</div>'
+document.write(h);
+}
+
+function resRaceTitle() {
+
+var Extra = '';
+var Race = ''
+
+if (swRace.Name)
+Race = swRace.Name;
+else
+//Race = swStr.RacePrefix + swRace.Rank
+Race = 'Race ' + swRace.Rank
+
+if (swRace.Date)
+//Extra = swSpace + '-' + swSpace + swRace.Date;
+Extra = swRace.Date;
+
+if (swRace.Time)
+Extra = Extra + swSpace + swStr.Wordat + swSpace + swRace.Time;
+
+if (swSummary.Field)
+document.write('<h2 class="racetitle" id="r' + swRace.Rank + swSummary.TagValue + '">' + Race + swTwoSpaces + '-' + swTwoSpaces + Extra + swTwoSpaces + '-' + swTwoSpaces + swSummary.Value + '</h2>');
+else
+document.write('<h2 class="racetitle">' + Race + swTwoSpaces + '-' + swTwoSpaces + Extra + swTwoSpaces + '-' + swTwoSpaces + swSummary.Value + '</h2>');
+}
+
+function resRaceNotes() {
+document.write('<p class="racenotes">' + swRace.Notes + '</p>');
+}
+
+function resPrizeTitle() {
+document.write('<h3 class="prizestitle">' + swStr.PrizesTitle + '</h3>');
+}
+
+function resCodesTitle() {
+document.write('<h3 class="codestitle">' + swStr.CodesTitle + '</h3>');
+}
+</script>
+
+</head>
+
+<body>
+
+<header>
+</header>
+
+<div id="wrap">
+
+
+<h1>Tuesday + Saturday Series 1</h1>
+<h2></h2>
+
+<div style="clear:both;"></div>
+
+<script type="text/javascript">
+swSeries.Title = '';
+swSeries.Notes = '';
+swSeries.Event = 'Tuesday + Saturday Series 1';
+swSeries.Venue = '';
+swSS[27] = {};
+swSS[27].Name = 'Appendix A';
+swSS[27].Field = 'Class';
+swSS[27].Value = '';
+swSS[27].Notes = '';
+swSS[27].HighPointFormula = '';
+swSS[27].LowPointFormula = '';
+swSS[27].CustomLowPoints = '';
+swSS[27].CustomHighPoints = '';
+swSS[27].QualProfile = '';
+swSS[27].DiscardProfile = '0,0,0,1,1,1';
+swSS[27].RaceTies = 'Averaged';
+swSS[27].PointsAccumulation = 'Sum';
+swSS[27].PointsPlaces = '1';
+swSS[27].PointsSystem = 'Low point';
+swSS[27].RatingSystem = 'TCF';
+swSS[27].RatSysA = '';
+swSS[27].RatSysB = '';
+swSS[27].CExpr = '';
+swSS[27].EExpr = '';
+swSS[27].RExpr = '';
+swSS[27].RatingMode = 'No';
+swSS[27].WindStrengths = '0-1,2-3,4,5-9';
+swSS[27].WindIndexedA = '';
+swSS[27].WindIndexedB = '';
+swSS[27].UpdateRatings = 'No';
+swSS[27].BackCalcPercent = '0';
+swSS[27].TieA81 = 'Yes';
+swSS[27].TieA81Discardss = 'No';
+swSS[27].TieA82 = 'Yes';
+swSS[27].TieA82Back = 'No';
+swSS[27].TieA82Starts = 'No';
+swSS[27].TieB8 = 'No';
+swSS[27].TieFinals = 'No';
+swSS[27].Flights = 'No';
+swSS[27].Finals = 'No';
+swSS[27].FinalsFirst = '0';
+swSS[27].FinalsStickyQ = 'No';
+swSS[27].FinalsDiscardP = '';
+swSS[27].LowWeight = 'Yes';
+swSS[27].Medal = 'No';
+swSS[27].MedalMax = '10';
+swSS[27].MedalRace = '6';
+swSS[27].MedalYesNotDiscardable = 'Yes';
+swSS[27].MedalYesMultiply = 'Yes';
+swSS[27].MedalYesTie = 'Yes';
+swSS[27].MedalNoNotDiscardable = 'Yes';
+swSS[27].MedalNoMultiply = 'Yes';
+swSS[27].MedalNoTie = 'Yes';
+</script>
+<script type="text/javascript">
+resSeriesTitle();
+</script>
+<script type="text/javascript">
+swSummary.Entries = 8;
+swSummary.Field = 'Class';
+swSummary.FieldName = 'class';
+swSummary.Value = '17 Footer Scratch';
+swSummary.TagValue = '17-footer-scratch';
+swSummary.ScoringSys = 27;
+</script>
+<script type="text/javascript">
+resSummaryTitle();
+</script>
+<script type="text/javascript">
+swSummary.Sailed = 5;
+swSummary.Discards = 1;
+swSummary.ToCount = 4;
+swSummary.ToQualify = 0;
+swSummary.FinalsDiscards = 1;
+resSummaryCaption();
+</script>
+<table class="summarytable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="11">
+<col class="rank" />
+<col class="sailno" />
+<col class="boat" />
+<col class="helmname" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="total" />
+<col class="nett" />
+</colgroup>
+<tr>
+<th>Rank</th>
+<th>sailno</th>
+<th>boat name</th>
+<th>owner name</th>
+<th>
+<a class="racelink" href="#r117-footer-scratch">R1</a><br />1/5</th>
+<th>
+<a class="racelink" href="#r217-footer-scratch">R2</a><br />5/5</th>
+<th>
+<a class="racelink" href="#r317-footer-scratch">R3</a><br />12/5</th>
+<th>
+<a class="racelink" href="#r417-footer-scratch">R4</a><br />15/5</th>
+<th>
+<a class="racelink" href="#r517-footer-scratch">R5</a><br />19/5</th>
+<th>Total</th>
+<th>Nett</th>
+</tr>
+<tr class="odd summaryrow">
+<td>1st</td>
+<td>11</td>
+<td>Deilginis</td>
+<td>Deilginis Group</td>
+<td>1.0</td>
+<td>(2.0)</td>
+<td>2.0</td>
+<td>2.0</td>
+<td>2.0</td>
+<td>9.0</td>
+<td>7.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>2nd</td>
+<td>7</td>
+<td>Aura</td>
+<td>I Malcolm</td>
+<td>2.0</td>
+<td>1.0</td>
+<td>1.0</td>
+<td>4.0</td>
+<td>(9.0 DNC)</td>
+<td>17.0</td>
+<td>8.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>3rd</td>
+<td>19</td>
+<td>Isobel</td>
+<td>B & C Turvey</td>
+<td>(9.0 DNC)</td>
+<td>3.0</td>
+<td>4.0</td>
+<td>1.0</td>
+<td>4.0</td>
+<td>21.0</td>
+<td>12.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>4th</td>
+<td>6</td>
+<td>Anita</td>
+<td>Cassidy/Faherty</td>
+<td>4.0</td>
+<td>4.0</td>
+<td>5.0</td>
+<td>(9.0 DNC)</td>
+<td>3.0</td>
+<td>25.0</td>
+<td>16.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>5th</td>
+<td>3</td>
+<td>Leila</td>
+<td>R cooper</td>
+<td>3.0</td>
+<td>(9.0 DNC)</td>
+<td>3.0</td>
+<td>6.0 DNF</td>
+<td>5.0</td>
+<td>26.0</td>
+<td>17.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>6th</td>
+<td>17</td>
+<td>Oona</td>
+<td>P Courtney</td>
+<td>(9.0 DNC)</td>
+<td>9.0 DNC</td>
+<td>9.0 DNC</td>
+<td>3.0</td>
+<td>1.0</td>
+<td>31.0</td>
+<td>22.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>7th</td>
+<td>1</td>
+<td>Rita</td>
+<td>Curley/Lynch</td>
+<td>(9.0 DNC)</td>
+<td>9.0 DNC</td>
+<td>9.0 DNC</td>
+<td>9.0 DNC</td>
+<td>9.0 DNC</td>
+<td>45.0</td>
+<td>36.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>7th</td>
+<td>2</td>
+<td>Pauline</td>
+<td>O'Doherty/Ryan</td>
+<td>(9.0 DNC)</td>
+<td>9.0 DNC</td>
+<td>9.0 DNC</td>
+<td>9.0 DNC</td>
+<td>9.0 DNC</td>
+<td>45.0</td>
+<td>36.0</td>
+</tr>
+</table>
+<script type="text/javascript">
+swSummary.Entries = 8;
+swSummary.Field = 'Class';
+swSummary.FieldName = 'class';
+swSummary.Value = '17 Footer Scratch';
+swSummary.TagValue = '17-footer-scratch';
+swSummary.ScoringSys = 27;
+</script>
+<script type="text/javascript">
+swRace.Entries = 8;
+swRace.Notes = '';
+swRace.Date = '1/5';
+swRace.Time = '';
+swRace.Name = '';
+swRace.Rank = 1;
+</script>
+<script type="text/javascript">
+resRaceTitle();
+</script>
+<script type="text/javascript">
+resRaceNotes();
+</script>
+<div class="caption racecaption">
+Start: Start 1, Finishes: Finish time
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="7">
+<col class="rank" />
+<col class="sailno" />
+<col class="boat" />
+<col class="helmname" />
+<col class="racefinish" />
+<col class="raceelapsed" />
+<col class="nett" />
+</colgroup>
+<tr>
+<th>Rank</th>
+<th>sailno</th>
+<th>boat name</th>
+<th>owner name</th>
+<th>Finish</th>
+<th>Elapsed</th>
+<th>Points</th>
+</tr>
+<tr class="odd racerow">
+<td>
+1
+</td>
+<td>
+11
+</td>
+<td>
+Deilginis
+</td>
+<td>
+Deilginis Group
+</td>
+<td>
+20:14:24
+</td>
+<td>
+0:44:24
+</td>
+<td>
+1.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+2
+</td>
+<td>
+7
+</td>
+<td>
+Aura
+</td>
+<td>
+I Malcolm
+</td>
+<td>
+20:15:11
+</td>
+<td>
+0:45:11
+</td>
+<td>
+2.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+3
+</td>
+<td>
+3
+</td>
+<td>
+Leila
+</td>
+<td>
+R cooper
+</td>
+<td>
+20:15:19
+</td>
+<td>
+0:45:19
+</td>
+<td>
+3.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+4
+</td>
+<td>
+6
+</td>
+<td>
+Anita
+</td>
+<td>
+Cassidy/Faherty
+</td>
+<td>
+20:17:56
+</td>
+<td>
+0:47:56
+</td>
+<td>
+4.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+5
+</td>
+<td>
+19
+</td>
+<td>
+Isobel
+</td>
+<td>
+B & C Turvey
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+9.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+5
+</td>
+<td>
+17
+</td>
+<td>
+Oona
+</td>
+<td>
+P Courtney
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+9.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+5
+</td>
+<td>
+1
+</td>
+<td>
+Rita
+</td>
+<td>
+Curley/Lynch
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+9.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+5
+</td>
+<td>
+2
+</td>
+<td>
+Pauline
+</td>
+<td>
+O'Doherty/Ryan
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+9.0
+</td>
+</tr>
+</table>
+<script type="text/javascript">
+swRace.Entries = 8;
+swRace.Notes = '';
+swRace.Date = '5/5';
+swRace.Time = '';
+swRace.Name = '';
+swRace.Rank = 2;
+</script>
+<script type="text/javascript">
+resRaceTitle();
+</script>
+<script type="text/javascript">
+resRaceNotes();
+</script>
+<div class="caption racecaption">
+Start: Start 1, Finishes: Finish time
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="7">
+<col class="rank" />
+<col class="sailno" />
+<col class="boat" />
+<col class="helmname" />
+<col class="racefinish" />
+<col class="raceelapsed" />
+<col class="nett" />
+</colgroup>
+<tr>
+<th>Rank</th>
+<th>sailno</th>
+<th>boat name</th>
+<th>owner name</th>
+<th>Finish</th>
+<th>Elapsed</th>
+<th>Points</th>
+</tr>
+<tr class="odd racerow">
+<td>
+1
+</td>
+<td>
+7
+</td>
+<td>
+Aura
+</td>
+<td>
+I Malcolm
+</td>
+<td>
+16:26:34
+</td>
+<td>
+1:51:34
+</td>
+<td>
+1.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+2
+</td>
+<td>
+11
+</td>
+<td>
+Deilginis
+</td>
+<td>
+Deilginis Group
+</td>
+<td>
+16:28:22
+</td>
+<td>
+1:53:22
+</td>
+<td>
+2.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+3
+</td>
+<td>
+19
+</td>
+<td>
+Isobel
+</td>
+<td>
+B & C Turvey
+</td>
+<td>
+16:29:39
+</td>
+<td>
+1:54:39
+</td>
+<td>
+3.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+4
+</td>
+<td>
+6
+</td>
+<td>
+Anita
+</td>
+<td>
+Cassidy/Faherty
+</td>
+<td>
+16:30:46
+</td>
+<td>
+1:55:46
+</td>
+<td>
+4.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+5
+</td>
+<td>
+3
+</td>
+<td>
+Leila
+</td>
+<td>
+R cooper
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+9.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+5
+</td>
+<td>
+17
+</td>
+<td>
+Oona
+</td>
+<td>
+P Courtney
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+9.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+5
+</td>
+<td>
+1
+</td>
+<td>
+Rita
+</td>
+<td>
+Curley/Lynch
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+9.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+5
+</td>
+<td>
+2
+</td>
+<td>
+Pauline
+</td>
+<td>
+O'Doherty/Ryan
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+9.0
+</td>
+</tr>
+</table>
+<script type="text/javascript">
+swRace.Entries = 8;
+swRace.Notes = '';
+swRace.Date = '12/5';
+swRace.Time = '';
+swRace.Name = '';
+swRace.Rank = 3;
+</script>
+<script type="text/javascript">
+resRaceTitle();
+</script>
+<script type="text/javascript">
+resRaceNotes();
+</script>
+<div class="caption racecaption">
+Start: Start 1, Finishes: Finish time
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="7">
+<col class="rank" />
+<col class="sailno" />
+<col class="boat" />
+<col class="helmname" />
+<col class="racefinish" />
+<col class="raceelapsed" />
+<col class="nett" />
+</colgroup>
+<tr>
+<th>Rank</th>
+<th>sailno</th>
+<th>boat name</th>
+<th>owner name</th>
+<th>Finish</th>
+<th>Elapsed</th>
+<th>Points</th>
+</tr>
+<tr class="odd racerow">
+<td>
+1
+</td>
+<td>
+7
+</td>
+<td>
+Aura
+</td>
+<td>
+I Malcolm
+</td>
+<td>
+15:29:32
+</td>
+<td>
+0:54:32
+</td>
+<td>
+1.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+2
+</td>
+<td>
+11
+</td>
+<td>
+Deilginis
+</td>
+<td>
+Deilginis Group
+</td>
+<td>
+15:32:11
+</td>
+<td>
+0:57:11
+</td>
+<td>
+2.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+3
+</td>
+<td>
+3
+</td>
+<td>
+Leila
+</td>
+<td>
+R cooper
+</td>
+<td>
+15:34:39
+</td>
+<td>
+0:59:39
+</td>
+<td>
+3.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+4
+</td>
+<td>
+19
+</td>
+<td>
+Isobel
+</td>
+<td>
+B & C Turvey
+</td>
+<td>
+15:35:00
+</td>
+<td>
+1:00:00
+</td>
+<td>
+4.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+5
+</td>
+<td>
+6
+</td>
+<td>
+Anita
+</td>
+<td>
+Cassidy/Faherty
+</td>
+<td>
+15:35:09
+</td>
+<td>
+1:00:09
+</td>
+<td>
+5.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+6
+</td>
+<td>
+17
+</td>
+<td>
+Oona
+</td>
+<td>
+P Courtney
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+9.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+6
+</td>
+<td>
+1
+</td>
+<td>
+Rita
+</td>
+<td>
+Curley/Lynch
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+9.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+6
+</td>
+<td>
+2
+</td>
+<td>
+Pauline
+</td>
+<td>
+O'Doherty/Ryan
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+9.0
+</td>
+</tr>
+</table>
+<script type="text/javascript">
+swRace.Entries = 8;
+swRace.Notes = '';
+swRace.Date = '15/5';
+swRace.Time = '';
+swRace.Name = '';
+swRace.Rank = 4;
+</script>
+<script type="text/javascript">
+resRaceTitle();
+</script>
+<script type="text/javascript">
+resRaceNotes();
+</script>
+<div class="caption racecaption">
+Start: Start 1, Finishes: Finish time
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="7">
+<col class="rank" />
+<col class="sailno" />
+<col class="boat" />
+<col class="helmname" />
+<col class="racefinish" />
+<col class="raceelapsed" />
+<col class="nett" />
+</colgroup>
+<tr>
+<th>Rank</th>
+<th>sailno</th>
+<th>boat name</th>
+<th>owner name</th>
+<th>Finish</th>
+<th>Elapsed</th>
+<th>Points</th>
+</tr>
+<tr class="odd racerow">
+<td>
+1
+</td>
+<td>
+19
+</td>
+<td>
+Isobel
+</td>
+<td>
+B & C Turvey
+</td>
+<td>
+21:02:00
+</td>
+<td>
+1:17:00
+</td>
+<td>
+1.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+2
+</td>
+<td>
+11
+</td>
+<td>
+Deilginis
+</td>
+<td>
+Deilginis Group
+</td>
+<td>
+21:02:06
+</td>
+<td>
+1:17:06
+</td>
+<td>
+2.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+3
+</td>
+<td>
+17
+</td>
+<td>
+Oona
+</td>
+<td>
+P Courtney
+</td>
+<td>
+21:03:02
+</td>
+<td>
+1:18:02
+</td>
+<td>
+3.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+4
+</td>
+<td>
+7
+</td>
+<td>
+Aura
+</td>
+<td>
+I Malcolm
+</td>
+<td>
+21:03:17
+</td>
+<td>
+1:18:17
+</td>
+<td>
+4.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+5
+</td>
+<td>
+3
+</td>
+<td>
+Leila
+</td>
+<td>
+R cooper
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNF
+</td>
+<td>
+6.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+6
+</td>
+<td>
+6
+</td>
+<td>
+Anita
+</td>
+<td>
+Cassidy/Faherty
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+9.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+6
+</td>
+<td>
+1
+</td>
+<td>
+Rita
+</td>
+<td>
+Curley/Lynch
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+9.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+6
+</td>
+<td>
+2
+</td>
+<td>
+Pauline
+</td>
+<td>
+O'Doherty/Ryan
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+9.0
+</td>
+</tr>
+</table>
+<script type="text/javascript">
+swRace.Entries = 8;
+swRace.Notes = '';
+swRace.Date = '19/5';
+swRace.Time = '';
+swRace.Name = '';
+swRace.Rank = 5;
+</script>
+<script type="text/javascript">
+resRaceTitle();
+</script>
+<script type="text/javascript">
+resRaceNotes();
+</script>
+<div class="caption racecaption">
+Start: Start 1, Finishes: Finish time
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="7">
+<col class="rank" />
+<col class="sailno" />
+<col class="boat" />
+<col class="helmname" />
+<col class="racefinish" />
+<col class="raceelapsed" />
+<col class="nett" />
+</colgroup>
+<tr>
+<th>Rank</th>
+<th>sailno</th>
+<th>boat name</th>
+<th>owner name</th>
+<th>Finish</th>
+<th>Elapsed</th>
+<th>Points</th>
+</tr>
+<tr class="odd racerow">
+<td>
+1
+</td>
+<td>
+17
+</td>
+<td>
+Oona
+</td>
+<td>
+P Courtney
+</td>
+<td>
+15:27:35
+</td>
+<td>
+0:52:35
+</td>
+<td>
+1.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+2
+</td>
+<td>
+11
+</td>
+<td>
+Deilginis
+</td>
+<td>
+Deilginis Group
+</td>
+<td>
+15:28:22
+</td>
+<td>
+0:53:22
+</td>
+<td>
+2.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+3
+</td>
+<td>
+6
+</td>
+<td>
+Anita
+</td>
+<td>
+Cassidy/Faherty
+</td>
+<td>
+15:29:08
+</td>
+<td>
+0:54:08
+</td>
+<td>
+3.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+4
+</td>
+<td>
+19
+</td>
+<td>
+Isobel
+</td>
+<td>
+B & C Turvey
+</td>
+<td>
+15:33:09
+</td>
+<td>
+0:58:09
+</td>
+<td>
+4.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+5
+</td>
+<td>
+3
+</td>
+<td>
+Leila
+</td>
+<td>
+R cooper
+</td>
+<td>
+15:37:01
+</td>
+<td>
+1:02:01
+</td>
+<td>
+5.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+6
+</td>
+<td>
+7
+</td>
+<td>
+Aura
+</td>
+<td>
+I Malcolm
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+9.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+6
+</td>
+<td>
+1
+</td>
+<td>
+Rita
+</td>
+<td>
+Curley/Lynch
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+9.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+6
+</td>
+<td>
+2
+</td>
+<td>
+Pauline
+</td>
+<td>
+O'Doherty/Ryan
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+9.0
+</td>
+</tr>
+</table>
+
+<div id="scrollbottom"></div>
+
+<p class="hardleft"><a href="http://"></a><br /><a href="mailto:"></a></p>
+<p class="hardright"><a href="http://www.hyc.ie">www.hyc.ie</a><br /><a href="mailto:"></a></p>
+<p>Sailwave Scoring Software 2.5<br /><a href="http://www.sailwave.com">www.sailwave.com</a></p>
+
+</div>
+
+<footer>
+</footer>
+
+</body>
+</html>
+
+

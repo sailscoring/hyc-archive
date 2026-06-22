@@ -1,0 +1,2490 @@
+
+
+
+<!doctype html>
+
+<head>
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="description" content="sailwave results">
+<meta name="viewport" content="width=device-width">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+
+<title>Sailwave results for ICRA National Championships 2023 at Howth Yacht Club 2023</title>
+
+<style type="text/css">
+body {font: 80% arial, helvetica, sans-serif; text-align: center; color: navy;}
+.hardleft  {text-align: left; float: left;  margin: 15px 0  15px 25px;}
+.hardright {text-align: right; float: right; margin: 15px 25px 15px 0;}
+table {text-align: left; margin: 0px auto 30px auto; font-size: 1em; border-collapse: collapse; border: 1px #999 solid;}
+th {padding: 4px; border-bottom: 2px #999 solid; vertical-align: top;}
+td {padding: 4px; border-bottom: 1px #999 solid; vertical-align: top;}
+.caption {padding: 5px; text-align: center; border: 0; font-weight: bold;}
+h1 {font-size: 1.6em;}
+h2 {font-size: 1.4em;}
+h3 {font-size: 1.2em;}
+p {text-align: center;}
+.contents {text-align: left; margin-left: 20%;}
+a:link    {color: navy;}
+a:visited {color: navy;}
+.natflag {border: 1px #999 solid;}
+.nattext {font-size: 0.8em;}
+.place1 {font-weight: bold; background-color: #ffffaa;}
+.place2 {font-weight: bold; background-color: #aaaaff;}
+.place3 {font-weight: bold; background-color: #ffaaaa;}
+.placen {}
+</style>
+
+<script type="text/javascript">
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script>
+
+function swGetURLArgs() {
+
+  var url = location.href;
+  var qs  = url.substring(url.indexOf('?') + 1).split('&');
+
+  for(var i = 0, result = {}; i < qs.length; i++) {
+    qs[i]            = qs[i].split('=');
+    result[qs[i][0]] = decodeURIComponent(qs[i][1]);
+  }
+
+  return result;
+}
+
+//
+//  name=HighlightWins3v3
+//  dependencies=jQuery
+//  description=Highlight winning scores in summary tables.
+//  author=Jon Eskdale based on an idea by Colin Jenkins
+//  date=2016-07-04
+//  version=3.0  For use with Sailwave from V2.22.x
+//  Requires the following lines in the Results.htm file (Results.htm is in the Templates directory)
+//  string.set("summary.col.race.rank1.td",   "rank1")
+//  string.set("summary.col.race.rank2.td",   "rank2")
+//  string.set("summary.col.race.rank3.td",   "rank3")
+
+//  url=http://sailwave.com
+//  email=jon@sailwave.com
+//  twitter=eskdale
+//  comments=Edit colours to colours of your choice
+//
+
+$(document).ready(function() {
+var selectorRank1 = '.rank1';
+var selectorRank2 = '.rank2';
+var selectorRank3 = '.rank3';
+
+// Results with these codes will not get highlighted add or remove codes to your choice
+var ignoreText   = /^(?!.*\b(DNC|DNF|DNS|OCS|BFD|UFD|RET|DSQ|DGM|DNE)\b).*/i
+
+// Edit these colours to change the highlight colours for 1st, 2nd and 3rd
+var winsColour   = '#ffd700';
+var twoColour    = '#6a91c5';
+var threeColour  = '#da6841';
+
+
+// Change the background color for cells with class of rank1-3 and don't have a code specified
+$(function () {
+
+  $(selectorRank1).filter(function() {
+    return ignoreText.test($(this).text());
+  }).css("background", winsColour);
+  $(selectorRank2).filter(function() {
+        return ignoreText.test($(this).text());
+  }).css("background", twoColour);
+  $(selectorRank3).filter(function() {
+        return ignoreText.test($(this).text());
+  }).css("background", threeColour);
+
+});
+});
+//
+//  name=TableSorter
+//  dependencies=jQuery (autoloads if not specified)
+//  description=Click on heading to sort table
+//  author=Jon Eskdale
+//  date=2015-08-13 / 2018-04-16
+//  version=1.2
+//  url=https://sailwave.com
+//  email=jon@sailwave.com
+//  twitter=@eskdale
+//
+
+</script>
+<link rel="stylesheet" href="https://www.sailwave.com/download/css/sorter.css">
+<script src="https://mottie.github.io/tablesorter/js/jquery.tablesorter.combined.js"></script>
+<script>
+
+$(document).ready(function()
+    {
+        // create array of race column numbers for first table (summarytable)
+        var ths = document.getElementsByTagName('col');
+        var column =[];
+        for (var i=0; i<ths.length; i++) {
+                if (ths[i].classList[0] === "race") {
+                        column.push(i);
+                } else {
+                        if (column.length !=0) {
+                                break;
+                        }
+                }
+        }
+        var patt = /\d+\.\d+/;
+        $.tablesorter.addParser({
+                id: 'race',
+                is: function(s, table, cell, $cell) {
+                        return false;
+                },
+                format: function(s, table, cell, cellIndex) {
+                        return patt.exec(s);
+                },
+                // set type, either numeric or text
+                type: 'numeric'
+        });
+
+        //  Set a class of race for all headers with race results in column for summarytable
+        //  "{sorter: 'numeric'}"
+        for (var i=0; i<column.length; i++) {
+                $(".summarytable thead tr th:nth-child(" + (column[i]+1) +")").addClass("sorter-race");
+        }
+
+
+        $(".summarytable").tablesorter({
+         theme : 'blue',
+         sortMultiSortKey: 'ctrlKey',
+         sortResetKey: 'altKey',
+         });
+}
+);
+
+
+</script>
+
+</head>
+
+<body>
+
+<header>
+</header>
+
+<div id="wrap">
+
+<img class="hardright" src="https://filedn.com/lp10qwAOmmwFb3gmBWF0wyf/ICRA/2023/OrganisersN.jpg" alt="event burgee" />
+<img class="hardleft"  src="https://filedn.com/lp10qwAOmmwFb3gmBWF0wyf/ICRA/2023/SponsorsN.jpg" alt="venue burgee" />
+
+<h1>ICRA National Championships 2023</h1>
+<h2>Howth Yacht Club</h2>
+
+<div style="clear:both;"></div>
+
+<style>
+div.applicant-break {page-break-after:always;}
+</style>
+<h3 class="seriestitle">Results are final as of 14:54 on September 11, 2023</h3>
+<h3 class="summarytitle" id="summaryj24">J24 Fleet</h3>
+<div class="caption summarycaption">Sailed: 5, Discards: 1, To count: 4, Entries: 21, Scoring system: Appendix A</div>
+<table class="summarytable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="19">
+<col class="rank" />
+<col class="bownumber" />
+<col class="fleet" />
+<col class="division" />
+<col class="boat" />
+<col class="nat" />
+<col class="sailno" />
+<col class="club" />
+<col class="helmname" />
+<col class="crewname" />
+<col class="rating" />
+<col class="newrating" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="total" />
+<col class="nett" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Boat Class</th>
+<th>Fleet</th>
+<th>Division</th>
+<th>Boat Name</th>
+<th>Sail Prefix</th>
+<th>Sail No</th>
+<th>Club</th>
+<th>Owner Name</th>
+<th>ICRA grouping</th>
+<th>Rating</th>
+<th>NewRating</th>
+<th><a class="racelink" href="#r1j24">R1</a> &nbsp;</th>
+<th><a class="racelink" href="#r2j24">Sat R1</a> &nbsp;</th>
+<th><a class="racelink" href="#r3j24">Sat R2</a> &nbsp;</th>
+<th><a class="racelink" href="#r4j24">Sat R3</a> &nbsp;</th>
+<th><a class="racelink" href="#r5j24">Sat R4</a> &nbsp;</th>
+<th>Total</th>
+<th>Nett</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd summaryrow">
+<td>1</td>
+<td>J24</td>
+<td>J24</td>
+<td>Gold</td>
+<td>Hard on Port</td>
+<td>IRL</td>
+<td>4794</td>
+<td>Bray Sailing Club</td>
+<td>Dave B Rory G Chris C Sean H</td>
+<td>&nbsp;</td>
+<td>1.000</td>
+<td>&nbsp;</td>
+<td>4.0</td>
+<td class="rank1">1.0</td>
+<td>(6.0)</td>
+<td class="rank2">2.0</td>
+<td class="rank1">1.0</td>
+<td>14.0</td>
+<td>8.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>2</td>
+<td>J24</td>
+<td>J24</td>
+<td>Gold</td>
+<td>KINSAILOR</td>
+<td>IRL</td>
+<td>4236</td>
+<td>Kinsale Yacht Club</td>
+<td>Kinsale Yacht Club</td>
+<td>&nbsp;</td>
+<td>1.000</td>
+<td>&nbsp;</td>
+<td class="rank1">1.0</td>
+<td>5.0</td>
+<td>4.0</td>
+<td class="rank1">1.0</td>
+<td>(18.0)</td>
+<td>29.0</td>
+<td>11.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>3</td>
+<td>J24</td>
+<td>J24</td>
+<td>Gold</td>
+<td>Janx Spirit</td>
+<td>IRL</td>
+<td>4191</td>
+<td>Tralee Bay Sailing Club</td>
+<td>? Loingsigh Tadhg</td>
+<td>&nbsp;</td>
+<td>1.000</td>
+<td>&nbsp;</td>
+<td>(9.0)</td>
+<td class="rank3">3.0</td>
+<td class="rank1">1.0</td>
+<td>4.0</td>
+<td>4.0</td>
+<td>21.0</td>
+<td>12.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>4</td>
+<td>J24</td>
+<td>J24</td>
+<td>Gold</td>
+<td>Jade</td>
+<td>IRL</td>
+<td>3109</td>
+<td>Wicklow Sailing Club</td>
+<td>Conor Haughton</td>
+<td>&nbsp;</td>
+<td>1.000</td>
+<td>&nbsp;</td>
+<td class="rank2">2.0</td>
+<td class="rank2">2.0</td>
+<td>8.0</td>
+<td class="rank3">3.0</td>
+<td>(16.0)</td>
+<td>31.0</td>
+<td>15.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>5</td>
+<td>J24</td>
+<td>J24</td>
+<td>Gold</td>
+<td>IL Riccio</td>
+<td>IRL</td>
+<td>5219</td>
+<td>Lough Erne Yacht Club</td>
+<td>JP Mccaldin</td>
+<td>&nbsp;</td>
+<td>1.000</td>
+<td>&nbsp;</td>
+<td>(7.0)</td>
+<td>7.0</td>
+<td class="rank2">2.0</td>
+<td>6.0</td>
+<td class="rank3">3.0</td>
+<td>25.0</td>
+<td>18.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>6</td>
+<td>J24</td>
+<td>J24</td>
+<td>Gold</td>
+<td>Hedgehog</td>
+<td>IRL</td>
+<td>4217</td>
+<td>Greystones Sailing Club</td>
+<td>Mark Usher</td>
+<td>&nbsp;</td>
+<td>1.000</td>
+<td>&nbsp;</td>
+<td>(12.0)</td>
+<td>6.0</td>
+<td class="rank3">3.0</td>
+<td>11.0</td>
+<td class="rank2">2.0</td>
+<td>34.0</td>
+<td>22.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>7</td>
+<td>J24</td>
+<td>J24</td>
+<td>Gold</td>
+<td>Jibe</td>
+<td>IRL</td>
+<td>5159</td>
+<td>Tralee Bay Sailing Club</td>
+<td>Fergus Kelliher</td>
+<td>&nbsp;</td>
+<td>1.000</td>
+<td>&nbsp;</td>
+<td>8.0</td>
+<td>4.0</td>
+<td>5.0</td>
+<td>5.0</td>
+<td>(9.0)</td>
+<td>31.0</td>
+<td>22.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>8</td>
+<td>J24</td>
+<td>J24</td>
+<td>Silver</td>
+<td>Kilcullen</td>
+<td>IRL</td>
+<td>680</td>
+<td>Howth Yacht Club</td>
+<td>HYC K25</td>
+<td>&nbsp;</td>
+<td>1.000</td>
+<td>&nbsp;</td>
+<td>5.0</td>
+<td>8.0</td>
+<td>(12.0)</td>
+<td>8.0</td>
+<td>11.0</td>
+<td>44.0</td>
+<td>32.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>9</td>
+<td>J24</td>
+<td>J24</td>
+<td>Gold</td>
+<td>Jedi</td>
+<td>IRL</td>
+<td>5067</td>
+<td>Sligo Yacht Club</td>
+<td>Colm O'Flaherty</td>
+<td>&nbsp;</td>
+<td>1.000</td>
+<td>&nbsp;</td>
+<td>(13.0)</td>
+<td>9.0</td>
+<td>9.0</td>
+<td>9.0</td>
+<td>6.0</td>
+<td>46.0</td>
+<td>33.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>10</td>
+<td>J24</td>
+<td>J24</td>
+<td>Gold</td>
+<td>Smugairle roin</td>
+<td>GBR</td>
+<td>4265</td>
+<td>ISA</td>
+<td>Diarmaid mullen</td>
+<td>&nbsp;</td>
+<td>1.000</td>
+<td>&nbsp;</td>
+<td class="rank3">3.0</td>
+<td>10.0</td>
+<td>11.0</td>
+<td>10.0</td>
+<td>(12.0)</td>
+<td>46.0</td>
+<td>34.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>11</td>
+<td>J24</td>
+<td>J24</td>
+<td>Gold</td>
+<td>Hung Jury</td>
+<td>IRL</td>
+<td>5278</td>
+<td>Sligo Yacht Club</td>
+<td>Brian Raftery</td>
+<td>&nbsp;</td>
+<td>1.000</td>
+<td>&nbsp;</td>
+<td>10.0</td>
+<td>(12.0)</td>
+<td>10.0</td>
+<td>7.0</td>
+<td>8.0</td>
+<td>47.0</td>
+<td>35.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>12</td>
+<td>J24</td>
+<td>J24</td>
+<td>Gold</td>
+<td>Crazy Horse</td>
+<td>IRL</td>
+<td>4533</td>
+<td>Lough Erne Yacht Club</td>
+<td>Luke McBride</td>
+<td>&nbsp;</td>
+<td>1.000</td>
+<td>&nbsp;</td>
+<td>11.0</td>
+<td>11.0</td>
+<td>7.0</td>
+<td>12.0</td>
+<td>(14.0)</td>
+<td>55.0</td>
+<td>41.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>13</td>
+<td>J24</td>
+<td>J24</td>
+<td>Silver</td>
+<td>Battling J</td>
+<td>IRL</td>
+<td>191</td>
+<td>Malahide Yacht Club</td>
+<td>Malahide Yacht Club</td>
+<td>&nbsp;</td>
+<td>1.000</td>
+<td>&nbsp;</td>
+<td>6.0</td>
+<td>14.0</td>
+<td>14.0</td>
+<td>14.0</td>
+<td>(15.0)</td>
+<td>63.0</td>
+<td>48.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>14</td>
+<td>J24</td>
+<td>J24</td>
+<td>Silver</td>
+<td>Jibberish</td>
+<td>IRL</td>
+<td>4384</td>
+<td>Clyc</td>
+<td>Brian Mc Conville</td>
+<td>&nbsp;</td>
+<td>1.000</td>
+<td>&nbsp;</td>
+<td>(15.0)</td>
+<td>13.0</td>
+<td>15.0</td>
+<td>15.0</td>
+<td>7.0</td>
+<td>65.0</td>
+<td>50.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>15</td>
+<td>J24</td>
+<td>J24</td>
+<td>Silver</td>
+<td>Lady Caroline</td>
+<td>IRL</td>
+<td>7272</td>
+<td>Sligo Yacht Club</td>
+<td>Sligo Yacht Club U25</td>
+<td>&nbsp;</td>
+<td>1.000</td>
+<td>&nbsp;</td>
+<td>14.0</td>
+<td>(15.0)</td>
+<td>13.0</td>
+<td>13.0</td>
+<td>13.0</td>
+<td>68.0</td>
+<td>53.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>16</td>
+<td>J24</td>
+<td>J24</td>
+<td>Silver</td>
+<td>Jaws</td>
+<td>IRL</td>
+<td>1183</td>
+<td>Malahide Yacht Club</td>
+<td>Colum McCaffrey</td>
+<td>&nbsp;</td>
+<td>1.000</td>
+<td>&nbsp;</td>
+<td>19.0</td>
+<td>16.0</td>
+<td>(21.0 PRP)</td>
+<td>16.0</td>
+<td>5.0</td>
+<td>77.0</td>
+<td>56.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>17</td>
+<td>J24</td>
+<td>J24</td>
+<td>Silver</td>
+<td>Printfix.ie</td>
+<td>IRL</td>
+<td>5072</td>
+<td>Sligo Yacht Club</td>
+<td>Owen Carton</td>
+<td>&nbsp;</td>
+<td>1.000</td>
+<td>&nbsp;</td>
+<td>16.0</td>
+<td>18.0</td>
+<td>17.0</td>
+<td>(22.0 DNC)</td>
+<td>17.0</td>
+<td>90.0</td>
+<td>68.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>18</td>
+<td>J24</td>
+<td>J24</td>
+<td>Silver</td>
+<td>Cool Jade</td>
+<td>IRL</td>
+<td>4212</td>
+<td>Malahide Sea Scouts</td>
+<td>Malahide Sea Scouts</td>
+<td>&nbsp;</td>
+<td>1.000</td>
+<td>&nbsp;</td>
+<td>(22.0 DNC)</td>
+<td>20.0</td>
+<td>22.0 RET</td>
+<td>17.0</td>
+<td>10.0</td>
+<td>91.0</td>
+<td>69.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>19</td>
+<td>J24</td>
+<td>J24</td>
+<td>Silver</td>
+<td>Billy Whizz</td>
+<td>GBR</td>
+<td>4084</td>
+<td>Malahide Yacht Club</td>
+<td>Malahide Yacht Club</td>
+<td>&nbsp;</td>
+<td>1.000</td>
+<td>&nbsp;</td>
+<td>17.0</td>
+<td>17.0</td>
+<td>16.0</td>
+<td>(19.0)</td>
+<td>19.0</td>
+<td>88.0</td>
+<td>69.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>20</td>
+<td>J24</td>
+<td>J24</td>
+<td>Silver</td>
+<td>Juvenile Delinquent</td>
+<td>&nbsp;</td>
+<td>Rush 2</td>
+<td>Rush Sailing Club</td>
+<td>Rush Sailing Club</td>
+<td>&nbsp;</td>
+<td>1.000</td>
+<td>&nbsp;</td>
+<td>18.0</td>
+<td>19.0</td>
+<td>19.0</td>
+<td>18.0</td>
+<td>(20.0)</td>
+<td>94.0</td>
+<td>74.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>21</td>
+<td>J24</td>
+<td>J24</td>
+<td>Silver</td>
+<td>Jelignite</td>
+<td>IRL</td>
+<td>4532</td>
+<td>Lough Ree yacht Club</td>
+<td>Finbarr Ryan</td>
+<td>&nbsp;</td>
+<td>1.000</td>
+<td>&nbsp;</td>
+<td>(22.0 DNC)</td>
+<td>22.0 DNC</td>
+<td>22.0 DNC</td>
+<td>22.0 DNC</td>
+<td>22.0 DNC</td>
+<td>110.0</td>
+<td>88.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r1j24">R1 - J24 Fleet&nbsp;-&nbsp;08/09/2023</h3>
+<div class="caption racecaption">
+Start: J24, Finishes: Place, Time: 13:00:00
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="14">
+<col class="rank" />
+<col class="bownumber" />
+<col class="fleet" />
+<col class="division" />
+<col class="boat" />
+<col class="nat" />
+<col class="sailno" />
+<col class="club" />
+<col class="helmname" />
+<col class="crewname" />
+<col class="rating" />
+<col class="newrating" />
+<col class="place" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Boat Class</th>
+<th>Fleet</th>
+<th>Division</th>
+<th>Boat Name</th>
+<th>Sail Prefix</th>
+<th>Sail No</th>
+<th>Club</th>
+<th>Owner Name</th>
+<th>ICRA grouping</th>
+<th>Rating</th>
+<th>NewRating</th>
+<th>Place</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>J24</td>
+<td>J24</td>
+<td>Gold</td>
+<td>KINSAILOR</td>
+<td>IRL</td>
+<td>4236</td>
+<td>Kinsale Yacht Club</td>
+<td>Kinsale Yacht Club</td>
+<td>&nbsp;</td>
+<td>1.000</td>
+<td>&nbsp;</td>
+<td>1</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>J24</td>
+<td>J24</td>
+<td>Gold</td>
+<td>Jade</td>
+<td>IRL</td>
+<td>3109</td>
+<td>Wicklow Sailing Club</td>
+<td>Conor Haughton</td>
+<td>&nbsp;</td>
+<td>1.000</td>
+<td>&nbsp;</td>
+<td>2</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>J24</td>
+<td>J24</td>
+<td>Gold</td>
+<td>Smugairle roin</td>
+<td>GBR</td>
+<td>4265</td>
+<td>ISA</td>
+<td>Diarmaid mullen</td>
+<td>&nbsp;</td>
+<td>1.000</td>
+<td>&nbsp;</td>
+<td>3</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>J24</td>
+<td>J24</td>
+<td>Gold</td>
+<td>Hard on Port</td>
+<td>IRL</td>
+<td>4794</td>
+<td>Bray Sailing Club</td>
+<td>Dave B Rory G Chris C Sean H</td>
+<td>&nbsp;</td>
+<td>1.000</td>
+<td>&nbsp;</td>
+<td>4</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>J24</td>
+<td>J24</td>
+<td>Silver</td>
+<td>Kilcullen</td>
+<td>IRL</td>
+<td>680</td>
+<td>Howth Yacht Club</td>
+<td>HYC K25</td>
+<td>&nbsp;</td>
+<td>1.000</td>
+<td>&nbsp;</td>
+<td>5</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>J24</td>
+<td>J24</td>
+<td>Silver</td>
+<td>Battling J</td>
+<td>IRL</td>
+<td>191</td>
+<td>Malahide Yacht Club</td>
+<td>Malahide Yacht Club</td>
+<td>&nbsp;</td>
+<td>1.000</td>
+<td>&nbsp;</td>
+<td>6</td>
+<td>6.0</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>J24</td>
+<td>J24</td>
+<td>Gold</td>
+<td>IL Riccio</td>
+<td>IRL</td>
+<td>5219</td>
+<td>Lough Erne Yacht Club</td>
+<td>JP Mccaldin</td>
+<td>&nbsp;</td>
+<td>1.000</td>
+<td>&nbsp;</td>
+<td>7</td>
+<td>7.0</td>
+</tr>
+<tr class="even racerow">
+<td>8</td>
+<td>J24</td>
+<td>J24</td>
+<td>Gold</td>
+<td>Jibe</td>
+<td>IRL</td>
+<td>5159</td>
+<td>Tralee Bay Sailing Club</td>
+<td>Fergus Kelliher</td>
+<td>&nbsp;</td>
+<td>1.000</td>
+<td>&nbsp;</td>
+<td>8</td>
+<td>8.0</td>
+</tr>
+<tr class="odd racerow">
+<td>9</td>
+<td>J24</td>
+<td>J24</td>
+<td>Gold</td>
+<td>Janx Spirit</td>
+<td>IRL</td>
+<td>4191</td>
+<td>Tralee Bay Sailing Club</td>
+<td>? Loingsigh Tadhg</td>
+<td>&nbsp;</td>
+<td>1.000</td>
+<td>&nbsp;</td>
+<td>9</td>
+<td>9.0</td>
+</tr>
+<tr class="even racerow">
+<td>10</td>
+<td>J24</td>
+<td>J24</td>
+<td>Gold</td>
+<td>Hung Jury</td>
+<td>IRL</td>
+<td>5278</td>
+<td>Sligo Yacht Club</td>
+<td>Brian Raftery</td>
+<td>&nbsp;</td>
+<td>1.000</td>
+<td>&nbsp;</td>
+<td>10</td>
+<td>10.0</td>
+</tr>
+<tr class="odd racerow">
+<td>11</td>
+<td>J24</td>
+<td>J24</td>
+<td>Gold</td>
+<td>Crazy Horse</td>
+<td>IRL</td>
+<td>4533</td>
+<td>Lough Erne Yacht Club</td>
+<td>Luke McBride</td>
+<td>&nbsp;</td>
+<td>1.000</td>
+<td>&nbsp;</td>
+<td>11</td>
+<td>11.0</td>
+</tr>
+<tr class="even racerow">
+<td>12</td>
+<td>J24</td>
+<td>J24</td>
+<td>Gold</td>
+<td>Hedgehog</td>
+<td>IRL</td>
+<td>4217</td>
+<td>Greystones Sailing Club</td>
+<td>Mark Usher</td>
+<td>&nbsp;</td>
+<td>1.000</td>
+<td>&nbsp;</td>
+<td>12</td>
+<td>12.0</td>
+</tr>
+<tr class="odd racerow">
+<td>13</td>
+<td>J24</td>
+<td>J24</td>
+<td>Gold</td>
+<td>Jedi</td>
+<td>IRL</td>
+<td>5067</td>
+<td>Sligo Yacht Club</td>
+<td>Colm O'Flaherty</td>
+<td>&nbsp;</td>
+<td>1.000</td>
+<td>&nbsp;</td>
+<td>13</td>
+<td>13.0</td>
+</tr>
+<tr class="even racerow">
+<td>14</td>
+<td>J24</td>
+<td>J24</td>
+<td>Silver</td>
+<td>Lady Caroline</td>
+<td>IRL</td>
+<td>7272</td>
+<td>Sligo Yacht Club</td>
+<td>Sligo Yacht Club U25</td>
+<td>&nbsp;</td>
+<td>1.000</td>
+<td>&nbsp;</td>
+<td>14</td>
+<td>14.0</td>
+</tr>
+<tr class="odd racerow">
+<td>15</td>
+<td>J24</td>
+<td>J24</td>
+<td>Silver</td>
+<td>Jibberish</td>
+<td>IRL</td>
+<td>4384</td>
+<td>Clyc</td>
+<td>Brian Mc Conville</td>
+<td>&nbsp;</td>
+<td>1.000</td>
+<td>&nbsp;</td>
+<td>16</td>
+<td>15.0</td>
+</tr>
+<tr class="even racerow">
+<td>16</td>
+<td>J24</td>
+<td>J24</td>
+<td>Silver</td>
+<td>Printfix.ie</td>
+<td>IRL</td>
+<td>5072</td>
+<td>Sligo Yacht Club</td>
+<td>Owen Carton</td>
+<td>&nbsp;</td>
+<td>1.000</td>
+<td>&nbsp;</td>
+<td>17</td>
+<td>16.0</td>
+</tr>
+<tr class="odd racerow">
+<td>17</td>
+<td>J24</td>
+<td>J24</td>
+<td>Silver</td>
+<td>Billy Whizz</td>
+<td>GBR</td>
+<td>4084</td>
+<td>Malahide Yacht Club</td>
+<td>Malahide Yacht Club</td>
+<td>&nbsp;</td>
+<td>1.000</td>
+<td>&nbsp;</td>
+<td>18</td>
+<td>17.0</td>
+</tr>
+<tr class="even racerow">
+<td>18</td>
+<td>J24</td>
+<td>J24</td>
+<td>Silver</td>
+<td>Juvenile Delinquent</td>
+<td>&nbsp;</td>
+<td>Rush 2</td>
+<td>Rush Sailing Club</td>
+<td>Rush Sailing Club</td>
+<td>&nbsp;</td>
+<td>1.000</td>
+<td>&nbsp;</td>
+<td>19</td>
+<td>18.0</td>
+</tr>
+<tr class="odd racerow">
+<td>19</td>
+<td>J24</td>
+<td>J24</td>
+<td>Silver</td>
+<td>Jaws</td>
+<td>IRL</td>
+<td>1183</td>
+<td>Malahide Yacht Club</td>
+<td>Colum McCaffrey</td>
+<td>&nbsp;</td>
+<td>1.000</td>
+<td>&nbsp;</td>
+<td>20</td>
+<td>19.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r2j24">Sat R1 - J24 Fleet&nbsp;-&nbsp;09/09/2023</h3>
+<div class="caption racecaption">
+Start: J24, Finishes: Place, Time: 13:00:00
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="14">
+<col class="rank" />
+<col class="bownumber" />
+<col class="fleet" />
+<col class="division" />
+<col class="boat" />
+<col class="nat" />
+<col class="sailno" />
+<col class="club" />
+<col class="helmname" />
+<col class="crewname" />
+<col class="rating" />
+<col class="newrating" />
+<col class="place" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Boat Class</th>
+<th>Fleet</th>
+<th>Division</th>
+<th>Boat Name</th>
+<th>Sail Prefix</th>
+<th>Sail No</th>
+<th>Club</th>
+<th>Owner Name</th>
+<th>ICRA grouping</th>
+<th>Rating</th>
+<th>NewRating</th>
+<th>Place</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>J24</td>
+<td>J24</td>
+<td>Gold</td>
+<td>Hard on Port</td>
+<td>IRL</td>
+<td>4794</td>
+<td>Bray Sailing Club</td>
+<td>Dave B Rory G Chris C Sean H</td>
+<td>&nbsp;</td>
+<td>1.000</td>
+<td>&nbsp;</td>
+<td>1</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>J24</td>
+<td>J24</td>
+<td>Gold</td>
+<td>Jade</td>
+<td>IRL</td>
+<td>3109</td>
+<td>Wicklow Sailing Club</td>
+<td>Conor Haughton</td>
+<td>&nbsp;</td>
+<td>1.000</td>
+<td>&nbsp;</td>
+<td>2</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>J24</td>
+<td>J24</td>
+<td>Gold</td>
+<td>Janx Spirit</td>
+<td>IRL</td>
+<td>4191</td>
+<td>Tralee Bay Sailing Club</td>
+<td>? Loingsigh Tadhg</td>
+<td>&nbsp;</td>
+<td>1.000</td>
+<td>&nbsp;</td>
+<td>3</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>J24</td>
+<td>J24</td>
+<td>Gold</td>
+<td>Jibe</td>
+<td>IRL</td>
+<td>5159</td>
+<td>Tralee Bay Sailing Club</td>
+<td>Fergus Kelliher</td>
+<td>&nbsp;</td>
+<td>1.000</td>
+<td>&nbsp;</td>
+<td>4</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>J24</td>
+<td>J24</td>
+<td>Gold</td>
+<td>KINSAILOR</td>
+<td>IRL</td>
+<td>4236</td>
+<td>Kinsale Yacht Club</td>
+<td>Kinsale Yacht Club</td>
+<td>&nbsp;</td>
+<td>1.000</td>
+<td>&nbsp;</td>
+<td>5</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>J24</td>
+<td>J24</td>
+<td>Gold</td>
+<td>Hedgehog</td>
+<td>IRL</td>
+<td>4217</td>
+<td>Greystones Sailing Club</td>
+<td>Mark Usher</td>
+<td>&nbsp;</td>
+<td>1.000</td>
+<td>&nbsp;</td>
+<td>6</td>
+<td>6.0</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>J24</td>
+<td>J24</td>
+<td>Gold</td>
+<td>IL Riccio</td>
+<td>IRL</td>
+<td>5219</td>
+<td>Lough Erne Yacht Club</td>
+<td>JP Mccaldin</td>
+<td>&nbsp;</td>
+<td>1.000</td>
+<td>&nbsp;</td>
+<td>7</td>
+<td>7.0</td>
+</tr>
+<tr class="even racerow">
+<td>8</td>
+<td>J24</td>
+<td>J24</td>
+<td>Silver</td>
+<td>Kilcullen</td>
+<td>IRL</td>
+<td>680</td>
+<td>Howth Yacht Club</td>
+<td>HYC K25</td>
+<td>&nbsp;</td>
+<td>1.000</td>
+<td>&nbsp;</td>
+<td>8</td>
+<td>8.0</td>
+</tr>
+<tr class="odd racerow">
+<td>9</td>
+<td>J24</td>
+<td>J24</td>
+<td>Gold</td>
+<td>Jedi</td>
+<td>IRL</td>
+<td>5067</td>
+<td>Sligo Yacht Club</td>
+<td>Colm O'Flaherty</td>
+<td>&nbsp;</td>
+<td>1.000</td>
+<td>&nbsp;</td>
+<td>9</td>
+<td>9.0</td>
+</tr>
+<tr class="even racerow">
+<td>10</td>
+<td>J24</td>
+<td>J24</td>
+<td>Gold</td>
+<td>Smugairle roin</td>
+<td>GBR</td>
+<td>4265</td>
+<td>ISA</td>
+<td>Diarmaid mullen</td>
+<td>&nbsp;</td>
+<td>1.000</td>
+<td>&nbsp;</td>
+<td>10</td>
+<td>10.0</td>
+</tr>
+<tr class="odd racerow">
+<td>11</td>
+<td>J24</td>
+<td>J24</td>
+<td>Gold</td>
+<td>Crazy Horse</td>
+<td>IRL</td>
+<td>4533</td>
+<td>Lough Erne Yacht Club</td>
+<td>Luke McBride</td>
+<td>&nbsp;</td>
+<td>1.000</td>
+<td>&nbsp;</td>
+<td>11</td>
+<td>11.0</td>
+</tr>
+<tr class="even racerow">
+<td>12</td>
+<td>J24</td>
+<td>J24</td>
+<td>Gold</td>
+<td>Hung Jury</td>
+<td>IRL</td>
+<td>5278</td>
+<td>Sligo Yacht Club</td>
+<td>Brian Raftery</td>
+<td>&nbsp;</td>
+<td>1.000</td>
+<td>&nbsp;</td>
+<td>12</td>
+<td>12.0</td>
+</tr>
+<tr class="odd racerow">
+<td>13</td>
+<td>J24</td>
+<td>J24</td>
+<td>Silver</td>
+<td>Jibberish</td>
+<td>IRL</td>
+<td>4384</td>
+<td>Clyc</td>
+<td>Brian Mc Conville</td>
+<td>&nbsp;</td>
+<td>1.000</td>
+<td>&nbsp;</td>
+<td>13</td>
+<td>13.0</td>
+</tr>
+<tr class="even racerow">
+<td>14</td>
+<td>J24</td>
+<td>J24</td>
+<td>Silver</td>
+<td>Battling J</td>
+<td>IRL</td>
+<td>191</td>
+<td>Malahide Yacht Club</td>
+<td>Malahide Yacht Club</td>
+<td>&nbsp;</td>
+<td>1.000</td>
+<td>&nbsp;</td>
+<td>14</td>
+<td>14.0</td>
+</tr>
+<tr class="odd racerow">
+<td>15</td>
+<td>J24</td>
+<td>J24</td>
+<td>Silver</td>
+<td>Lady Caroline</td>
+<td>IRL</td>
+<td>7272</td>
+<td>Sligo Yacht Club</td>
+<td>Sligo Yacht Club U25</td>
+<td>&nbsp;</td>
+<td>1.000</td>
+<td>&nbsp;</td>
+<td>15</td>
+<td>15.0</td>
+</tr>
+<tr class="even racerow">
+<td>16</td>
+<td>J24</td>
+<td>J24</td>
+<td>Silver</td>
+<td>Jaws</td>
+<td>IRL</td>
+<td>1183</td>
+<td>Malahide Yacht Club</td>
+<td>Colum McCaffrey</td>
+<td>&nbsp;</td>
+<td>1.000</td>
+<td>&nbsp;</td>
+<td>16</td>
+<td>16.0</td>
+</tr>
+<tr class="odd racerow">
+<td>17</td>
+<td>J24</td>
+<td>J24</td>
+<td>Silver</td>
+<td>Billy Whizz</td>
+<td>GBR</td>
+<td>4084</td>
+<td>Malahide Yacht Club</td>
+<td>Malahide Yacht Club</td>
+<td>&nbsp;</td>
+<td>1.000</td>
+<td>&nbsp;</td>
+<td>17</td>
+<td>17.0</td>
+</tr>
+<tr class="even racerow">
+<td>18</td>
+<td>J24</td>
+<td>J24</td>
+<td>Silver</td>
+<td>Printfix.ie</td>
+<td>IRL</td>
+<td>5072</td>
+<td>Sligo Yacht Club</td>
+<td>Owen Carton</td>
+<td>&nbsp;</td>
+<td>1.000</td>
+<td>&nbsp;</td>
+<td>18</td>
+<td>18.0</td>
+</tr>
+<tr class="odd racerow">
+<td>19</td>
+<td>J24</td>
+<td>J24</td>
+<td>Silver</td>
+<td>Juvenile Delinquent</td>
+<td>&nbsp;</td>
+<td>Rush 2</td>
+<td>Rush Sailing Club</td>
+<td>Rush Sailing Club</td>
+<td>&nbsp;</td>
+<td>1.000</td>
+<td>&nbsp;</td>
+<td>19</td>
+<td>19.0</td>
+</tr>
+<tr class="even racerow">
+<td>20</td>
+<td>J24</td>
+<td>J24</td>
+<td>Silver</td>
+<td>Cool Jade</td>
+<td>IRL</td>
+<td>4212</td>
+<td>Malahide Sea Scouts</td>
+<td>Malahide Sea Scouts</td>
+<td>&nbsp;</td>
+<td>1.000</td>
+<td>&nbsp;</td>
+<td>20</td>
+<td>20.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r3j24">Sat R2 - J24 Fleet&nbsp;-&nbsp;09/09/2023</h3>
+<div class="caption racecaption">
+Start: J24, Finishes: Place, Time: 14:02:00
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="14">
+<col class="rank" />
+<col class="bownumber" />
+<col class="fleet" />
+<col class="division" />
+<col class="boat" />
+<col class="nat" />
+<col class="sailno" />
+<col class="club" />
+<col class="helmname" />
+<col class="crewname" />
+<col class="rating" />
+<col class="newrating" />
+<col class="place" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Boat Class</th>
+<th>Fleet</th>
+<th>Division</th>
+<th>Boat Name</th>
+<th>Sail Prefix</th>
+<th>Sail No</th>
+<th>Club</th>
+<th>Owner Name</th>
+<th>ICRA grouping</th>
+<th>Rating</th>
+<th>NewRating</th>
+<th>Place</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>J24</td>
+<td>J24</td>
+<td>Gold</td>
+<td>Janx Spirit</td>
+<td>IRL</td>
+<td>4191</td>
+<td>Tralee Bay Sailing Club</td>
+<td>? Loingsigh Tadhg</td>
+<td>&nbsp;</td>
+<td>1.000</td>
+<td>&nbsp;</td>
+<td>1</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>J24</td>
+<td>J24</td>
+<td>Gold</td>
+<td>IL Riccio</td>
+<td>IRL</td>
+<td>5219</td>
+<td>Lough Erne Yacht Club</td>
+<td>JP Mccaldin</td>
+<td>&nbsp;</td>
+<td>1.000</td>
+<td>&nbsp;</td>
+<td>2</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>J24</td>
+<td>J24</td>
+<td>Gold</td>
+<td>Hedgehog</td>
+<td>IRL</td>
+<td>4217</td>
+<td>Greystones Sailing Club</td>
+<td>Mark Usher</td>
+<td>&nbsp;</td>
+<td>1.000</td>
+<td>&nbsp;</td>
+<td>3</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>J24</td>
+<td>J24</td>
+<td>Gold</td>
+<td>KINSAILOR</td>
+<td>IRL</td>
+<td>4236</td>
+<td>Kinsale Yacht Club</td>
+<td>Kinsale Yacht Club</td>
+<td>&nbsp;</td>
+<td>1.000</td>
+<td>&nbsp;</td>
+<td>4</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>J24</td>
+<td>J24</td>
+<td>Gold</td>
+<td>Jibe</td>
+<td>IRL</td>
+<td>5159</td>
+<td>Tralee Bay Sailing Club</td>
+<td>Fergus Kelliher</td>
+<td>&nbsp;</td>
+<td>1.000</td>
+<td>&nbsp;</td>
+<td>5</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>J24</td>
+<td>J24</td>
+<td>Gold</td>
+<td>Hard on Port</td>
+<td>IRL</td>
+<td>4794</td>
+<td>Bray Sailing Club</td>
+<td>Dave B Rory G Chris C Sean H</td>
+<td>&nbsp;</td>
+<td>1.000</td>
+<td>&nbsp;</td>
+<td>6</td>
+<td>6.0</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>J24</td>
+<td>J24</td>
+<td>Gold</td>
+<td>Crazy Horse</td>
+<td>IRL</td>
+<td>4533</td>
+<td>Lough Erne Yacht Club</td>
+<td>Luke McBride</td>
+<td>&nbsp;</td>
+<td>1.000</td>
+<td>&nbsp;</td>
+<td>7</td>
+<td>7.0</td>
+</tr>
+<tr class="even racerow">
+<td>8</td>
+<td>J24</td>
+<td>J24</td>
+<td>Gold</td>
+<td>Jade</td>
+<td>IRL</td>
+<td>3109</td>
+<td>Wicklow Sailing Club</td>
+<td>Conor Haughton</td>
+<td>&nbsp;</td>
+<td>1.000</td>
+<td>&nbsp;</td>
+<td>8</td>
+<td>8.0</td>
+</tr>
+<tr class="odd racerow">
+<td>9</td>
+<td>J24</td>
+<td>J24</td>
+<td>Gold</td>
+<td>Jedi</td>
+<td>IRL</td>
+<td>5067</td>
+<td>Sligo Yacht Club</td>
+<td>Colm O'Flaherty</td>
+<td>&nbsp;</td>
+<td>1.000</td>
+<td>&nbsp;</td>
+<td>9</td>
+<td>9.0</td>
+</tr>
+<tr class="even racerow">
+<td>10</td>
+<td>J24</td>
+<td>J24</td>
+<td>Gold</td>
+<td>Hung Jury</td>
+<td>IRL</td>
+<td>5278</td>
+<td>Sligo Yacht Club</td>
+<td>Brian Raftery</td>
+<td>&nbsp;</td>
+<td>1.000</td>
+<td>&nbsp;</td>
+<td>10</td>
+<td>10.0</td>
+</tr>
+<tr class="odd racerow">
+<td>11</td>
+<td>J24</td>
+<td>J24</td>
+<td>Gold</td>
+<td>Smugairle roin</td>
+<td>GBR</td>
+<td>4265</td>
+<td>ISA</td>
+<td>Diarmaid mullen</td>
+<td>&nbsp;</td>
+<td>1.000</td>
+<td>&nbsp;</td>
+<td>11</td>
+<td>11.0</td>
+</tr>
+<tr class="even racerow">
+<td>12</td>
+<td>J24</td>
+<td>J24</td>
+<td>Silver</td>
+<td>Kilcullen</td>
+<td>IRL</td>
+<td>680</td>
+<td>Howth Yacht Club</td>
+<td>HYC K25</td>
+<td>&nbsp;</td>
+<td>1.000</td>
+<td>&nbsp;</td>
+<td>12</td>
+<td>12.0</td>
+</tr>
+<tr class="odd racerow">
+<td>13</td>
+<td>J24</td>
+<td>J24</td>
+<td>Silver</td>
+<td>Lady Caroline</td>
+<td>IRL</td>
+<td>7272</td>
+<td>Sligo Yacht Club</td>
+<td>Sligo Yacht Club U25</td>
+<td>&nbsp;</td>
+<td>1.000</td>
+<td>&nbsp;</td>
+<td>13</td>
+<td>13.0</td>
+</tr>
+<tr class="even racerow">
+<td>14</td>
+<td>J24</td>
+<td>J24</td>
+<td>Silver</td>
+<td>Battling J</td>
+<td>IRL</td>
+<td>191</td>
+<td>Malahide Yacht Club</td>
+<td>Malahide Yacht Club</td>
+<td>&nbsp;</td>
+<td>1.000</td>
+<td>&nbsp;</td>
+<td>14</td>
+<td>14.0</td>
+</tr>
+<tr class="odd racerow">
+<td>15</td>
+<td>J24</td>
+<td>J24</td>
+<td>Silver</td>
+<td>Jibberish</td>
+<td>IRL</td>
+<td>4384</td>
+<td>Clyc</td>
+<td>Brian Mc Conville</td>
+<td>&nbsp;</td>
+<td>1.000</td>
+<td>&nbsp;</td>
+<td>15</td>
+<td>15.0</td>
+</tr>
+<tr class="even racerow">
+<td>16</td>
+<td>J24</td>
+<td>J24</td>
+<td>Silver</td>
+<td>Billy Whizz</td>
+<td>GBR</td>
+<td>4084</td>
+<td>Malahide Yacht Club</td>
+<td>Malahide Yacht Club</td>
+<td>&nbsp;</td>
+<td>1.000</td>
+<td>&nbsp;</td>
+<td>16</td>
+<td>16.0</td>
+</tr>
+<tr class="odd racerow">
+<td>17</td>
+<td>J24</td>
+<td>J24</td>
+<td>Silver</td>
+<td>Printfix.ie</td>
+<td>IRL</td>
+<td>5072</td>
+<td>Sligo Yacht Club</td>
+<td>Owen Carton</td>
+<td>&nbsp;</td>
+<td>1.000</td>
+<td>&nbsp;</td>
+<td>17</td>
+<td>17.0</td>
+</tr>
+<tr class="even racerow">
+<td>18</td>
+<td>J24</td>
+<td>J24</td>
+<td>Silver</td>
+<td>Juvenile Delinquent</td>
+<td>&nbsp;</td>
+<td>Rush 2</td>
+<td>Rush Sailing Club</td>
+<td>Rush Sailing Club</td>
+<td>&nbsp;</td>
+<td>1.000</td>
+<td>&nbsp;</td>
+<td>19</td>
+<td>19.0</td>
+</tr>
+<tr class="odd racerow">
+<td>19</td>
+<td>J24</td>
+<td>J24</td>
+<td>Silver</td>
+<td>Jaws</td>
+<td>IRL</td>
+<td>1183</td>
+<td>Malahide Yacht Club</td>
+<td>Colum McCaffrey</td>
+<td>&nbsp;</td>
+<td>1.000</td>
+<td>&nbsp;</td>
+<td>PRP</td>
+<td>21.0</td>
+</tr>
+<tr class="even racerow">
+<td>20</td>
+<td>J24</td>
+<td>J24</td>
+<td>Silver</td>
+<td>Cool Jade</td>
+<td>IRL</td>
+<td>4212</td>
+<td>Malahide Sea Scouts</td>
+<td>Malahide Sea Scouts</td>
+<td>&nbsp;</td>
+<td>1.000</td>
+<td>&nbsp;</td>
+<td>RET</td>
+<td>22.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r4j24">Sat R3 - J24 Fleet&nbsp;-&nbsp;09/09/2023</h3>
+<div class="caption racecaption">
+Start: J24, Finishes: Place, Time: 15:00:00
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="14">
+<col class="rank" />
+<col class="bownumber" />
+<col class="fleet" />
+<col class="division" />
+<col class="boat" />
+<col class="nat" />
+<col class="sailno" />
+<col class="club" />
+<col class="helmname" />
+<col class="crewname" />
+<col class="rating" />
+<col class="newrating" />
+<col class="place" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Boat Class</th>
+<th>Fleet</th>
+<th>Division</th>
+<th>Boat Name</th>
+<th>Sail Prefix</th>
+<th>Sail No</th>
+<th>Club</th>
+<th>Owner Name</th>
+<th>ICRA grouping</th>
+<th>Rating</th>
+<th>NewRating</th>
+<th>Place</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>J24</td>
+<td>J24</td>
+<td>Gold</td>
+<td>KINSAILOR</td>
+<td>IRL</td>
+<td>4236</td>
+<td>Kinsale Yacht Club</td>
+<td>Kinsale Yacht Club</td>
+<td>&nbsp;</td>
+<td>1.000</td>
+<td>&nbsp;</td>
+<td>1</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>J24</td>
+<td>J24</td>
+<td>Gold</td>
+<td>Hard on Port</td>
+<td>IRL</td>
+<td>4794</td>
+<td>Bray Sailing Club</td>
+<td>Dave B Rory G Chris C Sean H</td>
+<td>&nbsp;</td>
+<td>1.000</td>
+<td>&nbsp;</td>
+<td>2</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>J24</td>
+<td>J24</td>
+<td>Gold</td>
+<td>Jade</td>
+<td>IRL</td>
+<td>3109</td>
+<td>Wicklow Sailing Club</td>
+<td>Conor Haughton</td>
+<td>&nbsp;</td>
+<td>1.000</td>
+<td>&nbsp;</td>
+<td>3</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>J24</td>
+<td>J24</td>
+<td>Gold</td>
+<td>Janx Spirit</td>
+<td>IRL</td>
+<td>4191</td>
+<td>Tralee Bay Sailing Club</td>
+<td>? Loingsigh Tadhg</td>
+<td>&nbsp;</td>
+<td>1.000</td>
+<td>&nbsp;</td>
+<td>4</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>J24</td>
+<td>J24</td>
+<td>Gold</td>
+<td>Jibe</td>
+<td>IRL</td>
+<td>5159</td>
+<td>Tralee Bay Sailing Club</td>
+<td>Fergus Kelliher</td>
+<td>&nbsp;</td>
+<td>1.000</td>
+<td>&nbsp;</td>
+<td>5</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>J24</td>
+<td>J24</td>
+<td>Gold</td>
+<td>IL Riccio</td>
+<td>IRL</td>
+<td>5219</td>
+<td>Lough Erne Yacht Club</td>
+<td>JP Mccaldin</td>
+<td>&nbsp;</td>
+<td>1.000</td>
+<td>&nbsp;</td>
+<td>6</td>
+<td>6.0</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>J24</td>
+<td>J24</td>
+<td>Gold</td>
+<td>Hung Jury</td>
+<td>IRL</td>
+<td>5278</td>
+<td>Sligo Yacht Club</td>
+<td>Brian Raftery</td>
+<td>&nbsp;</td>
+<td>1.000</td>
+<td>&nbsp;</td>
+<td>7</td>
+<td>7.0</td>
+</tr>
+<tr class="even racerow">
+<td>8</td>
+<td>J24</td>
+<td>J24</td>
+<td>Silver</td>
+<td>Kilcullen</td>
+<td>IRL</td>
+<td>680</td>
+<td>Howth Yacht Club</td>
+<td>HYC K25</td>
+<td>&nbsp;</td>
+<td>1.000</td>
+<td>&nbsp;</td>
+<td>8</td>
+<td>8.0</td>
+</tr>
+<tr class="odd racerow">
+<td>9</td>
+<td>J24</td>
+<td>J24</td>
+<td>Gold</td>
+<td>Jedi</td>
+<td>IRL</td>
+<td>5067</td>
+<td>Sligo Yacht Club</td>
+<td>Colm O'Flaherty</td>
+<td>&nbsp;</td>
+<td>1.000</td>
+<td>&nbsp;</td>
+<td>9</td>
+<td>9.0</td>
+</tr>
+<tr class="even racerow">
+<td>10</td>
+<td>J24</td>
+<td>J24</td>
+<td>Gold</td>
+<td>Smugairle roin</td>
+<td>GBR</td>
+<td>4265</td>
+<td>ISA</td>
+<td>Diarmaid mullen</td>
+<td>&nbsp;</td>
+<td>1.000</td>
+<td>&nbsp;</td>
+<td>10</td>
+<td>10.0</td>
+</tr>
+<tr class="odd racerow">
+<td>11</td>
+<td>J24</td>
+<td>J24</td>
+<td>Gold</td>
+<td>Hedgehog</td>
+<td>IRL</td>
+<td>4217</td>
+<td>Greystones Sailing Club</td>
+<td>Mark Usher</td>
+<td>&nbsp;</td>
+<td>1.000</td>
+<td>&nbsp;</td>
+<td>11</td>
+<td>11.0</td>
+</tr>
+<tr class="even racerow">
+<td>12</td>
+<td>J24</td>
+<td>J24</td>
+<td>Gold</td>
+<td>Crazy Horse</td>
+<td>IRL</td>
+<td>4533</td>
+<td>Lough Erne Yacht Club</td>
+<td>Luke McBride</td>
+<td>&nbsp;</td>
+<td>1.000</td>
+<td>&nbsp;</td>
+<td>12</td>
+<td>12.0</td>
+</tr>
+<tr class="odd racerow">
+<td>13</td>
+<td>J24</td>
+<td>J24</td>
+<td>Silver</td>
+<td>Lady Caroline</td>
+<td>IRL</td>
+<td>7272</td>
+<td>Sligo Yacht Club</td>
+<td>Sligo Yacht Club U25</td>
+<td>&nbsp;</td>
+<td>1.000</td>
+<td>&nbsp;</td>
+<td>13</td>
+<td>13.0</td>
+</tr>
+<tr class="even racerow">
+<td>14</td>
+<td>J24</td>
+<td>J24</td>
+<td>Silver</td>
+<td>Battling J</td>
+<td>IRL</td>
+<td>191</td>
+<td>Malahide Yacht Club</td>
+<td>Malahide Yacht Club</td>
+<td>&nbsp;</td>
+<td>1.000</td>
+<td>&nbsp;</td>
+<td>14</td>
+<td>14.0</td>
+</tr>
+<tr class="odd racerow">
+<td>15</td>
+<td>J24</td>
+<td>J24</td>
+<td>Silver</td>
+<td>Jibberish</td>
+<td>IRL</td>
+<td>4384</td>
+<td>Clyc</td>
+<td>Brian Mc Conville</td>
+<td>&nbsp;</td>
+<td>1.000</td>
+<td>&nbsp;</td>
+<td>15</td>
+<td>15.0</td>
+</tr>
+<tr class="even racerow">
+<td>16</td>
+<td>J24</td>
+<td>J24</td>
+<td>Silver</td>
+<td>Jaws</td>
+<td>IRL</td>
+<td>1183</td>
+<td>Malahide Yacht Club</td>
+<td>Colum McCaffrey</td>
+<td>&nbsp;</td>
+<td>1.000</td>
+<td>&nbsp;</td>
+<td>16</td>
+<td>16.0</td>
+</tr>
+<tr class="odd racerow">
+<td>17</td>
+<td>J24</td>
+<td>J24</td>
+<td>Silver</td>
+<td>Cool Jade</td>
+<td>IRL</td>
+<td>4212</td>
+<td>Malahide Sea Scouts</td>
+<td>Malahide Sea Scouts</td>
+<td>&nbsp;</td>
+<td>1.000</td>
+<td>&nbsp;</td>
+<td>17</td>
+<td>17.0</td>
+</tr>
+<tr class="even racerow">
+<td>18</td>
+<td>J24</td>
+<td>J24</td>
+<td>Silver</td>
+<td>Juvenile Delinquent</td>
+<td>&nbsp;</td>
+<td>Rush 2</td>
+<td>Rush Sailing Club</td>
+<td>Rush Sailing Club</td>
+<td>&nbsp;</td>
+<td>1.000</td>
+<td>&nbsp;</td>
+<td>18</td>
+<td>18.0</td>
+</tr>
+<tr class="odd racerow">
+<td>19</td>
+<td>J24</td>
+<td>J24</td>
+<td>Silver</td>
+<td>Billy Whizz</td>
+<td>GBR</td>
+<td>4084</td>
+<td>Malahide Yacht Club</td>
+<td>Malahide Yacht Club</td>
+<td>&nbsp;</td>
+<td>1.000</td>
+<td>&nbsp;</td>
+<td>19</td>
+<td>19.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r5j24">Sat R4 - J24 Fleet&nbsp;-&nbsp;09/09/2023</h3>
+<div class="caption racecaption">
+Start: J24, Finishes: Place, Time: 16:00:00
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="14">
+<col class="rank" />
+<col class="bownumber" />
+<col class="fleet" />
+<col class="division" />
+<col class="boat" />
+<col class="nat" />
+<col class="sailno" />
+<col class="club" />
+<col class="helmname" />
+<col class="crewname" />
+<col class="rating" />
+<col class="newrating" />
+<col class="place" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Boat Class</th>
+<th>Fleet</th>
+<th>Division</th>
+<th>Boat Name</th>
+<th>Sail Prefix</th>
+<th>Sail No</th>
+<th>Club</th>
+<th>Owner Name</th>
+<th>ICRA grouping</th>
+<th>Rating</th>
+<th>NewRating</th>
+<th>Place</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>J24</td>
+<td>J24</td>
+<td>Gold</td>
+<td>Hard on Port</td>
+<td>IRL</td>
+<td>4794</td>
+<td>Bray Sailing Club</td>
+<td>Dave B Rory G Chris C Sean H</td>
+<td>&nbsp;</td>
+<td>1.000</td>
+<td>&nbsp;</td>
+<td>1</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>J24</td>
+<td>J24</td>
+<td>Gold</td>
+<td>Hedgehog</td>
+<td>IRL</td>
+<td>4217</td>
+<td>Greystones Sailing Club</td>
+<td>Mark Usher</td>
+<td>&nbsp;</td>
+<td>1.000</td>
+<td>&nbsp;</td>
+<td>2</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>J24</td>
+<td>J24</td>
+<td>Gold</td>
+<td>IL Riccio</td>
+<td>IRL</td>
+<td>5219</td>
+<td>Lough Erne Yacht Club</td>
+<td>JP Mccaldin</td>
+<td>&nbsp;</td>
+<td>1.000</td>
+<td>&nbsp;</td>
+<td>3</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>J24</td>
+<td>J24</td>
+<td>Gold</td>
+<td>Janx Spirit</td>
+<td>IRL</td>
+<td>4191</td>
+<td>Tralee Bay Sailing Club</td>
+<td>? Loingsigh Tadhg</td>
+<td>&nbsp;</td>
+<td>1.000</td>
+<td>&nbsp;</td>
+<td>4</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>J24</td>
+<td>J24</td>
+<td>Silver</td>
+<td>Jaws</td>
+<td>IRL</td>
+<td>1183</td>
+<td>Malahide Yacht Club</td>
+<td>Colum McCaffrey</td>
+<td>&nbsp;</td>
+<td>1.000</td>
+<td>&nbsp;</td>
+<td>5</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>J24</td>
+<td>J24</td>
+<td>Gold</td>
+<td>Jedi</td>
+<td>IRL</td>
+<td>5067</td>
+<td>Sligo Yacht Club</td>
+<td>Colm O'Flaherty</td>
+<td>&nbsp;</td>
+<td>1.000</td>
+<td>&nbsp;</td>
+<td>6</td>
+<td>6.0</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>J24</td>
+<td>J24</td>
+<td>Silver</td>
+<td>Jibberish</td>
+<td>IRL</td>
+<td>4384</td>
+<td>Clyc</td>
+<td>Brian Mc Conville</td>
+<td>&nbsp;</td>
+<td>1.000</td>
+<td>&nbsp;</td>
+<td>7</td>
+<td>7.0</td>
+</tr>
+<tr class="even racerow">
+<td>8</td>
+<td>J24</td>
+<td>J24</td>
+<td>Gold</td>
+<td>Hung Jury</td>
+<td>IRL</td>
+<td>5278</td>
+<td>Sligo Yacht Club</td>
+<td>Brian Raftery</td>
+<td>&nbsp;</td>
+<td>1.000</td>
+<td>&nbsp;</td>
+<td>8</td>
+<td>8.0</td>
+</tr>
+<tr class="odd racerow">
+<td>9</td>
+<td>J24</td>
+<td>J24</td>
+<td>Gold</td>
+<td>Jibe</td>
+<td>IRL</td>
+<td>5159</td>
+<td>Tralee Bay Sailing Club</td>
+<td>Fergus Kelliher</td>
+<td>&nbsp;</td>
+<td>1.000</td>
+<td>&nbsp;</td>
+<td>9</td>
+<td>9.0</td>
+</tr>
+<tr class="even racerow">
+<td>10</td>
+<td>J24</td>
+<td>J24</td>
+<td>Silver</td>
+<td>Cool Jade</td>
+<td>IRL</td>
+<td>4212</td>
+<td>Malahide Sea Scouts</td>
+<td>Malahide Sea Scouts</td>
+<td>&nbsp;</td>
+<td>1.000</td>
+<td>&nbsp;</td>
+<td>10</td>
+<td>10.0</td>
+</tr>
+<tr class="odd racerow">
+<td>11</td>
+<td>J24</td>
+<td>J24</td>
+<td>Silver</td>
+<td>Kilcullen</td>
+<td>IRL</td>
+<td>680</td>
+<td>Howth Yacht Club</td>
+<td>HYC K25</td>
+<td>&nbsp;</td>
+<td>1.000</td>
+<td>&nbsp;</td>
+<td>11</td>
+<td>11.0</td>
+</tr>
+<tr class="even racerow">
+<td>12</td>
+<td>J24</td>
+<td>J24</td>
+<td>Gold</td>
+<td>Smugairle roin</td>
+<td>GBR</td>
+<td>4265</td>
+<td>ISA</td>
+<td>Diarmaid mullen</td>
+<td>&nbsp;</td>
+<td>1.000</td>
+<td>&nbsp;</td>
+<td>12</td>
+<td>12.0</td>
+</tr>
+<tr class="odd racerow">
+<td>13</td>
+<td>J24</td>
+<td>J24</td>
+<td>Silver</td>
+<td>Lady Caroline</td>
+<td>IRL</td>
+<td>7272</td>
+<td>Sligo Yacht Club</td>
+<td>Sligo Yacht Club U25</td>
+<td>&nbsp;</td>
+<td>1.000</td>
+<td>&nbsp;</td>
+<td>13</td>
+<td>13.0</td>
+</tr>
+<tr class="even racerow">
+<td>14</td>
+<td>J24</td>
+<td>J24</td>
+<td>Gold</td>
+<td>Crazy Horse</td>
+<td>IRL</td>
+<td>4533</td>
+<td>Lough Erne Yacht Club</td>
+<td>Luke McBride</td>
+<td>&nbsp;</td>
+<td>1.000</td>
+<td>&nbsp;</td>
+<td>14</td>
+<td>14.0</td>
+</tr>
+<tr class="odd racerow">
+<td>15</td>
+<td>J24</td>
+<td>J24</td>
+<td>Silver</td>
+<td>Battling J</td>
+<td>IRL</td>
+<td>191</td>
+<td>Malahide Yacht Club</td>
+<td>Malahide Yacht Club</td>
+<td>&nbsp;</td>
+<td>1.000</td>
+<td>&nbsp;</td>
+<td>15</td>
+<td>15.0</td>
+</tr>
+<tr class="even racerow">
+<td>16</td>
+<td>J24</td>
+<td>J24</td>
+<td>Gold</td>
+<td>Jade</td>
+<td>IRL</td>
+<td>3109</td>
+<td>Wicklow Sailing Club</td>
+<td>Conor Haughton</td>
+<td>&nbsp;</td>
+<td>1.000</td>
+<td>&nbsp;</td>
+<td>16</td>
+<td>16.0</td>
+</tr>
+<tr class="odd racerow">
+<td>17</td>
+<td>J24</td>
+<td>J24</td>
+<td>Silver</td>
+<td>Printfix.ie</td>
+<td>IRL</td>
+<td>5072</td>
+<td>Sligo Yacht Club</td>
+<td>Owen Carton</td>
+<td>&nbsp;</td>
+<td>1.000</td>
+<td>&nbsp;</td>
+<td>17</td>
+<td>17.0</td>
+</tr>
+<tr class="even racerow">
+<td>18</td>
+<td>J24</td>
+<td>J24</td>
+<td>Gold</td>
+<td>KINSAILOR</td>
+<td>IRL</td>
+<td>4236</td>
+<td>Kinsale Yacht Club</td>
+<td>Kinsale Yacht Club</td>
+<td>&nbsp;</td>
+<td>1.000</td>
+<td>&nbsp;</td>
+<td>18</td>
+<td>18.0</td>
+</tr>
+<tr class="odd racerow">
+<td>19</td>
+<td>J24</td>
+<td>J24</td>
+<td>Silver</td>
+<td>Billy Whizz</td>
+<td>GBR</td>
+<td>4084</td>
+<td>Malahide Yacht Club</td>
+<td>Malahide Yacht Club</td>
+<td>&nbsp;</td>
+<td>1.000</td>
+<td>&nbsp;</td>
+<td>19</td>
+<td>19.0</td>
+</tr>
+<tr class="even racerow">
+<td>20</td>
+<td>J24</td>
+<td>J24</td>
+<td>Silver</td>
+<td>Juvenile Delinquent</td>
+<td>&nbsp;</td>
+<td>Rush 2</td>
+<td>Rush Sailing Club</td>
+<td>Rush Sailing Club</td>
+<td>&nbsp;</td>
+<td>1.000</td>
+<td>&nbsp;</td>
+<td>20</td>
+<td>20.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="codestitle">Scoring codes used</h3>
+<table class="codestable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="3"><col class="code" /><col class="description" />
+<col class="points" />
+</colgroup>
+<tr class="titlerow"><th>Code</th><th>Description</th>
+<th>Points</th>
+</tr>
+<tr class="odd coderow"><td>DNC</td><td>Did not come to the starting area</td>
+<td>22</td>
+</tr>
+<tr class="even coderow"><td>PRP</td><td>Post Race Penalty of 3 points</td>
+<td>21</td>
+</tr>
+<tr class="odd coderow"><td>RET</td><td>Retired</td>
+<td>22</td>
+</tr>
+</table>
+
+<p class="hardleft"><a href="http://cruiserracing.ie/icranats">cruiserracing.ie/icranats</a><br /><a href="mailto:"></a></p>
+<p class="hardright"><a href="http://cruiserracing.ie/icranats">cruiserracing.ie/icranats</a><br /><a href="mailto:"></a></p>
+<p>Sailwave Scoring Software 2.31.00<br /><a href="http://www.sailwave.com">www.sailwave.com</a></p>
+
+</div>
+
+<footer>
+</footer>
+
+<div id="scrollbottom"></div>
+
+</body>
+</html>
+
+

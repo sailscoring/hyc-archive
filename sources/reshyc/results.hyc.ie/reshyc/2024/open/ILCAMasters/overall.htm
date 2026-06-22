@@ -1,0 +1,3793 @@
+
+
+
+<!doctype html>
+
+<head>
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta http-equiv="Cache-control" content="no-cache">
+<meta name="description" content="sailwave results">
+<meta name="viewport" content="width=device-width">
+
+<title>Sailwave results for ILCA Masters at Howth Yacht Club 2024</title>
+
+<style type="text/css">
+body {font: 72% arial, helvetica, sans-serif; text-align: center;}
+.hardleft  {text-align: left; float: left;  margin: 15px 0 15px 25px;}
+.hardright {text-align: right; float: right; margin: 15px 25px 15px 0;}
+table {text-align: left; margin: 0px auto 30px auto; font-size: 1em; border-collapse: collapse; border: 1px #fff solid;}
+td, th {padding: 4px; border: 2px #fff solid; vertical-align: top;}
+.caption {padding: 5px; text-align: center; border: 0; font-weight: bold;}
+h1 {font-size: 1.6em;}
+h2 {font-size: 1.4em;}
+h3 {font-size: 1.2em;}
+p {text-align: center;}
+th {background-color: #aaf;}
+.contents {text-align: left; margin-left: 20%;}
+.even {background-color: #bbf;}
+.odd {background-color: #ddf;}
+.natflag {border: 1px #999 solid;}
+.nattext {font-size: 0.8em;}
+.place1 {font-weight: bold; background-color: #ffffaa;}
+.place2 {font-weight: bold; background-color: #aaaaff;}
+.place3 {font-weight: bold; background-color: #ffaaaa;}
+.placen {}
+table.headertable {border: 0px;}
+table.headertable td{border: 0px;}
+</style>
+
+<script type="text/javascript">
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script>
+
+function swGetURLArgs() {
+
+  var url = location.href;
+  var qs  = url.substring(url.indexOf('?') + 1).split('&');
+
+  for(var i = 0, result = {}; i < qs.length; i++) {
+    qs[i]            = qs[i].split('=');
+    result[qs[i][0]] = decodeURIComponent(qs[i][1]);
+  }
+
+  return result;
+}
+
+//
+//  name=HighlightWins3v3
+//  dependencies=jQuery
+//  description=Highlight winning scores in summary tables.
+//  author=Jon Eskdale based on an idea by Colin Jenkins
+//  date=2016-07-04
+//  version=3.0  For use with Sailwave from V2.22.x
+//  Requires the following lines in the Results.htm file (Results.htm is in the Templates directory)
+//  string.set("summary.col.race.rank1.td",   "rank1")
+//  string.set("summary.col.race.rank2.td",   "rank2")
+//  string.set("summary.col.race.rank3.td",   "rank3")
+
+//  url=http://sailwave.com
+//  email=jon@sailwave.com
+//  twitter=eskdale
+//  comments=Edit colours to colours of your choice
+//
+
+$(document).ready(function() {
+var selectorRank1 = '.rank1';
+var selectorRank2 = '.rank2';
+var selectorRank3 = '.rank3';
+
+// Results with these codes will not get highlighted add or remove codes to your choice
+var ignoreText   = /^(?!.*\b(DNC|DNF|DNS|OCS|BFD|UFD|RET|DSQ|DGM|DNE)\b).*/i
+
+// Edit these colours to change the highlight colours for 1st, 2nd and 3rd
+var winsColour   = '#ffd700';
+var twoColour    = '#6a91c5';
+var threeColour  = '#da6841';
+
+
+// Change the background color for cells with class of rank1-3 and don't have a code specified
+$(function () {
+
+  $(selectorRank1).filter(function() {
+    return ignoreText.test($(this).text());
+  }).css("background", winsColour);
+  $(selectorRank2).filter(function() {
+        return ignoreText.test($(this).text());
+  }).css("background", twoColour);
+  $(selectorRank3).filter(function() {
+        return ignoreText.test($(this).text());
+  }).css("background", threeColour);
+
+});
+});
+</script>
+
+</head>
+
+<body>
+
+<header>
+</header>
+<table class="headertable" cellspacing="0" width="100%" cellpadding="0" border="0">
+<tbody>
+<div id="wrap">
+
+<tr>
+<td width="30%">
+<img style="display:block; height:100px;"  src="https://hyc.ie/system/sponsor_logos/439/normal/HYC_Logo.jpg" alt="venue burgee" />
+</td>
+
+<td width="40%" align="center">
+<h1>ILCA Masters</h1>
+<h2>Howth Yacht Club</h2>
+</td>
+
+<td width="30%">
+<img style="display:block; height:100px;" src="https://hyc.ie/system/sponsor_logos/509/normal/ILCA-Ireland.png" alt="event burgee" align="right" />
+</td>
+</tr>
+</tbody>
+</table>
+
+<div style="clear:both;"></div>
+
+<style>
+div.applicant-break {page-break-after:always;}
+</style>
+<h3 class="seriestitle">Results are provisional as of 14:31 on May 12, 2024</h3>
+<h3 class="summarytitle" id="summaryradial">Radial Fleet</h3>
+<div class="caption summarycaption">Sailed: 6, Discards: 1, To count: 5, Entries: 19, Scoring system: Appendix A</div>
+<table class="summarytable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="14">
+<col class="rank" />
+<col class="sailno" />
+<col class="helmname" />
+<col class="club" />
+<col class="helmagegroup" />
+<col class="helmsex" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="total" />
+<col class="nett" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Sail No</th>
+<th>Name</th>
+<th>Club</th>
+<th>Category</th>
+<th>Gender</th>
+<th><a class="racelink" href="#r1radial">R1</a></th>
+<th><a class="racelink" href="#r2radial">R2</a></th>
+<th><a class="racelink" href="#r3radial">R3</a></th>
+<th><a class="racelink" href="#r4radial">R4</a></th>
+<th><a class="racelink" href="#r5radial">R5</a></th>
+<th><a class="racelink" href="#r6radial">R6</a></th>
+<th>Total</th>
+<th>Nett</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd summaryrow">
+<td>1st</td>
+<td>218154</td>
+<td>Sean Craig</td>
+<td>Royal St George YC</td>
+<td>GM</td>
+<td>&nbsp;</td>
+<td>(4.0)</td>
+<td class="rank1">1.0</td>
+<td class="rank1">1.0</td>
+<td class="rank1">1.0</td>
+<td class="rank2">2.0</td>
+<td class="rank2">2.0</td>
+<td>11.0</td>
+<td>7.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>2nd</td>
+<td>196738</td>
+<td>Conor Clancy</td>
+<td>Royal St George YC</td>
+<td>App</td>
+<td>&nbsp;</td>
+<td class="rank1">1.0</td>
+<td class="rank3">(3.0)</td>
+<td class="rank2">2.0</td>
+<td class="rank3">3.0</td>
+<td class="rank1">1.0</td>
+<td class="rank3">3.0</td>
+<td>13.0</td>
+<td>10.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>3rd</td>
+<td>213957</td>
+<td>Conor Barry</td>
+<td>Royal Cork YC</td>
+<td>M</td>
+<td>&nbsp;</td>
+<td class="rank2">2.0</td>
+<td>4.0</td>
+<td>(8.0)</td>
+<td class="rank2">2.0</td>
+<td class="rank3">3.0</td>
+<td class="rank1">1.0</td>
+<td>20.0</td>
+<td>12.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>4th</td>
+<td>219867</td>
+<td>Darren Griffin</td>
+<td>Royal St George YC</td>
+<td>M</td>
+<td>&nbsp;</td>
+<td class="rank3">3.0</td>
+<td class="rank2">2.0</td>
+<td>(9.0)</td>
+<td>4.0</td>
+<td>4.0</td>
+<td>7.0</td>
+<td>29.0</td>
+<td>20.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>5th</td>
+<td>215356</td>
+<td>Brendan Hughes</td>
+<td>Royal St George YC</td>
+<td>M</td>
+<td>&nbsp;</td>
+<td>8.0</td>
+<td>5.0</td>
+<td>6.0</td>
+<td>5.0</td>
+<td>6.0</td>
+<td>(20.0 UFD)</td>
+<td>50.0</td>
+<td>30.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>6th</td>
+<td>173133</td>
+<td>Peter Hassett</td>
+<td>Irish Sailing</td>
+<td>M</td>
+<td>&nbsp;</td>
+<td>5.0</td>
+<td>6.0</td>
+<td>5.0</td>
+<td>6.0</td>
+<td>(12.0)</td>
+<td>9.0</td>
+<td>43.0</td>
+<td>31.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>7th</td>
+<td>211171</td>
+<td>Hugh Delap</td>
+<td>Royal St George YC</td>
+<td>App</td>
+<td>&nbsp;</td>
+<td>6.0</td>
+<td>8.0</td>
+<td class="rank3">3.0</td>
+<td>12.0</td>
+<td>5.0</td>
+<td>(20.0 UFD)</td>
+<td>54.0</td>
+<td>34.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>8th</td>
+<td>216238</td>
+<td>Shirley Gilmore</td>
+<td>Royal St George YC</td>
+<td>GM</td>
+<td>F</td>
+<td>9.0</td>
+<td>9.0</td>
+<td>7.0</td>
+<td>(10.0)</td>
+<td>10.0</td>
+<td>4.0</td>
+<td>49.0</td>
+<td>39.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>9th</td>
+<td>196515</td>
+<td>Gareth Giles</td>
+<td>Greystones SC</td>
+<td>M</td>
+<td>&nbsp;</td>
+<td>7.0</td>
+<td>10.0</td>
+<td>(14.0)</td>
+<td>11.0</td>
+<td>8.0</td>
+<td>6.0</td>
+<td>56.0</td>
+<td>42.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>10th</td>
+<td>215933</td>
+<td>John Curran</td>
+<td>Wembley SC</td>
+<td>GM</td>
+<td>&nbsp;</td>
+<td>18.0</td>
+<td>7.0</td>
+<td>4.0</td>
+<td>7.0</td>
+<td>7.0</td>
+<td>(20.0 DNF)</td>
+<td>63.0</td>
+<td>43.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>11th</td>
+<td>216610</td>
+<td>Judy OBeirne</td>
+<td>Royal St George YC</td>
+<td>GM</td>
+<td>F</td>
+<td>(12.0)</td>
+<td>12.0</td>
+<td>10.0</td>
+<td>8.0</td>
+<td>9.0</td>
+<td>10.0</td>
+<td>61.0</td>
+<td>49.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>12th</td>
+<td>170227</td>
+<td>Philip Doherty</td>
+<td>Royal Cork YC</td>
+<td>GM</td>
+<td>&nbsp;</td>
+<td>(13.0)</td>
+<td>13.0</td>
+<td>12.0</td>
+<td>9.0</td>
+<td>13.0</td>
+<td>5.0</td>
+<td>65.0</td>
+<td>52.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>13th</td>
+<td>219126</td>
+<td>Michael Norman</td>
+<td>Wicklow SC</td>
+<td>GGM</td>
+<td>&nbsp;</td>
+<td>11.0</td>
+<td>11.0</td>
+<td>13.0</td>
+<td>(15.0)</td>
+<td>15.0</td>
+<td>8.0</td>
+<td>73.0</td>
+<td>58.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>14th</td>
+<td>202051</td>
+<td>Mary Chambers</td>
+<td>Royal St George YC</td>
+<td>GGM</td>
+<td>F</td>
+<td>10.0</td>
+<td>14.0</td>
+<td>11.0</td>
+<td>14.0</td>
+<td>(17.0)</td>
+<td>13.0</td>
+<td>79.0</td>
+<td>62.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>15th</td>
+<td>204187</td>
+<td>Alison Pigot</td>
+<td>National YC</td>
+<td>GM</td>
+<td>F</td>
+<td>15.0</td>
+<td>(16.0)</td>
+<td>15.0</td>
+<td>13.0</td>
+<td>11.0</td>
+<td>12.0</td>
+<td>82.0</td>
+<td>66.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>16th</td>
+<td>216594</td>
+<td>Hugh Cahill</td>
+<td>Dublin Bay Sailing Club</td>
+<td>GM</td>
+<td>&nbsp;</td>
+<td>(17.0)</td>
+<td>17.0</td>
+<td>17.0</td>
+<td>17.0</td>
+<td>14.0</td>
+<td>11.0</td>
+<td>93.0</td>
+<td>76.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>17th</td>
+<td>186824</td>
+<td>Carla Fagan</td>
+<td>Howth YC</td>
+<td>App</td>
+<td>F</td>
+<td>16.0</td>
+<td>15.0</td>
+<td>16.0</td>
+<td>16.0</td>
+<td>18.0</td>
+<td>(20.0 DNF)</td>
+<td>101.0</td>
+<td>81.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>18th</td>
+<td>196516</td>
+<td>Luke Smith</td>
+<td>Royal St George YC</td>
+<td>M</td>
+<td>&nbsp;</td>
+<td>14.0</td>
+<td>18.0</td>
+<td>18.0</td>
+<td>18.0</td>
+<td>16.0</td>
+<td>(20.0 DNF)</td>
+<td>104.0</td>
+<td>84.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>19th</td>
+<td>213577</td>
+<td>David Coleman</td>
+<td>Dun Laoghaire Motor YC</td>
+<td>GGM</td>
+<td>&nbsp;</td>
+<td>(19.0)</td>
+<td>19.0</td>
+<td>19.0</td>
+<td>19.0</td>
+<td>19.0</td>
+<td>14.0</td>
+<td>109.0</td>
+<td>90.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="summarytitle" id="summarystandard">Standard Fleet</h3>
+<div class="caption summarycaption">Sailed: 6, Discards: 1, To count: 5, Entries: 24, Scoring system: Appendix A</div>
+<table class="summarytable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="14">
+<col class="rank" />
+<col class="sailno" />
+<col class="helmname" />
+<col class="club" />
+<col class="helmagegroup" />
+<col class="helmsex" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="total" />
+<col class="nett" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Sail No</th>
+<th>Name</th>
+<th>Club</th>
+<th>Category</th>
+<th>Gender</th>
+<th><a class="racelink" href="#r1standard">R1</a></th>
+<th><a class="racelink" href="#r2standard">R2</a></th>
+<th><a class="racelink" href="#r3standard">R3</a></th>
+<th><a class="racelink" href="#r4standard">R4</a></th>
+<th><a class="racelink" href="#r5standard">R5</a></th>
+<th><a class="racelink" href="#r6standard">R6</a></th>
+<th>Total</th>
+<th>Nett</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd summaryrow">
+<td>1st</td>
+<td>222017</td>
+<td>Rory Lynch</td>
+<td>Baltimore SC</td>
+<td>App</td>
+<td>&nbsp;</td>
+<td>(4.0)</td>
+<td class="rank2">2.0</td>
+<td class="rank1">1.0</td>
+<td class="rank1">1.0</td>
+<td class="rank2">2.0</td>
+<td class="rank1">1.0</td>
+<td>11.0</td>
+<td>7.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>2nd</td>
+<td>219127</td>
+<td>Dan O'Connell</td>
+<td>Cove SC</td>
+<td>M</td>
+<td>&nbsp;</td>
+<td class="rank1">1.0</td>
+<td class="rank1">1.0</td>
+<td class="rank2">2.0</td>
+<td class="rank3">3.0</td>
+<td class="rank3">3.0</td>
+<td>(6.0)</td>
+<td>16.0</td>
+<td>10.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>3rd</td>
+<td>216890</td>
+<td>Conor Byrne</td>
+<td>Royal St George YC</td>
+<td>App</td>
+<td>&nbsp;</td>
+<td class="rank2">2.0</td>
+<td>4.0</td>
+<td class="rank3">3.0</td>
+<td>(5.0)</td>
+<td>4.0</td>
+<td class="rank3">3.0</td>
+<td>21.0</td>
+<td>16.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>4th</td>
+<td>178822</td>
+<td>Paul McMahon</td>
+<td>Howth YC</td>
+<td>App</td>
+<td>&nbsp;</td>
+<td>(9.0)</td>
+<td>5.0</td>
+<td>6.0</td>
+<td>9.0</td>
+<td class="rank1">1.0</td>
+<td>5.0</td>
+<td>35.0</td>
+<td>26.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>5th</td>
+<td>222551</td>
+<td>Daragh Kelleher</td>
+<td>Skerries SC</td>
+<td>M</td>
+<td>&nbsp;</td>
+<td>(13.0)</td>
+<td>6.0</td>
+<td>7.0</td>
+<td class="rank2">2.0</td>
+<td>7.0</td>
+<td>4.0</td>
+<td>39.0</td>
+<td>26.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>6th</td>
+<td>211921</td>
+<td>Stephen Mclernon</td>
+<td>Carrickfergus SC</td>
+<td>App</td>
+<td>&nbsp;</td>
+<td>5.0</td>
+<td>7.0</td>
+<td>4.0</td>
+<td>6.0</td>
+<td>6.0</td>
+<td>(8.0)</td>
+<td>36.0</td>
+<td>28.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>7th</td>
+<td>217533</td>
+<td>Nick Walsh</td>
+<td>Royal Cork YC</td>
+<td>GM</td>
+<td>&nbsp;</td>
+<td class="rank3">3.0</td>
+<td>9.0</td>
+<td>(11.0)</td>
+<td>10.0</td>
+<td>9.0</td>
+<td class="rank2">2.0</td>
+<td>44.0</td>
+<td>33.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>8th</td>
+<td>213141</td>
+<td>Conor Murphy</td>
+<td>Howth YC</td>
+<td>App</td>
+<td>&nbsp;</td>
+<td>6.0</td>
+<td>10.0</td>
+<td>14.0</td>
+<td>(15.0)</td>
+<td>5.0</td>
+<td>7.0</td>
+<td>57.0</td>
+<td>42.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>9th</td>
+<td>219804</td>
+<td>Conrad Simpson</td>
+<td>Ballyholme YC</td>
+<td>GM</td>
+<td>&nbsp;</td>
+<td>(15.0)</td>
+<td>11.0</td>
+<td>5.0</td>
+<td>11.0</td>
+<td>8.0</td>
+<td>9.0</td>
+<td>59.0</td>
+<td>44.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>10th</td>
+<td>219129</td>
+<td>Ross O'Leary</td>
+<td>Royal St George YC</td>
+<td>M</td>
+<td>&nbsp;</td>
+<td>8.0</td>
+<td class="rank3">3.0</td>
+<td>12.0</td>
+<td>12.0</td>
+<td>(13.0)</td>
+<td>12.0</td>
+<td>60.0</td>
+<td>47.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>11th</td>
+<td>1</td>
+<td>Gavan Murphy</td>
+<td>Royal St George YC</td>
+<td>M</td>
+<td>&nbsp;</td>
+<td>12.0</td>
+<td>(13.0)</td>
+<td>8.0</td>
+<td>7.0</td>
+<td>11.0</td>
+<td>13.0</td>
+<td>64.0</td>
+<td>51.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>12th</td>
+<td>190769</td>
+<td>Paul O Sullivan</td>
+<td>Monkstown Bay SC</td>
+<td>App</td>
+<td>&nbsp;</td>
+<td>(22.0)</td>
+<td>8.0</td>
+<td>10.0</td>
+<td>8.0</td>
+<td>15.0</td>
+<td>10.0</td>
+<td>73.0</td>
+<td>51.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>13th</td>
+<td>216623</td>
+<td>Dave Kirwan</td>
+<td>Malahide YC</td>
+<td>M</td>
+<td>&nbsp;</td>
+<td>10.0</td>
+<td>(14.0)</td>
+<td>9.0</td>
+<td>13.0</td>
+<td>12.0</td>
+<td>11.0</td>
+<td>69.0</td>
+<td>55.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>14th</td>
+<td>210361</td>
+<td>John ODriscoll</td>
+<td>Royal St George YC</td>
+<td>M</td>
+<td>&nbsp;</td>
+<td>11.0</td>
+<td>15.0</td>
+<td>13.0</td>
+<td>(16.0)</td>
+<td>10.0</td>
+<td>14.0</td>
+<td>79.0</td>
+<td>63.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>15th</td>
+<td>219147</td>
+<td>John Marmelstein</td>
+<td>Royal St George YC</td>
+<td>M</td>
+<td>&nbsp;</td>
+<td>14.0</td>
+<td>12.0</td>
+<td>15.0</td>
+<td>14.0</td>
+<td>14.0</td>
+<td>(16.0)</td>
+<td>85.0</td>
+<td>69.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>16th</td>
+<td>223953</td>
+<td>Andrejs Samoilovs</td>
+<td>Malahide YC</td>
+<td>App</td>
+<td>&nbsp;</td>
+<td>7.0</td>
+<td>16.0</td>
+<td>(19.0)</td>
+<td>17.0</td>
+<td>16.0</td>
+<td>15.0</td>
+<td>90.0</td>
+<td>71.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>17th</td>
+<td>210254</td>
+<td>Sean Flanagan</td>
+<td>Royal St George YC</td>
+<td>GM</td>
+<td>&nbsp;</td>
+<td>19.0</td>
+<td>17.0</td>
+<td>16.0</td>
+<td>18.0</td>
+<td>19.0</td>
+<td>(20.0)</td>
+<td>109.0</td>
+<td>89.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>18th</td>
+<td>214628</td>
+<td>Richard Tate</td>
+<td>Royal St George YC</td>
+<td>GM</td>
+<td>&nbsp;</td>
+<td>16.0</td>
+<td>18.0</td>
+<td>(25.0 RET)</td>
+<td>19.0</td>
+<td>20.0</td>
+<td>18.0</td>
+<td>116.0</td>
+<td>91.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>19th</td>
+<td>173155</td>
+<td>Noel Davidson</td>
+<td>Malahide YC</td>
+<td>GM</td>
+<td>&nbsp;</td>
+<td>17.0</td>
+<td>20.0</td>
+<td>18.0</td>
+<td>20.0</td>
+<td>18.0</td>
+<td>(22.0)</td>
+<td>115.0</td>
+<td>93.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>20th</td>
+<td>204759</td>
+<td>Colm Cunningham</td>
+<td>Malahide YC</td>
+<td>M</td>
+<td>&nbsp;</td>
+<td>(25.0 DNC)</td>
+<td>25.0 DNC</td>
+<td>25.0 DNC</td>
+<td>4.0</td>
+<td>25.0 UFD</td>
+<td>17.0</td>
+<td>121.0</td>
+<td>96.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>21st</td>
+<td>2106</td>
+<td>Robbie Walker</td>
+<td>Royal St George YC</td>
+<td>M</td>
+<td>&nbsp;</td>
+<td>18.0</td>
+<td>19.0</td>
+<td>17.0</td>
+<td>22.0</td>
+<td>21.0</td>
+<td>(23.0)</td>
+<td>120.0</td>
+<td>97.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>22nd</td>
+<td>173090</td>
+<td>Brian Tyrrell</td>
+<td>Howth YC</td>
+<td>GM</td>
+<td>&nbsp;</td>
+<td>20.0</td>
+<td>21.0</td>
+<td>(25.0 UFD)</td>
+<td>21.0</td>
+<td>17.0</td>
+<td>21.0</td>
+<td>125.0</td>
+<td>100.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>23rd</td>
+<td>194647</td>
+<td>Conor Costello</td>
+<td>Malahide YC</td>
+<td>GGM</td>
+<td>&nbsp;</td>
+<td>21.0</td>
+<td>22.0</td>
+<td>20.0</td>
+<td>(25.0 DNF)</td>
+<td>25.0 DNC</td>
+<td>19.0</td>
+<td>132.0</td>
+<td>107.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>24th</td>
+<td>216101</td>
+<td>Aidan Geraghty</td>
+<td>Greystones SC</td>
+<td>GM</td>
+<td>&nbsp;</td>
+<td>(25.0 DNC)</td>
+<td>25.0 DNC</td>
+<td>25.0 DNC</td>
+<td>23.0</td>
+<td>22.0</td>
+<td>24.0</td>
+<td>144.0</td>
+<td>119.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r1radial">R1 - Radial Fleet</h3>
+<div class="caption racecaption">
+Start: Start 1, Finishes: Place
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="8">
+<col class="rank" />
+<col class="sailno" />
+<col class="helmname" />
+<col class="club" />
+<col class="helmagegroup" />
+<col class="helmsex" />
+<col class="place" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Sail No</th>
+<th>Name</th>
+<th>Club</th>
+<th>Category</th>
+<th>Gender</th>
+<th>Place</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>196738</td>
+<td>Conor Clancy</td>
+<td>Royal St George YC</td>
+<td>App</td>
+<td>&nbsp;</td>
+<td>23</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>213957</td>
+<td>Conor Barry</td>
+<td>Royal Cork YC</td>
+<td>M</td>
+<td>&nbsp;</td>
+<td>24</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>219867</td>
+<td>Darren Griffin</td>
+<td>Royal St George YC</td>
+<td>M</td>
+<td>&nbsp;</td>
+<td>25</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>218154</td>
+<td>Sean Craig</td>
+<td>Royal St George YC</td>
+<td>GM</td>
+<td>&nbsp;</td>
+<td>26</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>173133</td>
+<td>Peter Hassett</td>
+<td>Irish Sailing</td>
+<td>M</td>
+<td>&nbsp;</td>
+<td>27</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>211171</td>
+<td>Hugh Delap</td>
+<td>Royal St George YC</td>
+<td>App</td>
+<td>&nbsp;</td>
+<td>28</td>
+<td>6.0</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>196515</td>
+<td>Gareth Giles</td>
+<td>Greystones SC</td>
+<td>M</td>
+<td>&nbsp;</td>
+<td>29</td>
+<td>7.0</td>
+</tr>
+<tr class="even racerow">
+<td>8</td>
+<td>215356</td>
+<td>Brendan Hughes</td>
+<td>Royal St George YC</td>
+<td>M</td>
+<td>&nbsp;</td>
+<td>30</td>
+<td>8.0</td>
+</tr>
+<tr class="odd racerow">
+<td>9</td>
+<td>216238</td>
+<td>Shirley Gilmore</td>
+<td>Royal St George YC</td>
+<td>GM</td>
+<td>F</td>
+<td>31</td>
+<td>9.0</td>
+</tr>
+<tr class="even racerow">
+<td>10</td>
+<td>202051</td>
+<td>Mary Chambers</td>
+<td>Royal St George YC</td>
+<td>GGM</td>
+<td>F</td>
+<td>32</td>
+<td>10.0</td>
+</tr>
+<tr class="odd racerow">
+<td>11</td>
+<td>219126</td>
+<td>Michael Norman</td>
+<td>Wicklow SC</td>
+<td>GGM</td>
+<td>&nbsp;</td>
+<td>33</td>
+<td>11.0</td>
+</tr>
+<tr class="even racerow">
+<td>12</td>
+<td>216610</td>
+<td>Judy OBeirne</td>
+<td>Royal St George YC</td>
+<td>GM</td>
+<td>F</td>
+<td>34</td>
+<td>12.0</td>
+</tr>
+<tr class="odd racerow">
+<td>13</td>
+<td>170227</td>
+<td>Philip Doherty</td>
+<td>Royal Cork YC</td>
+<td>GM</td>
+<td>&nbsp;</td>
+<td>35</td>
+<td>13.0</td>
+</tr>
+<tr class="even racerow">
+<td>14</td>
+<td>196516</td>
+<td>Luke Smith</td>
+<td>Royal St George YC</td>
+<td>M</td>
+<td>&nbsp;</td>
+<td>36</td>
+<td>14.0</td>
+</tr>
+<tr class="odd racerow">
+<td>15</td>
+<td>204187</td>
+<td>Alison Pigot</td>
+<td>National YC</td>
+<td>GM</td>
+<td>F</td>
+<td>37</td>
+<td>15.0</td>
+</tr>
+<tr class="even racerow">
+<td>16</td>
+<td>186824</td>
+<td>Carla Fagan</td>
+<td>Howth YC</td>
+<td>App</td>
+<td>F</td>
+<td>38</td>
+<td>16.0</td>
+</tr>
+<tr class="odd racerow">
+<td>17</td>
+<td>216594</td>
+<td>Hugh Cahill</td>
+<td>Dublin Bay Sailing Club</td>
+<td>GM</td>
+<td>&nbsp;</td>
+<td>39</td>
+<td>17.0</td>
+</tr>
+<tr class="even racerow">
+<td>18</td>
+<td>215933</td>
+<td>John Curran</td>
+<td>Wembley SC</td>
+<td>GM</td>
+<td>&nbsp;</td>
+<td>40</td>
+<td>18.0</td>
+</tr>
+<tr class="odd racerow">
+<td>19</td>
+<td>213577</td>
+<td>David Coleman</td>
+<td>Dun Laoghaire Motor YC</td>
+<td>GGM</td>
+<td>&nbsp;</td>
+<td>41</td>
+<td>19.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r2radial">R2 - Radial Fleet</h3>
+<div class="caption racecaption">
+Start: Start 1, Finishes: Place
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="8">
+<col class="rank" />
+<col class="sailno" />
+<col class="helmname" />
+<col class="club" />
+<col class="helmagegroup" />
+<col class="helmsex" />
+<col class="place" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Sail No</th>
+<th>Name</th>
+<th>Club</th>
+<th>Category</th>
+<th>Gender</th>
+<th>Place</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>218154</td>
+<td>Sean Craig</td>
+<td>Royal St George YC</td>
+<td>GM</td>
+<td>&nbsp;</td>
+<td>23</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>219867</td>
+<td>Darren Griffin</td>
+<td>Royal St George YC</td>
+<td>M</td>
+<td>&nbsp;</td>
+<td>24</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>196738</td>
+<td>Conor Clancy</td>
+<td>Royal St George YC</td>
+<td>App</td>
+<td>&nbsp;</td>
+<td>25</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>213957</td>
+<td>Conor Barry</td>
+<td>Royal Cork YC</td>
+<td>M</td>
+<td>&nbsp;</td>
+<td>26</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>215356</td>
+<td>Brendan Hughes</td>
+<td>Royal St George YC</td>
+<td>M</td>
+<td>&nbsp;</td>
+<td>27</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>173133</td>
+<td>Peter Hassett</td>
+<td>Irish Sailing</td>
+<td>M</td>
+<td>&nbsp;</td>
+<td>28</td>
+<td>6.0</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>215933</td>
+<td>John Curran</td>
+<td>Wembley SC</td>
+<td>GM</td>
+<td>&nbsp;</td>
+<td>29</td>
+<td>7.0</td>
+</tr>
+<tr class="even racerow">
+<td>8</td>
+<td>211171</td>
+<td>Hugh Delap</td>
+<td>Royal St George YC</td>
+<td>App</td>
+<td>&nbsp;</td>
+<td>30</td>
+<td>8.0</td>
+</tr>
+<tr class="odd racerow">
+<td>9</td>
+<td>216238</td>
+<td>Shirley Gilmore</td>
+<td>Royal St George YC</td>
+<td>GM</td>
+<td>F</td>
+<td>31</td>
+<td>9.0</td>
+</tr>
+<tr class="even racerow">
+<td>10</td>
+<td>196515</td>
+<td>Gareth Giles</td>
+<td>Greystones SC</td>
+<td>M</td>
+<td>&nbsp;</td>
+<td>32</td>
+<td>10.0</td>
+</tr>
+<tr class="odd racerow">
+<td>11</td>
+<td>219126</td>
+<td>Michael Norman</td>
+<td>Wicklow SC</td>
+<td>GGM</td>
+<td>&nbsp;</td>
+<td>33</td>
+<td>11.0</td>
+</tr>
+<tr class="even racerow">
+<td>12</td>
+<td>216610</td>
+<td>Judy OBeirne</td>
+<td>Royal St George YC</td>
+<td>GM</td>
+<td>F</td>
+<td>34</td>
+<td>12.0</td>
+</tr>
+<tr class="odd racerow">
+<td>13</td>
+<td>170227</td>
+<td>Philip Doherty</td>
+<td>Royal Cork YC</td>
+<td>GM</td>
+<td>&nbsp;</td>
+<td>35</td>
+<td>13.0</td>
+</tr>
+<tr class="even racerow">
+<td>14</td>
+<td>202051</td>
+<td>Mary Chambers</td>
+<td>Royal St George YC</td>
+<td>GGM</td>
+<td>F</td>
+<td>36</td>
+<td>14.0</td>
+</tr>
+<tr class="odd racerow">
+<td>15</td>
+<td>186824</td>
+<td>Carla Fagan</td>
+<td>Howth YC</td>
+<td>App</td>
+<td>F</td>
+<td>37</td>
+<td>15.0</td>
+</tr>
+<tr class="even racerow">
+<td>16</td>
+<td>204187</td>
+<td>Alison Pigot</td>
+<td>National YC</td>
+<td>GM</td>
+<td>F</td>
+<td>38</td>
+<td>16.0</td>
+</tr>
+<tr class="odd racerow">
+<td>17</td>
+<td>216594</td>
+<td>Hugh Cahill</td>
+<td>Dublin Bay Sailing Club</td>
+<td>GM</td>
+<td>&nbsp;</td>
+<td>39</td>
+<td>17.0</td>
+</tr>
+<tr class="even racerow">
+<td>18</td>
+<td>196516</td>
+<td>Luke Smith</td>
+<td>Royal St George YC</td>
+<td>M</td>
+<td>&nbsp;</td>
+<td>40</td>
+<td>18.0</td>
+</tr>
+<tr class="odd racerow">
+<td>19</td>
+<td>213577</td>
+<td>David Coleman</td>
+<td>Dun Laoghaire Motor YC</td>
+<td>GGM</td>
+<td>&nbsp;</td>
+<td>41</td>
+<td>19.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r3radial">R3 - Radial Fleet</h3>
+<div class="caption racecaption">
+Start: Start 1, Finishes: Place
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="8">
+<col class="rank" />
+<col class="sailno" />
+<col class="helmname" />
+<col class="club" />
+<col class="helmagegroup" />
+<col class="helmsex" />
+<col class="place" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Sail No</th>
+<th>Name</th>
+<th>Club</th>
+<th>Category</th>
+<th>Gender</th>
+<th>Place</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>218154</td>
+<td>Sean Craig</td>
+<td>Royal St George YC</td>
+<td>GM</td>
+<td>&nbsp;</td>
+<td>22</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>196738</td>
+<td>Conor Clancy</td>
+<td>Royal St George YC</td>
+<td>App</td>
+<td>&nbsp;</td>
+<td>23</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>211171</td>
+<td>Hugh Delap</td>
+<td>Royal St George YC</td>
+<td>App</td>
+<td>&nbsp;</td>
+<td>24</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>215933</td>
+<td>John Curran</td>
+<td>Wembley SC</td>
+<td>GM</td>
+<td>&nbsp;</td>
+<td>25</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>173133</td>
+<td>Peter Hassett</td>
+<td>Irish Sailing</td>
+<td>M</td>
+<td>&nbsp;</td>
+<td>26</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>215356</td>
+<td>Brendan Hughes</td>
+<td>Royal St George YC</td>
+<td>M</td>
+<td>&nbsp;</td>
+<td>27</td>
+<td>6.0</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>216238</td>
+<td>Shirley Gilmore</td>
+<td>Royal St George YC</td>
+<td>GM</td>
+<td>F</td>
+<td>28</td>
+<td>7.0</td>
+</tr>
+<tr class="even racerow">
+<td>8</td>
+<td>213957</td>
+<td>Conor Barry</td>
+<td>Royal Cork YC</td>
+<td>M</td>
+<td>&nbsp;</td>
+<td>29</td>
+<td>8.0</td>
+</tr>
+<tr class="odd racerow">
+<td>9</td>
+<td>219867</td>
+<td>Darren Griffin</td>
+<td>Royal St George YC</td>
+<td>M</td>
+<td>&nbsp;</td>
+<td>30</td>
+<td>9.0</td>
+</tr>
+<tr class="even racerow">
+<td>10</td>
+<td>216610</td>
+<td>Judy OBeirne</td>
+<td>Royal St George YC</td>
+<td>GM</td>
+<td>F</td>
+<td>31</td>
+<td>10.0</td>
+</tr>
+<tr class="odd racerow">
+<td>11</td>
+<td>202051</td>
+<td>Mary Chambers</td>
+<td>Royal St George YC</td>
+<td>GGM</td>
+<td>F</td>
+<td>32</td>
+<td>11.0</td>
+</tr>
+<tr class="even racerow">
+<td>12</td>
+<td>170227</td>
+<td>Philip Doherty</td>
+<td>Royal Cork YC</td>
+<td>GM</td>
+<td>&nbsp;</td>
+<td>33</td>
+<td>12.0</td>
+</tr>
+<tr class="odd racerow">
+<td>13</td>
+<td>219126</td>
+<td>Michael Norman</td>
+<td>Wicklow SC</td>
+<td>GGM</td>
+<td>&nbsp;</td>
+<td>34</td>
+<td>13.0</td>
+</tr>
+<tr class="even racerow">
+<td>14</td>
+<td>196515</td>
+<td>Gareth Giles</td>
+<td>Greystones SC</td>
+<td>M</td>
+<td>&nbsp;</td>
+<td>35</td>
+<td>14.0</td>
+</tr>
+<tr class="odd racerow">
+<td>15</td>
+<td>204187</td>
+<td>Alison Pigot</td>
+<td>National YC</td>
+<td>GM</td>
+<td>F</td>
+<td>36</td>
+<td>15.0</td>
+</tr>
+<tr class="even racerow">
+<td>16</td>
+<td>186824</td>
+<td>Carla Fagan</td>
+<td>Howth YC</td>
+<td>App</td>
+<td>F</td>
+<td>37</td>
+<td>16.0</td>
+</tr>
+<tr class="odd racerow">
+<td>17</td>
+<td>216594</td>
+<td>Hugh Cahill</td>
+<td>Dublin Bay Sailing Club</td>
+<td>GM</td>
+<td>&nbsp;</td>
+<td>38</td>
+<td>17.0</td>
+</tr>
+<tr class="even racerow">
+<td>18</td>
+<td>196516</td>
+<td>Luke Smith</td>
+<td>Royal St George YC</td>
+<td>M</td>
+<td>&nbsp;</td>
+<td>39</td>
+<td>18.0</td>
+</tr>
+<tr class="odd racerow">
+<td>19</td>
+<td>213577</td>
+<td>David Coleman</td>
+<td>Dun Laoghaire Motor YC</td>
+<td>GGM</td>
+<td>&nbsp;</td>
+<td>40</td>
+<td>19.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r4radial">R4 - Radial Fleet</h3>
+<div class="caption racecaption">
+Start: Start 1, Finishes: Place
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="8">
+<col class="rank" />
+<col class="sailno" />
+<col class="helmname" />
+<col class="club" />
+<col class="helmagegroup" />
+<col class="helmsex" />
+<col class="place" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Sail No</th>
+<th>Name</th>
+<th>Club</th>
+<th>Category</th>
+<th>Gender</th>
+<th>Place</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>218154</td>
+<td>Sean Craig</td>
+<td>Royal St George YC</td>
+<td>GM</td>
+<td>&nbsp;</td>
+<td>1</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>213957</td>
+<td>Conor Barry</td>
+<td>Royal Cork YC</td>
+<td>M</td>
+<td>&nbsp;</td>
+<td>2</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>196738</td>
+<td>Conor Clancy</td>
+<td>Royal St George YC</td>
+<td>App</td>
+<td>&nbsp;</td>
+<td>3</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>219867</td>
+<td>Darren Griffin</td>
+<td>Royal St George YC</td>
+<td>M</td>
+<td>&nbsp;</td>
+<td>4</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>215356</td>
+<td>Brendan Hughes</td>
+<td>Royal St George YC</td>
+<td>M</td>
+<td>&nbsp;</td>
+<td>5</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>173133</td>
+<td>Peter Hassett</td>
+<td>Irish Sailing</td>
+<td>M</td>
+<td>&nbsp;</td>
+<td>6</td>
+<td>6.0</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>215933</td>
+<td>John Curran</td>
+<td>Wembley SC</td>
+<td>GM</td>
+<td>&nbsp;</td>
+<td>7</td>
+<td>7.0</td>
+</tr>
+<tr class="even racerow">
+<td>8</td>
+<td>216610</td>
+<td>Judy OBeirne</td>
+<td>Royal St George YC</td>
+<td>GM</td>
+<td>F</td>
+<td>8</td>
+<td>8.0</td>
+</tr>
+<tr class="odd racerow">
+<td>9</td>
+<td>170227</td>
+<td>Philip Doherty</td>
+<td>Royal Cork YC</td>
+<td>GM</td>
+<td>&nbsp;</td>
+<td>9</td>
+<td>9.0</td>
+</tr>
+<tr class="even racerow">
+<td>10</td>
+<td>216238</td>
+<td>Shirley Gilmore</td>
+<td>Royal St George YC</td>
+<td>GM</td>
+<td>F</td>
+<td>10</td>
+<td>10.0</td>
+</tr>
+<tr class="odd racerow">
+<td>11</td>
+<td>196515</td>
+<td>Gareth Giles</td>
+<td>Greystones SC</td>
+<td>M</td>
+<td>&nbsp;</td>
+<td>11</td>
+<td>11.0</td>
+</tr>
+<tr class="even racerow">
+<td>12</td>
+<td>211171</td>
+<td>Hugh Delap</td>
+<td>Royal St George YC</td>
+<td>App</td>
+<td>&nbsp;</td>
+<td>12</td>
+<td>12.0</td>
+</tr>
+<tr class="odd racerow">
+<td>13</td>
+<td>204187</td>
+<td>Alison Pigot</td>
+<td>National YC</td>
+<td>GM</td>
+<td>F</td>
+<td>13</td>
+<td>13.0</td>
+</tr>
+<tr class="even racerow">
+<td>14</td>
+<td>202051</td>
+<td>Mary Chambers</td>
+<td>Royal St George YC</td>
+<td>GGM</td>
+<td>F</td>
+<td>14</td>
+<td>14.0</td>
+</tr>
+<tr class="odd racerow">
+<td>15</td>
+<td>219126</td>
+<td>Michael Norman</td>
+<td>Wicklow SC</td>
+<td>GGM</td>
+<td>&nbsp;</td>
+<td>15</td>
+<td>15.0</td>
+</tr>
+<tr class="even racerow">
+<td>16</td>
+<td>186824</td>
+<td>Carla Fagan</td>
+<td>Howth YC</td>
+<td>App</td>
+<td>F</td>
+<td>16</td>
+<td>16.0</td>
+</tr>
+<tr class="odd racerow">
+<td>17</td>
+<td>216594</td>
+<td>Hugh Cahill</td>
+<td>Dublin Bay Sailing Club</td>
+<td>GM</td>
+<td>&nbsp;</td>
+<td>17</td>
+<td>17.0</td>
+</tr>
+<tr class="even racerow">
+<td>18</td>
+<td>196516</td>
+<td>Luke Smith</td>
+<td>Royal St George YC</td>
+<td>M</td>
+<td>&nbsp;</td>
+<td>18</td>
+<td>18.0</td>
+</tr>
+<tr class="odd racerow">
+<td>19</td>
+<td>213577</td>
+<td>David Coleman</td>
+<td>Dun Laoghaire Motor YC</td>
+<td>GGM</td>
+<td>&nbsp;</td>
+<td>19</td>
+<td>19.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r5radial">R5 - Radial Fleet</h3>
+<div class="caption racecaption">
+Start: Start 1, Finishes: Place
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="8">
+<col class="rank" />
+<col class="sailno" />
+<col class="helmname" />
+<col class="club" />
+<col class="helmagegroup" />
+<col class="helmsex" />
+<col class="place" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Sail No</th>
+<th>Name</th>
+<th>Club</th>
+<th>Category</th>
+<th>Gender</th>
+<th>Place</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>196738</td>
+<td>Conor Clancy</td>
+<td>Royal St George YC</td>
+<td>App</td>
+<td>&nbsp;</td>
+<td>24</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>218154</td>
+<td>Sean Craig</td>
+<td>Royal St George YC</td>
+<td>GM</td>
+<td>&nbsp;</td>
+<td>25</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>213957</td>
+<td>Conor Barry</td>
+<td>Royal Cork YC</td>
+<td>M</td>
+<td>&nbsp;</td>
+<td>26</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>219867</td>
+<td>Darren Griffin</td>
+<td>Royal St George YC</td>
+<td>M</td>
+<td>&nbsp;</td>
+<td>27</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>211171</td>
+<td>Hugh Delap</td>
+<td>Royal St George YC</td>
+<td>App</td>
+<td>&nbsp;</td>
+<td>28</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>215356</td>
+<td>Brendan Hughes</td>
+<td>Royal St George YC</td>
+<td>M</td>
+<td>&nbsp;</td>
+<td>29</td>
+<td>6.0</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>215933</td>
+<td>John Curran</td>
+<td>Wembley SC</td>
+<td>GM</td>
+<td>&nbsp;</td>
+<td>30</td>
+<td>7.0</td>
+</tr>
+<tr class="even racerow">
+<td>8</td>
+<td>196515</td>
+<td>Gareth Giles</td>
+<td>Greystones SC</td>
+<td>M</td>
+<td>&nbsp;</td>
+<td>31</td>
+<td>8.0</td>
+</tr>
+<tr class="odd racerow">
+<td>9</td>
+<td>216610</td>
+<td>Judy OBeirne</td>
+<td>Royal St George YC</td>
+<td>GM</td>
+<td>F</td>
+<td>32</td>
+<td>9.0</td>
+</tr>
+<tr class="even racerow">
+<td>10</td>
+<td>216238</td>
+<td>Shirley Gilmore</td>
+<td>Royal St George YC</td>
+<td>GM</td>
+<td>F</td>
+<td>33</td>
+<td>10.0</td>
+</tr>
+<tr class="odd racerow">
+<td>11</td>
+<td>204187</td>
+<td>Alison Pigot</td>
+<td>National YC</td>
+<td>GM</td>
+<td>F</td>
+<td>34</td>
+<td>11.0</td>
+</tr>
+<tr class="even racerow">
+<td>12</td>
+<td>173133</td>
+<td>Peter Hassett</td>
+<td>Irish Sailing</td>
+<td>M</td>
+<td>&nbsp;</td>
+<td>35</td>
+<td>12.0</td>
+</tr>
+<tr class="odd racerow">
+<td>13</td>
+<td>170227</td>
+<td>Philip Doherty</td>
+<td>Royal Cork YC</td>
+<td>GM</td>
+<td>&nbsp;</td>
+<td>36</td>
+<td>13.0</td>
+</tr>
+<tr class="even racerow">
+<td>14</td>
+<td>216594</td>
+<td>Hugh Cahill</td>
+<td>Dublin Bay Sailing Club</td>
+<td>GM</td>
+<td>&nbsp;</td>
+<td>37</td>
+<td>14.0</td>
+</tr>
+<tr class="odd racerow">
+<td>15</td>
+<td>219126</td>
+<td>Michael Norman</td>
+<td>Wicklow SC</td>
+<td>GGM</td>
+<td>&nbsp;</td>
+<td>38</td>
+<td>15.0</td>
+</tr>
+<tr class="even racerow">
+<td>16</td>
+<td>196516</td>
+<td>Luke Smith</td>
+<td>Royal St George YC</td>
+<td>M</td>
+<td>&nbsp;</td>
+<td>39</td>
+<td>16.0</td>
+</tr>
+<tr class="odd racerow">
+<td>17</td>
+<td>202051</td>
+<td>Mary Chambers</td>
+<td>Royal St George YC</td>
+<td>GGM</td>
+<td>F</td>
+<td>40</td>
+<td>17.0</td>
+</tr>
+<tr class="even racerow">
+<td>18</td>
+<td>186824</td>
+<td>Carla Fagan</td>
+<td>Howth YC</td>
+<td>App</td>
+<td>F</td>
+<td>41</td>
+<td>18.0</td>
+</tr>
+<tr class="odd racerow">
+<td>19</td>
+<td>213577</td>
+<td>David Coleman</td>
+<td>Dun Laoghaire Motor YC</td>
+<td>GGM</td>
+<td>&nbsp;</td>
+<td>42</td>
+<td>19.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r6radial">R6 - Radial Fleet</h3>
+<div class="caption racecaption">
+Start: Start 1, Finishes: Place
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="8">
+<col class="rank" />
+<col class="sailno" />
+<col class="helmname" />
+<col class="club" />
+<col class="helmagegroup" />
+<col class="helmsex" />
+<col class="place" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Sail No</th>
+<th>Name</th>
+<th>Club</th>
+<th>Category</th>
+<th>Gender</th>
+<th>Place</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>213957</td>
+<td>Conor Barry</td>
+<td>Royal Cork YC</td>
+<td>M</td>
+<td>&nbsp;</td>
+<td>25</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>218154</td>
+<td>Sean Craig</td>
+<td>Royal St George YC</td>
+<td>GM</td>
+<td>&nbsp;</td>
+<td>26</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>196738</td>
+<td>Conor Clancy</td>
+<td>Royal St George YC</td>
+<td>App</td>
+<td>&nbsp;</td>
+<td>27</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>216238</td>
+<td>Shirley Gilmore</td>
+<td>Royal St George YC</td>
+<td>GM</td>
+<td>F</td>
+<td>30</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>170227</td>
+<td>Philip Doherty</td>
+<td>Royal Cork YC</td>
+<td>GM</td>
+<td>&nbsp;</td>
+<td>31</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>196515</td>
+<td>Gareth Giles</td>
+<td>Greystones SC</td>
+<td>M</td>
+<td>&nbsp;</td>
+<td>32</td>
+<td>6.0</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>219867</td>
+<td>Darren Griffin</td>
+<td>Royal St George YC</td>
+<td>M</td>
+<td>&nbsp;</td>
+<td>33</td>
+<td>7.0</td>
+</tr>
+<tr class="even racerow">
+<td>8</td>
+<td>219126</td>
+<td>Michael Norman</td>
+<td>Wicklow SC</td>
+<td>GGM</td>
+<td>&nbsp;</td>
+<td>34</td>
+<td>8.0</td>
+</tr>
+<tr class="odd racerow">
+<td>9</td>
+<td>173133</td>
+<td>Peter Hassett</td>
+<td>Irish Sailing</td>
+<td>M</td>
+<td>&nbsp;</td>
+<td>35</td>
+<td>9.0</td>
+</tr>
+<tr class="even racerow">
+<td>10</td>
+<td>216610</td>
+<td>Judy OBeirne</td>
+<td>Royal St George YC</td>
+<td>GM</td>
+<td>F</td>
+<td>36</td>
+<td>10.0</td>
+</tr>
+<tr class="odd racerow">
+<td>11</td>
+<td>216594</td>
+<td>Hugh Cahill</td>
+<td>Dublin Bay Sailing Club</td>
+<td>GM</td>
+<td>&nbsp;</td>
+<td>37</td>
+<td>11.0</td>
+</tr>
+<tr class="even racerow">
+<td>12</td>
+<td>204187</td>
+<td>Alison Pigot</td>
+<td>National YC</td>
+<td>GM</td>
+<td>F</td>
+<td>38</td>
+<td>12.0</td>
+</tr>
+<tr class="odd racerow">
+<td>13</td>
+<td>202051</td>
+<td>Mary Chambers</td>
+<td>Royal St George YC</td>
+<td>GGM</td>
+<td>F</td>
+<td>39</td>
+<td>13.0</td>
+</tr>
+<tr class="even racerow">
+<td>14</td>
+<td>213577</td>
+<td>David Coleman</td>
+<td>Dun Laoghaire Motor YC</td>
+<td>GGM</td>
+<td>&nbsp;</td>
+<td>40</td>
+<td>14.0</td>
+</tr>
+<tr class="odd racerow">
+<td>15</td>
+<td>215356</td>
+<td>Brendan Hughes</td>
+<td>Royal St George YC</td>
+<td>M</td>
+<td>&nbsp;</td>
+<td>UFD</td>
+<td>20.0</td>
+</tr>
+<tr class="even racerow">
+<td>15</td>
+<td>211171</td>
+<td>Hugh Delap</td>
+<td>Royal St George YC</td>
+<td>App</td>
+<td>&nbsp;</td>
+<td>UFD</td>
+<td>20.0</td>
+</tr>
+<tr class="odd racerow">
+<td>15</td>
+<td>215933</td>
+<td>John Curran</td>
+<td>Wembley SC</td>
+<td>GM</td>
+<td>&nbsp;</td>
+<td>DNF</td>
+<td>20.0</td>
+</tr>
+<tr class="even racerow">
+<td>15</td>
+<td>186824</td>
+<td>Carla Fagan</td>
+<td>Howth YC</td>
+<td>App</td>
+<td>F</td>
+<td>DNF</td>
+<td>20.0</td>
+</tr>
+<tr class="odd racerow">
+<td>15</td>
+<td>196516</td>
+<td>Luke Smith</td>
+<td>Royal St George YC</td>
+<td>M</td>
+<td>&nbsp;</td>
+<td>DNF</td>
+<td>20.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r1standard">R1 - Standard Fleet</h3>
+<div class="caption racecaption">
+Start: Start 1, Finishes: Place
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="8">
+<col class="rank" />
+<col class="sailno" />
+<col class="helmname" />
+<col class="club" />
+<col class="helmagegroup" />
+<col class="helmsex" />
+<col class="place" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Sail No</th>
+<th>Name</th>
+<th>Club</th>
+<th>Category</th>
+<th>Gender</th>
+<th>Place</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>219127</td>
+<td>Dan O'Connell</td>
+<td>Cove SC</td>
+<td>M</td>
+<td>&nbsp;</td>
+<td>1</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>216890</td>
+<td>Conor Byrne</td>
+<td>Royal St George YC</td>
+<td>App</td>
+<td>&nbsp;</td>
+<td>2</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>217533</td>
+<td>Nick Walsh</td>
+<td>Royal Cork YC</td>
+<td>GM</td>
+<td>&nbsp;</td>
+<td>3</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>222017</td>
+<td>Rory Lynch</td>
+<td>Baltimore SC</td>
+<td>App</td>
+<td>&nbsp;</td>
+<td>4</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>211921</td>
+<td>Stephen Mclernon</td>
+<td>Carrickfergus SC</td>
+<td>App</td>
+<td>&nbsp;</td>
+<td>5</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>213141</td>
+<td>Conor Murphy</td>
+<td>Howth YC</td>
+<td>App</td>
+<td>&nbsp;</td>
+<td>6</td>
+<td>6.0</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>223953</td>
+<td>Andrejs Samoilovs</td>
+<td>Malahide YC</td>
+<td>App</td>
+<td>&nbsp;</td>
+<td>7</td>
+<td>7.0</td>
+</tr>
+<tr class="even racerow">
+<td>8</td>
+<td>219129</td>
+<td>Ross O'Leary</td>
+<td>Royal St George YC</td>
+<td>M</td>
+<td>&nbsp;</td>
+<td>8</td>
+<td>8.0</td>
+</tr>
+<tr class="odd racerow">
+<td>9</td>
+<td>178822</td>
+<td>Paul McMahon</td>
+<td>Howth YC</td>
+<td>App</td>
+<td>&nbsp;</td>
+<td>9</td>
+<td>9.0</td>
+</tr>
+<tr class="even racerow">
+<td>10</td>
+<td>216623</td>
+<td>Dave Kirwan</td>
+<td>Malahide YC</td>
+<td>M</td>
+<td>&nbsp;</td>
+<td>10</td>
+<td>10.0</td>
+</tr>
+<tr class="odd racerow">
+<td>11</td>
+<td>210361</td>
+<td>John ODriscoll</td>
+<td>Royal St George YC</td>
+<td>M</td>
+<td>&nbsp;</td>
+<td>11</td>
+<td>11.0</td>
+</tr>
+<tr class="even racerow">
+<td>12</td>
+<td>1</td>
+<td>Gavan Murphy</td>
+<td>Royal St George YC</td>
+<td>M</td>
+<td>&nbsp;</td>
+<td>12</td>
+<td>12.0</td>
+</tr>
+<tr class="odd racerow">
+<td>13</td>
+<td>222551</td>
+<td>Daragh Kelleher</td>
+<td>Skerries SC</td>
+<td>M</td>
+<td>&nbsp;</td>
+<td>13</td>
+<td>13.0</td>
+</tr>
+<tr class="even racerow">
+<td>14</td>
+<td>219147</td>
+<td>John Marmelstein</td>
+<td>Royal St George YC</td>
+<td>M</td>
+<td>&nbsp;</td>
+<td>14</td>
+<td>14.0</td>
+</tr>
+<tr class="odd racerow">
+<td>15</td>
+<td>219804</td>
+<td>Conrad Simpson</td>
+<td>Ballyholme YC</td>
+<td>GM</td>
+<td>&nbsp;</td>
+<td>15</td>
+<td>15.0</td>
+</tr>
+<tr class="even racerow">
+<td>16</td>
+<td>214628</td>
+<td>Richard Tate</td>
+<td>Royal St George YC</td>
+<td>GM</td>
+<td>&nbsp;</td>
+<td>16</td>
+<td>16.0</td>
+</tr>
+<tr class="odd racerow">
+<td>17</td>
+<td>173155</td>
+<td>Noel Davidson</td>
+<td>Malahide YC</td>
+<td>GM</td>
+<td>&nbsp;</td>
+<td>17</td>
+<td>17.0</td>
+</tr>
+<tr class="even racerow">
+<td>18</td>
+<td>2106</td>
+<td>Robbie Walker</td>
+<td>Royal St George YC</td>
+<td>M</td>
+<td>&nbsp;</td>
+<td>18</td>
+<td>18.0</td>
+</tr>
+<tr class="odd racerow">
+<td>19</td>
+<td>210254</td>
+<td>Sean Flanagan</td>
+<td>Royal St George YC</td>
+<td>GM</td>
+<td>&nbsp;</td>
+<td>19</td>
+<td>19.0</td>
+</tr>
+<tr class="even racerow">
+<td>20</td>
+<td>173090</td>
+<td>Brian Tyrrell</td>
+<td>Howth YC</td>
+<td>GM</td>
+<td>&nbsp;</td>
+<td>20</td>
+<td>20.0</td>
+</tr>
+<tr class="odd racerow">
+<td>21</td>
+<td>194647</td>
+<td>Conor Costello</td>
+<td>Malahide YC</td>
+<td>GGM</td>
+<td>&nbsp;</td>
+<td>21</td>
+<td>21.0</td>
+</tr>
+<tr class="even racerow">
+<td>22</td>
+<td>190769</td>
+<td>Paul O Sullivan</td>
+<td>Monkstown Bay SC</td>
+<td>App</td>
+<td>&nbsp;</td>
+<td>22</td>
+<td>22.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r2standard">R2 - Standard Fleet</h3>
+<div class="caption racecaption">
+Start: Start 1, Finishes: Place
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="8">
+<col class="rank" />
+<col class="sailno" />
+<col class="helmname" />
+<col class="club" />
+<col class="helmagegroup" />
+<col class="helmsex" />
+<col class="place" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Sail No</th>
+<th>Name</th>
+<th>Club</th>
+<th>Category</th>
+<th>Gender</th>
+<th>Place</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>219127</td>
+<td>Dan O'Connell</td>
+<td>Cove SC</td>
+<td>M</td>
+<td>&nbsp;</td>
+<td>1</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>222017</td>
+<td>Rory Lynch</td>
+<td>Baltimore SC</td>
+<td>App</td>
+<td>&nbsp;</td>
+<td>2</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>219129</td>
+<td>Ross O'Leary</td>
+<td>Royal St George YC</td>
+<td>M</td>
+<td>&nbsp;</td>
+<td>3</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>216890</td>
+<td>Conor Byrne</td>
+<td>Royal St George YC</td>
+<td>App</td>
+<td>&nbsp;</td>
+<td>4</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>178822</td>
+<td>Paul McMahon</td>
+<td>Howth YC</td>
+<td>App</td>
+<td>&nbsp;</td>
+<td>5</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>222551</td>
+<td>Daragh Kelleher</td>
+<td>Skerries SC</td>
+<td>M</td>
+<td>&nbsp;</td>
+<td>6</td>
+<td>6.0</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>211921</td>
+<td>Stephen Mclernon</td>
+<td>Carrickfergus SC</td>
+<td>App</td>
+<td>&nbsp;</td>
+<td>7</td>
+<td>7.0</td>
+</tr>
+<tr class="even racerow">
+<td>8</td>
+<td>190769</td>
+<td>Paul O Sullivan</td>
+<td>Monkstown Bay SC</td>
+<td>App</td>
+<td>&nbsp;</td>
+<td>8</td>
+<td>8.0</td>
+</tr>
+<tr class="odd racerow">
+<td>9</td>
+<td>217533</td>
+<td>Nick Walsh</td>
+<td>Royal Cork YC</td>
+<td>GM</td>
+<td>&nbsp;</td>
+<td>9</td>
+<td>9.0</td>
+</tr>
+<tr class="even racerow">
+<td>10</td>
+<td>213141</td>
+<td>Conor Murphy</td>
+<td>Howth YC</td>
+<td>App</td>
+<td>&nbsp;</td>
+<td>10</td>
+<td>10.0</td>
+</tr>
+<tr class="odd racerow">
+<td>11</td>
+<td>219804</td>
+<td>Conrad Simpson</td>
+<td>Ballyholme YC</td>
+<td>GM</td>
+<td>&nbsp;</td>
+<td>11</td>
+<td>11.0</td>
+</tr>
+<tr class="even racerow">
+<td>12</td>
+<td>219147</td>
+<td>John Marmelstein</td>
+<td>Royal St George YC</td>
+<td>M</td>
+<td>&nbsp;</td>
+<td>12</td>
+<td>12.0</td>
+</tr>
+<tr class="odd racerow">
+<td>13</td>
+<td>1</td>
+<td>Gavan Murphy</td>
+<td>Royal St George YC</td>
+<td>M</td>
+<td>&nbsp;</td>
+<td>13</td>
+<td>13.0</td>
+</tr>
+<tr class="even racerow">
+<td>14</td>
+<td>216623</td>
+<td>Dave Kirwan</td>
+<td>Malahide YC</td>
+<td>M</td>
+<td>&nbsp;</td>
+<td>14</td>
+<td>14.0</td>
+</tr>
+<tr class="odd racerow">
+<td>15</td>
+<td>210361</td>
+<td>John ODriscoll</td>
+<td>Royal St George YC</td>
+<td>M</td>
+<td>&nbsp;</td>
+<td>15</td>
+<td>15.0</td>
+</tr>
+<tr class="even racerow">
+<td>16</td>
+<td>223953</td>
+<td>Andrejs Samoilovs</td>
+<td>Malahide YC</td>
+<td>App</td>
+<td>&nbsp;</td>
+<td>16</td>
+<td>16.0</td>
+</tr>
+<tr class="odd racerow">
+<td>17</td>
+<td>210254</td>
+<td>Sean Flanagan</td>
+<td>Royal St George YC</td>
+<td>GM</td>
+<td>&nbsp;</td>
+<td>17</td>
+<td>17.0</td>
+</tr>
+<tr class="even racerow">
+<td>18</td>
+<td>214628</td>
+<td>Richard Tate</td>
+<td>Royal St George YC</td>
+<td>GM</td>
+<td>&nbsp;</td>
+<td>18</td>
+<td>18.0</td>
+</tr>
+<tr class="odd racerow">
+<td>19</td>
+<td>2106</td>
+<td>Robbie Walker</td>
+<td>Royal St George YC</td>
+<td>M</td>
+<td>&nbsp;</td>
+<td>19</td>
+<td>19.0</td>
+</tr>
+<tr class="even racerow">
+<td>20</td>
+<td>173155</td>
+<td>Noel Davidson</td>
+<td>Malahide YC</td>
+<td>GM</td>
+<td>&nbsp;</td>
+<td>20</td>
+<td>20.0</td>
+</tr>
+<tr class="odd racerow">
+<td>21</td>
+<td>173090</td>
+<td>Brian Tyrrell</td>
+<td>Howth YC</td>
+<td>GM</td>
+<td>&nbsp;</td>
+<td>21</td>
+<td>21.0</td>
+</tr>
+<tr class="even racerow">
+<td>22</td>
+<td>194647</td>
+<td>Conor Costello</td>
+<td>Malahide YC</td>
+<td>GGM</td>
+<td>&nbsp;</td>
+<td>22</td>
+<td>22.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r3standard">R3 - Standard Fleet</h3>
+<div class="caption racecaption">
+Start: Start 1, Finishes: Place
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="8">
+<col class="rank" />
+<col class="sailno" />
+<col class="helmname" />
+<col class="club" />
+<col class="helmagegroup" />
+<col class="helmsex" />
+<col class="place" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Sail No</th>
+<th>Name</th>
+<th>Club</th>
+<th>Category</th>
+<th>Gender</th>
+<th>Place</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>222017</td>
+<td>Rory Lynch</td>
+<td>Baltimore SC</td>
+<td>App</td>
+<td>&nbsp;</td>
+<td>1</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>219127</td>
+<td>Dan O'Connell</td>
+<td>Cove SC</td>
+<td>M</td>
+<td>&nbsp;</td>
+<td>2</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>216890</td>
+<td>Conor Byrne</td>
+<td>Royal St George YC</td>
+<td>App</td>
+<td>&nbsp;</td>
+<td>3</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>211921</td>
+<td>Stephen Mclernon</td>
+<td>Carrickfergus SC</td>
+<td>App</td>
+<td>&nbsp;</td>
+<td>4</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>219804</td>
+<td>Conrad Simpson</td>
+<td>Ballyholme YC</td>
+<td>GM</td>
+<td>&nbsp;</td>
+<td>5</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>178822</td>
+<td>Paul McMahon</td>
+<td>Howth YC</td>
+<td>App</td>
+<td>&nbsp;</td>
+<td>6</td>
+<td>6.0</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>222551</td>
+<td>Daragh Kelleher</td>
+<td>Skerries SC</td>
+<td>M</td>
+<td>&nbsp;</td>
+<td>7</td>
+<td>7.0</td>
+</tr>
+<tr class="even racerow">
+<td>8</td>
+<td>1</td>
+<td>Gavan Murphy</td>
+<td>Royal St George YC</td>
+<td>M</td>
+<td>&nbsp;</td>
+<td>8</td>
+<td>8.0</td>
+</tr>
+<tr class="odd racerow">
+<td>9</td>
+<td>216623</td>
+<td>Dave Kirwan</td>
+<td>Malahide YC</td>
+<td>M</td>
+<td>&nbsp;</td>
+<td>9</td>
+<td>9.0</td>
+</tr>
+<tr class="even racerow">
+<td>10</td>
+<td>190769</td>
+<td>Paul O Sullivan</td>
+<td>Monkstown Bay SC</td>
+<td>App</td>
+<td>&nbsp;</td>
+<td>10</td>
+<td>10.0</td>
+</tr>
+<tr class="odd racerow">
+<td>11</td>
+<td>217533</td>
+<td>Nick Walsh</td>
+<td>Royal Cork YC</td>
+<td>GM</td>
+<td>&nbsp;</td>
+<td>11</td>
+<td>11.0</td>
+</tr>
+<tr class="even racerow">
+<td>12</td>
+<td>219129</td>
+<td>Ross O'Leary</td>
+<td>Royal St George YC</td>
+<td>M</td>
+<td>&nbsp;</td>
+<td>12</td>
+<td>12.0</td>
+</tr>
+<tr class="odd racerow">
+<td>13</td>
+<td>210361</td>
+<td>John ODriscoll</td>
+<td>Royal St George YC</td>
+<td>M</td>
+<td>&nbsp;</td>
+<td>13</td>
+<td>13.0</td>
+</tr>
+<tr class="even racerow">
+<td>14</td>
+<td>213141</td>
+<td>Conor Murphy</td>
+<td>Howth YC</td>
+<td>App</td>
+<td>&nbsp;</td>
+<td>14</td>
+<td>14.0</td>
+</tr>
+<tr class="odd racerow">
+<td>15</td>
+<td>219147</td>
+<td>John Marmelstein</td>
+<td>Royal St George YC</td>
+<td>M</td>
+<td>&nbsp;</td>
+<td>15</td>
+<td>15.0</td>
+</tr>
+<tr class="even racerow">
+<td>16</td>
+<td>210254</td>
+<td>Sean Flanagan</td>
+<td>Royal St George YC</td>
+<td>GM</td>
+<td>&nbsp;</td>
+<td>16</td>
+<td>16.0</td>
+</tr>
+<tr class="odd racerow">
+<td>17</td>
+<td>2106</td>
+<td>Robbie Walker</td>
+<td>Royal St George YC</td>
+<td>M</td>
+<td>&nbsp;</td>
+<td>17</td>
+<td>17.0</td>
+</tr>
+<tr class="even racerow">
+<td>18</td>
+<td>173155</td>
+<td>Noel Davidson</td>
+<td>Malahide YC</td>
+<td>GM</td>
+<td>&nbsp;</td>
+<td>19</td>
+<td>18.0</td>
+</tr>
+<tr class="odd racerow">
+<td>19</td>
+<td>223953</td>
+<td>Andrejs Samoilovs</td>
+<td>Malahide YC</td>
+<td>App</td>
+<td>&nbsp;</td>
+<td>20</td>
+<td>19.0</td>
+</tr>
+<tr class="even racerow">
+<td>20</td>
+<td>194647</td>
+<td>Conor Costello</td>
+<td>Malahide YC</td>
+<td>GGM</td>
+<td>&nbsp;</td>
+<td>21</td>
+<td>20.0</td>
+</tr>
+<tr class="odd racerow">
+<td>21</td>
+<td>214628</td>
+<td>Richard Tate</td>
+<td>Royal St George YC</td>
+<td>GM</td>
+<td>&nbsp;</td>
+<td>RET</td>
+<td>25.0</td>
+</tr>
+<tr class="even racerow">
+<td>21</td>
+<td>173090</td>
+<td>Brian Tyrrell</td>
+<td>Howth YC</td>
+<td>GM</td>
+<td>&nbsp;</td>
+<td>UFD</td>
+<td>25.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r4standard">R4 - Standard Fleet</h3>
+<div class="caption racecaption">
+Start: Start 1, Finishes: Place
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="8">
+<col class="rank" />
+<col class="sailno" />
+<col class="helmname" />
+<col class="club" />
+<col class="helmagegroup" />
+<col class="helmsex" />
+<col class="place" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Sail No</th>
+<th>Name</th>
+<th>Club</th>
+<th>Category</th>
+<th>Gender</th>
+<th>Place</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>222017</td>
+<td>Rory Lynch</td>
+<td>Baltimore SC</td>
+<td>App</td>
+<td>&nbsp;</td>
+<td>20</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>222551</td>
+<td>Daragh Kelleher</td>
+<td>Skerries SC</td>
+<td>M</td>
+<td>&nbsp;</td>
+<td>21</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>219127</td>
+<td>Dan O'Connell</td>
+<td>Cove SC</td>
+<td>M</td>
+<td>&nbsp;</td>
+<td>22</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>204759</td>
+<td>Colm Cunningham</td>
+<td>Malahide YC</td>
+<td>M</td>
+<td>&nbsp;</td>
+<td>23</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>216890</td>
+<td>Conor Byrne</td>
+<td>Royal St George YC</td>
+<td>App</td>
+<td>&nbsp;</td>
+<td>24</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>211921</td>
+<td>Stephen Mclernon</td>
+<td>Carrickfergus SC</td>
+<td>App</td>
+<td>&nbsp;</td>
+<td>25</td>
+<td>6.0</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>1</td>
+<td>Gavan Murphy</td>
+<td>Royal St George YC</td>
+<td>M</td>
+<td>&nbsp;</td>
+<td>26</td>
+<td>7.0</td>
+</tr>
+<tr class="even racerow">
+<td>8</td>
+<td>190769</td>
+<td>Paul O Sullivan</td>
+<td>Monkstown Bay SC</td>
+<td>App</td>
+<td>&nbsp;</td>
+<td>27</td>
+<td>8.0</td>
+</tr>
+<tr class="odd racerow">
+<td>9</td>
+<td>178822</td>
+<td>Paul McMahon</td>
+<td>Howth YC</td>
+<td>App</td>
+<td>&nbsp;</td>
+<td>28</td>
+<td>9.0</td>
+</tr>
+<tr class="even racerow">
+<td>10</td>
+<td>217533</td>
+<td>Nick Walsh</td>
+<td>Royal Cork YC</td>
+<td>GM</td>
+<td>&nbsp;</td>
+<td>29</td>
+<td>10.0</td>
+</tr>
+<tr class="odd racerow">
+<td>11</td>
+<td>219804</td>
+<td>Conrad Simpson</td>
+<td>Ballyholme YC</td>
+<td>GM</td>
+<td>&nbsp;</td>
+<td>30</td>
+<td>11.0</td>
+</tr>
+<tr class="even racerow">
+<td>12</td>
+<td>219129</td>
+<td>Ross O'Leary</td>
+<td>Royal St George YC</td>
+<td>M</td>
+<td>&nbsp;</td>
+<td>31</td>
+<td>12.0</td>
+</tr>
+<tr class="odd racerow">
+<td>13</td>
+<td>216623</td>
+<td>Dave Kirwan</td>
+<td>Malahide YC</td>
+<td>M</td>
+<td>&nbsp;</td>
+<td>32</td>
+<td>13.0</td>
+</tr>
+<tr class="even racerow">
+<td>14</td>
+<td>219147</td>
+<td>John Marmelstein</td>
+<td>Royal St George YC</td>
+<td>M</td>
+<td>&nbsp;</td>
+<td>33</td>
+<td>14.0</td>
+</tr>
+<tr class="odd racerow">
+<td>15</td>
+<td>213141</td>
+<td>Conor Murphy</td>
+<td>Howth YC</td>
+<td>App</td>
+<td>&nbsp;</td>
+<td>34</td>
+<td>15.0</td>
+</tr>
+<tr class="even racerow">
+<td>16</td>
+<td>210361</td>
+<td>John ODriscoll</td>
+<td>Royal St George YC</td>
+<td>M</td>
+<td>&nbsp;</td>
+<td>35</td>
+<td>16.0</td>
+</tr>
+<tr class="odd racerow">
+<td>17</td>
+<td>223953</td>
+<td>Andrejs Samoilovs</td>
+<td>Malahide YC</td>
+<td>App</td>
+<td>&nbsp;</td>
+<td>36</td>
+<td>17.0</td>
+</tr>
+<tr class="even racerow">
+<td>18</td>
+<td>210254</td>
+<td>Sean Flanagan</td>
+<td>Royal St George YC</td>
+<td>GM</td>
+<td>&nbsp;</td>
+<td>37</td>
+<td>18.0</td>
+</tr>
+<tr class="odd racerow">
+<td>19</td>
+<td>214628</td>
+<td>Richard Tate</td>
+<td>Royal St George YC</td>
+<td>GM</td>
+<td>&nbsp;</td>
+<td>38</td>
+<td>19.0</td>
+</tr>
+<tr class="even racerow">
+<td>20</td>
+<td>173155</td>
+<td>Noel Davidson</td>
+<td>Malahide YC</td>
+<td>GM</td>
+<td>&nbsp;</td>
+<td>39</td>
+<td>20.0</td>
+</tr>
+<tr class="odd racerow">
+<td>21</td>
+<td>173090</td>
+<td>Brian Tyrrell</td>
+<td>Howth YC</td>
+<td>GM</td>
+<td>&nbsp;</td>
+<td>40</td>
+<td>21.0</td>
+</tr>
+<tr class="even racerow">
+<td>22</td>
+<td>2106</td>
+<td>Robbie Walker</td>
+<td>Royal St George YC</td>
+<td>M</td>
+<td>&nbsp;</td>
+<td>41</td>
+<td>22.0</td>
+</tr>
+<tr class="odd racerow">
+<td>23</td>
+<td>216101</td>
+<td>Aidan Geraghty</td>
+<td>Greystones SC</td>
+<td>GM</td>
+<td>&nbsp;</td>
+<td>42</td>
+<td>23.0</td>
+</tr>
+<tr class="even racerow">
+<td>24</td>
+<td>194647</td>
+<td>Conor Costello</td>
+<td>Malahide YC</td>
+<td>GGM</td>
+<td>&nbsp;</td>
+<td>DNF</td>
+<td>25.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r5standard">R5 - Standard Fleet</h3>
+<div class="caption racecaption">
+Start: Start 1, Finishes: Place
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="8">
+<col class="rank" />
+<col class="sailno" />
+<col class="helmname" />
+<col class="club" />
+<col class="helmagegroup" />
+<col class="helmsex" />
+<col class="place" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Sail No</th>
+<th>Name</th>
+<th>Club</th>
+<th>Category</th>
+<th>Gender</th>
+<th>Place</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>178822</td>
+<td>Paul McMahon</td>
+<td>Howth YC</td>
+<td>App</td>
+<td>&nbsp;</td>
+<td>1</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>222017</td>
+<td>Rory Lynch</td>
+<td>Baltimore SC</td>
+<td>App</td>
+<td>&nbsp;</td>
+<td>2</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>219127</td>
+<td>Dan O'Connell</td>
+<td>Cove SC</td>
+<td>M</td>
+<td>&nbsp;</td>
+<td>3</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>216890</td>
+<td>Conor Byrne</td>
+<td>Royal St George YC</td>
+<td>App</td>
+<td>&nbsp;</td>
+<td>4</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>213141</td>
+<td>Conor Murphy</td>
+<td>Howth YC</td>
+<td>App</td>
+<td>&nbsp;</td>
+<td>5</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>211921</td>
+<td>Stephen Mclernon</td>
+<td>Carrickfergus SC</td>
+<td>App</td>
+<td>&nbsp;</td>
+<td>6</td>
+<td>6.0</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>222551</td>
+<td>Daragh Kelleher</td>
+<td>Skerries SC</td>
+<td>M</td>
+<td>&nbsp;</td>
+<td>7</td>
+<td>7.0</td>
+</tr>
+<tr class="even racerow">
+<td>8</td>
+<td>219804</td>
+<td>Conrad Simpson</td>
+<td>Ballyholme YC</td>
+<td>GM</td>
+<td>&nbsp;</td>
+<td>9</td>
+<td>8.0</td>
+</tr>
+<tr class="odd racerow">
+<td>9</td>
+<td>217533</td>
+<td>Nick Walsh</td>
+<td>Royal Cork YC</td>
+<td>GM</td>
+<td>&nbsp;</td>
+<td>10</td>
+<td>9.0</td>
+</tr>
+<tr class="even racerow">
+<td>10</td>
+<td>210361</td>
+<td>John ODriscoll</td>
+<td>Royal St George YC</td>
+<td>M</td>
+<td>&nbsp;</td>
+<td>11</td>
+<td>10.0</td>
+</tr>
+<tr class="odd racerow">
+<td>11</td>
+<td>1</td>
+<td>Gavan Murphy</td>
+<td>Royal St George YC</td>
+<td>M</td>
+<td>&nbsp;</td>
+<td>12</td>
+<td>11.0</td>
+</tr>
+<tr class="even racerow">
+<td>12</td>
+<td>216623</td>
+<td>Dave Kirwan</td>
+<td>Malahide YC</td>
+<td>M</td>
+<td>&nbsp;</td>
+<td>13</td>
+<td>12.0</td>
+</tr>
+<tr class="odd racerow">
+<td>13</td>
+<td>219129</td>
+<td>Ross O'Leary</td>
+<td>Royal St George YC</td>
+<td>M</td>
+<td>&nbsp;</td>
+<td>14</td>
+<td>13.0</td>
+</tr>
+<tr class="even racerow">
+<td>14</td>
+<td>219147</td>
+<td>John Marmelstein</td>
+<td>Royal St George YC</td>
+<td>M</td>
+<td>&nbsp;</td>
+<td>15</td>
+<td>14.0</td>
+</tr>
+<tr class="odd racerow">
+<td>15</td>
+<td>190769</td>
+<td>Paul O Sullivan</td>
+<td>Monkstown Bay SC</td>
+<td>App</td>
+<td>&nbsp;</td>
+<td>16</td>
+<td>15.0</td>
+</tr>
+<tr class="even racerow">
+<td>16</td>
+<td>223953</td>
+<td>Andrejs Samoilovs</td>
+<td>Malahide YC</td>
+<td>App</td>
+<td>&nbsp;</td>
+<td>17</td>
+<td>16.0</td>
+</tr>
+<tr class="odd racerow">
+<td>17</td>
+<td>173090</td>
+<td>Brian Tyrrell</td>
+<td>Howth YC</td>
+<td>GM</td>
+<td>&nbsp;</td>
+<td>18</td>
+<td>17.0</td>
+</tr>
+<tr class="even racerow">
+<td>18</td>
+<td>173155</td>
+<td>Noel Davidson</td>
+<td>Malahide YC</td>
+<td>GM</td>
+<td>&nbsp;</td>
+<td>19</td>
+<td>18.0</td>
+</tr>
+<tr class="odd racerow">
+<td>19</td>
+<td>210254</td>
+<td>Sean Flanagan</td>
+<td>Royal St George YC</td>
+<td>GM</td>
+<td>&nbsp;</td>
+<td>20</td>
+<td>19.0</td>
+</tr>
+<tr class="even racerow">
+<td>20</td>
+<td>214628</td>
+<td>Richard Tate</td>
+<td>Royal St George YC</td>
+<td>GM</td>
+<td>&nbsp;</td>
+<td>21</td>
+<td>20.0</td>
+</tr>
+<tr class="odd racerow">
+<td>21</td>
+<td>2106</td>
+<td>Robbie Walker</td>
+<td>Royal St George YC</td>
+<td>M</td>
+<td>&nbsp;</td>
+<td>22</td>
+<td>21.0</td>
+</tr>
+<tr class="even racerow">
+<td>22</td>
+<td>216101</td>
+<td>Aidan Geraghty</td>
+<td>Greystones SC</td>
+<td>GM</td>
+<td>&nbsp;</td>
+<td>23</td>
+<td>22.0</td>
+</tr>
+<tr class="odd racerow">
+<td>23</td>
+<td>204759</td>
+<td>Colm Cunningham</td>
+<td>Malahide YC</td>
+<td>M</td>
+<td>&nbsp;</td>
+<td>UFD</td>
+<td>25.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r6standard">R6 - Standard Fleet</h3>
+<div class="caption racecaption">
+Start: Start 1, Finishes: Place
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="8">
+<col class="rank" />
+<col class="sailno" />
+<col class="helmname" />
+<col class="club" />
+<col class="helmagegroup" />
+<col class="helmsex" />
+<col class="place" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Sail No</th>
+<th>Name</th>
+<th>Club</th>
+<th>Category</th>
+<th>Gender</th>
+<th>Place</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>222017</td>
+<td>Rory Lynch</td>
+<td>Baltimore SC</td>
+<td>App</td>
+<td>&nbsp;</td>
+<td>1</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>217533</td>
+<td>Nick Walsh</td>
+<td>Royal Cork YC</td>
+<td>GM</td>
+<td>&nbsp;</td>
+<td>2</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>216890</td>
+<td>Conor Byrne</td>
+<td>Royal St George YC</td>
+<td>App</td>
+<td>&nbsp;</td>
+<td>3</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>222551</td>
+<td>Daragh Kelleher</td>
+<td>Skerries SC</td>
+<td>M</td>
+<td>&nbsp;</td>
+<td>4</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>178822</td>
+<td>Paul McMahon</td>
+<td>Howth YC</td>
+<td>App</td>
+<td>&nbsp;</td>
+<td>5</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>219127</td>
+<td>Dan O'Connell</td>
+<td>Cove SC</td>
+<td>M</td>
+<td>&nbsp;</td>
+<td>6</td>
+<td>6.0</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>213141</td>
+<td>Conor Murphy</td>
+<td>Howth YC</td>
+<td>App</td>
+<td>&nbsp;</td>
+<td>7</td>
+<td>7.0</td>
+</tr>
+<tr class="even racerow">
+<td>8</td>
+<td>211921</td>
+<td>Stephen Mclernon</td>
+<td>Carrickfergus SC</td>
+<td>App</td>
+<td>&nbsp;</td>
+<td>8</td>
+<td>8.0</td>
+</tr>
+<tr class="odd racerow">
+<td>9</td>
+<td>219804</td>
+<td>Conrad Simpson</td>
+<td>Ballyholme YC</td>
+<td>GM</td>
+<td>&nbsp;</td>
+<td>9</td>
+<td>9.0</td>
+</tr>
+<tr class="even racerow">
+<td>10</td>
+<td>190769</td>
+<td>Paul O Sullivan</td>
+<td>Monkstown Bay SC</td>
+<td>App</td>
+<td>&nbsp;</td>
+<td>10</td>
+<td>10.0</td>
+</tr>
+<tr class="odd racerow">
+<td>11</td>
+<td>216623</td>
+<td>Dave Kirwan</td>
+<td>Malahide YC</td>
+<td>M</td>
+<td>&nbsp;</td>
+<td>11</td>
+<td>11.0</td>
+</tr>
+<tr class="even racerow">
+<td>12</td>
+<td>219129</td>
+<td>Ross O'Leary</td>
+<td>Royal St George YC</td>
+<td>M</td>
+<td>&nbsp;</td>
+<td>12</td>
+<td>12.0</td>
+</tr>
+<tr class="odd racerow">
+<td>13</td>
+<td>1</td>
+<td>Gavan Murphy</td>
+<td>Royal St George YC</td>
+<td>M</td>
+<td>&nbsp;</td>
+<td>13</td>
+<td>13.0</td>
+</tr>
+<tr class="even racerow">
+<td>14</td>
+<td>210361</td>
+<td>John ODriscoll</td>
+<td>Royal St George YC</td>
+<td>M</td>
+<td>&nbsp;</td>
+<td>14</td>
+<td>14.0</td>
+</tr>
+<tr class="odd racerow">
+<td>15</td>
+<td>223953</td>
+<td>Andrejs Samoilovs</td>
+<td>Malahide YC</td>
+<td>App</td>
+<td>&nbsp;</td>
+<td>15</td>
+<td>15.0</td>
+</tr>
+<tr class="even racerow">
+<td>16</td>
+<td>219147</td>
+<td>John Marmelstein</td>
+<td>Royal St George YC</td>
+<td>M</td>
+<td>&nbsp;</td>
+<td>16</td>
+<td>16.0</td>
+</tr>
+<tr class="odd racerow">
+<td>17</td>
+<td>204759</td>
+<td>Colm Cunningham</td>
+<td>Malahide YC</td>
+<td>M</td>
+<td>&nbsp;</td>
+<td>17</td>
+<td>17.0</td>
+</tr>
+<tr class="even racerow">
+<td>18</td>
+<td>214628</td>
+<td>Richard Tate</td>
+<td>Royal St George YC</td>
+<td>GM</td>
+<td>&nbsp;</td>
+<td>18</td>
+<td>18.0</td>
+</tr>
+<tr class="odd racerow">
+<td>19</td>
+<td>194647</td>
+<td>Conor Costello</td>
+<td>Malahide YC</td>
+<td>GGM</td>
+<td>&nbsp;</td>
+<td>19</td>
+<td>19.0</td>
+</tr>
+<tr class="even racerow">
+<td>20</td>
+<td>210254</td>
+<td>Sean Flanagan</td>
+<td>Royal St George YC</td>
+<td>GM</td>
+<td>&nbsp;</td>
+<td>20</td>
+<td>20.0</td>
+</tr>
+<tr class="odd racerow">
+<td>21</td>
+<td>173090</td>
+<td>Brian Tyrrell</td>
+<td>Howth YC</td>
+<td>GM</td>
+<td>&nbsp;</td>
+<td>21</td>
+<td>21.0</td>
+</tr>
+<tr class="even racerow">
+<td>22</td>
+<td>173155</td>
+<td>Noel Davidson</td>
+<td>Malahide YC</td>
+<td>GM</td>
+<td>&nbsp;</td>
+<td>22</td>
+<td>22.0</td>
+</tr>
+<tr class="odd racerow">
+<td>23</td>
+<td>2106</td>
+<td>Robbie Walker</td>
+<td>Royal St George YC</td>
+<td>M</td>
+<td>&nbsp;</td>
+<td>23</td>
+<td>23.0</td>
+</tr>
+<tr class="even racerow">
+<td>24</td>
+<td>216101</td>
+<td>Aidan Geraghty</td>
+<td>Greystones SC</td>
+<td>GM</td>
+<td>&nbsp;</td>
+<td>24</td>
+<td>24.0</td>
+</tr>
+</tbody>
+</table>
+
+<p class="hardleft"><a href="http://"></a><br /><a href="mailto:"></a></p>
+<p class="hardright"><a href="http://"></a><br /><a href="mailto:"></a></p>
+<p>Sailwave Scoring Software 2.30.02<br /><a href="https://www.sailwave.com">www.sailwave.com</a></p>
+
+</div>
+
+<footer>
+</footer>
+
+<div id="scrollbottom"></div>
+
+</body>
+</html>
+
+

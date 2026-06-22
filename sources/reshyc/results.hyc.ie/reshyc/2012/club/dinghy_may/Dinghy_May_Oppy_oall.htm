@@ -1,0 +1,504 @@
+
+
+<!doctype html>
+
+<head>
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="description" content="sailwave results">
+<meta name="viewport" content="width=device-width">
+
+<title>Sailwave results for Dinghy May Sundays at Summer Season 2012</title>
+
+<style type="text/css">
+body {font: 67% arial, helvetica, sans-serif; text-align: center;}
+.hardleft  {text-align: left; float: left;  margin: 15px 0  0 25px;}
+.hardright {text-align: right; float: right; margin: 15px 25px 0 0;}
+table, caption {text-align: left; margin: auto; font-size: 1em; border-collapse: collapse; border: 1px #fff solid;}
+td {padding: 4px; border-right: 1px #fff solid; border-bottom: 1px #ffffff solid; vertical-align: top;}
+th {padding: 4px; border: 1px #fff solid; border-bottom: 1px #ffffff solid; vertical-align: top;}
+.caption {padding: 5px; text-align: center; border: 0; font-weight: bold;}
+h1 {font-size: 1.6em;}
+h2 {font-size: 1.4em;}
+h3 {font-size: 1.2em;}
+p {text-align: center;}
+th {background-color: #d0d0d0;}
+.contents {text-align: left; margin-left: 20%;}
+.race, .rank {text-align: center;}
+.even {background-color: #eaeaea;}
+.odd {background-color: #f4f4f4;}
+.nat {text-align: center;}
+.natflag {border: 1px #999 solid;}
+.nattext {font-size: 0.8em;}
+</style>
+
+<script type="text/javascript">
+//#name=results
+//#author=Colin Jenkins
+//#date=2012-02-16
+//#version=1.0
+//#desc=Functions to use if scripting is turned on when publishing results.
+//#url=http://sailwave.com
+//#email=colin@sailwave.com
+//#twitter=sailwave
+
+//*****Just translate these strings to get results in a different language
+var swStr = {};
+swStr.SummaryTitle            = 'Overall';
+swStr.SummaryCaptionSailed    = 'Sailed';
+swStr.SummaryCaptionDiscards  = 'Discards';
+swStr.SummaryCaptionToCount   = 'To count';
+swStr.SummaryCaptionToQualify = 'To qualify';
+swStr.SummaryCaptionRatings   = 'Ratings';
+swStr.SummaryCaptionEntries   = 'Entries';
+swStr.SummaryCaptionScoring   = 'Scoring system';
+swStr.RacePrefix              = 'R';
+swStr.PrizesTitle             = 'Prizes';
+swStr.CodesTitle              = 'Scoring codes used';
+
+// was 'at' changed 020512
+swStr.Wordat                  = '';
+//*****End translate
+
+//*****You must declare these Sailwave assumed variables which are populated when publishing
+var swSeries             = {};
+swSeries.Title           = '';
+swSeries.Notes           = '';
+swSeries.Event           = '';
+swSeries.Venue           = '';
+var swSS                 = new Array();
+var swSummary            = {};
+swSummary.ScoringSys     = 0;
+swSummary.Field          = '';
+swSummary.Value          = '';
+swSummary.TagValue       = '';
+swSummary.FieldName      = '';
+swSummary.Entries        = 0;
+swSummary.Sailed         = 0;
+swSummary.Discards       = 0;
+swSummary.FinalsDiscards = 0;
+swSummary.ToCount        = 0;
+swSummary.ToQualify      = 0;
+var swRace               = {};
+swRace.Entries           = 0;
+swRace.Notes             = '';
+swRace.Date              = '';
+swRace.Time              = '';
+swRace.Name              = '';
+swRace.Rank              = 0;
+//*****End of assumed vars
+
+var swSpace = '&nbsp;';
+var swTwoSpaces = '&nbsp;&nbsp;';
+
+function resSeriesTitle() {
+document.write('<h2 class="seriestitle">' + swSeries.Title + '</h2>');
+}
+
+/*
+function resSeriesNotes() {
+document.write('<p class="seriesnotes">' + swSeries.Notes + '</p>');
+}
+*/
+
+function resSeriesNotes() {
+document.write('<h3>' + swSeries.Notes + '</h3>');
+}
+
+function resSummaryTitle() {
+if (swSummary.Field)
+document.write('<h1 class="summarytitle" id="summary' + swSummary.TagValue + '">' + swSummary.Value + '<br>' + swStr.SummaryTitle + '</h1>');
+else
+document.write('<h3 class="summarytitle">' + swStr.SummaryTitle + '</h3>');
+}
+
+function resSummaryCaption() {
+var h  = '';
+var ss = swSS[swSummary.ScoringSys];
+h += '<div class="caption summarycaption">';
+h +=          swStr.SummaryCaptionSailed    + ': ' + swSummary.Sailed;
+h +=   ', ' + swStr.SummaryCaptionDiscards  + ': ' + swSummary.Discards;
+h +=   ', ' + swStr.SummaryCaptionToCount   + ': ' + swSummary.ToCount;
+if (swSummary.ToQualify > 0)
+h += ', ' + swStr.SummaryCaptionToQualify + ': ' + swSummary.ToQualify;
+if (ss.RatingSystem.toLowerCase() != 'none')
+h += ', ' + swStr.SummaryCaptionRatings   + ': ' + ss.RatingSystem;
+h +=   ', ' + swStr.SummaryCaptionEntries   + ': ' + swSummary.Entries;
+h +=   ', ' + swStr.SummaryCaptionScoring   + ': ' + ss.Name
+h += '</div>'
+document.write(h);
+}
+
+function resRaceTitle() {
+
+var Extra = '';
+var Race = ''
+
+if (swRace.Name)
+Race = swRace.Name;
+else
+//Race = swStr.RacePrefix + swRace.Rank
+Race = 'Race ' + swRace.Rank
+
+if (swRace.Date)
+//Extra = swSpace + '-' + swSpace + swRace.Date;
+Extra = swRace.Date;
+
+if (swRace.Time)
+Extra = Extra + swSpace + swStr.Wordat + swSpace + swRace.Time;
+
+if (swSummary.Field)
+document.write('<h2 class="racetitle" id="r' + swRace.Rank + swSummary.TagValue + '">' + Race + swTwoSpaces + '-' + swTwoSpaces + Extra + swTwoSpaces + '-' + swTwoSpaces + swSummary.Value + '</h2>');
+else
+document.write('<h2 class="racetitle">' + Race + swTwoSpaces + '-' + swTwoSpaces + Extra + swTwoSpaces + '-' + swTwoSpaces + swSummary.Value + '</h2>');
+}
+
+function resRaceNotes() {
+document.write('<p class="racenotes">' + swRace.Notes + '</p>');
+}
+
+function resPrizeTitle() {
+document.write('<h3 class="prizestitle">' + swStr.PrizesTitle + '</h3>');
+}
+
+function resCodesTitle() {
+document.write('<h3 class="codestitle">' + swStr.CodesTitle + '</h3>');
+}
+</script>
+
+</head>
+
+<body>
+
+<header>
+</header>
+
+<div id="wrap">
+
+
+<h1>Dinghy May Sundays</h1>
+<h2>Optimist</h2>
+
+<div style="clear:both;"></div>
+
+<script type="text/javascript">
+swSeries.Title = 'Results as of 12:08 on August 30, 2012';
+swSeries.Notes = '';
+swSeries.Event = 'Dinghy May Sundays';
+swSeries.Venue = 'Summer Season';
+swSS[559] = {};
+swSS[559].Name = 'Appendix A';
+swSS[559].Field = '';
+swSS[559].Value = '';
+swSS[559].Notes = '';
+swSS[559].HighPointFormula = '';
+swSS[559].LowPointFormula = '';
+swSS[559].CustomLowPoints = '';
+swSS[559].CustomHighPoints = '';
+swSS[559].QualProfile = '';
+swSS[559].DiscardProfile = '0,0,1,1,1,1,1,1,2';
+swSS[559].RaceTies = 'Averaged';
+swSS[559].PointsAccumulation = 'Sum';
+swSS[559].PointsPlaces = '1';
+swSS[559].PointsSystem = 'Low point';
+swSS[559].RatingSystem = 'None';
+swSS[559].RatSysA = '';
+swSS[559].RatSysB = '';
+swSS[559].CExpr = '';
+swSS[559].EExpr = '';
+swSS[559].RExpr = '';
+swSS[559].RatingMode = 'No';
+swSS[559].WindStrengths = '0-1,2-3,4,5-9';
+swSS[559].WindIndexedA = '';
+swSS[559].WindIndexedB = '';
+swSS[559].UpdateRatings = 'No';
+swSS[559].BackCalcPercent = '0';
+swSS[559].TieA81 = 'Yes';
+swSS[559].TieA81Discardss = 'No';
+swSS[559].TieA82 = 'Yes';
+swSS[559].TieA82Back = 'No';
+swSS[559].TieA82Starts = 'No';
+swSS[559].TieB8 = 'No';
+swSS[559].TieFinals = 'No';
+swSS[559].Flights = 'No';
+swSS[559].Finals = 'No';
+swSS[559].FinalsFirst = '9';
+swSS[559].FinalsStickyQ = 'No';
+swSS[559].FinalsDiscardP = '';
+swSS[559].LowWeight = 'Yes';
+swSS[559].Medal = 'No';
+swSS[559].MedalMax = '10';
+swSS[559].MedalRace = '10';
+swSS[559].MedalYesNotDiscardable = 'Yes';
+swSS[559].MedalYesMultiply = 'Yes';
+swSS[559].MedalYesTie = 'Yes';
+swSS[559].MedalNoNotDiscardable = 'Yes';
+swSS[559].MedalNoMultiply = 'Yes';
+swSS[559].MedalNoTie = 'Yes';
+</script>
+<script type="text/javascript">
+resSeriesTitle();
+</script>
+<script type="text/javascript">
+swSummary.Entries = 15;
+swSummary.Field = '';
+swSummary.FieldName = '';
+swSummary.Value = '';
+swSummary.TagValue = '';
+swSummary.ScoringSys = 559;
+</script>
+<script type="text/javascript">
+resSummaryTitle();
+</script>
+<script type="text/javascript">
+swSummary.Sailed = 5;
+swSummary.Discards = 1;
+swSummary.ToCount = 4;
+swSummary.ToQualify = 0;
+swSummary.FinalsDiscards = 1;
+resSummaryCaption();
+</script>
+<table class="summarytable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="11">
+<col class="rank" />
+<col class="class" />
+<col class="sailno" />
+<col class="helmname" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="total" />
+<col class="nett" />
+</colgroup>
+<tr>
+<th>Rank</th>
+<th>class</th>
+<th>SailNo</th>
+<th>Helm</th>
+<th>
+R1<br />0605</th>
+<th>
+R2<br />0605</th>
+<th>
+R3<br />1305</th>
+<th>
+R4<br />2005</th>
+<th>
+R5<br />2005</th>
+<th>Total</th>
+<th>Nett</th>
+</tr>
+<tr class="odd summaryrow">
+<td>1st</td>
+<td>Optimist</td>
+<td>1341</td>
+<td>Ewan McMahon</td>
+<td>(6.0 DNC)</td>
+<td>6.0 DNC</td>
+<td>2.0</td>
+<td>1.0</td>
+<td>1.0</td>
+<td>16.0</td>
+<td>10.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>2nd</td>
+<td>Optimist</td>
+<td>1018</td>
+<td>Jamie McMahon</td>
+<td>2.0</td>
+<td>3.0</td>
+<td>(6.0)</td>
+<td>4.0</td>
+<td>4.0</td>
+<td>19.0</td>
+<td>13.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>3rd</td>
+<td>Optimist</td>
+<td>1404</td>
+<td>Alex O'Grady</td>
+<td>(6.0 DNC)</td>
+<td>6.0 DNC</td>
+<td>3.0</td>
+<td>2.0</td>
+<td>3.0</td>
+<td>20.0</td>
+<td>14.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>4th</td>
+<td>Optimist</td>
+<td>1403</td>
+<td>Jamie O'Grady</td>
+<td>(6.0 DNC)</td>
+<td>6.0 DNC</td>
+<td>4.0</td>
+<td>5.0</td>
+<td>2.0</td>
+<td>23.0</td>
+<td>17.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>5th</td>
+<td>Optimist</td>
+<td>1313</td>
+<td>Alex Kavanagh</td>
+<td>1.0</td>
+<td>1.0</td>
+<td>(10.0 DNF)</td>
+<td>9.0 DNC</td>
+<td>9.0 DNC</td>
+<td>30.0</td>
+<td>20.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>6th</td>
+<td>Optimist</td>
+<td>1379</td>
+<td>Max Kavanagh</td>
+<td>3.0</td>
+<td>2.0</td>
+<td>(10.0 DNF)</td>
+<td>7.0</td>
+<td>8.0</td>
+<td>30.0</td>
+<td>20.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>7th</td>
+<td>Optimist</td>
+<td>1342</td>
+<td>Darragh Kelly</td>
+<td>6.0 DNC</td>
+<td>6.0 DNC</td>
+<td>(10.0 DNC)</td>
+<td>3.0</td>
+<td>5.0</td>
+<td>30.0</td>
+<td>20.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>8th</td>
+<td>Optimist</td>
+<td>1375</td>
+<td>Richard Hogan</td>
+<td>6.0 DNC</td>
+<td>6.0 DNC</td>
+<td>1.0</td>
+<td>(9.0 DNC)</td>
+<td>9.0 DNC</td>
+<td>31.0</td>
+<td>22.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>9th</td>
+<td>Optimist</td>
+<td>1468</td>
+<td>Dylan O'Grady</td>
+<td>6.0 DNC</td>
+<td>6.0 DNC</td>
+<td>(10.0 DNC)</td>
+<td>6.0</td>
+<td>6.0</td>
+<td>34.0</td>
+<td>24.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>10th</td>
+<td>Optimist</td>
+<td>1356</td>
+<td>Sebastian Mollard</td>
+<td>4.0</td>
+<td>4.0</td>
+<td>(10.0 DNF)</td>
+<td>9.0 DNC</td>
+<td>9.0 DNC</td>
+<td>36.0</td>
+<td>26.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>11th</td>
+<td>Optimist</td>
+<td>1361</td>
+<td>Daniel Hopkins</td>
+<td>6.0 DNC</td>
+<td>6.0 DNC</td>
+<td>5.0</td>
+<td>(9.0 DNC)</td>
+<td>9.0 DNC</td>
+<td>35.0</td>
+<td>26.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>12th</td>
+<td>Optimist</td>
+<td>1036</td>
+<td>Jonathan Sargent</td>
+<td>6.0 DNC</td>
+<td>6.0 DNC</td>
+<td>(10.0 DNC)</td>
+<td>8.0</td>
+<td>7.0</td>
+<td>37.0</td>
+<td>27.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>13th</td>
+<td>Optimist</td>
+<td>116</td>
+<td>Sam Markey</td>
+<td>5.0</td>
+<td>6.0 DNF</td>
+<td>(10.0 DNC)</td>
+<td>9.0 DNC</td>
+<td>9.0 DNC</td>
+<td>39.0</td>
+<td>29.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>14th</td>
+<td>Optimist</td>
+<td>12</td>
+<td>Ellen Walls</td>
+<td>6.0 DNC</td>
+<td>6.0 DNC</td>
+<td>(10.0 DNC)</td>
+<td>9.0 DNC</td>
+<td>9.0 DNC</td>
+<td>40.0</td>
+<td>30.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>14th</td>
+<td>Optimist</td>
+<td>1281</td>
+<td>Anna Colwell</td>
+<td>6.0 DNC</td>
+<td>6.0 DNC</td>
+<td>(10.0 DNC)</td>
+<td>9.0 DNC</td>
+<td>9.0 DNC</td>
+<td>40.0</td>
+<td>30.0</td>
+</tr>
+</table>
+
+<p class="hardleft"><a href="http://"></a><br /><a href="mailto:"></a></p>
+<p class="hardright"><a href="http://www.hyc.ie">www.hyc.ie</a><br /><a href="mailto:results@hyc.ie">results@hyc.ie</a></p>
+<p>Sailwave Scoring Software 2.5.1<br /><a href="http://www.sailwave.com">www.sailwave.com</a></p>
+
+</div>
+
+<footer>
+</footer>
+
+<div id="scrollbottom"></div>
+
+</body>
+</html>
+
+

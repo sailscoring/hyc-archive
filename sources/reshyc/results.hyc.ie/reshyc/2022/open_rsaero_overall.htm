@@ -1,0 +1,1865 @@
+
+
+
+<!doctype html>
+
+<head>
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta http-equiv="Cache-control" content="no-cache">
+<meta name="description" content="sailwave results">
+<meta name="viewport" content="width=device-width">
+
+<title>Sailwave results for RS Aero Easterns 2022 at Howth Yacht Club 2022</title>
+
+<style type="text/css">
+body {font: 80% arial, helvetica, sans-serif; text-align: center;}
+.hardleft  {text-align: left; float: left;  margin: 15px 0  15px 25px;}
+.hardright {text-align: right; float: right; margin: 15px 25px 15px 0;}
+table {text-align: left; margin: 0px auto 30px auto; font-size: 1em; border-collapse: collapse; border: 1px #999 solid;}
+td, th {padding: 4px; border: 1px #999 solid; vertical-align: top;}
+.caption {padding: 5px; text-align: center; border: 0; font-weight: bold;}
+p {text-align: center;}
+.contents {text-align: left; margin-left: 20%;}
+.race {background-color: #eee;}
+.odd {background-color: #eef;}
+.natflag {border: 1px #999 solid;}
+.nattext {font-size: 0.8em;}
+.place1 {font-weight: bold; background-color: #ffffaa;}
+.place2 {font-weight: bold; background-color: #aaaaff;}
+.place3 {font-weight: bold; background-color: #ffaaaa;}
+.placen {}
+table.headertable {border: 0px;}
+table.headertable td{border: 0px;}
+</style>
+
+<script type="text/javascript">
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script>
+
+function swGetURLArgs() {
+
+  var url = location.href;
+  var qs  = url.substring(url.indexOf('?') + 1).split('&');
+
+  for(var i = 0, result = {}; i < qs.length; i++) {
+    qs[i]            = qs[i].split('=');
+    result[qs[i][0]] = decodeURIComponent(qs[i][1]);
+  }
+
+  return result;
+}
+
+//
+//  name=HighlightWins3
+//  dependencies=jQuery
+//  description=Highlight winning scores in summary tables.
+//  author=Jon Eskdale based on an idea by Colin Jenkins
+//  date=2015-08-18
+//  version=1.6 2018-11-15
+//  url=http://sailwave.com
+//  email=jon@sailwave.com
+//  twitter=eskdale
+//  comments=Edit colours to colours of your choice
+//
+
+$(document).ready(function() {
+var winsSelector = '.summaryrace';
+var winsText     = /\b1\.0/;
+var twoText              = /\b2\.0/;
+var threeText    = /\b3\.0/;
+
+// Edit these colours to change the highlight colours for 1st, 2nd and 3rd
+var winsColour   = '#ffd700';
+var twoColour    = '#6a91c5';
+var threeColour  = '#da6841';
+//var twoColour  = '#ffe768';
+//var threeColour  = '#fff0a1';
+
+// create array of race column numbers for first table (summarytable)
+var ths = document.getElementsByTagName('col');
+var column =[];
+for (var i=0; i<ths.length; i++) {
+        if (ths[i].classList[0] === "race") {
+                column.push(i);
+        } else {
+                if (column.length !=0) {
+                        break;
+                }
+        }
+}
+//console.log(column);
+
+//  Set a class of summaryrace for all race cells in summary table body
+//
+for (var i=0; i<column.length; i++) {
+        $(".summarytable tbody tr td:nth-child(" + (column[i]+1) +")").addClass("summaryrace");
+}
+
+// Change the background color for cells with class of summaryrace and that match regular expression text
+$(function () {
+
+  $(winsSelector).filter(function() {
+    return winsText.test($(this).text());
+  }).css("background", winsColour);
+  $(winsSelector).filter(function() {
+        return twoText.test($(this).text());
+  }).css("background", twoColour);
+  $(winsSelector).filter(function() {
+        return threeText.test($(this).text());
+  }).css("background", threeColour);
+
+});
+});
+</script>
+
+</head>
+
+<body>
+
+<header>
+</header>
+<table class="headertable" cellspacing="0" width="100%" cellpadding="0" border="0">
+<tbody>
+<div id="wrap">
+
+<tr>
+<td width="30%">
+<img style="display:block; height:100px;"  src="https://hyc.ie/system/sponsor_logos/395/thumb/HYC_Logo.jpg" alt="venue burgee" />
+</td>
+
+<td width="40%" align="center">
+<h1>RS Aero Easterns 2022</h1>
+<h2>Howth Yacht Club</h2>
+</td>
+
+<td width="30%">
+<img style="display:block; height:100px;" src="https://hyc.ie/system/sponsor_logos/417/thumb/RS_Aero_Logo.jpg" alt="event burgee" align="right" />
+</td>
+</tr>
+</tbody>
+</table>
+
+<div style="clear:both;"></div>
+
+<style>
+div.applicant-break {page-break-after:always;}
+</style>
+<h3 class="seriestitle">Results are provisional as of 13:53 on October 30, 2022</h3>
+<h3 class="summarytitle">Overall</h3>
+<div class="caption summarycaption">Sailed: 4, Discards: 1, To count: 3, Rating system: PY, Entries: 18, Scoring system: Appendix A</div>
+<table class="summarytable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="16">
+<col class="rank" />
+<col class="alias" />
+<col class="sailno" />
+<col class="boat" />
+<col class="helmname" />
+<col class="club" />
+<col class="division" />
+<col class="helmagegroup" />
+<col class="helmsex" />
+<col class="rating" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="total" />
+<col class="nett" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>&nbsp;</th>
+<th>Sail No</th>
+<th>Boat Name</th>
+<th>Helm Name</th>
+<th>Club</th>
+<th>Rig Size</th>
+<th>Age Group</th>
+<th>Female</th>
+<th>Rating</th>
+<th><a class="racelink" href="#r1">Race 1</a><br />&nbsp;</th>
+<th><a class="racelink" href="#r2">Race 2</a><br />&nbsp;</th>
+<th><a class="racelink" href="#r3">Race 3</a><br />&nbsp;</th>
+<th><a class="racelink" href="#r4">Race 4</a><br />&nbsp;</th>
+<th>Total</th>
+<th>Nett</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd summaryrow">
+<td>1st</td>
+<td>&nbsp;</td>
+<td>2524</td>
+<td>Midnight Runner</td>
+<td>Paul McMahon</td>
+<td>HYC</td>
+<td>7</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>1065</td>
+<td class="rank1">1.0</td>
+<td class="rank2">(2.0)</td>
+<td class="rank1">1.0</td>
+<td class="rank1">1.0</td>
+<td>5.0</td>
+<td>3.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>2nd</td>
+<td>&nbsp;</td>
+<td>8187</td>
+<td>&nbsp;</td>
+<td>Peter Barton</td>
+<td>Lymington Town SC</td>
+<td>7</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>1065</td>
+<td class="rank2">2.0</td>
+<td class="rank1">1.0</td>
+<td>4.0</td>
+<td>(8.0)</td>
+<td>15.0</td>
+<td>7.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>3rd</td>
+<td>&nbsp;</td>
+<td>3187</td>
+<td>Shaero</td>
+<td>Daragh Sheridan</td>
+<td>HYC</td>
+<td>7</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>1065</td>
+<td class="rank3">(3.0)</td>
+<td class="rank3">3.0</td>
+<td class="rank3">3.0</td>
+<td class="rank2">2.0</td>
+<td>11.0</td>
+<td>8.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>4th</td>
+<td>&nbsp;</td>
+<td>3289</td>
+<td>Orion</td>
+<td>Noel Butler</td>
+<td>NYC</td>
+<td>6</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>1100</td>
+<td>4.0</td>
+<td>4.0</td>
+<td>(6.0)</td>
+<td class="rank3">3.0</td>
+<td>17.0</td>
+<td>11.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>5th</td>
+<td>&nbsp;</td>
+<td>3233</td>
+<td>&nbsp;</td>
+<td>Hammy Baker</td>
+<td>SLYC/QYC</td>
+<td>7</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>1065</td>
+<td>6.0</td>
+<td>(7.0)</td>
+<td class="rank2">2.0</td>
+<td>7.0</td>
+<td>22.0</td>
+<td>15.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>6th</td>
+<td>&nbsp;</td>
+<td>3822</td>
+<td>&nbsp;</td>
+<td>Roy Van Maanen</td>
+<td>Greystones SC</td>
+<td>6</td>
+<td>Master</td>
+<td>&nbsp;</td>
+<td>1100</td>
+<td>(5.0)</td>
+<td>5.0</td>
+<td>5.0</td>
+<td>5.0</td>
+<td>20.0</td>
+<td>15.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>7th</td>
+<td>&nbsp;</td>
+<td>1067</td>
+<td>&nbsp;</td>
+<td>Stuart Harris</td>
+<td>WHSC</td>
+<td>6</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>1100</td>
+<td>(7.0)</td>
+<td>6.0</td>
+<td>7.0</td>
+<td>4.0</td>
+<td>24.0</td>
+<td>17.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>8th</td>
+<td>&nbsp;</td>
+<td>3365</td>
+<td>&nbsp;</td>
+<td>Emmett O'Sullivan</td>
+<td>Monkstown Bay SC</td>
+<td>7</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>1065</td>
+<td>9.0</td>
+<td>8.0</td>
+<td>9.0</td>
+<td>(19.0 DNC)</td>
+<td>45.0</td>
+<td>26.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>9th</td>
+<td>&nbsp;</td>
+<td>3291</td>
+<td>Bubbles</td>
+<td>John Phelan</td>
+<td>HYC</td>
+<td>6</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>1100</td>
+<td>8.0</td>
+<td>9.0</td>
+<td>10.0</td>
+<td>(11.0)</td>
+<td>38.0</td>
+<td>27.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>10th</td>
+<td>&nbsp;</td>
+<td>3431</td>
+<td>Apero</td>
+<td>Damien Dion</td>
+<td>NYC</td>
+<td>7</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>1065</td>
+<td>10.0</td>
+<td>10.0</td>
+<td>(11.0)</td>
+<td>9.0</td>
+<td>40.0</td>
+<td>29.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>11th</td>
+<td>&nbsp;</td>
+<td>1321</td>
+<td>Minty</td>
+<td>Abby Kinsella</td>
+<td>HYC</td>
+<td>6</td>
+<td>Youth</td>
+<td>F</td>
+<td>1100</td>
+<td>11.0</td>
+<td>11.0</td>
+<td>(12.0)</td>
+<td>10.0</td>
+<td>44.0</td>
+<td>32.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>12th</td>
+<td>&nbsp;</td>
+<td>3433</td>
+<td>Tikka</td>
+<td>Sarah Dwyer</td>
+<td>Royal St George</td>
+<td>5</td>
+<td>Master</td>
+<td>F</td>
+<td>1136</td>
+<td>(19.0 DNC)</td>
+<td>19.0 DNC</td>
+<td>8.0</td>
+<td>6.0</td>
+<td>52.0</td>
+<td>33.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>13th</td>
+<td>&nbsp;</td>
+<td>3644</td>
+<td>Ranchaero</td>
+<td>Michael McCambridge</td>
+<td>NYC</td>
+<td>7</td>
+<td>Master</td>
+<td>&nbsp;</td>
+<td>1065</td>
+<td>(19.0 DNC)</td>
+<td>19.0 DNC</td>
+<td>19.0 DNC</td>
+<td>19.0 DNC</td>
+<td>76.0</td>
+<td>57.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>13th</td>
+<td>&nbsp;</td>
+<td>3823</td>
+<td>Lovely Bubbly</td>
+<td>Christina Cunningham</td>
+<td>Ballyholme YC</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>F</td>
+<td>1.000</td>
+<td>(19.0 DNC)</td>
+<td>19.0 DNC</td>
+<td>19.0 DNC</td>
+<td>19.0 DNC</td>
+<td>76.0</td>
+<td>57.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>13th</td>
+<td>&nbsp;</td>
+<td>3844</td>
+<td>&nbsp;</td>
+<td>Robert Howe</td>
+<td>Monkstown Bay SC</td>
+<td>7</td>
+<td>Master</td>
+<td>&nbsp;</td>
+<td>1065</td>
+<td>(19.0 DNC)</td>
+<td>19.0 DNC</td>
+<td>19.0 DNC</td>
+<td>19.0 DNC</td>
+<td>76.0</td>
+<td>57.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>13th</td>
+<td>&nbsp;</td>
+<td>4136</td>
+<td>&nbsp;</td>
+<td>Gordon Syme</td>
+<td>Royal St George</td>
+<td>7</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>1065</td>
+<td>(19.0 DNC)</td>
+<td>19.0 DNC</td>
+<td>19.0 DNC</td>
+<td>19.0 DNC</td>
+<td>76.0</td>
+<td>57.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>13th</td>
+<td>&nbsp;</td>
+<td>2523</td>
+<td>Seesea</td>
+<td>Paul Phelan</td>
+<td>Greystones SC</td>
+<td>7</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>1065</td>
+<td>(19.0 DNC)</td>
+<td>19.0 DNC</td>
+<td>19.0 DNC</td>
+<td>19.0 DNC</td>
+<td>76.0</td>
+<td>57.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>13th</td>
+<td>&nbsp;</td>
+<td>3186</td>
+<td>&nbsp;</td>
+<td>Karl Leavy</td>
+<td>Swords SBC</td>
+<td>&nbsp;</td>
+<td>Master</td>
+<td>&nbsp;</td>
+<td>1.000</td>
+<td>(19.0 DNC)</td>
+<td>19.0 DNC</td>
+<td>19.0 DNC</td>
+<td>19.0 DNC</td>
+<td>76.0</td>
+<td>57.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="prizestitle">Prizes</h3>
+<table class="prizestable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="3"><col class="category" /><col class="rank" /><col class="competitor" /></colgroup>
+<thead>
+<tr class="titlerow"><th>Category</th><th>Rank</th><th>Competitor</th></tr>
+</thead>
+<tbody>
+<tr class="odd prizerow"><td>Youth</td><td>1st</td><td>RS Aero - RS AERO 6 1321 Abby Kinsella - Minty</td></tr>
+<tr class="odd prizerow"><td>Master</td><td>1st</td><td>RS Aero - RS AERO 6 3822 Roy Van Maanen</td></tr>
+<tr class="odd prizerow"><td>Female Helm</td><td>1st</td><td>RS Aero - RS AERO 6 1321 Abby Kinsella - Minty</td></tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r1">Race 1</h3>
+<div class="caption racecaption">
+Start: Start 1, Finishes: Finish time, Time: 105600
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="14">
+<col class="rank" />
+<col class="alias" />
+<col class="sailno" />
+<col class="boat" />
+<col class="helmname" />
+<col class="club" />
+<col class="division" />
+<col class="helmagegroup" />
+<col class="helmsex" />
+<col class="rating" />
+<col class="finish" />
+<col class="elapsed" />
+<col class="corrected" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>&nbsp;</th>
+<th>Sail No</th>
+<th>Boat Name</th>
+<th>Helm Name</th>
+<th>Club</th>
+<th>Rig Size</th>
+<th>Age Group</th>
+<th>Female</th>
+<th>Rating</th>
+<th>Finish</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>&nbsp;</td>
+<td>2524</td>
+<td>Midnight Runner</td>
+<td>Paul McMahon</td>
+<td>HYC</td>
+<td>7</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>1065</td>
+<td>11:23:05</td>
+<td>0:27:05</td>
+<td>0:25:26</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>&nbsp;</td>
+<td>8187</td>
+<td>&nbsp;</td>
+<td>Peter Barton</td>
+<td>Lymington Town SC</td>
+<td>7</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>1065</td>
+<td>11:23:34</td>
+<td>0:27:34</td>
+<td>0:25:53</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>&nbsp;</td>
+<td>3187</td>
+<td>Shaero</td>
+<td>Daragh Sheridan</td>
+<td>HYC</td>
+<td>7</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>1065</td>
+<td>11:23:45</td>
+<td>0:27:45</td>
+<td>0:26:03</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>&nbsp;</td>
+<td>3289</td>
+<td>Orion</td>
+<td>Noel Butler</td>
+<td>NYC</td>
+<td>6</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>1100</td>
+<td>11:25:08</td>
+<td>0:29:08</td>
+<td>0:26:29</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>&nbsp;</td>
+<td>3822</td>
+<td>&nbsp;</td>
+<td>Roy Van Maanen</td>
+<td>Greystones SC</td>
+<td>6</td>
+<td>Master</td>
+<td>&nbsp;</td>
+<td>1100</td>
+<td>11:25:17</td>
+<td>0:29:17</td>
+<td>0:26:37</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>&nbsp;</td>
+<td>3233</td>
+<td>&nbsp;</td>
+<td>Hammy Baker</td>
+<td>SLYC/QYC</td>
+<td>7</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>1065</td>
+<td>11:24:46</td>
+<td>0:28:46</td>
+<td>0:27:01</td>
+<td>6.0</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>&nbsp;</td>
+<td>1067</td>
+<td>&nbsp;</td>
+<td>Stuart Harris</td>
+<td>WHSC</td>
+<td>6</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>1100</td>
+<td>11:26:45</td>
+<td>0:30:45</td>
+<td>0:27:57</td>
+<td>7.0</td>
+</tr>
+<tr class="even racerow">
+<td>8</td>
+<td>&nbsp;</td>
+<td>3291</td>
+<td>Bubbles</td>
+<td>John Phelan</td>
+<td>HYC</td>
+<td>6</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>1100</td>
+<td>11:28:22</td>
+<td>0:32:22</td>
+<td>0:29:25</td>
+<td>8.0</td>
+</tr>
+<tr class="odd racerow">
+<td>9</td>
+<td>&nbsp;</td>
+<td>3365</td>
+<td>&nbsp;</td>
+<td>Emmett O'Sullivan</td>
+<td>Monkstown Bay SC</td>
+<td>7</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>1065</td>
+<td>11:27:28</td>
+<td>0:31:28</td>
+<td>0:29:33</td>
+<td>9.0</td>
+</tr>
+<tr class="even racerow">
+<td>10</td>
+<td>&nbsp;</td>
+<td>3431</td>
+<td>Apero</td>
+<td>Damien Dion</td>
+<td>NYC</td>
+<td>7</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>1065</td>
+<td>11:28:07</td>
+<td>0:32:07</td>
+<td>0:30:09</td>
+<td>10.0</td>
+</tr>
+<tr class="odd racerow">
+<td>11</td>
+<td>&nbsp;</td>
+<td>1321</td>
+<td>Minty</td>
+<td>Abby Kinsella</td>
+<td>HYC</td>
+<td>6</td>
+<td>Youth</td>
+<td>F</td>
+<td>1100</td>
+<td>11:32:34</td>
+<td>0:36:34</td>
+<td>0:33:15</td>
+<td>11.0</td>
+</tr>
+<tr class="even racerow">
+<td>12</td>
+<td>&nbsp;</td>
+<td>3433</td>
+<td>Tikka</td>
+<td>Sarah Dwyer</td>
+<td>Royal St George</td>
+<td>5</td>
+<td>Master</td>
+<td>F</td>
+<td>1136</td>
+<td>&nbsp;</td>
+<td>DNC</td>
+<td>&nbsp;</td>
+<td>19.0</td>
+</tr>
+<tr class="odd racerow">
+<td>12</td>
+<td>&nbsp;</td>
+<td>3644</td>
+<td>Ranchaero</td>
+<td>Michael McCambridge</td>
+<td>NYC</td>
+<td>7</td>
+<td>Master</td>
+<td>&nbsp;</td>
+<td>1065</td>
+<td>&nbsp;</td>
+<td>DNC</td>
+<td>&nbsp;</td>
+<td>19.0</td>
+</tr>
+<tr class="even racerow">
+<td>12</td>
+<td>&nbsp;</td>
+<td>3823</td>
+<td>Lovely Bubbly</td>
+<td>Christina Cunningham</td>
+<td>Ballyholme YC</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>F</td>
+<td>1.000</td>
+<td>&nbsp;</td>
+<td>DNC</td>
+<td>&nbsp;</td>
+<td>19.0</td>
+</tr>
+<tr class="odd racerow">
+<td>12</td>
+<td>&nbsp;</td>
+<td>3844</td>
+<td>&nbsp;</td>
+<td>Robert Howe</td>
+<td>Monkstown Bay SC</td>
+<td>7</td>
+<td>Master</td>
+<td>&nbsp;</td>
+<td>1065</td>
+<td>&nbsp;</td>
+<td>DNC</td>
+<td>&nbsp;</td>
+<td>19.0</td>
+</tr>
+<tr class="even racerow">
+<td>12</td>
+<td>&nbsp;</td>
+<td>4136</td>
+<td>&nbsp;</td>
+<td>Gordon Syme</td>
+<td>Royal St George</td>
+<td>7</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>1065</td>
+<td>&nbsp;</td>
+<td>DNC</td>
+<td>&nbsp;</td>
+<td>19.0</td>
+</tr>
+<tr class="odd racerow">
+<td>12</td>
+<td>&nbsp;</td>
+<td>2523</td>
+<td>Seesea</td>
+<td>Paul Phelan</td>
+<td>Greystones SC</td>
+<td>7</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>1065</td>
+<td>&nbsp;</td>
+<td>DNC</td>
+<td>&nbsp;</td>
+<td>19.0</td>
+</tr>
+<tr class="even racerow">
+<td>12</td>
+<td>&nbsp;</td>
+<td>3186</td>
+<td>&nbsp;</td>
+<td>Karl Leavy</td>
+<td>Swords SBC</td>
+<td>&nbsp;</td>
+<td>Master</td>
+<td>&nbsp;</td>
+<td>1.000</td>
+<td>&nbsp;</td>
+<td>DNC</td>
+<td>&nbsp;</td>
+<td>19.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r2">Race 2</h3>
+<div class="caption racecaption">
+Start: Race 2, Finishes: Finish time, Time: 114000
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="14">
+<col class="rank" />
+<col class="alias" />
+<col class="sailno" />
+<col class="boat" />
+<col class="helmname" />
+<col class="club" />
+<col class="division" />
+<col class="helmagegroup" />
+<col class="helmsex" />
+<col class="rating" />
+<col class="finish" />
+<col class="elapsed" />
+<col class="corrected" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>&nbsp;</th>
+<th>Sail No</th>
+<th>Boat Name</th>
+<th>Helm Name</th>
+<th>Club</th>
+<th>Rig Size</th>
+<th>Age Group</th>
+<th>Female</th>
+<th>Rating</th>
+<th>Finish</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>&nbsp;</td>
+<td>8187</td>
+<td>&nbsp;</td>
+<td>Peter Barton</td>
+<td>Lymington Town SC</td>
+<td>7</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>1065</td>
+<td>12:05:31</td>
+<td>0:25:31</td>
+<td>0:23:58</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>&nbsp;</td>
+<td>2524</td>
+<td>Midnight Runner</td>
+<td>Paul McMahon</td>
+<td>HYC</td>
+<td>7</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>1065</td>
+<td>12:05:39</td>
+<td>0:25:39</td>
+<td>0:24:05</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>&nbsp;</td>
+<td>3187</td>
+<td>Shaero</td>
+<td>Daragh Sheridan</td>
+<td>HYC</td>
+<td>7</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>1065</td>
+<td>12:06:40</td>
+<td>0:26:40</td>
+<td>0:25:02</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>&nbsp;</td>
+<td>3289</td>
+<td>Orion</td>
+<td>Noel Butler</td>
+<td>NYC</td>
+<td>6</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>1100</td>
+<td>12:07:46</td>
+<td>0:27:46</td>
+<td>0:25:15</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>&nbsp;</td>
+<td>3822</td>
+<td>&nbsp;</td>
+<td>Roy Van Maanen</td>
+<td>Greystones SC</td>
+<td>6</td>
+<td>Master</td>
+<td>&nbsp;</td>
+<td>1100</td>
+<td>12:08:05</td>
+<td>0:28:05</td>
+<td>0:25:32</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>&nbsp;</td>
+<td>1067</td>
+<td>&nbsp;</td>
+<td>Stuart Harris</td>
+<td>WHSC</td>
+<td>6</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>1100</td>
+<td>12:08:48</td>
+<td>0:28:48</td>
+<td>0:26:11</td>
+<td>6.0</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>&nbsp;</td>
+<td>3233</td>
+<td>&nbsp;</td>
+<td>Hammy Baker</td>
+<td>SLYC/QYC</td>
+<td>7</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>1065</td>
+<td>12:08:31</td>
+<td>0:28:31</td>
+<td>0:26:47</td>
+<td>7.0</td>
+</tr>
+<tr class="even racerow">
+<td>8</td>
+<td>&nbsp;</td>
+<td>3365</td>
+<td>&nbsp;</td>
+<td>Emmett O'Sullivan</td>
+<td>Monkstown Bay SC</td>
+<td>7</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>1065</td>
+<td>12:09:32</td>
+<td>0:29:32</td>
+<td>0:27:44</td>
+<td>8.0</td>
+</tr>
+<tr class="odd racerow">
+<td>9</td>
+<td>&nbsp;</td>
+<td>3291</td>
+<td>Bubbles</td>
+<td>John Phelan</td>
+<td>HYC</td>
+<td>6</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>1100</td>
+<td>12:10:54</td>
+<td>0:30:54</td>
+<td>0:28:05</td>
+<td>9.0</td>
+</tr>
+<tr class="even racerow">
+<td>10</td>
+<td>&nbsp;</td>
+<td>3431</td>
+<td>Apero</td>
+<td>Damien Dion</td>
+<td>NYC</td>
+<td>7</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>1065</td>
+<td>12:10:05</td>
+<td>0:30:05</td>
+<td>0:28:15</td>
+<td>10.0</td>
+</tr>
+<tr class="odd racerow">
+<td>11</td>
+<td>&nbsp;</td>
+<td>1321</td>
+<td>Minty</td>
+<td>Abby Kinsella</td>
+<td>HYC</td>
+<td>6</td>
+<td>Youth</td>
+<td>F</td>
+<td>1100</td>
+<td>12:12:08</td>
+<td>0:32:08</td>
+<td>0:29:13</td>
+<td>11.0</td>
+</tr>
+<tr class="even racerow">
+<td>12</td>
+<td>&nbsp;</td>
+<td>3433</td>
+<td>Tikka</td>
+<td>Sarah Dwyer</td>
+<td>Royal St George</td>
+<td>5</td>
+<td>Master</td>
+<td>F</td>
+<td>1136</td>
+<td>&nbsp;</td>
+<td>DNC</td>
+<td>&nbsp;</td>
+<td>19.0</td>
+</tr>
+<tr class="odd racerow">
+<td>12</td>
+<td>&nbsp;</td>
+<td>3644</td>
+<td>Ranchaero</td>
+<td>Michael McCambridge</td>
+<td>NYC</td>
+<td>7</td>
+<td>Master</td>
+<td>&nbsp;</td>
+<td>1065</td>
+<td>&nbsp;</td>
+<td>DNC</td>
+<td>&nbsp;</td>
+<td>19.0</td>
+</tr>
+<tr class="even racerow">
+<td>12</td>
+<td>&nbsp;</td>
+<td>3823</td>
+<td>Lovely Bubbly</td>
+<td>Christina Cunningham</td>
+<td>Ballyholme YC</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>F</td>
+<td>1.000</td>
+<td>&nbsp;</td>
+<td>DNC</td>
+<td>&nbsp;</td>
+<td>19.0</td>
+</tr>
+<tr class="odd racerow">
+<td>12</td>
+<td>&nbsp;</td>
+<td>3844</td>
+<td>&nbsp;</td>
+<td>Robert Howe</td>
+<td>Monkstown Bay SC</td>
+<td>7</td>
+<td>Master</td>
+<td>&nbsp;</td>
+<td>1065</td>
+<td>&nbsp;</td>
+<td>DNC</td>
+<td>&nbsp;</td>
+<td>19.0</td>
+</tr>
+<tr class="even racerow">
+<td>12</td>
+<td>&nbsp;</td>
+<td>4136</td>
+<td>&nbsp;</td>
+<td>Gordon Syme</td>
+<td>Royal St George</td>
+<td>7</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>1065</td>
+<td>&nbsp;</td>
+<td>DNC</td>
+<td>&nbsp;</td>
+<td>19.0</td>
+</tr>
+<tr class="odd racerow">
+<td>12</td>
+<td>&nbsp;</td>
+<td>2523</td>
+<td>Seesea</td>
+<td>Paul Phelan</td>
+<td>Greystones SC</td>
+<td>7</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>1065</td>
+<td>&nbsp;</td>
+<td>DNC</td>
+<td>&nbsp;</td>
+<td>19.0</td>
+</tr>
+<tr class="even racerow">
+<td>12</td>
+<td>&nbsp;</td>
+<td>3186</td>
+<td>&nbsp;</td>
+<td>Karl Leavy</td>
+<td>Swords SBC</td>
+<td>&nbsp;</td>
+<td>Master</td>
+<td>&nbsp;</td>
+<td>1.000</td>
+<td>&nbsp;</td>
+<td>DNC</td>
+<td>&nbsp;</td>
+<td>19.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r3">Race 3</h3>
+<div class="caption racecaption">
+Start: Start 1, Finishes: Finish time, Time: 122100
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="14">
+<col class="rank" />
+<col class="alias" />
+<col class="sailno" />
+<col class="boat" />
+<col class="helmname" />
+<col class="club" />
+<col class="division" />
+<col class="helmagegroup" />
+<col class="helmsex" />
+<col class="rating" />
+<col class="finish" />
+<col class="elapsed" />
+<col class="corrected" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>&nbsp;</th>
+<th>Sail No</th>
+<th>Boat Name</th>
+<th>Helm Name</th>
+<th>Club</th>
+<th>Rig Size</th>
+<th>Age Group</th>
+<th>Female</th>
+<th>Rating</th>
+<th>Finish</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>&nbsp;</td>
+<td>2524</td>
+<td>Midnight Runner</td>
+<td>Paul McMahon</td>
+<td>HYC</td>
+<td>7</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>1065</td>
+<td>12:47:15</td>
+<td>0:26:15</td>
+<td>0:24:39</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>&nbsp;</td>
+<td>3233</td>
+<td>&nbsp;</td>
+<td>Hammy Baker</td>
+<td>SLYC/QYC</td>
+<td>7</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>1065</td>
+<td>12:47:19</td>
+<td>0:26:19</td>
+<td>0:24:43</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>&nbsp;</td>
+<td>3187</td>
+<td>Shaero</td>
+<td>Daragh Sheridan</td>
+<td>HYC</td>
+<td>7</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>1065</td>
+<td>12:47:25</td>
+<td>0:26:25</td>
+<td>0:24:48</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>&nbsp;</td>
+<td>8187</td>
+<td>&nbsp;</td>
+<td>Peter Barton</td>
+<td>Lymington Town SC</td>
+<td>7</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>1065</td>
+<td>12:47:42</td>
+<td>0:26:42</td>
+<td>0:25:04</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>&nbsp;</td>
+<td>3822</td>
+<td>&nbsp;</td>
+<td>Roy Van Maanen</td>
+<td>Greystones SC</td>
+<td>6</td>
+<td>Master</td>
+<td>&nbsp;</td>
+<td>1100</td>
+<td>12:49:20</td>
+<td>0:28:20</td>
+<td>0:25:45</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>&nbsp;</td>
+<td>3289</td>
+<td>Orion</td>
+<td>Noel Butler</td>
+<td>NYC</td>
+<td>6</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>1100</td>
+<td>12:50:06</td>
+<td>0:29:06</td>
+<td>0:26:27</td>
+<td>6.0</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>&nbsp;</td>
+<td>1067</td>
+<td>&nbsp;</td>
+<td>Stuart Harris</td>
+<td>WHSC</td>
+<td>6</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>1100</td>
+<td>12:50:47</td>
+<td>0:29:47</td>
+<td>0:27:05</td>
+<td>7.0</td>
+</tr>
+<tr class="even racerow">
+<td>8</td>
+<td>&nbsp;</td>
+<td>3433</td>
+<td>Tikka</td>
+<td>Sarah Dwyer</td>
+<td>Royal St George</td>
+<td>5</td>
+<td>Master</td>
+<td>F</td>
+<td>1136</td>
+<td>12:51:58</td>
+<td>0:30:58</td>
+<td>0:27:16</td>
+<td>8.0</td>
+</tr>
+<tr class="odd racerow">
+<td>9</td>
+<td>&nbsp;</td>
+<td>3365</td>
+<td>&nbsp;</td>
+<td>Emmett O'Sullivan</td>
+<td>Monkstown Bay SC</td>
+<td>7</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>1065</td>
+<td>12:50:37</td>
+<td>0:29:37</td>
+<td>0:27:49</td>
+<td>9.0</td>
+</tr>
+<tr class="even racerow">
+<td>10</td>
+<td>&nbsp;</td>
+<td>3291</td>
+<td>Bubbles</td>
+<td>John Phelan</td>
+<td>HYC</td>
+<td>6</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>1100</td>
+<td>12:52:15</td>
+<td>0:31:15</td>
+<td>0:28:25</td>
+<td>10.0</td>
+</tr>
+<tr class="odd racerow">
+<td>11</td>
+<td>&nbsp;</td>
+<td>3431</td>
+<td>Apero</td>
+<td>Damien Dion</td>
+<td>NYC</td>
+<td>7</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>1065</td>
+<td>12:53:05</td>
+<td>0:32:05</td>
+<td>0:30:08</td>
+<td>11.0</td>
+</tr>
+<tr class="even racerow">
+<td>12</td>
+<td>&nbsp;</td>
+<td>1321</td>
+<td>Minty</td>
+<td>Abby Kinsella</td>
+<td>HYC</td>
+<td>6</td>
+<td>Youth</td>
+<td>F</td>
+<td>1100</td>
+<td>12:54:16</td>
+<td>0:33:16</td>
+<td>0:30:15</td>
+<td>12.0</td>
+</tr>
+<tr class="odd racerow">
+<td>13</td>
+<td>&nbsp;</td>
+<td>3644</td>
+<td>Ranchaero</td>
+<td>Michael McCambridge</td>
+<td>NYC</td>
+<td>7</td>
+<td>Master</td>
+<td>&nbsp;</td>
+<td>1065</td>
+<td>&nbsp;</td>
+<td>DNC</td>
+<td>&nbsp;</td>
+<td>19.0</td>
+</tr>
+<tr class="even racerow">
+<td>13</td>
+<td>&nbsp;</td>
+<td>3823</td>
+<td>Lovely Bubbly</td>
+<td>Christina Cunningham</td>
+<td>Ballyholme YC</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>F</td>
+<td>1.000</td>
+<td>&nbsp;</td>
+<td>DNC</td>
+<td>&nbsp;</td>
+<td>19.0</td>
+</tr>
+<tr class="odd racerow">
+<td>13</td>
+<td>&nbsp;</td>
+<td>3844</td>
+<td>&nbsp;</td>
+<td>Robert Howe</td>
+<td>Monkstown Bay SC</td>
+<td>7</td>
+<td>Master</td>
+<td>&nbsp;</td>
+<td>1065</td>
+<td>&nbsp;</td>
+<td>DNC</td>
+<td>&nbsp;</td>
+<td>19.0</td>
+</tr>
+<tr class="even racerow">
+<td>13</td>
+<td>&nbsp;</td>
+<td>4136</td>
+<td>&nbsp;</td>
+<td>Gordon Syme</td>
+<td>Royal St George</td>
+<td>7</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>1065</td>
+<td>&nbsp;</td>
+<td>DNC</td>
+<td>&nbsp;</td>
+<td>19.0</td>
+</tr>
+<tr class="odd racerow">
+<td>13</td>
+<td>&nbsp;</td>
+<td>2523</td>
+<td>Seesea</td>
+<td>Paul Phelan</td>
+<td>Greystones SC</td>
+<td>7</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>1065</td>
+<td>&nbsp;</td>
+<td>DNC</td>
+<td>&nbsp;</td>
+<td>19.0</td>
+</tr>
+<tr class="even racerow">
+<td>13</td>
+<td>&nbsp;</td>
+<td>3186</td>
+<td>&nbsp;</td>
+<td>Karl Leavy</td>
+<td>Swords SBC</td>
+<td>&nbsp;</td>
+<td>Master</td>
+<td>&nbsp;</td>
+<td>1.000</td>
+<td>&nbsp;</td>
+<td>DNC</td>
+<td>&nbsp;</td>
+<td>19.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r4">Race 4</h3>
+<div class="caption racecaption">
+Start: Start 1, Finishes: Finish time, Time: 130700
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="14">
+<col class="rank" />
+<col class="alias" />
+<col class="sailno" />
+<col class="boat" />
+<col class="helmname" />
+<col class="club" />
+<col class="division" />
+<col class="helmagegroup" />
+<col class="helmsex" />
+<col class="rating" />
+<col class="finish" />
+<col class="elapsed" />
+<col class="corrected" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>&nbsp;</th>
+<th>Sail No</th>
+<th>Boat Name</th>
+<th>Helm Name</th>
+<th>Club</th>
+<th>Rig Size</th>
+<th>Age Group</th>
+<th>Female</th>
+<th>Rating</th>
+<th>Finish</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>&nbsp;</td>
+<td>2524</td>
+<td>Midnight Runner</td>
+<td>Paul McMahon</td>
+<td>HYC</td>
+<td>7</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>1065</td>
+<td>13:37:06</td>
+<td>0:30:06</td>
+<td>0:28:16</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>&nbsp;</td>
+<td>3187</td>
+<td>Shaero</td>
+<td>Daragh Sheridan</td>
+<td>HYC</td>
+<td>7</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>1065</td>
+<td>13:37:08</td>
+<td>0:30:08</td>
+<td>0:28:18</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>&nbsp;</td>
+<td>3289</td>
+<td>Orion</td>
+<td>Noel Butler</td>
+<td>NYC</td>
+<td>6</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>1100</td>
+<td>13:38:33</td>
+<td>0:31:33</td>
+<td>0:28:41</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>&nbsp;</td>
+<td>1067</td>
+<td>&nbsp;</td>
+<td>Stuart Harris</td>
+<td>WHSC</td>
+<td>6</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>1100</td>
+<td>13:38:50</td>
+<td>0:31:50</td>
+<td>0:28:56</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>&nbsp;</td>
+<td>3822</td>
+<td>&nbsp;</td>
+<td>Roy Van Maanen</td>
+<td>Greystones SC</td>
+<td>6</td>
+<td>Master</td>
+<td>&nbsp;</td>
+<td>1100</td>
+<td>13:38:51</td>
+<td>0:31:51</td>
+<td>0:28:57</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>&nbsp;</td>
+<td>3433</td>
+<td>Tikka</td>
+<td>Sarah Dwyer</td>
+<td>Royal St George</td>
+<td>5</td>
+<td>Master</td>
+<td>F</td>
+<td>1136</td>
+<td>13:40:00</td>
+<td>0:33:00</td>
+<td>0:29:03</td>
+<td>6.0</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>&nbsp;</td>
+<td>3233</td>
+<td>&nbsp;</td>
+<td>Hammy Baker</td>
+<td>SLYC/QYC</td>
+<td>7</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>1065</td>
+<td>13:38:06</td>
+<td>0:31:06</td>
+<td>0:29:12</td>
+<td>7.0</td>
+</tr>
+<tr class="even racerow">
+<td>8</td>
+<td>&nbsp;</td>
+<td>8187</td>
+<td>&nbsp;</td>
+<td>Peter Barton</td>
+<td>Lymington Town SC</td>
+<td>7</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>1065</td>
+<td>13:38:35</td>
+<td>0:31:35</td>
+<td>0:29:39</td>
+<td>8.0</td>
+</tr>
+<tr class="odd racerow">
+<td>9</td>
+<td>&nbsp;</td>
+<td>3431</td>
+<td>Apero</td>
+<td>Damien Dion</td>
+<td>NYC</td>
+<td>7</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>1065</td>
+<td>13:38:52</td>
+<td>0:31:52</td>
+<td>0:29:55</td>
+<td>9.0</td>
+</tr>
+<tr class="even racerow">
+<td>10</td>
+<td>&nbsp;</td>
+<td>1321</td>
+<td>Minty</td>
+<td>Abby Kinsella</td>
+<td>HYC</td>
+<td>6</td>
+<td>Youth</td>
+<td>F</td>
+<td>1100</td>
+<td>13:40:18</td>
+<td>0:33:18</td>
+<td>0:30:16</td>
+<td>10.0</td>
+</tr>
+<tr class="odd racerow">
+<td>11</td>
+<td>&nbsp;</td>
+<td>3291</td>
+<td>Bubbles</td>
+<td>John Phelan</td>
+<td>HYC</td>
+<td>6</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>1100</td>
+<td>13:40:22</td>
+<td>0:33:22</td>
+<td>0:30:20</td>
+<td>11.0</td>
+</tr>
+<tr class="even racerow">
+<td>12</td>
+<td>&nbsp;</td>
+<td>3365</td>
+<td>&nbsp;</td>
+<td>Emmett O'Sullivan</td>
+<td>Monkstown Bay SC</td>
+<td>7</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>1065</td>
+<td>&nbsp;</td>
+<td>DNC</td>
+<td>&nbsp;</td>
+<td>19.0</td>
+</tr>
+<tr class="odd racerow">
+<td>12</td>
+<td>&nbsp;</td>
+<td>3644</td>
+<td>Ranchaero</td>
+<td>Michael McCambridge</td>
+<td>NYC</td>
+<td>7</td>
+<td>Master</td>
+<td>&nbsp;</td>
+<td>1065</td>
+<td>&nbsp;</td>
+<td>DNC</td>
+<td>&nbsp;</td>
+<td>19.0</td>
+</tr>
+<tr class="even racerow">
+<td>12</td>
+<td>&nbsp;</td>
+<td>3823</td>
+<td>Lovely Bubbly</td>
+<td>Christina Cunningham</td>
+<td>Ballyholme YC</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>F</td>
+<td>1.000</td>
+<td>&nbsp;</td>
+<td>DNC</td>
+<td>&nbsp;</td>
+<td>19.0</td>
+</tr>
+<tr class="odd racerow">
+<td>12</td>
+<td>&nbsp;</td>
+<td>3844</td>
+<td>&nbsp;</td>
+<td>Robert Howe</td>
+<td>Monkstown Bay SC</td>
+<td>7</td>
+<td>Master</td>
+<td>&nbsp;</td>
+<td>1065</td>
+<td>&nbsp;</td>
+<td>DNC</td>
+<td>&nbsp;</td>
+<td>19.0</td>
+</tr>
+<tr class="even racerow">
+<td>12</td>
+<td>&nbsp;</td>
+<td>4136</td>
+<td>&nbsp;</td>
+<td>Gordon Syme</td>
+<td>Royal St George</td>
+<td>7</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>1065</td>
+<td>&nbsp;</td>
+<td>DNC</td>
+<td>&nbsp;</td>
+<td>19.0</td>
+</tr>
+<tr class="odd racerow">
+<td>12</td>
+<td>&nbsp;</td>
+<td>2523</td>
+<td>Seesea</td>
+<td>Paul Phelan</td>
+<td>Greystones SC</td>
+<td>7</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>1065</td>
+<td>&nbsp;</td>
+<td>DNC</td>
+<td>&nbsp;</td>
+<td>19.0</td>
+</tr>
+<tr class="even racerow">
+<td>12</td>
+<td>&nbsp;</td>
+<td>3186</td>
+<td>&nbsp;</td>
+<td>Karl Leavy</td>
+<td>Swords SBC</td>
+<td>&nbsp;</td>
+<td>Master</td>
+<td>&nbsp;</td>
+<td>1.000</td>
+<td>&nbsp;</td>
+<td>DNC</td>
+<td>&nbsp;</td>
+<td>19.0</td>
+</tr>
+</tbody>
+</table>
+
+<p class="hardleft"><a href="http://"></a><br /><a href="mailto:"></a></p>
+<p class="hardright"><a href="http://"></a><br /><a href="mailto:"></a></p>
+<p>Sailwave Scoring Software 2.29.0<br /><a href="http://www.sailwave.com">www.sailwave.com</a></p>
+
+</div>
+
+<footer>
+</footer>
+
+<div id="scrollbottom"></div>
+
+</body>
+</html>
+
+

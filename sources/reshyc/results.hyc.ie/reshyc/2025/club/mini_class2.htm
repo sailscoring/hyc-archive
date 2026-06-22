@@ -1,0 +1,907 @@
+
+
+
+<!doctype html>
+
+<head>
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta http-equiv="Cache-control" content="no-cache">
+<meta name="description" content="sailwave results">
+<meta name="viewport" content="width=device-width">
+
+<title>Sailwave results for Club Racing 2025 at Wednesdays - Mini Series 2025</title>
+
+<style type="text/css">
+body {font: 80% arial, helvetica, sans-serif; text-align: center;}
+.hardleft  {text-align: left; float: left;  margin: 15px 0  15px 25px;}
+.hardright {text-align: right; float: right; margin: 15px 25px 15px 0;}
+table {text-align: left; margin: 0px auto 30px auto; font-size: 1em; border-collapse: collapse; border: 1px #999 solid;}
+td, th {padding: 4px; border: 1px #999 solid; vertical-align: top;}
+.caption {padding: 5px; text-align: center; border: 0; font-weight: bold;}
+p {text-align: center;}
+.contents {text-align: left; margin-left: 20%;}
+.race {background-color: #eee;}
+.odd {background-color: #eef;}
+.natflag {border: 1px #999 solid;}
+.nattext {font-size: 0.8em;}
+.place1 {font-weight: bold; background-color: #ffffaa;}
+.place2 {font-weight: bold; background-color: #aaaaff;}
+.place3 {font-weight: bold; background-color: #ffaaaa;}
+.placen {}
+table.headertable {border: 0px;}
+table.headertable td{border: 0px;}
+</style>
+
+<script type="text/javascript">
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script>
+
+function swGetURLArgs() {
+
+  var url = location.href;
+  var qs  = url.substring(url.indexOf('?') + 1).split('&');
+
+  for(var i = 0, result = {}; i < qs.length; i++) {
+    qs[i]            = qs[i].split('=');
+    result[qs[i][0]] = decodeURIComponent(qs[i][1]);
+  }
+
+  return result;
+}
+
+//
+//  name=HighlightWins3
+//  dependencies=jQuery
+//  description=Highlight winning scores in summary tables.
+//  author=Jon Eskdale based on an idea by Colin Jenkins
+//  date=2015-08-18
+//  version=1.6 2018-11-15
+//  url=http://sailwave.com
+//  email=jon@sailwave.com
+//  twitter=eskdale
+//  comments=Edit colours to colours of your choice
+//
+
+$(document).ready(function() {
+var winsSelector = '.summaryrace';
+var winsText     = /\b1\.0/;
+var twoText              = /\b2\.0/;
+var threeText    = /\b3\.0/;
+
+// Edit these colours to change the highlight colours for 1st, 2nd and 3rd
+var winsColour   = '#ffd700';
+var twoColour    = '#6a91c5';
+var threeColour  = '#da6841';
+//var twoColour  = '#ffe768';
+//var threeColour  = '#fff0a1';
+
+// create array of race column numbers for first table (summarytable)
+var ths = document.getElementsByTagName('col');
+var column =[];
+for (var i=0; i<ths.length; i++) {
+        if (ths[i].classList[0] === "race") {
+                column.push(i);
+        } else {
+                if (column.length !=0) {
+                        break;
+                }
+        }
+}
+//console.log(column);
+
+//  Set a class of summaryrace for all race cells in summary table body
+//
+for (var i=0; i<column.length; i++) {
+        $(".summarytable tbody tr td:nth-child(" + (column[i]+1) +")").addClass("summaryrace");
+}
+
+// Change the background color for cells with class of summaryrace and that match regular expression text
+$(function () {
+
+  $(winsSelector).filter(function() {
+    return winsText.test($(this).text());
+  }).css("background", winsColour);
+  $(winsSelector).filter(function() {
+        return twoText.test($(this).text());
+  }).css("background", twoColour);
+  $(winsSelector).filter(function() {
+        return threeText.test($(this).text());
+  }).css("background", threeColour);
+
+});
+});
+//
+//  name=HighlightDiscards
+//  dependencies=jQuery
+//  description=Highlight discard scores in summary tables where discards are in ().
+//  author=Jon Eskdale
+//  date=2018-11-11
+//  version=1.1
+//  url=http://sailwave.com
+//  email=jon@sailwave.com
+//  twitter=eskdale
+//  comments=Edit colours to colours of your choice
+//
+
+$(document).ready(function() {
+var discardSelector = '.summaryrace';
+var discardText     = /\b\)/;
+
+// Edit these colours to change the highlight colours for 1st, 2nd and 3rd
+var discardColour   = '#f2f2f2';
+
+// create array of race column numbers for first table (summarytable)
+var ths = document.getElementsByTagName('col');
+var column =[];
+for (var i=0; i<ths.length; i++) {
+        if (ths[i].classList[0] === "race") {
+                column.push(i);
+        } else {
+                if (column.length !=0) {
+                        break;
+                }
+        }
+}
+//console.log(column);
+
+//  Set a class of summaryrace for all race cells in summary table body
+//
+for (var i=0; i<column.length; i++) {
+        $(".summarytable tbody tr td:nth-child(" + (column[i]+1) +")").addClass("summaryrace");
+}
+
+// Change the background color for cells with class of summaryrace and that match regular expression text
+$(function () {
+
+  $(discardSelector).filter(function() {
+    return discardText.test($(this).text());
+  }).css("background", discardColour);
+
+});
+});
+</script>
+
+</head>
+
+<body>
+
+<header>
+</header>
+<table class="headertable" cellspacing="0" width="100%" cellpadding="0" border="0">
+<tbody>
+<div id="wrap">
+
+<tr>
+<td width="30%">
+<img style="display:block; height:100px;"  src="https://hyc.ie/assets/logo-5a615b18e52275b60e166edcca88c6c4.png" alt="venue burgee" />
+</td>
+
+<td width="40%" align="center">
+<h1>Club Racing 2025</h1>
+<h2>Wednesdays - Mini Series</h2>
+</td>
+
+<td width="30%">
+<img style="display:block; height:100px;" src="https://hyc.ie/assets/logo-5a615b18e52275b60e166edcca88c6c4.png" alt="event burgee" align="right" />
+</td>
+</tr>
+</tbody>
+</table>
+
+<div style="clear:both;"></div>
+
+<style>
+div.applicant-break {page-break-after:always;}
+</style>
+<h3 class="seriestitle">Results are provisional as of 20:53 on August 27, 2025</h3>
+<h3 class="summarytitle" id="summaryclass_2_hph">Class 2 HPH Fleet</h3>
+<div class="caption summarycaption">Sailed: 2, Discards: 0, To count: 2, Rating system: NHC1, Entries: 12, Scoring system: Appendix A</div>
+<table class="summarytable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="9">
+<col class="rank" />
+<col class="sailno" />
+<col class="boat" />
+<col class="helmname" />
+<col class="rating" />
+<col class="race" />
+<col class="race" />
+<col class="total" />
+<col class="nett" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Sail</th>
+<th>Boat</th>
+<th>Entrant</th>
+<th>Rating</th>
+<th><a class="racelink" href="#r1class_2_hph">R1</a></th>
+<th><a class="racelink" href="#r2class_2_hph">R2</a></th>
+<th>Total</th>
+<th>Nett</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd summaryrow">
+<td>1st</td>
+<td>985</td>
+<td>Ghost Raider</td>
+<td>Norbert Reilly</td>
+<td>0.962</td>
+<td class="rank1">1.0</td>
+<td class="rank1">1.0</td>
+<td>2.0</td>
+<td>2.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>2nd</td>
+<td>7495</td>
+<td>Maximus</td>
+<td>Paddy Kyne</td>
+<td>0.955</td>
+<td class="rank3">3.0</td>
+<td class="rank2">2.0</td>
+<td>5.0</td>
+<td>5.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>3rd</td>
+<td>1551</td>
+<td>Mojo</td>
+<td>Pat O'Neill</td>
+<td>0.989</td>
+<td class="rank2">2.0</td>
+<td>5.0</td>
+<td>7.0</td>
+<td>7.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>4th</td>
+<td>2794</td>
+<td>Mata</td>
+<td>Darren Wright</td>
+<td>0.999</td>
+<td>4.0</td>
+<td class="rank3">3.0</td>
+<td>7.0</td>
+<td>7.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>5th</td>
+<td>260</td>
+<td>Jawsome III</td>
+<td>Jeremy Beshoff</td>
+<td>0.971</td>
+<td>7.0</td>
+<td>4.0</td>
+<td>11.0</td>
+<td>11.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>6th</td>
+<td>571A</td>
+<td>HYC J80</td>
+<td>Amanda Bishop</td>
+<td>0.964</td>
+<td>6.0</td>
+<td>6.0</td>
+<td>12.0</td>
+<td>12.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>7th</td>
+<td>2507</td>
+<td>Impetuous</td>
+<td>Fergal Noonan & Robert Chambers</td>
+<td>0.963</td>
+<td>5.0</td>
+<td>13.0 DNC</td>
+<td>18.0</td>
+<td>18.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>8th</td>
+<td>1972</td>
+<td>No Excuse</td>
+<td>Wormald, Walsh & O'Neill</td>
+<td>0.934</td>
+<td>13.0 DNC</td>
+<td>13.0 DNC</td>
+<td>26.0</td>
+<td>26.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>8th</td>
+<td>2888</td>
+<td>Elder Lemon</td>
+<td>Robert Dix</td>
+<td>1.027</td>
+<td>13.0 DNC</td>
+<td>13.0 DNC</td>
+<td>26.0</td>
+<td>26.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>8th</td>
+<td>571</td>
+<td>HYC J80</td>
+<td>HYC K20 Squad</td>
+<td>0.973</td>
+<td>13.0 DNC</td>
+<td>13.0 DNC</td>
+<td>26.0</td>
+<td>26.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>8th</td>
+<td>7693</td>
+<td>Dux Eile (HYC J80)</td>
+<td>Caroline & Nico Gore-Grimes</td>
+<td>0.983</td>
+<td>13.0 DNC</td>
+<td>13.0 DNC</td>
+<td>26.0</td>
+<td>26.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>8th</td>
+<td>5275</td>
+<td>HYC J80</td>
+<td>Jill Sommerville</td>
+<td>0.973</td>
+<td>13.0 DNC</td>
+<td>13.0 DNC</td>
+<td>26.0</td>
+<td>26.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="summarytitle" id="summaryclass_2_irc">Class 2 IRC Fleet</h3>
+<div class="caption summarycaption">Sailed: 2, Discards: 0, To count: 2, Rating system: TCF, Entries: 7, Scoring system: Appendix A</div>
+<table class="summarytable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="9">
+<col class="rank" />
+<col class="sailno" />
+<col class="boat" />
+<col class="helmname" />
+<col class="rating" />
+<col class="race" />
+<col class="race" />
+<col class="total" />
+<col class="nett" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Sail</th>
+<th>Boat</th>
+<th>Entrant</th>
+<th>Rating</th>
+<th><a class="racelink" href="#r1class_2_irc">R1</a></th>
+<th><a class="racelink" href="#r2class_2_irc">R2</a></th>
+<th>Total</th>
+<th>Nett</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd summaryrow">
+<td>1st</td>
+<td>985</td>
+<td>Ghost Raider</td>
+<td>Norbert Reilly</td>
+<td>0.944</td>
+<td class="rank1">1.0</td>
+<td class="rank1">1.0</td>
+<td>2.0</td>
+<td>2.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>2nd</td>
+<td>1551</td>
+<td>Mojo</td>
+<td>Pat O'Neill</td>
+<td>0.952</td>
+<td class="rank2">2.0</td>
+<td>4.0</td>
+<td>6.0</td>
+<td>6.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>3rd</td>
+<td>2794</td>
+<td>Mata</td>
+<td>Darren Wright</td>
+<td>0.942</td>
+<td class="rank3">3.0</td>
+<td class="rank3">3.0</td>
+<td>6.0</td>
+<td>6.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>4th</td>
+<td>7495</td>
+<td>Maximus</td>
+<td>Paddy Kyne</td>
+<td>0.920</td>
+<td>5.0</td>
+<td class="rank2">2.0</td>
+<td>7.0</td>
+<td>7.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>5th</td>
+<td>260</td>
+<td>Jawsome III</td>
+<td>Jeremy Beshoff</td>
+<td>0.944</td>
+<td>6.0</td>
+<td>5.0</td>
+<td>11.0</td>
+<td>11.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>6th</td>
+<td>2507</td>
+<td>Impetuous</td>
+<td>Fergal Noonan & Robert Chambers</td>
+<td>0.921</td>
+<td>4.0</td>
+<td>8.0 DNC</td>
+<td>12.0</td>
+<td>12.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>7th</td>
+<td>1972</td>
+<td>No Excuse</td>
+<td>Wormald, Walsh, O'Neill</td>
+<td>0.917</td>
+<td>8.0 DNC</td>
+<td>8.0 DNC</td>
+<td>16.0</td>
+<td>16.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r1class_2_hph">R1 - Class 2 HPH Fleet&nbsp;-&nbsp;Aug 20</h3>
+<div class="caption racecaption">
+Start: Start 2, Finishes: Finish time, Time: 18.55.00
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="10">
+<col class="rank" />
+<col class="sailno" />
+<col class="boat" />
+<col class="helmname" />
+<col class="rating" />
+<col class="start" />
+<col class="finish" />
+<col class="elapsed" />
+<col class="corrected" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Sail</th>
+<th>Boat</th>
+<th>Entrant</th>
+<th>Rating</th>
+<th>Start</th>
+<th>Finish</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>985</td>
+<td>Ghost Raider</td>
+<td>Norbert Reilly</td>
+<td>0.962</td>
+<td>18.55.00</td>
+<td>19.52.41</td>
+<td>0.57.41</td>
+<td>0.55.29</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>1551</td>
+<td>Mojo</td>
+<td>Pat O'Neill</td>
+<td>0.989</td>
+<td>18.55.00</td>
+<td>19.53.43</td>
+<td>0.58.43</td>
+<td>0.58.04</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>7495</td>
+<td>Maximus</td>
+<td>Paddy Kyne</td>
+<td>0.955</td>
+<td>18.55.00</td>
+<td>19.58.13</td>
+<td>1.03.13</td>
+<td>1.00.22</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>2794</td>
+<td>Mata</td>
+<td>Darren Wright</td>
+<td>0.999</td>
+<td>18.55.00</td>
+<td>19.55.48</td>
+<td>1.00.48</td>
+<td>1.00.44</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>2507</td>
+<td>Impetuous</td>
+<td>Fergal Noonan & Robert Chambers</td>
+<td>0.963</td>
+<td>18.55.00</td>
+<td>19.57.66</td>
+<td>1.03.06</td>
+<td>1.00.46</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>571A</td>
+<td>HYC J80</td>
+<td>Amanda Bishop</td>
+<td>0.964</td>
+<td>18.55.00</td>
+<td>19.58.43</td>
+<td>1.03.43</td>
+<td>1.01.25</td>
+<td>6.0</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>260</td>
+<td>Jawsome III</td>
+<td>Jeremy Beshoff</td>
+<td>0.971</td>
+<td>18.55.00</td>
+<td>19.58.58</td>
+<td>1.03.58</td>
+<td>1.02.07</td>
+<td>7.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r2class_2_hph">R2 - Class 2 HPH Fleet</h3>
+<div class="caption racecaption">
+Start: Start 2, Finishes: Finish time, Time: 185000
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="10">
+<col class="rank" />
+<col class="sailno" />
+<col class="boat" />
+<col class="helmname" />
+<col class="rating" />
+<col class="start" />
+<col class="finish" />
+<col class="elapsed" />
+<col class="corrected" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Sail</th>
+<th>Boat</th>
+<th>Entrant</th>
+<th>Rating</th>
+<th>Start</th>
+<th>Finish</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>985</td>
+<td>Ghost Raider</td>
+<td>Norbert Reilly</td>
+<td>0.971</td>
+<td>185000</td>
+<td>20:06:22</td>
+<td>1:16:22</td>
+<td>1:14:09</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>7495</td>
+<td>Maximus</td>
+<td>Paddy Kyne</td>
+<td>0.953</td>
+<td>185000</td>
+<td>20:11:01</td>
+<td>1:21:01</td>
+<td>1:17:13</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>2794</td>
+<td>Mata</td>
+<td>Darren Wright</td>
+<td>0.996</td>
+<td>185000</td>
+<td>20:09:16</td>
+<td>1:19:16</td>
+<td>1:18:57</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>260</td>
+<td>Jawsome III</td>
+<td>Jeremy Beshoff</td>
+<td>0.966</td>
+<td>185000</td>
+<td>20:12:35</td>
+<td>1:22:35</td>
+<td>1:19:47</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>1551</td>
+<td>Mojo</td>
+<td>Pat O'Neill</td>
+<td>0.998</td>
+<td>185000</td>
+<td>20:10:42</td>
+<td>1:20:42</td>
+<td>1:20:32</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>571A</td>
+<td>HYC J80</td>
+<td>Amanda Bishop</td>
+<td>0.959</td>
+<td>185000</td>
+<td>20:20:33</td>
+<td>1:30:33</td>
+<td>1:26:50</td>
+<td>6.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r1class_2_irc">R1 - Class 2 IRC Fleet&nbsp;-&nbsp;Aug 20</h3>
+<div class="caption racecaption">
+Start: Start 2, Finishes: Finish time, Time: 18.55.00
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="10">
+<col class="rank" />
+<col class="sailno" />
+<col class="boat" />
+<col class="helmname" />
+<col class="rating" />
+<col class="start" />
+<col class="finish" />
+<col class="elapsed" />
+<col class="corrected" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Sail</th>
+<th>Boat</th>
+<th>Entrant</th>
+<th>Rating</th>
+<th>Start</th>
+<th>Finish</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>985</td>
+<td>Ghost Raider</td>
+<td>Norbert Reilly</td>
+<td>0.944</td>
+<td>18.55.00</td>
+<td>19.52.41</td>
+<td>0.57.41</td>
+<td>0.54.27</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>1551</td>
+<td>Mojo</td>
+<td>Pat O'Neill</td>
+<td>0.952</td>
+<td>18.55.00</td>
+<td>19.53.43</td>
+<td>0.58.43</td>
+<td>0.55.54</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>2794</td>
+<td>Mata</td>
+<td>Darren Wright</td>
+<td>0.942</td>
+<td>18.55.00</td>
+<td>19.55.48</td>
+<td>1.00.48</td>
+<td>0.57.16</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>2507</td>
+<td>Impetuous</td>
+<td>Fergal Noonan & Robert Chambers</td>
+<td>0.921</td>
+<td>18.55.00</td>
+<td>19.57.66</td>
+<td>1.03.06</td>
+<td>0.58.07</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>7495</td>
+<td>Maximus</td>
+<td>Paddy Kyne</td>
+<td>0.920</td>
+<td>18.55.00</td>
+<td>19.58.13</td>
+<td>1.03.13</td>
+<td>0.58.10</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>260</td>
+<td>Jawsome III</td>
+<td>Jeremy Beshoff</td>
+<td>0.944</td>
+<td>18.55.00</td>
+<td>19.58.58</td>
+<td>1.03.58</td>
+<td>1.00.23</td>
+<td>6.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r2class_2_irc">R2 - Class 2 IRC Fleet</h3>
+<div class="caption racecaption">
+Start: Start 2, Finishes: Finish time, Time: 185000
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="10">
+<col class="rank" />
+<col class="sailno" />
+<col class="boat" />
+<col class="helmname" />
+<col class="rating" />
+<col class="start" />
+<col class="finish" />
+<col class="elapsed" />
+<col class="corrected" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Sail</th>
+<th>Boat</th>
+<th>Entrant</th>
+<th>Rating</th>
+<th>Start</th>
+<th>Finish</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>985</td>
+<td>Ghost Raider</td>
+<td>Norbert Reilly</td>
+<td>0.944</td>
+<td>185000</td>
+<td>20:06:22</td>
+<td>1:16:22</td>
+<td>1:12:05</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>7495</td>
+<td>Maximus</td>
+<td>Paddy Kyne</td>
+<td>0.920</td>
+<td>185000</td>
+<td>20:11:01</td>
+<td>1:21:01</td>
+<td>1:14:32</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>2794</td>
+<td>Mata</td>
+<td>Darren Wright</td>
+<td>0.942</td>
+<td>185000</td>
+<td>20:09:16</td>
+<td>1:19:16</td>
+<td>1:14:40</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>1551</td>
+<td>Mojo</td>
+<td>Pat O'Neill</td>
+<td>0.952</td>
+<td>185000</td>
+<td>20:10:42</td>
+<td>1:20:42</td>
+<td>1:16:50</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>260</td>
+<td>Jawsome III</td>
+<td>Jeremy Beshoff</td>
+<td>0.944</td>
+<td>185000</td>
+<td>20:12:35</td>
+<td>1:22:35</td>
+<td>1:17:58</td>
+<td>5.0</td>
+</tr>
+</tbody>
+</table>
+
+<p class="hardleft"><a href="https://"></a><br /><a href="mailto:"></a></p>
+<p class="hardright"><a href="https://"></a><br /><a href="mailto:"></a></p>
+<p>Sailwave Scoring Software 2.37.00<br /><a href="https://www.sailwave.com">www.sailwave.com</a></p>
+
+</div>
+
+<footer>
+</footer>
+
+<div id="scrollbottom"></div>
+
+</body>
+</html>
+
+

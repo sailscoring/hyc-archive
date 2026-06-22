@@ -1,0 +1,626 @@
+
+
+
+<!doctype html>
+
+<head>
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta http-equiv="Cache-control" content="no-cache">
+<meta name="description" content="sailwave results">
+<meta name="viewport" content="width=device-width">
+
+<title>Sailwave results for ILCA Ireland National (Open) Championships at Howth Yacht Club 2023</title>
+
+<style type="text/css">
+body {font: 80% arial, helvetica, sans-serif; text-align: center;}
+.hardleft  {text-align: left; float: left;  margin: 15px 0  15px 25px;}
+.hardright {text-align: right; float: right; margin: 15px 25px 15px 0;}
+table {text-align: left; margin: 0px auto 30px auto; font-size: 1em; border-collapse: collapse; border: 1px #999 solid;}
+td, th {padding: 4px; border: 1px #999 solid; vertical-align: top;}
+.caption {padding: 5px; text-align: center; border: 0; font-weight: bold;}
+p {text-align: center;}
+.contents {text-align: left; margin-left: 20%;}
+.race {background-color: #eee;}
+.odd {background-color: #eef;}
+.natflag {border: 1px #999 solid;}
+.nattext {font-size: 0.8em;}
+.place1 {font-weight: bold; background-color: #ffffaa;}
+.place2 {font-weight: bold; background-color: #aaaaff;}
+.place3 {font-weight: bold; background-color: #ffaaaa;}
+.placen {}
+table.headertable {border: 0px;}
+table.headertable td{border: 0px;}
+</style>
+
+<script type="text/javascript">
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script>
+
+function swGetURLArgs() {
+
+  var url = location.href;
+  var qs  = url.substring(url.indexOf('?') + 1).split('&');
+
+  for(var i = 0, result = {}; i < qs.length; i++) {
+    qs[i]            = qs[i].split('=');
+    result[qs[i][0]] = decodeURIComponent(qs[i][1]);
+  }
+
+  return result;
+}
+
+//
+//  name=HighlightWins3v3
+//  dependencies=jQuery
+//  description=Highlight winning scores in summary tables.
+//  author=Jon Eskdale based on an idea by Colin Jenkins
+//  date=2016-07-04
+//  version=3.0  For use with Sailwave from V2.22.x
+//  Requires the following lines in the Results.htm file (Results.htm is in the Templates directory)
+//  string.set("summary.col.race.rank1.td",   "rank1")
+//  string.set("summary.col.race.rank2.td",   "rank2")
+//  string.set("summary.col.race.rank3.td",   "rank3")
+
+//  url=http://sailwave.com
+//  email=jon@sailwave.com
+//  twitter=eskdale
+//  comments=Edit colours to colours of your choice
+//
+
+$(document).ready(function() {
+var selectorRank1 = '.rank1';
+var selectorRank2 = '.rank2';
+var selectorRank3 = '.rank3';
+
+// Results with these codes will not get highlighted add or remove codes to your choice
+var ignoreText   = /^(?!.*\b(DNC|DNF|DNS|OCS|BFD|UFD|RET|DSQ|DGM|DNE)\b).*/i
+
+// Edit these colours to change the highlight colours for 1st, 2nd and 3rd
+var winsColour   = '#ffd700';
+var twoColour    = '#6a91c5';
+var threeColour  = '#da6841';
+
+
+// Change the background color for cells with class of rank1-3 and don't have a code specified
+$(function () {
+
+  $(selectorRank1).filter(function() {
+    return ignoreText.test($(this).text());
+  }).css("background", winsColour);
+  $(selectorRank2).filter(function() {
+        return ignoreText.test($(this).text());
+  }).css("background", twoColour);
+  $(selectorRank3).filter(function() {
+        return ignoreText.test($(this).text());
+  }).css("background", threeColour);
+
+});
+});
+//
+//  name=Hover
+//  dependencies=jQuery
+//  description=Highlight when hovering scores in summary and race tables.
+//  author=Jon Eskdale
+//  date=2020-11-23
+//  version=1.0
+//  url=https://sailwave.com
+//  email=jon@sailwave.com
+//  twitter=eskdale
+//  comments=Edit colour to colour of your choice
+//
+
+$(document).ready(function() {
+var obgc = '';
+var nbgc = '#A0A0A0';
+
+$('.summarytable tbody tr, .racetable tbody tr').hover(function(){
+    obgc = $(this).css('background-color');
+    $(this).css('background-color', nbgc);
+    }, function(){
+    $(this).css('background-color', obgc);
+    });
+
+});
+</script>
+
+</head>
+
+<body>
+
+<header>
+</header>
+<table class="headertable" cellspacing="0" width="100%" cellpadding="0" border="0">
+<tbody>
+<div id="wrap">
+
+<tr>
+<td width="30%">
+<img style="display:block; height:100px;"  src="https://hyc.ie/assets/logo-5a615b18e52275b60e166edcca88c6c4.png" alt="venue burgee" />
+</td>
+
+<td width="40%" align="center">
+<h1>ILCA Ireland National (Open) Championships</h1>
+<h2>Howth Yacht Club</h2>
+</td>
+
+<td width="30%">
+<img style="display:block; height:100px;" src="https://ballyholme.com/wp-content/uploads/2022/11/ILCA-Ireland-logo-1.png" alt="event burgee" align="right" />
+</td>
+</tr>
+</tbody>
+</table>
+
+<div style="clear:both;"></div>
+
+<style>
+div.applicant-break {page-break-after:always;}
+</style>
+<h3 class="seriestitle">Results are provisional as of 16:40 on August 20, 2023</h3>
+<h3 class="summarytitle" id="summaryilca_7">ILCA 7 Class</h3>
+<div class="caption summarycaption">Sailed: 8, Discards: 1, To count: 7, Entries: 24, Scoring system: Appendix A</div>
+<table class="summarytable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="15">
+<col class="rank" />
+<col class="helmname" />
+<col class="fleet" />
+<col class="sailno" />
+<col class="club" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="total" />
+<col class="nett" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Name</th>
+<th>Class</th>
+<th>SailNo</th>
+<th>Club</th>
+<th>Race 1</th>
+<th>Race 2</th>
+<th>Race 3</th>
+<th>Race 4</th>
+<th>Race 5</th>
+<th>Race 6</th>
+<th>Race 7</th>
+<th>Race 8</th>
+<th>Total</th>
+<th>Nett</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd summaryrow">
+<td>1st</td>
+<td>Jamie McMahon</td>
+<td>ILCA 7</td>
+<td>216101</td>
+<td>Howth Yacht Club</td>
+<td class="rank2">2.0</td>
+<td class="rank1">1.0</td>
+<td class="rank3">3.0</td>
+<td class="rank2">2.0</td>
+<td>(4.0)</td>
+<td class="rank1">1.0</td>
+<td class="rank2">2.0</td>
+<td class="rank1">1.0</td>
+<td>16.0</td>
+<td>12.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>2nd</td>
+<td>Isaac Schotte</td>
+<td>ILCA 7</td>
+<td>221956</td>
+<td>RQYS</td>
+<td class="rank1">1.0</td>
+<td>6.0</td>
+<td class="rank1">1.0</td>
+<td class="rank1">1.0</td>
+<td class="rank1">1.0</td>
+<td>(25.0 BFD)</td>
+<td class="rank1">1.0</td>
+<td class="rank2">2.0</td>
+<td>38.0</td>
+<td>13.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>3rd</td>
+<td>Jonathan O'Shaughnessy</td>
+<td>ILCA 7</td>
+<td>211116</td>
+<td>Royal Cork Yacht Club</td>
+<td class="rank3">3.0</td>
+<td>(4.0)</td>
+<td class="rank2">2.0</td>
+<td class="rank3">3.0</td>
+<td class="rank2">2.0</td>
+<td class="rank2">2.0</td>
+<td class="rank3">3.0</td>
+<td>4.0</td>
+<td>23.0</td>
+<td>19.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>4th</td>
+<td>Colin Leonard</td>
+<td>ILCA 7</td>
+<td>204159</td>
+<td>Ballyholme Yacht Club</td>
+<td>(9.0)</td>
+<td class="rank2">2.0</td>
+<td>9.0</td>
+<td>4.0</td>
+<td class="rank3">3.0</td>
+<td class="rank3">3.0</td>
+<td>4.0</td>
+<td>6.0</td>
+<td>40.0</td>
+<td>31.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>5th</td>
+<td>Rory Lynch</td>
+<td>ILCA 7</td>
+<td>222017</td>
+<td>Baltimore SC</td>
+<td>4.0</td>
+<td>7.0</td>
+<td>6.0</td>
+<td>6.0</td>
+<td>6.0</td>
+<td>4.0</td>
+<td>5.0</td>
+<td>(8.0)</td>
+<td>46.0</td>
+<td>38.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>6th</td>
+<td>Dan O'Connell</td>
+<td>ILCA 7</td>
+<td>219127</td>
+<td>Cove SC</td>
+<td>7.0</td>
+<td>(9.0)</td>
+<td>5.0</td>
+<td>7.0</td>
+<td>5.0</td>
+<td>7.0</td>
+<td>8.0</td>
+<td class="rank3">3.0</td>
+<td>51.0</td>
+<td>42.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>7th</td>
+<td>Oisin Hughes</td>
+<td>ILCA 7</td>
+<td>216711</td>
+<td>Royal St George Yacht Club</td>
+<td>8.0</td>
+<td>8.0</td>
+<td>7.0</td>
+<td>12.0</td>
+<td>(16.0)</td>
+<td>5.0</td>
+<td>9.0</td>
+<td>9.0</td>
+<td>74.0</td>
+<td>58.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>8th</td>
+<td>Daragh Kelleher</td>
+<td>ILCA 7</td>
+<td>222551</td>
+<td>Skerries SC</td>
+<td>5.0</td>
+<td class="rank3">3.0</td>
+<td>4.0</td>
+<td>8.0</td>
+<td>9.0</td>
+<td>(25.0 BFD)</td>
+<td>25.0 BFD</td>
+<td>5.0</td>
+<td>84.0</td>
+<td>59.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>9th</td>
+<td>Conor Byrne</td>
+<td>ILCA 7</td>
+<td>216890</td>
+<td>Royal St George Yacht Club</td>
+<td>6.0</td>
+<td>5.0</td>
+<td>8.0</td>
+<td>5.0</td>
+<td>7.0</td>
+<td>6.0</td>
+<td>(25.0 DNC)</td>
+<td>25.0 DNC</td>
+<td>87.0</td>
+<td>62.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>10th</td>
+<td>Nick Walsh</td>
+<td>ILCA 7</td>
+<td>217533</td>
+<td>Royal Cork Yacht Club</td>
+<td>12.0</td>
+<td>10.0</td>
+<td>10.0</td>
+<td>(25.0 DNF)</td>
+<td>10.0</td>
+<td>8.0</td>
+<td>7.0</td>
+<td>11.0</td>
+<td>93.0</td>
+<td>68.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>11th</td>
+<td>Conrad Simpson</td>
+<td>ILCA 7</td>
+<td>219804</td>
+<td>Ballyholme Yacht Club</td>
+<td>10.0</td>
+<td>13.0</td>
+<td>12.0</td>
+<td>11.0</td>
+<td>8.0</td>
+<td>9.0</td>
+<td>11.0</td>
+<td>(25.0 DNC)</td>
+<td>99.0</td>
+<td>74.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>12th</td>
+<td>Adam Fermor</td>
+<td>ILCA 7</td>
+<td>211133</td>
+<td>Strangford Lough Yacht Club</td>
+<td>14.0</td>
+<td>12.0</td>
+<td>13.0</td>
+<td>13.0</td>
+<td>11.0</td>
+<td>13.0</td>
+<td>(15.0)</td>
+<td>7.0</td>
+<td>98.0</td>
+<td>83.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>13th</td>
+<td>Conor Murphy</td>
+<td>ILCA 7</td>
+<td>213141</td>
+<td>Howth Yacht Club</td>
+<td>13.0</td>
+<td>11.0</td>
+<td>11.0</td>
+<td>9.0</td>
+<td>(25.0 DNC)</td>
+<td>25.0 DNC</td>
+<td>6.0</td>
+<td>10.0</td>
+<td>110.0</td>
+<td>85.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>14th</td>
+<td>James Moore</td>
+<td>ILCA 7</td>
+<td>215238</td>
+<td>Ballyholme Yacht Club</td>
+<td>15.0</td>
+<td>14.0</td>
+<td>15.0</td>
+<td>(16.0)</td>
+<td>15.0</td>
+<td>14.0</td>
+<td>12.0</td>
+<td>13.0</td>
+<td>114.0</td>
+<td>98.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>15th</td>
+<td>Joshua McGregor</td>
+<td>ILCA 7</td>
+<td>216979</td>
+<td>Ballyholme Yacht Club</td>
+<td>18.0</td>
+<td>(25.0 DNC)</td>
+<td>16.0</td>
+<td>15.0</td>
+<td>12.0</td>
+<td>10.0</td>
+<td>25.0 BFD</td>
+<td>12.0</td>
+<td>133.0</td>
+<td>108.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>16th</td>
+<td>Edward Rice</td>
+<td>ILCA 7</td>
+<td>218165</td>
+<td>Royal Cork Yacht Club</td>
+<td>11.0</td>
+<td>15.0</td>
+<td>14.0</td>
+<td>10.0</td>
+<td>13.0</td>
+<td>(25.0 DNC)</td>
+<td>25.0 BFD</td>
+<td>25.0 RET</td>
+<td>138.0</td>
+<td>113.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>17th</td>
+<td>Andrejs Samoilovs</td>
+<td>ILCA 7</td>
+<td>214263</td>
+<td>Malahide Yacht Club</td>
+<td>(25.0 DNC)</td>
+<td>25.0 DNC</td>
+<td>17.0</td>
+<td>14.0</td>
+<td>19.0</td>
+<td>15.0</td>
+<td>10.0</td>
+<td>15.0</td>
+<td>140.0</td>
+<td>115.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>18th</td>
+<td>Sean Bowden</td>
+<td>ILCA 7</td>
+<td>193654</td>
+<td>DMYC</td>
+<td>(19.0)</td>
+<td>16.0</td>
+<td>18.0</td>
+<td>17.0</td>
+<td>18.0</td>
+<td>17.0</td>
+<td>14.0</td>
+<td>17.0</td>
+<td>136.0</td>
+<td>117.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>19th</td>
+<td>Conor Costello</td>
+<td>ILCA 7</td>
+<td>194648</td>
+<td>Malahide Yacht Club</td>
+<td>17.0</td>
+<td>(25.0 RET)</td>
+<td>25.0 DNC</td>
+<td>25.0 DNC</td>
+<td>25.0 DNC</td>
+<td>12.0</td>
+<td>13.0</td>
+<td>16.0</td>
+<td>158.0</td>
+<td>133.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>20th</td>
+<td>James Murphy</td>
+<td>ILCA 7</td>
+<td>142283</td>
+<td>WHBTC</td>
+<td>(25.0 RET)</td>
+<td>25.0 RET</td>
+<td>25.0 DNC</td>
+<td>25.0 DNC</td>
+<td>14.0</td>
+<td>16.0</td>
+<td>16.0</td>
+<td>14.0</td>
+<td>160.0</td>
+<td>135.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>21st</td>
+<td>Ross O'Leary</td>
+<td>ILCA 7</td>
+<td>219129</td>
+<td>Royal St George Yacht Club/Courtown SC</td>
+<td>(25.0 DNC)</td>
+<td>25.0 DNC</td>
+<td>25.0 DNC</td>
+<td>25.0 DNC</td>
+<td>17.0</td>
+<td>11.0</td>
+<td>25.0 BFD</td>
+<td>25.0 DNC</td>
+<td>178.0</td>
+<td>153.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>22nd</td>
+<td>Kei Walker</td>
+<td>ILCA 7</td>
+<td>2106</td>
+<td>Royal St. George Yacht Club</td>
+<td>16.0</td>
+<td>(25.0 DNC)</td>
+<td>25.0 DNC</td>
+<td>25.0 DNC</td>
+<td>25.0 DNC</td>
+<td>25.0 DNC</td>
+<td>25.0 DNC</td>
+<td>25.0 DNC</td>
+<td>191.0</td>
+<td>166.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>23rd</td>
+<td>Jack McMahon</td>
+<td>ILCA 7</td>
+<td>210101</td>
+<td>Howth Yacht Club</td>
+<td>(25.0 DNC)</td>
+<td>25.0 DNC</td>
+<td>25.0 DNC</td>
+<td>25.0 DNC</td>
+<td>25.0 DNC</td>
+<td>25.0 DNC</td>
+<td>25.0 DNC</td>
+<td>25.0 DNC</td>
+<td>200.0</td>
+<td>175.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>23rd</td>
+<td>Matthew Cotter</td>
+<td>ILCA 7</td>
+<td>206827</td>
+<td>Howth Yacht Club</td>
+<td>(25.0 DNC)</td>
+<td>25.0 DNC</td>
+<td>25.0 DNC</td>
+<td>25.0 DNC</td>
+<td>25.0 DNC</td>
+<td>25.0 DNC</td>
+<td>25.0 DNC</td>
+<td>25.0 DNC</td>
+<td>200.0</td>
+<td>175.0</td>
+</tr>
+</tbody>
+</table>
+
+<p class="hardleft"><a href="http://www.hyc.ie">www.hyc.ie</a><br /><a href="mailto:"></a></p>
+<p class="hardright"><a href="http://https://ilcaireland.com/event/nationals2023/">https://ilcaireland.com/event/nationals2023/</a><br /><a href="mailto:"></a></p>
+<p>Sailwave Scoring Software 2.29.0<br /><a href="http://www.sailwave.com">www.sailwave.com</a></p>
+
+</div>
+
+<footer>
+</footer>
+
+<div id="scrollbottom"></div>
+
+</body>
+</html>
+
+

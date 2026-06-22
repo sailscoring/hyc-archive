@@ -1,0 +1,11250 @@
+
+
+<!doctype html>
+
+<head>
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="description" content="sailwave results">
+<meta name="viewport" content="width=device-width">
+
+<title>Sailwave results for Saturday Cruisers Non Spinnaker at 4th May - 24th August 2013</title>
+
+<style type="text/css">
+body {font: 67% arial, helvetica, sans-serif; text-align: center;}
+.hardleft  {text-align: left; float: left;  margin: 15px 0  0 25px;}
+.hardright {text-align: right; float: right; margin: 15px 25px 0 0;}
+table, caption {text-align: left; margin: auto; font-size: 1em; border-collapse: collapse; border: 1px #fff solid;}
+td {padding: 4px; border-right: 1px #fff solid; border-bottom: 1px #ffffff solid; vertical-align: top;}
+th {padding: 4px; border: 1px #fff solid; border-bottom: 1px #ffffff solid; vertical-align: top;}
+.caption {padding: 5px; text-align: center; border: 0; font-weight: bold;}
+h1 {font-size: 1.6em;}
+h2 {font-size: 1.4em;}
+h3 {font-size: 1.2em;}
+p {text-align: center;}
+th {background-color: #d0d0d0;}
+.contents {text-align: left; margin-left: 20%;}
+.race, .rank {text-align: center;}
+.even {background-color: #eaeaea;}
+.odd {background-color: #f4f4f4;}
+.nat {text-align: center;}
+.natflag {border: 1px #999 solid;}
+.nattext {font-size: 0.8em;}
+</style>
+
+<script type="text/javascript">
+//#name=results
+//#author=Colin Jenkins
+//#date=2012-02-16
+//#version=1.0
+//#desc=Functions to use if scripting is turned on when publishing results.
+//#url=http://sailwave.com
+//#email=colin@sailwave.com
+//#twitter=sailwave
+
+//*****Just translate these strings to get results in a different language
+var swStr = {};
+swStr.SummaryTitle            = 'Overall';
+swStr.SummaryCaptionSailed    = 'Sailed';
+swStr.SummaryCaptionDiscards  = 'Discards';
+swStr.SummaryCaptionToCount   = 'To count';
+swStr.SummaryCaptionToQualify = 'To qualify';
+swStr.SummaryCaptionRatings   = 'Ratings';
+swStr.SummaryCaptionEntries   = 'Entries';
+swStr.SummaryCaptionScoring   = 'Scoring system';
+swStr.RacePrefix              = 'R';
+swStr.PrizesTitle             = 'Prizes';
+swStr.CodesTitle              = 'Scoring codes used';
+
+// was 'at' changed 020512
+swStr.Wordat                  = '';
+//*****End translate
+
+//*****You must declare these Sailwave assumed variables which are populated when publishing
+var swSeries             = {};
+swSeries.Title           = '';
+swSeries.Notes           = '';
+swSeries.Event           = '';
+swSeries.Venue           = '';
+var swSS                 = new Array();
+var swSummary            = {};
+swSummary.ScoringSys     = 0;
+swSummary.Field          = '';
+swSummary.Value          = '';
+swSummary.TagValue       = '';
+swSummary.FieldName      = '';
+swSummary.Entries        = 0;
+swSummary.Sailed         = 0;
+swSummary.Discards       = 0;
+swSummary.FinalsDiscards = 0;
+swSummary.ToCount        = 0;
+swSummary.ToQualify      = 0;
+var swRace               = {};
+swRace.Entries           = 0;
+swRace.Notes             = '';
+swRace.Date              = '';
+swRace.Time              = '';
+swRace.Name              = '';
+swRace.Rank              = 0;
+//*****End of assumed vars
+
+var swSpace = '&nbsp;';
+var swTwoSpaces = '&nbsp;&nbsp;';
+
+function resSeriesTitle() {
+document.write('<h2 class="seriestitle">' + swSeries.Title + '</h2>');
+}
+
+/*
+function resSeriesNotes() {
+document.write('<p class="seriesnotes">' + swSeries.Notes + '</p>');
+}
+*/
+
+function resSeriesNotes() {
+document.write('<h3>' + swSeries.Notes + '</h3>');
+}
+
+function resSummaryTitle() {
+if (swSummary.Field)
+document.write('<h1 class="summarytitle" id="summary' + swSummary.TagValue + '">' + swSummary.Value + '<br>' + swStr.SummaryTitle + '</h1>');
+else
+document.write('<h3 class="summarytitle">' + swStr.SummaryTitle + '</h3>');
+}
+
+function resSummaryCaption() {
+var h  = '';
+var ss = swSS[swSummary.ScoringSys];
+h += '<div class="caption summarycaption">';
+h +=          swStr.SummaryCaptionSailed    + ': ' + swSummary.Sailed;
+h +=   ', ' + swStr.SummaryCaptionDiscards  + ': ' + swSummary.Discards;
+h +=   ', ' + swStr.SummaryCaptionToCount   + ': ' + swSummary.ToCount;
+if (swSummary.ToQualify > 0)
+h += ', ' + swStr.SummaryCaptionToQualify + ': ' + swSummary.ToQualify;
+if (ss.RatingSystem.toLowerCase() != 'none')
+h += ', ' + swStr.SummaryCaptionRatings   + ': ' + ss.RatingSystem;
+h +=   ', ' + swStr.SummaryCaptionEntries   + ': ' + swSummary.Entries;
+h +=   ', ' + swStr.SummaryCaptionScoring   + ': ' + ss.Name
+h += '</div>'
+document.write(h);
+}
+
+function resRaceTitle() {
+
+var Extra = '';
+var Race = ''
+
+if (swRace.Name)
+Race = swRace.Name;
+else
+//Race = swStr.RacePrefix + swRace.Rank
+Race = 'Race ' + swRace.Rank
+
+if (swRace.Date)
+//Extra = swSpace + '-' + swSpace + swRace.Date;
+Extra = swRace.Date;
+
+if (swRace.Time)
+Extra = Extra + swSpace + swStr.Wordat + swSpace + swRace.Time;
+
+if (swSummary.Field)
+document.write('<h2 class="racetitle" id="r' + swRace.Rank + swSummary.TagValue + '">' + Race + swTwoSpaces + '-' + swTwoSpaces + Extra + swTwoSpaces + '-' + swTwoSpaces + swSummary.Value + '</h2>');
+else
+document.write('<h2 class="racetitle">' + Race + swTwoSpaces + '-' + swTwoSpaces + Extra + swTwoSpaces + '-' + swTwoSpaces + swSummary.Value + '</h2>');
+}
+
+function resRaceNotes() {
+document.write('<p class="racenotes">' + swRace.Notes + '</p>');
+}
+
+function resPrizeTitle() {
+document.write('<h3 class="prizestitle">' + swStr.PrizesTitle + '</h3>');
+}
+
+function resCodesTitle() {
+document.write('<h3 class="codestitle">' + swStr.CodesTitle + '</h3>');
+}
+</script>
+
+</head>
+
+<body>
+
+<header>
+</header>
+
+<div id="wrap">
+
+
+<h1>Saturday Cruisers Non Spinnaker</h1>
+<h2>4th May - 24th August</h2>
+
+<div style="clear:both;"></div>
+
+<script type="text/javascript">
+swSeries.Title = '';
+swSeries.Notes = '';
+swSeries.Event = 'Saturday Cruisers Non Spinnaker';
+swSeries.Venue = '4th May - 24th August';
+swSS[27] = {};
+swSS[27].Name = 'Appendix A';
+swSS[27].Field = 'Class';
+swSS[27].Value = '';
+swSS[27].Notes = '';
+swSS[27].HighPointFormula = '';
+swSS[27].LowPointFormula = '';
+swSS[27].CustomLowPoints = '';
+swSS[27].CustomHighPoints = '';
+swSS[27].QualProfile = '';
+swSS[27].DiscardProfile = '0,0,0,1,1,1,1,2,2,2,2,3';
+swSS[27].RaceTies = 'Averaged';
+swSS[27].PointsAccumulation = 'Sum';
+swSS[27].PointsPlaces = '1';
+swSS[27].PointsSystem = 'Low point';
+swSS[27].RatingSystem = 'TCF';
+swSS[27].RatSysA = '';
+swSS[27].RatSysB = '';
+swSS[27].CExpr = '';
+swSS[27].EExpr = '';
+swSS[27].RExpr = '';
+swSS[27].RatingMode = 'No';
+swSS[27].WindStrengths = '0-1,2-3,4,5-9';
+swSS[27].WindIndexedA = '';
+swSS[27].WindIndexedB = '';
+swSS[27].UpdateRatings = 'No';
+swSS[27].BackCalcPercent = '0';
+swSS[27].TieA81 = 'Yes';
+swSS[27].TieA81Discardss = 'No';
+swSS[27].TieA82 = 'Yes';
+swSS[27].TieA82Back = 'No';
+swSS[27].TieA82Starts = 'No';
+swSS[27].TieB8 = 'No';
+swSS[27].TieFinals = 'No';
+swSS[27].Flights = 'No';
+swSS[27].Finals = 'No';
+swSS[27].FinalsFirst = '0';
+swSS[27].FinalsStickyQ = 'No';
+swSS[27].FinalsDiscardP = '';
+swSS[27].LowWeight = 'Yes';
+swSS[27].Medal = 'No';
+swSS[27].MedalMax = '10';
+swSS[27].MedalRace = '6';
+swSS[27].MedalYesNotDiscardable = 'Yes';
+swSS[27].MedalYesMultiply = 'Yes';
+swSS[27].MedalYesTie = 'Yes';
+swSS[27].MedalNoNotDiscardable = 'Yes';
+swSS[27].MedalNoMultiply = 'Yes';
+swSS[27].MedalNoTie = 'Yes';
+</script>
+<script type="text/javascript">
+resSeriesTitle();
+</script>
+<script type="text/javascript">
+swSummary.Entries = 26;
+swSummary.Field = 'Class';
+swSummary.FieldName = 'class';
+swSummary.Value = 'Cruisers HPH';
+swSummary.TagValue = 'cruisers-hph';
+swSummary.ScoringSys = 27;
+</script>
+<script type="text/javascript">
+resSummaryTitle();
+</script>
+<script type="text/javascript">
+swSummary.Sailed = 13;
+swSummary.Discards = 3;
+swSummary.ToCount = 10;
+swSummary.ToQualify = 0;
+swSummary.FinalsDiscards = 3;
+resSummaryCaption();
+</script>
+<table class="summarytable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="20">
+<col class="rank" />
+<col class="sailno" />
+<col class="boat" />
+<col class="helmname" />
+<col class="rating" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="total" />
+<col class="nett" />
+</colgroup>
+<tr>
+<th>Rank</th>
+<th>sailno</th>
+<th>boat name</th>
+<th>owner name</th>
+<th>hcap</th>
+<th>
+<a class="racelink" href="#r1cruisers-hph">R1</a><br />4/5</th>
+<th>
+<a class="racelink" href="#r2cruisers-hph">R2</a><br />18/5</th>
+<th>
+<a class="racelink" href="#r3cruisers-hph">R3</a><br />25/5</th>
+<th>
+<a class="racelink" href="#r4cruisers-hph">R4</a><br />1/6</th>
+<th>
+<a class="racelink" href="#r5cruisers-hph">R5</a><br />15/6</th>
+<th>
+<a class="racelink" href="#r6cruisers-hph">R6</a><br />22/6</th>
+<th>
+<a class="racelink" href="#r7cruisers-hph">R7</a><br />06/07</th>
+<th>
+<a class="racelink" href="#r8cruisers-hph">R8</a><br />13/7</th>
+<th>
+<a class="racelink" href="#r9cruisers-hph">R9</a><br />20/7</th>
+<th>
+<a class="racelink" href="#r10cruisers-hph">R10</a><br />27/7</th>
+<th>
+<a class="racelink" href="#r11cruisers-hph">R11</a><br />03/08</th>
+<th>
+<a class="racelink" href="#r12cruisers-hph">R12</a><br />017/08</th>
+<th>
+<a class="racelink" href="#r13cruisers-hph">R13</a><br />24/08</th>
+<th>Total</th>
+<th>Nett</th>
+</tr>
+<tr class="odd summaryrow">
+<td>1st</td>
+<td>1411</td>
+<td>Toughnut</td>
+<td>D Skehan</td>
+<td>0.947</td>
+<td>1.0</td>
+<td>3.0</td>
+<td>(6.0)</td>
+<td>2.0</td>
+<td>3.0</td>
+<td>4.0</td>
+<td>2.0</td>
+<td>2.0</td>
+<td>2.0</td>
+<td>(5.0)</td>
+<td>(5.0)</td>
+<td>2.0</td>
+<td>1.0</td>
+<td>38.0</td>
+<td>22.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>2nd</td>
+<td>3335</td>
+<td>Bite the Bullet</td>
+<td>C Bermingham</td>
+<td>0.996</td>
+<td>4.0</td>
+<td>4.0</td>
+<td>4.0</td>
+<td>3.0</td>
+<td>(5.0)</td>
+<td>(27.0 DNC)</td>
+<td>1.0</td>
+<td>(27.0 DNC)</td>
+<td>3.0</td>
+<td>4.0</td>
+<td>3.0</td>
+<td>5.0</td>
+<td>2.0</td>
+<td>92.0</td>
+<td>33.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>3rd</td>
+<td>1430</td>
+<td>Mary Ellen</td>
+<td>K O'Byrne</td>
+<td>1.000</td>
+<td>(27.0 DNC)</td>
+<td>(27.0 DNC)</td>
+<td>(27.0 DNC)</td>
+<td>9.0</td>
+<td>1.0</td>
+<td>1.0</td>
+<td>3.0</td>
+<td>4.0</td>
+<td>27.0 DNC</td>
+<td>7.0</td>
+<td>27.0 DNC</td>
+<td>3.0</td>
+<td>4.0</td>
+<td>167.0</td>
+<td>86.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>4th</td>
+<td>100</td>
+<td>Demelza</td>
+<td>Ennis/Laudan</td>
+<td>0.895</td>
+<td>3.0</td>
+<td>(27.0 DNC)</td>
+<td>(27.0 DNC)</td>
+<td>(27.0 DNC)</td>
+<td>27.0 DNC</td>
+<td>27.0 DNC</td>
+<td>6.0 DNF</td>
+<td>27.0 DNC</td>
+<td>4.0</td>
+<td>3.0</td>
+<td>2.0</td>
+<td>1.0</td>
+<td>3.0</td>
+<td>184.0</td>
+<td>103.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>5th</td>
+<td>29048</td>
+<td>Deep Thought</td>
+<td>J Wenski</td>
+<td>0.892</td>
+<td>(27.0 DNC)</td>
+<td>(27.0 DNC)</td>
+<td>9.0 DNF</td>
+<td>(27.0 DNC)</td>
+<td>7.0</td>
+<td>27.0 DNC</td>
+<td>4.0</td>
+<td>27.0 DNC</td>
+<td>6.0</td>
+<td>8.0</td>
+<td>6.0</td>
+<td>4.0</td>
+<td>7.0</td>
+<td>186.0</td>
+<td>105.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>6th</td>
+<td>2760</td>
+<td>SunChaser</td>
+<td>M Marr</td>
+<td>0.823</td>
+<td>2.0</td>
+<td>(27.0 DNC)</td>
+<td>5.0</td>
+<td>8.0</td>
+<td>6.0</td>
+<td>(27.0 DNC)</td>
+<td>(27.0 DNC)</td>
+<td>27.0 DNC</td>
+<td>27.0 DNC</td>
+<td>9.0</td>
+<td>9.0 DNF</td>
+<td>8.0 DNF</td>
+<td>12.0 DNF</td>
+<td>194.0</td>
+<td>113.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>7th</td>
+<td>1103</td>
+<td>Viking</td>
+<td>Darmody/Patterson</td>
+<td>1.000</td>
+<td>(27.0 DNC)</td>
+<td>(27.0 DNC)</td>
+<td>(27.0 DNC)</td>
+<td>5.0</td>
+<td>27.0 DNC</td>
+<td>27.0 DNC</td>
+<td>27.0 DNC</td>
+<td>27.0 DNC</td>
+<td>7.0</td>
+<td>2.0</td>
+<td>4.0</td>
+<td>6.0</td>
+<td>6.0</td>
+<td>219.0</td>
+<td>138.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>8th</td>
+<td>1679</td>
+<td>Wayfinder</td>
+<td>J Reynolds</td>
+<td>0.886</td>
+<td>(27.0 DNC)</td>
+<td>(27.0 DNC)</td>
+<td>7.0</td>
+<td>11.0</td>
+<td>(27.0 DNC)</td>
+<td>27.0 DNC</td>
+<td>27.0 DNC</td>
+<td>1.0</td>
+<td>1.0</td>
+<td>27.0 DNC</td>
+<td>1.0</td>
+<td>27.0 DNC</td>
+<td>27.0 DNC</td>
+<td>237.0</td>
+<td>156.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>9th</td>
+<td>2070</td>
+<td>Out & About</td>
+<td>McCoy/Cregan</td>
+<td>0.855</td>
+<td>(27.0 DNC)</td>
+<td>5.0</td>
+<td>(27.0 DNC)</td>
+<td>(27.0 DNC)</td>
+<td>2.0</td>
+<td>2.0</td>
+<td>27.0 DNC</td>
+<td>6.0 DNF</td>
+<td>27.0 DNC</td>
+<td>27.0 DNC</td>
+<td>27.0 DNC</td>
+<td>27.0 DNC</td>
+<td>12.0 DNF</td>
+<td>243.0</td>
+<td>162.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>10th</td>
+<td>2588</td>
+<td>Rosie</td>
+<td>R Dickson</td>
+<td>0.897</td>
+<td>(27.0 DNC)</td>
+<td>2.0</td>
+<td>1.0</td>
+<td>(27.0 DNC)</td>
+<td>4.0</td>
+<td>(27.0 DNC)</td>
+<td>27.0 DNC</td>
+<td>27.0 DNC</td>
+<td>27.0 DNC</td>
+<td>27.0 DNC</td>
+<td>27.0 DNC</td>
+<td>27.0 DNC</td>
+<td>8.0</td>
+<td>258.0</td>
+<td>177.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>11th</td>
+<td>5115</td>
+<td>Force Five</td>
+<td>R & J McAllister</td>
+<td>0.978</td>
+<td>(27.0 DNC)</td>
+<td>(27.0 DNC)</td>
+<td>(27.0 DNC)</td>
+<td>27.0 DNC</td>
+<td>27.0 DNC</td>
+<td>27.0 DNC</td>
+<td>27.0 DNC</td>
+<td>27.0 DNC</td>
+<td>8.0</td>
+<td>6.0</td>
+<td>7.0</td>
+<td>27.0 DNC</td>
+<td>5.0</td>
+<td>269.0</td>
+<td>188.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>12th</td>
+<td>1202</td>
+<td>Thar Saile</td>
+<td>C O'Laoi</td>
+<td>1.000</td>
+<td>(27.0 DNC)</td>
+<td>(27.0 DNC)</td>
+<td>(27.0 DNC)</td>
+<td>10.0</td>
+<td>27.0 DNC</td>
+<td>27.0 DNC</td>
+<td>27.0 DNC</td>
+<td>27.0 DNC</td>
+<td>27.0 DNC</td>
+<td>1.0</td>
+<td>27.0 DNC</td>
+<td>27.0 DNC</td>
+<td>12.0 DNF</td>
+<td>293.0</td>
+<td>212.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>13th</td>
+<td>9849</td>
+<td>Blue Eyes</td>
+<td>C Buckley</td>
+<td>0.914</td>
+<td>(27.0 DNC)</td>
+<td>(27.0 DNC)</td>
+<td>2.0</td>
+<td>1.0</td>
+<td>(27.0 DNC)</td>
+<td>27.0 DNC</td>
+<td>27.0 DNC</td>
+<td>27.0 DNC</td>
+<td>27.0 DNC</td>
+<td>27.0 DNC</td>
+<td>27.0 DNC</td>
+<td>27.0 DNC</td>
+<td>27.0 DNC</td>
+<td>300.0</td>
+<td>219.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>14th</td>
+<td>988</td>
+<td>Dux</td>
+<td>A Gore-Grimes</td>
+<td>0.900</td>
+<td>(27.0 DNC)</td>
+<td>1.0</td>
+<td>(27.0 DNC)</td>
+<td>4.0</td>
+<td>(27.0 DNC)</td>
+<td>27.0 DNC</td>
+<td>27.0 DNC</td>
+<td>27.0 DNC</td>
+<td>27.0 DNC</td>
+<td>27.0 DNC</td>
+<td>27.0 DNC</td>
+<td>27.0 DNC</td>
+<td>27.0 DNC</td>
+<td>302.0</td>
+<td>221.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>15th</td>
+<td>581</td>
+<td>Hellyhunter</td>
+<td>L McMurtry</td>
+<td>0.751</td>
+<td>(27.0 DNC)</td>
+<td>(27.0 DNC)</td>
+<td>(27.0 DNC)</td>
+<td>27.0 DNC</td>
+<td>27.0 DNC</td>
+<td>3.0</td>
+<td>27.0 DNC</td>
+<td>3.0</td>
+<td>27.0 DNC</td>
+<td>27.0 DNC</td>
+<td>27.0 DNC</td>
+<td>27.0 DNC</td>
+<td>27.0 DNC</td>
+<td>303.0</td>
+<td>222.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>16th</td>
+<td>657</td>
+<td>Voyager</td>
+<td>J Carton</td>
+<td>0.966</td>
+<td>(27.0 DNC)</td>
+<td>(27.0 DNC)</td>
+<td>(27.0 DNC)</td>
+<td>7.0</td>
+<td>27.0 DNC</td>
+<td>27.0 DNC</td>
+<td>27.0 DNC</td>
+<td>27.0 DNC</td>
+<td>5.0</td>
+<td>27.0 DNC</td>
+<td>27.0 DNC</td>
+<td>27.0 DNC</td>
+<td>27.0 DNC</td>
+<td>309.0</td>
+<td>228.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>17th</td>
+<td>3550</td>
+<td>Lolly Folly</td>
+<td>C & L Phelan</td>
+<td>0.849</td>
+<td>(27.0 DNC)</td>
+<td>(27.0 DNC)</td>
+<td>3.0</td>
+<td>(27.0 DNC)</td>
+<td>27.0 DNC</td>
+<td>27.0 DNC</td>
+<td>27.0 DNC</td>
+<td>27.0 DNC</td>
+<td>27.0 DNC</td>
+<td>27.0 DNC</td>
+<td>27.0 DNC</td>
+<td>27.0 DNC</td>
+<td>27.0 DNC</td>
+<td>327.0</td>
+<td>246.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>18th</td>
+<td>5522</td>
+<td>The Big Picture</td>
+<td>M & R Evans</td>
+<td>1.000</td>
+<td>(27.0 DNC)</td>
+<td>(27.0 DNC)</td>
+<td>(27.0 DNC)</td>
+<td>6.0</td>
+<td>27.0 DNC</td>
+<td>27.0 DNC</td>
+<td>27.0 DNC</td>
+<td>27.0 DNC</td>
+<td>27.0 DNC</td>
+<td>27.0 DNC</td>
+<td>27.0 DNC</td>
+<td>27.0 DNC</td>
+<td>27.0 DNC</td>
+<td>330.0</td>
+<td>249.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>19th</td>
+<td>38</td>
+<td>Arctic Fox</td>
+<td>McCollum/Others</td>
+<td>1.000</td>
+<td>(27.0 DNC)</td>
+<td>(27.0 DNC)</td>
+<td>(27.0 DNC)</td>
+<td>27.0 DNC</td>
+<td>27.0 DNC</td>
+<td>27.0 DNC</td>
+<td>27.0 DNC</td>
+<td>27.0 DNC</td>
+<td>27.0 DNC</td>
+<td>27.0 DNC</td>
+<td>27.0 DNC</td>
+<td>27.0 DNC</td>
+<td>27.0 DNC</td>
+<td>351.0</td>
+<td>270.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>19th</td>
+<td>3022</td>
+<td>Xebec</td>
+<td>T Giles</td>
+<td>0.926</td>
+<td>(27.0 DNC)</td>
+<td>(27.0 DNC)</td>
+<td>(27.0 DNC)</td>
+<td>27.0 DNC</td>
+<td>27.0 DNC</td>
+<td>27.0 DNC</td>
+<td>27.0 DNC</td>
+<td>27.0 DNC</td>
+<td>27.0 DNC</td>
+<td>27.0 DNC</td>
+<td>27.0 DNC</td>
+<td>27.0 DNC</td>
+<td>27.0 DNC</td>
+<td>351.0</td>
+<td>270.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>19th</td>
+<td>71</td>
+<td>Southern Breeze</td>
+<td>G Wilson</td>
+<td>1.000</td>
+<td>(27.0 DNC)</td>
+<td>(27.0 DNC)</td>
+<td>(27.0 DNC)</td>
+<td>27.0 DNC</td>
+<td>27.0 DNC</td>
+<td>27.0 DNC</td>
+<td>27.0 DNC</td>
+<td>27.0 DNC</td>
+<td>27.0 DNC</td>
+<td>27.0 DNC</td>
+<td>27.0 DNC</td>
+<td>27.0 DNC</td>
+<td>27.0 DNC</td>
+<td>351.0</td>
+<td>270.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>19th</td>
+<td>6002</td>
+<td>Stage Fright</td>
+<td>Wormald/Walsh</td>
+<td>1.000</td>
+<td>(27.0 DNC)</td>
+<td>(27.0 DNC)</td>
+<td>(27.0 DNC)</td>
+<td>27.0 DNC</td>
+<td>27.0 DNC</td>
+<td>27.0 DNC</td>
+<td>27.0 DNC</td>
+<td>27.0 DNC</td>
+<td>27.0 DNC</td>
+<td>27.0 DNC</td>
+<td>27.0 DNC</td>
+<td>27.0 DNC</td>
+<td>27.0 DNC</td>
+<td>351.0</td>
+<td>270.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>19th</td>
+<td>4615</td>
+<td>Joslim</td>
+<td>J Connolly</td>
+<td>1.000</td>
+<td>(27.0 DNC)</td>
+<td>(27.0 DNC)</td>
+<td>(27.0 DNC)</td>
+<td>27.0 DNC</td>
+<td>27.0 DNC</td>
+<td>27.0 DNC</td>
+<td>27.0 DNC</td>
+<td>27.0 DNC</td>
+<td>27.0 DNC</td>
+<td>27.0 DNC</td>
+<td>27.0 DNC</td>
+<td>27.0 DNC</td>
+<td>27.0 DNC</td>
+<td>351.0</td>
+<td>270.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>19th</td>
+<td>7495</td>
+<td>Maximus</td>
+<td>P Kyne</td>
+<td>0.948</td>
+<td>(27.0 DNC)</td>
+<td>(27.0 DNC)</td>
+<td>(27.0 DNC)</td>
+<td>27.0 DNC</td>
+<td>27.0 DNC</td>
+<td>27.0 DNC</td>
+<td>27.0 DNC</td>
+<td>27.0 DNC</td>
+<td>27.0 DNC</td>
+<td>27.0 DNC</td>
+<td>27.0 DNC</td>
+<td>27.0 DNC</td>
+<td>27.0 DNC</td>
+<td>351.0</td>
+<td>270.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>19th</td>
+<td>9191</td>
+<td>Jebus</td>
+<td>E Dalton</td>
+<td>0.900</td>
+<td>(27.0 DNC)</td>
+<td>(27.0 DNC)</td>
+<td>(27.0 DNC)</td>
+<td>27.0 DNC</td>
+<td>27.0 DNC</td>
+<td>27.0 DNC</td>
+<td>27.0 DNC</td>
+<td>27.0 DNC</td>
+<td>27.0 DNC</td>
+<td>27.0 DNC</td>
+<td>27.0 DNC</td>
+<td>27.0 DNC</td>
+<td>27.0 DNC</td>
+<td>351.0</td>
+<td>270.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>19th</td>
+<td>3400</td>
+<td>Brazen Hussy</td>
+<td>Stirling/Barry</td>
+<td>0.898</td>
+<td>(27.0 DNC)</td>
+<td>(27.0 DNC)</td>
+<td>(27.0 DNC)</td>
+<td>27.0 DNC</td>
+<td>27.0 DNC</td>
+<td>27.0 DNC</td>
+<td>27.0 DNC</td>
+<td>27.0 DNC</td>
+<td>27.0 DNC</td>
+<td>27.0 DNC</td>
+<td>27.0 DNC</td>
+<td>27.0 DNC</td>
+<td>27.0 DNC</td>
+<td>351.0</td>
+<td>270.0</td>
+</tr>
+</table>
+<script type="text/javascript">
+swSummary.Entries = 26;
+swSummary.Field = 'Class';
+swSummary.FieldName = 'class';
+swSummary.Value = 'Cruisers HPH';
+swSummary.TagValue = 'cruisers-hph';
+swSummary.ScoringSys = 27;
+</script>
+<script type="text/javascript">
+swRace.Entries = 26;
+swRace.Notes = '';
+swRace.Date = '4/5';
+swRace.Time = '';
+swRace.Name = '';
+swRace.Rank = 1;
+</script>
+<script type="text/javascript">
+resRaceTitle();
+</script>
+<script type="text/javascript">
+resRaceNotes();
+</script>
+<div class="caption racecaption">
+Start: Start 1, Finishes: Finish time
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="9">
+<col class="rank" />
+<col class="sailno" />
+<col class="boat" />
+<col class="helmname" />
+<col class="rating" />
+<col class="racefinish" />
+<col class="raceelapsed" />
+<col class="racecorrected" />
+<col class="nett" />
+</colgroup>
+<tr>
+<th>Rank</th>
+<th>sailno</th>
+<th>boat name</th>
+<th>owner name</th>
+<th>hcap</th>
+<th>Finish</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+<tr class="odd racerow">
+<td>
+1
+</td>
+<td>
+1411
+</td>
+<td>
+Toughnut
+</td>
+<td>
+D Skehan
+</td>
+<td>
+0.947
+</td>
+<td>
+152912
+</td>
+<td>
+1:19:12
+</td>
+<td>
+1:15:00
+</td>
+<td>
+1.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+2
+</td>
+<td>
+2760
+</td>
+<td>
+SunChaser
+</td>
+<td>
+M Marr
+</td>
+<td>
+0.823
+</td>
+<td>
+154136
+</td>
+<td>
+1:31:36
+</td>
+<td>
+1:15:23
+</td>
+<td>
+2.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+3
+</td>
+<td>
+100
+</td>
+<td>
+Demelza
+</td>
+<td>
+Ennis/Laudan
+</td>
+<td>
+0.895
+</td>
+<td>
+153506
+</td>
+<td>
+1:25:06
+</td>
+<td>
+1:16:10
+</td>
+<td>
+3.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+4
+</td>
+<td>
+3335
+</td>
+<td>
+Bite the Bullet
+</td>
+<td>
+C Bermingham
+</td>
+<td>
+0.996
+</td>
+<td>
+152734
+</td>
+<td>
+1:17:34
+</td>
+<td>
+1:17:15
+</td>
+<td>
+4.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+5
+</td>
+<td>
+1430
+</td>
+<td>
+Mary Ellen
+</td>
+<td>
+K O'Byrne
+</td>
+<td>
+1.000
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+5
+</td>
+<td>
+29048
+</td>
+<td>
+Deep Thought
+</td>
+<td>
+J Wenski
+</td>
+<td>
+0.892
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+5
+</td>
+<td>
+1103
+</td>
+<td>
+Viking
+</td>
+<td>
+Darmody/Patterson
+</td>
+<td>
+1.000
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+5
+</td>
+<td>
+1679
+</td>
+<td>
+Wayfinder
+</td>
+<td>
+J Reynolds
+</td>
+<td>
+0.886
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+5
+</td>
+<td>
+2070
+</td>
+<td>
+Out & About
+</td>
+<td>
+McCoy/Cregan
+</td>
+<td>
+0.855
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+5
+</td>
+<td>
+2588
+</td>
+<td>
+Rosie
+</td>
+<td>
+R Dickson
+</td>
+<td>
+0.897
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+5
+</td>
+<td>
+5115
+</td>
+<td>
+Force Five
+</td>
+<td>
+R & J McAllister
+</td>
+<td>
+0.978
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+5
+</td>
+<td>
+1202
+</td>
+<td>
+Thar Saile
+</td>
+<td>
+C O'Laoi
+</td>
+<td>
+1.000
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+5
+</td>
+<td>
+9849
+</td>
+<td>
+Blue Eyes
+</td>
+<td>
+C Buckley
+</td>
+<td>
+0.914
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+5
+</td>
+<td>
+988
+</td>
+<td>
+Dux
+</td>
+<td>
+A Gore-Grimes
+</td>
+<td>
+0.900
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+5
+</td>
+<td>
+581
+</td>
+<td>
+Hellyhunter
+</td>
+<td>
+L McMurtry
+</td>
+<td>
+0.751
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+5
+</td>
+<td>
+657
+</td>
+<td>
+Voyager
+</td>
+<td>
+J Carton
+</td>
+<td>
+0.966
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+5
+</td>
+<td>
+3550
+</td>
+<td>
+Lolly Folly
+</td>
+<td>
+C & L Phelan
+</td>
+<td>
+0.849
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+5
+</td>
+<td>
+5522
+</td>
+<td>
+The Big Picture
+</td>
+<td>
+M & R Evans
+</td>
+<td>
+1.000
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+5
+</td>
+<td>
+38
+</td>
+<td>
+Arctic Fox
+</td>
+<td>
+McCollum/Others
+</td>
+<td>
+1.000
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+5
+</td>
+<td>
+3022
+</td>
+<td>
+Xebec
+</td>
+<td>
+T Giles
+</td>
+<td>
+0.926
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+5
+</td>
+<td>
+71
+</td>
+<td>
+Southern Breeze
+</td>
+<td>
+G Wilson
+</td>
+<td>
+1.000
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+5
+</td>
+<td>
+6002
+</td>
+<td>
+Stage Fright
+</td>
+<td>
+Wormald/Walsh
+</td>
+<td>
+1.000
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+5
+</td>
+<td>
+4615
+</td>
+<td>
+Joslim
+</td>
+<td>
+J Connolly
+</td>
+<td>
+1.000
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+5
+</td>
+<td>
+7495
+</td>
+<td>
+Maximus
+</td>
+<td>
+P Kyne
+</td>
+<td>
+0.948
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+5
+</td>
+<td>
+9191
+</td>
+<td>
+Jebus
+</td>
+<td>
+E Dalton
+</td>
+<td>
+0.900
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+5
+</td>
+<td>
+3400
+</td>
+<td>
+Brazen Hussy
+</td>
+<td>
+Stirling/Barry
+</td>
+<td>
+0.898
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+</table>
+<script type="text/javascript">
+swRace.Entries = 26;
+swRace.Notes = '';
+swRace.Date = '18/5';
+swRace.Time = '';
+swRace.Name = 'R2';
+swRace.Rank = 2;
+</script>
+<script type="text/javascript">
+resRaceTitle();
+</script>
+<script type="text/javascript">
+resRaceNotes();
+</script>
+<div class="caption racecaption">
+Start: Start 1, Finishes: Finish time, Time: 141000
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="9">
+<col class="rank" />
+<col class="sailno" />
+<col class="boat" />
+<col class="helmname" />
+<col class="rating" />
+<col class="racefinish" />
+<col class="raceelapsed" />
+<col class="racecorrected" />
+<col class="nett" />
+</colgroup>
+<tr>
+<th>Rank</th>
+<th>sailno</th>
+<th>boat name</th>
+<th>owner name</th>
+<th>hcap</th>
+<th>Finish</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+<tr class="odd racerow">
+<td>
+1
+</td>
+<td>
+988
+</td>
+<td>
+Dux
+</td>
+<td>
+A Gore-Grimes
+</td>
+<td>
+0.900
+</td>
+<td>
+152329
+</td>
+<td>
+1:13:29
+</td>
+<td>
+1:06:08
+</td>
+<td>
+1.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+2
+</td>
+<td>
+2588
+</td>
+<td>
+Rosie
+</td>
+<td>
+R Dickson
+</td>
+<td>
+0.897
+</td>
+<td>
+152346
+</td>
+<td>
+1:13:46
+</td>
+<td>
+1:06:10
+</td>
+<td>
+2.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+3
+</td>
+<td>
+1411
+</td>
+<td>
+Toughnut
+</td>
+<td>
+D Skehan
+</td>
+<td>
+0.947
+</td>
+<td>
+152145
+</td>
+<td>
+1:11:45
+</td>
+<td>
+1:07:57
+</td>
+<td>
+3.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+4
+</td>
+<td>
+3335
+</td>
+<td>
+Bite the Bullet
+</td>
+<td>
+C Bermingham
+</td>
+<td>
+0.996
+</td>
+<td>
+151942
+</td>
+<td>
+1:09:42
+</td>
+<td>
+1:09:25
+</td>
+<td>
+4.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+5
+</td>
+<td>
+2070
+</td>
+<td>
+Out & About
+</td>
+<td>
+McCoy/Cregan
+</td>
+<td>
+0.855
+</td>
+<td>
+153839
+</td>
+<td>
+1:28:39
+</td>
+<td>
+1:15:48
+</td>
+<td>
+5.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+6
+</td>
+<td>
+1430
+</td>
+<td>
+Mary Ellen
+</td>
+<td>
+K O'Byrne
+</td>
+<td>
+1.000
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+6
+</td>
+<td>
+100
+</td>
+<td>
+Demelza
+</td>
+<td>
+Ennis/Laudan
+</td>
+<td>
+0.895
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+6
+</td>
+<td>
+29048
+</td>
+<td>
+Deep Thought
+</td>
+<td>
+J Wenski
+</td>
+<td>
+0.892
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+6
+</td>
+<td>
+2760
+</td>
+<td>
+SunChaser
+</td>
+<td>
+M Marr
+</td>
+<td>
+0.823
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+6
+</td>
+<td>
+1103
+</td>
+<td>
+Viking
+</td>
+<td>
+Darmody/Patterson
+</td>
+<td>
+1.000
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+6
+</td>
+<td>
+1679
+</td>
+<td>
+Wayfinder
+</td>
+<td>
+J Reynolds
+</td>
+<td>
+0.886
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+6
+</td>
+<td>
+5115
+</td>
+<td>
+Force Five
+</td>
+<td>
+R & J McAllister
+</td>
+<td>
+0.978
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+6
+</td>
+<td>
+1202
+</td>
+<td>
+Thar Saile
+</td>
+<td>
+C O'Laoi
+</td>
+<td>
+1.000
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+6
+</td>
+<td>
+9849
+</td>
+<td>
+Blue Eyes
+</td>
+<td>
+C Buckley
+</td>
+<td>
+0.914
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+6
+</td>
+<td>
+581
+</td>
+<td>
+Hellyhunter
+</td>
+<td>
+L McMurtry
+</td>
+<td>
+0.751
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+6
+</td>
+<td>
+657
+</td>
+<td>
+Voyager
+</td>
+<td>
+J Carton
+</td>
+<td>
+0.966
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+6
+</td>
+<td>
+3550
+</td>
+<td>
+Lolly Folly
+</td>
+<td>
+C & L Phelan
+</td>
+<td>
+0.849
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+6
+</td>
+<td>
+5522
+</td>
+<td>
+The Big Picture
+</td>
+<td>
+M & R Evans
+</td>
+<td>
+1.000
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+6
+</td>
+<td>
+38
+</td>
+<td>
+Arctic Fox
+</td>
+<td>
+McCollum/Others
+</td>
+<td>
+1.000
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+6
+</td>
+<td>
+3022
+</td>
+<td>
+Xebec
+</td>
+<td>
+T Giles
+</td>
+<td>
+0.926
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+6
+</td>
+<td>
+71
+</td>
+<td>
+Southern Breeze
+</td>
+<td>
+G Wilson
+</td>
+<td>
+1.000
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+6
+</td>
+<td>
+6002
+</td>
+<td>
+Stage Fright
+</td>
+<td>
+Wormald/Walsh
+</td>
+<td>
+1.000
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+6
+</td>
+<td>
+4615
+</td>
+<td>
+Joslim
+</td>
+<td>
+J Connolly
+</td>
+<td>
+1.000
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+6
+</td>
+<td>
+7495
+</td>
+<td>
+Maximus
+</td>
+<td>
+P Kyne
+</td>
+<td>
+0.948
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+6
+</td>
+<td>
+9191
+</td>
+<td>
+Jebus
+</td>
+<td>
+E Dalton
+</td>
+<td>
+0.900
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+6
+</td>
+<td>
+3400
+</td>
+<td>
+Brazen Hussy
+</td>
+<td>
+Stirling/Barry
+</td>
+<td>
+0.898
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+</table>
+<script type="text/javascript">
+swRace.Entries = 26;
+swRace.Notes = '';
+swRace.Date = '25/5';
+swRace.Time = '';
+swRace.Name = 'R3';
+swRace.Rank = 3;
+</script>
+<script type="text/javascript">
+resRaceTitle();
+</script>
+<script type="text/javascript">
+resRaceNotes();
+</script>
+<div class="caption racecaption">
+Start: Start 1, Finishes: Finish time, Time: 142000
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="9">
+<col class="rank" />
+<col class="sailno" />
+<col class="boat" />
+<col class="helmname" />
+<col class="rating" />
+<col class="racefinish" />
+<col class="raceelapsed" />
+<col class="racecorrected" />
+<col class="nett" />
+</colgroup>
+<tr>
+<th>Rank</th>
+<th>sailno</th>
+<th>boat name</th>
+<th>owner name</th>
+<th>hcap</th>
+<th>Finish</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+<tr class="odd racerow">
+<td>
+1
+</td>
+<td>
+2588
+</td>
+<td>
+Rosie
+</td>
+<td>
+R Dickson
+</td>
+<td>
+0.897
+</td>
+<td>
+154942
+</td>
+<td>
+1:29:42
+</td>
+<td>
+1:20:28
+</td>
+<td>
+1.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+2
+</td>
+<td>
+9849
+</td>
+<td>
+Blue Eyes
+</td>
+<td>
+C Buckley
+</td>
+<td>
+0.914
+</td>
+<td>
+154810
+</td>
+<td>
+1:28:10
+</td>
+<td>
+1:20:35
+</td>
+<td>
+2.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+3
+</td>
+<td>
+3550
+</td>
+<td>
+Lolly Folly
+</td>
+<td>
+C & L Phelan
+</td>
+<td>
+0.849
+</td>
+<td>
+155846
+</td>
+<td>
+1:38:46
+</td>
+<td>
+1:23:51
+</td>
+<td>
+3.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+4
+</td>
+<td>
+3335
+</td>
+<td>
+Bite the Bullet
+</td>
+<td>
+C Bermingham
+</td>
+<td>
+0.996
+</td>
+<td>
+154425
+</td>
+<td>
+1:24:25
+</td>
+<td>
+1:24:05
+</td>
+<td>
+4.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+5
+</td>
+<td>
+2760
+</td>
+<td>
+SunChaser
+</td>
+<td>
+M Marr
+</td>
+<td>
+0.823
+</td>
+<td>
+160225
+</td>
+<td>
+1:42:25
+</td>
+<td>
+1:24:17
+</td>
+<td>
+5.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+6
+</td>
+<td>
+1411
+</td>
+<td>
+Toughnut
+</td>
+<td>
+D Skehan
+</td>
+<td>
+0.947
+</td>
+<td>
+155034
+</td>
+<td>
+1:30:34
+</td>
+<td>
+1:25:46
+</td>
+<td>
+6.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+7
+</td>
+<td>
+1679
+</td>
+<td>
+Wayfinder
+</td>
+<td>
+J Reynolds
+</td>
+<td>
+0.886
+</td>
+<td>
+160854
+</td>
+<td>
+1:48:54
+</td>
+<td>
+1:36:29
+</td>
+<td>
+7.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+8
+</td>
+<td>
+29048
+</td>
+<td>
+Deep Thought
+</td>
+<td>
+J Wenski
+</td>
+<td>
+0.892
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNF
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+9.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+9
+</td>
+<td>
+1430
+</td>
+<td>
+Mary Ellen
+</td>
+<td>
+K O'Byrne
+</td>
+<td>
+1.000
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+9
+</td>
+<td>
+100
+</td>
+<td>
+Demelza
+</td>
+<td>
+Ennis/Laudan
+</td>
+<td>
+0.895
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+9
+</td>
+<td>
+1103
+</td>
+<td>
+Viking
+</td>
+<td>
+Darmody/Patterson
+</td>
+<td>
+1.000
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+9
+</td>
+<td>
+2070
+</td>
+<td>
+Out & About
+</td>
+<td>
+McCoy/Cregan
+</td>
+<td>
+0.855
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+9
+</td>
+<td>
+5115
+</td>
+<td>
+Force Five
+</td>
+<td>
+R & J McAllister
+</td>
+<td>
+0.978
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+9
+</td>
+<td>
+1202
+</td>
+<td>
+Thar Saile
+</td>
+<td>
+C O'Laoi
+</td>
+<td>
+1.000
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+9
+</td>
+<td>
+988
+</td>
+<td>
+Dux
+</td>
+<td>
+A Gore-Grimes
+</td>
+<td>
+0.900
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+9
+</td>
+<td>
+581
+</td>
+<td>
+Hellyhunter
+</td>
+<td>
+L McMurtry
+</td>
+<td>
+0.751
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+9
+</td>
+<td>
+657
+</td>
+<td>
+Voyager
+</td>
+<td>
+J Carton
+</td>
+<td>
+0.966
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+9
+</td>
+<td>
+5522
+</td>
+<td>
+The Big Picture
+</td>
+<td>
+M & R Evans
+</td>
+<td>
+1.000
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+9
+</td>
+<td>
+38
+</td>
+<td>
+Arctic Fox
+</td>
+<td>
+McCollum/Others
+</td>
+<td>
+1.000
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+9
+</td>
+<td>
+3022
+</td>
+<td>
+Xebec
+</td>
+<td>
+T Giles
+</td>
+<td>
+0.926
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+9
+</td>
+<td>
+71
+</td>
+<td>
+Southern Breeze
+</td>
+<td>
+G Wilson
+</td>
+<td>
+1.000
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+9
+</td>
+<td>
+6002
+</td>
+<td>
+Stage Fright
+</td>
+<td>
+Wormald/Walsh
+</td>
+<td>
+1.000
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+9
+</td>
+<td>
+4615
+</td>
+<td>
+Joslim
+</td>
+<td>
+J Connolly
+</td>
+<td>
+1.000
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+9
+</td>
+<td>
+7495
+</td>
+<td>
+Maximus
+</td>
+<td>
+P Kyne
+</td>
+<td>
+0.948
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+9
+</td>
+<td>
+9191
+</td>
+<td>
+Jebus
+</td>
+<td>
+E Dalton
+</td>
+<td>
+0.900
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+9
+</td>
+<td>
+3400
+</td>
+<td>
+Brazen Hussy
+</td>
+<td>
+Stirling/Barry
+</td>
+<td>
+0.898
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+</table>
+<script type="text/javascript">
+swRace.Entries = 26;
+swRace.Notes = '';
+swRace.Date = '1/6';
+swRace.Time = '';
+swRace.Name = 'R4';
+swRace.Rank = 4;
+</script>
+<script type="text/javascript">
+resRaceTitle();
+</script>
+<script type="text/javascript">
+resRaceNotes();
+</script>
+<div class="caption racecaption">
+Start: Start 1, Finishes: Finish time, Time: 141000
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="9">
+<col class="rank" />
+<col class="sailno" />
+<col class="boat" />
+<col class="helmname" />
+<col class="rating" />
+<col class="racefinish" />
+<col class="raceelapsed" />
+<col class="racecorrected" />
+<col class="nett" />
+</colgroup>
+<tr>
+<th>Rank</th>
+<th>sailno</th>
+<th>boat name</th>
+<th>owner name</th>
+<th>hcap</th>
+<th>Finish</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+<tr class="odd racerow">
+<td>
+1
+</td>
+<td>
+9849
+</td>
+<td>
+Blue Eyes
+</td>
+<td>
+C Buckley
+</td>
+<td>
+0.914
+</td>
+<td>
+153403
+</td>
+<td>
+1:24:03
+</td>
+<td>
+1:16:49
+</td>
+<td>
+1.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+2
+</td>
+<td>
+1411
+</td>
+<td>
+Toughnut
+</td>
+<td>
+D Skehan
+</td>
+<td>
+0.947
+</td>
+<td>
+153358
+</td>
+<td>
+1:23:58
+</td>
+<td>
+1:19:31
+</td>
+<td>
+2.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+3
+</td>
+<td>
+3335
+</td>
+<td>
+Bite the Bullet
+</td>
+<td>
+C Bermingham
+</td>
+<td>
+0.996
+</td>
+<td>
+153135
+</td>
+<td>
+1:21:35
+</td>
+<td>
+1:21:15
+</td>
+<td>
+3.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+4
+</td>
+<td>
+988
+</td>
+<td>
+Dux
+</td>
+<td>
+A Gore-Grimes
+</td>
+<td>
+0.900
+</td>
+<td>
+154517
+</td>
+<td>
+1:35:17
+</td>
+<td>
+1:25:45
+</td>
+<td>
+4.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+5
+</td>
+<td>
+1103
+</td>
+<td>
+Viking
+</td>
+<td>
+Darmody/Patterson
+</td>
+<td>
+1.000
+</td>
+<td>
+153708
+</td>
+<td>
+1:27:08
+</td>
+<td>
+1:27:08
+</td>
+<td>
+5.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+6
+</td>
+<td>
+5522
+</td>
+<td>
+The Big Picture
+</td>
+<td>
+M & R Evans
+</td>
+<td>
+1.000
+</td>
+<td>
+153849
+</td>
+<td>
+1:28:49
+</td>
+<td>
+1:28:49
+</td>
+<td>
+6.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+7
+</td>
+<td>
+657
+</td>
+<td>
+Voyager
+</td>
+<td>
+J Carton
+</td>
+<td>
+0.966
+</td>
+<td>
+154549
+</td>
+<td>
+1:35:49
+</td>
+<td>
+1:32:34
+</td>
+<td>
+7.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+8
+</td>
+<td>
+2760
+</td>
+<td>
+SunChaser
+</td>
+<td>
+M Marr
+</td>
+<td>
+0.823
+</td>
+<td>
+160315
+</td>
+<td>
+1:53:15
+</td>
+<td>
+1:33:12
+</td>
+<td>
+8.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+9
+</td>
+<td>
+1430
+</td>
+<td>
+Mary Ellen
+</td>
+<td>
+K O'Byrne
+</td>
+<td>
+1.000
+</td>
+<td>
+154826
+</td>
+<td>
+1:38:26
+</td>
+<td>
+1:38:26
+</td>
+<td>
+9.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+10
+</td>
+<td>
+1202
+</td>
+<td>
+Thar Saile
+</td>
+<td>
+C O'Laoi
+</td>
+<td>
+1.000
+</td>
+<td>
+154950
+</td>
+<td>
+1:39:50
+</td>
+<td>
+1:39:50
+</td>
+<td>
+10.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+11
+</td>
+<td>
+1679
+</td>
+<td>
+Wayfinder
+</td>
+<td>
+J Reynolds
+</td>
+<td>
+0.886
+</td>
+<td>
+160758
+</td>
+<td>
+1:57:58
+</td>
+<td>
+1:44:31
+</td>
+<td>
+11.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+12
+</td>
+<td>
+100
+</td>
+<td>
+Demelza
+</td>
+<td>
+Ennis/Laudan
+</td>
+<td>
+0.895
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+12
+</td>
+<td>
+29048
+</td>
+<td>
+Deep Thought
+</td>
+<td>
+J Wenski
+</td>
+<td>
+0.892
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+12
+</td>
+<td>
+2070
+</td>
+<td>
+Out & About
+</td>
+<td>
+McCoy/Cregan
+</td>
+<td>
+0.855
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+12
+</td>
+<td>
+2588
+</td>
+<td>
+Rosie
+</td>
+<td>
+R Dickson
+</td>
+<td>
+0.897
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+12
+</td>
+<td>
+5115
+</td>
+<td>
+Force Five
+</td>
+<td>
+R & J McAllister
+</td>
+<td>
+0.978
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+12
+</td>
+<td>
+581
+</td>
+<td>
+Hellyhunter
+</td>
+<td>
+L McMurtry
+</td>
+<td>
+0.751
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+12
+</td>
+<td>
+3550
+</td>
+<td>
+Lolly Folly
+</td>
+<td>
+C & L Phelan
+</td>
+<td>
+0.849
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+12
+</td>
+<td>
+38
+</td>
+<td>
+Arctic Fox
+</td>
+<td>
+McCollum/Others
+</td>
+<td>
+1.000
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+12
+</td>
+<td>
+3022
+</td>
+<td>
+Xebec
+</td>
+<td>
+T Giles
+</td>
+<td>
+0.926
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+12
+</td>
+<td>
+71
+</td>
+<td>
+Southern Breeze
+</td>
+<td>
+G Wilson
+</td>
+<td>
+1.000
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+12
+</td>
+<td>
+6002
+</td>
+<td>
+Stage Fright
+</td>
+<td>
+Wormald/Walsh
+</td>
+<td>
+1.000
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+12
+</td>
+<td>
+4615
+</td>
+<td>
+Joslim
+</td>
+<td>
+J Connolly
+</td>
+<td>
+1.000
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+12
+</td>
+<td>
+7495
+</td>
+<td>
+Maximus
+</td>
+<td>
+P Kyne
+</td>
+<td>
+0.948
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+12
+</td>
+<td>
+9191
+</td>
+<td>
+Jebus
+</td>
+<td>
+E Dalton
+</td>
+<td>
+0.900
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+12
+</td>
+<td>
+3400
+</td>
+<td>
+Brazen Hussy
+</td>
+<td>
+Stirling/Barry
+</td>
+<td>
+0.898
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+</table>
+<script type="text/javascript">
+swRace.Entries = 26;
+swRace.Notes = '';
+swRace.Date = '15/6';
+swRace.Time = '';
+swRace.Name = 'R5';
+swRace.Rank = 5;
+</script>
+<script type="text/javascript">
+resRaceTitle();
+</script>
+<script type="text/javascript">
+resRaceNotes();
+</script>
+<div class="caption racecaption">
+Start: Start 1, Finishes: Finish time, Time: 141000
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="9">
+<col class="rank" />
+<col class="sailno" />
+<col class="boat" />
+<col class="helmname" />
+<col class="rating" />
+<col class="racefinish" />
+<col class="raceelapsed" />
+<col class="racecorrected" />
+<col class="nett" />
+</colgroup>
+<tr>
+<th>Rank</th>
+<th>sailno</th>
+<th>boat name</th>
+<th>owner name</th>
+<th>hcap</th>
+<th>Finish</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+<tr class="odd racerow">
+<td>
+1
+</td>
+<td>
+1430
+</td>
+<td>
+Mary Ellen
+</td>
+<td>
+K O'Byrne
+</td>
+<td>
+0.829
+</td>
+<td>
+153509
+</td>
+<td>
+1:25:09
+</td>
+<td>
+1:10:35
+</td>
+<td>
+1.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+2
+</td>
+<td>
+2070
+</td>
+<td>
+Out & About
+</td>
+<td>
+McCoy/Cregan
+</td>
+<td>
+0.830
+</td>
+<td>
+153655
+</td>
+<td>
+1:26:55
+</td>
+<td>
+1:12:08
+</td>
+<td>
+2.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+3
+</td>
+<td>
+1411
+</td>
+<td>
+Toughnut
+</td>
+<td>
+D Skehan
+</td>
+<td>
+0.947
+</td>
+<td>
+153101
+</td>
+<td>
+1:21:01
+</td>
+<td>
+1:16:43
+</td>
+<td>
+3.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+4
+</td>
+<td>
+2588
+</td>
+<td>
+Rosie
+</td>
+<td>
+R Dickson
+</td>
+<td>
+0.916
+</td>
+<td>
+153458
+</td>
+<td>
+1:24:58
+</td>
+<td>
+1:17:50
+</td>
+<td>
+4.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+5
+</td>
+<td>
+3335
+</td>
+<td>
+Bite the Bullet
+</td>
+<td>
+C Bermingham
+</td>
+<td>
+.990
+</td>
+<td>
+152852
+</td>
+<td>
+1:18:52
+</td>
+<td>
+1:18:05
+</td>
+<td>
+5.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+6
+</td>
+<td>
+2760
+</td>
+<td>
+SunChaser
+</td>
+<td>
+M Marr
+</td>
+<td>
+0.791
+</td>
+<td>
+155157
+</td>
+<td>
+1:41:57
+</td>
+<td>
+1:20:39
+</td>
+<td>
+6.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+7
+</td>
+<td>
+29048
+</td>
+<td>
+Deep Thought
+</td>
+<td>
+J Wenski
+</td>
+<td>
+0.892
+</td>
+<td>
+154500
+</td>
+<td>
+1:35:00
+</td>
+<td>
+1:24:44
+</td>
+<td>
+7.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+8
+</td>
+<td>
+100
+</td>
+<td>
+Demelza
+</td>
+<td>
+Ennis/Laudan
+</td>
+<td>
+0.874
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+8
+</td>
+<td>
+1103
+</td>
+<td>
+Viking
+</td>
+<td>
+Darmody/Patterson
+</td>
+<td>
+0.936
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+8
+</td>
+<td>
+1679
+</td>
+<td>
+Wayfinder
+</td>
+<td>
+J Reynolds
+</td>
+<td>
+0.786
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+8
+</td>
+<td>
+5115
+</td>
+<td>
+Force Five
+</td>
+<td>
+R & J McAllister
+</td>
+<td>
+0.978
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+8
+</td>
+<td>
+1202
+</td>
+<td>
+Thar Saile
+</td>
+<td>
+C O'Laoi
+</td>
+<td>
+0.817
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+8
+</td>
+<td>
+9849
+</td>
+<td>
+Blue Eyes
+</td>
+<td>
+C Buckley
+</td>
+<td>
+0.951
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+8
+</td>
+<td>
+988
+</td>
+<td>
+Dux
+</td>
+<td>
+A Gore-Grimes
+</td>
+<td>
+0.927
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+8
+</td>
+<td>
+581
+</td>
+<td>
+Hellyhunter
+</td>
+<td>
+L McMurtry
+</td>
+<td>
+0.738
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+8
+</td>
+<td>
+657
+</td>
+<td>
+Voyager
+</td>
+<td>
+J Carton
+</td>
+<td>
+0.897
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+8
+</td>
+<td>
+3550
+</td>
+<td>
+Lolly Folly
+</td>
+<td>
+C & L Phelan
+</td>
+<td>
+0.850
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+8
+</td>
+<td>
+5522
+</td>
+<td>
+The Big Picture
+</td>
+<td>
+M & R Evans
+</td>
+<td>
+0.919
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+8
+</td>
+<td>
+38
+</td>
+<td>
+Arctic Fox
+</td>
+<td>
+McCollum/Others
+</td>
+<td>
+1.000
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+8
+</td>
+<td>
+3022
+</td>
+<td>
+Xebec
+</td>
+<td>
+T Giles
+</td>
+<td>
+0.926
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+8
+</td>
+<td>
+71
+</td>
+<td>
+Southern Breeze
+</td>
+<td>
+G Wilson
+</td>
+<td>
+0.975
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+8
+</td>
+<td>
+6002
+</td>
+<td>
+Stage Fright
+</td>
+<td>
+Wormald/Walsh
+</td>
+<td>
+1.000
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+8
+</td>
+<td>
+4615
+</td>
+<td>
+Joslim
+</td>
+<td>
+J Connolly
+</td>
+<td>
+1.000
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+8
+</td>
+<td>
+7495
+</td>
+<td>
+Maximus
+</td>
+<td>
+P Kyne
+</td>
+<td>
+0.948
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+8
+</td>
+<td>
+9191
+</td>
+<td>
+Jebus
+</td>
+<td>
+E Dalton
+</td>
+<td>
+0.900
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+8
+</td>
+<td>
+3400
+</td>
+<td>
+Brazen Hussy
+</td>
+<td>
+Stirling/Barry
+</td>
+<td>
+0.844
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+</table>
+<script type="text/javascript">
+swRace.Entries = 26;
+swRace.Notes = '';
+swRace.Date = '22/6';
+swRace.Time = '';
+swRace.Name = 'R6';
+swRace.Rank = 6;
+</script>
+<script type="text/javascript">
+resRaceTitle();
+</script>
+<script type="text/javascript">
+resRaceNotes();
+</script>
+<div class="caption racecaption">
+Start: Start 1, Finishes: Finish time, Time: 141000
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="9">
+<col class="rank" />
+<col class="sailno" />
+<col class="boat" />
+<col class="helmname" />
+<col class="rating" />
+<col class="racefinish" />
+<col class="raceelapsed" />
+<col class="racecorrected" />
+<col class="nett" />
+</colgroup>
+<tr>
+<th>Rank</th>
+<th>sailno</th>
+<th>boat name</th>
+<th>owner name</th>
+<th>hcap</th>
+<th>Finish</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+<tr class="odd racerow">
+<td>
+1
+</td>
+<td>
+1430
+</td>
+<td>
+Mary Ellen
+</td>
+<td>
+K O'Byrne
+</td>
+<td>
+0.829
+</td>
+<td>
+154059
+</td>
+<td>
+1:30:59
+</td>
+<td>
+1:15:26
+</td>
+<td>
+1.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+2
+</td>
+<td>
+2070
+</td>
+<td>
+Out & About
+</td>
+<td>
+McCoy/Cregan
+</td>
+<td>
+0.830
+</td>
+<td>
+154133
+</td>
+<td>
+1:31:33
+</td>
+<td>
+1:15:59
+</td>
+<td>
+2.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+3
+</td>
+<td>
+581
+</td>
+<td>
+Hellyhunter
+</td>
+<td>
+L McMurtry
+</td>
+<td>
+0.738
+</td>
+<td>
+155437
+</td>
+<td>
+1:44:37
+</td>
+<td>
+1:17:12
+</td>
+<td>
+3.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+4
+</td>
+<td>
+1411
+</td>
+<td>
+Toughnut
+</td>
+<td>
+D Skehan
+</td>
+<td>
+0.947
+</td>
+<td>
+153344
+</td>
+<td>
+1:23:44
+</td>
+<td>
+1:19:18
+</td>
+<td>
+4.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+5
+</td>
+<td>
+3335
+</td>
+<td>
+Bite the Bullet
+</td>
+<td>
+C Bermingham
+</td>
+<td>
+.990
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+5
+</td>
+<td>
+100
+</td>
+<td>
+Demelza
+</td>
+<td>
+Ennis/Laudan
+</td>
+<td>
+0.874
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+5
+</td>
+<td>
+29048
+</td>
+<td>
+Deep Thought
+</td>
+<td>
+J Wenski
+</td>
+<td>
+0.892
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+5
+</td>
+<td>
+2760
+</td>
+<td>
+SunChaser
+</td>
+<td>
+M Marr
+</td>
+<td>
+0.791
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+5
+</td>
+<td>
+1103
+</td>
+<td>
+Viking
+</td>
+<td>
+Darmody/Patterson
+</td>
+<td>
+0.936
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+5
+</td>
+<td>
+1679
+</td>
+<td>
+Wayfinder
+</td>
+<td>
+J Reynolds
+</td>
+<td>
+0.786
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+5
+</td>
+<td>
+2588
+</td>
+<td>
+Rosie
+</td>
+<td>
+R Dickson
+</td>
+<td>
+0.916
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+5
+</td>
+<td>
+5115
+</td>
+<td>
+Force Five
+</td>
+<td>
+R & J McAllister
+</td>
+<td>
+0.978
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+5
+</td>
+<td>
+1202
+</td>
+<td>
+Thar Saile
+</td>
+<td>
+C O'Laoi
+</td>
+<td>
+0.817
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+5
+</td>
+<td>
+9849
+</td>
+<td>
+Blue Eyes
+</td>
+<td>
+C Buckley
+</td>
+<td>
+0.951
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+5
+</td>
+<td>
+988
+</td>
+<td>
+Dux
+</td>
+<td>
+A Gore-Grimes
+</td>
+<td>
+0.927
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+5
+</td>
+<td>
+657
+</td>
+<td>
+Voyager
+</td>
+<td>
+J Carton
+</td>
+<td>
+0.897
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+5
+</td>
+<td>
+3550
+</td>
+<td>
+Lolly Folly
+</td>
+<td>
+C & L Phelan
+</td>
+<td>
+0.850
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+5
+</td>
+<td>
+5522
+</td>
+<td>
+The Big Picture
+</td>
+<td>
+M & R Evans
+</td>
+<td>
+0.919
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+5
+</td>
+<td>
+38
+</td>
+<td>
+Arctic Fox
+</td>
+<td>
+McCollum/Others
+</td>
+<td>
+1.000
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+5
+</td>
+<td>
+3022
+</td>
+<td>
+Xebec
+</td>
+<td>
+T Giles
+</td>
+<td>
+0.926
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+5
+</td>
+<td>
+71
+</td>
+<td>
+Southern Breeze
+</td>
+<td>
+G Wilson
+</td>
+<td>
+0.975
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+5
+</td>
+<td>
+6002
+</td>
+<td>
+Stage Fright
+</td>
+<td>
+Wormald/Walsh
+</td>
+<td>
+1.000
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+5
+</td>
+<td>
+4615
+</td>
+<td>
+Joslim
+</td>
+<td>
+J Connolly
+</td>
+<td>
+1.000
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+5
+</td>
+<td>
+7495
+</td>
+<td>
+Maximus
+</td>
+<td>
+P Kyne
+</td>
+<td>
+0.948
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+5
+</td>
+<td>
+9191
+</td>
+<td>
+Jebus
+</td>
+<td>
+E Dalton
+</td>
+<td>
+0.900
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+5
+</td>
+<td>
+3400
+</td>
+<td>
+Brazen Hussy
+</td>
+<td>
+Stirling/Barry
+</td>
+<td>
+0.844
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+</table>
+<script type="text/javascript">
+swRace.Entries = 26;
+swRace.Notes = '';
+swRace.Date = '06/07';
+swRace.Time = '';
+swRace.Name = 'R7';
+swRace.Rank = 7;
+</script>
+<script type="text/javascript">
+resRaceTitle();
+</script>
+<script type="text/javascript">
+resRaceNotes();
+</script>
+<div class="caption racecaption">
+Start: Start 1, Finishes: Finish time, Time: 141000
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="9">
+<col class="rank" />
+<col class="sailno" />
+<col class="boat" />
+<col class="helmname" />
+<col class="rating" />
+<col class="racefinish" />
+<col class="raceelapsed" />
+<col class="racecorrected" />
+<col class="nett" />
+</colgroup>
+<tr>
+<th>Rank</th>
+<th>sailno</th>
+<th>boat name</th>
+<th>owner name</th>
+<th>hcap</th>
+<th>Finish</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+<tr class="odd racerow">
+<td>
+1
+</td>
+<td>
+3335
+</td>
+<td>
+Bite the Bullet
+</td>
+<td>
+C Bermingham
+</td>
+<td>
+.990
+</td>
+<td>
+154715
+</td>
+<td>
+1:37:15
+</td>
+<td>
+1:36:17
+</td>
+<td>
+1.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+2
+</td>
+<td>
+1411
+</td>
+<td>
+Toughnut
+</td>
+<td>
+D Skehan
+</td>
+<td>
+0.947
+</td>
+<td>
+155536
+</td>
+<td>
+1:45:36
+</td>
+<td>
+1:40:00
+</td>
+<td>
+2.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+3
+</td>
+<td>
+1430
+</td>
+<td>
+Mary Ellen
+</td>
+<td>
+K O'Byrne
+</td>
+<td>
+0.829
+</td>
+<td>
+161550
+</td>
+<td>
+2:05:50
+</td>
+<td>
+1:44:19
+</td>
+<td>
+3.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+4
+</td>
+<td>
+29048
+</td>
+<td>
+Deep Thought
+</td>
+<td>
+J Wenski
+</td>
+<td>
+0.892
+</td>
+<td>
+161709
+</td>
+<td>
+2:07:09
+</td>
+<td>
+1:53:25
+</td>
+<td>
+4.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+5
+</td>
+<td>
+100
+</td>
+<td>
+Demelza
+</td>
+<td>
+Ennis/Laudan
+</td>
+<td>
+0.874
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNF
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+6.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+6
+</td>
+<td>
+2760
+</td>
+<td>
+SunChaser
+</td>
+<td>
+M Marr
+</td>
+<td>
+0.791
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+6
+</td>
+<td>
+1103
+</td>
+<td>
+Viking
+</td>
+<td>
+Darmody/Patterson
+</td>
+<td>
+0.936
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+6
+</td>
+<td>
+1679
+</td>
+<td>
+Wayfinder
+</td>
+<td>
+J Reynolds
+</td>
+<td>
+0.786
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+6
+</td>
+<td>
+2070
+</td>
+<td>
+Out & About
+</td>
+<td>
+McCoy/Cregan
+</td>
+<td>
+0.830
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+6
+</td>
+<td>
+2588
+</td>
+<td>
+Rosie
+</td>
+<td>
+R Dickson
+</td>
+<td>
+0.916
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+6
+</td>
+<td>
+5115
+</td>
+<td>
+Force Five
+</td>
+<td>
+R & J McAllister
+</td>
+<td>
+0.978
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+6
+</td>
+<td>
+1202
+</td>
+<td>
+Thar Saile
+</td>
+<td>
+C O'Laoi
+</td>
+<td>
+0.817
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+6
+</td>
+<td>
+9849
+</td>
+<td>
+Blue Eyes
+</td>
+<td>
+C Buckley
+</td>
+<td>
+0.951
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+6
+</td>
+<td>
+988
+</td>
+<td>
+Dux
+</td>
+<td>
+A Gore-Grimes
+</td>
+<td>
+0.927
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+6
+</td>
+<td>
+581
+</td>
+<td>
+Hellyhunter
+</td>
+<td>
+L McMurtry
+</td>
+<td>
+0.738
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+6
+</td>
+<td>
+657
+</td>
+<td>
+Voyager
+</td>
+<td>
+J Carton
+</td>
+<td>
+0.897
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+6
+</td>
+<td>
+3550
+</td>
+<td>
+Lolly Folly
+</td>
+<td>
+C & L Phelan
+</td>
+<td>
+0.850
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+6
+</td>
+<td>
+5522
+</td>
+<td>
+The Big Picture
+</td>
+<td>
+M & R Evans
+</td>
+<td>
+0.919
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+6
+</td>
+<td>
+38
+</td>
+<td>
+Arctic Fox
+</td>
+<td>
+McCollum/Others
+</td>
+<td>
+1.000
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+6
+</td>
+<td>
+3022
+</td>
+<td>
+Xebec
+</td>
+<td>
+T Giles
+</td>
+<td>
+0.926
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+6
+</td>
+<td>
+71
+</td>
+<td>
+Southern Breeze
+</td>
+<td>
+G Wilson
+</td>
+<td>
+0.975
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+6
+</td>
+<td>
+6002
+</td>
+<td>
+Stage Fright
+</td>
+<td>
+Wormald/Walsh
+</td>
+<td>
+1.000
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+6
+</td>
+<td>
+4615
+</td>
+<td>
+Joslim
+</td>
+<td>
+J Connolly
+</td>
+<td>
+1.000
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+6
+</td>
+<td>
+7495
+</td>
+<td>
+Maximus
+</td>
+<td>
+P Kyne
+</td>
+<td>
+0.948
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+6
+</td>
+<td>
+9191
+</td>
+<td>
+Jebus
+</td>
+<td>
+E Dalton
+</td>
+<td>
+0.900
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+6
+</td>
+<td>
+3400
+</td>
+<td>
+Brazen Hussy
+</td>
+<td>
+Stirling/Barry
+</td>
+<td>
+0.844
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+</table>
+<script type="text/javascript">
+swRace.Entries = 26;
+swRace.Notes = '';
+swRace.Date = '13/7';
+swRace.Time = '';
+swRace.Name = 'R8';
+swRace.Rank = 8;
+</script>
+<script type="text/javascript">
+resRaceTitle();
+</script>
+<script type="text/javascript">
+resRaceNotes();
+</script>
+<div class="caption racecaption">
+Start: Start 1, Finishes: Finish time, Time: 141000
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="9">
+<col class="rank" />
+<col class="sailno" />
+<col class="boat" />
+<col class="helmname" />
+<col class="rating" />
+<col class="racefinish" />
+<col class="raceelapsed" />
+<col class="racecorrected" />
+<col class="nett" />
+</colgroup>
+<tr>
+<th>Rank</th>
+<th>sailno</th>
+<th>boat name</th>
+<th>owner name</th>
+<th>hcap</th>
+<th>Finish</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+<tr class="odd racerow">
+<td>
+1
+</td>
+<td>
+1679
+</td>
+<td>
+Wayfinder
+</td>
+<td>
+J Reynolds
+</td>
+<td>
+0.786
+</td>
+<td>
+161336
+</td>
+<td>
+2:03:36
+</td>
+<td>
+1:37:09
+</td>
+<td>
+1.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+2
+</td>
+<td>
+1411
+</td>
+<td>
+Toughnut
+</td>
+<td>
+D Skehan
+</td>
+<td>
+0.952
+</td>
+<td>
+155832
+</td>
+<td>
+1:48:32
+</td>
+<td>
+1:43:19
+</td>
+<td>
+2.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+3
+</td>
+<td>
+581
+</td>
+<td>
+Hellyhunter
+</td>
+<td>
+L McMurtry
+</td>
+<td>
+0.748
+</td>
+<td>
+164209
+</td>
+<td>
+2:32:09
+</td>
+<td>
+1:53:48
+</td>
+<td>
+3.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+4
+</td>
+<td>
+1430
+</td>
+<td>
+Mary Ellen
+</td>
+<td>
+K O'Byrne
+</td>
+<td>
+0.862
+</td>
+<td>
+162536
+</td>
+<td>
+2:15:36
+</td>
+<td>
+1:56:53
+</td>
+<td>
+4.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+5
+</td>
+<td>
+2070
+</td>
+<td>
+Out & About
+</td>
+<td>
+McCoy/Cregan
+</td>
+<td>
+0.848
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNF
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+6.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+6
+</td>
+<td>
+3335
+</td>
+<td>
+Bite the Bullet
+</td>
+<td>
+C Bermingham
+</td>
+<td>
+0.991
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+6
+</td>
+<td>
+100
+</td>
+<td>
+Demelza
+</td>
+<td>
+Ennis/Laudan
+</td>
+<td>
+0.874
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+6
+</td>
+<td>
+29048
+</td>
+<td>
+Deep Thought
+</td>
+<td>
+J Wenski
+</td>
+<td>
+0.845
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+6
+</td>
+<td>
+2760
+</td>
+<td>
+SunChaser
+</td>
+<td>
+M Marr
+</td>
+<td>
+0.789
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+6
+</td>
+<td>
+1103
+</td>
+<td>
+Viking
+</td>
+<td>
+Darmody/Patterson
+</td>
+<td>
+0.936
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+6
+</td>
+<td>
+2588
+</td>
+<td>
+Rosie
+</td>
+<td>
+R Dickson
+</td>
+<td>
+0.918
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+6
+</td>
+<td>
+5115
+</td>
+<td>
+Force Five
+</td>
+<td>
+R & J McAllister
+</td>
+<td>
+0.978
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+6
+</td>
+<td>
+1202
+</td>
+<td>
+Thar Saile
+</td>
+<td>
+C O'Laoi
+</td>
+<td>
+0.817
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+6
+</td>
+<td>
+9849
+</td>
+<td>
+Blue Eyes
+</td>
+<td>
+C Buckley
+</td>
+<td>
+0.951
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+6
+</td>
+<td>
+988
+</td>
+<td>
+Dux
+</td>
+<td>
+A Gore-Grimes
+</td>
+<td>
+0.927
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+6
+</td>
+<td>
+657
+</td>
+<td>
+Voyager
+</td>
+<td>
+J Carton
+</td>
+<td>
+0.897
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+6
+</td>
+<td>
+3550
+</td>
+<td>
+Lolly Folly
+</td>
+<td>
+C & L Phelan
+</td>
+<td>
+0.850
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+6
+</td>
+<td>
+5522
+</td>
+<td>
+The Big Picture
+</td>
+<td>
+M & R Evans
+</td>
+<td>
+0.919
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+6
+</td>
+<td>
+38
+</td>
+<td>
+Arctic Fox
+</td>
+<td>
+McCollum/Others
+</td>
+<td>
+1.000
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+6
+</td>
+<td>
+3022
+</td>
+<td>
+Xebec
+</td>
+<td>
+T Giles
+</td>
+<td>
+0.945
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+6
+</td>
+<td>
+71
+</td>
+<td>
+Southern Breeze
+</td>
+<td>
+G Wilson
+</td>
+<td>
+0.975
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+6
+</td>
+<td>
+6002
+</td>
+<td>
+Stage Fright
+</td>
+<td>
+Wormald/Walsh
+</td>
+<td>
+1.000
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+6
+</td>
+<td>
+4615
+</td>
+<td>
+Joslim
+</td>
+<td>
+J Connolly
+</td>
+<td>
+1.000
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+6
+</td>
+<td>
+7495
+</td>
+<td>
+Maximus
+</td>
+<td>
+P Kyne
+</td>
+<td>
+0.948
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+6
+</td>
+<td>
+9191
+</td>
+<td>
+Jebus
+</td>
+<td>
+E Dalton
+</td>
+<td>
+0.900
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+6
+</td>
+<td>
+3400
+</td>
+<td>
+Brazen Hussy
+</td>
+<td>
+Stirling/Barry
+</td>
+<td>
+0.844
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+</table>
+<script type="text/javascript">
+swRace.Entries = 26;
+swRace.Notes = '';
+swRace.Date = '20/7';
+swRace.Time = '';
+swRace.Name = 'R9';
+swRace.Rank = 9;
+</script>
+<script type="text/javascript">
+resRaceTitle();
+</script>
+<script type="text/javascript">
+resRaceNotes();
+</script>
+<div class="caption racecaption">
+Start: Start 1, Finishes: Finish time, Time: 141000
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="9">
+<col class="rank" />
+<col class="sailno" />
+<col class="boat" />
+<col class="helmname" />
+<col class="rating" />
+<col class="racefinish" />
+<col class="raceelapsed" />
+<col class="racecorrected" />
+<col class="nett" />
+</colgroup>
+<tr>
+<th>Rank</th>
+<th>sailno</th>
+<th>boat name</th>
+<th>owner name</th>
+<th>hcap</th>
+<th>Finish</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+<tr class="odd racerow">
+<td>
+1
+</td>
+<td>
+1679
+</td>
+<td>
+Wayfinder
+</td>
+<td>
+J Reynolds
+</td>
+<td>
+0.786
+</td>
+<td>
+151839
+</td>
+<td>
+1:08:39
+</td>
+<td>
+0:53:58
+</td>
+<td>
+1.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+2
+</td>
+<td>
+1411
+</td>
+<td>
+Toughnut
+</td>
+<td>
+D Skehan
+</td>
+<td>
+0.952
+</td>
+<td>
+150736
+</td>
+<td>
+0:57:36
+</td>
+<td>
+0:54:50
+</td>
+<td>
+2.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+3
+</td>
+<td>
+3335
+</td>
+<td>
+Bite the Bullet
+</td>
+<td>
+C Bermingham
+</td>
+<td>
+0.991
+</td>
+<td>
+150543
+</td>
+<td>
+0:55:43
+</td>
+<td>
+0:55:13
+</td>
+<td>
+3.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+4
+</td>
+<td>
+100
+</td>
+<td>
+Demelza
+</td>
+<td>
+Ennis/Laudan
+</td>
+<td>
+0.874
+</td>
+<td>
+151457
+</td>
+<td>
+1:04:57
+</td>
+<td>
+0:56:46
+</td>
+<td>
+4.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+5
+</td>
+<td>
+657
+</td>
+<td>
+Voyager
+</td>
+<td>
+J Carton
+</td>
+<td>
+0.897
+</td>
+<td>
+151330
+</td>
+<td>
+1:03:30
+</td>
+<td>
+0:56:58
+</td>
+<td>
+5.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+6
+</td>
+<td>
+29048
+</td>
+<td>
+Deep Thought
+</td>
+<td>
+J Wenski
+</td>
+<td>
+0.845
+</td>
+<td>
+151831
+</td>
+<td>
+1:08:31
+</td>
+<td>
+0:57:54
+</td>
+<td>
+6.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+7
+</td>
+<td>
+1103
+</td>
+<td>
+Viking
+</td>
+<td>
+Darmody/Patterson
+</td>
+<td>
+0.936
+</td>
+<td>
+151300
+</td>
+<td>
+1:03:00
+</td>
+<td>
+0:58:58
+</td>
+<td>
+7.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+8
+</td>
+<td>
+5115
+</td>
+<td>
+Force Five
+</td>
+<td>
+R & J McAllister
+</td>
+<td>
+0.978
+</td>
+<td>
+151239
+</td>
+<td>
+1:02:39
+</td>
+<td>
+1:01:16
+</td>
+<td>
+8.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+9
+</td>
+<td>
+1430
+</td>
+<td>
+Mary Ellen
+</td>
+<td>
+K O'Byrne
+</td>
+<td>
+0.862
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+9
+</td>
+<td>
+2760
+</td>
+<td>
+SunChaser
+</td>
+<td>
+M Marr
+</td>
+<td>
+0.789
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+9
+</td>
+<td>
+2070
+</td>
+<td>
+Out & About
+</td>
+<td>
+McCoy/Cregan
+</td>
+<td>
+0.848
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+9
+</td>
+<td>
+2588
+</td>
+<td>
+Rosie
+</td>
+<td>
+R Dickson
+</td>
+<td>
+0.918
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+9
+</td>
+<td>
+1202
+</td>
+<td>
+Thar Saile
+</td>
+<td>
+C O'Laoi
+</td>
+<td>
+0.817
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+9
+</td>
+<td>
+9849
+</td>
+<td>
+Blue Eyes
+</td>
+<td>
+C Buckley
+</td>
+<td>
+0.951
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+9
+</td>
+<td>
+988
+</td>
+<td>
+Dux
+</td>
+<td>
+A Gore-Grimes
+</td>
+<td>
+0.927
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+9
+</td>
+<td>
+581
+</td>
+<td>
+Hellyhunter
+</td>
+<td>
+L McMurtry
+</td>
+<td>
+0.748
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+9
+</td>
+<td>
+3550
+</td>
+<td>
+Lolly Folly
+</td>
+<td>
+C & L Phelan
+</td>
+<td>
+0.850
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+9
+</td>
+<td>
+5522
+</td>
+<td>
+The Big Picture
+</td>
+<td>
+M & R Evans
+</td>
+<td>
+0.919
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+9
+</td>
+<td>
+38
+</td>
+<td>
+Arctic Fox
+</td>
+<td>
+McCollum/Others
+</td>
+<td>
+1.000
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+9
+</td>
+<td>
+3022
+</td>
+<td>
+Xebec
+</td>
+<td>
+T Giles
+</td>
+<td>
+0.945
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+9
+</td>
+<td>
+71
+</td>
+<td>
+Southern Breeze
+</td>
+<td>
+G Wilson
+</td>
+<td>
+0.975
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+9
+</td>
+<td>
+6002
+</td>
+<td>
+Stage Fright
+</td>
+<td>
+Wormald/Walsh
+</td>
+<td>
+1.000
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+9
+</td>
+<td>
+4615
+</td>
+<td>
+Joslim
+</td>
+<td>
+J Connolly
+</td>
+<td>
+1.000
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+9
+</td>
+<td>
+7495
+</td>
+<td>
+Maximus
+</td>
+<td>
+P Kyne
+</td>
+<td>
+0.948
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+9
+</td>
+<td>
+9191
+</td>
+<td>
+Jebus
+</td>
+<td>
+E Dalton
+</td>
+<td>
+0.900
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+9
+</td>
+<td>
+3400
+</td>
+<td>
+Brazen Hussy
+</td>
+<td>
+Stirling/Barry
+</td>
+<td>
+0.844
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+</table>
+<script type="text/javascript">
+swRace.Entries = 26;
+swRace.Notes = '';
+swRace.Date = '27/7';
+swRace.Time = '';
+swRace.Name = 'R10';
+swRace.Rank = 10;
+</script>
+<script type="text/javascript">
+resRaceTitle();
+</script>
+<script type="text/javascript">
+resRaceNotes();
+</script>
+<div class="caption racecaption">
+Start: Start 1, Finishes: Finish time, Time: 141000
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="9">
+<col class="rank" />
+<col class="sailno" />
+<col class="boat" />
+<col class="helmname" />
+<col class="rating" />
+<col class="racefinish" />
+<col class="raceelapsed" />
+<col class="racecorrected" />
+<col class="nett" />
+</colgroup>
+<tr>
+<th>Rank</th>
+<th>sailno</th>
+<th>boat name</th>
+<th>owner name</th>
+<th>hcap</th>
+<th>Finish</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+<tr class="odd racerow">
+<td>
+1
+</td>
+<td>
+1202
+</td>
+<td>
+Thar Saile
+</td>
+<td>
+C O'Laoi
+</td>
+<td>
+0.817
+</td>
+<td>
+153013
+</td>
+<td>
+1:20:13
+</td>
+<td>
+1:05:32
+</td>
+<td>
+1.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+2
+</td>
+<td>
+1103
+</td>
+<td>
+Viking
+</td>
+<td>
+Darmody/Patterson
+</td>
+<td>
+0.910
+</td>
+<td>
+152250
+</td>
+<td>
+1:12:50
+</td>
+<td>
+1:06:17
+</td>
+<td>
+2.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+3
+</td>
+<td>
+100
+</td>
+<td>
+Demelza
+</td>
+<td>
+Ennis/Laudan
+</td>
+<td>
+0.868
+</td>
+<td>
+152815
+</td>
+<td>
+1:18:15
+</td>
+<td>
+1:07:55
+</td>
+<td>
+3.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+4
+</td>
+<td>
+3335
+</td>
+<td>
+Bite the Bullet
+</td>
+<td>
+C Bermingham
+</td>
+<td>
+0.992
+</td>
+<td>
+151843
+</td>
+<td>
+1:08:43
+</td>
+<td>
+1:08:10
+</td>
+<td>
+4.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+5
+</td>
+<td>
+1411
+</td>
+<td>
+Toughnut
+</td>
+<td>
+D Skehan
+</td>
+<td>
+0.957
+</td>
+<td>
+152207
+</td>
+<td>
+1:12:07
+</td>
+<td>
+1:09:01
+</td>
+<td>
+5.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+6
+</td>
+<td>
+5115
+</td>
+<td>
+Force Five
+</td>
+<td>
+R & J McAllister
+</td>
+<td>
+0.934
+</td>
+<td>
+152400
+</td>
+<td>
+1:14:00
+</td>
+<td>
+1:09:07
+</td>
+<td>
+6.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+7
+</td>
+<td>
+1430
+</td>
+<td>
+Mary Ellen
+</td>
+<td>
+K O'Byrne
+</td>
+<td>
+0.850
+</td>
+<td>
+153343
+</td>
+<td>
+1:23:43
+</td>
+<td>
+1:11:10
+</td>
+<td>
+7.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+8
+</td>
+<td>
+29048
+</td>
+<td>
+Deep Thought
+</td>
+<td>
+J Wenski
+</td>
+<td>
+0.838
+</td>
+<td>
+153555
+</td>
+<td>
+1:25:55
+</td>
+<td>
+1:12:00
+</td>
+<td>
+8.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+9
+</td>
+<td>
+2760
+</td>
+<td>
+SunChaser
+</td>
+<td>
+M Marr
+</td>
+<td>
+0.789
+</td>
+<td>
+154551
+</td>
+<td>
+1:35:51
+</td>
+<td>
+1:15:38
+</td>
+<td>
+9.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+10
+</td>
+<td>
+1679
+</td>
+<td>
+Wayfinder
+</td>
+<td>
+J Reynolds
+</td>
+<td>
+0.815
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+10
+</td>
+<td>
+2070
+</td>
+<td>
+Out & About
+</td>
+<td>
+McCoy/Cregan
+</td>
+<td>
+0.848
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+10
+</td>
+<td>
+2588
+</td>
+<td>
+Rosie
+</td>
+<td>
+R Dickson
+</td>
+<td>
+0.918
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+10
+</td>
+<td>
+9849
+</td>
+<td>
+Blue Eyes
+</td>
+<td>
+C Buckley
+</td>
+<td>
+0.951
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+10
+</td>
+<td>
+988
+</td>
+<td>
+Dux
+</td>
+<td>
+A Gore-Grimes
+</td>
+<td>
+0.927
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+10
+</td>
+<td>
+581
+</td>
+<td>
+Hellyhunter
+</td>
+<td>
+L McMurtry
+</td>
+<td>
+0.743
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+10
+</td>
+<td>
+657
+</td>
+<td>
+Voyager
+</td>
+<td>
+J Carton
+</td>
+<td>
+0.890
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+10
+</td>
+<td>
+3550
+</td>
+<td>
+Lolly Folly
+</td>
+<td>
+C & L Phelan
+</td>
+<td>
+0.850
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+10
+</td>
+<td>
+5522
+</td>
+<td>
+The Big Picture
+</td>
+<td>
+M & R Evans
+</td>
+<td>
+0.919
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+10
+</td>
+<td>
+38
+</td>
+<td>
+Arctic Fox
+</td>
+<td>
+McCollum/Others
+</td>
+<td>
+1.000
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+10
+</td>
+<td>
+3022
+</td>
+<td>
+Xebec
+</td>
+<td>
+T Giles
+</td>
+<td>
+0.945
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+10
+</td>
+<td>
+71
+</td>
+<td>
+Southern Breeze
+</td>
+<td>
+G Wilson
+</td>
+<td>
+0.975
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+10
+</td>
+<td>
+6002
+</td>
+<td>
+Stage Fright
+</td>
+<td>
+Wormald/Walsh
+</td>
+<td>
+1.000
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+10
+</td>
+<td>
+4615
+</td>
+<td>
+Joslim
+</td>
+<td>
+J Connolly
+</td>
+<td>
+1.000
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+10
+</td>
+<td>
+7495
+</td>
+<td>
+Maximus
+</td>
+<td>
+P Kyne
+</td>
+<td>
+0.948
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+10
+</td>
+<td>
+9191
+</td>
+<td>
+Jebus
+</td>
+<td>
+E Dalton
+</td>
+<td>
+0.900
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+10
+</td>
+<td>
+3400
+</td>
+<td>
+Brazen Hussy
+</td>
+<td>
+Stirling/Barry
+</td>
+<td>
+0.844
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+</table>
+<script type="text/javascript">
+swRace.Entries = 26;
+swRace.Notes = '';
+swRace.Date = '03/08';
+swRace.Time = '';
+swRace.Name = 'R11';
+swRace.Rank = 11;
+</script>
+<script type="text/javascript">
+resRaceTitle();
+</script>
+<script type="text/javascript">
+resRaceNotes();
+</script>
+<div class="caption racecaption">
+Start: Start 1, Finishes: Finish time, Time: 141000
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="9">
+<col class="rank" />
+<col class="sailno" />
+<col class="boat" />
+<col class="helmname" />
+<col class="rating" />
+<col class="racefinish" />
+<col class="raceelapsed" />
+<col class="racecorrected" />
+<col class="nett" />
+</colgroup>
+<tr>
+<th>Rank</th>
+<th>sailno</th>
+<th>boat name</th>
+<th>owner name</th>
+<th>hcap</th>
+<th>Finish</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+<tr class="odd racerow">
+<td>
+1
+</td>
+<td>
+1679
+</td>
+<td>
+Wayfinder
+</td>
+<td>
+J Reynolds
+</td>
+<td>
+0.815
+</td>
+<td>
+154058
+</td>
+<td>
+1:30:58
+</td>
+<td>
+1:14:08
+</td>
+<td>
+1.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+2
+</td>
+<td>
+100
+</td>
+<td>
+Demelza
+</td>
+<td>
+Ennis/Laudan
+</td>
+<td>
+0.868
+</td>
+<td>
+154117
+</td>
+<td>
+1:31:17
+</td>
+<td>
+1:19:14
+</td>
+<td>
+2.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+3
+</td>
+<td>
+3335
+</td>
+<td>
+Bite the Bullet
+</td>
+<td>
+C Bermingham
+</td>
+<td>
+0.992
+</td>
+<td>
+153147
+</td>
+<td>
+1:21:47
+</td>
+<td>
+1:21:08
+</td>
+<td>
+3.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+4
+</td>
+<td>
+1103
+</td>
+<td>
+Viking
+</td>
+<td>
+Darmody/Patterson
+</td>
+<td>
+0.910
+</td>
+<td>
+153921
+</td>
+<td>
+1:29:21
+</td>
+<td>
+1:21:19
+</td>
+<td>
+4.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+5
+</td>
+<td>
+1411
+</td>
+<td>
+Toughnut
+</td>
+<td>
+D Skehan
+</td>
+<td>
+0.957
+</td>
+<td>
+153551
+</td>
+<td>
+1:25:51
+</td>
+<td>
+1:22:10
+</td>
+<td>
+5.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+6
+</td>
+<td>
+29048
+</td>
+<td>
+Deep Thought
+</td>
+<td>
+J Wenski
+</td>
+<td>
+0.838
+</td>
+<td>
+154811
+</td>
+<td>
+1:38:11
+</td>
+<td>
+1:22:17
+</td>
+<td>
+6.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+7
+</td>
+<td>
+5115
+</td>
+<td>
+Force Five
+</td>
+<td>
+R & J McAllister
+</td>
+<td>
+0.934
+</td>
+<td>
+153836
+</td>
+<td>
+1:28:36
+</td>
+<td>
+1:22:45
+</td>
+<td>
+7.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+8
+</td>
+<td>
+2760
+</td>
+<td>
+SunChaser
+</td>
+<td>
+M Marr
+</td>
+<td>
+0.789
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNF
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+9.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+9
+</td>
+<td>
+1430
+</td>
+<td>
+Mary Ellen
+</td>
+<td>
+K O'Byrne
+</td>
+<td>
+0.850
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+9
+</td>
+<td>
+2070
+</td>
+<td>
+Out & About
+</td>
+<td>
+McCoy/Cregan
+</td>
+<td>
+0.848
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+9
+</td>
+<td>
+2588
+</td>
+<td>
+Rosie
+</td>
+<td>
+R Dickson
+</td>
+<td>
+0.918
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+9
+</td>
+<td>
+1202
+</td>
+<td>
+Thar Saile
+</td>
+<td>
+C O'Laoi
+</td>
+<td>
+0.817
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+9
+</td>
+<td>
+9849
+</td>
+<td>
+Blue Eyes
+</td>
+<td>
+C Buckley
+</td>
+<td>
+0.951
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+9
+</td>
+<td>
+988
+</td>
+<td>
+Dux
+</td>
+<td>
+A Gore-Grimes
+</td>
+<td>
+0.927
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+9
+</td>
+<td>
+581
+</td>
+<td>
+Hellyhunter
+</td>
+<td>
+L McMurtry
+</td>
+<td>
+0.743
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+9
+</td>
+<td>
+657
+</td>
+<td>
+Voyager
+</td>
+<td>
+J Carton
+</td>
+<td>
+0.890
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+9
+</td>
+<td>
+3550
+</td>
+<td>
+Lolly Folly
+</td>
+<td>
+C & L Phelan
+</td>
+<td>
+0.850
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+9
+</td>
+<td>
+5522
+</td>
+<td>
+The Big Picture
+</td>
+<td>
+M & R Evans
+</td>
+<td>
+0.919
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+9
+</td>
+<td>
+38
+</td>
+<td>
+Arctic Fox
+</td>
+<td>
+McCollum/Others
+</td>
+<td>
+1.000
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+9
+</td>
+<td>
+3022
+</td>
+<td>
+Xebec
+</td>
+<td>
+T Giles
+</td>
+<td>
+0.945
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+9
+</td>
+<td>
+71
+</td>
+<td>
+Southern Breeze
+</td>
+<td>
+G Wilson
+</td>
+<td>
+0.975
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+9
+</td>
+<td>
+6002
+</td>
+<td>
+Stage Fright
+</td>
+<td>
+Wormald/Walsh
+</td>
+<td>
+1.000
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+9
+</td>
+<td>
+4615
+</td>
+<td>
+Joslim
+</td>
+<td>
+J Connolly
+</td>
+<td>
+1.000
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+9
+</td>
+<td>
+7495
+</td>
+<td>
+Maximus
+</td>
+<td>
+P Kyne
+</td>
+<td>
+0.948
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+9
+</td>
+<td>
+9191
+</td>
+<td>
+Jebus
+</td>
+<td>
+E Dalton
+</td>
+<td>
+0.900
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+9
+</td>
+<td>
+3400
+</td>
+<td>
+Brazen Hussy
+</td>
+<td>
+Stirling/Barry
+</td>
+<td>
+0.844
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+</table>
+<script type="text/javascript">
+swRace.Entries = 26;
+swRace.Notes = '';
+swRace.Date = '017/08';
+swRace.Time = '';
+swRace.Name = 'R12';
+swRace.Rank = 12;
+</script>
+<script type="text/javascript">
+resRaceTitle();
+</script>
+<script type="text/javascript">
+resRaceNotes();
+</script>
+<div class="caption racecaption">
+Start: Start 1, Finishes: Finish time, Time: 141000
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="9">
+<col class="rank" />
+<col class="sailno" />
+<col class="boat" />
+<col class="helmname" />
+<col class="rating" />
+<col class="racefinish" />
+<col class="raceelapsed" />
+<col class="racecorrected" />
+<col class="nett" />
+</colgroup>
+<tr>
+<th>Rank</th>
+<th>sailno</th>
+<th>boat name</th>
+<th>owner name</th>
+<th>hcap</th>
+<th>Finish</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+<tr class="odd racerow">
+<td>
+1
+</td>
+<td>
+100
+</td>
+<td>
+Demelza
+</td>
+<td>
+Ennis/Laudan
+</td>
+<td>
+0.868
+</td>
+<td>
+154305
+</td>
+<td>
+1:33:05
+</td>
+<td>
+1:20:48
+</td>
+<td>
+1.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+2
+</td>
+<td>
+1411
+</td>
+<td>
+Toughnut
+</td>
+<td>
+D Skehan
+</td>
+<td>
+0.957
+</td>
+<td>
+153444
+</td>
+<td>
+1:24:44
+</td>
+<td>
+1:21:05
+</td>
+<td>
+2.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+3
+</td>
+<td>
+1430
+</td>
+<td>
+Mary Ellen
+</td>
+<td>
+K O'Byrne
+</td>
+<td>
+0.850
+</td>
+<td>
+154536
+</td>
+<td>
+1:35:36
+</td>
+<td>
+1:21:16
+</td>
+<td>
+3.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+4
+</td>
+<td>
+29048
+</td>
+<td>
+Deep Thought
+</td>
+<td>
+J Wenski
+</td>
+<td>
+0.838
+</td>
+<td>
+154902
+</td>
+<td>
+1:39:02
+</td>
+<td>
+1:22:59
+</td>
+<td>
+4.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+5
+</td>
+<td>
+3335
+</td>
+<td>
+Bite the Bullet
+</td>
+<td>
+C Bermingham
+</td>
+<td>
+0.992
+</td>
+<td>
+153345
+</td>
+<td>
+1:23:45
+</td>
+<td>
+1:23:05
+</td>
+<td>
+5.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+6
+</td>
+<td>
+1103
+</td>
+<td>
+Viking
+</td>
+<td>
+Darmody/Patterson
+</td>
+<td>
+0.910
+</td>
+<td>
+154552
+</td>
+<td>
+1:35:52
+</td>
+<td>
+1:27:14
+</td>
+<td>
+6.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+7
+</td>
+<td>
+2760
+</td>
+<td>
+SunChaser
+</td>
+<td>
+M Marr
+</td>
+<td>
+0.789
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNF
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+8.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+8
+</td>
+<td>
+1679
+</td>
+<td>
+Wayfinder
+</td>
+<td>
+J Reynolds
+</td>
+<td>
+0.815
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+8
+</td>
+<td>
+2070
+</td>
+<td>
+Out & About
+</td>
+<td>
+McCoy/Cregan
+</td>
+<td>
+0.848
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+8
+</td>
+<td>
+2588
+</td>
+<td>
+Rosie
+</td>
+<td>
+R Dickson
+</td>
+<td>
+0.918
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+8
+</td>
+<td>
+5115
+</td>
+<td>
+Force Five
+</td>
+<td>
+R & J McAllister
+</td>
+<td>
+0.934
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+8
+</td>
+<td>
+1202
+</td>
+<td>
+Thar Saile
+</td>
+<td>
+C O'Laoi
+</td>
+<td>
+0.817
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+8
+</td>
+<td>
+9849
+</td>
+<td>
+Blue Eyes
+</td>
+<td>
+C Buckley
+</td>
+<td>
+0.951
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+8
+</td>
+<td>
+988
+</td>
+<td>
+Dux
+</td>
+<td>
+A Gore-Grimes
+</td>
+<td>
+0.927
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+8
+</td>
+<td>
+581
+</td>
+<td>
+Hellyhunter
+</td>
+<td>
+L McMurtry
+</td>
+<td>
+0.743
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+8
+</td>
+<td>
+657
+</td>
+<td>
+Voyager
+</td>
+<td>
+J Carton
+</td>
+<td>
+0.890
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+8
+</td>
+<td>
+3550
+</td>
+<td>
+Lolly Folly
+</td>
+<td>
+C & L Phelan
+</td>
+<td>
+0.850
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+8
+</td>
+<td>
+5522
+</td>
+<td>
+The Big Picture
+</td>
+<td>
+M & R Evans
+</td>
+<td>
+0.919
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+8
+</td>
+<td>
+38
+</td>
+<td>
+Arctic Fox
+</td>
+<td>
+McCollum/Others
+</td>
+<td>
+1.000
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+8
+</td>
+<td>
+3022
+</td>
+<td>
+Xebec
+</td>
+<td>
+T Giles
+</td>
+<td>
+0.945
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+8
+</td>
+<td>
+71
+</td>
+<td>
+Southern Breeze
+</td>
+<td>
+G Wilson
+</td>
+<td>
+0.975
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+8
+</td>
+<td>
+6002
+</td>
+<td>
+Stage Fright
+</td>
+<td>
+Wormald/Walsh
+</td>
+<td>
+1.000
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+8
+</td>
+<td>
+4615
+</td>
+<td>
+Joslim
+</td>
+<td>
+J Connolly
+</td>
+<td>
+1.000
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+8
+</td>
+<td>
+7495
+</td>
+<td>
+Maximus
+</td>
+<td>
+P Kyne
+</td>
+<td>
+0.948
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+8
+</td>
+<td>
+9191
+</td>
+<td>
+Jebus
+</td>
+<td>
+E Dalton
+</td>
+<td>
+0.900
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+8
+</td>
+<td>
+3400
+</td>
+<td>
+Brazen Hussy
+</td>
+<td>
+Stirling/Barry
+</td>
+<td>
+0.844
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+</table>
+<script type="text/javascript">
+swRace.Entries = 26;
+swRace.Notes = '';
+swRace.Date = '24/08';
+swRace.Time = '';
+swRace.Name = 'R13';
+swRace.Rank = 13;
+</script>
+<script type="text/javascript">
+resRaceTitle();
+</script>
+<script type="text/javascript">
+resRaceNotes();
+</script>
+<div class="caption racecaption">
+Start: Start 1, Finishes: Finish time, Time: 141000
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="9">
+<col class="rank" />
+<col class="sailno" />
+<col class="boat" />
+<col class="helmname" />
+<col class="rating" />
+<col class="racefinish" />
+<col class="raceelapsed" />
+<col class="racecorrected" />
+<col class="nett" />
+</colgroup>
+<tr>
+<th>Rank</th>
+<th>sailno</th>
+<th>boat name</th>
+<th>owner name</th>
+<th>hcap</th>
+<th>Finish</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+<tr class="odd racerow">
+<td>
+1
+</td>
+<td>
+1411
+</td>
+<td>
+Toughnut
+</td>
+<td>
+D Skehan
+</td>
+<td>
+0.957
+</td>
+<td>
+160130
+</td>
+<td>
+1:51:30
+</td>
+<td>
+1:46:42
+</td>
+<td>
+1.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+2
+</td>
+<td>
+3335
+</td>
+<td>
+Bite the Bullet
+</td>
+<td>
+C Bermingham
+</td>
+<td>
+0.992
+</td>
+<td>
+155949
+</td>
+<td>
+1:49:49
+</td>
+<td>
+1:48:56
+</td>
+<td>
+2.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+3
+</td>
+<td>
+100
+</td>
+<td>
+Demelza
+</td>
+<td>
+Ennis/Laudan
+</td>
+<td>
+0.868
+</td>
+<td>
+162457
+</td>
+<td>
+2:14:57
+</td>
+<td>
+1:57:08
+</td>
+<td>
+3.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+4
+</td>
+<td>
+1430
+</td>
+<td>
+Mary Ellen
+</td>
+<td>
+K O'Byrne
+</td>
+<td>
+0.850
+</td>
+<td>
+163030
+</td>
+<td>
+2:20:30
+</td>
+<td>
+1:59:26
+</td>
+<td>
+4.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+5
+</td>
+<td>
+5115
+</td>
+<td>
+Force Five
+</td>
+<td>
+R & J McAllister
+</td>
+<td>
+0.934
+</td>
+<td>
+162512
+</td>
+<td>
+2:15:12
+</td>
+<td>
+2:06:17
+</td>
+<td>
+5.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+6
+</td>
+<td>
+1103
+</td>
+<td>
+Viking
+</td>
+<td>
+Darmody/Patterson
+</td>
+<td>
+0.910
+</td>
+<td>
+164847
+</td>
+<td>
+2:38:47
+</td>
+<td>
+2:24:30
+</td>
+<td>
+6.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+7
+</td>
+<td>
+29048
+</td>
+<td>
+Deep Thought
+</td>
+<td>
+J Wenski
+</td>
+<td>
+0.838
+</td>
+<td>
+170332
+</td>
+<td>
+2:53:32
+</td>
+<td>
+2:25:25
+</td>
+<td>
+7.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+8
+</td>
+<td>
+2588
+</td>
+<td>
+Rosie
+</td>
+<td>
+R Dickson
+</td>
+<td>
+0.918
+</td>
+<td>
+170310
+</td>
+<td>
+2:53:10
+</td>
+<td>
+2:38:58
+</td>
+<td>
+8.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+9
+</td>
+<td>
+2760
+</td>
+<td>
+SunChaser
+</td>
+<td>
+M Marr
+</td>
+<td>
+0.789
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNF
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+12.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+9
+</td>
+<td>
+2070
+</td>
+<td>
+Out & About
+</td>
+<td>
+McCoy/Cregan
+</td>
+<td>
+0.848
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNF
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+12.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+9
+</td>
+<td>
+1202
+</td>
+<td>
+Thar Saile
+</td>
+<td>
+C O'Laoi
+</td>
+<td>
+0.817
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNF
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+12.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+12
+</td>
+<td>
+1679
+</td>
+<td>
+Wayfinder
+</td>
+<td>
+J Reynolds
+</td>
+<td>
+0.815
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+12
+</td>
+<td>
+9849
+</td>
+<td>
+Blue Eyes
+</td>
+<td>
+C Buckley
+</td>
+<td>
+0.951
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+12
+</td>
+<td>
+988
+</td>
+<td>
+Dux
+</td>
+<td>
+A Gore-Grimes
+</td>
+<td>
+0.927
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+12
+</td>
+<td>
+581
+</td>
+<td>
+Hellyhunter
+</td>
+<td>
+L McMurtry
+</td>
+<td>
+0.743
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+12
+</td>
+<td>
+657
+</td>
+<td>
+Voyager
+</td>
+<td>
+J Carton
+</td>
+<td>
+0.890
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+12
+</td>
+<td>
+3550
+</td>
+<td>
+Lolly Folly
+</td>
+<td>
+C & L Phelan
+</td>
+<td>
+0.850
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+12
+</td>
+<td>
+5522
+</td>
+<td>
+The Big Picture
+</td>
+<td>
+M & R Evans
+</td>
+<td>
+0.919
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+12
+</td>
+<td>
+38
+</td>
+<td>
+Arctic Fox
+</td>
+<td>
+McCollum/Others
+</td>
+<td>
+1.000
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+12
+</td>
+<td>
+3022
+</td>
+<td>
+Xebec
+</td>
+<td>
+T Giles
+</td>
+<td>
+0.945
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+12
+</td>
+<td>
+71
+</td>
+<td>
+Southern Breeze
+</td>
+<td>
+G Wilson
+</td>
+<td>
+0.975
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+12
+</td>
+<td>
+6002
+</td>
+<td>
+Stage Fright
+</td>
+<td>
+Wormald/Walsh
+</td>
+<td>
+1.000
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+12
+</td>
+<td>
+4615
+</td>
+<td>
+Joslim
+</td>
+<td>
+J Connolly
+</td>
+<td>
+1.000
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+12
+</td>
+<td>
+7495
+</td>
+<td>
+Maximus
+</td>
+<td>
+P Kyne
+</td>
+<td>
+0.948
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="odd racerow">
+<td>
+12
+</td>
+<td>
+9191
+</td>
+<td>
+Jebus
+</td>
+<td>
+E Dalton
+</td>
+<td>
+0.900
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+<tr class="even racerow">
+<td>
+12
+</td>
+<td>
+3400
+</td>
+<td>
+Brazen Hussy
+</td>
+<td>
+Stirling/Barry
+</td>
+<td>
+0.844
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DNC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+27.0
+</td>
+</tr>
+</table>
+
+<p class="hardleft"><a href="http://"></a><br /><a href="mailto:"></a></p>
+<p class="hardright"><a href="http://www.hyc.ie">www.hyc.ie</a><br /><a href="mailto:results@hyc.ie">results@hyc.ie</a></p>
+<p>Sailwave Scoring Software 2.5.1<br /><a href="http://www.sailwave.com">www.sailwave.com</a></p>
+
+</div>
+
+<footer>
+</footer>
+
+<div id="scrollbottom"></div>
+
+</body>
+</html>
+
+
