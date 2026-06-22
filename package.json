@@ -1,0 +1,15 @@
+{
+  "name": "hyc-archive",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Howth Yacht Club club-racing reference data and published-results capture for Sail Scoring",
+  "scripts": {
+    "ftp-paths": "tsx scripts/ftp-paths.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "tsx": "^4.22.4",
+    "typescript": "^5.9.2"
+  }
+}
