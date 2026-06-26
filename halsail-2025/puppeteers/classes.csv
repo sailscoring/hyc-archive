@@ -1,0 +1,5 @@
+Name,Handicap Type,Flag,Notes
+Puppeteer Master,TCF,P,HIDDEN base: real races+finishes. Set series embargo to hidden-always.
+Puppeteer Scratch,Level,P,One-design scratch view (Tue+Sat).
+Puppeteer HPH (Tue),NHC,P,Tuesday HPH chain. After import set local handicap name to HPH.
+Puppeteer HPH (Sat),NHC,P,Saturday HPH chain. After import set local handicap name to HPH.
