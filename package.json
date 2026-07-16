@@ -5,6 +5,7 @@
   "description": "Howth Yacht Club club-racing reference data and published-results capture for Sail Scoring",
   "scripts": {
     "ftp-paths": "tsx scripts/ftp-paths.ts",
+    "emit-as-published": "tsx scripts/emit-as-published-config.ts",
     "typecheck": "tsc --noEmit"
   },
   "devDependencies": {

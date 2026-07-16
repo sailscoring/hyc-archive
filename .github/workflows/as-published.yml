@@ -1,0 +1,80 @@
+# As-published archive ingest (ADR-010, sailscoring#283).
+#
+# On every push to main, regenerate the ingest documents from the reshyc
+# capture and push them to the production workspace. Ingest is idempotent —
+# the server no-ops unchanged documents by content hash — so this can run on
+# every push without churn.
+#
+# Secrets:
+#   APP_REPO_TOKEN              read access to sailscoring/sailscoring
+#   SAILSCORING_ARCHIVIST_TOKEN the hyc workspace's archivist API key
+#                               (workspace- and capability-scoped: it can
+#                               only write as-published series)
+#
+# NOTE: not armed until the HYC workspace onboarding is approved — the push
+# step is gated on the secret being configured.
+name: as-published
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'sources/**'
+      - 'as-published.config.json'
+      - 'as-published-skips.json'
+      - 'scripts/emit-as-published-config.ts'
+      - '.github/workflows/as-published.yml'
+  workflow_dispatch:
+
+jobs:
+  ingest:
+    runs-on: ubuntu-latest
+    env:
+      SAILSCORING_TOKEN: ${{ secrets.SAILSCORING_ARCHIVIST_TOKEN }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/checkout@v4
+        with:
+          repository: sailscoring/sailscoring
+          token: ${{ secrets.APP_REPO_TOKEN }}
+          path: app
+
+      - uses: pnpm/action-setup@v4
+        with:
+          package_json_file: app/package.json
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: pnpm
+          cache-dependency-path: app/pnpm-lock.yaml
+
+      - name: Install archive dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Install app dependencies
+        working-directory: app
+        run: pnpm install --frozen-lockfile
+
+      - name: Emit the as-published config
+        run: pnpm emit-as-published
+
+      - name: Config is committed and current
+        run: git diff --exit-code as-published.config.json
+
+      - name: Generate ingest documents
+        working-directory: app
+        # The generator's memory use grows with the corpus (~370 series needs
+        # >6 GB today); give it most of the runner.
+        env:
+          NODE_OPTIONS: --max-old-space-size=12288
+        run: pnpm archive-generate ${{ github.workspace }}/as-published.config.json
+
+      # The `secrets` context isn't available in `if:` expressions, so the
+      # arming gate tests the secret through the job env instead: unset
+      # secret -> empty env var -> step skipped.
+      - name: Push to the workspace
+        if: env.SAILSCORING_TOKEN != ''
+        working-directory: app
+        run: pnpm cli as-published push ${{ github.workspace }}/as-published --workspace hyc
