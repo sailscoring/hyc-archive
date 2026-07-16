@@ -7,11 +7,15 @@ conventions.
 ## What this repo is
 
 A data archive, not an application. It holds Howth Yacht Club club-racing
-reference data and a verbatim capture of the club's published results site
-(`sources/reshyc/`, vendored from the public `markmc/reshyc` repo). The end goal
-is to reconstruct that history into importable `.sailscoring` files to feed the
-**cross-series identity & ranking** features (see the app repo's
-`docs/design/horizon.md`) with real multi-year HYC history.
+reference data, a maintained capture of the club's published results site
+(`sources/reshyc/`, originally vendored from the public `markmc/reshyc` repo —
+the capture automation now runs here), and the **as-published** ingest pipeline
+(app ADR-010) that feeds that history into Sail Scoring: display names from the
+admin-DB backup joined to the captured Sailwave pages, emitted as
+`as-published.config.json`, generated and pushed by CI via the app's
+archive-kit. The goal is to feed the **cross-series identity & ranking**
+features (see the app repo's `docs/design/horizon.md`) with real multi-year
+HYC history — ingested faithfully, never re-scored.
 
 It is the HYC counterpart of the sibling `dbsc-archive` and `iodai-archive`
 repos; the same spirit applies. Domain background (handicap systems, fleets)
@@ -22,17 +26,25 @@ lives in the app repo under `../sailscoring/docs/` and `../sailscoring/reference
 1. **Source pages are verbatim and third-party.** The captured HTML under
    `sources/reshyc/` is unmodified HYC results-site output, kept for
    reproducibility; do not edit it, and do not relicense it (see README
-   "Licensing"). Our own artifacts (reconstructed `.sailscoring`, normalised
-   catalogues) are the deliverables.
+   "Licensing"). Our own artifacts (the as-published config, normalised
+   catalogues) are the deliverables. New capture lands via the backup
+   workflows, not by hand.
 
 2. **Only real published data.** If a result is missing from the capture, leave
    it missing — do not fabricate, interpolate, or guess. Partial coverage is fine.
 
-3. **When a reconstruction can't reproduce the original exactly, record the
-   delta** in [`CLARIFICATIONS.md`](CLARIFICATIONS.md) and make sure the
-   published reconstruction links back to the original. Do not silently ship an
-   approximation — that mistake on the IODAI archive is the reason this rule
+3. **Record coverage gaps and approximations** in
+   [`CLARIFICATIONS.md`](CLARIFICATIONS.md). Under as-published, results are
+   never recomputed so a results delta can't arise — but skipped pages,
+   unresolvable admin rows, and naming/date approximations must be recorded,
+   not papered over. That mistake on the IODAI archive is the reason this rule
    exists.
+
+4. **Never rename an emitted series `key`.** Series ids are deterministic
+   UUIDv5 over `hyc-archive/series/<key>`; renaming a key re-mints the id and
+   orphans the ingested series (and its identity links). The key derives from
+   the admin event title — a title fix upstream changes the key, so treat that
+   as a migration, not a rename.
 
 ## Relationship to the app repo
 
