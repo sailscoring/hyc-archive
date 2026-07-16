@@ -1,0 +1,30 @@
+#!/usr/bin/env python
+
+import sys
+import argparse
+parser = argparse.ArgumentParser()
+parser.add_argument("result_id")   # e.g. 1234
+parser.add_argument("ftp_path")   # e.g. /reshyc/2022/foo.htm
+args = parser.parse_args()
+
+import requests
+session = requests.Session()
+
+from lib import *
+
+result = login(session)
+if result.status_code != 200:
+    print('Failed to log in')
+    sys.exit(1)
+
+edit_ref = "/admin/results/{}/edit".format(args.result_id)
+
+print("Before: {id} {event:30} {class_name:15} {ftp_path}".format(**get_result(session, edit_ref)))
+
+result = update_ftp_path(session, edit_ref, args.ftp_path)
+if result.status_code != 200:
+    print('Failed to update', result)
+    sys.exit(1)
+
+print("After:  {id} {event:30} {class_name:15} {ftp_path}".format(**get_result(session, edit_ref)))
+

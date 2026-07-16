@@ -1,0 +1,44 @@
+name: backup-summaries
+run-name: Make backup of HYC prize-winner summary PDFs
+# Manual-only: the summary PDFs are published roughly once a year, so there is
+# no cron — run this after HYC posts a new season summary.
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+  pull-requests: write
+jobs:
+  create-summaries-backup-pr:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+          cache-dependency-path: scripts/admin/requirements.txt
+      - name: Update summaries backup
+        env:
+          ADMIN_USERNAME: ${{ secrets.ADMIN_USERNAME }}
+          ADMIN_PASSWORD: ${{ secrets.ADMIN_PASSWORD }}
+        run: |
+          pip install -r scripts/admin/requirements.txt
+          make summaries-backup
+      - name: Create pull request
+        id: cpr
+        uses: peter-evans/create-pull-request@v7
+        with:
+          commit-message: Summaries backup
+          title: Summaries backup
+          add-paths: sources/reshyc/summaries/
+          branch: create-pull-request/summaries-backup
+      - name: Merge pull request
+        if: ${{ steps.cpr.outputs.pull-request-number }}
+        run: gh pr merge --rebase "${{ steps.cpr.outputs.pull-request-number }}"
+        env:
+          GH_TOKEN: ${{ github.token }}
+      - name: Delete pull request branch
+        if: ${{ steps.cpr.outputs.pull-request-number }}
+        run: git push origin :create-pull-request/summaries-backup
+        env:
+          GH_TOKEN: ${{ github.token }}

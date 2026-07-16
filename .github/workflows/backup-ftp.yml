@@ -1,0 +1,38 @@
+name: backup-ftp
+run-name: Make backup of HYC results FTP folder
+on:
+  workflow_dispatch:
+  schedule:
+      - cron: 38 7 * * *
+permissions:
+  contents: write
+  pull-requests: write
+jobs:
+  create-ftp-backup-pr:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - env:
+          FTP_DIR: reshyc
+          FTP_SERVER: results.hyc.ie
+          FTP_USER: ${{ secrets.FTP_USER }}
+          FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+        run: make backup
+      - name: Create pull request
+        id: cpr
+        uses: peter-evans/create-pull-request@v7
+        with:
+          commit-message: FTP backup
+          title: FTP backup
+          add-paths: sources/reshyc/results.hyc.ie/
+          branch: create-pull-request/ftp-backup
+      - name: Merge pull request
+        if: ${{ steps.cpr.outputs.pull-request-number }}
+        run: gh pr merge --rebase "${{ steps.cpr.outputs.pull-request-number }}"
+        env:
+          GH_TOKEN: ${{ github.token }}
+      - name: Delete pull request branch
+        if: ${{ steps.cpr.outputs.pull-request-number }}
+        run: git push origin :create-pull-request/ftp-backup
+        env:
+          GH_TOKEN: ${{ github.token }}

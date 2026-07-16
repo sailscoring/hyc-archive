@@ -4,3 +4,6 @@ node_modules/
 __pycache__/
 *.pyc
 .env.tmp
+as-published/
+.ftp_credentials
+.admin_credentials
