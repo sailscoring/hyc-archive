@@ -1,0 +1,1356 @@
+
+
+
+<!doctype html>
+<html lang="en-US">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html;charset=ISO-8859-1"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="description" content="sailwave results">
+<meta name="viewport" content="width=device-width">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+
+<title>Sailwave results for Howth YC Dinghy Racing S2 at Howth YC 2026</title>
+
+<style type="text/css">
+body {font: 80% arial, helvetica, sans-serif; text-align: center;}
+.hardleft  {text-align: left; float: left;  margin: 15px 0  15px 25px;}
+.hardright {text-align: right; float: right; margin: 15px 25px 15px 0;}
+table {text-align: left; margin: 0px auto 30px auto; font-size: 1em; border-collapse: collapse; border: 1px #999 solid;}
+td, th {padding: 4px; border: 1px #999 solid; vertical-align: top;}
+.caption {padding: 5px; text-align: center; border: 0; font-weight: bold;}
+p {text-align: center;}
+.contents {text-align: left; margin-left: 20%;}
+.race {background-color: #eee;}
+.odd {background-color: #eef;}
+.natflag {border: 1px #999 solid;}
+.nattext {font-size: 0.8em;}
+.place1 {font-weight: bold; background-color: #ffffaa;}
+.place2 {font-weight: bold; background-color: #aaaaff;}
+.place3 {font-weight: bold; background-color: #ffaaaa;}
+.placen {}
+table.headertable {border: 0px;}
+table.headertable td{border: 0px;}
+</style>
+
+<script type="text/javascript">
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script>
+
+function swGetURLArgs() {
+
+  var url = location.href;
+  var qs  = url.substring(url.indexOf('?') + 1).split('&');
+
+  for(var i = 0, result = {}; i < qs.length; i++) {
+    qs[i]            = qs[i].split('=');
+    result[qs[i][0]] = decodeURIComponent(qs[i][1]);
+  }
+
+  return result;
+}
+
+//
+//  name=HighlightWins3v3
+//  dependencies=jQuery
+//  description=Highlight winning scores in summary tables.
+//  author=Jon Eskdale based on an idea by Colin Jenkins
+//  date=2016-07-04
+//  version=3.0  For use with Sailwave from V2.22.x
+//  Requires the following lines in the Results.htm file (Results.htm is in the Templates directory)
+//  string.set("summary.col.race.rank1.td",   "rank1")
+//  string.set("summary.col.race.rank2.td",   "rank2")
+//  string.set("summary.col.race.rank3.td",   "rank3")
+
+//  url=http://sailwave.com
+//  email=jon@sailwave.com
+//  twitter=eskdale
+//  comments=Edit colours to colours of your choice
+//
+
+$(document).ready(function() {
+var selectorRank1 = '.rank1';
+var selectorRank2 = '.rank2';
+var selectorRank3 = '.rank3';
+
+// Results with these codes will not get highlighted add or remove codes to your choice
+var ignoreText   = /^(?!.*\b(DNC|DNF|DNS|OCS|BFD|UFD|RET|DSQ|DGM|DNE)\b).*/i
+
+// Edit these colours to change the highlight colours for 1st, 2nd and 3rd
+var winsColour   = '#ffd700';
+var twoColour    = '#6a91c5';
+var threeColour  = '#da6841';
+
+
+// Change the background color for cells with class of rank1-3 and don't have a code specified
+$(function () {
+
+  $(selectorRank1).filter(function() {
+    return ignoreText.test($(this).text());
+  }).css("background", winsColour);
+  $(selectorRank2).filter(function() {
+        return ignoreText.test($(this).text());
+  }).css("background", twoColour);
+  $(selectorRank3).filter(function() {
+        return ignoreText.test($(this).text());
+  }).css("background", threeColour);
+
+});
+});
+</script>
+<link rel="shortcut icon" type="image/ico" href="https://www.sailwave.com/favicon.ico"/>
+</head>
+
+<body>
+
+<header>
+</header>
+<table class="headertable" cellspacing="0" width="100%" cellpadding="0" border="0">
+<tbody>
+<div id="wrap">
+
+<tr>
+<td width="30%">
+<img id="venueburgee" style="display:block; height:100px;"  src="https://www.hyc.ie/system/sponsor_logos/620/normal/Howth_Yacht_Club_-_Logo_RGB.jpg" alt="venue burgee" />
+</td>
+
+<td width="40%" align="center">
+<h1>Howth YC Dinghy Racing S2</h1>
+<h2>Howth YC</h2>
+</td>
+
+<td width="30%">
+<img id="eventburgee" style="display:block; height:100px;" src="https://www.hyc.ie/system/sponsor_logos/620/normal/Howth_Yacht_Club_-_Logo_RGB.jpg" alt="event burgee" align="right" />
+</td>
+</tr>
+</tbody>
+</table>
+
+<div style="clear:both;"></div>
+
+<style>
+div.applicant-break {page-break-after:always;}
+</style>
+<h3 class="seriestitle">Results are provisional as of 11:56 on July 10, 2026</h3>
+<h3 class="summarytitle" id="summaryoptimist">Optimist Fleet</h3>
+<div class="caption summarycaption">Sailed: 3, Discards: 1, To count: 2, Entries: 36, Scoring system: Appendix A</div>
+<table class="summarytable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="11">
+<col class="rank" />
+<col class="class" />
+<col class="sailno" />
+<col class="helmname" />
+<col class="crewname" />
+<col class="rating" />
+<col class="race" />
+<col class="race" />
+<col class="race" />
+<col class="total" />
+<col class="nett" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Class</th>
+<th>SailNo</th>
+<th>Helm</th>
+<th>Crew</th>
+<th>PY</th>
+<th><a class="racelink" href="#r1optimist">R1</a></th>
+<th><a class="racelink" href="#r2optimist">R2</a></th>
+<th><a class="racelink" href="#r3optimist">R3</a></th>
+<th>Total</th>
+<th>Nett</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd summaryrow">
+<td>1st</td>
+<td>&nbsp;</td>
+<td>1597</td>
+<td>Rory Barron</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td  class="rank1">1.0</td>
+<td  class="rank1">1.0</td>
+<td>(4.0)</td>
+<td>6.0</td>
+<td>2.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>2nd</td>
+<td>&nbsp;</td>
+<td>NONE</td>
+<td>Ollie Gunderson</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td  class="rank2">2.0</td>
+<td  class="rank3">(3.0)</td>
+<td  class="rank2">2.0</td>
+<td>7.0</td>
+<td>4.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>3rd</td>
+<td>&nbsp;</td>
+<td>1689</td>
+<td>Daniel Clarke</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td  class="rank3">3.0</td>
+<td  class="rank2">2.0</td>
+<td>(24.0 UFD)</td>
+<td>29.0</td>
+<td>5.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>4th</td>
+<td>&nbsp;</td>
+<td>1696</td>
+<td>Lily Song</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>5.0</td>
+<td>(10.0)</td>
+<td  class="rank1">1.0</td>
+<td>16.0</td>
+<td>6.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>5th</td>
+<td>&nbsp;</td>
+<td>1593</td>
+<td>J.J. Blandini</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>(7.0)</td>
+<td>7.0</td>
+<td  class="rank3">3.0</td>
+<td>17.0</td>
+<td>10.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>6th</td>
+<td>&nbsp;</td>
+<td>1634</td>
+<td>Aine Cahill</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>(6.0)</td>
+<td>4.0</td>
+<td>6.0</td>
+<td>16.0</td>
+<td>10.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>7th</td>
+<td>&nbsp;</td>
+<td>1366</td>
+<td>Elin Barry</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>4.0</td>
+<td>(13.0)</td>
+<td>7.0</td>
+<td>24.0</td>
+<td>11.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>8th</td>
+<td>&nbsp;</td>
+<td>1559</td>
+<td>Samuel McQuade</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>8.0</td>
+<td>5.0</td>
+<td>(9.0)</td>
+<td>22.0</td>
+<td>13.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>9th</td>
+<td>&nbsp;</td>
+<td>1620</td>
+<td>Sophia Jeffares</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>9.0</td>
+<td>6.0</td>
+<td>(24.0 UFD)</td>
+<td>39.0</td>
+<td>15.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>10th</td>
+<td>&nbsp;</td>
+<td>1557</td>
+<td>Siun Barry</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>(12.0)</td>
+<td>11.0</td>
+<td>5.0</td>
+<td>28.0</td>
+<td>16.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>11th</td>
+<td>&nbsp;</td>
+<td>1608</td>
+<td>Willow Murray</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>(10.0)</td>
+<td>9.0</td>
+<td>8.0</td>
+<td>27.0</td>
+<td>17.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>12th</td>
+<td>&nbsp;</td>
+<td>6375</td>
+<td>Max Dineen</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>11.0</td>
+<td>8.0</td>
+<td>(13.0)</td>
+<td>32.0</td>
+<td>19.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>13th</td>
+<td>&nbsp;</td>
+<td>1316</td>
+<td>Jasper Duffy</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>(14.0)</td>
+<td>12.0</td>
+<td>10.0</td>
+<td>36.0</td>
+<td>22.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>14th</td>
+<td>&nbsp;</td>
+<td>1451</td>
+<td>Nina Monaghan</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>13.0</td>
+<td>(15.0)</td>
+<td>11.0</td>
+<td>39.0</td>
+<td>24.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>15th</td>
+<td>&nbsp;</td>
+<td>902</td>
+<td>Heidi Murray</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>15.0</td>
+<td>14.0</td>
+<td>(16.0)</td>
+<td>45.0</td>
+<td>29.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>16th</td>
+<td>&nbsp;</td>
+<td>1166</td>
+<td>Fiach O'Byrne</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>16.0</td>
+<td>16.0</td>
+<td>(17.0)</td>
+<td>49.0</td>
+<td>32.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>17th</td>
+<td>&nbsp;</td>
+<td>1564</td>
+<td>Hugo Cobbe</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>19.0</td>
+<td>(20.0 DNF)</td>
+<td>14.0</td>
+<td>53.0</td>
+<td>33.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>18th</td>
+<td>&nbsp;</td>
+<td>64</td>
+<td>Isobella Fitzgibbon</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>17.0</td>
+<td>(18.0)</td>
+<td>18.0</td>
+<td>53.0</td>
+<td>35.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>19th</td>
+<td>&nbsp;</td>
+<td>7</td>
+<td>Eliana Duffy</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>18.0</td>
+<td>17.0</td>
+<td>(37.0 DNC)</td>
+<td>72.0</td>
+<td>35.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>20th</td>
+<td>&nbsp;</td>
+<td>1342</td>
+<td>Christopher Evans</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>(37.0 DNC)</td>
+<td>37.0 DNC</td>
+<td>12.0</td>
+<td>86.0</td>
+<td>49.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>21st</td>
+<td>&nbsp;</td>
+<td>1526</td>
+<td>Lucas Song</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>(37.0 DNC)</td>
+<td>37.0 DNC</td>
+<td>15.0</td>
+<td>89.0</td>
+<td>52.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>22nd</td>
+<td>&nbsp;</td>
+<td>1362</td>
+<td>Cian Wilson</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>(37.0 DNC)</td>
+<td>37.0 DNC</td>
+<td>19.0</td>
+<td>93.0</td>
+<td>56.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>23rd</td>
+<td>&nbsp;</td>
+<td>1519</td>
+<td>Eliana Duffy</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>(37.0 DNC)</td>
+<td>37.0 DNC</td>
+<td>24.0 UFD</td>
+<td>98.0</td>
+<td>61.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>23rd</td>
+<td>&nbsp;</td>
+<td>1321</td>
+<td>Julia McMurtry</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>(37.0 DNC)</td>
+<td>37.0 DNC</td>
+<td>24.0 UFD</td>
+<td>98.0</td>
+<td>61.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>25th</td>
+<td>&nbsp;</td>
+<td>TBD????</td>
+<td>Ava Kelly</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>(37.0 DNC)</td>
+<td>37.0 DNC</td>
+<td>37.0 DNC</td>
+<td>111.0</td>
+<td>74.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>25th</td>
+<td>&nbsp;</td>
+<td>741</td>
+<td>Harry George</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>(37.0 DNC)</td>
+<td>37.0 DNC</td>
+<td>37.0 DNC</td>
+<td>111.0</td>
+<td>74.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>25th</td>
+<td>&nbsp;</td>
+<td>737</td>
+<td>William Regan</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>(37.0 DNC)</td>
+<td>37.0 DNC</td>
+<td>37.0 DNC</td>
+<td>111.0</td>
+<td>74.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>25th</td>
+<td>&nbsp;</td>
+<td>TBD????</td>
+<td>Teddy Kelly</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>(37.0 DNC)</td>
+<td>37.0 DNC</td>
+<td>37.0 DNC</td>
+<td>111.0</td>
+<td>74.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>25th</td>
+<td>&nbsp;</td>
+<td>1526A</td>
+<td>Abigail Davies</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>(37.0 DNC)</td>
+<td>37.0 DNC</td>
+<td>37.0 DNC</td>
+<td>111.0</td>
+<td>74.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>25th</td>
+<td>&nbsp;</td>
+<td>1526X</td>
+<td>Elise</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>(37.0 DNC)</td>
+<td>37.0 DNC</td>
+<td>37.0 DNC</td>
+<td>111.0</td>
+<td>74.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>25th</td>
+<td>&nbsp;</td>
+<td>21335</td>
+<td>Will Butler</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>(37.0 DNC)</td>
+<td>37.0 DNC</td>
+<td>37.0 DNC</td>
+<td>111.0</td>
+<td>74.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>25th</td>
+<td>&nbsp;</td>
+<td>1444</td>
+<td>Aoife Smith</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>(37.0 DNC)</td>
+<td>37.0 DNC</td>
+<td>37.0 DNC</td>
+<td>111.0</td>
+<td>74.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>25th</td>
+<td>&nbsp;</td>
+<td>957</td>
+<td>Cillian Smith</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>(37.0 DNC)</td>
+<td>37.0 DNC</td>
+<td>37.0 DNC</td>
+<td>111.0</td>
+<td>74.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>25th</td>
+<td>&nbsp;</td>
+<td>1509</td>
+<td>Cillian Luck</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>(37.0 DNC)</td>
+<td>37.0 DNC</td>
+<td>37.0 DNC</td>
+<td>111.0</td>
+<td>74.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>25th</td>
+<td>&nbsp;</td>
+<td>6087</td>
+<td>Isaac Wray</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>(37.0 DNC)</td>
+<td>37.0 DNC</td>
+<td>37.0 DNC</td>
+<td>111.0</td>
+<td>74.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>25th</td>
+<td>&nbsp;</td>
+<td>737</td>
+<td>Harry George</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>(37.0 DNC)</td>
+<td>37.0 DNC</td>
+<td>37.0 DNC</td>
+<td>111.0</td>
+<td>74.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r1optimist">R1 - Optimist Fleet&nbsp;-&nbsp;2nd July</h3>
+<div class="caption racecaption">
+Start: Start 2, Finishes: Place, Time: 191000
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="8">
+<col class="rank" />
+<col class="class" />
+<col class="sailno" />
+<col class="helmname" />
+<col class="crewname" />
+<col class="rating" />
+<col class="place" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Class</th>
+<th>SailNo</th>
+<th>Helm</th>
+<th>Crew</th>
+<th>PY</th>
+<th>Place</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>&nbsp;</td>
+<td>1597</td>
+<td>Rory Barron</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>1</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>&nbsp;</td>
+<td>NONE</td>
+<td>Ollie Gunderson</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>2</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>&nbsp;</td>
+<td>1689</td>
+<td>Daniel Clarke</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>3</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>&nbsp;</td>
+<td>1366</td>
+<td>Elin Barry</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>4</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>&nbsp;</td>
+<td>1696</td>
+<td>Lily Song</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>5</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>&nbsp;</td>
+<td>1634</td>
+<td>Aine Cahill</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>6</td>
+<td>6.0</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>&nbsp;</td>
+<td>1593</td>
+<td>J.J. Blandini</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>7</td>
+<td>7.0</td>
+</tr>
+<tr class="even racerow">
+<td>8</td>
+<td>&nbsp;</td>
+<td>1559</td>
+<td>Samuel McQuade</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>8</td>
+<td>8.0</td>
+</tr>
+<tr class="odd racerow">
+<td>9</td>
+<td>&nbsp;</td>
+<td>1620</td>
+<td>Sophia Jeffares</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>9</td>
+<td>9.0</td>
+</tr>
+<tr class="even racerow">
+<td>10</td>
+<td>&nbsp;</td>
+<td>1608</td>
+<td>Willow Murray</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>10</td>
+<td>10.0</td>
+</tr>
+<tr class="odd racerow">
+<td>11</td>
+<td>&nbsp;</td>
+<td>6375</td>
+<td>Max Dineen</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>11</td>
+<td>11.0</td>
+</tr>
+<tr class="even racerow">
+<td>12</td>
+<td>&nbsp;</td>
+<td>1557</td>
+<td>Siun Barry</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>12</td>
+<td>12.0</td>
+</tr>
+<tr class="odd racerow">
+<td>13</td>
+<td>&nbsp;</td>
+<td>1451</td>
+<td>Nina Monaghan</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>13</td>
+<td>13.0</td>
+</tr>
+<tr class="even racerow">
+<td>14</td>
+<td>&nbsp;</td>
+<td>1316</td>
+<td>Jasper Duffy</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>14</td>
+<td>14.0</td>
+</tr>
+<tr class="odd racerow">
+<td>15</td>
+<td>&nbsp;</td>
+<td>902</td>
+<td>Heidi Murray</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>15</td>
+<td>15.0</td>
+</tr>
+<tr class="even racerow">
+<td>16</td>
+<td>&nbsp;</td>
+<td>1166</td>
+<td>Fiach O'Byrne</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>16</td>
+<td>16.0</td>
+</tr>
+<tr class="odd racerow">
+<td>17</td>
+<td>&nbsp;</td>
+<td>64</td>
+<td>Isobella Fitzgibbon</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>17</td>
+<td>17.0</td>
+</tr>
+<tr class="even racerow">
+<td>18</td>
+<td>&nbsp;</td>
+<td>7</td>
+<td>Eliana Duffy</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>18</td>
+<td>18.0</td>
+</tr>
+<tr class="odd racerow">
+<td>19</td>
+<td>&nbsp;</td>
+<td>1564</td>
+<td>Hugo Cobbe</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>19</td>
+<td>19.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r2optimist">R2 - Optimist Fleet&nbsp;-&nbsp;2nd July</h3>
+<div class="caption racecaption">
+Start: Start 2, Finishes: Place, Time: 195000
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="8">
+<col class="rank" />
+<col class="class" />
+<col class="sailno" />
+<col class="helmname" />
+<col class="crewname" />
+<col class="rating" />
+<col class="place" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Class</th>
+<th>SailNo</th>
+<th>Helm</th>
+<th>Crew</th>
+<th>PY</th>
+<th>Place</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>&nbsp;</td>
+<td>1597</td>
+<td>Rory Barron</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>1</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>&nbsp;</td>
+<td>1689</td>
+<td>Daniel Clarke</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>2</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>&nbsp;</td>
+<td>NONE</td>
+<td>Ollie Gunderson</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>3</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>&nbsp;</td>
+<td>1634</td>
+<td>Aine Cahill</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>4</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>&nbsp;</td>
+<td>1559</td>
+<td>Samuel McQuade</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>5</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>&nbsp;</td>
+<td>1620</td>
+<td>Sophia Jeffares</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>6</td>
+<td>6.0</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>&nbsp;</td>
+<td>1593</td>
+<td>J.J. Blandini</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>7</td>
+<td>7.0</td>
+</tr>
+<tr class="even racerow">
+<td>8</td>
+<td>&nbsp;</td>
+<td>6375</td>
+<td>Max Dineen</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>8</td>
+<td>8.0</td>
+</tr>
+<tr class="odd racerow">
+<td>9</td>
+<td>&nbsp;</td>
+<td>1608</td>
+<td>Willow Murray</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>9</td>
+<td>9.0</td>
+</tr>
+<tr class="even racerow">
+<td>10</td>
+<td>&nbsp;</td>
+<td>1696</td>
+<td>Lily Song</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>10</td>
+<td>10.0</td>
+</tr>
+<tr class="odd racerow">
+<td>11</td>
+<td>&nbsp;</td>
+<td>1557</td>
+<td>Siun Barry</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>11</td>
+<td>11.0</td>
+</tr>
+<tr class="even racerow">
+<td>12</td>
+<td>&nbsp;</td>
+<td>1316</td>
+<td>Jasper Duffy</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>12</td>
+<td>12.0</td>
+</tr>
+<tr class="odd racerow">
+<td>13</td>
+<td>&nbsp;</td>
+<td>1366</td>
+<td>Elin Barry</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>13</td>
+<td>13.0</td>
+</tr>
+<tr class="even racerow">
+<td>14</td>
+<td>&nbsp;</td>
+<td>902</td>
+<td>Heidi Murray</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>14</td>
+<td>14.0</td>
+</tr>
+<tr class="odd racerow">
+<td>15</td>
+<td>&nbsp;</td>
+<td>1451</td>
+<td>Nina Monaghan</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>15</td>
+<td>15.0</td>
+</tr>
+<tr class="even racerow">
+<td>16</td>
+<td>&nbsp;</td>
+<td>1166</td>
+<td>Fiach O'Byrne</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>16</td>
+<td>16.0</td>
+</tr>
+<tr class="odd racerow">
+<td>17</td>
+<td>&nbsp;</td>
+<td>7</td>
+<td>Eliana Duffy</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>17</td>
+<td>17.0</td>
+</tr>
+<tr class="even racerow">
+<td>18</td>
+<td>&nbsp;</td>
+<td>64</td>
+<td>Isobella Fitzgibbon</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>18</td>
+<td>18.0</td>
+</tr>
+<tr class="odd racerow">
+<td>19</td>
+<td>&nbsp;</td>
+<td>1564</td>
+<td>Hugo Cobbe</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>DNF</td>
+<td>20.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r3optimist">R3 - Optimist Fleet&nbsp;-&nbsp;Jul 09</h3>
+<div class="caption racecaption">
+Start: Start 2, Finishes: Place, Time: 191900
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="8">
+<col class="rank" />
+<col class="class" />
+<col class="sailno" />
+<col class="helmname" />
+<col class="crewname" />
+<col class="rating" />
+<col class="place" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Class</th>
+<th>SailNo</th>
+<th>Helm</th>
+<th>Crew</th>
+<th>PY</th>
+<th>Place</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>&nbsp;</td>
+<td>1696</td>
+<td>Lily Song</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>1</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>&nbsp;</td>
+<td>NONE</td>
+<td>Ollie Gunderson</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>2</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>&nbsp;</td>
+<td>1593</td>
+<td>J.J. Blandini</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>3</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>&nbsp;</td>
+<td>1597</td>
+<td>Rory Barron</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>4</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>&nbsp;</td>
+<td>1557</td>
+<td>Siun Barry</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>5</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>&nbsp;</td>
+<td>1634</td>
+<td>Aine Cahill</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>6</td>
+<td>6.0</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>&nbsp;</td>
+<td>1366</td>
+<td>Elin Barry</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>7</td>
+<td>7.0</td>
+</tr>
+<tr class="even racerow">
+<td>8</td>
+<td>&nbsp;</td>
+<td>1608</td>
+<td>Willow Murray</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>8</td>
+<td>8.0</td>
+</tr>
+<tr class="odd racerow">
+<td>9</td>
+<td>&nbsp;</td>
+<td>1559</td>
+<td>Samuel McQuade</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>9</td>
+<td>9.0</td>
+</tr>
+<tr class="even racerow">
+<td>10</td>
+<td>&nbsp;</td>
+<td>1316</td>
+<td>Jasper Duffy</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>10</td>
+<td>10.0</td>
+</tr>
+<tr class="odd racerow">
+<td>11</td>
+<td>&nbsp;</td>
+<td>1451</td>
+<td>Nina Monaghan</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>11</td>
+<td>11.0</td>
+</tr>
+<tr class="even racerow">
+<td>12</td>
+<td>&nbsp;</td>
+<td>1342</td>
+<td>Christopher Evans</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>12</td>
+<td>12.0</td>
+</tr>
+<tr class="odd racerow">
+<td>13</td>
+<td>&nbsp;</td>
+<td>6375</td>
+<td>Max Dineen</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>13</td>
+<td>13.0</td>
+</tr>
+<tr class="even racerow">
+<td>14</td>
+<td>&nbsp;</td>
+<td>1564</td>
+<td>Hugo Cobbe</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>14</td>
+<td>14.0</td>
+</tr>
+<tr class="odd racerow">
+<td>15</td>
+<td>&nbsp;</td>
+<td>1526</td>
+<td>Lucas Song</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>15</td>
+<td>15.0</td>
+</tr>
+<tr class="even racerow">
+<td>16</td>
+<td>&nbsp;</td>
+<td>902</td>
+<td>Heidi Murray</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>16</td>
+<td>16.0</td>
+</tr>
+<tr class="odd racerow">
+<td>17</td>
+<td>&nbsp;</td>
+<td>1166</td>
+<td>Fiach O'Byrne</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>17</td>
+<td>17.0</td>
+</tr>
+<tr class="even racerow">
+<td>18</td>
+<td>&nbsp;</td>
+<td>64</td>
+<td>Isobella Fitzgibbon</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>18</td>
+<td>18.0</td>
+</tr>
+<tr class="odd racerow">
+<td>19</td>
+<td>&nbsp;</td>
+<td>1362</td>
+<td>Cian Wilson</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>19</td>
+<td>19.0</td>
+</tr>
+<tr class="even racerow">
+<td>20</td>
+<td>&nbsp;</td>
+<td>1689</td>
+<td>Daniel Clarke</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>UFD</td>
+<td>24.0</td>
+</tr>
+<tr class="odd racerow">
+<td>20</td>
+<td>&nbsp;</td>
+<td>1620</td>
+<td>Sophia Jeffares</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>UFD</td>
+<td>24.0</td>
+</tr>
+<tr class="even racerow">
+<td>20</td>
+<td>&nbsp;</td>
+<td>1519</td>
+<td>Eliana Duffy</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>UFD</td>
+<td>24.0</td>
+</tr>
+<tr class="odd racerow">
+<td>20</td>
+<td>&nbsp;</td>
+<td>1321</td>
+<td>Julia McMurtry</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>UFD</td>
+<td>24.0</td>
+</tr>
+</tbody>
+</table>
+
+<p class="hardleft"><a href="https://www.hyc.ie">www.hyc.ie</a><br /><a href="mailto:"></a></p>
+<p class="hardright"><a href="https://www.hyc.ie">www.hyc.ie</a><br /><a href="mailto:"></a></p>
+<p>Sailwave Scoring Software 2.38.02<br /><a href="https://www.sailwave.com">www.sailwave.com</a></p>
+
+</div>
+
+<footer>
+</footer>
+
+<div id="scrollbottom"></div>
+
+</body>
+</html>
+
+
