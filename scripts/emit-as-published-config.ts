@@ -118,6 +118,10 @@ interface ConfigFleet {
   name: string;
   subPath: string;
   file: string;
+  /** Carry the page's per-race detail tables, not just the standings. Set
+   *  only when the captured page actually publishes race tables (most do; a
+   *  handful — e-sailing ladders, participation lists — are standings-only). */
+  includeRaces?: true;
 }
 
 interface ConfigSeries {
@@ -205,7 +209,8 @@ function run(): number {
         const base = subPath;
         while (usedSubPaths.has(subPath)) subPath = `${base}-${n++}`;
         usedSubPaths.add(subPath);
-        fleets.push({ name, subPath, file });
+        const includeRaces = readFileSync(file, 'utf8').includes('class="racetable"');
+        fleets.push({ name, subPath, file, ...(includeRaces ? { includeRaces: true } : {}) });
       }
       if (fleets.length === 0) continue;
       series.push({
