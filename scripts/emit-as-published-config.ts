@@ -274,8 +274,11 @@ function run(): number {
         // and the year is what the app's grouping reads.
         startDate: `${cat.year}-04-01`,
         source: 'sailwave',
-        // Initial in-app filing: one category per season year.
-        category: cat.year,
+        // Initial in-app filing: the club/open split the admin catalogues
+        // already carry, so the public picker reads Year -> Open/Club ->
+        // Series -> Fleet — the year axis comes from the start date, so a
+        // per-year category would just shadow it.
+        category: cat.type === 'open' ? 'Open Events' : 'Club Racing',
         fleets,
       });
     }
