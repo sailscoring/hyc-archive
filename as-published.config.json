@@ -5714,7 +5714,15 @@
         {
           "name": "Squib scr",
           "subPath": "tuesday-series-2/squib-scr",
-          "file": "sources/reshyc/results.hyc.ie/reshyc/2019/club_tuesday_s2_squib_scr.htm"
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2019/club_tuesday_s2_squib_scr.htm",
+          "sections": [
+            {
+              "sectionTitle": "Squib Scr Fleet"
+            },
+            {
+              "sectionTitle": "Squib Hcap Fleet"
+            }
+          ]
         },
         {
           "name": "Squib hcap",
@@ -6823,7 +6831,15 @@
         {
           "name": "Class 2 irc",
           "subPath": "autumn-league-2019/class-2-irc",
-          "file": "sources/reshyc/results.hyc.ie/reshyc/2019/open_autumnleague_class2_irc.htm"
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2019/open_autumnleague_class2_irc.htm",
+          "sections": [
+            {
+              "sectionTitle": "Class 2 IRC Fleet"
+            },
+            {
+              "sectionTitle": "J80 hcap Fleet"
+            }
+          ]
         },
         {
           "name": "J80 Scratch",
@@ -9616,52 +9632,130 @@
           "name": "Class 0",
           "subPath": "wave-regatta/class-0",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2022/open_wave_class0.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "Class 0 ECHO Boat Class",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Class 0 IRC Boat Class",
+              "includeRaces": true
+            }
+          ]
         },
         {
           "name": "Class 1",
           "subPath": "wave-regatta/class-1",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2022/open_wave_class1.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "Class 1 IRC Boat Class",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Class 1 ECHO Boat Class",
+              "includeRaces": true
+            }
+          ]
         },
         {
           "name": "Class 2",
           "subPath": "wave-regatta/class-2",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2022/open_wave_class2.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "Class 2 IRC Boat Class",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Class 2 ECHO Boat Class",
+              "includeRaces": true
+            }
+          ]
         },
         {
           "name": "Class 3",
           "subPath": "wave-regatta/class-3",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2022/open_wave_class3.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "Class 3 IRC Boat Class",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Class 3 ECHO Boat Class",
+              "includeRaces": true
+            }
+          ]
         },
         {
           "name": "Class 4",
           "subPath": "wave-regatta/class-4",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2022/open_wave_class4.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "Class 4 ECHO Boat Class",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Class 4 IRC Boat Class",
+              "includeRaces": true
+            }
+          ]
         },
         {
           "name": "Class 5",
           "subPath": "wave-regatta/class-5",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2022/open_wave_class5.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "Class 5 ECHO Boat Class",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Class 5 IRC Boat Class",
+              "includeRaces": true
+            }
+          ]
         },
         {
           "name": "Puppeteer",
           "subPath": "wave-regatta/puppeteer",
-          "file": "sources/reshyc/results.hyc.ie/reshyc/2022/open_wave_pup.htm"
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2022/open_wave_pup.htm",
+          "sections": [
+            {
+              "sectionTitle": "Puppeteer Boat Class"
+            },
+            {
+              "sectionTitle": "Puppeteer HCP Boat Class"
+            }
+          ]
         },
         {
           "name": "Squib",
           "subPath": "wave-regatta/squib",
-          "file": "sources/reshyc/results.hyc.ie/reshyc/2022/open_wave_squib.htm"
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2022/open_wave_squib.htm",
+          "sections": [
+            {
+              "sectionTitle": "Squib HCP Boat Class"
+            },
+            {
+              "sectionTitle": "Squib SCR Boat Class"
+            }
+          ]
         },
         {
           "name": "Howth 17",
           "subPath": "wave-regatta/howth-17",
-          "file": "sources/reshyc/results.hyc.ie/reshyc/2022/open_wave_h17.htm"
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2022/open_wave_h17.htm",
+          "sections": [
+            {
+              "sectionTitle": "Howth 17 Boat Class"
+            },
+            {
+              "sectionTitle": "Howth 17 HCP Boat Class"
+            }
+          ]
         },
         {
           "name": "J24's",
@@ -9831,7 +9925,20 @@
           "name": "Overall",
           "subPath": "dinghy-regatta/overall",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2022/dinghy_regatta_overall.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "Laser/Radial/ICLA/Topper Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Optimist Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Sundry Fleet",
+              "includeRaces": true
+            }
+          ]
         }
       ]
     },
@@ -9851,7 +9958,24 @@
           "name": "Overall",
           "subPath": "dinghy-frostbites/overall",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2022/dinghy_frostbites_overall.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "ILCA 4 Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "ILCA 6 Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "ILCA 7 Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "PY Class Fleet",
+              "includeRaces": true
+            }
+          ]
         }
       ]
     },
@@ -9871,7 +9995,20 @@
           "name": "Overall",
           "subPath": "brass-monkeys/overall",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2022/winter_brass_monkeys_overall.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "Class 1 HPH Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Class 2 HPH Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Class 3 HPH Fleet",
+              "includeRaces": true
+            }
+          ]
         }
       ]
     },
@@ -10054,13 +10191,31 @@
           "name": "Squibs",
           "subPath": "tuesday-series-1/squibs",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2023/club/series1_tuesquibscr.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "Squib Scr Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Squib Hcap Fleet",
+              "includeRaces": true
+            }
+          ]
         },
         {
           "name": "Puppeteers",
           "subPath": "tuesday-series-1/puppeteers",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2023/club/series1_tuepupscr.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "Puppeteer Scr Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Puppeteer Hcap Fleet",
+              "includeRaces": true
+            }
+          ]
         }
       ]
     },
@@ -10106,19 +10261,46 @@
           "name": "Class 1",
           "subPath": "wednesday-series-1/class-1",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2023/club/series1_class1.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "Class 1 IRC Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Class 1 HPH Fleet",
+              "includeRaces": true
+            }
+          ]
         },
         {
           "name": "Class 2/3",
           "subPath": "wednesday-series-1/class-2-3",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2023/club/series1_class2.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "Class 2 IRC Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Class 2 HPH Fleet",
+              "includeRaces": true
+            }
+          ]
         },
         {
           "name": "White Sails",
           "subPath": "wednesday-series-1/white-sails",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2023/club/series1_whitesails.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "White Sails IRC Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "White Sails HPH Fleet",
+              "includeRaces": true
+            }
+          ]
         }
       ]
     },
@@ -10138,7 +10320,16 @@
           "name": "PY Fleet",
           "subPath": "dinghy-thursdays/py-fleet",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2023/club/dinghy_py.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "PY Class Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Pico Fleet",
+              "includeRaces": true
+            }
+          ]
         }
       ]
     },
@@ -10158,13 +10349,31 @@
           "name": "Squibs",
           "subPath": "saturday-series-1/squibs",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2023/club/series1_satsquibs.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "Squib Scr Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Squib Hcap Fleet",
+              "includeRaces": true
+            }
+          ]
         },
         {
           "name": "Puppeteers",
           "subPath": "saturday-series-1/puppeteers",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2023/club/series1_satpups.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "Puppeteer Scr Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Puppeteer Hcap Fleet",
+              "includeRaces": true
+            }
+          ]
         }
       ]
     },
@@ -10184,13 +10393,31 @@
           "name": "Puppeteers",
           "subPath": "tuesday-series-2/puppeteers",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2023/club/series2_tuepupscr.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "Puppeteer Hcap Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Puppeteer Scr Fleet",
+              "includeRaces": true
+            }
+          ]
         },
         {
           "name": "Squibs",
           "subPath": "tuesday-series-2/squibs",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2023/club/series2_tuesquibscr.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "Squib Hcap Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Squib Scr Fleet",
+              "includeRaces": true
+            }
+          ]
         }
       ]
     },
@@ -10210,19 +10437,46 @@
           "name": "Class 1",
           "subPath": "wednesday-series-2/class-1",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2023/club/series2_class1.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "Class 1 IRC Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Class 1 HPH Fleet",
+              "includeRaces": true
+            }
+          ]
         },
         {
           "name": "Class 2/3",
           "subPath": "wednesday-series-2/class-2-3",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2023/club/series2_class2.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "Class 2 IRC Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Class 2 HPH Fleet",
+              "includeRaces": true
+            }
+          ]
         },
         {
           "name": "White Sails",
           "subPath": "wednesday-series-2/white-sails",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2023/club/series2_whitesails.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "White Sails IRC Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "White Sails HPH Fleet",
+              "includeRaces": true
+            }
+          ]
         }
       ]
     },
@@ -10242,13 +10496,31 @@
           "name": "Squibs",
           "subPath": "saturday-series-2/squibs",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2023/club/series2_satsquibs.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "Squib Scr Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Squib Hcap Fleet",
+              "includeRaces": true
+            }
+          ]
         },
         {
           "name": "Puppeteers",
           "subPath": "saturday-series-2/puppeteers",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2023/club/series2_satpups.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "Puppeteer Scr Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Puppeteer Hcap Fleet",
+              "includeRaces": true
+            }
+          ]
         }
       ]
     },
@@ -10294,13 +10566,31 @@
           "name": "Puppeteers",
           "subPath": "tuesday-series-3/puppeteers",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2023/club/series3_tuepupscr.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "Puppeteer Hcap Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Puppeteer Scr Fleet",
+              "includeRaces": true
+            }
+          ]
         },
         {
           "name": "Squibs",
           "subPath": "tuesday-series-3/squibs",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2023/club/series3_tuesquibscr.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "Squib Scr Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Squib Hcap Fleet",
+              "includeRaces": true
+            }
+          ]
         }
       ]
     },
@@ -10320,19 +10610,46 @@
           "name": "Class 1",
           "subPath": "wednesday-series-3/class-1",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2023/club/series3_class1.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "Class 1 IRC Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Class 1 HPH Fleet",
+              "includeRaces": true
+            }
+          ]
         },
         {
           "name": "Class 2/3",
           "subPath": "wednesday-series-3/class-2-3",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2023/club/series3_class2.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "Class 2 IRC Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Class 2 HPH Fleet",
+              "includeRaces": true
+            }
+          ]
         },
         {
           "name": "White Sails",
           "subPath": "wednesday-series-3/white-sails",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2023/club/series3_whitesails.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "White Sails IRC Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "White Sails HPH Fleet",
+              "includeRaces": true
+            }
+          ]
         }
       ]
     },
@@ -10378,7 +10695,16 @@
           "name": "Squibs",
           "subPath": "saturday-series-3/squibs",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2023/club/series3_satsquibs.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "Squib Scr Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Squib Hcap Fleet",
+              "includeRaces": true
+            }
+          ]
         }
       ]
     },
@@ -10398,19 +10724,46 @@
           "name": "Puppeteers",
           "subPath": "tuesday-mini-series/puppeteers",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2023/club/mini_tuepups.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "Puppeteer Hcap Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Puppeteer Scr Fleet",
+              "includeRaces": true
+            }
+          ]
         },
         {
           "name": "Squibs",
           "subPath": "tuesday-mini-series/squibs",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2023/club/mini_tuesquibs.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "Squib Hcap Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Squib Scr Fleet",
+              "includeRaces": true
+            }
+          ]
         },
         {
           "name": "Howth 17s",
           "subPath": "tuesday-mini-series/howth-17s",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2023/club/mini_tue17.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "17 Footer Scr Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "17 Footer HPH Fleet",
+              "includeRaces": true
+            }
+          ]
         }
       ]
     },
@@ -10430,19 +10783,46 @@
           "name": "Class 1",
           "subPath": "wednesday-mini-series/class-1",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2023/club/mini_class1.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "Class 1 IRC Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Class 1 HPH Fleet",
+              "includeRaces": true
+            }
+          ]
         },
         {
           "name": "Class 2",
           "subPath": "wednesday-mini-series/class-2",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2023/club/mini_class2.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "Class 2 IRC Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Class 2 HPH Fleet",
+              "includeRaces": true
+            }
+          ]
         },
         {
           "name": "WhiteSails",
           "subPath": "wednesday-mini-series/whitesails",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2023/club/mini_white.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "White Sails IRC Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "White Sails HPH Fleet",
+              "includeRaces": true
+            }
+          ]
         }
       ]
     },
@@ -10462,7 +10842,24 @@
           "name": "Overall",
           "subPath": "dinghy-frostbite-new-year-s/overall",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2023/dinghy_frostbites_nyd_overall.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "ILCA 4 Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "ILCA 6 Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "ILCA 7 Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "PY Class Fleet",
+              "includeRaces": true
+            }
+          ]
         }
       ]
     },
@@ -10482,7 +10879,24 @@
           "name": "Overall",
           "subPath": "dinghy-frostbite-spring/overall",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2023/dinghy_frostbites_spring_overall.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "ILCA 4 Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "ILCA 6 Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "ILCA 7 Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "PY Class Fleet",
+              "includeRaces": true
+            }
+          ]
         }
       ]
     },
@@ -10522,7 +10936,16 @@
           "name": "Main Fleet",
           "subPath": "brassed-off-cup/main-fleet",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2023/open/BrassedOffCup/main.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "Junior Status",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Senior Status",
+              "includeRaces": true
+            }
+          ]
         },
         {
           "name": "Combined",
@@ -10568,7 +10991,16 @@
           "name": "Howth 17s",
           "subPath": "howth-17-125th-yr-race/howth-17s",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2023/open/17s125.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "Fleet 1 Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Fleet 2 Fleet",
+              "includeRaces": true
+            }
+          ]
         }
       ]
     },
@@ -10638,7 +11070,60 @@
           "name": "Overall",
           "subPath": "gibney-classic/overall",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2013/open/gibneyclassic/class1.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "Class 2 IRC Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Class 2 HPH Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Class 3 IRC Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Class 3 HPH Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "J80 Scratch Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "White Sails IRC Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "White Sails HPH Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Puppeteer Scratch Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Puppeteer HPH Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Howth 17 Scratch Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Howth 17 HPH Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Squib Scratch Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Squib HPH Fleet",
+              "includeRaces": true
+            }
+          ]
         }
       ]
     },
@@ -10658,7 +11143,16 @@
           "name": "Overall",
           "subPath": "howth-17-national-champ/overall",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2023/open/h17nationals/h17.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "17 Footer Scr Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "17 Footer HPH Fleet",
+              "includeRaces": true
+            }
+          ]
         }
       ]
     },
@@ -10678,7 +11172,36 @@
           "name": "Overall",
           "subPath": "double-handed-race/overall",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2023/open/doublehanded/overall.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "Cruiser Spinnaker IRC Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Cruiser Spinnaker HPH Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Cruiser White Sails IRC Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Cruiser White Sails HPH Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "J80 Scratch Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Puppeteer Scratch Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Puppeteer HPH Fleet",
+              "includeRaces": true
+            }
+          ]
         }
       ]
     },
@@ -10698,7 +11221,16 @@
           "name": "Overall",
           "subPath": "puppeteer-national-champs/overall",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2023/open/pups/overall.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "Puppeteer Scr Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Puppeteer Hcap Fleet",
+              "includeRaces": true
+            }
+          ]
         }
       ]
     },
@@ -10718,7 +11250,16 @@
           "name": "Overall",
           "subPath": "shipman-nationals/overall",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2023/open/shipman_nationals.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "Shipman Scratch Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Shipman Handicap Fleet",
+              "includeRaces": true
+            }
+          ]
         }
       ]
     },
@@ -10758,49 +11299,121 @@
           "name": "Class 1",
           "subPath": "autumn-league/class-1",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2023/open/autumn_league/class1.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "Class 1 HPH Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Class 1 IRC Fleet",
+              "includeRaces": true
+            }
+          ]
         },
         {
           "name": "Class 2",
           "subPath": "autumn-league/class-2",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2023/open/autumn_league/class2.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "Class 2 HPH Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Class 2 IRC Fleet",
+              "includeRaces": true
+            }
+          ]
         },
         {
           "name": "Class 3",
           "subPath": "autumn-league/class-3",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2023/open/autumn_league/class3.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "Class 3 HPH Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Class 3 IRC Fleet",
+              "includeRaces": true
+            }
+          ]
         },
         {
           "name": "Class 4",
           "subPath": "autumn-league/class-4",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2023/open/autumn_league/class4.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "Class 4 NS HPH Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Class 4 NS IRC Fleet",
+              "includeRaces": true
+            }
+          ]
         },
         {
           "name": "Class 5",
           "subPath": "autumn-league/class-5",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2023/open/autumn_league/class5.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "Class 5 NS HPH Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Class 5 NS IRC Fleet",
+              "includeRaces": true
+            }
+          ]
         },
         {
           "name": "Howth 17",
           "subPath": "autumn-league/howth-17",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2023/open/autumn_league/h17.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "Howth 17 Scratch Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Howth 17 HPH Fleet",
+              "includeRaces": true
+            }
+          ]
         },
         {
           "name": "Puppeteers",
           "subPath": "autumn-league/puppeteers",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2023/open/autumn_league/pup.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "Puppeteer Hcap Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Puppeteer Scr Fleet",
+              "includeRaces": true
+            }
+          ]
         },
         {
           "name": "Squib",
           "subPath": "autumn-league/squib",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2023/open/autumn_league/squib.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "Squib Hcap Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Squib Scr Fleet",
+              "includeRaces": true
+            }
+          ]
         }
       ]
     },
@@ -10820,31 +11433,76 @@
           "name": "Class 0",
           "subPath": "icra-national-championships/class-0",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2023/open/icra/Class-0.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "Class 0 Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Class 0 - ECHO Fleet",
+              "includeRaces": true
+            }
+          ]
         },
         {
           "name": "Class 1",
           "subPath": "icra-national-championships/class-1",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2023/open/icra/Class-1.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "Class 1 Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Class 1 - ECHO Fleet",
+              "includeRaces": true
+            }
+          ]
         },
         {
           "name": "Class 2",
           "subPath": "icra-national-championships/class-2",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2023/open/icra/Class-2.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "Class 2 Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Class 2 - ECHO Fleet",
+              "includeRaces": true
+            }
+          ]
         },
         {
           "name": "Class 3",
           "subPath": "icra-national-championships/class-3",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2023/open/icra/Class-3.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "Class 3 Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Class 3 - ECHO Fleet",
+              "includeRaces": true
+            }
+          ]
         },
         {
           "name": "Non Spinnaker",
           "subPath": "icra-national-championships/non-spinnaker",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2023/open/icra/Class-NS.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "NS Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "NS - ECHO Fleet",
+              "includeRaces": true
+            }
+          ]
         },
         {
           "name": "J/24",
@@ -10890,7 +11548,20 @@
           "name": "Overall",
           "subPath": "brass-monkeys-autumn/overall",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2023/open/brassmonkeys/overall.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "Class 1 NS HPH Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Class 2 HPH Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Class 3 NS HPH Fleet",
+              "includeRaces": true
+            }
+          ]
         }
       ]
     },
@@ -10910,7 +11581,28 @@
           "name": "Overall",
           "subPath": "dinghy-frostbites/overall",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2023/open/frostbites/overall.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "ILCA 4 Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "ILCA 6 Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "ILCA 7 Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "PY - Slow Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "PY Class Fleet",
+              "includeRaces": true
+            }
+          ]
         }
       ]
     },
@@ -10968,13 +11660,31 @@
           "name": "Squibs",
           "subPath": "tuesday-series-1/squibs",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2024/club/series1_tue_squib.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "Squib Scratch Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Squib HPH Fleet",
+              "includeRaces": true
+            }
+          ]
         },
         {
           "name": "Puppeteers",
           "subPath": "tuesday-series-1/puppeteers",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2024/club/series1_tue_pup.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "Puppeteer Scratch Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Puppeteer HPH Fleet",
+              "includeRaces": true
+            }
+          ]
         }
       ]
     },
@@ -10994,19 +11704,46 @@
           "name": "Class 1",
           "subPath": "wednesday-series-1/class-1",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2024/club/series1_class1.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "Class 1 IRC Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Class 1 HPH Fleet",
+              "includeRaces": true
+            }
+          ]
         },
         {
           "name": "Class 2",
           "subPath": "wednesday-series-1/class-2",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2024/club/series1_class2.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "Class 2 IRC Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Class 2 HPH Fleet",
+              "includeRaces": true
+            }
+          ]
         },
         {
           "name": "Non Spinnaker",
           "subPath": "wednesday-series-1/non-spinnaker",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2024/club/series1_ns.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "Non Spinnaker IRC Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Non Spinnaker HPH Fleet",
+              "includeRaces": true
+            }
+          ]
         }
       ]
     },
@@ -11026,7 +11763,16 @@
           "name": "Overall",
           "subPath": "dinghys-thursdays/overall",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2024/club/dinghy_py.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "PY Class Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Optimist Fleet",
+              "includeRaces": true
+            }
+          ]
         }
       ]
     },
@@ -11046,13 +11792,31 @@
           "name": "Puppeteer",
           "subPath": "saturday-series-1/puppeteer",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2024/club/series1_satpups.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "Puppeteer Scatch Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Puppeteer HPH Fleet",
+              "includeRaces": true
+            }
+          ]
         },
         {
           "name": "Squibs",
           "subPath": "saturday-series-1/squibs",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2024/club/series1_satsquibs.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "Squib Scratch Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Squib HPH Fleet",
+              "includeRaces": true
+            }
+          ]
         },
         {
           "name": "Cruisers",
@@ -11078,7 +11842,16 @@
           "name": "Overall",
           "subPath": "tues-sat-17-s-series-1/overall",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2024/club/series1_tuesat17.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "17 Footer Scratch Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "17 Footer HPH Fleet",
+              "includeRaces": true
+            }
+          ]
         }
       ]
     },
@@ -11098,13 +11871,31 @@
           "name": "Squibs",
           "subPath": "tuesday-series-2/squibs",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2024/club/series2_tue_squib.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "Squib Scratch Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Squib HPH Fleet",
+              "includeRaces": true
+            }
+          ]
         },
         {
           "name": "Puppeteers",
           "subPath": "tuesday-series-2/puppeteers",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2024/club/series2_tue_pup.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "Puppeteer HPH Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Puppeteer Scratch Fleet",
+              "includeRaces": true
+            }
+          ]
         }
       ]
     },
@@ -11124,7 +11915,16 @@
           "name": "Overall",
           "subPath": "tues-sat-17-s-series-2/overall",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2024/club/series2_tuesat17.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "17 Footer Scratch Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "17 Footer HPH Fleet",
+              "includeRaces": true
+            }
+          ]
         }
       ]
     },
@@ -11144,19 +11944,46 @@
           "name": "Class 1",
           "subPath": "wednesday-series-2/class-1",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2024/club/series2_class1.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "Class 1 IRC Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Class 1 HPH Fleet",
+              "includeRaces": true
+            }
+          ]
         },
         {
           "name": "Class 2",
           "subPath": "wednesday-series-2/class-2",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2024/club/series2_class2.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "Class 2 IRC Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Class 2 HPH Fleet",
+              "includeRaces": true
+            }
+          ]
         },
         {
           "name": "Non Spinnaker",
           "subPath": "wednesday-series-2/non-spinnaker",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2024/club/series2_ns.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "Non Spinnaker IRC Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Non Spinnaker HPH Fleet",
+              "includeRaces": true
+            }
+          ]
         }
       ]
     },
@@ -11176,13 +12003,31 @@
           "name": "Puppeteers",
           "subPath": "saturday-series-2/puppeteers",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2024/club/series2_satpups.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "Puppeteer Scatch Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Puppeteer HPH Fleet",
+              "includeRaces": true
+            }
+          ]
         },
         {
           "name": "Squibs",
           "subPath": "saturday-series-2/squibs",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2024/club/series2_satsquibs.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "Squib Scratch Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Squib HPH Fleet",
+              "includeRaces": true
+            }
+          ]
         }
       ]
     },
@@ -11202,7 +12047,16 @@
           "name": "Overall",
           "subPath": "tues-sat-17-s-series-3/overall",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2024/club/series3_tuesat17.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "17 Footer Scratch Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "17 Footer HPH Fleet",
+              "includeRaces": true
+            }
+          ]
         }
       ]
     },
@@ -11222,13 +12076,31 @@
           "name": "Squibs",
           "subPath": "tuesday-series-3/squibs",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2024/club/series3_tue_squib.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "Squib HPH Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Squib Scratch Fleet",
+              "includeRaces": true
+            }
+          ]
         },
         {
           "name": "Puppeteers",
           "subPath": "tuesday-series-3/puppeteers",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2024/club/series3_tue_pup.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "Puppeteer Scratch Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Puppeteer HPH Fleet",
+              "includeRaces": true
+            }
+          ]
         }
       ]
     },
@@ -11248,19 +12120,46 @@
           "name": "Class 1",
           "subPath": "wednesday-series-3/class-1",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2024/club/series3_class1.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "Class 1 IRC Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Class 1 HPH Fleet",
+              "includeRaces": true
+            }
+          ]
         },
         {
           "name": "Class 2",
           "subPath": "wednesday-series-3/class-2",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2024/club/series3_class2.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "Class 2 IRC Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Class 2 HPH Fleet",
+              "includeRaces": true
+            }
+          ]
         },
         {
           "name": "Non Spinnaker",
           "subPath": "wednesday-series-3/non-spinnaker",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2024/club/series3_ns.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "Non Spinnaker IRC Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Non Spinnaker HPH Fleet",
+              "includeRaces": true
+            }
+          ]
         }
       ]
     },
@@ -11280,13 +12179,31 @@
           "name": "Puppeteers",
           "subPath": "saturday-series-3/puppeteers",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2024/club/series3_satpups.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "Puppeteer HPH Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Puppeteer Scratch Fleet",
+              "includeRaces": true
+            }
+          ]
         },
         {
           "name": "Squibs",
           "subPath": "saturday-series-3/squibs",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2024/club/series3_satsquibs.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "Squib Scratch Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Squib HPH Fleet",
+              "includeRaces": true
+            }
+          ]
         }
       ]
     },
@@ -11306,7 +12223,16 @@
           "name": "Overall",
           "subPath": "tues-sat-17-s-mini-series/overall",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2024/club/mini_tuesat17.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "17 Footer Scratch Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "17 Footer HPH Fleet",
+              "includeRaces": true
+            }
+          ]
         }
       ]
     },
@@ -11326,13 +12252,31 @@
           "name": "Squibs",
           "subPath": "tuesday-mini-series/squibs",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2024/club/mini_tue_squib.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "Squib Scratch Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Squib HPH Fleet",
+              "includeRaces": true
+            }
+          ]
         },
         {
           "name": "Puppeteers",
           "subPath": "tuesday-mini-series/puppeteers",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2024/club/mini_tue_pup.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "Puppeteer HPH Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Puppeteer Scratch Fleet",
+              "includeRaces": true
+            }
+          ]
         }
       ]
     },
@@ -11352,19 +12296,46 @@
           "name": "Class 1",
           "subPath": "wednesday-mini-series/class-1",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2024/club/mini_class1.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "Class 1 IRC Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Class 1 HPH Fleet",
+              "includeRaces": true
+            }
+          ]
         },
         {
           "name": "Class 2",
           "subPath": "wednesday-mini-series/class-2",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2024/club/mini_class2.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "Class 2 IRC Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Class 2 HPH Fleet",
+              "includeRaces": true
+            }
+          ]
         },
         {
           "name": "Non Spinnaker",
           "subPath": "wednesday-mini-series/non-spinnaker",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2024/club/mini_ns.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "Non Spinnaker IRC Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Non Spinnaker HPH Fleet",
+              "includeRaces": true
+            }
+          ]
         }
       ]
     },
@@ -11384,7 +12355,28 @@
           "name": "Overall",
           "subPath": "dinghy-f-bite-spring-series/overall",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2024/open/fbite_spring_overall.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "PY Class Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "PY - Slow Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "ILCA 4 Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "ILCA 6 Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "ILCA 7 Fleet",
+              "includeRaces": true
+            }
+          ]
         }
       ]
     },
@@ -11444,7 +12436,16 @@
           "name": "Overall",
           "subPath": "2024-ilca-masters/overall",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2024/open/ILCAMasters/overall.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "Radial Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Standard Fleet",
+              "includeRaces": true
+            }
+          ]
         }
       ]
     },
@@ -11464,37 +12465,91 @@
           "name": "Class 1",
           "subPath": "wave-regatta/class-1",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2024/open_wave_class1.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "Class 1 Echo Start Class",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Class 1 IRC Start Class",
+              "includeRaces": true
+            }
+          ]
         },
         {
           "name": "Class 2",
           "subPath": "wave-regatta/class-2",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2024/open_wave_class2.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "Class 2 Echo Start Class",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Class 2 IRC Start Class",
+              "includeRaces": true
+            }
+          ]
         },
         {
           "name": "Class 3",
           "subPath": "wave-regatta/class-3",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2024/open_wave_class3.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "Class 3 IRC Start Class",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Class 3 Echo Start Class",
+              "includeRaces": true
+            }
+          ]
         },
         {
           "name": "Class 0",
           "subPath": "wave-regatta/class-0",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2024/open_wave_class0.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "Class 0 Echo Start Class",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Class 0 IRC Start Class",
+              "includeRaces": true
+            }
+          ]
         },
         {
           "name": "Class 4 NS1",
           "subPath": "wave-regatta/class-4-ns1",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2024/open_wave_class4.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "Class 4 IRC Start Class",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Class 4 Echo Start Class",
+              "includeRaces": true
+            }
+          ]
         },
         {
           "name": "Class 5 NS2",
           "subPath": "wave-regatta/class-5-ns2",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2024/open_wave_class5.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "Class 1 Echo Start Class",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Class 1 IRC Start Class",
+              "includeRaces": true
+            }
+          ]
         }
       ]
     },
@@ -11514,49 +12569,121 @@
           "name": "Class 0",
           "subPath": "lambay-race/class-0",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2024/open/Lambay/class0.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "Class 0 IRC Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Class 0 Echo Fleet",
+              "includeRaces": true
+            }
+          ]
         },
         {
           "name": "Class 1",
           "subPath": "lambay-race/class-1",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2024/open/Lambay/class1.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "Class 1 IRC Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Class 1 Echo Fleet",
+              "includeRaces": true
+            }
+          ]
         },
         {
           "name": "Class 2",
           "subPath": "lambay-race/class-2",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2024/open/Lambay/class2.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "Class 2 IRC Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Class 2 Echo Fleet",
+              "includeRaces": true
+            }
+          ]
         },
         {
           "name": "Class 3",
           "subPath": "lambay-race/class-3",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2024/open/Lambay/class3.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "Class 3 IRC Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Class 3 Echo Fleet",
+              "includeRaces": true
+            }
+          ]
         },
         {
           "name": "Class 4 NS1",
           "subPath": "lambay-race/class-4-ns1",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2024/open/Lambay/class4.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "Class 4 IRC Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Class 4 Echo Fleet",
+              "includeRaces": true
+            }
+          ]
         },
         {
           "name": "Puppeteers",
           "subPath": "lambay-race/puppeteers",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2024/open/Lambay/pups.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "Puppeteer Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Puppeteer HPH Fleet",
+              "includeRaces": true
+            }
+          ]
         },
         {
           "name": "Howth 17’s",
           "subPath": "lambay-race/howth-17-s",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2024/open/Lambay/h17.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "Howth 17 Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Howth 17 HPH Fleet",
+              "includeRaces": true
+            }
+          ]
         },
         {
           "name": "Squibs",
           "subPath": "lambay-race/squibs",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2024/open/Lambay/squibs.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "Squib Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Squib HPH Fleet",
+              "includeRaces": true
+            }
+          ]
         }
       ]
     },
@@ -11576,7 +12703,16 @@
           "name": "Overall",
           "subPath": "fingal-series/overall",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2024/open_fingal_overall.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "IRC Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "HPH Fleet",
+              "includeRaces": true
+            }
+          ]
         }
       ]
     },
@@ -11636,7 +12772,60 @@
           "name": "Overall",
           "subPath": "gibney-classic/overall",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2024/open/gibneyclassic/overall.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "Class 1 IRC Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Class 1 HPH Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Class 2 IRC Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Class 2 HPH Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Class 3 IRC Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Class 3 HPH Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Non Spinnaker IRC Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Non Spinnaker HPH Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Puppeteer Scratch Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Puppeteer HPH Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Howth 17 Scratch Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Squib Scratch Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Squib HPH Fleet",
+              "includeRaces": true
+            }
+          ]
         }
       ]
     },
@@ -11696,7 +12885,16 @@
           "name": "Overall",
           "subPath": "howth-17-irish-championships/overall",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2024/open/h17snationals.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "17 Footer Scratch Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "17 Footer HPH Fleet",
+              "includeRaces": true
+            }
+          ]
         }
       ]
     },
@@ -11760,7 +12958,16 @@
           "name": "Overall",
           "subPath": "puppeteer-22-championships/overall",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2024/open/pupnationals_overall.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "Puppeteer Scratch Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Puppeteer HPH Fleet",
+              "includeRaces": true
+            }
+          ]
         }
       ]
     },
@@ -11800,7 +13007,32 @@
           "name": "Overall",
           "subPath": "double-handed/overall",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2024/open/doublehanded_overall.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "Cruiser Spinnaker IRC Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Cruiser Spinnaker HPH Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Cruiser Non-Spinnaker IRC Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Cruiser Non-Spinnaker HPH Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Puppeteer 22 Scratch Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Puppeteer 22 HPH Fleet",
+              "includeRaces": true
+            }
+          ]
         }
       ]
     },
@@ -11820,19 +13052,46 @@
           "name": "Howth 17 - overall",
           "subPath": "autumn-league-inshore/howth-17-overall",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2024/open/al_inshore_h17.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "Howth 17 Scratch Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Howth 17 HPH Fleet",
+              "includeRaces": true
+            }
+          ]
         },
         {
           "name": "Squib - Overall",
           "subPath": "autumn-league-inshore/squib-overall",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2024/open/al_inshore_squib.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "Squib Scratch Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Squib HPH Fleet",
+              "includeRaces": true
+            }
+          ]
         },
         {
           "name": "Puppeteers - Overall",
           "subPath": "autumn-league-inshore/puppeteers-overall",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2024/open/al_inshore_pups.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "Puppeteer 22 Scratch Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Puppeteer 22 HPH Fleet",
+              "includeRaces": true
+            }
+          ]
         }
       ]
     },
@@ -11878,7 +13137,20 @@
           "name": "ILCA Overall",
           "subPath": "dinghy-frostbites-winter/ilca-overall",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2024/open/frostwinter_ilcaoverall.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "ILCA 4 Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "ILCA 6 Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "ILCA 7 Fleet",
+              "includeRaces": true
+            }
+          ]
         },
         {
           "name": "PY Class",
@@ -11910,7 +13182,20 @@
           "name": "Overall",
           "subPath": "brass-monkeys-winter-series/overall",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2024/open/bmwinter_overall.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "Class 1 NS HPH Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Class 3 NS HPH Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Class 2 HPH Fleet",
+              "includeRaces": true
+            }
+          ]
         }
       ]
     },
@@ -11930,7 +13215,16 @@
           "name": "Overall",
           "subPath": "tues-sat-17-s-series-1/overall",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2025/club/series1_tuesat17.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "17 Footer Scratch Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "17 Footer HPH Fleet",
+              "includeRaces": true
+            }
+          ]
         }
       ]
     },
@@ -11950,19 +13244,46 @@
           "name": "Squibs",
           "subPath": "saturday-series-1/squibs",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2025/club/series1_satsquibs.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "Squib HPH Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Squib Scratch Fleet",
+              "includeRaces": true
+            }
+          ]
         },
         {
           "name": "Puppeteer 22",
           "subPath": "saturday-series-1/puppeteer-22",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2025/club/series1_satpups.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "Puppeteer HPH Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Puppeteer Scratch Fleet",
+              "includeRaces": true
+            }
+          ]
         },
         {
           "name": "Cruisers",
           "subPath": "saturday-series-1/cruisers",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2025/club/series1_satcruisers.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "NS Cruiser HPH Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "NS Cruiser IRC Fleet",
+              "includeRaces": true
+            }
+          ]
         }
       ]
     },
@@ -11982,13 +13303,31 @@
           "name": "Squibs",
           "subPath": "tuesday-series-1/squibs",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2025/club/series1_tue_squib.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "Squib Scratch Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Squib HPH Fleet",
+              "includeRaces": true
+            }
+          ]
         },
         {
           "name": "Puppeteers",
           "subPath": "tuesday-series-1/puppeteers",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2025/club/series1_tue_pup.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "Puppeteer HPH Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Puppeteer Scratch Fleet",
+              "includeRaces": true
+            }
+          ]
         }
       ]
     },
@@ -12008,25 +13347,61 @@
           "name": "Class 1",
           "subPath": "wednesday-series-1/class-1",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2025/club/series1_class1.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "Class 1 HPH Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Class 1 IRC Fleet",
+              "includeRaces": true
+            }
+          ]
         },
         {
           "name": "Class 2",
           "subPath": "wednesday-series-1/class-2",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2025/club/series1_class2.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "Class 2 HPH Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Class 2 IRC Fleet",
+              "includeRaces": true
+            }
+          ]
         },
         {
           "name": "Non Spinnaker",
           "subPath": "wednesday-series-1/non-spinnaker",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2025/club/series1_ns.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "Non Spinnaker HPH Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Non Spinnaker IRC Fleet",
+              "includeRaces": true
+            }
+          ]
         },
         {
           "name": "Class 3",
           "subPath": "wednesday-series-1/class-3",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2025/club/series1_class3.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "Class 3 IRC Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Class 3 HPH Fleet",
+              "includeRaces": true
+            }
+          ]
         }
       ]
     },
@@ -12072,13 +13447,31 @@
           "name": "Squibs",
           "subPath": "tuesday-series-2/squibs",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2025/club/series2_tue_squib.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "Squib HPH Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Squib Scratch Fleet",
+              "includeRaces": true
+            }
+          ]
         },
         {
           "name": "Puppeteer 22",
           "subPath": "tuesday-series-2/puppeteer-22",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2025/club/series2_tue_pup.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "Puppeteer HPH Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Puppeteer Scratch Fleet",
+              "includeRaces": true
+            }
+          ]
         }
       ]
     },
@@ -12098,25 +13491,61 @@
           "name": "Class 1",
           "subPath": "wednesday-series-2/class-1",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2025/club/series2_class1.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "Class 1 HPH Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Class 1 IRC Fleet",
+              "includeRaces": true
+            }
+          ]
         },
         {
           "name": "Class 2",
           "subPath": "wednesday-series-2/class-2",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2025/club/series2_class2.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "Class 2 HPH Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Class 2 IRC Fleet",
+              "includeRaces": true
+            }
+          ]
         },
         {
           "name": "Class 3",
           "subPath": "wednesday-series-2/class-3",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2025/club/series2_class3.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "Class 3 HPH Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Class 3 IRC Fleet",
+              "includeRaces": true
+            }
+          ]
         },
         {
           "name": "Non Spinnaker",
           "subPath": "wednesday-series-2/non-spinnaker",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2025/club/series2_class4.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "Non Spinnaker HPH Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Non Spinnaker IRC Fleet",
+              "includeRaces": true
+            }
+          ]
         }
       ]
     },
@@ -12136,19 +13565,46 @@
           "name": "Cruisers",
           "subPath": "saturday-series-2/cruisers",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2025/club/series2_satcruisers.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "NS Cruiser HPH Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "NS Cruiser IRC Fleet",
+              "includeRaces": true
+            }
+          ]
         },
         {
           "name": "Puppeteer 22",
           "subPath": "saturday-series-2/puppeteer-22",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2025/club/series2_satpups.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "Puppeteer HPH Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Puppeteer Scratch Fleet",
+              "includeRaces": true
+            }
+          ]
         },
         {
           "name": "Squibs",
           "subPath": "saturday-series-2/squibs",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2025/club/series2_satsquibs.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "Squib HPH Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Squib Scratch Fleet",
+              "includeRaces": true
+            }
+          ]
         }
       ]
     },
@@ -12168,7 +13624,16 @@
           "name": "Overall",
           "subPath": "tues-sat-17-s-series-2/overall",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2025/club/series2_tuesat17.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "17 Footer HPH Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "17 Footer Scratch Fleet",
+              "includeRaces": true
+            }
+          ]
         }
       ]
     },
@@ -12187,7 +13652,15 @@
         {
           "name": "Overall",
           "subPath": "tues-overall-puppeteer-22/overall",
-          "file": "sources/reshyc/results.hyc.ie/reshyc/2025/club/overall_tuepup.htm"
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2025/club/overall_tuepup.htm",
+          "sections": [
+            {
+              "sectionTitle": "Puppeteer 22 HPH Fleet"
+            },
+            {
+              "sectionTitle": "Puppeteer 22 Scratch Fleet"
+            }
+          ]
         }
       ]
     },
@@ -12207,13 +13680,31 @@
           "name": "Puppeteer 22",
           "subPath": "tuesday-series-3/puppeteer-22",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2025/club/series3_tue_pup.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "Puppeteer HPH Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Puppeteer Scratch Fleet",
+              "includeRaces": true
+            }
+          ]
         },
         {
           "name": "Squibs",
           "subPath": "tuesday-series-3/squibs",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2025/club/series3_tue_squib.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "Squib HPH Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Squib Scratch Fleet",
+              "includeRaces": true
+            }
+          ]
         }
       ]
     },
@@ -12233,25 +13724,61 @@
           "name": "Class 2",
           "subPath": "wednesday-series-3/class-2",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2025/club/series3_class2.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "Class 2 HPH Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Class 2 IRC Fleet",
+              "includeRaces": true
+            }
+          ]
         },
         {
           "name": "Class 1",
           "subPath": "wednesday-series-3/class-1",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2025/club/series3_class1.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "Class 1 HPH Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Class 1 IRC Fleet",
+              "includeRaces": true
+            }
+          ]
         },
         {
           "name": "Class 3",
           "subPath": "wednesday-series-3/class-3",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2025/club/series3_class3.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "Class 3 HPH Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Class 3 IRC Fleet",
+              "includeRaces": true
+            }
+          ]
         },
         {
           "name": "Non Spinnaker",
           "subPath": "wednesday-series-3/non-spinnaker",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2025/club/series3_class4.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "Non Spinnaker HPH Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Non Spinnaker IRC Fleet",
+              "includeRaces": true
+            }
+          ]
         }
       ]
     },
@@ -12271,7 +13798,16 @@
           "name": "Overall",
           "subPath": "tues-sat-17-s-series-3/overall",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2025/club/series3_tuesat17.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "17 Footer HPH Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "17 Footer Scratch Fleet",
+              "includeRaces": true
+            }
+          ]
         }
       ]
     },
@@ -12291,19 +13827,46 @@
           "name": "Puppeteer 22",
           "subPath": "saturday-series-3/puppeteer-22",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2025/club/series3_satpups.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "Puppeteer HPH Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Puppeteer Scratch Fleet",
+              "includeRaces": true
+            }
+          ]
         },
         {
           "name": "Cruisers",
           "subPath": "saturday-series-3/cruisers",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2025/club/series3_satcruisers.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "NS Cruiser HPH Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "NS Cruiser IRC Fleet",
+              "includeRaces": true
+            }
+          ]
         },
         {
           "name": "Squibs",
           "subPath": "saturday-series-3/squibs",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2025/club/series3_satsquibs.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "Squib HPH Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Squib Scratch Fleet",
+              "includeRaces": true
+            }
+          ]
         }
       ]
     },
@@ -12323,13 +13886,31 @@
           "name": "Puppeteer 22",
           "subPath": "tuesday-mini-series/puppeteer-22",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2025/club/mini_tue_pup.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "Puppeteer HPH Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Puppeteer Scratch Fleet",
+              "includeRaces": true
+            }
+          ]
         },
         {
           "name": "Squibs",
           "subPath": "tuesday-mini-series/squibs",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2025/club/mini_tue_squib.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "Squib HPH Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Squib Scratch Fleet",
+              "includeRaces": true
+            }
+          ]
         }
       ]
     },
@@ -12349,7 +13930,16 @@
           "name": "Overall",
           "subPath": "tues-sat-17-s-mini-series/overall",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2025/club/mini_tuesat17.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "17 Footer HPH Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "17 Footer Scratch Fleet",
+              "includeRaces": true
+            }
+          ]
         }
       ]
     },
@@ -12369,25 +13959,61 @@
           "name": "Class 1",
           "subPath": "wednesday-mini-series/class-1",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2025/club/mini_class1.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "Class 1 HPH Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Class 1 IRC Fleet",
+              "includeRaces": true
+            }
+          ]
         },
         {
           "name": "Class 2",
           "subPath": "wednesday-mini-series/class-2",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2025/club/mini_class2.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "Class 2 HPH Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Class 2 IRC Fleet",
+              "includeRaces": true
+            }
+          ]
         },
         {
           "name": "Class 3",
           "subPath": "wednesday-mini-series/class-3",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2025/club/mini_class3.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "Class 3 HPH Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Class 3 IRC Fleet",
+              "includeRaces": true
+            }
+          ]
         },
         {
           "name": "Non Spinnaker",
           "subPath": "wednesday-mini-series/non-spinnaker",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2025/club/mini_class4.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "Non Spinnaker HPH Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Non Spinnaker IRC Fleet",
+              "includeRaces": true
+            }
+          ]
         }
       ]
     },
@@ -12439,7 +14065,20 @@
           "name": "ILCA",
           "subPath": "dinghy-f-bite-spring-2025/ilca",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2025/open/springfbites/ilcaclass.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "ILCA 4 Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "ILCA 6 Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "ILCA 7 Fleet",
+              "includeRaces": true
+            }
+          ]
         }
       ]
     },
@@ -12459,7 +14098,16 @@
           "name": "Overall",
           "subPath": "brass-monkeys-spring-series/overall",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2025/open/BMspringseries_overall.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "Fleet 1 NS HPH Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Fleet 2 NS HPH Fleet",
+              "includeRaces": true
+            }
+          ]
         }
       ]
     },
@@ -12479,7 +14127,20 @@
           "name": "ILCA Class",
           "subPath": "dinghy-round-the-island/ilca-class",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2025/open/RTI/ilca.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "ILCA 4 Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "ILCA 6 Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "ILCA 7 Fleet",
+              "includeRaces": true
+            }
+          ]
         },
         {
           "name": "PY Class",
@@ -12505,7 +14166,16 @@
           "name": "Overall",
           "subPath": "fingal-series/overall",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2025/open/open_fingal_overall.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "HPH Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "IRC Fleet",
+              "includeRaces": true
+            }
+          ]
         }
       ]
     },
@@ -12525,85 +14195,211 @@
           "name": "Puppeteer 22",
           "subPath": "lambay-races/puppeteer-22",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2025/open/lambay/pup22.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "Puppeteer 22 Scratch Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Puppeteer 22 HPH Fleet",
+              "includeRaces": true
+            }
+          ]
         },
         {
           "name": "Howth 17",
           "subPath": "lambay-races/howth-17",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2025/open/lambay/howth17.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "Howth 17 Scratch Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Howth 17 HPH Fleet",
+              "includeRaces": true
+            }
+          ]
         },
         {
           "name": "Squib",
           "subPath": "lambay-races/squib",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2025/open/lambay/squib.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "Squib Scratch Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Squib HPH Fleet",
+              "includeRaces": true
+            }
+          ]
         },
         {
           "name": "Class 0",
           "subPath": "lambay-races/class-0",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2025/open/lambay/class0.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "Class 0 IRC Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Class 0 HPH Fleet",
+              "includeRaces": true
+            }
+          ]
         },
         {
           "name": "Class 1",
           "subPath": "lambay-races/class-1",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2025/open/lambay/class1.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "Class 1 IRC Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Class 1 HPH Fleet",
+              "includeRaces": true
+            }
+          ]
         },
         {
           "name": "Class 2",
           "subPath": "lambay-races/class-2",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2025/open/lambay/class2.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "Class 2 IRC Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Class 2 HPH Fleet",
+              "includeRaces": true
+            }
+          ]
         },
         {
           "name": "Class 3",
           "subPath": "lambay-races/class-3",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2025/open/lambay/class3.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "Class 3 IRC Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Class 3 HPH Fleet",
+              "includeRaces": true
+            }
+          ]
         },
         {
           "name": "Non Spinnaker 4",
           "subPath": "lambay-races/non-spinnaker-4",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2025/open/lambay/ns4.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "Class 4 IRC Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Class 4 HPH Fleet",
+              "includeRaces": true
+            }
+          ]
         },
         {
           "name": "Non Spinnaker 5",
           "subPath": "lambay-races/non-spinnaker-5",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2025/open/lambay/ns5.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "Class 5 IRC Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Class 5 HPH Fleet",
+              "includeRaces": true
+            }
+          ]
         },
         {
           "name": "Ruffian 23",
           "subPath": "lambay-races/ruffian-23",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2025/open/lambay/ruf23.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "Ruffian 23 Scratch Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Ruffian 23 HPH Fleet",
+              "includeRaces": true
+            }
+          ]
         },
         {
           "name": "Sunday Class 0",
           "subPath": "lambay-races/sunday-class-0",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2025/open/lambay/sunclass0.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "Class 0 IRC Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Class 0 HPH Fleet",
+              "includeRaces": true
+            }
+          ]
         },
         {
           "name": "Sunday Class 1",
           "subPath": "lambay-races/sunday-class-1",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2025/open/lambay/sunclass1.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "Class 1 IRC Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Class 1 HPH Fleet",
+              "includeRaces": true
+            }
+          ]
         },
         {
           "name": "Sunday Class 2",
           "subPath": "lambay-races/sunday-class-2",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2025/open/lambay/sunclass2.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "Class 2 IRC Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Class 2 HPH Fleet",
+              "includeRaces": true
+            }
+          ]
         },
         {
           "name": "Sunday Class 4 NS",
           "subPath": "lambay-races/sunday-class-4-ns",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2025/open/lambay/sunclass4.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "Class 4 IRC Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Class 4 HPH Fleet",
+              "includeRaces": true
+            }
+          ]
         }
       ]
     },
@@ -12677,7 +14473,56 @@
           "name": "Overall",
           "subPath": "gibney-classic/overall",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2025/open/gibneyclassic_overall.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "Puppeteer Scratch Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Puppeteer HPH Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Squib Scratch Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Squib HPH Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Class 1 IRC Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Class 1 HPH Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Class 2 IRC Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Non Spinnaker HPH Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Non Spinnaker IRC Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Class 2 HPH Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Class 3 IRC Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Class 3 HPH Fleet",
+              "includeRaces": true
+            }
+          ]
         }
       ]
     },
@@ -12697,7 +14542,16 @@
           "name": "Howth 17",
           "subPath": "howth-17-footer-nationals/howth-17",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2025/open/h17nationals.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "17 Footer HPH Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "17 Footer Scratch Fleet",
+              "includeRaces": true
+            }
+          ]
         }
       ]
     },
@@ -12737,7 +14591,24 @@
           "name": "Overall",
           "subPath": "double-handed/overall",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2025/open/doublehanded_overall.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "Cruiser Spinnaker HPH Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Cruiser Spinnaker IRC Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Cruiser Non-Spinnaker HPH Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Cruiser Non-Spinnaker IRC Fleet",
+              "includeRaces": true
+            }
+          ]
         }
       ]
     },
@@ -12757,7 +14628,16 @@
           "name": "Overall",
           "subPath": "puppeteer-22-championships/overall",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2025/open/pupnationals_overall.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "Puppeteer HPH Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Puppeteer Scratch Fleet",
+              "includeRaces": true
+            }
+          ]
         }
       ]
     },
@@ -12797,19 +14677,46 @@
           "name": "Howth 17",
           "subPath": "autumn-league-inshore/howth-17",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2025/open/al_inshore_h17.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "H17 Scr Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "H17 HPH Fleet",
+              "includeRaces": true
+            }
+          ]
         },
         {
           "name": "Puppeteer 22",
           "subPath": "autumn-league-inshore/puppeteer-22",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2025/open/al_inshore_p22.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "Pup 22 Scr Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Pup 22 HPH Fleet",
+              "includeRaces": true
+            }
+          ]
         },
         {
           "name": "Squib",
           "subPath": "autumn-league-inshore/squib",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2025/open/al_inshore_squib.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "Squib Scr Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Squib HPH Fleet",
+              "includeRaces": true
+            }
+          ]
         }
       ]
     },
@@ -12829,25 +14736,61 @@
           "name": "Class 1",
           "subPath": "autumn-league-offshore/class-1",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2025/open/al_offshore_cr1.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "Class 1 IRC Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Class 1 HPH Fleet",
+              "includeRaces": true
+            }
+          ]
         },
         {
           "name": "Class 2",
           "subPath": "autumn-league-offshore/class-2",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2025/open/al_offshore_cr2.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "Class 2 IRC Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Class 2 HPH Fleet",
+              "includeRaces": true
+            }
+          ]
         },
         {
           "name": "Class 3",
           "subPath": "autumn-league-offshore/class-3",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2025/open/al_offshore_cr3.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "Class 3 IRC Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Class 3 HPH Fleet",
+              "includeRaces": true
+            }
+          ]
         },
         {
           "name": "Non Spinnaker Class 4",
           "subPath": "autumn-league-offshore/non-spinnaker-class-4",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2025/open/al_offshore_cr4.htm",
-          "includeRaces": true
+          "sections": [
+            {
+              "sectionTitle": "Non Spin Class 4 IRC Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Non Spin Class 4 HPH Fleet",
+              "includeRaces": true
+            }
+          ]
         },
         {
           "name": "Non Spinnaker Class 5",

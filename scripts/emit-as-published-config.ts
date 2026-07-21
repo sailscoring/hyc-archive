@@ -114,6 +114,11 @@ function parseAdminCsv(file: string): { rows: AdminRow[]; malformed: string[] } 
   return { rows, malformed };
 }
 
+interface ConfigSection {
+  sectionTitle: string;
+  includeRaces?: true;
+}
+
 interface ConfigFleet {
   name: string;
   subPath: string;
@@ -122,6 +127,35 @@ interface ConfigFleet {
    *  only when the captured page actually publishes race tables (most do; a
    *  handful — e-sailing ladders, participation lists — are standings-only). */
   includeRaces?: true;
+  /** When the capture publishes several summary sections on one page (a class
+   *  scored two ways — HPH + Scratch — or a class group), list them so the
+   *  app emits one combined page (#321) with a section per summary rather than
+   *  dropping all but the first. */
+  sections?: ConfigSection[];
+}
+
+/** The summary-section headings of a capture, in document order, normalised
+ *  the way the app's parser reads them (`textContent`, collapsed). Scripts and
+ *  styles are stripped first: Sailwave's page carries a `summarytitle` heading
+ *  inside a `<script>` template that isn't a real rendered section. */
+function sectionsOf(html: string): { titles: string[]; tableCount: number; hasRaces: boolean } {
+  const body = html
+    .replace(/<script[\s\S]*?<\/script>/gi, '')
+    .replace(/<style[\s\S]*?<\/style>/gi, '');
+  const titles = [...body.matchAll(/<h3 class="summarytitle"[^>]*>([\s\S]*?)<\/h3>/g)].map(
+    (m) =>
+      m[1]
+        .replace(/<[^>]*>/g, '')
+        .replace(/&nbsp;/g, ' ')
+        .replace(/&amp;/g, '&')
+        .replace(/\s+/g, ' ')
+        .trim(),
+  );
+  return {
+    titles,
+    tableCount: (body.match(/class="summarytable"/g) ?? []).length,
+    hasRaces: body.includes('class="racetable"'),
+  };
 }
 
 interface ConfigSeries {
@@ -209,8 +243,22 @@ function run(): number {
         const base = subPath;
         while (usedSubPaths.has(subPath)) subPath = `${base}-${n++}`;
         usedSubPaths.add(subPath);
-        const includeRaces = readFileSync(file, 'utf8').includes('class="racetable"');
-        fleets.push({ name, subPath, file, ...(includeRaces ? { includeRaces: true } : {}) });
+        const { titles, tableCount, hasRaces } = sectionsOf(readFileSync(file, 'utf8'));
+        if (tableCount > 1 && titles.length === tableCount) {
+          // A single page publishing several summary sections — publish it as
+          // one combined page (#321), a member fleet per section.
+          fleets.push({
+            name,
+            subPath,
+            file,
+            sections: titles.map((sectionTitle) => ({
+              sectionTitle,
+              ...(hasRaces ? { includeRaces: true as const } : {}),
+            })),
+          });
+        } else {
+          fleets.push({ name, subPath, file, ...(hasRaces ? { includeRaces: true } : {}) });
+        }
       }
       if (fleets.length === 0) continue;
       series.push({
