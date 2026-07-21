@@ -65,10 +65,6 @@ jobs:
 
       - name: Generate ingest documents
         working-directory: app
-        # The generator's memory use grows with the corpus (~370 series needs
-        # >6 GB today); give it most of the runner.
-        env:
-          NODE_OPTIONS: --max-old-space-size=12288
         run: pnpm archive-generate ${{ github.workspace }}/as-published.config.json
 
       # The `secrets` context isn't available in `if:` expressions, so the
