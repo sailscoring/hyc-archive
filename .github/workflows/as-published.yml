@@ -3,7 +3,9 @@
 # On every push to main, regenerate the ingest documents from the reshyc
 # capture and push them to the production workspace. Ingest is idempotent —
 # the server no-ops unchanged documents by content hash — so this can run on
-# every push without churn.
+# every push without churn. The idempotency key is the document, though, so a
+# render-only change in the app doesn't re-publish; dispatch manually with
+# `force` to re-apply everything after one.
 #
 # Secrets:
 #   APP_REPO_TOKEN              read access to sailscoring/sailscoring
@@ -25,6 +27,15 @@ on:
       - 'scripts/emit-as-published-config.ts'
       - '.github/workflows/as-published.yml'
   workflow_dispatch:
+    inputs:
+      force:
+        description: >-
+          Re-apply every document even if unchanged. Needed after an app-side
+          render change: ingest is idempotent on the document hash, so a
+          render-only change (which leaves the document identical) won't
+          otherwise re-publish the pages.
+        type: boolean
+        default: false
 
 jobs:
   ingest:
@@ -73,4 +84,4 @@ jobs:
       - name: Push to the workspace
         if: env.SAILSCORING_TOKEN != ''
         working-directory: app
-        run: pnpm cli as-published push ${{ github.workspace }}/as-published --workspace hyc
+        run: pnpm cli as-published push ${{ github.workspace }}/as-published --workspace hyc ${{ inputs.force && '--force' || '' }}
