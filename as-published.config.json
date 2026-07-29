@@ -116,6 +116,12 @@
           "file": "sources/reshyc/results.hyc.ie/reshyc/2015/club/tue_sat_s1/17footer_hcap.htm",
           "includeRaces": true
         }
+      ],
+      "folders": [
+        {
+          "path": "tue-sat-series-1",
+          "label": "Tue + Sat Series 1"
+        }
       ]
     },
     {
@@ -364,6 +370,12 @@
           "file": "sources/reshyc/results.hyc.ie/reshyc/2015/club/tue_sat_s2/17footer_hcap.htm",
           "includeRaces": true
         }
+      ],
+      "folders": [
+        {
+          "path": "tue-sat-series-2",
+          "label": "Tue + Sat Series 2"
+        }
       ]
     },
     {
@@ -533,6 +545,12 @@
           "subPath": "tue-sat-series-3/17-footer-hcap",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2015/club/tue_sat_s3/17footer_hcap.htm",
           "includeRaces": true
+        }
+      ],
+      "folders": [
+        {
+          "path": "tue-sat-series-3",
+          "label": "Tue + Sat Series 3"
         }
       ]
     },
@@ -966,6 +984,12 @@
           "file": "sources/reshyc/results.hyc.ie/reshyc/2015/open/alfredDay/puppeteer.htm",
           "includeRaces": true
         }
+      ],
+      "folders": [
+        {
+          "path": "spring-warmer-royal-alfred",
+          "label": "Spring Warmer - Royal Alfred"
+        }
       ]
     },
     {
@@ -985,6 +1009,12 @@
           "subPath": "sb20-easterns/sb20",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2015/open/sb20easterns/sb20easterns_oall.htm",
           "includeRaces": true
+        }
+      ],
+      "folders": [
+        {
+          "path": "sb20-easterns",
+          "label": "SB20 Easterns"
         }
       ]
     },
@@ -1123,6 +1153,12 @@
           "subPath": "topper-travellers-trophy-no-4/4-2-rig",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2015/open/topper_traveller/4.2.htm",
           "includeRaces": true
+        }
+      ],
+      "folders": [
+        {
+          "path": "topper-travellers-trophy-no-4",
+          "label": "Topper Travellers Trophy No.4"
         }
       ]
     },
@@ -1387,6 +1423,12 @@
           "subPath": "tue-sat-series-1/17-footer-hcap",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2016/Club/tue_sat_s1/17footer_hcap.htm",
           "includeRaces": true
+        }
+      ],
+      "folders": [
+        {
+          "path": "tue-sat-series-1",
+          "label": "Tue + Sat Series 1"
         }
       ]
     },
@@ -1672,6 +1714,12 @@
           "file": "sources/reshyc/results.hyc.ie/reshyc/2016/Club/tue_sat_s2/17footer_hcap.htm",
           "includeRaces": true
         }
+      ],
+      "folders": [
+        {
+          "path": "tue-sat-series-2",
+          "label": "Tue + Sat Series 2"
+        }
       ]
     },
     {
@@ -1793,6 +1841,12 @@
           "subPath": "tue-sat-series-3/17-footer-hcap",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2016/Club/tue_sat_s3/17footer_hcap.htm",
           "includeRaces": true
+        }
+      ],
+      "folders": [
+        {
+          "path": "tue-sat-series-3",
+          "label": "Tue + Sat Series 3"
         }
       ]
     },
@@ -2158,6 +2212,12 @@
           "file": "sources/reshyc/results.hyc.ie/reshyc/2016/open/youthNats/420.htm",
           "includeRaces": true
         }
+      ],
+      "folders": [
+        {
+          "path": "isa-youth-nationals",
+          "label": "ISA Youth Nationals"
+        }
       ]
     },
     {
@@ -2235,6 +2295,12 @@
           "subPath": "sb20-easterns/sb20",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2016/open/SB20 Easterns/SB20_Easterns.htm",
           "includeRaces": true
+        }
+      ],
+      "folders": [
+        {
+          "path": "sb20-easterns",
+          "label": "SB20 Easterns"
         }
       ]
     },
@@ -2882,6 +2948,12 @@
           "file": "sources/reshyc/results.hyc.ie/reshyc/2017/club/tue_sat_s1/17footer_hcap.htm",
           "includeRaces": true
         }
+      ],
+      "folders": [
+        {
+          "path": "tue-sat-series-1",
+          "label": "Tue + Sat Series 1"
+        }
       ]
     },
     {
@@ -3038,6 +3110,12 @@
           "subPath": "tue-sat-series-2/17-footer-hcap",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2017/club/tue_sat_s2/17footer_hcap.htm",
           "includeRaces": true
+        }
+      ],
+      "folders": [
+        {
+          "path": "tue-sat-series-2",
+          "label": "Tue + Sat Series 2"
         }
       ]
     },
@@ -3234,6 +3312,12 @@
           "subPath": "tue-sat-series-3/17-footer-hcap",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2017/club/tue_sat_s3/17footer_hcap.htm",
           "includeRaces": true
+        }
+      ],
+      "folders": [
+        {
+          "path": "tue-sat-series-3",
+          "label": "Tue + Sat Series 3"
         }
       ]
     },
@@ -3621,6 +3705,12 @@
           "file": "sources/reshyc/results.hyc.ie/reshyc/2017/open/rs_easterns/rs400.htm",
           "includeRaces": true
         }
+      ],
+      "folders": [
+        {
+          "path": "rs-eastern-championship",
+          "label": "RS Eastern Championship"
+        }
       ]
     },
     {
@@ -3647,6 +3737,12 @@
           "file": "sources/reshyc/results.hyc.ie/reshyc/2017/open/sb20&n18easterns/n18easterns.htm",
           "includeRaces": true
         }
+      ],
+      "folders": [
+        {
+          "path": "sb20-n18-eastern-champs",
+          "label": "SB20 & N18 Eastern Champs"
+        }
       ]
     },
     {
@@ -3666,6 +3762,12 @@
           "subPath": "howth-to-drogheda/yacht-challenge",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2017/open/howth_drogheda/howth_drogheda_hcap.htm",
           "includeRaces": true
+        }
+      ],
+      "folders": [
+        {
+          "path": "howth-to-drogheda",
+          "label": "Howth to Drogheda"
         }
       ]
     },
@@ -3900,6 +4002,12 @@
           "subPath": "sb20-national-championships/sb20",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2017/open/SB20NatChamps/SB20_NatChamps.htm",
           "includeRaces": true
+        }
+      ],
+      "folders": [
+        {
+          "path": "sb20-national-championships",
+          "label": "SB20 National Championships"
         }
       ]
     },
@@ -4195,6 +4303,12 @@
           "file": "sources/reshyc/results.hyc.ie/reshyc/2018/club_tue_sat_mini_17footer_hcap.htm",
           "includeRaces": true
         }
+      ],
+      "folders": [
+        {
+          "path": "tue-sat-mini",
+          "label": "Tue + Sat Mini"
+        }
       ]
     },
     {
@@ -4308,6 +4422,12 @@
           "subPath": "tue-sat-series-1/17-footer-hcap",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2018/club_tue_sat_s1_17footer_hcap_1.htm",
           "includeRaces": true
+        }
+      ],
+      "folders": [
+        {
+          "path": "tue-sat-series-1",
+          "label": "Tue + Sat Series 1"
         }
       ]
     },
@@ -4448,6 +4568,12 @@
           "subPath": "tue-sat-series-2/17-footer-hcap",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2018/club_tue_sat_s2_17footer_hcap.htm",
           "includeRaces": true
+        }
+      ],
+      "folders": [
+        {
+          "path": "tue-sat-series-2",
+          "label": "Tue + Sat Series 2"
         }
       ]
     },
@@ -4638,6 +4764,12 @@
           "subPath": "tue-sat-series-3/17-footer-hcap",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2018/club_tue_sat_s3_17footer_hcap_1.htm",
           "includeRaces": true
+        }
+      ],
+      "folders": [
+        {
+          "path": "tue-sat-series-3",
+          "label": "Tue + Sat Series 3"
         }
       ]
     },
@@ -5159,6 +5291,12 @@
           "file": "sources/reshyc/results.hyc.ie/reshyc/2018/open/j24eastern/j24.htm",
           "includeRaces": true
         }
+      ],
+      "folders": [
+        {
+          "path": "j24-eastern",
+          "label": "j24 Eastern"
+        }
       ]
     },
     {
@@ -5341,6 +5479,12 @@
           "file": "sources/reshyc/results.hyc.ie/reshyc/2018/open_wave_class5_echo.htm",
           "includeRaces": true
         }
+      ],
+      "folders": [
+        {
+          "path": "wave-regatta-offshore",
+          "label": "Wave Regatta offshore"
+        }
       ]
     },
     {
@@ -5410,6 +5554,12 @@
           "subPath": "rs-feva-nationals/rs-feva",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2018/open_rsfeva_nats.htm",
           "includeRaces": true
+        }
+      ],
+      "folders": [
+        {
+          "path": "rs-feva-nationals",
+          "label": "RS Feva Nationals"
         }
       ]
     },
@@ -5558,6 +5708,12 @@
           "subPath": "tue-sat-series-1/17-footer-hcap",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2019/club_tue_sat_s1_17footer_hcap.htm",
           "includeRaces": true
+        }
+      ],
+      "folders": [
+        {
+          "path": "tue-sat-series-1",
+          "label": "Tue + Sat Series 1"
         }
       ]
     },
@@ -5756,6 +5912,12 @@
           "file": "sources/reshyc/results.hyc.ie/reshyc/2019/club_tue_sat_s2_17footer_hcap.htm",
           "includeRaces": true
         }
+      ],
+      "folders": [
+        {
+          "path": "tue-sat-series-2",
+          "label": "Tue + Sat Series 2"
+        }
       ]
     },
     {
@@ -5952,6 +6114,12 @@
           "file": "sources/reshyc/results.hyc.ie/reshyc/2019/club_tue_sat_s3_17footer_hcap.htm",
           "includeRaces": true
         }
+      ],
+      "folders": [
+        {
+          "path": "tue-sat-series-3",
+          "label": "Tue + Sat Series 3"
+        }
       ]
     },
     {
@@ -6122,6 +6290,12 @@
           "file": "sources/reshyc/results.hyc.ie/reshyc/2019/club_tuesday_Mini_squib_hcap.htm",
           "includeRaces": true
         }
+      ],
+      "folders": [
+        {
+          "path": "mini-series-tuesday",
+          "label": "Mini Series-Tuesday"
+        }
       ]
     },
     {
@@ -6147,6 +6321,12 @@
           "subPath": "tue-sat-mini-series/howth-17-scr",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2019/club_tue_sat_Mini_17footer_scr.htm",
           "includeRaces": true
+        }
+      ],
+      "folders": [
+        {
+          "path": "tue-sat-mini-series",
+          "label": "Tue + Sat Mini Series"
         }
       ]
     },
@@ -6215,6 +6395,12 @@
           "subPath": "mini-series-wednesday/class-1-hcap",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2019/club_wednesday_Mini_class1_hcap.htm",
           "includeRaces": true
+        }
+      ],
+      "folders": [
+        {
+          "path": "mini-series-wednesday",
+          "label": "Mini Series-Wednesday"
         }
       ]
     },
@@ -6551,6 +6737,12 @@
           "subPath": "aqua-double-hander/spinnaker-irc",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2019/open_Aqua_Doublehander_spinniker_irc.htm"
         }
+      ],
+      "folders": [
+        {
+          "path": "aqua-double-hander",
+          "label": "Aqua Double hander"
+        }
       ]
     },
     {
@@ -6577,6 +6769,12 @@
           "file": "sources/reshyc/results.hyc.ie/reshyc/2019/open_Nationals_howth17_hcap.htm",
           "includeRaces": true
         }
+      ],
+      "folders": [
+        {
+          "path": "h-17-s-nationals",
+          "label": "H 17's Nationals"
+        }
       ]
     },
     {
@@ -6596,6 +6794,12 @@
           "subPath": "idra-eastern-championship/idra-14",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2019/open_Easterns_IDRA_scr.htm",
           "includeRaces": true
+        }
+      ],
+      "folders": [
+        {
+          "path": "idra-eastern-championship",
+          "label": "IDRA Eastern Championship"
         }
       ]
     },
@@ -6654,6 +6858,12 @@
           "subPath": "shipman-nat-championship/whitesails-scratch",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2019/open_national_championship_whitesails_scr.htm",
           "includeRaces": true
+        }
+      ],
+      "folders": [
+        {
+          "path": "shipman-nat-championship",
+          "label": "Shipman Nat. Championship"
         }
       ]
     },
@@ -7088,6 +7298,12 @@
           "subPath": "esailing-spring-lockdown/week-9-league-2",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2020/esailing_Week9_league2.htm"
         }
+      ],
+      "folders": [
+        {
+          "path": "esailing-spring-lockdown",
+          "label": "esailing Spring Lockdown"
+        }
       ]
     },
     {
@@ -7214,6 +7430,12 @@
           "file": "sources/reshyc/results.hyc.ie/reshyc/2020/club_tuesat_s1_17_scr.htm",
           "includeRaces": true
         }
+      ],
+      "folders": [
+        {
+          "path": "tues-sat-17-summer-series",
+          "label": "Tues & Sat 17'Summer Series"
+        }
       ]
     },
     {
@@ -7289,6 +7511,12 @@
           "file": "sources/reshyc/results.hyc.ie/reshyc/2020/club_lambay_s1_17_hph.htm",
           "includeRaces": true
         }
+      ],
+      "folders": [
+        {
+          "path": "h17-s-lambay-race",
+          "label": "H17's Lambay Race"
+        }
       ]
     },
     {
@@ -7363,6 +7591,12 @@
           "file": "sources/reshyc/results.hyc.ie/reshyc/2020/eoss_h17_scr.htm",
           "includeRaces": true
         }
+      ],
+      "folders": [
+        {
+          "path": "end-of-summer-series-sat",
+          "label": "End of Summer Series Sat."
+        }
       ]
     },
     {
@@ -7425,6 +7659,12 @@
           "file": "sources/reshyc/results.hyc.ie/reshyc/2020/eoss_class5_irc.htm",
           "includeRaces": true
         }
+      ],
+      "folders": [
+        {
+          "path": "end-of-summer-series-sun",
+          "label": "End of summer Series Sun."
+        }
       ]
     },
     {
@@ -7449,6 +7689,12 @@
           "subPath": "esailing-frostbites-series-1/thursday",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2020/esailing_week1_thurs.htm"
         }
+      ],
+      "folders": [
+        {
+          "path": "esailing-frostbites-series-1",
+          "label": "eSailing Frostbites Series 1"
+        }
       ]
     },
     {
@@ -7472,6 +7718,12 @@
           "name": "Thursday",
           "subPath": "esailing-frostbites-series-2/thursday",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2020/esailing_week2_thurs.htm"
+        }
+      ],
+      "folders": [
+        {
+          "path": "esailing-frostbites-series-2",
+          "label": "esailing Frostbites Series 2"
         }
       ]
     },
@@ -7708,6 +7960,12 @@
           "file": "sources/reshyc/results.hyc.ie/reshyc/2020/h17_natchamp_hph.htm",
           "includeRaces": true
         }
+      ],
+      "folders": [
+        {
+          "path": "h-17-national-championship",
+          "label": "H' 17 National Championship"
+        }
       ]
     },
     {
@@ -7734,6 +7992,12 @@
           "file": "sources/reshyc/results.hyc.ie/reshyc/2020/pup_champ_hph.htm",
           "includeRaces": true
         }
+      ],
+      "folders": [
+        {
+          "path": "puppeteer-nat-championship",
+          "label": "Puppeteer Nat. Championship"
+        }
       ]
     },
     {
@@ -7752,6 +8016,12 @@
           "name": "e-sailing",
           "subPath": "hyc-feet-up-frostbite-series/e-sailing",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2021/esailing_wed.htm"
+        }
+      ],
+      "folders": [
+        {
+          "path": "hyc-feet-up-frostbite-series",
+          "label": "HYC Feet Up Frostbite Series"
         }
       ]
     },
@@ -7772,6 +8042,12 @@
           "subPath": "esailing-spring-series/thursday",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2021/esailing_spring.htm"
         }
+      ],
+      "folders": [
+        {
+          "path": "esailing-spring-series",
+          "label": "esailing Spring Series"
+        }
       ]
     },
     {
@@ -7790,6 +8066,12 @@
           "name": "Thursday",
           "subPath": "esailing-countdown-series/thursday",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2021/esailing_countdown.htm"
+        }
+      ],
+      "folders": [
+        {
+          "path": "esailing-countdown-series",
+          "label": "esailing Countdown Series"
         }
       ]
     },
@@ -7854,6 +8136,12 @@
           "subPath": "tues-sat-17-s-series-1/17-s-hph",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2021/club_tuesday_s1_17_hph.htm",
           "includeRaces": true
+        }
+      ],
+      "folders": [
+        {
+          "path": "tues-sat-17-s-series-1",
+          "label": "Tues & Sat 17's Series 1"
         }
       ]
     },
@@ -8018,6 +8306,12 @@
           "subPath": "tues-sat-series-2/h-17-hph",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2021/club_tuesday_s2_17_hph.htm",
           "includeRaces": true
+        }
+      ],
+      "folders": [
+        {
+          "path": "tues-sat-series-2",
+          "label": "Tues & Sat.Series 2"
         }
       ]
     },
@@ -8219,6 +8513,12 @@
           "file": "sources/reshyc/results.hyc.ie/reshyc/2021/club_tuesday_s3_17_hph.htm",
           "includeRaces": true
         }
+      ],
+      "folders": [
+        {
+          "path": "tues-sat-series-3",
+          "label": "Tues & Sat.Series 3"
+        }
       ]
     },
     {
@@ -8383,6 +8683,12 @@
           "file": "sources/reshyc/results.hyc.ie/reshyc/2021/club_tuesday_mini_17_hph.htm",
           "includeRaces": true
         }
+      ],
+      "folders": [
+        {
+          "path": "mini-series-h17-tues-sat",
+          "label": "Mini Series H17 Tues & Sat"
+        }
       ]
     },
     {
@@ -8483,6 +8789,12 @@
           "file": "sources/reshyc/results.hyc.ie/reshyc/2021/club_wednesday_mini_class3_hph.htm",
           "includeRaces": true
         }
+      ],
+      "folders": [
+        {
+          "path": "wed-mini-series",
+          "label": "Wed. Mini Series"
+        }
       ]
     },
     {
@@ -8565,6 +8877,12 @@
           "file": "sources/reshyc/results.hyc.ie/reshyc/2021/open_1720_scr.htm",
           "includeRaces": true
         }
+      ],
+      "folders": [
+        {
+          "path": "1720-s-easterns",
+          "label": "1720's Easterns"
+        }
       ]
     },
     {
@@ -8638,6 +8956,12 @@
           "subPath": "puppeteer-nat-championship/puppeteer-hph",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2021/open_nationals_pup_hph.htm",
           "includeRaces": true
+        }
+      ],
+      "folders": [
+        {
+          "path": "puppeteer-nat-championship",
+          "label": "Puppeteer Nat. Championship"
         }
       ]
     },
@@ -8964,6 +9288,12 @@
           "file": "sources/reshyc/results.hyc.ie/reshyc/2021/open_frostwinter_rsaero.htm",
           "includeRaces": true
         }
+      ],
+      "folders": [
+        {
+          "path": "keycapital-winter-frostbite",
+          "label": "KeyCapital Winter Frostbite"
+        }
       ]
     },
     {
@@ -9090,6 +9420,12 @@
           "file": "sources/reshyc/results.hyc.ie/reshyc/2022/club_series1_tuesat17scr.htm",
           "includeRaces": true
         }
+      ],
+      "folders": [
+        {
+          "path": "tues-sat-17-s-series-1",
+          "label": "Tues & Sat 17's Series 1"
+        }
       ]
     },
     {
@@ -9115,6 +9451,12 @@
           "subPath": "tues-sat-17-s-series-2/h17-s-hph",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2022/club_series2_tuesat17hph.htm",
           "includeRaces": true
+        }
+      ],
+      "folders": [
+        {
+          "path": "tues-sat-17-s-series-2",
+          "label": "Tues & Sat 17's Series 2"
         }
       ]
     },
@@ -9418,6 +9760,12 @@
           "file": "sources/reshyc/results.hyc.ie/reshyc/2022/club_series3_tuesat17scr.htm",
           "includeRaces": true
         }
+      ],
+      "folders": [
+        {
+          "path": "tues-sat-17-s-series-3",
+          "label": "Tues & Sat 17's Series 3"
+        }
       ]
     },
     {
@@ -9520,6 +9868,12 @@
           "file": "sources/reshyc/results.hyc.ie/reshyc/2022/club_miniseries_tuesat17hph.htm",
           "includeRaces": true
         }
+      ],
+      "folders": [
+        {
+          "path": "tues-sat-17-s-mini-series",
+          "label": "Tues & Sat 17's Mini Series"
+        }
       ]
     },
     {
@@ -9613,6 +9967,12 @@
           "subPath": "keycapital-newyearsday-race/laser-radial",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2022/open_keycapnewyearday_laser_rad.htm",
           "includeRaces": true
+        }
+      ],
+      "folders": [
+        {
+          "path": "keycapital-newyearsday-race",
+          "label": "KeyCapital NewYearsDay Race"
         }
       ]
     },
@@ -9861,6 +10221,12 @@
           "file": "sources/reshyc/results.hyc.ie/reshyc/2022/open_j24easterns.htm",
           "includeRaces": true
         }
+      ],
+      "folders": [
+        {
+          "path": "j-24-irish-eastern-champions",
+          "label": "J/24 Irish Eastern Champions"
+        }
       ]
     },
     {
@@ -9906,6 +10272,12 @@
           "subPath": "rs-aero-easterns/overall",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2022/open_rsaero_overall.htm",
           "includeRaces": true
+        }
+      ],
+      "folders": [
+        {
+          "path": "rs-aero-easterns",
+          "label": "RS Aero Easterns"
         }
       ]
     },
@@ -10092,6 +10464,12 @@
           "file": "sources/reshyc/results.hyc.ie/reshyc/2022/open_KeyCapRTIR_PYDinghy.htm",
           "includeRaces": true
         }
+      ],
+      "folders": [
+        {
+          "path": "round-the-island-race",
+          "label": "Round the Island Race"
+        }
       ]
     },
     {
@@ -10243,6 +10621,12 @@
           "file": "sources/reshyc/results.hyc.ie/reshyc/2023/club/series1_tuesat17hph.htm",
           "includeRaces": true
         }
+      ],
+      "folders": [
+        {
+          "path": "tues-sat-17-s-series-1",
+          "label": "Tues & Sat 17's Series 1"
+        }
       ]
     },
     {
@@ -10330,6 +10714,12 @@
               "includeRaces": true
             }
           ]
+        }
+      ],
+      "folders": [
+        {
+          "path": "dinghy-thursdays",
+          "label": "Dinghy - Thursdays"
         }
       ]
     },
@@ -10548,6 +10938,12 @@
           "file": "sources/reshyc/results.hyc.ie/reshyc/2023/club/series2_tuesat17hph.htm",
           "includeRaces": true
         }
+      ],
+      "folders": [
+        {
+          "path": "tues-sat-17-s-series-2",
+          "label": "Tues & Sat 17’s Series 2"
+        }
       ]
     },
     {
@@ -10676,6 +11072,12 @@
           "subPath": "tue-sat-17-s-series-3/17-s-hph",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2023/club/series3_tuesat17hph.htm",
           "includeRaces": true
+        }
+      ],
+      "folders": [
+        {
+          "path": "tue-sat-17-s-series-3",
+          "label": "Tue & Sat 17's Series 3"
         }
       ]
     },
@@ -10861,6 +11263,12 @@
             }
           ]
         }
+      ],
+      "folders": [
+        {
+          "path": "dinghy-frostbite-new-year-s",
+          "label": "Dinghy Frostbite New Year's"
+        }
       ]
     },
     {
@@ -11001,6 +11409,12 @@
               "includeRaces": true
             }
           ]
+        }
+      ],
+      "folders": [
+        {
+          "path": "howth-17-125th-yr-race",
+          "label": "Howth 17 125th yr Race"
         }
       ]
     },
@@ -11510,6 +11924,12 @@
           "file": "sources/reshyc/results.hyc.ie/reshyc/2023/open/icra/Class-J24.htm",
           "includeRaces": true
         }
+      ],
+      "folders": [
+        {
+          "path": "icra-national-championships",
+          "label": "ICRA National Championships"
+        }
       ]
     },
     {
@@ -11529,6 +11949,12 @@
           "subPath": "rs-aero-easterns/overall",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2023/open/aeroeasterns/overall.htm",
           "includeRaces": true
+        }
+      ],
+      "folders": [
+        {
+          "path": "rs-aero-easterns",
+          "label": "RS Aero Easterns"
         }
       ]
     },
@@ -11562,6 +11988,12 @@
               "includeRaces": true
             }
           ]
+        }
+      ],
+      "folders": [
+        {
+          "path": "brass-monkeys-autumn",
+          "label": "Brass Monkeys - Autumn"
         }
       ]
     },
@@ -11641,6 +12073,12 @@
           "subPath": "round-the-island-race/ilca-7",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2023/open/RTIR_ILCA7.htm",
           "includeRaces": true
+        }
+      ],
+      "folders": [
+        {
+          "path": "round-the-island-race",
+          "label": "Round the Island Race"
         }
       ]
     },
@@ -11774,6 +12212,12 @@
             }
           ]
         }
+      ],
+      "folders": [
+        {
+          "path": "dinghys-thursdays",
+          "label": "Dinghys - Thursdays"
+        }
       ]
     },
     {
@@ -11853,6 +12297,12 @@
             }
           ]
         }
+      ],
+      "folders": [
+        {
+          "path": "tues-sat-17-s-series-1",
+          "label": "Tues & Sat 17’s Series 1"
+        }
       ]
     },
     {
@@ -11925,6 +12375,12 @@
               "includeRaces": true
             }
           ]
+        }
+      ],
+      "folders": [
+        {
+          "path": "tues-sat-17-s-series-2",
+          "label": "Tues & Sat 17’s Series 2"
         }
       ]
     },
@@ -12057,6 +12513,12 @@
               "includeRaces": true
             }
           ]
+        }
+      ],
+      "folders": [
+        {
+          "path": "tues-sat-17-s-series-3",
+          "label": "Tues & Sat 17’s Series 3"
         }
       ]
     },
@@ -12234,6 +12696,12 @@
             }
           ]
         }
+      ],
+      "folders": [
+        {
+          "path": "tues-sat-17-s-mini-series",
+          "label": "Tues & Sat 17’s Mini Series"
+        }
       ]
     },
     {
@@ -12378,6 +12846,12 @@
             }
           ]
         }
+      ],
+      "folders": [
+        {
+          "path": "dinghy-f-bite-spring-series",
+          "label": "Dinghy F’bite Spring Series"
+        }
       ]
     },
     {
@@ -12446,6 +12920,12 @@
               "includeRaces": true
             }
           ]
+        }
+      ],
+      "folders": [
+        {
+          "path": "2024-ilca-masters",
+          "label": "2024 ILCA Masters"
         }
       ]
     },
@@ -12734,6 +13214,12 @@
           "file": "sources/reshyc/results.hyc.ie/reshyc/2024/open/GP14Leinsters/overall.htm",
           "includeRaces": true
         }
+      ],
+      "folders": [
+        {
+          "path": "gp14-leinster-championships",
+          "label": "GP14 Leinster Championships"
+        }
       ]
     },
     {
@@ -12753,6 +13239,12 @@
           "subPath": "rs-aero-nationals/overall",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2024/open/RSAeroNats/overall.htm",
           "includeRaces": true
+        }
+      ],
+      "folders": [
+        {
+          "path": "rs-aero-nationals",
+          "label": "RS Aero Nationals"
         }
       ]
     },
@@ -13093,6 +13585,12 @@
             }
           ]
         }
+      ],
+      "folders": [
+        {
+          "path": "autumn-league-inshore",
+          "label": "Autumn League - Inshore"
+        }
       ]
     },
     {
@@ -13118,6 +13616,12 @@
           "subPath": "hyc-claremont-league/melges-15",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2024/open/claremountm15.htm",
           "includeRaces": true
+        }
+      ],
+      "folders": [
+        {
+          "path": "hyc-claremont-league",
+          "label": "HYC Claremont League"
         }
       ]
     },
@@ -13225,6 +13729,12 @@
               "includeRaces": true
             }
           ]
+        }
+      ],
+      "folders": [
+        {
+          "path": "tues-sat-17-s-series-1",
+          "label": "Tues & Sat 17’s Series 1"
         }
       ]
     },
@@ -13428,6 +13938,12 @@
           "subPath": "dinghys-thursdays/optimist",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2025/club/dinghy_optimist.htm",
           "includeRaces": true
+        }
+      ],
+      "folders": [
+        {
+          "path": "dinghys-thursdays",
+          "label": "Dinghys - Thursdays"
         }
       ]
     },
@@ -13635,6 +14151,12 @@
             }
           ]
         }
+      ],
+      "folders": [
+        {
+          "path": "tues-sat-17-s-series-2",
+          "label": "Tues & Sat 17’s Series 2"
+        }
       ]
     },
     {
@@ -13661,6 +14183,12 @@
               "sectionTitle": "Puppeteer 22 Scratch Fleet"
             }
           ]
+        }
+      ],
+      "folders": [
+        {
+          "path": "tues-overall-puppeteer-22",
+          "label": "Tues Overall - Puppeteer 22"
         }
       ]
     },
@@ -13809,6 +14337,12 @@
             }
           ]
         }
+      ],
+      "folders": [
+        {
+          "path": "tues-sat-17-s-series-3",
+          "label": "Tues & Sat 17’s Series 3"
+        }
       ]
     },
     {
@@ -13941,6 +14475,12 @@
             }
           ]
         }
+      ],
+      "folders": [
+        {
+          "path": "tues-sat-17-s-mini-series",
+          "label": "Tues & Sat 17’s Mini Series"
+        }
       ]
     },
     {
@@ -14035,6 +14575,12 @@
           "file": "sources/reshyc/results.hyc.ie/reshyc/2025/open/nyddinghy/py.htm",
           "includeRaces": true
         }
+      ],
+      "folders": [
+        {
+          "path": "nyd-dinghies",
+          "label": "NYD Dinghies"
+        }
       ]
     },
     {
@@ -14079,6 +14625,12 @@
               "includeRaces": true
             }
           ]
+        }
+      ],
+      "folders": [
+        {
+          "path": "dinghy-f-bite-spring-2025",
+          "label": "Dinghy F'bite Spring 2025"
         }
       ]
     },
@@ -14147,6 +14699,12 @@
           "subPath": "dinghy-round-the-island/py-class",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2025/open/RTI/py.htm",
           "includeRaces": true
+        }
+      ],
+      "folders": [
+        {
+          "path": "dinghy-round-the-island",
+          "label": "Dinghy Round the Island"
         }
       ]
     },
@@ -14718,6 +15276,12 @@
             }
           ]
         }
+      ],
+      "folders": [
+        {
+          "path": "autumn-league-inshore",
+          "label": "Autumn League - Inshore"
+        }
       ]
     },
     {
@@ -14798,6 +15362,12 @@
           "file": "sources/reshyc/results.hyc.ie/reshyc/2025/open/al_offshore_cr5.htm",
           "includeRaces": true
         }
+      ],
+      "folders": [
+        {
+          "path": "autumn-league-offshore",
+          "label": "Autumn League - Offshore"
+        }
       ]
     },
     {
@@ -14844,6 +15414,12 @@
           "file": "sources/reshyc/results.hyc.ie/reshyc/2025/open_fireball.htm",
           "includeRaces": true
         }
+      ],
+      "folders": [
+        {
+          "path": "fireball-end-of-season",
+          "label": "Fireball End of Season"
+        }
       ]
     },
     {
@@ -14887,6 +15463,12 @@
           "subPath": "dinghy-f-bite-winter-2025/melges-15",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2025/open/dinghywinter_m15.htm",
           "includeRaces": true
+        }
+      ],
+      "folders": [
+        {
+          "path": "dinghy-f-bite-winter-2025",
+          "label": "Dinghy F'bite Winter 2025"
         }
       ]
     },

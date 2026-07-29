@@ -64,7 +64,15 @@ The capture automation moved here from [`markmc/reshyc`](https://github.com/mark
    names) to the captured pages: one as-published series per (year, club/open,
    event), one fleet page per class at `/p/hyc/{year}/{event}/{class}`, with
    deterministic UUIDv5 series ids that can never re-mint. Coverage gaps are
-   reported, never papered over.
+   reported, never papered over. The URL shape is the app's publication tree
+   (app ADR-011): each year slug is a season folder — the public workspace
+   index shows the current season expanded, earlier ones collapsed, split
+   Open Events / Club Racing — each event segment resolves to its own folder
+   index, and every page carries the navigation cascade (season → event →
+   class). Where title-casing the event segment would mangle the club's own
+   name ("1720's Easterns", "Tue + Sat Series 1"), the config pins a
+   `folders` label with the admin DB's display name, re-asserted on every
+   ingest like the slugs.
 3. **Ingest** — CI checks out the app repo, runs `pnpm archive-generate` over
    the config (parsing the Sailwave HTML), and pushes the documents with
    `pnpm cli as-published push … --workspace hyc`, authenticated by a

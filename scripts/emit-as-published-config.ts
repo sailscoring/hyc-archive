@@ -170,6 +170,21 @@ interface ConfigSeries {
   source: 'sailwave';
   category: string;
   fleets: ConfigFleet[];
+  /** Pinned display labels for the event folder (ADR-011): the admin DB's
+   *  event name, emitted only where humanising the URL segment would mangle
+   *  it ("1720's Easterns" vs "1720 S Easterns"). */
+  folders?: Array<{ path: string; label: string }>;
+}
+
+/** How the app labels a folder with no pin: title-cased segment words.
+ *  Mirrors `humanizeSlug` (app repo, lib/publishing.ts) so the emitter can
+ *  pin only the labels the derivation would get wrong. */
+function humanizeSegment(segment: string): string {
+  return segment
+    .split('-')
+    .filter(Boolean)
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(' ');
 }
 
 /** Series the app's archive-kit can't ingest yet, excluded from the emitted
@@ -196,6 +211,9 @@ function run(): number {
     .sort((a, b) => a.year.localeCompare(b.year) || a.type.localeCompare(b.type));
 
   const series: ConfigSeries[] = [];
+  // The admin DB's event display name per series, for the folder-label pins
+  // (whitespace-normalised; the CSVs carry stray trailing spaces).
+  const eventLabelBySeries = new Map<ConfigSeries, string>();
   let emptyPath = 0;
   const skippedKeys = new Set<string>();
   const missing: string[] = [];
@@ -261,7 +279,7 @@ function run(): number {
         }
       }
       if (fleets.length === 0) continue;
-      series.push({
+      const entry: ConfigSeries = {
         key,
         id: uuidv5(`${REPO_KEY}/series/${key}`),
         // One shared slug per season year: /p/hyc/{year}/{event}/{class}.
@@ -280,13 +298,16 @@ function run(): number {
         // per-year category would just shadow it.
         category: cat.type === 'open' ? 'Open Events' : 'Club Racing',
         fleets,
-      });
+      };
+      series.push(entry);
+      eventLabelBySeries.set(entry, event.replace(/\s+/g, ' ').trim());
     }
   }
 
   // Page paths are a per-year namespace shared by club and open events: a
   // same-named event on both sides would collide, so the open side yields.
   const seen = new Map<string, ConfigSeries>();
+  const suffixed = new Set<ConfigSeries>();
   for (const s of series) {
     for (const f of s.fleets) {
       let k = `${s.publishedSlug}|${f.subPath}`;
@@ -294,6 +315,7 @@ function run(): number {
         const [eventSeg, ...rest] = f.subPath.split('/');
         f.subPath = [`${eventSeg}-${s.key.includes('-open-') ? 'open' : 'club'}`, ...rest].join('/');
         k = `${s.publishedSlug}|${f.subPath}`;
+        suffixed.add(s);
       }
       if (seen.has(k)) {
         console.error(`  ! duplicate page path: /p/hyc/${s.publishedSlug}/${f.subPath} (${s.key} vs ${seen.get(k)?.key})`);
@@ -301,6 +323,23 @@ function run(): number {
       }
       seen.set(k, s);
     }
+  }
+
+  // Folder labels (ADR-011): pin the admin DB's event display name on the
+  // event folder wherever the app's derived label (title-cased segment
+  // words) would mangle it — "1720's Easterns" vs "1720 S Easterns",
+  // "Dinghy F'bite Spring 2025" vs "Dinghy F Bite Spring 2025". The rest
+  // derive correctly and need no pin. A club/open-suffixed segment keeps
+  // the side in its label so the two folders stay distinguishable.
+  for (const s of series) {
+    const base = eventLabelBySeries.get(s) ?? '';
+    const label = suffixed.has(s)
+      ? `${base} (${s.key.includes('-open-') ? 'Open' : 'Club'})`
+      : base;
+    const folders = [...new Set(s.fleets.map((f) => f.subPath.split('/')[0]))]
+      .filter((segment) => humanizeSegment(segment) !== label)
+      .map((segment) => ({ path: segment, label }));
+    if (folders.length > 0) s.folders = folders;
   }
 
   for (const line of skippedMalformed) console.error(`  ! malformed row: ${line}`);
