@@ -11,7 +11,7 @@ jobs:
   create-ftp-backup-pr:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - env:
           FTP_DIR: reshyc
           FTP_SERVER: results.hyc.ie
@@ -20,7 +20,7 @@ jobs:
         run: make backup
       - name: Create pull request
         id: cpr
-        uses: peter-evans/create-pull-request@v7
+        uses: peter-evans/create-pull-request@v8
         with:
           commit-message: FTP backup
           title: FTP backup
