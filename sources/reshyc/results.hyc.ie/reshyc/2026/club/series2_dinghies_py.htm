@@ -135,17 +135,19 @@ $(function () {
 <style>
 div.applicant-break {page-break-after:always;}
 </style>
-<h3 class="seriestitle">Results are provisional as of 17:10 on July 10, 2026</h3>
+<h3 class="seriestitle">Results are provisional as of 10:56 on July 31, 2026</h3>
 <h3 class="summarytitle" id="summarypy">PY Fleet</h3>
-<div class="caption summarycaption">Sailed: 3, Discards: 1, To count: 2, Rating system: PY, Entries: 26, Scoring system: Appendix A</div>
+<div class="caption summarycaption">Sailed: 5, Discards: 1, To count: 4, Rating system: PY, Entries: 27, Scoring system: Appendix A</div>
 <table class="summarytable" cellspacing="0" cellpadding="0" border="0">
-<colgroup span="11">
+<colgroup span="13">
 <col class="rank" />
 <col class="class" />
 <col class="sailno" />
 <col class="helmname" />
 <col class="crewname" />
 <col class="rating" />
+<col class="race" />
+<col class="race" />
 <col class="race" />
 <col class="race" />
 <col class="race" />
@@ -163,6 +165,8 @@ div.applicant-break {page-break-after:always;}
 <th><a class="racelink" href="#r1py">R1</a></th>
 <th><a class="racelink" href="#r2py">R2</a></th>
 <th><a class="racelink" href="#r3py">R3</a></th>
+<th><a class="racelink" href="#r4py">R4</a></th>
+<th><a class="racelink" href="#r5py">R5</a></th>
 <th>Total</th>
 <th>Nett</th>
 </tr>
@@ -178,50 +182,28 @@ div.applicant-break {page-break-after:always;}
 <td  class="rank3">3.0</td>
 <td  class="rank1">1.0</td>
 <td>(4.0)</td>
-<td>8.0</td>
-<td>4.0</td>
+<td  class="rank1">1.0</td>
+<td  class="rank2">2.0</td>
+<td>11.0</td>
+<td>7.0</td>
 </tr>
 <tr class="even summaryrow">
 <td>2nd</td>
-<td>RS Aero 6</td>
-<td>4523</td>
-<td>Daragh Sheridan</td>
-<td>&nbsp;</td>
-<td>1098</td>
-<td  class="rank1">1.0</td>
-<td  class="rank3">3.0</td>
-<td>(27.0 DNC)</td>
-<td>31.0</td>
-<td>4.0</td>
-</tr>
-<tr class="odd summaryrow">
-<td>3rd</td>
 <td>IDRA 14</td>
 <td>38</td>
 <td>Alan Carr</td>
 <td>Orlaith Connolly</td>
 <td>1125</td>
-<td>(4.0)</td>
+<td>4.0</td>
 <td>4.0</td>
 <td  class="rank1">1.0</td>
-<td>9.0</td>
-<td>5.0</td>
-</tr>
-<tr class="even summaryrow">
-<td>4th</td>
-<td>Fireball</td>
-<td>15016</td>
-<td>Matthew Cotter</td>
-<td>&nbsp;</td>
-<td>960</td>
-<td>(6.0)</td>
-<td  class="rank2">2.0</td>
 <td  class="rank3">3.0</td>
-<td>11.0</td>
-<td>5.0</td>
+<td>(6.0)</td>
+<td>18.0</td>
+<td>12.0</td>
 </tr>
 <tr class="odd summaryrow">
-<td>5th</td>
+<td>3rd</td>
 <td>IDRA 14</td>
 <td>128</td>
 <td>Ryan Cairns</td>
@@ -230,37 +212,13 @@ div.applicant-break {page-break-after:always;}
 <td>(5.0)</td>
 <td>5.0</td>
 <td  class="rank2">2.0</td>
-<td>12.0</td>
-<td>7.0</td>
-</tr>
-<tr class="even summaryrow">
-<td>6th</td>
-<td>ILCA 4</td>
-<td>186299</td>
-<td>Florence Butler</td>
-<td>&nbsp;</td>
-<td>1218</td>
 <td  class="rank2">2.0</td>
-<td>(6.0)</td>
-<td>6.0</td>
-<td>14.0</td>
-<td>8.0</td>
-</tr>
-<tr class="odd summaryrow">
-<td>7th</td>
-<td>Melges 15</td>
-<td>799</td>
-<td>Michael Evans</td>
-<td>&nbsp;</td>
-<td>994</td>
-<td>9.0</td>
-<td>7.0</td>
-<td>(27.0 DNC)</td>
-<td>43.0</td>
-<td>16.0</td>
+<td  class="rank3">3.0</td>
+<td>17.0</td>
+<td>12.0</td>
 </tr>
 <tr class="even summaryrow">
-<td>8th</td>
+<td>4th</td>
 <td>Melges 15</td>
 <td>635</td>
 <td>Cormac Farrelly</td>
@@ -268,12 +226,29 @@ div.applicant-break {page-break-after:always;}
 <td>994</td>
 <td>10.0</td>
 <td>8.0</td>
-<td>(27.0 DNC)</td>
-<td>45.0</td>
-<td>18.0</td>
+<td>(28.0 DNC)</td>
+<td>4.0</td>
+<td  class="rank1">1.0</td>
+<td>51.0</td>
+<td>23.0</td>
 </tr>
 <tr class="odd summaryrow">
-<td>9th</td>
+<td>5th</td>
+<td>Fireball</td>
+<td>15016</td>
+<td>Matthew Cotter</td>
+<td>&nbsp;</td>
+<td>960</td>
+<td>6.0</td>
+<td  class="rank2">2.0</td>
+<td  class="rank3">3.0</td>
+<td>(28.0 DNC)</td>
+<td>28.0 DNC</td>
+<td>67.0</td>
+<td>39.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>6th</td>
 <td>Melges 15</td>
 <td>803</td>
 <td>Stephen Quinn</td>
@@ -281,230 +256,326 @@ div.applicant-break {page-break-after:always;}
 <td>994</td>
 <td>11.0</td>
 <td>9.0</td>
-<td>(27.0 DNC)</td>
-<td>47.0</td>
-<td>20.0</td>
-</tr>
-<tr class="even summaryrow">
-<td>10th</td>
-<td>ILCA 6</td>
-<td>3006</td>
-<td>Carla Fagan</td>
-<td>&nbsp;</td>
-<td>1156</td>
-<td>(27.0 DNC)</td>
-<td>27.0 DNC</td>
-<td>5.0</td>
-<td>59.0</td>
-<td>32.0</td>
+<td>(28.0 DNC)</td>
+<td>11.0 OCS</td>
+<td>8.0</td>
+<td>67.0</td>
+<td>39.0</td>
 </tr>
 <tr class="odd summaryrow">
-<td>11th</td>
+<td>7th</td>
+<td>ILCA 4</td>
+<td>186299</td>
+<td>Florence Butler</td>
+<td>&nbsp;</td>
+<td>1218</td>
+<td  class="rank2">2.0</td>
+<td>6.0</td>
+<td>6.0</td>
+<td>(28.0 DNC)</td>
+<td>28.0 DNC</td>
+<td>70.0</td>
+<td>42.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>8th</td>
 <td>ILCA 6</td>
 <td>198578</td>
 <td>Nicole Quinn</td>
 <td>&nbsp;</td>
 <td>1156</td>
-<td>(27.0 DNC)</td>
-<td>27.0 DNC</td>
+<td>(28.0 DNC)</td>
+<td>28.0 DNC</td>
 <td>7.0</td>
-<td>61.0</td>
-<td>34.0</td>
+<td>5.0</td>
+<td>7.0</td>
+<td>75.0</td>
+<td>47.0</td>
 </tr>
-<tr class="even summaryrow">
-<td>12th</td>
+<tr class="odd summaryrow">
+<td>9th</td>
 <td>RS Aero 6</td>
-<td>3948</td>
-<td>Richard Watson</td>
+<td>4523</td>
+<td>Daragh Sheridan</td>
 <td>&nbsp;</td>
 <td>1098</td>
-<td>7.0</td>
-<td>(27.0 DNC)</td>
-<td>27.0 DNC</td>
-<td>61.0</td>
-<td>34.0</td>
-</tr>
-<tr class="odd summaryrow">
-<td>13th</td>
-<td>IDRA 14</td>
-<td>118</td>
-<td>Archie Malcolm</td>
-<td>Cian</td>
-<td>1125</td>
-<td>8.0</td>
-<td>(27.0 DNC)</td>
-<td>27.0 DNC</td>
-<td>62.0</td>
-<td>35.0</td>
+<td  class="rank1">1.0</td>
+<td  class="rank3">3.0</td>
+<td>(28.0 DNC)</td>
+<td>28.0 DNC</td>
+<td>28.0 DNC</td>
+<td>88.0</td>
+<td>60.0</td>
 </tr>
 <tr class="even summaryrow">
-<td>14th</td>
-<td>Melges 15</td>
-<td>801</td>
-<td>James Sexton</td>
-<td>TBD</td>
-<td>994</td>
-<td>(27.0 DNC)</td>
-<td>27.0 DNC</td>
-<td>27.0 DNC</td>
-<td>81.0</td>
-<td>54.0</td>
-</tr>
-<tr class="odd summaryrow">
-<td>14th</td>
-<td>Melges 15</td>
-<td>802</td>
-<td>Tom McMahon</td>
-<td>Jack McMahon</td>
-<td>994</td>
-<td>(27.0 DNC)</td>
-<td>27.0 DNC</td>
-<td>27.0 DNC</td>
-<td>81.0</td>
-<td>54.0</td>
-</tr>
-<tr class="even summaryrow">
-<td>14th</td>
+<td>10th</td>
 <td>ILCA 4</td>
-<td>211168</td>
-<td>Sarah McLoughlin</td>
+<td>206937</td>
+<td>Robbie Clarke</td>
 <td>&nbsp;</td>
 <td>1218</td>
-<td>(27.0 DNC)</td>
-<td>27.0 DNC</td>
-<td>27.0 DNC</td>
-<td>81.0</td>
-<td>54.0</td>
+<td>(28.0 DNC)</td>
+<td>28.0 DNC</td>
+<td>28.0 DNC</td>
+<td>6.0</td>
+<td>4.0</td>
+<td>94.0</td>
+<td>66.0</td>
 </tr>
 <tr class="odd summaryrow">
-<td>14th</td>
-<td>ILCA 6</td>
-<td>190756</td>
-<td>Willem Harting</td>
-<td>&nbsp;</td>
-<td>1156</td>
-<td>(27.0 DNC)</td>
-<td>27.0 DNC</td>
-<td>27.0 DNC</td>
-<td>81.0</td>
-<td>54.0</td>
-</tr>
-<tr class="even summaryrow">
-<td>14th</td>
-<td>Melges 15</td>
-<td>804</td>
-<td>HYC Club Boat</td>
-<td>&nbsp;</td>
-<td>994</td>
-<td>(27.0 DNC)</td>
-<td>27.0 DNC</td>
-<td>27.0 DNC</td>
-<td>81.0</td>
-<td>54.0</td>
-</tr>
-<tr class="odd summaryrow">
-<td>14th</td>
+<td>11th</td>
 <td>RS Aero 6</td>
 <td>3187</td>
 <td>Emmet Dalton</td>
 <td>&nbsp;</td>
 <td>1098</td>
-<td>(27.0 DNC)</td>
-<td>27.0 DNC</td>
-<td>27.0 DNC</td>
-<td>81.0</td>
-<td>54.0</td>
+<td>(28.0 DNC)</td>
+<td>28.0 DNC</td>
+<td>28.0 DNC</td>
+<td>7.0</td>
+<td>5.0</td>
+<td>96.0</td>
+<td>68.0</td>
 </tr>
 <tr class="even summaryrow">
-<td>14th</td>
-<td>ILCA 6</td>
-<td>190589</td>
-<td>Eoin Clarke</td>
+<td>12th</td>
+<td>Melges 15</td>
+<td>799</td>
+<td>Michael Evans</td>
 <td>&nbsp;</td>
-<td>1156</td>
-<td>(27.0 DNC)</td>
-<td>27.0 DNC</td>
-<td>27.0 DNC</td>
-<td>81.0</td>
-<td>54.0</td>
+<td>994</td>
+<td>9.0</td>
+<td>7.0</td>
+<td>(28.0 DNC)</td>
+<td>28.0 DNC</td>
+<td>28.0 DNC</td>
+<td>100.0</td>
+<td>72.0</td>
 </tr>
 <tr class="odd summaryrow">
+<td>13th</td>
+<td>ILCA 6</td>
+<td>190756</td>
+<td>Willem Harting</td>
+<td>&nbsp;</td>
+<td>1156</td>
+<td>(28.0 DNC)</td>
+<td>28.0 DNC</td>
+<td>28.0 DNC</td>
+<td>8.0</td>
+<td>10.0</td>
+<td>102.0</td>
+<td>74.0</td>
+</tr>
+<tr class="even summaryrow">
 <td>14th</td>
 <td>IDRA 14</td>
 <td>119</td>
 <td>Orla Doogue</td>
 <td>TBA</td>
 <td>1125</td>
-<td>(27.0 DNC)</td>
-<td>27.0 DNC</td>
-<td>27.0 DNC</td>
-<td>81.0</td>
-<td>54.0</td>
+<td>(28.0 DNC)</td>
+<td>28.0 DNC</td>
+<td>28.0 DNC</td>
+<td>9.0</td>
+<td>9.0</td>
+<td>102.0</td>
+<td>74.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>15th</td>
+<td>ILCA 6</td>
+<td>3006</td>
+<td>Carla Fagan</td>
+<td>&nbsp;</td>
+<td>1156</td>
+<td>(28.0 DNC)</td>
+<td>28.0 DNC</td>
+<td>5.0</td>
+<td>28.0 DNC</td>
+<td>28.0 DNC</td>
+<td>117.0</td>
+<td>89.0</td>
 </tr>
 <tr class="even summaryrow">
-<td>14th</td>
+<td>16th</td>
+<td>RS Aero 6</td>
+<td>3948</td>
+<td>Richard Watson</td>
+<td>&nbsp;</td>
+<td>1098</td>
+<td>7.0</td>
+<td>(28.0 DNC)</td>
+<td>28.0 DNC</td>
+<td>28.0 DNC</td>
+<td>28.0 DNC</td>
+<td>119.0</td>
+<td>91.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>17th</td>
+<td>IDRA 14</td>
+<td>118</td>
+<td>Archie Malcolm</td>
+<td>Cian</td>
+<td>1125</td>
+<td>8.0</td>
+<td>(28.0 DNC)</td>
+<td>28.0 DNC</td>
+<td>28.0 DNC</td>
+<td>28.0 DNC</td>
+<td>120.0</td>
+<td>92.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>18th</td>
+<td>Melges 15</td>
+<td>801</td>
+<td>James Sexton</td>
+<td>TBD</td>
+<td>994</td>
+<td>(28.0 DNC)</td>
+<td>28.0 DNC</td>
+<td>28.0 DNC</td>
+<td>28.0 DNC</td>
+<td>28.0 DNC</td>
+<td>140.0</td>
+<td>112.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>18th</td>
+<td>Melges 15</td>
+<td>802</td>
+<td>Tom McMahon</td>
+<td>Jack McMahon</td>
+<td>994</td>
+<td>(28.0 DNC)</td>
+<td>28.0 DNC</td>
+<td>28.0 DNC</td>
+<td>28.0 DNC</td>
+<td>28.0 DNC</td>
+<td>140.0</td>
+<td>112.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>18th</td>
+<td>Melges 15</td>
+<td>804</td>
+<td>HYC Club Boat</td>
+<td>&nbsp;</td>
+<td>994</td>
+<td>(28.0 DNC)</td>
+<td>28.0 DNC</td>
+<td>28.0 DNC</td>
+<td>28.0 DNC</td>
+<td>28.0 DNC</td>
+<td>140.0</td>
+<td>112.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>18th</td>
+<td>ILCA 6</td>
+<td>190589</td>
+<td>Eoin Clarke</td>
+<td>&nbsp;</td>
+<td>1156</td>
+<td>(28.0 DNC)</td>
+<td>28.0 DNC</td>
+<td>28.0 DNC</td>
+<td>28.0 DNC</td>
+<td>28.0 DNC</td>
+<td>140.0</td>
+<td>112.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>18th</td>
+<td>ILCA 4</td>
+<td>211168</td>
+<td>Sarah McLoughlin</td>
+<td>&nbsp;</td>
+<td>1218</td>
+<td>(28.0 DNC)</td>
+<td>28.0 DNC</td>
+<td>28.0 DNC</td>
+<td>28.0 DNC</td>
+<td>28.0 DNC</td>
+<td>140.0</td>
+<td>112.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>18th</td>
 <td>ILCA 7</td>
 <td>177880</td>
 <td>Cillian Macken</td>
 <td>&nbsp;</td>
 <td>1103</td>
-<td>(27.0 DNC)</td>
-<td>27.0 DNC</td>
-<td>27.0 DNC</td>
-<td>81.0</td>
-<td>54.0</td>
+<td>(28.0 DNC)</td>
+<td>28.0 DNC</td>
+<td>28.0 DNC</td>
+<td>28.0 DNC</td>
+<td>28.0 DNC</td>
+<td>140.0</td>
+<td>112.0</td>
 </tr>
-<tr class="odd summaryrow">
-<td>14th</td>
+<tr class="even summaryrow">
+<td>18th</td>
 <td>Melges 15</td>
 <td>806</td>
 <td>Charlie Robertson</td>
 <td>Holly Robertson</td>
 <td>994</td>
-<td>(27.0 DNC)</td>
-<td>27.0 DNC</td>
-<td>27.0 DNC</td>
-<td>81.0</td>
-<td>54.0</td>
+<td>(28.0 DNC)</td>
+<td>28.0 DNC</td>
+<td>28.0 DNC</td>
+<td>28.0 DNC</td>
+<td>28.0 DNC</td>
+<td>140.0</td>
+<td>112.0</td>
 </tr>
-<tr class="even summaryrow">
-<td>14th</td>
+<tr class="odd summaryrow">
+<td>18th</td>
 <td>Melges 15</td>
 <td>805</td>
 <td>Gary Cullen</td>
 <td>Will Cullen</td>
 <td>994</td>
-<td>(27.0 DNC)</td>
-<td>27.0 DNC</td>
-<td>27.0 DNC</td>
-<td>81.0</td>
-<td>54.0</td>
+<td>(28.0 DNC)</td>
+<td>28.0 DNC</td>
+<td>28.0 DNC</td>
+<td>28.0 DNC</td>
+<td>28.0 DNC</td>
+<td>140.0</td>
+<td>112.0</td>
 </tr>
-<tr class="odd summaryrow">
-<td>14th</td>
+<tr class="even summaryrow">
+<td>18th</td>
 <td>ILCA 7</td>
 <td>90</td>
 <td>Feargal Quinn</td>
 <td>&nbsp;</td>
 <td>1103</td>
-<td>(27.0 DNC)</td>
-<td>27.0 DNC</td>
-<td>27.0 DNC</td>
-<td>81.0</td>
-<td>54.0</td>
+<td>(28.0 DNC)</td>
+<td>28.0 DNC</td>
+<td>28.0 DNC</td>
+<td>28.0 DNC</td>
+<td>28.0 DNC</td>
+<td>140.0</td>
+<td>112.0</td>
 </tr>
-<tr class="even summaryrow">
-<td>14th</td>
+<tr class="odd summaryrow">
+<td>18th</td>
 <td>ILCA 4</td>
 <td>217236</td>
 <td>Dan Brereton</td>
 <td>&nbsp;</td>
 <td>1218</td>
-<td>(27.0 DNC)</td>
-<td>27.0 DNC</td>
-<td>27.0 DNC</td>
-<td>81.0</td>
-<td>54.0</td>
+<td>(28.0 DNC)</td>
+<td>28.0 DNC</td>
+<td>28.0 DNC</td>
+<td>28.0 DNC</td>
+<td>28.0 DNC</td>
+<td>140.0</td>
+<td>112.0</td>
 </tr>
 </tbody>
 </table>
@@ -931,6 +1002,314 @@ Start: Start 1, Finishes: Finish time, Time: 190300
 <td>0:52:00</td>
 <td>0:44:59</td>
 <td>7.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r4py">R4 - PY Fleet&nbsp;-&nbsp;30-07-2026</h3>
+<div class="caption racecaption">
+Start: Start 1, Finishes: Finish time, Time: 190600
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="10">
+<col class="rank" />
+<col class="class" />
+<col class="sailno" />
+<col class="helmname" />
+<col class="crewname" />
+<col class="rating" />
+<col class="finish" />
+<col class="elapsed" />
+<col class="corrected" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Class</th>
+<th>SailNo</th>
+<th>Helm</th>
+<th>Crew</th>
+<th>PY</th>
+<th>Finish</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>RS Aero 6</td>
+<td>3291</td>
+<td>John Phelan</td>
+<td>&nbsp;</td>
+<td>1098</td>
+<td>19:33:24</td>
+<td>0:27:24</td>
+<td>0:24:57</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>IDRA 14</td>
+<td>128</td>
+<td>Ryan Cairns</td>
+<td>&nbsp;</td>
+<td>1125</td>
+<td>19:34:50</td>
+<td>0:28:50</td>
+<td>0:25:38</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>IDRA 14</td>
+<td>38</td>
+<td>Alan Carr</td>
+<td>Orlaith Connolly</td>
+<td>1125</td>
+<td>19:35:08</td>
+<td>0:29:08</td>
+<td>0:25:54</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>Melges 15</td>
+<td>635</td>
+<td>Cormac Farrelly</td>
+<td>Aoibhin Farrelly</td>
+<td>994</td>
+<td>19:32:01</td>
+<td>0:26:01</td>
+<td>0:26:10</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>ILCA 6</td>
+<td>198578</td>
+<td>Nicole Quinn</td>
+<td>&nbsp;</td>
+<td>1156</td>
+<td>19:36:43</td>
+<td>0:30:43</td>
+<td>0:26:34</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>ILCA 4</td>
+<td>206937</td>
+<td>Robbie Clarke</td>
+<td>&nbsp;</td>
+<td>1218</td>
+<td>19:39:07</td>
+<td>0:33:07</td>
+<td>0:27:11</td>
+<td>6.0</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>RS Aero 6</td>
+<td>3187</td>
+<td>Emmet Dalton</td>
+<td>&nbsp;</td>
+<td>1098</td>
+<td>19:35:58</td>
+<td>0:29:58</td>
+<td>0:27:18</td>
+<td>7.0</td>
+</tr>
+<tr class="even racerow">
+<td>8</td>
+<td>ILCA 6</td>
+<td>190756</td>
+<td>Willem Harting</td>
+<td>&nbsp;</td>
+<td>1156</td>
+<td>19:38:41</td>
+<td>0:32:41</td>
+<td>0:28:16</td>
+<td>8.0</td>
+</tr>
+<tr class="odd racerow">
+<td>9</td>
+<td>IDRA 14</td>
+<td>119</td>
+<td>Orla Doogue</td>
+<td>TBA</td>
+<td>1125</td>
+<td>19:38:45</td>
+<td>0:32:45</td>
+<td>0:29:07</td>
+<td>9.0</td>
+</tr>
+<tr class="even racerow">
+<td>10</td>
+<td>Melges 15</td>
+<td>803</td>
+<td>Stephen Quinn</td>
+<td>Noelle Quinn</td>
+<td>994</td>
+<td>&nbsp;</td>
+<td>OCS</td>
+<td>&nbsp;</td>
+<td>11.0</td>
+</tr>
+</tbody>
+</table>
+<h3 class="racetitle" id="r5py">R5 - PY Fleet&nbsp;-&nbsp;30-06-2026</h3>
+<div class="caption racecaption">
+Start: Start 1, Finishes: Finish time, Time: 195000
+</div>
+<table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="10">
+<col class="rank" />
+<col class="class" />
+<col class="sailno" />
+<col class="helmname" />
+<col class="crewname" />
+<col class="rating" />
+<col class="finish" />
+<col class="elapsed" />
+<col class="corrected" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Class</th>
+<th>SailNo</th>
+<th>Helm</th>
+<th>Crew</th>
+<th>PY</th>
+<th>Finish</th>
+<th>Elapsed</th>
+<th>Corrected</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td>1</td>
+<td>Melges 15</td>
+<td>635</td>
+<td>Cormac Farrelly</td>
+<td>Aoibhin Farrelly</td>
+<td>994</td>
+<td>20:13:20</td>
+<td>0:23:20</td>
+<td>0:23:28</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td>2</td>
+<td>RS Aero 6</td>
+<td>3291</td>
+<td>John Phelan</td>
+<td>&nbsp;</td>
+<td>1098</td>
+<td>20:15:52</td>
+<td>0:25:52</td>
+<td>0:23:33</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td>3</td>
+<td>IDRA 14</td>
+<td>128</td>
+<td>Ryan Cairns</td>
+<td>&nbsp;</td>
+<td>1125</td>
+<td>20:17:14</td>
+<td>0:27:14</td>
+<td>0:24:12</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>ILCA 4</td>
+<td>206937</td>
+<td>Robbie Clarke</td>
+<td>&nbsp;</td>
+<td>1218</td>
+<td>20:20:03</td>
+<td>0:30:03</td>
+<td>0:24:40</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>RS Aero 6</td>
+<td>3187</td>
+<td>Emmet Dalton</td>
+<td>&nbsp;</td>
+<td>1098</td>
+<td>20:17:15</td>
+<td>0:27:15</td>
+<td>0:24:49</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>IDRA 14</td>
+<td>38</td>
+<td>Alan Carr</td>
+<td>Orlaith Connolly</td>
+<td>1125</td>
+<td>20:18:00</td>
+<td>0:28:00</td>
+<td>0:24:53</td>
+<td>6.0</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>ILCA 6</td>
+<td>198578</td>
+<td>Nicole Quinn</td>
+<td>&nbsp;</td>
+<td>1156</td>
+<td>20:19:17</td>
+<td>0:29:17</td>
+<td>0:25:20</td>
+<td>7.0</td>
+</tr>
+<tr class="even racerow">
+<td>8</td>
+<td>Melges 15</td>
+<td>803</td>
+<td>Stephen Quinn</td>
+<td>Noelle Quinn</td>
+<td>994</td>
+<td>20:15:52</td>
+<td>0:25:52</td>
+<td>0:26:01</td>
+<td>8.0</td>
+</tr>
+<tr class="odd racerow">
+<td>9</td>
+<td>IDRA 14</td>
+<td>119</td>
+<td>Orla Doogue</td>
+<td>TBA</td>
+<td>1125</td>
+<td>20:20:00</td>
+<td>0:30:00</td>
+<td>0:26:40</td>
+<td>9.0</td>
+</tr>
+<tr class="even racerow">
+<td>10</td>
+<td>ILCA 6</td>
+<td>190756</td>
+<td>Willem Harting</td>
+<td>&nbsp;</td>
+<td>1156</td>
+<td>20:21:02</td>
+<td>0:31:02</td>
+<td>0:26:51</td>
+<td>10.0</td>
 </tr>
 </tbody>
 </table>
