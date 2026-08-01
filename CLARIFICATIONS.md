@@ -30,13 +30,21 @@ reproducible by re-running it.
   class names contain commas can't be split unambiguously. All current cases
   are `SC TESTING` rows for the publishing test pages (`/reshyc/sc-test/`),
   which we exclude anyway.
-- **33 single-race open events on the skip-list**
+- **33 open events on the skip-list**
   ([`as-published-skips.json`](as-published-skips.json)): Lambay Races,
-  Double Handed, Round the Island, Howth→Drogheda, etc. These are genuine
-  Sailwave pages but publish race results only, with no series summary
+  Double Handed, Round the Island, Howth→Drogheda, etc. Most are genuine
+  Sailwave pages that publish race results only, with no series summary
   section, and the app's archive-kit Sailwave parser requires a summary.
-  Needs app-side support for race-only pages; remove entries from the
-  skip-list as it lands.
+  Tracked as app #355; remove entries from the skip-list as it lands.
+
+  The recorded reason is a blanket one and **is wrong for about eight of
+  them** — `hyc-2015-open-dinghy-regatta`, `hyc-2022-open-autumn-league`,
+  `hyc-2023-open-lambay-races` and `hyc-2024-open-autumn-league-offshore`
+  among them carry no race-only page at all; every captured page has its
+  summary table, so something else blocks those. Re-diagnose per entry when
+  #355 lands rather than assuming the whole list clears. By page shape the
+  split is: 10 events race-only throughout, ~12 mixed, ~8 with no race-only
+  page.
 
 ## Presentation decisions
 
