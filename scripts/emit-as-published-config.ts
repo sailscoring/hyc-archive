@@ -168,6 +168,9 @@ interface ConfigSeries {
   venueUrl: string;
   venueLogoUrl: string;
   source: 'sailwave';
+  /** Publish this event's fleets as race results alone (app #347) — a one-off
+   *  trophy race, not a series. Curated in as-published-race-results.json. */
+  detail?: 'races';
   category: string;
   fleets: ConfigFleet[];
   /** Pinned display labels for the event folder (ADR-011): the admin DB's
@@ -199,9 +202,27 @@ function loadSkips(): Record<string, string> {
   }
 }
 
+/** Events that publish as a race result rather than a series table (app
+ *  #347) — a one-off trophy race, where a standings table would be one race
+ *  column, a total equal to that race's score, and meaningless discards.
+ *
+ *  Curated by hand, never derived from the race count. Plenty of HYC series
+ *  sailed exactly one race and are still series: a league abandoned after its
+ *  first day, a championship that never got away. Those keep their standings
+ *  table, which is what the club published and what the record should say. */
+function loadRaceResults(): Record<string, string> {
+  try {
+    return JSON.parse(readFileSync('as-published-race-results.json', 'utf8'));
+  } catch {
+    return {};
+  }
+}
+
 function run(): number {
   const captureIndex = buildCaptureIndex();
   const skips = loadSkips();
+  const raceResults = loadRaceResults();
+  const raceResultKeys = new Set<string>();
 
   const catalogues = readdirSync(ADMIN_DIR)
     .map((f) => /^(\d{4})_(club|open)\.csv$/.exec(f))
@@ -292,6 +313,7 @@ function run(): number {
         // and the year is what the app's grouping reads.
         startDate: `${cat.year}-04-01`,
         source: 'sailwave',
+        ...(raceResults[key] ? { detail: 'races' as const } : {}),
         // Initial in-app filing: the club/open split the admin catalogues
         // already carry, so the public picker reads Year -> Open/Club ->
         // Series -> Fleet — the year axis comes from the start date, so a
@@ -299,6 +321,7 @@ function run(): number {
         category: cat.type === 'open' ? 'Open Events' : 'Club Racing',
         fleets,
       };
+      if (raceResults[key]) raceResultKeys.add(key);
       series.push(entry);
       eventLabelBySeries.set(entry, event.replace(/\s+/g, ' ').trim());
     }
@@ -358,10 +381,14 @@ function run(): number {
   console.log(
     `as-published.config.json: ${series.length} series, ${fleetCount} fleet pages ` +
       `(${emptyPath} rows had no ftp_path, ${missing.length} pages not in capture, ` +
-      `${skippedMalformed.length} malformed rows, ${skippedKeys.size} series on the skip-list)`,
+      `${skippedMalformed.length} malformed rows, ${skippedKeys.size} series on the skip-list, ` +
+      `${raceResultKeys.size} single-race events)`,
   );
   for (const k of Object.keys(skips)) {
     if (!skippedKeys.has(k)) console.error(`  ! stale skip-list entry (no such series): ${k}`);
+  }
+  for (const k of Object.keys(raceResults)) {
+    if (!raceResultKeys.has(k)) console.error(`  ! stale race-results entry (no such series): ${k}`);
   }
   return 0;
 }

@@ -38,6 +38,30 @@ reproducible by re-running it.
   Needs app-side support for race-only pages; remove entries from the
   skip-list as it lands.
 
+## Presentation decisions
+
+- **20 one-off events publish as a race result, not a series table**
+  ([`as-published-race-results.json`](as-published-race-results.json)): the
+  Gibney Classic, the Lambay Race, Round the Island, the Double Handed Race,
+  the New Year's Day races, Howth→Drogheda, the Brass Monkey, the Autumn
+  League passage race, the Howth 17 125th-year race. Sailwave published each
+  of these with a standings table *and* the race table; the standings add a
+  Total and a Nett equal to the race score, under a caption reading
+  `Sailed: 1, Discards: 0, To count: 1`. The archive drops that table (app
+  #347) and publishes the race result the event actually produced.
+
+  This is the one place the archive departs from the source page's shape. It
+  is a presentation decision, not a results one — every score, rank and
+  display cell is as published, and the standings rows are still ingested
+  (the identity spine reads them), just not rendered.
+
+- **The list is curated, never derived from the race count.** Several HYC
+  series sailed exactly one race and are still series — `End of Summer Series
+  Sat./Sun. 2020`, `Wed. Mini Series 2021`, `Saturday Series 3 2023`, and the
+  `IDRA Eastern Championship 2019` (one entry, one race). Those keep their
+  standings table: a league abandoned after its first day is a league, and
+  the published record should say so.
+
 ## Naming approximations
 
 - **Series display names** are `"<admin event title> <year>"` (e.g. “Wave

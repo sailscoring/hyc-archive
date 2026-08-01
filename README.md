@@ -46,6 +46,8 @@ Makefile                  the capture targets: backup / admin-backup / summaries
 as-published.config.json  generated ingest config (committed; input to the app's
                           archive-generate)
 as-published-skips.json   series the archive-kit can't ingest yet, with reasons
+as-published-race-results.json  one-off events published as a race result, not
+                          a series table (app #347) — curated, see CLARIFICATIONS
 .github/workflows/
   backup-ftp.yml          daily FTP-site capture → PR → auto-merge
   backup-admin.yml        daily admin-DB capture → PR → auto-merge
