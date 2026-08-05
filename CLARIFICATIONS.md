@@ -70,14 +70,28 @@ reproducible by re-running it.
   standings table: a league abandoned after its first day is a league, and
   the published record should say so.
 
-## 2026 club racing (full-fidelity, not as-published)
+## 2026 club racing — told twice, on purpose
 
-2026 club racing is **not** as-published: Series 1/2/3 are sub-series of one
-series per racing group, and as-published has no sub-series concept (it
-deliberately replaced DBSC's sub-series-composed reconstruction). The blocked
-series are built by `pnpm merge-club-series` from HYC's per-series Sailwave
-files and scored by our engine, so — unlike everything above — a **results**
-delta *can* arise here. What follows is where we know we diverge.
+2026 club racing appears in the workspace two ways, and only one of them is the
+archival record:
+
+- **As-published (the record).** The ten *finished* club series — Series 1 and
+  2 of each racing group — are ingested from the captured pages like any other
+  season, listed in `CURRENT_SEASON_EVENTS` in
+  `scripts/emit-as-published-config.ts`. Nothing is recomputed, so the coverage
+  rules at the top of this file apply and no results delta can arise. Series 3
+  joins the list when the club stops updating its pages.
+- **The blocked demo.** `pnpm merge-club-series` builds one full-fidelity
+  series per racing group with Series 1/2/3 as sub-series — a demonstration of
+  managing a whole season that way, which as-published cannot express (it has
+  no sub-series concept; it deliberately replaced DBSC's sub-series-composed
+  reconstruction). These carry a **" (DEMO)"** name suffix and are *not*
+  authoritative for 2026.
+
+The demo is scored by our engine, so unlike everything above a **results**
+delta can arise — and does. It is accepted, not outstanding: the faithful
+telling of the same racing is the as-published one alongside it. What follows
+is where the demo diverges and why.
 
 - **Discards follow the SIs, not the `.blw`.** The SIs allow "one discard for
   every three races completed" (dinghies) and "every four" (keelboats); the
@@ -110,7 +124,7 @@ delta *can* arise here. What follows is where we know we diverge.
   number between Series 1 and 2.
 
 - **Per-block entry lists don't survive the merge — blocks rank only boats that
-  sailed.** This is the open divergence, and it is a *results* one.
+  sailed.** The largest divergence, and the reason the demo isn't the record.
 
   Each Sailwave file has its own entry list, and Sailwave ranks a boat that
   entered a series but never sailed it as all-DNC. A merged series has one
@@ -119,10 +133,16 @@ delta *can* arise here. What follows is where we know we diverge.
   actually raced — and because DNC is scored off the entry count, dropping
   those boats lowers every DNC score in the block:
 
-  | | published / source | merged |
+  | | published / source / as-published | merged demo |
   |---|---|---|
   | Wed Series 1, Division A HPH | DNC = 7 (6 entries) | DNC = 6 (5 sailed) |
   | Dinghy Series 1, Optimist | DNC = 19 | DNC = 12 |
+
+  Concretely, in Wednesday Series 1 Division A HPH the as-published page carries
+  `32032 Adrenaline` 6th on 21 points (DNC in all three races), verbatim as
+  published; the demo drops the boat and every other boat's DNC falls from 7 to
+  6. Both tellings are in the workspace, and the faithful one is labelled as
+  such by the absence of "(DEMO)".
 
   Finishing positions are untouched; only DNC values, and the net points and
   ranks derived from them, move. Turning the flag off is worse, not better: the

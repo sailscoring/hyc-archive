@@ -85,9 +85,9 @@ The capture automation moved here from [`markmc/reshyc`](https://github.com/mark
    unchanged documents are no-ops by content hash. **Not yet armed**: the push
    step is skipped until `SAILSCORING_ARCHIVIST_TOKEN` is configured.
 
-Currently: **371 series / 1,312 fleet pages / ~15,000 competitor rows** across
-2013–2025 emit and generate cleanly; see [CLARIFICATIONS.md](CLARIFICATIONS.md)
-for what doesn't (and why).
+Currently: **381 series / 1,334 fleet pages / ~18,000 competitor rows** across
+2013–2025 plus the finished 2026 club series emit and generate cleanly; see
+[CLARIFICATIONS.md](CLARIFICATIONS.md) for what doesn't (and why).
 
 ## Relationship to the app repo
 
@@ -110,7 +110,8 @@ with `scripts/ftp-paths.ts` here as the HYC-specific caller.
 
 - ✅ Reference data + reshyc capture vendored (this extraction, app issue #233).
 - ✅ Capture automation (FTP, admin DB, summaries) moved here from reshyc.
-- ✅ As-published config emission + clean `archive-generate` run over 2013–2025.
+- ✅ As-published config emission + clean `archive-generate` run over 2013–2025
+  and the finished 2026 club series.
 - ⬜ Arm the ingest: provision the hyc workspace archivist token and CI secrets.
 - ⬜ Extend coverage: single-race pages (the skip-list); the ~1,170 captured
   pages the admin catalogue never linked (all of 2011–2014 plus later
@@ -118,14 +119,20 @@ with `scripts/ftp-paths.ts` here as the HYC-specific caller.
   the identity manifest; prize-winner (summaries/) data — mirror
   dbsc-archive's `yearbook/`.
 - ⬜ Thread the 2026 live-series FTP paths into the HYC workspace.
-- ⬜ 2026 club racing: merge tooling is in place (`pnpm merge-club-series`),
-  waiting on the real `.blw` files from the club's scorer — see
-  `sources/blw/README.md`. Series 1/2/3 become sub-series of one series per
-  racing group, which is why this half is full-fidelity rather than
-  as-published (as-published has no sub-series concept). Weekly updates to the
-  live Series 3 additionally need an app-side way to replay a `.sailscoring`
-  file over an existing series: `updateSeriesFromFile` already does exactly
-  that but is only reachable via revision-revert.
+- ✅ 2026 club racing, as-published: the ten finished club series (Series 1 and
+  2 of each racing group) emit and generate cleanly alongside 2013–2025.
+- ✅ 2026 club racing, blocked demo: `pnpm merge-club-series` builds one series
+  per racing group with Series 1/2/3 as sub-series, from the club's own
+  Sailwave files (`sources/blw/`) — a demonstration of the shape proposed for
+  future seasons, labelled "(DEMO)" and knowingly not a match for the published
+  tables (see CLARIFICATIONS). Five of six groups build; Tuesday & Saturday
+  needs an `RDGa` mapping in the app's Sailwave importer.
+- ⬜ Add 2026 Series 3 to `CURRENT_SEASON_EVENTS` once the club stops updating
+  those pages.
+- ⬜ For a season actually *scored* this way, weekly updates need an app-side
+  way to replay a `.sailscoring` file over an existing series:
+  `updateSeriesFromFile` already does exactly that but is only reachable via
+  revision-revert.
 
 ## Licensing
 

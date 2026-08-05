@@ -29,6 +29,34 @@ import { join } from 'node:path';
 /** Current season stays full-fidelity (scored in-app); archive what's before. */
 const CUTOFF_YEAR = 2026;
 
+/**
+ * Events from the current season that are nonetheless archived as-published:
+ * club series that have **finished**, so their pages will not change again.
+ *
+ * 2026 club racing is also imported full-fidelity as one blocked series per
+ * racing group (`pnpm merge-club-series`), but that import is a *demo* of the
+ * sub-series method and diverges from the published tables. These entries are
+ * the faithful record of the same racing, and the two are kept apart by the
+ * demo's " (DEMO)" name suffix.
+ *
+ * Series 3 is deliberately absent: it is still being sailed. Add it — and the
+ * dinghies' Series 3, once it starts — when the club stops updating the pages.
+ * An event only ever joins this list after its last race, because an
+ * as-published series key can never be renamed (CLAUDE.md rule 4).
+ */
+const CURRENT_SEASON_EVENTS = new Set([
+  'hyc-2026-club-wednesday-series-1',
+  'hyc-2026-club-wednesday-series-2',
+  'hyc-2026-club-tuesday-series-1',
+  'hyc-2026-club-tuesday-series-2',
+  'hyc-2026-club-tuesday-saturday-series-1',
+  'hyc-2026-club-tuesday-saturday-series-2',
+  'hyc-2026-club-saturday-series-1',
+  'hyc-2026-club-saturday-series-2',
+  'hyc-2026-club-dinghy-series-1',
+  'hyc-2026-club-dinghy-series-2',
+]);
+
 const CAPTURE_ROOT = 'sources/reshyc/results.hyc.ie';
 const ADMIN_DIR = 'sources/reshyc/admin';
 
@@ -228,7 +256,9 @@ function run(): number {
     .map((f) => /^(\d{4})_(club|open)\.csv$/.exec(f))
     .filter((m): m is RegExpExecArray => m !== null)
     .map((m) => ({ file: join(ADMIN_DIR, m[0]), year: m[1], type: m[2] }))
-    .filter((c) => Number(c.year) < CUTOFF_YEAR)
+    // Current-season catalogues come through too; the per-event gate below
+    // keeps all but the finished series out.
+    .filter((c) => Number(c.year) <= CUTOFF_YEAR)
     .sort((a, b) => a.year.localeCompare(b.year) || a.type.localeCompare(b.type));
 
   const series: ConfigSeries[] = [];
@@ -254,6 +284,7 @@ function run(): number {
 
     for (const [event, eventRows] of byEvent) {
       const key = `hyc-${cat.year}-${cat.type}-${kebab(event)}`;
+      if (Number(cat.year) >= CUTOFF_YEAR && !CURRENT_SEASON_EVENTS.has(key)) continue;
       if (skips[key]) {
         skippedKeys.add(key);
         continue;

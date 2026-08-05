@@ -83,6 +83,20 @@ interface GroupSpec {
 const BLW_ROOT = 'sources/blw/2026';
 
 /**
+ * 2026 is a **demonstration** of managing a season's club racing as one series
+ * per racing group with the individual series as sub-series — the shape being
+ * proposed for future seasons. It is not the archival record of 2026: the
+ * finished 2026 series are ingested separately and faithfully through the
+ * as-published path (`pnpm emit-as-published`), and this merge is known to
+ * diverge from them (CLARIFICATIONS.md — per-block entry lists don't survive
+ * the merge, so DNC-derived points move).
+ *
+ * The suffix keeps the two tellings of 2026 apart in the workspace and in the
+ * published tree. Drop it for the first season actually scored this way.
+ */
+const SERIES_NAME_SUFFIX = ' (DEMO)';
+
+/**
  * The six groups HYC scores 2026 club racing under — one per Sailwave series
  * title. Fleets are constant across the blocks within a group; only the races
  * differ, which is exactly what a sub-series models.
@@ -231,7 +245,7 @@ function mergeGroup(group: GroupSpec, repoRoot: string): { file: SeriesFile; not
       bytes.buffer.slice(bytes.byteOffset, bytes.byteOffset + bytes.byteLength) as ArrayBuffer,
     );
     const file = buildSeriesFileFromSailwave(raw, {
-      name: group.name,
+      name: `${group.name}${SERIES_NAME_SUFFIX}`,
       venue: group.venue,
       primaryLabel: 'helm',
       defaultRaceDate: spec.defaultRaceDate,
@@ -475,7 +489,7 @@ function mergeGroup(group: GroupSpec, repoRoot: string): { file: SeriesFile; not
     exportedAt: new Date().toISOString(),
     series: {
       ...base.series,
-      name: group.name,
+      name: `${group.name}${SERIES_NAME_SUFFIX}`,
       venue: group.venue,
       startDate: dates[0] ?? base.series.startDate,
       endDate: dates[dates.length - 1] ?? base.series.endDate,

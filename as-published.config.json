@@ -15523,6 +15523,464 @@
           "includeRaces": true
         }
       ]
+    },
+    {
+      "key": "hyc-2026-club-wednesday-series-1",
+      "id": "c1894bc6-2ad3-5756-bf5f-d4c2d39f8cfe",
+      "publishedSlug": "2026",
+      "name": "Wednesday Series 1 2026",
+      "venue": "Howth",
+      "venueUrl": "https://www.hyc.ie",
+      "venueLogoUrl": "https://logos.sailscoring.ie/hyc.png",
+      "startDate": "2026-04-01",
+      "source": "sailwave",
+      "category": "Club Racing",
+      "fleets": [
+        {
+          "name": "Division A",
+          "subPath": "wednesday-series-1/division-a",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2026/club/series1_classa.htm",
+          "sections": [
+            {
+              "sectionTitle": "Division A HPH Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Division A IRC Fleet",
+              "includeRaces": true
+            }
+          ]
+        },
+        {
+          "name": "Division B",
+          "subPath": "wednesday-series-1/division-b",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2026/club/series1_classb.htm",
+          "sections": [
+            {
+              "sectionTitle": "Division B HPH Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Division B IRC Fleet",
+              "includeRaces": true
+            }
+          ]
+        },
+        {
+          "name": "Division C",
+          "subPath": "wednesday-series-1/division-c",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2026/club/series1_classc.htm",
+          "sections": [
+            {
+              "sectionTitle": "Division C HPH Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Division C IRC Fleet",
+              "includeRaces": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "hyc-2026-club-tuesday-series-1",
+      "id": "074b9c8d-d72b-5ac7-ba72-430e5f61d326",
+      "publishedSlug": "2026",
+      "name": "Tuesday Series 1 2026",
+      "venue": "Howth",
+      "venueUrl": "https://www.hyc.ie",
+      "venueLogoUrl": "https://logos.sailscoring.ie/hyc.png",
+      "startDate": "2026-04-01",
+      "source": "sailwave",
+      "category": "Club Racing",
+      "fleets": [
+        {
+          "name": "Puppeteers",
+          "subPath": "tuesday-series-1/puppeteers",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2026/club/series1_tue_pup.htm",
+          "sections": [
+            {
+              "sectionTitle": "Puppeteer HPH Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Puppeteer Scr Fleet",
+              "includeRaces": true
+            }
+          ]
+        },
+        {
+          "name": "Squibs",
+          "subPath": "tuesday-series-1/squibs",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2026/club/series1_tue_squib.htm",
+          "sections": [
+            {
+              "sectionTitle": "Squib HPH Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Squib Scr Fleet",
+              "includeRaces": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "hyc-2026-club-tuesday-saturday-series-1",
+      "id": "0c56e2e5-b433-53e2-bdc8-9d38820d5616",
+      "publishedSlug": "2026",
+      "name": "Tuesday & Saturday Series 1 2026",
+      "venue": "Howth",
+      "venueUrl": "https://www.hyc.ie",
+      "venueLogoUrl": "https://logos.sailscoring.ie/hyc.png",
+      "startDate": "2026-04-01",
+      "source": "sailwave",
+      "category": "Club Racing",
+      "fleets": [
+        {
+          "name": "Howth 17",
+          "subPath": "tuesday-saturday-series-1/howth-17",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2026/club/series1_tuesat_h17.htm",
+          "sections": [
+            {
+              "sectionTitle": "Howth 17 HPH Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Howth 17 Scr Fleet",
+              "includeRaces": true
+            }
+          ]
+        }
+      ],
+      "folders": [
+        {
+          "path": "tuesday-saturday-series-1",
+          "label": "Tuesday & Saturday Series 1"
+        }
+      ]
+    },
+    {
+      "key": "hyc-2026-club-saturday-series-1",
+      "id": "98b85433-ac25-5502-8421-cbfeed527ca3",
+      "publishedSlug": "2026",
+      "name": "Saturday Series 1 2026",
+      "venue": "Howth",
+      "venueUrl": "https://www.hyc.ie",
+      "venueLogoUrl": "https://logos.sailscoring.ie/hyc.png",
+      "startDate": "2026-04-01",
+      "source": "sailwave",
+      "category": "Club Racing",
+      "fleets": [
+        {
+          "name": "Puppeteer 22",
+          "subPath": "saturday-series-1/puppeteer-22",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2026/club/series1_satpups.htm",
+          "sections": [
+            {
+              "sectionTitle": "Puppeteer HPH Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Puppeteer Scr Fleet",
+              "includeRaces": true
+            }
+          ]
+        },
+        {
+          "name": "Squibs",
+          "subPath": "saturday-series-1/squibs",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2026/club/series1_satsquibs.htm",
+          "sections": [
+            {
+              "sectionTitle": "Squib HPH Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Squib Scr Fleet",
+              "includeRaces": true
+            }
+          ]
+        },
+        {
+          "name": "Cruisers",
+          "subPath": "saturday-series-1/cruisers",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2026/club/series1_satcruisers.htm",
+          "sections": [
+            {
+              "sectionTitle": "Division B HPH Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Division B IRC Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Division C HPH Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Division C IRC Fleet",
+              "includeRaces": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "hyc-2026-club-dinghy-series-1",
+      "id": "96a4a979-0d47-5ecf-ab62-4535e405829b",
+      "publishedSlug": "2026",
+      "name": "Dinghy Series 1 2026",
+      "venue": "Howth",
+      "venueUrl": "https://www.hyc.ie",
+      "venueLogoUrl": "https://logos.sailscoring.ie/hyc.png",
+      "startDate": "2026-04-01",
+      "source": "sailwave",
+      "category": "Club Racing",
+      "fleets": [
+        {
+          "name": "PY",
+          "subPath": "dinghy-series-1/py",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2026/club/series1_dinghies_py.htm",
+          "includeRaces": true
+        },
+        {
+          "name": "Optimists",
+          "subPath": "dinghy-series-1/optimists",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2026/club/series1_dinghies_opt.htm",
+          "includeRaces": true
+        }
+      ]
+    },
+    {
+      "key": "hyc-2026-club-tuesday-saturday-series-2",
+      "id": "214fb15b-ea40-5ba7-a04b-15916912bd31",
+      "publishedSlug": "2026",
+      "name": "Tuesday & Saturday Series 2 2026",
+      "venue": "Howth",
+      "venueUrl": "https://www.hyc.ie",
+      "venueLogoUrl": "https://logos.sailscoring.ie/hyc.png",
+      "startDate": "2026-04-01",
+      "source": "sailwave",
+      "category": "Club Racing",
+      "fleets": [
+        {
+          "name": "Howth 17",
+          "subPath": "tuesday-saturday-series-2/howth-17",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2026/club/series2_tuesat_h17.htm",
+          "sections": [
+            {
+              "sectionTitle": "Howth 17 HPH Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Howth 17 Scr Fleet",
+              "includeRaces": true
+            }
+          ]
+        }
+      ],
+      "folders": [
+        {
+          "path": "tuesday-saturday-series-2",
+          "label": "Tuesday & Saturday Series 2"
+        }
+      ]
+    },
+    {
+      "key": "hyc-2026-club-tuesday-series-2",
+      "id": "90d58079-263a-5536-bcb8-aa171f4526ca",
+      "publishedSlug": "2026",
+      "name": "Tuesday Series 2 2026",
+      "venue": "Howth",
+      "venueUrl": "https://www.hyc.ie",
+      "venueLogoUrl": "https://logos.sailscoring.ie/hyc.png",
+      "startDate": "2026-04-01",
+      "source": "sailwave",
+      "category": "Club Racing",
+      "fleets": [
+        {
+          "name": "Squibs",
+          "subPath": "tuesday-series-2/squibs",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2026/club/series2_tue_squib.htm",
+          "sections": [
+            {
+              "sectionTitle": "Squib HPH Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Squib Scr Fleet",
+              "includeRaces": true
+            }
+          ]
+        },
+        {
+          "name": "Puppeteers",
+          "subPath": "tuesday-series-2/puppeteers",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2026/club/series2_tue_pup.htm",
+          "sections": [
+            {
+              "sectionTitle": "Puppeteer HPH Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Puppeteer Scr Fleet",
+              "includeRaces": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "hyc-2026-club-wednesday-series-2",
+      "id": "1e9e1433-e525-5c70-a2ff-7e395c32afca",
+      "publishedSlug": "2026",
+      "name": "Wednesday Series 2 2026",
+      "venue": "Howth",
+      "venueUrl": "https://www.hyc.ie",
+      "venueLogoUrl": "https://logos.sailscoring.ie/hyc.png",
+      "startDate": "2026-04-01",
+      "source": "sailwave",
+      "category": "Club Racing",
+      "fleets": [
+        {
+          "name": "Division A",
+          "subPath": "wednesday-series-2/division-a",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2026/club/series2_diva.htm",
+          "sections": [
+            {
+              "sectionTitle": "Division A HPH Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Division A IRC Fleet",
+              "includeRaces": true
+            }
+          ]
+        },
+        {
+          "name": "Division B",
+          "subPath": "wednesday-series-2/division-b",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2026/club/series2_divb.htm",
+          "sections": [
+            {
+              "sectionTitle": "Division B HPH Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Division B IRC Fleet",
+              "includeRaces": true
+            }
+          ]
+        },
+        {
+          "name": "Division C",
+          "subPath": "wednesday-series-2/division-c",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2026/club/series2_divc.htm",
+          "sections": [
+            {
+              "sectionTitle": "Division C HPH Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Division C IRC Fleet",
+              "includeRaces": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "hyc-2026-club-saturday-series-2",
+      "id": "48d20329-739b-5c38-a414-642d416ecc08",
+      "publishedSlug": "2026",
+      "name": "Saturday Series 2 2026",
+      "venue": "Howth",
+      "venueUrl": "https://www.hyc.ie",
+      "venueLogoUrl": "https://logos.sailscoring.ie/hyc.png",
+      "startDate": "2026-04-01",
+      "source": "sailwave",
+      "category": "Club Racing",
+      "fleets": [
+        {
+          "name": "Puppeteer 22",
+          "subPath": "saturday-series-2/puppeteer-22",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2026/club/series2_satpups.htm",
+          "sections": [
+            {
+              "sectionTitle": "Puppeteer HPH Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Puppeteer Scr Fleet",
+              "includeRaces": true
+            }
+          ]
+        },
+        {
+          "name": "Squibs",
+          "subPath": "saturday-series-2/squibs",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2026/club/series2_satsquibs.htm",
+          "sections": [
+            {
+              "sectionTitle": "Squib HPH Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Squib Scr Fleet",
+              "includeRaces": true
+            }
+          ]
+        },
+        {
+          "name": "Cruisers",
+          "subPath": "saturday-series-2/cruisers",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2026/club/series2_satcruisers.htm",
+          "sections": [
+            {
+              "sectionTitle": "Division B HPH Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Division B IRC Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Division C HPH Fleet",
+              "includeRaces": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "hyc-2026-club-dinghy-series-2",
+      "id": "2e3e352e-e43e-564e-8e08-91dc6da8739e",
+      "publishedSlug": "2026",
+      "name": "Dinghy Series 2 2026",
+      "venue": "Howth",
+      "venueUrl": "https://www.hyc.ie",
+      "venueLogoUrl": "https://logos.sailscoring.ie/hyc.png",
+      "startDate": "2026-04-01",
+      "source": "sailwave",
+      "category": "Club Racing",
+      "fleets": [
+        {
+          "name": "PY",
+          "subPath": "dinghy-series-2/py",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2026/club/series2_dinghies_py.htm",
+          "includeRaces": true
+        },
+        {
+          "name": "Optimists",
+          "subPath": "dinghy-series-2/optimists",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2026/club/series2_dinghies_opt.htm",
+          "includeRaces": true
+        }
+      ]
     }
   ]
 }
