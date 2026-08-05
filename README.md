@@ -125,8 +125,7 @@ with `scripts/ftp-paths.ts` here as the HYC-specific caller.
   per racing group with Series 1/2/3 as sub-series, from the club's own
   Sailwave files (`sources/blw/`) — a demonstration of the shape proposed for
   future seasons, labelled "(DEMO)" and knowingly not a match for the published
-  tables (see CLARIFICATIONS). Five of six groups build; Tuesday & Saturday
-  needs an `RDGa` mapping in the app's Sailwave importer.
+  tables (see CLARIFICATIONS). All six groups build.
 - ⬜ Add 2026 Series 3 to `CURRENT_SEASON_EVENTS` once the club stops updating
   those pages.
 - ⬜ For a season actually *scored* this way, weekly updates need an app-side
