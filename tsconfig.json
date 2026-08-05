@@ -1,14 +1,21 @@
 {
   "compilerOptions": {
     "target": "ES2022",
-    "module": "commonjs",
-    "moduleResolution": "node",
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "lib": ["dom", "dom.iterable", "esnext"],
     "esModuleInterop": true,
     "strict": true,
     "skipLibCheck": true,
     "resolveJsonModule": true,
-    "noEmit": true,
-    "types": ["node"]
+    "noEmit": true
   },
-  "include": ["scripts", "lib", "tests"]
+  // The scripts here import the app's modules by relative path (CLAUDE.md: one
+  // canonical engine, no forks), so this repo typechecks app source too — and
+  // must do it the way the app does. `next-env.d.ts` supplies the Next.js
+  // ambient types those modules are written against; without it, TypeScript
+  // resolves `crypto` differently and the app's own files fail to compile here
+  // while compiling cleanly in the app. `typescript` is pinned to the same
+  // TypeScript 6 the app uses, for the same reason.
+  "include": ["scripts", "lib", "tests", "../sailscoring/next-env.d.ts"]
 }

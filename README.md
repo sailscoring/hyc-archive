@@ -35,8 +35,11 @@ halsail-2025/             Puppeteer pilot — HalSail-import CSVs + build guide
 scripts/
   ftp-paths.ts            resolve the catalogue → JSON for the app's update-ftp-paths
   emit-as-published-config.ts  admin CSVs + capture → as-published.config.json
+  merge-club-series.ts    HYC's per-series .blw files → one blocked .sailscoring
+  verify-club-merge.ts    prove a merged series scores as its sources did
   admin/                  hyc.ie admin scrapers (the capture tooling, from reshyc)
 sources/
+  blw/                    HYC's native Sailwave series files (see its README)
   reshyc/                 the published results-site capture (see SOURCES.md)
     results.hyc.ie/reshyc/  the FTP-site backup, seasons 2011–2026
     admin/                  per-year (event, class) → page catalogues, with the
@@ -115,6 +118,14 @@ with `scripts/ftp-paths.ts` here as the HYC-specific caller.
   the identity manifest; prize-winner (summaries/) data — mirror
   dbsc-archive's `yearbook/`.
 - ⬜ Thread the 2026 live-series FTP paths into the HYC workspace.
+- ⬜ 2026 club racing: merge tooling is in place (`pnpm merge-club-series`),
+  waiting on the real `.blw` files from the club's scorer — see
+  `sources/blw/README.md`. Series 1/2/3 become sub-series of one series per
+  racing group, which is why this half is full-fidelity rather than
+  as-published (as-published has no sub-series concept). Weekly updates to the
+  live Series 3 additionally need an app-side way to replay a `.sailscoring`
+  file over an existing series: `updateSeriesFromFile` already does exactly
+  that but is only reachable via revision-revert.
 
 ## Licensing
 

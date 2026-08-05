@@ -6,11 +6,13 @@
   "scripts": {
     "ftp-paths": "tsx scripts/ftp-paths.ts",
     "emit-as-published": "tsx scripts/emit-as-published-config.ts",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc6 --noEmit",
+    "merge-club-series": "tsx scripts/merge-club-series.ts",
+    "verify-club-merge": "tsx scripts/verify-club-merge.ts"
   },
   "devDependencies": {
     "@types/node": "^24.0.0",
     "tsx": "^4.22.4",
-    "typescript": "^5.9.2"
+    "typescript": "npm:@typescript/typescript6@^6.0.2"
   }
 }

@@ -5,5 +5,6 @@ __pycache__/
 *.pyc
 .env.tmp
 as-published/
+build/
 .ftp_credentials
 .admin_credentials

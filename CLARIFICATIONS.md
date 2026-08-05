@@ -70,6 +70,48 @@ reproducible by re-running it.
   standings table: a league abandoned after its first day is a league, and
   the published record should say so.
 
+## 2026 club racing (full-fidelity, not as-published)
+
+2026 club racing is **not** as-published: Series 1/2/3 are sub-series of one
+series per racing group, and as-published has no sub-series concept (it
+deliberately replaced DBSC's sub-series-composed reconstruction). The blocked
+series are built by `pnpm merge-club-series` from HYC's per-series Sailwave
+files and scored by our engine, so — unlike everything above — a **results**
+delta *can* arise here. What follows is where we know we diverge.
+
+- **Discards follow the SIs, not the `.blw`.** The SIs allow "one discard for
+  every three races completed" (dinghies) and "every four" (keelboats); the
+  merge sets `proportionalDiscard` accordingly (`{firstAt: 3, everyRaces: 3}`
+  and `{firstAt: 4, everyRaces: 4}`), which replaces the threshold ladder each
+  Sailwave file carries.
+
+  Those ladders are hand-entered and **disagree with each other and with the
+  SIs**, so this is a real divergence, not a re-statement:
+
+  | Sailwave file | ladder in the `.blw` | matches `floor(sailed/N)`? |
+  |---|---|---|
+  | Tues & Sat (Howth 17s) | 4→1, 8→2 | yes |
+  | Tues (One Designs) | 4→1, 9→2 | diverges from 8 races |
+  | Wed (Cruisers) | 5→1 | diverges from 4 races |
+  | Sat (Cruisers) | 5→1 | diverges from 4 races |
+  | Dinghies | 3→1, 6→2, 9→3, 13→4, 16→5, 19→6, 22→7 | diverges from 12 races |
+
+  At **every race count actually sailed in 2026 they agree**, so no published
+  standing changes today; the divergence would only show in a longer series.
+  Verify with `pnpm verify-club-merge`, which scores each block against its
+  source file and prints the allowance ladder.
+
+- **Boats are joined across blocks** on sail number + boat name, falling back
+  to boat name + helm and then helm alone — the same boat carries a different
+  Sailwave handle in each series file. Every join weaker than the first is
+  reported by the merge and belongs here once the real files land.
+
+- **Race dates come from Sailwave's `racedate`,** which several HYC files leave
+  empty (the 2026 Wednesday file labels its races only in `racename`, e.g.
+  "6th May"). Those races fall back to the per-block `defaultRaceDate` in
+  `scripts/merge-club-series.ts` — approximate, and flagged rather than guessed
+  per race.
+
 ## Naming approximations
 
 - **Series display names** are `"<admin event title> <year>"` (e.g. “Wave
