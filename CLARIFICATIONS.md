@@ -145,7 +145,10 @@ is where the demo diverges and why.
   such by the absence of "(DEMO)".
 
   Finishing positions are untouched; only DNC values, and the net points and
-  ranks derived from them, move. Turning the flag off is worse, not better: the
+  ranks derived from them, move. Whether excluding a boat from the *ranking*
+  should also remove it from the A5.2 *entry count* is under review as app
+  issue #368 — RRS A5.2 scores DNC from boats **entered**, and a boat that
+  entered and never sailed is arguably still one. Turning the flag off is worse, not better: the
   block would then also carry boats that only ever raced a *later* series,
   pushing DNC the other way.
 
