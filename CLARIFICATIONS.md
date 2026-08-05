@@ -46,6 +46,31 @@ reproducible by re-running it.
   split is: 10 events race-only throughout, ~12 mixed, ~8 with no race-only
   page.
 
+## Capture paths that fold together by case
+
+The admin DB's paths were written against a case-insensitive Windows server,
+so the emit resolves them case-insensitively — but the capture is a
+case-*sensitive* mirror, and holds **13 pairs of files differing only in
+case**, usually with different content and sizes:
+
+```
+2018/Club_wednesday_s1_class2_irc.htm   32,573 b
+2018/club_wednesday_s1_class2_irc.htm   21,388 b
+2024/open/Lambay/Class3.htm             48,664 b
+2024/open/Lambay/class3.htm             28,684 b
+2026/open/rti_PY.htm                    18,522 b
+2026/open/rti_py.htm                    11,486 b
+```
+
+The resolver takes the file matching the admin DB's own spelling, falling back
+to a case-insensitive match only when that is unambiguous; a fold with several
+candidates and no exact match is reported and left unresolved rather than
+guessed at (none currently). Before that, the index kept whichever file the
+directory walk happened to see last — which had silently substituted
+`rti_py.htm` (an entry list, `Sailed: 0`) for the `rti_PY.htm` the catalogue
+names (`Sailed: 1`, and the only one of the two carrying a race table). The
+other twelve pairs happened to resolve correctly by luck.
+
 ## Presentation decisions
 
 - **20 one-off events publish as a race result, not a series table**
@@ -62,6 +87,19 @@ reproducible by re-running it.
   is a presentation decision, not a results one — every score, rank and
   display cell is as published, and the standings rows are still ingested
   (the identity spine reads them), just not rendered.
+
+- **The 2026 Round the Island Race keeps its standings table**, despite being
+  a one-race event of exactly the kind the list above covers. HYC published the
+  two ILCA fleets summary-only — no race-detail table to promote in the
+  standings' place — while the PY fleet has one. `detail` is a per-series
+  setting, so the event publishes as standings throughout rather than as a race
+  result for one fleet and a standings table for the others.
+
+- **The 2026 Dinghy F'bite Spring ILCA 4 fleet publishes with no racing.** Its
+  page reads `Sailed: 0, Discards: 0, To count: 0, Entries: 4` — an entry list
+  for a fleet that never got away. It is ingested as published: four boats, no
+  races. Dropping it would be the archive editing the record rather than
+  reflecting it.
 
 - **The list is curated, never derived from the race count.** Several HYC
   series sailed exactly one race and are still series — `End of Summer Series

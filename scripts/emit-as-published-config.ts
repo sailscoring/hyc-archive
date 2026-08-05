@@ -45,6 +45,22 @@ const CUTOFF_YEAR = 2026;
  * as-published series key can never be renamed (CLAUDE.md rule 4).
  */
 const CURRENT_SEASON_EVENTS = new Set([
+  // Open events that are over. Held back until they were: the Fingal Cruiser
+  // Challenge is still being updated, and the Puppeteer 22 Championships and
+  // Howth 17 Nationals have published entry lists with no racing sailed yet.
+  // The Double-Handed Race is a coverage gap, not a timing one — admin row
+  // 2265 points at a page that has never appeared in the capture.
+  'hyc-2026-open-fireball-nationals',
+  'hyc-2026-open-dinghy-f-bite-spring-2026',
+  'hyc-2026-open-tadg-riordan-brass-monkeys',
+  // One race, published as a race result rather than a standings table — see
+  // as-published-race-results.json.
+  'hyc-2026-open-new-year-s-day-dinghies',
+  // Also one race, but it keeps its standings table: HYC published the two
+  // ILCA fleets summary-only, with no race-detail table to promote in its
+  // place, and `detail` is a per-series setting.
+  'hyc-2026-open-dinghy-round-the-island',
+  // Club series, finished.
   'hyc-2026-club-wednesday-series-1',
   'hyc-2026-club-wednesday-series-2',
   'hyc-2026-club-tuesday-series-1',
@@ -87,29 +103,68 @@ function kebab(name: string): string {
   );
 }
 
-/** Case-insensitive index of the capture tree: lowercased FTP path → the
- *  real repo-relative file path. Mirrors the case-insensitive Windows server
- *  the admin DB's paths were written against. */
-function buildCaptureIndex(): Map<string, string> {
-  const index = new Map<string, string>();
+/** Index of the capture tree, keyed both ways.
+ *
+ *  `exact` is the FTP path as it appears on disk; `lower` is the lowercased
+ *  path to **every** file that shares it. The admin DB's paths were written
+ *  against a case-insensitive Windows server, so a lowercased lookup is the
+ *  right default — but the capture is a case-*sensitive* mirror and holds 13
+ *  pairs differing only in case (`rti_PY.htm` vs `rti_py.htm`,
+ *  `2024/open/Lambay/Class3.htm` vs `class3.htm`, …), usually with different
+ *  content. Folding those together and keeping whichever the walk saw last
+ *  silently substitutes one page for another, so both keys are kept and the
+ *  exact one wins. */
+interface CaptureIndex {
+  exact: Map<string, string>;
+  lower: Map<string, string[]>;
+}
+
+function buildCaptureIndex(): CaptureIndex {
+  const exact = new Map<string, string>();
+  const lower = new Map<string, string[]>();
   const walk = (dir: string, ftpPrefix: string) => {
     for (const entry of readdirSync(join(CAPTURE_ROOT, dir), {
       withFileTypes: true,
     })) {
       const rel = dir ? `${dir}/${entry.name}` : entry.name;
-      if (entry.isDirectory()) walk(rel, `${ftpPrefix}/${entry.name}`);
-      else index.set(`${ftpPrefix}/${entry.name}`.toLowerCase(), join(CAPTURE_ROOT, rel));
+      if (entry.isDirectory()) {
+        walk(rel, `${ftpPrefix}/${entry.name}`);
+        continue;
+      }
+      const ftpPath = `${ftpPrefix}/${entry.name}`;
+      const file = join(CAPTURE_ROOT, rel);
+      exact.set(ftpPath, file);
+      const bucket = lower.get(ftpPath.toLowerCase()) ?? [];
+      bucket.push(file);
+      lower.set(ftpPath.toLowerCase(), bucket);
     }
   };
   walk('', '');
-  return index;
+  return { exact, lower };
 }
 
-/** Normalise an admin-DB ftp_path the way the club's server would have. */
+/** Normalise an admin-DB ftp_path the way the club's server would have —
+ *  slashes and a leading `/`, but **not** case: see `resolveCapture`. */
 function normFtpPath(raw: string): string {
   let p = raw.trim().replace(/\\/g, '/');
   if (!p.startsWith('/')) p = `/${p}`;
-  return p.toLowerCase();
+  return p;
+}
+
+/** Resolve an admin path to a captured file: the exact-case file if there is
+ *  one, else the unique case-insensitive match. An ambiguous fold — several
+ *  candidates and none matching the admin DB's own spelling — is reported and
+ *  left unresolved rather than guessed at. */
+function resolveCapture(
+  index: CaptureIndex,
+  ftpPath: string,
+): { file?: string; ambiguous?: string[] } {
+  const exact = index.exact.get(ftpPath);
+  if (exact) return { file: exact };
+  const candidates = index.lower.get(ftpPath.toLowerCase()) ?? [];
+  if (candidates.length === 1) return { file: candidates[0] };
+  if (candidates.length === 0) return {};
+  return { ambiguous: candidates };
 }
 
 interface AdminRow {
@@ -268,6 +323,7 @@ function run(): number {
   let emptyPath = 0;
   const skippedKeys = new Set<string>();
   const missing: string[] = [];
+  const ambiguousPaths: string[] = [];
   const skippedMalformed: string[] = [];
 
   for (const cat of catalogues) {
@@ -299,7 +355,15 @@ function run(): number {
         }
         const ftpPath = normFtpPath(row.ftpPath);
         if (ftpPath.includes('sc-test')) continue; // publishing test pages
-        const file = captureIndex.get(ftpPath);
+        const { file, ambiguous } = resolveCapture(captureIndex, ftpPath);
+        if (ambiguous) {
+          ambiguousPaths.push(
+            `${cat.year} ${cat.type} | ${event} | ${row.className} | ${row.ftpPath.trim()} ` +
+              `→ ${ambiguous.length} files differing only in case, none matching: ` +
+              ambiguous.map((f) => f.split('/').pop()).join(', '),
+          );
+          continue;
+        }
         if (!file) {
           missing.push(`${cat.year} ${cat.type} | ${event} | ${row.className} | ${row.ftpPath.trim()}`);
           continue;
@@ -398,6 +462,7 @@ function run(): number {
 
   for (const line of skippedMalformed) console.error(`  ! malformed row: ${line}`);
   for (const line of missing) console.error(`  ! not in capture: ${line}`);
+  for (const line of ambiguousPaths) console.error(`  ! ambiguous case fold: ${line}`);
 
   const config = {
     version: 1,

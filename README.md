@@ -85,8 +85,9 @@ The capture automation moved here from [`markmc/reshyc`](https://github.com/mark
    unchanged documents are no-ops by content hash. **Not yet armed**: the push
    step is skipped until `SAILSCORING_ARCHIVIST_TOKEN` is configured.
 
-Currently: **381 series / 1,334 fleet pages / ~18,000 competitor rows** across
-2013–2025 plus the finished 2026 club series emit and generate cleanly; see
+Currently: **386 series / 1,346 fleet pages / ~18,000 competitor rows** across
+2013–2025 plus the finished 2026 club series and open events emit and generate
+cleanly; see
 [CLARIFICATIONS.md](CLARIFICATIONS.md) for what doesn't (and why).
 
 ## Relationship to the app repo
@@ -119,15 +120,20 @@ with `scripts/ftp-paths.ts` here as the HYC-specific caller.
   the identity manifest; prize-winner (summaries/) data — mirror
   dbsc-archive's `yearbook/`.
 - ⬜ Thread the 2026 live-series FTP paths into the HYC workspace.
-- ✅ 2026 club racing, as-published: the ten finished club series (Series 1 and
-  2 of each racing group) emit and generate cleanly alongside 2013–2025.
+- ✅ 2026 as-published: the ten finished club series (Series 1 and 2 of each
+  racing group) plus five finished open events — Fireball Nationals, Dinghy
+  F'bite Spring, Brass Monkeys, New Year's Day Dinghies, Round the Island —
+  emit and generate cleanly alongside 2013–2025.
 - ✅ 2026 club racing, blocked demo: `pnpm merge-club-series` builds one series
   per racing group with Series 1/2/3 as sub-series, from the club's own
   Sailwave files (`sources/blw/`) — a demonstration of the shape proposed for
   future seasons, labelled "(DEMO)" and knowingly not a match for the published
   tables (see CLARIFICATIONS). All six groups build.
-- ⬜ Add 2026 Series 3 to `CURRENT_SEASON_EVENTS` once the club stops updating
-  those pages.
+- ⬜ Add to `CURRENT_SEASON_EVENTS` as they finish: 2026 club Series 3, the
+  Fingal Cruiser Challenge (still being updated), the Puppeteer 22
+  Championships and Howth 17 Nationals (entry lists, no racing sailed yet).
+  The Double-Handed Race is a coverage gap instead — admin row 2265 names a
+  page that has never appeared in the capture.
 - ⬜ For a season actually *scored* this way, weekly updates need an app-side
   way to replay a `.sailscoring` file over an existing series:
   `updateSeriesFromFile` already does exactly that but is only reachable via

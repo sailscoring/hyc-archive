@@ -15981,6 +15981,173 @@
           "includeRaces": true
         }
       ]
+    },
+    {
+      "key": "hyc-2026-open-new-year-s-day-dinghies",
+      "id": "1220a8df-65e7-5189-9665-eef0cd19136f",
+      "publishedSlug": "2026",
+      "name": "New Year's Day Dinghies 2026",
+      "venue": "Howth",
+      "venueUrl": "https://www.hyc.ie",
+      "venueLogoUrl": "https://logos.sailscoring.ie/hyc.png",
+      "startDate": "2026-04-01",
+      "source": "sailwave",
+      "detail": "races",
+      "category": "Open Events",
+      "fleets": [
+        {
+          "name": "ILCA 4",
+          "subPath": "new-year-s-day-dinghies/ilca-4",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2026/open/nyddinghy_ilca4.htm",
+          "includeRaces": true
+        },
+        {
+          "name": "PY Class",
+          "subPath": "new-year-s-day-dinghies/py-class",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2026/open/nyddinghy_py.htm",
+          "includeRaces": true
+        }
+      ],
+      "folders": [
+        {
+          "path": "new-year-s-day-dinghies",
+          "label": "New Year's Day Dinghies"
+        }
+      ]
+    },
+    {
+      "key": "hyc-2026-open-dinghy-f-bite-spring-2026",
+      "id": "33cb8507-01d2-50ce-8c4d-1aa5a2a6ae46",
+      "publishedSlug": "2026",
+      "name": "Dinghy F'bite Spring 2026 2026",
+      "venue": "Howth",
+      "venueUrl": "https://www.hyc.ie",
+      "venueLogoUrl": "https://logos.sailscoring.ie/hyc.png",
+      "startDate": "2026-04-01",
+      "source": "sailwave",
+      "category": "Open Events",
+      "fleets": [
+        {
+          "name": "Melges 15",
+          "subPath": "dinghy-f-bite-spring-2026/melges-15",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2026/open/dinghyspring_m15.htm",
+          "includeRaces": true
+        },
+        {
+          "name": "PY Class",
+          "subPath": "dinghy-f-bite-spring-2026/py-class",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2026/open/dinghyspring_py.htm",
+          "includeRaces": true
+        },
+        {
+          "name": "ILCA 7",
+          "subPath": "dinghy-f-bite-spring-2026/ilca-7",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2026/open/dinghyspring_ilca7.htm",
+          "includeRaces": true
+        },
+        {
+          "name": "ILCA 6",
+          "subPath": "dinghy-f-bite-spring-2026/ilca-6",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2026/open/dinghyspring_ilca6.htm",
+          "includeRaces": true
+        },
+        {
+          "name": "ILCA 4",
+          "subPath": "dinghy-f-bite-spring-2026/ilca-4",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2026/open/dinghyspring_ilca4.htm"
+        }
+      ],
+      "folders": [
+        {
+          "path": "dinghy-f-bite-spring-2026",
+          "label": "Dinghy F'bite Spring 2026"
+        }
+      ]
+    },
+    {
+      "key": "hyc-2026-open-tadg-riordan-brass-monkeys",
+      "id": "363b30c7-dae4-5ebc-8702-cfe616972b62",
+      "publishedSlug": "2026",
+      "name": "Tadg Riordan Brass Monkeys 2026",
+      "venue": "Howth",
+      "venueUrl": "https://www.hyc.ie",
+      "venueLogoUrl": "https://logos.sailscoring.ie/hyc.png",
+      "startDate": "2026-04-01",
+      "source": "sailwave",
+      "category": "Open Events",
+      "fleets": [
+        {
+          "name": "Fleet 1",
+          "subPath": "tadg-riordan-brass-monkeys/fleet-1",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2026/open/bmspring_fleet1.htm",
+          "includeRaces": true
+        },
+        {
+          "name": "Fleet 2",
+          "subPath": "tadg-riordan-brass-monkeys/fleet-2",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2026/open/bmspring_fleet2.htm",
+          "includeRaces": true
+        }
+      ]
+    },
+    {
+      "key": "hyc-2026-open-dinghy-round-the-island",
+      "id": "69d8c1b1-3edb-57eb-b162-55e9a9c03550",
+      "publishedSlug": "2026",
+      "name": "Dinghy Round the Island 2026",
+      "venue": "Howth",
+      "venueUrl": "https://www.hyc.ie",
+      "venueLogoUrl": "https://logos.sailscoring.ie/hyc.png",
+      "startDate": "2026-04-01",
+      "source": "sailwave",
+      "category": "Open Events",
+      "fleets": [
+        {
+          "name": "ILCA",
+          "subPath": "dinghy-round-the-island/ilca",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2026/open/rti_ilca.htm",
+          "sections": [
+            {
+              "sectionTitle": "ILCA 7 Fleet"
+            },
+            {
+              "sectionTitle": "ILCA 6 Fleet"
+            }
+          ]
+        },
+        {
+          "name": "PY",
+          "subPath": "dinghy-round-the-island/py",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2026/open/rti_PY.htm",
+          "includeRaces": true
+        }
+      ],
+      "folders": [
+        {
+          "path": "dinghy-round-the-island",
+          "label": "Dinghy Round the Island"
+        }
+      ]
+    },
+    {
+      "key": "hyc-2026-open-fireball-nationals",
+      "id": "8d1a4fad-e323-5a07-bd4e-c689b168a57a",
+      "publishedSlug": "2026",
+      "name": "Fireball Nationals 2026",
+      "venue": "Howth",
+      "venueUrl": "https://www.hyc.ie",
+      "venueLogoUrl": "https://logos.sailscoring.ie/hyc.png",
+      "startDate": "2026-04-01",
+      "source": "sailwave",
+      "category": "Open Events",
+      "fleets": [
+        {
+          "name": "Fireballs",
+          "subPath": "fireball-nationals/fireballs",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2026/open_fireballnats.htm",
+          "includeRaces": true
+        }
+      ]
     }
   ]
 }
