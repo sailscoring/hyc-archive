@@ -103,8 +103,43 @@ delta *can* arise here. What follows is where we know we diverge.
 
 - **Boats are joined across blocks** on sail number + boat name, falling back
   to boat name + helm and then helm alone — the same boat carries a different
-  Sailwave handle in each series file. Every join weaker than the first is
-  reported by the merge and belongs here once the real files land.
+  Sailwave handle in each series file. Joins on sail number alone aren't
+  reported for classes that don't name their boats (all of the dinghies), where
+  the sail number *is* the identity. Two joins on helm name alone stand out in
+  the dinghy files: sail 741 (Harry George) and 1519 (Eliana Duffy) changed sail
+  number between Series 1 and 2.
+
+- **Per-block entry lists don't survive the merge — blocks rank only boats that
+  sailed.** This is the open divergence, and it is a *results* one.
+
+  Each Sailwave file has its own entry list, and Sailwave ranks a boat that
+  entered a series but never sailed it as all-DNC. A merged series has one
+  competitor set, so "entered Series 1" is not expressible. The blocks
+  therefore carry `excludeDncOnlyCompetitors`, which ranks only boats that
+  actually raced — and because DNC is scored off the entry count, dropping
+  those boats lowers every DNC score in the block:
+
+  | | published / source | merged |
+  |---|---|---|
+  | Wed Series 1, Division A HPH | DNC = 7 (6 entries) | DNC = 6 (5 sailed) |
+  | Dinghy Series 1, Optimist | DNC = 19 | DNC = 12 |
+
+  Finishing positions are untouched; only DNC values, and the net points and
+  ranks derived from them, move. Turning the flag off is worse, not better: the
+  block would then also carry boats that only ever raced a *later* series,
+  pushing DNC the other way.
+
+- **A boat entered twice in one file, once per division, merges into one.**
+  HYC's Saturday Series 2 file carries Chinook (17793) as two competitor
+  records — one in Division B HPH, one in B IRC — where Series 1 carries it
+  once in both. Joined on sail number + boat name, the merged boat holds both
+  records' finishes, so a race counts for a division that didn't sail it. The
+  merge re-applies each source file's own answer as `raceFleetExclusions`,
+  which fixes the whole-fleet cases; two rows in Saturday Series 2 (Toughnut
+  and Helm's Deep, Division C HPH) still differ.
+
+  Both of these are visible in `pnpm verify-club-merge`, which reports rows
+  scored differently, rows only in the source, and rows only in the merge.
 
 - **Race dates come from Sailwave's `racedate`,** which several HYC files leave
   empty (the 2026 Wednesday file labels its races only in `racename`, e.g.

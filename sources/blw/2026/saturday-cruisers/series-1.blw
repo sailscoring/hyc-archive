@@ -1,0 +1,2430 @@
+serallowfixedflights,0,,
+sersocial,0,,
+serversion,2.38.02,,
+serisaflink,www.sailing.org/sailor?ref=*,,
+serisafpub,1,,
+serflagslink,http://www.sailwave.com/flags/small/*.jpg,,
+serflagspub,0,,
+serflagstext,0,,
+serhidediscards,0,,
+sernodiscardformat,0,,
+serhidefields,0,,
+serftpfile,/reshyc/2026/club/series1_satcruisers.htm,,
+sersep,0,,
+serseprow,0,,
+serpubpbreak,0,,
+serpubfirstn,0,,
+serdatespec,d-m-y,,
+serpubincludecodes,0,,
+serpubincludecontents,0,,
+serincludelaps,0,,
+serincludestarttimes,0,,
+serincludefinishtimes,1,,
+serincludecorrected,1,,
+serincludedncs,0,,
+serincludespeed,0,,
+serincludeewin,0,,
+serincluderwin,0,,
+serpubwhere,ftp,,
+serpubgroupvalues,Division B HPH|Division B IRC|Division C HPH|Division C IRC,,
+serpubincluderaces,2,,
+serpubincluderaces2,2,,
+serpubincludenotes,0,,
+serpubincludeseries,1,,
+serpubincludeprizes,0,,
+serpubincludedates,0,,
+serpubincludetimes,0,,
+serpubstartcols,0,,
+serhidepropbar,0,,
+serpropbarwidth,120,,
+serpropbartree,0,,
+serstylename,UK windsurfing association,,
+serscriptnames,HighlightWins3v3,,
+serdoscripts,1,,
+serhideexcluded,1,,
+serhideunsailed,0,,
+sereventburgee,https://www.hyc.ie/system/sponsor_logos/620/normal/Howth_Yacht_Club_-_Logo_RGB.jpg,,
+servenueburgee,https://www.hyc.ie/system/sponsor_logos/620/normal/Howth_Yacht_Club_-_Logo_RGB.jpg,,
+sereventeid,sw0823074165042810,,
+serpoponofftitle,"Sign On/Off Declaration Mar 11th,Sign On/Off Declaration Feb 12,Sign On/Off Declaration JAN 29,Sign On/Off Declaration JAN 22,Sign On/Off Declaration",,
+serpoponoffcolumns,"Sign On, Sign Off",,
+serentrytitle,"Competitor List,Melges 15 Irish Championships,HYC Round the Island Race,Dinghy Frostbite 2022 pre Xmas,17 Footer Scratch,17 Footer Hcap,Puppeteer Hcap,Puppeteer Scratch,Squib Hcap,17 Footer Hcao,17 Footer",,
+serentrypacked,Fleet^Division C HPH^^^^^^^^^^^=^=^=^=^=^=,,
+serentrycolumns,"Extra Col 1,Extra Col 2",,
+serentrypath,C:\Users\Public\Documents\Sailwave\Results\entries_2026 Wed Series 1.htm,,
+serdecalttitle,Declaration of Alternative Penalties,,
+serdecaltcolumns,"Date, Race, Class/SailNo, Description of Incident, Alternative Penalty (e.g. 720),Initials",,
+serdecaltrows,25,,
+sernoticetitle,Competitor Notice,,
+seronofftitle,Sign On/Off Declaration,,
+seronoffcolumns,"Date, Class/SailNo, Sign On, Sign Off",,
+seronoffrows,80,,
+serdecrettitle,Declaration of Retirements,,
+serdecretcolumns,"Date, Race, Class/SailNo, Ret Code, Initials",,
+serdecretrows,25,,
+serpubincluderacetables,1,,
+serevent,Club Racing 2026,,
+servenue,Saturday - Cruisers - Series 1,,
+sertitle,Results are provisional as of @ on #,,
+serpubflightrace,1,,
+serscoringhandle,36,,
+sersortcol,-1,,
+sersortcol2,2,,
+sersortdir,1,,
+sersortdir2,1,,
+serlistface,Arial,,
+serlistsize,10,,
+serlistcolour,0,,
+sersavehtmlpath,Z:\home\markmc\projects\sailwave\reshyc\2026\club\series1_classc.htm,,
+serelapsedview,3,,
+scrfollowchamp,0,36,
+scrfollowmedal,0,36,
+scrfollowcodes,0,36,
+scrfollowratingsystem,0,36,
+scrfollowratingmode,0,36,
+scrfollowpointssystem,0,36,
+scrfollowcoefficients,0,36,
+scrfollowcustomexprs,0,36,
+scrfollowseriesties,0,36,
+scrfollowoverallpoints,0,36,
+scrfollowdiscards,0,36,
+scrfollowraceties,0,36,
+scrfollowflights,0,36,
+scrfollowpointsplaces,0,36,
+scrfollowqualification,0,36,
+scrhotkey,0,36,
+scrname,Appendix A,36,
+scrparent,0,36,
+scrfield,Fleet,36,
+scrsfield,Fleet,36,
+scrsfield2,Fleet,36,
+scrtie3,No,36,
+scrtie0,No,36,
+scrtie1,Yes,36,
+scrincludediscards,No,36,
+scrtie2,Yes,36,
+scrtie2back,No,36,
+scrtie2starts,No,36,
+scrtiefinals,No,36,
+scrraceties,Averaged,36,
+scrpointsplaces,1,36,
+scrrrs2025,Yes,36,
+scrpointsaccumulation,Sum,36,
+scrpointssystem,Low point,36,
+scrratingsystem,NHC1,36,
+scrratingvalue,No,36,
+scrwindstrengths,"0-1,2-3,4,5-9",36,
+scrupdateratings,No,36,
+scrbackcalcpercent,0,36,
+scrdiscardlist,"0,0,0,0,1,1,1",36,
+scrflights,No,36,
+scrfinals,No,36,
+scrfinalsstickyq,No,36,
+scrfinalsfirst,0,36,
+scrlowweight,Yes,36,
+scrmedal,No,36,
+scrmedalrace,5,36,
+scrmedalyesnotdiscardable,Yes,36,
+scrmedalyesmultiply,Yes,36,
+scrmedalyestie,Yes,36,
+scrmedalnonotdiscardable,Yes,36,
+scrmedalnomultiply,Yes,36,
+scrmedalnotie,Yes,36,
+scrmedalmax,10,36,
+scrcode,BFD|Score like|DNF|Yes|Yes|||spare|spare|spare|spare|No|No|No|36||Black flag disqualification under rule 30.4,,
+scrcode,DGM|Score like|DSQ|No|Yes|||spare|spare|spare|spare|Yes|Yes|No|36||Disqualification not excludable under rule 69.1(b)(2),,
+scrcode,DNC|Boats in series +|1|Yes|No|||spare|spare|spare|spare|No|No|No|36||Did not come to the starting area,,
+scrcode,DNE|Score like|DSQ|No|Yes|||spare|spare|spare|spare|Yes|Yes|No|36||Disqualification (other then DGM) not excludable under rule 90.3(b),,
+scrcode,DNF|Boats in race +|1|Yes|Yes|||spare|spare|spare|spare|Yes|No|No|36||Started but did not finish,,
+scrcode,DNS|Score like|DNF|Yes|Yes|||spare|spare|spare|spare|No|No|No|36||Came to the start area but did not start,,
+scrcode,DPI1|Fixed penalty|1|Yes|Yes|||spare|spare|spare|spare|Yes|Yes|Yes|36||1 point discretionary penalty,,
+scrcode,DSQ|Score like|DNF|Yes|Yes|||spare|spare|spare|spare|Yes|Yes|No|36||Disqualification,,
+scrcode,NSC|Score like|DNF|Yes|Yes|||spare|spare|spare|spare|Yes|No|No|36||A boat did not sail the course as defined rule A5.1,,
+scrcode,OCS|Score like|DNF|Yes|Yes|||spare|spare|spare|spare|No|No|No|36||On course side at start or broke rule 30.1,,
+scrcode,OOD|Average (all)||Yes|No|||spare|spare|spare|spare|Yes|Yes|No|36||Race officer duty points scored as RDGa,,
+scrcode,RAF|Score like|DNF|Yes|Yes|||spare|spare|spare|spare|Yes|No|No|36||Retired,,
+scrcode,RDG|Set points by hand||Yes|Yes|||spare|spare|spare|spare|Yes|Yes|Yes|36||Redress - points set by protest hearing,,
+scrcode,RDGa|Average (all)||Yes|Yes|||spare|spare|spare|spare|Yes|Yes|Yes|36||Redress - average points for all races except the race in question,,
+scrcode,RDGb|Average (before)||Yes|Yes|||spare|spare|spare|spare|Yes|Yes|Yes|36||Redress - average points for all races preceding the race in question,,
+scrcode,SCP|Percentage penalty DNF|20|Yes|Yes|||spare|spare|spare|spare|Yes|Yes|Yes|36||Scoring penalty under rule 44.3,,
+scrcode,UFD|Score like|DNF|Yes|Yes|||spare|spare|spare|spare|No|No|No|36||U flag disqualification under rule 30.3,,
+scrcode,ZFP|Percentage penalty DNF|20|Yes|Yes|||spare|spare|spare|spare|Yes|Yes|Yes|36||20% penalty under rule 30.2,,
+scrfollowchamp,1,93,
+scrfollowmedal,1,93,
+scrfollowcodes,1,93,
+scrfollowratingsystem,0,93,
+scrfollowratingmode,1,93,
+scrfollowpointssystem,1,93,
+scrfollowcoefficients,1,93,
+scrfollowcustomexprs,1,93,
+scrfollowseriesties,1,93,
+scrfollowoverallpoints,1,93,
+scrfollowdiscards,1,93,
+scrfollowraceties,1,93,
+scrfollowflights,1,93,
+scrfollowpointsplaces,1,93,
+scrfollowqualification,1,93,
+scrhotkey,0,93,
+scrname,Appendix A,93,
+scrparent,36,93,
+scrfield,Fleet,93,
+scrsfield,Fleet,93,
+scrvalue,Division A IRC,93,
+scrtie3,No,93,
+scrtie0,No,93,
+scrtie1,Yes,93,
+scrincludediscards,No,93,
+scrtie2,Yes,93,
+scrtie2back,No,93,
+scrtie2starts,No,93,
+scrtiefinals,No,93,
+scrraceties,Averaged,93,
+scrpointsplaces,1,93,
+scrrrs2025,Yes,93,
+scrpointsaccumulation,Sum,93,
+scrpointssystem,Low point,93,
+scrratingsystem,TCF,93,
+scrratingvalue,No,93,
+scrwindstrengths,"0-1,2-3,4,5-9",93,
+scrupdateratings,No,93,
+scrbackcalcpercent,0,93,
+scrdiscardlist,"0,0,0,0,1,1,1",93,
+scrflights,No,93,
+scrfinals,No,93,
+scrfinalsstickyq,No,93,
+scrfinalsfirst,0,93,
+scrlowweight,Yes,93,
+scrmedal,No,93,
+scrmedalrace,5,93,
+scrmedalyesnotdiscardable,Yes,93,
+scrmedalyesmultiply,Yes,93,
+scrmedalyestie,Yes,93,
+scrmedalnonotdiscardable,Yes,93,
+scrmedalnomultiply,Yes,93,
+scrmedalnotie,Yes,93,
+scrmedalmax,10,93,
+scrcode,BFD|Score like|DNF|Yes|Yes|||spare|spare|spare|spare|No|No|No|93||Black flag disqualification under rule 30.4,,
+scrcode,DGM|Score like|DSQ|No|Yes|||spare|spare|spare|spare|Yes|Yes|No|93||Disqualification not excludable under rule 69.1(b)(2),,
+scrcode,DNC|Boats in series +|1|Yes|No|||spare|spare|spare|spare|No|No|No|93||Did not come to the starting area,,
+scrcode,DNE|Score like|DSQ|No|Yes|||spare|spare|spare|spare|Yes|Yes|No|93||Disqualification (other then DGM) not excludable under rule 90.3(b),,
+scrcode,DNF|Boats in race +|1|Yes|Yes|||spare|spare|spare|spare|Yes|No|No|93||Started but did not finish,,
+scrcode,DNS|Score like|DNF|Yes|Yes|||spare|spare|spare|spare|No|No|No|93||Came to the start area but did not start,,
+scrcode,DPI1|Fixed penalty|1|Yes|Yes|||spare|spare|spare|spare|Yes|Yes|Yes|93||1 point discretionary penalty,,
+scrcode,DSQ|Score like|DNF|Yes|Yes|||spare|spare|spare|spare|Yes|Yes|No|93||Disqualification,,
+scrcode,NSC|Score like|DNF|Yes|Yes|||spare|spare|spare|spare|Yes|No|No|93||A boat did not sail the course as defined rule A5.1,,
+scrcode,OCS|Score like|DNF|Yes|Yes|||spare|spare|spare|spare|No|No|No|93||On course side at start or broke rule 30.1,,
+scrcode,OOD|Average (all)||Yes|No|||spare|spare|spare|spare|Yes|Yes|No|93||Race officer duty points scored as RDGa,,
+scrcode,RAF|Score like|DNF|Yes|Yes|||spare|spare|spare|spare|Yes|No|No|93||Retired,,
+scrcode,RDG|Set points by hand||Yes|Yes|||spare|spare|spare|spare|Yes|Yes|Yes|93||Redress - points set by protest hearing,,
+scrcode,RDGa|Average (all)||Yes|Yes|||spare|spare|spare|spare|Yes|Yes|Yes|93||Redress - average points for all races except the race in question,,
+scrcode,RDGb|Average (before)||Yes|Yes|||spare|spare|spare|spare|Yes|Yes|Yes|93||Redress - average points for all races preceding the race in question,,
+scrcode,SCP|Percentage penalty DNF|20|Yes|Yes|||spare|spare|spare|spare|Yes|Yes|Yes|93||Scoring penalty under rule 44.3,,
+scrcode,UFD|Score like|DNF|Yes|Yes|||spare|spare|spare|spare|No|No|No|93||U flag disqualification under rule 30.3,,
+scrcode,ZFP|Percentage penalty DNF|20|Yes|Yes|||spare|spare|spare|spare|Yes|Yes|Yes|93||20% penalty under rule 30.2,,
+scrfollowchamp,1,113,
+scrfollowmedal,1,113,
+scrfollowcodes,1,113,
+scrfollowratingsystem,0,113,
+scrfollowratingmode,1,113,
+scrfollowpointssystem,1,113,
+scrfollowcoefficients,1,113,
+scrfollowcustomexprs,1,113,
+scrfollowseriesties,1,113,
+scrfollowoverallpoints,1,113,
+scrfollowdiscards,1,113,
+scrfollowraceties,1,113,
+scrfollowflights,1,113,
+scrfollowpointsplaces,1,113,
+scrfollowqualification,1,113,
+scrhotkey,0,113,
+scrname,Appendix A,113,
+scrparent,36,113,
+scrfield,Fleet,113,
+scrsfield,Fleet,113,
+scrvalue,Division B IRC,113,
+scrtie3,No,113,
+scrtie0,No,113,
+scrtie1,Yes,113,
+scrincludediscards,No,113,
+scrtie2,Yes,113,
+scrtie2back,No,113,
+scrtie2starts,No,113,
+scrtiefinals,No,113,
+scrraceties,Averaged,113,
+scrpointsplaces,1,113,
+scrrrs2025,Yes,113,
+scrpointsaccumulation,Sum,113,
+scrpointssystem,Low point,113,
+scrratingsystem,TCF,113,
+scrratingvalue,No,113,
+scrwindstrengths,"0-1,2-3,4,5-9",113,
+scrupdateratings,No,113,
+scrbackcalcpercent,0,113,
+scrdiscardlist,"0,0,0,0,1,1,1",113,
+scrflights,No,113,
+scrfinals,No,113,
+scrfinalsstickyq,No,113,
+scrfinalsfirst,0,113,
+scrlowweight,Yes,113,
+scrmedal,No,113,
+scrmedalrace,5,113,
+scrmedalyesnotdiscardable,Yes,113,
+scrmedalyesmultiply,Yes,113,
+scrmedalyestie,Yes,113,
+scrmedalnonotdiscardable,Yes,113,
+scrmedalnomultiply,Yes,113,
+scrmedalnotie,Yes,113,
+scrmedalmax,10,113,
+scrcode,BFD|Score like|DNF|Yes|Yes|||spare|spare|spare|spare|No|No|No|113||Black flag disqualification under rule 30.4,,
+scrcode,DGM|Score like|DSQ|No|Yes|||spare|spare|spare|spare|Yes|Yes|No|113||Disqualification not excludable under rule 69.1(b)(2),,
+scrcode,DNC|Boats in series +|1|Yes|No|||spare|spare|spare|spare|No|No|No|113||Did not come to the starting area,,
+scrcode,DNE|Score like|DSQ|No|Yes|||spare|spare|spare|spare|Yes|Yes|No|113||Disqualification (other then DGM) not excludable under rule 90.3(b),,
+scrcode,DNF|Boats in race +|1|Yes|Yes|||spare|spare|spare|spare|Yes|No|No|113||Started but did not finish,,
+scrcode,DNS|Score like|DNF|Yes|Yes|||spare|spare|spare|spare|No|No|No|113||Came to the start area but did not start,,
+scrcode,DPI1|Fixed penalty|1|Yes|Yes|||spare|spare|spare|spare|Yes|Yes|Yes|113||1 point discretionary penalty,,
+scrcode,DSQ|Score like|DNF|Yes|Yes|||spare|spare|spare|spare|Yes|Yes|No|113||Disqualification,,
+scrcode,NSC|Score like|DNF|Yes|Yes|||spare|spare|spare|spare|Yes|No|No|113||A boat did not sail the course as defined rule A5.1,,
+scrcode,OCS|Score like|DNF|Yes|Yes|||spare|spare|spare|spare|No|No|No|113||On course side at start or broke rule 30.1,,
+scrcode,OOD|Average (all)||Yes|No|||spare|spare|spare|spare|Yes|Yes|No|113||Race officer duty points scored as RDGa,,
+scrcode,RAF|Score like|DNF|Yes|Yes|||spare|spare|spare|spare|Yes|No|No|113||Retired,,
+scrcode,RDG|Set points by hand||Yes|Yes|||spare|spare|spare|spare|Yes|Yes|Yes|113||Redress - points set by protest hearing,,
+scrcode,RDGa|Average (all)||Yes|Yes|||spare|spare|spare|spare|Yes|Yes|Yes|113||Redress - average points for all races except the race in question,,
+scrcode,RDGb|Average (before)||Yes|Yes|||spare|spare|spare|spare|Yes|Yes|Yes|113||Redress - average points for all races preceding the race in question,,
+scrcode,SCP|Percentage penalty DNF|20|Yes|Yes|||spare|spare|spare|spare|Yes|Yes|Yes|113||Scoring penalty under rule 44.3,,
+scrcode,UFD|Score like|DNF|Yes|Yes|||spare|spare|spare|spare|No|No|No|113||U flag disqualification under rule 30.3,,
+scrcode,ZFP|Percentage penalty DNF|20|Yes|Yes|||spare|spare|spare|spare|Yes|Yes|Yes|113||20% penalty under rule 30.2,,
+scrfollowchamp,1,118,
+scrfollowmedal,1,118,
+scrfollowcodes,1,118,
+scrfollowratingsystem,0,118,
+scrfollowratingmode,1,118,
+scrfollowpointssystem,1,118,
+scrfollowcoefficients,1,118,
+scrfollowcustomexprs,1,118,
+scrfollowseriesties,1,118,
+scrfollowoverallpoints,1,118,
+scrfollowdiscards,1,118,
+scrfollowraceties,1,118,
+scrfollowflights,1,118,
+scrfollowpointsplaces,1,118,
+scrfollowqualification,1,118,
+scrhotkey,0,118,
+scrname,Appendix A,118,
+scrparent,36,118,
+scrfield,Fleet,118,
+scrsfield,Fleet,118,
+scrvalue,Division C IRC,118,
+scrtie3,No,118,
+scrtie0,No,118,
+scrtie1,Yes,118,
+scrincludediscards,No,118,
+scrtie2,Yes,118,
+scrtie2back,No,118,
+scrtie2starts,No,118,
+scrtiefinals,No,118,
+scrraceties,Averaged,118,
+scrpointsplaces,1,118,
+scrrrs2025,Yes,118,
+scrpointsaccumulation,Sum,118,
+scrpointssystem,Low point,118,
+scrratingsystem,TCF,118,
+scrratingvalue,No,118,
+scrwindstrengths,"0-1,2-3,4,5-9",118,
+scrupdateratings,No,118,
+scrbackcalcpercent,0,118,
+scrdiscardlist,"0,0,0,0,1,1,1",118,
+scrflights,No,118,
+scrfinals,No,118,
+scrfinalsstickyq,No,118,
+scrfinalsfirst,0,118,
+scrlowweight,Yes,118,
+scrmedal,No,118,
+scrmedalrace,5,118,
+scrmedalyesnotdiscardable,Yes,118,
+scrmedalyesmultiply,Yes,118,
+scrmedalyestie,Yes,118,
+scrmedalnonotdiscardable,Yes,118,
+scrmedalnomultiply,Yes,118,
+scrmedalnotie,Yes,118,
+scrmedalmax,10,118,
+scrcode,BFD|Score like|DNF|Yes|Yes|||spare|spare|spare|spare|No|No|No|118||Black flag disqualification under rule 30.4,,
+scrcode,DGM|Score like|DSQ|No|Yes|||spare|spare|spare|spare|Yes|Yes|No|118||Disqualification not excludable under rule 69.1(b)(2),,
+scrcode,DNC|Boats in series +|1|Yes|No|||spare|spare|spare|spare|No|No|No|118||Did not come to the starting area,,
+scrcode,DNE|Score like|DSQ|No|Yes|||spare|spare|spare|spare|Yes|Yes|No|118||Disqualification (other then DGM) not excludable under rule 90.3(b),,
+scrcode,DNF|Boats in race +|1|Yes|Yes|||spare|spare|spare|spare|Yes|No|No|118||Started but did not finish,,
+scrcode,DNS|Score like|DNF|Yes|Yes|||spare|spare|spare|spare|No|No|No|118||Came to the start area but did not start,,
+scrcode,DPI1|Fixed penalty|1|Yes|Yes|||spare|spare|spare|spare|Yes|Yes|Yes|118||1 point discretionary penalty,,
+scrcode,DSQ|Score like|DNF|Yes|Yes|||spare|spare|spare|spare|Yes|Yes|No|118||Disqualification,,
+scrcode,NSC|Score like|DNF|Yes|Yes|||spare|spare|spare|spare|Yes|No|No|118||A boat did not sail the course as defined rule A5.1,,
+scrcode,OCS|Score like|DNF|Yes|Yes|||spare|spare|spare|spare|No|No|No|118||On course side at start or broke rule 30.1,,
+scrcode,OOD|Average (all)||Yes|No|||spare|spare|spare|spare|Yes|Yes|No|118||Race officer duty points scored as RDGa,,
+scrcode,RAF|Score like|DNF|Yes|Yes|||spare|spare|spare|spare|Yes|No|No|118||Retired,,
+scrcode,RDG|Set points by hand||Yes|Yes|||spare|spare|spare|spare|Yes|Yes|Yes|118||Redress - points set by protest hearing,,
+scrcode,RDGa|Average (all)||Yes|Yes|||spare|spare|spare|spare|Yes|Yes|Yes|118||Redress - average points for all races except the race in question,,
+scrcode,RDGb|Average (before)||Yes|Yes|||spare|spare|spare|spare|Yes|Yes|Yes|118||Redress - average points for all races preceding the race in question,,
+scrcode,SCP|Percentage penalty DNF|20|Yes|Yes|||spare|spare|spare|spare|Yes|Yes|Yes|118||Scoring penalty under rule 44.3,,
+scrcode,UFD|Score like|DNF|Yes|Yes|||spare|spare|spare|spare|No|No|No|118||U flag disqualification under rule 30.3,,
+scrcode,ZFP|Percentage penalty DNF|20|Yes|Yes|||spare|spare|spare|spare|Yes|Yes|Yes|118||20% penalty under rule 30.2,,
+ui,0|0|0|1|0|0|0|0|0|0|0|0|0|0|0,,
+comptotal,4,65,
+compnett,4,65,
+compboat,Toughnut,65,
+comprank,1,65,
+compsailno,1411t,65,
+compclass,MG335,65,
+compfleet,Division C HPH,65,
+compnat,GBR,65,
+comptally,4,65,
+compexclude,0,65,
+compalias,0,65,
+comprating,1.015,65,
+compnewrating,1.006,65,
+comphelmname,Dermot Skehan,65,
+comphigh,0,65,
+comptotal,7,66,
+compnett,7,66,
+compboat,Out & About,66,
+comprank,2,66,
+compsailno,2070,66,
+compclass,Beneteau 38,66,
+compfleet,Division C HPH,66,
+compnat,IRL,66,
+comptally,8,66,
+compexclude,0,66,
+compalias,0,66,
+comprating,0.890,66,
+compnewrating,0.893,66,
+comphelmname,Terry McCoy,66,
+comphigh,0,66,
+compboat,Arcturus,67,
+compsailno,1343,67,
+compclass,Jeanneau SO37,67,
+compfleet,Division C HPH,67,
+compnat,IRL,67,
+comptally,11,67,
+compexclude,1,67,
+compalias,0,67,
+comprating,0.895,67,
+comphelmname,Peter & Declan McCabe,67,
+comphigh,0,67,
+compboat,Jokers Wild,68,
+compsailno,8151,68,
+compclass,Beneteau 32S5,68,
+compfleet,Division C HPH,68,
+compnat,IRL,68,
+comptally,14,68,
+compexclude,1,68,
+compalias,0,68,
+comprating,0.915,68,
+comphelmname,Flood - MacQuarrie - Greene,68,
+comphigh,0,68,
+comptotal,9,69,
+compnett,9,69,
+compboat,Helm's Deep,69,
+comprank,3,69,
+compsailno,3337,69,
+compclass,Beneteau First 33.7,69,
+compfleet,Division C HPH,69,
+compnat,IRL,69,
+comptally,15,69,
+compexclude,0,69,
+compalias,0,69,
+comprating,0.953,69,
+compnewrating,0.959,69,
+comphelmname,Paul Harrison,69,
+comphigh,0,69,
+compboat,Mistoffelees,70,
+compsailno,1793,70,
+compclass,HB 31,70,
+compfleet,Division C HPH,70,
+compnat,IRL,70,
+comptally,19,70,
+compexclude,1,70,
+compalias,0,70,
+comprating,0.832,70,
+comphelmname,Enda Mulvihill,70,
+comphigh,0,70,
+compboat,Bite the Bullet,71,
+compsailno,3335C,71,
+compclass,Elan 333,71,
+compfleet,Division C HPH,71,
+comptally,23,71,
+compexclude,1,71,
+compalias,0,71,
+comprating,1.046,71,
+comphelmname,Colm Bermingham,71,
+comphigh,0,71,
+compboat,Mary Ellen,72,
+compsailno,1430,72,
+compclass,Jeanneau 33i,72,
+compfleet,Division C HPH,72,
+compnat,IRL,72,
+comptally,27,72,
+compexclude,1,72,
+compalias,0,72,
+comprating,0.912,72,
+comphelmname,O'Byrne Carty Finucane,72,
+comphigh,0,72,
+compboat,Boojum,73,
+compsailno,2112,73,
+compclass,Sigma 33,73,
+compfleet,Division C HPH,73,
+compnat,Irl,73,
+comptally,32,73,
+compexclude,1,73,
+compalias,0,73,
+comprating,0.905,73,
+comphelmname,Tom and Laura Fitzpatrick,73,
+comphigh,0,73,
+compboat,Pepsi,74,
+compsailno,633,74,
+compclass,Sigma 33,74,
+compfleet,Division C HPH,74,
+compnat,IRL,74,
+comptally,36,74,
+compexclude,1,74,
+compalias,0,74,
+comprating,0.903,74,
+comphelmname,Doug Anderson & Mark Tattersall,74,
+comphigh,0,74,
+compboat,Splashdance,75,
+compsailno,4073,75,
+compclass,Dufour 40,75,
+compfleet,Division C HPH,75,
+compnat,IRL,75,
+comptally,42,75,
+compexclude,1,75,
+compalias,0,75,
+comprating,1.089,75,
+comphelmname,John Beckett / Andy George,75,
+comphigh,0,75,
+compboat,Dux,76,
+compsailno,988,76,
+compclass,X302,76,
+compfleet,Division B IRC,76,
+compnat,IRL,76,
+comptally,1,76,
+compexclude,1,76,
+compalias,111,76,
+comprating,0.919,76,
+comphelmname,Caroline and Nicholas Gore-Grimes,76,
+comphigh,0,76,
+compboat,No Excuse,78,
+compsailno,1972,78,
+compclass,X302,78,
+compfleet,Division B IRC,78,
+compnat,IRL,78,
+comptally,6,78,
+compexclude,1,78,
+compalias,109,78,
+comprating,0.917,78,
+comphelmname,Wormald Walsh O'Neill,78,
+comphigh,0,78,
+compboat,Jeneral Lee,80,
+compsailno,6697,80,
+compclass,J97,80,
+compfleet,Division A HPH,80,
+compnat,IRL,80,
+comptally,9,80,
+compexclude,1,80,
+compalias,0,80,
+comprating,0.972,80,
+comphelmname,Colin & Kathy Kavanagh,80,
+comphigh,0,80,
+compboat,Symmetry,81,
+compsailno,7797,81,
+compclass,Quarter Ton,81,
+compfleet,Division B HPH,81,
+compnat,FRA,81,
+comptally,10,81,
+compexclude,1,81,
+compalias,0,81,
+comprating,0.920,81,
+comphelmname,Anton Korshunov,81,
+comphigh,0,81,
+compboat,The Big Picture,82,
+compsailno,1840,82,
+compclass,J112e,82,
+compfleet,Division A HPH,82,
+compnat,IRL,82,
+comptally,12,82,
+compexclude,1,82,
+compalias,0,82,
+comprating,1.073,82,
+comphelmname,Michael & Richard,82,
+comphigh,0,82,
+compboat,Indian,83,
+compsailno,1543,83,
+compclass,J109,83,
+compfleet,Division A IRC,83,
+compnat,IRL,83,
+comptally,18,83,
+compexclude,1,83,
+compalias,99,83,
+comprating,1.002,83,
+comphelmname,Simon Knowles and Colm Buckley,83,
+comphigh,0,83,
+compboat,Maximus,85,
+compsailno,7495,85,
+compclass,X-302,85,
+compfleet,Division B IRC,85,
+compnat,IRL,85,
+comptally,21,85,
+compexclude,1,85,
+compalias,112,85,
+comprating,0.919,85,
+comphelmname,Paddy Kyne,85,
+comphigh,0,85,
+compboat,Nimon,86,
+compsailno,21,86,
+compclass,Puppeteer 22,86,
+compfleet,Division B IRC,86,
+compnat,IRL,86,
+comptally,28,86,
+compexclude,1,86,
+compalias,108,86,
+comprating,0.825,86,
+comphelmname,Nigel Biggs,86,
+comphigh,0,86,
+compboat,Ghost Raider,87,
+compsailno,985,87,
+compclass,J70,87,
+compfleet,Division B IRC,87,
+compnat,IRL,87,
+comptally,29,87,
+compexclude,1,87,
+compalias,105,87,
+comprating,0.944,87,
+comphelmname,Lynn & Norbert Reilly,87,
+comphigh,0,87,
+compboat,Insider Again,88,
+compsailno,9202,88,
+compclass,J92,88,
+compfleet,Division A HPH,88,
+compnat,IRL,88,
+comptally,31,88,
+compexclude,1,88,
+compalias,0,88,
+comprating,0.920,88,
+comphelmname,Ian Martin & Stephen Mullaney,88,
+comphigh,0,88,
+compboat,Adrenaline,89,
+compsailno,32032,89,
+compclass,Melges 32,89,
+compfleet,Division A HPH,89,
+compnat,IRL,89,
+comptally,34,89,
+compexclude,1,89,
+compalias,0,89,
+comprating,1.200,89,
+comphelmname,Wright,89,
+comphigh,0,89,
+comptotal,4,90,
+compnett,4,90,
+compboat,Chinook,90,
+comprank,1,90,
+compsailno,17793,90,
+compclass,First 300 Spirit,90,
+compfleet,Division B IRC,90,
+compnat,IRL,90,
+comptally,38,90,
+compexclude,0,90,
+compalias,106,90,
+comprating,0.937,90,
+comphelmname,Brian Skehan,90,
+comphigh,0,90,
+comptotal,5,91,
+compnett,5,91,
+compboat,Impetuous,91,
+comprank,2,91,
+compsailno,2507,91,
+compclass,Corby 25,91,
+compfleet,Division B IRC,91,
+compnat,IRL,91,
+comptally,39,91,
+compexclude,0,91,
+compalias,104,91,
+comprating,0.920,91,
+comphelmname,Noonan/Chambers,91,
+comphigh,0,91,
+compboat,Lambay Rules,92,
+compsailno,9970,92,
+compclass,J97,92,
+compfleet,Division A HPH,92,
+compnat,IRL,92,
+comptally,48,92,
+compexclude,1,92,
+compalias,0,92,
+comprating,0.978,92,
+comphelmname,Stephen Quinn,92,
+comphigh,0,92,
+compboat,Jeneral Lee,94,
+compsailno,6697,94,
+compclass,J97,94,
+compfleet,Division A IRC,94,
+compnat,IRL,94,
+comptally,9,94,
+compexclude,1,94,
+compalias,80,94,
+comprating,0.967,94,
+comphelmname,Colin & Kathy Kavanagh,94,
+comphigh,0,94,
+compboat,The Big Picture,95,
+compsailno,1840,95,
+compclass,J112e,95,
+compfleet,Division A IRC,95,
+compnat,IRL,95,
+comptally,12,95,
+compexclude,1,95,
+compalias,82,95,
+comprating,1.045,95,
+comphelmname,Michael & Richard,95,
+comphigh,0,95,
+compboat,Lambay Rules,96,
+compsailno,9970,96,
+compclass,J97,96,
+compfleet,Division A IRC,96,
+compnat,IRL,96,
+comptally,48,96,
+compexclude,1,96,
+compalias,92,96,
+comprating,0.967,96,
+comphelmname,Stephen Quinn,96,
+comphigh,0,96,
+compboat,Adrenaline,97,
+compsailno,32032,97,
+compclass,Melges 32,97,
+compfleet,Division A IRC,97,
+compnat,IRL,97,
+comptally,34,97,
+compexclude,1,97,
+compalias,89,97,
+comprating,1.141,97,
+comphelmname,Wright,97,
+comphigh,0,97,
+compboat,Insider Again,98,
+compsailno,9202,98,
+compclass,J92,98,
+compfleet,Division A IRC,98,
+compnat,IRL,98,
+comptally,31,98,
+compexclude,1,98,
+compalias,88,98,
+comprating,0.955,98,
+comphelmname,Ian Martin & Stephen Mullaney,98,
+comphigh,0,98,
+compboat,Indian,99,
+compsailno,1543,99,
+compclass,J109,99,
+compfleet,Division A HPH,99,
+compnat,IRL,99,
+comptally,18,99,
+compexclude,1,99,
+compalias,0,99,
+comprating,1.012,99,
+comphelmname,Simon Knowles and Colm Buckley,99,
+comphigh,0,99,
+compboat,Symmetry,100,
+compsailno,7797,100,
+compclass,Quarter Ton,100,
+compfleet,Division B IRC,100,
+compnat,FRA,100,
+comptally,10,100,
+compexclude,1,100,
+compalias,81,100,
+comprating,0.907,100,
+comphelmname,Anton Korshunov,100,
+comphigh,0,100,
+compboat,Don Giovanni,101,
+compsailno,10767,101,
+compclass,Mini Ton,101,
+compfleet,Division B IRC,101,
+compnat,ITA,101,
+comptally,20,101,
+compexclude,1,101,
+compalias,84,101,
+comprating,0.874,101,
+comphelmname,Cillian Macken,101,
+comphigh,0,101,
+compboat,Chronos,102,
+compsailno,2050,102,
+compclass,Quarter Ton,102,
+compfleet,Division B IRC,102,
+compnat,IRL,102,
+comptally,7,102,
+compexclude,1,102,
+compalias,79,102,
+comprating,0.907,102,
+comphelmname,Byrne/Cullen,102,
+comphigh,0,102,
+compboat,Don Giovanni,103,
+compsailno,10767,103,
+compclass,Mini Ton,103,
+compfleet,Division B HPH,103,
+compnat,ITA,103,
+comptally,20,103,
+compexclude,1,103,
+compalias,0,103,
+comprating,0.850,103,
+comphelmname,Cillian Macken,103,
+comphigh,0,103,
+comptotal,6,104,
+compnett,6,104,
+compboat,Impetuous,104,
+comprank,2,104,
+compsailno,2507,104,
+compclass,Corby 25,104,
+compfleet,Division B HPH,104,
+compnat,IRL,104,
+comptally,39,104,
+compexclude,0,104,
+compalias,0,104,
+comprating,0.942,104,
+compnewrating,0.951,104,
+comphelmname,Noonan/Chambers,104,
+comphigh,0,104,
+compboat,Ghost Raider,105,
+compsailno,985,105,
+compclass,J70,105,
+compfleet,Division B HPH,105,
+compnat,IRL,105,
+comptally,29,105,
+compexclude,1,105,
+compalias,0,105,
+comprating,0.960,105,
+comphelmname,Lynn & Norbert Reilly,105,
+comphigh,0,105,
+comptotal,4,106,
+compnett,4,106,
+compboat,Chinook,106,
+comprank,1,106,
+compsailno,17793,106,
+compclass,First 300 Spirit,106,
+compfleet,Division B HPH,106,
+compnat,IRL,106,
+comptally,38,106,
+compexclude,0,106,
+compalias,0,106,
+comprating,0.880,106,
+compnewrating,0.877,106,
+comphelmname,Brian Skehan,106,
+comphigh,0,106,
+compboat,Chronos,107,
+compsailno,2050,107,
+compclass,Quarter Ton,107,
+compfleet,Division B HPH,107,
+compnat,IRL,107,
+comptally,7,107,
+compexclude,1,107,
+compalias,0,107,
+comprating,0.920,107,
+comphelmname,Byrne/Cullen,107,
+comphigh,0,107,
+compboat,Nimon,108,
+compsailno,21,108,
+compclass,Puppeteer 22,108,
+compfleet,Division B HPH,108,
+compnat,IRL,108,
+comptally,28,108,
+compexclude,1,108,
+compalias,0,108,
+comprating,0.825,108,
+comphelmname,Nigel Biggs,108,
+comphigh,0,108,
+compboat,No Excuse,109,
+compsailno,1972,109,
+compclass,X302,109,
+compfleet,Division B HPH,109,
+compnat,IRL,109,
+comptally,6,109,
+compexclude,1,109,
+compalias,0,109,
+comprating,0.940,109,
+comphelmname,Wormald Walsh O'Neill,109,
+comphigh,0,109,
+comptotal,6,110,
+compnett,6,110,
+compboat,Gecko,110,
+comprank,3,110,
+compsailno,7115,110,
+compclass,Bolero,110,
+compfleet,Division B HPH,110,
+compnat,IRL,110,
+comptally,2,110,
+compexclude,0,110,
+compalias,0,110,
+comprating,0.905,110,
+compnewrating,0.905,110,
+comphelmname,Kevin Darmody,110,
+comphigh,0,110,
+compboat,Dux,111,
+compsailno,988,111,
+compclass,X302,111,
+compfleet,Division B HPH,111,
+compnat,IRL,111,
+comptally,1,111,
+compexclude,1,111,
+compalias,0,111,
+comprating,0.940,111,
+comphelmname,Caroline and Nicholas Gore-Grimes,111,
+comphigh,0,111,
+compboat,Maximus,112,
+compsailno,7495,112,
+compclass,X-302,112,
+compfleet,Division B HPH,112,
+compnat,IRL,112,
+comptally,21,112,
+compexclude,1,112,
+compalias,0,112,
+comprating,0.940,112,
+comphelmname,Paddy Kyne,112,
+comphigh,0,112,
+compboat,Splashdance,114,
+compsailno,4073,114,
+compclass,Dufour 40,114,
+compfleet,Division C IRC,114,
+compnat,IRL,114,
+comptally,42,114,
+compexclude,1,114,
+compalias,75,114,
+comprating,0.988,114,
+comphelmname,John Becket / Andy George,114,
+comphigh,0,114,
+compboat,Bite the Bullet,115,
+compsailno,3335C,115,
+compclass,Elan 333,115,
+compfleet,Division C IRC,115,
+comptally,23,115,
+compexclude,1,115,
+compalias,71,115,
+comprating,0.947,115,
+comphelmname,Colm Bermingham,115,
+comphigh,0,115,
+comptotal,3,116,
+compnett,3,116,
+compboat,Toughnut,116,
+comprank,1,116,
+compsailno,1411t,116,
+compclass,MG335,116,
+compfleet,Division C IRC,116,
+compnat,GBR,116,
+comptally,4,116,
+compexclude,0,116,
+compalias,65,116,
+comprating,0.913,116,
+comphelmname,Dermot Skehan,116,
+comphigh,0,116,
+comptotal,7,117,
+compnett,7,117,
+compboat,Out & About,117,
+comprank,2,117,
+compsailno,2070,117,
+compclass,Beneteau 38,117,
+compfleet,Division C IRC,117,
+compnat,IRL,117,
+comptally,8,117,
+compexclude,0,117,
+compalias,66,117,
+comprating,0.908,117,
+comphelmname,Terry McCoy,117,
+comphigh,0,117,
+comptotal,5,121,
+compnett,5,121,
+compboat,Gecko,121,
+comprank,3,121,
+compsailno,7115,121,
+compclass,Bolero,121,
+compfleet,Division B IRC,121,
+compnat,IRL,121,
+comptally,2,121,
+compexclude,0,121,
+compalias,110,121,
+comprating,0.897,121,
+comphelmname,Kevin Darmody,121,
+comphigh,0,121,
+comptotal,8,123,
+compnett,8,123,
+compboat,HYC J80,123,
+comprank,4,123,
+compsailno,1,123,
+compfleet,Division B HPH,123,
+compexclude,0,123,
+compalias,0,123,
+comprating,0.925,123,
+compnewrating,0.919,123,
+comphelmname,Mandy Bishop,123,
+comphigh,0,123,
+racerank,1,,2
+racesailed,1,,2
+racedate,May 9,,2
+racestart,|10.35.00|Finish time|Start 1|||0||0|0||||1,,2
+racerank,2,,3
+racesailed,1,,3
+racedate,May 16,,3
+racestart,|10.30.00|Finish time|Start 1|||0||0|0||||1,,3
+racerank,3,,4
+racesailed,1,,4
+racedate,Jun 6,,4
+racestart,|14.15.00|Finish time|Start 1|||0||0|0||||1,,4
+racerank,4,,5
+racesailed,0,,5
+racestart,||Place|Start 1|||0||0|0||||1,,5
+racerank,5,,120
+racesailed,0,,120
+racestart,||Place|Start 1|||0||0|0||||1,,120
+rft,12.05.33,65,2
+rst,10.35.00,65,2
+rpts,2,65,2
+rpos,2,65,2
+rdisc,0,65,2
+rcor,1.30.06,65,2
+rrestyp,4,65,2
+rele,1.30.33,65,2
+rrat,0.995,65,2
+srat,0,65,2
+rewin,0.08.49,65,2
+rrwin,0.898,65,2
+rrset,0,65,2
+rft,12.30.53,65,3
+rst,10.30.00,65,3
+rpts,1,65,3
+rpos,1,65,3
+rdisc,0,65,3
+rcor,2.00.17,65,3
+rrestyp,4,65,3
+rele,2.00.53,65,3
+rrat,0.995,65,3
+srat,0,65,3
+rewin,0.00.00,65,3
+rrwin,0.995,65,3
+rrset,0,65,3
+rft,17.29.06,65,4
+rst,14.15.00,65,4
+rpts,1,65,4
+rpos,1,65,4
+rdisc,0,65,4
+rcor,3.15.16,65,4
+rrestyp,4,65,4
+rele,3.14.06,65,4
+rrat,1.006,65,4
+srat,0,65,4
+rewin,0.00.00,65,4
+rrwin,1.006,65,4
+rrset,0,65,4
+rdisc,0,65,5
+rrestyp,0,65,5
+rrat,1.006,65,5
+srat,0,65,5
+rrset,0,65,5
+rdisc,0,65,120
+rrestyp,0,65,120
+srat,0,65,120
+rrset,0,65,120
+rft,12.07.00,66,2
+rst,10.35.00,66,2
+rpts,1,66,2
+rpos,1,66,2
+rdisc,0,66,2
+rcor,1.21.20,66,2
+rrestyp,4,66,2
+rele,1.32.00,66,2
+rrat,0.884,66,2
+srat,0,66,2
+rewin,0.00.00,66,2
+rrwin,0.884,66,2
+rrset,0,66,2
+rft,12.46.35,66,3
+rst,10.30.00,66,3
+rcod,DNC,66,3
+rpts,2,66,3
+rpos,2,66,3
+rdisc,0,66,3
+rcor,2.00.44,66,3
+rrestyp,4,66,3
+rele,2.16.35,66,3
+rrat,0.884,66,3
+srat,0,66,3
+rewin,0.00.31,66,3
+rrwin,0.881,66,3
+rrset,0,66,3
+rcod,DNF,66,4
+rpts,4,66,4
+rpos,3,66,4
+rdisc,0,66,4
+rrestyp,3,66,4
+rrat,0.893,66,4
+srat,0,66,4
+rrset,0,66,4
+rdisc,0,66,5
+rrestyp,0,66,5
+rrat,0.893,66,5
+srat,0,66,5
+rrset,0,66,5
+rdisc,0,66,120
+rrestyp,0,66,120
+srat,0,66,120
+rrset,0,66,120
+rdisc,0,67,2
+rrestyp,0,67,2
+rrat,0.921,67,2
+srat,0,67,2
+rrset,0,67,2
+rdisc,0,67,3
+rrestyp,0,67,3
+srat,0,67,3
+rrset,0,67,3
+rdisc,0,67,4
+rrestyp,0,67,4
+srat,0,67,4
+rrset,0,67,4
+rdisc,0,67,5
+rrestyp,0,67,5
+srat,0,67,5
+rrset,0,67,5
+rdisc,0,67,120
+rrestyp,0,67,120
+srat,0,67,120
+rrset,0,67,120
+rdisc,0,68,2
+rrestyp,0,68,2
+rrat,0.912,68,2
+srat,0,68,2
+rrset,0,68,2
+rdisc,0,68,3
+rrestyp,0,68,3
+srat,0,68,3
+rrset,0,68,3
+rdisc,0,68,4
+rrestyp,0,68,4
+srat,0,68,4
+rrset,0,68,4
+rdisc,0,68,5
+rrestyp,0,68,5
+srat,0,68,5
+rrset,0,68,5
+rdisc,0,68,120
+rrestyp,0,68,120
+srat,0,68,120
+rrset,0,68,120
+rcod,DNC,69,2
+rpts,4,69,2
+rpos,3,69,2
+rdisc,0,69,2
+rrestyp,3,69,2
+rrat,0.953,69,2
+srat,0,69,2
+rrset,1,69,2
+rft,12.49.20,69,3
+rst,10.30.00,69,3
+rpts,3,69,3
+rpos,3,69,3
+rdisc,0,69,3
+rcor,2.12.47,69,3
+rrestyp,4,69,3
+rele,2.19.20,69,3
+rrat,0.953,69,3
+srat,0,69,3
+rewin,0.13.07,69,3
+rrwin,0.863,69,3
+rrset,0,69,3
+rft,18.17.04,69,4
+rst,14.15.00,69,4
+rpts,2,69,4
+rpos,2,69,4
+rdisc,0,69,4
+rcor,3.52.09,69,4
+rrestyp,4,69,4
+rele,4.02.04,69,4
+rrat,0.959,69,4
+srat,0,69,4
+rewin,0.38.27,69,4
+rrwin,0.807,69,4
+rrset,0,69,4
+rdisc,0,69,5
+rrestyp,0,69,5
+rrat,0.959,69,5
+srat,0,69,5
+rrset,0,69,5
+rdisc,0,69,120
+rrestyp,0,69,120
+srat,0,69,120
+rrset,0,69,120
+rdisc,0,70,2
+rrestyp,0,70,2
+rrat,0.841,70,2
+srat,0,70,2
+rrset,0,70,2
+rdisc,0,70,3
+rrestyp,0,70,3
+srat,0,70,3
+rrset,0,70,3
+rdisc,0,70,4
+rrestyp,0,70,4
+srat,0,70,4
+rrset,0,70,4
+rdisc,0,70,5
+rrestyp,0,70,5
+srat,0,70,5
+rrset,0,70,5
+rdisc,0,70,120
+rrestyp,0,70,120
+srat,0,70,120
+rrset,0,70,120
+rdisc,0,71,2
+rrestyp,0,71,2
+rrat,1.069,71,2
+srat,0,71,2
+rrset,0,71,2
+rdisc,0,71,3
+rrestyp,0,71,3
+srat,0,71,3
+rrset,0,71,3
+rdisc,0,71,4
+rrestyp,0,71,4
+srat,0,71,4
+rrset,0,71,4
+rdisc,0,71,5
+rrestyp,0,71,5
+srat,0,71,5
+rrset,0,71,5
+rdisc,0,71,120
+rrestyp,0,71,120
+srat,0,71,120
+rrset,0,71,120
+rdisc,0,72,2
+rrestyp,0,72,2
+rrat,0.901,72,2
+srat,0,72,2
+rrset,0,72,2
+rdisc,0,72,3
+rrestyp,0,72,3
+srat,0,72,3
+rrset,0,72,3
+rdisc,0,72,4
+rrestyp,0,72,4
+srat,0,72,4
+rrset,0,72,4
+rdisc,0,72,5
+rrestyp,0,72,5
+srat,0,72,5
+rrset,0,72,5
+rdisc,0,72,120
+rrestyp,0,72,120
+srat,0,72,120
+rrset,0,72,120
+rdisc,0,73,2
+rrestyp,0,73,2
+rrat,0.905,73,2
+srat,0,73,2
+rrset,0,73,2
+rdisc,0,73,3
+rrestyp,0,73,3
+srat,0,73,3
+rrset,0,73,3
+rdisc,0,73,4
+rrestyp,0,73,4
+srat,0,73,4
+rrset,0,73,4
+rdisc,0,73,5
+rrestyp,0,73,5
+srat,0,73,5
+rrset,0,73,5
+rdisc,0,73,120
+rrestyp,0,73,120
+srat,0,73,120
+rrset,0,73,120
+rdisc,0,74,2
+rrestyp,0,74,2
+rrat,0.886,74,2
+srat,0,74,2
+rrset,0,74,2
+rdisc,0,74,3
+rrestyp,0,74,3
+srat,0,74,3
+rrset,0,74,3
+rdisc,0,74,4
+rrestyp,0,74,4
+srat,0,74,4
+rrset,0,74,4
+rdisc,0,74,5
+rrestyp,0,74,5
+srat,0,74,5
+rrset,0,74,5
+rdisc,0,74,120
+rrestyp,0,74,120
+srat,0,74,120
+rrset,0,74,120
+rdisc,0,75,2
+rrestyp,0,75,2
+rrat,1.089,75,2
+srat,0,75,2
+rrset,0,75,2
+rdisc,0,75,3
+rrestyp,0,75,3
+srat,0,75,3
+rrset,0,75,3
+rdisc,0,75,4
+rrestyp,0,75,4
+srat,0,75,4
+rrset,0,75,4
+rdisc,0,75,5
+rrestyp,0,75,5
+srat,0,75,5
+rrset,0,75,5
+rdisc,0,75,120
+rrestyp,0,75,120
+srat,0,75,120
+rrset,0,75,120
+rdisc,0,76,2
+rrestyp,0,76,2
+srat,0,76,2
+rrset,0,76,2
+rdisc,0,76,3
+rrestyp,0,76,3
+srat,0,76,3
+rrset,0,76,3
+rdisc,0,76,4
+rrestyp,0,76,4
+srat,0,76,4
+rrset,0,76,4
+rdisc,0,76,5
+rrestyp,0,76,5
+srat,0,76,5
+rrset,0,76,5
+rdisc,0,76,120
+rrestyp,0,76,120
+srat,0,76,120
+rrset,0,76,120
+rdisc,0,78,2
+rrestyp,0,78,2
+srat,0,78,2
+rrset,0,78,2
+rdisc,0,78,3
+rrestyp,0,78,3
+srat,0,78,3
+rrset,0,78,3
+rdisc,0,78,4
+rrestyp,0,78,4
+srat,0,78,4
+rrset,0,78,4
+rdisc,0,78,5
+rrestyp,0,78,5
+srat,0,78,5
+rrset,0,78,5
+rdisc,0,78,120
+rrestyp,0,78,120
+srat,0,78,120
+rrset,0,78,120
+rdisc,0,80,2
+rrestyp,0,80,2
+rrat,0.971,80,2
+srat,0,80,2
+rrset,0,80,2
+rdisc,0,80,3
+rrestyp,0,80,3
+srat,0,80,3
+rrset,0,80,3
+rdisc,0,80,4
+rrestyp,0,80,4
+srat,0,80,4
+rrset,0,80,4
+rdisc,0,80,5
+rrestyp,0,80,5
+srat,0,80,5
+rrset,0,80,5
+rdisc,0,80,120
+rrestyp,0,80,120
+srat,0,80,120
+rrset,0,80,120
+rdisc,0,81,2
+rrestyp,0,81,2
+rrat,0.920,81,2
+srat,0,81,2
+rrset,0,81,2
+rdisc,0,81,3
+rrestyp,0,81,3
+srat,0,81,3
+rrset,0,81,3
+rdisc,0,81,4
+rrestyp,0,81,4
+srat,0,81,4
+rrset,0,81,4
+rdisc,0,81,5
+rrestyp,0,81,5
+srat,0,81,5
+rrset,0,81,5
+rdisc,0,81,120
+rrestyp,0,81,120
+srat,0,81,120
+rrset,0,81,120
+rdisc,0,82,2
+rrestyp,0,82,2
+rrat,1.075,82,2
+srat,0,82,2
+rrset,0,82,2
+rdisc,0,82,3
+rrestyp,0,82,3
+srat,0,82,3
+rrset,0,82,3
+rdisc,0,82,4
+rrestyp,0,82,4
+srat,0,82,4
+rrset,0,82,4
+rdisc,0,82,5
+rrestyp,0,82,5
+srat,0,82,5
+rrset,0,82,5
+rdisc,0,82,120
+rrestyp,0,82,120
+srat,0,82,120
+rrset,0,82,120
+rdisc,0,83,2
+rrestyp,0,83,2
+srat,0,83,2
+rrset,0,83,2
+rdisc,0,83,3
+rrestyp,0,83,3
+srat,0,83,3
+rrset,0,83,3
+rdisc,0,83,4
+rrestyp,0,83,4
+srat,0,83,4
+rrset,0,83,4
+rdisc,0,83,5
+rrestyp,0,83,5
+srat,0,83,5
+rrset,0,83,5
+rdisc,0,83,120
+rrestyp,0,83,120
+srat,0,83,120
+rrset,0,83,120
+rdisc,0,85,2
+rrestyp,0,85,2
+srat,0,85,2
+rrset,0,85,2
+rdisc,0,85,3
+rrestyp,0,85,3
+srat,0,85,3
+rrset,0,85,3
+rdisc,0,85,4
+rrestyp,0,85,4
+srat,0,85,4
+rrset,0,85,4
+rdisc,0,85,5
+rrestyp,0,85,5
+srat,0,85,5
+rrset,0,85,5
+rdisc,0,85,120
+rrestyp,0,85,120
+srat,0,85,120
+rrset,0,85,120
+rdisc,0,86,2
+rrestyp,0,86,2
+srat,0,86,2
+rrset,0,86,2
+rdisc,0,86,3
+rrestyp,0,86,3
+srat,0,86,3
+rrset,0,86,3
+rdisc,0,86,4
+rrestyp,0,86,4
+srat,0,86,4
+rrset,0,86,4
+rdisc,0,86,5
+rrestyp,0,86,5
+srat,0,86,5
+rrset,0,86,5
+rdisc,0,86,120
+rrestyp,0,86,120
+srat,0,86,120
+rrset,0,86,120
+rdisc,0,87,2
+rrestyp,0,87,2
+srat,0,87,2
+rrset,0,87,2
+rdisc,0,87,3
+rrestyp,0,87,3
+srat,0,87,3
+rrset,0,87,3
+rdisc,0,87,4
+rrestyp,0,87,4
+srat,0,87,4
+rrset,0,87,4
+rdisc,0,87,5
+rrestyp,0,87,5
+srat,0,87,5
+rrset,0,87,5
+rdisc,0,87,120
+rrestyp,0,87,120
+srat,0,87,120
+rrset,0,87,120
+rdisc,0,88,2
+rrestyp,0,88,2
+rrat,0.924,88,2
+srat,0,88,2
+rrset,0,88,2
+rdisc,0,88,3
+rrestyp,0,88,3
+srat,0,88,3
+rrset,0,88,3
+rdisc,0,88,4
+rrestyp,0,88,4
+srat,0,88,4
+rrset,0,88,4
+rdisc,0,88,5
+rrestyp,0,88,5
+srat,0,88,5
+rrset,0,88,5
+rdisc,0,88,120
+rrestyp,0,88,120
+srat,0,88,120
+rrset,0,88,120
+rdisc,0,89,2
+rrestyp,0,89,2
+rrat,1.200,89,2
+srat,0,89,2
+rrset,0,89,2
+rdisc,0,89,3
+rrestyp,0,89,3
+srat,0,89,3
+rrset,0,89,3
+rdisc,0,89,4
+rrestyp,0,89,4
+srat,0,89,4
+rrset,0,89,4
+rdisc,0,89,5
+rrestyp,0,89,5
+srat,0,89,5
+rrset,0,89,5
+rdisc,0,89,120
+rrestyp,0,89,120
+srat,0,89,120
+rrset,0,89,120
+rdisc,0,90,2
+rrestyp,0,90,2
+srat,0,90,2
+rrset,0,90,2
+rft,12.43.54,90,3
+rst,10.30.00,90,3
+rpts,2,90,3
+rpos,2,90,3
+rdisc,0,90,3
+rcor,2.05.28,90,3
+rrestyp,4,90,3
+rele,2.13.54,90,3
+srat,0,90,3
+rewin,0.15.11,90,3
+rrwin,0.831,90,3
+rrset,0,90,3
+rft,17.38.46,90,4
+rst,14.15.00,90,4
+rpts,2,90,4
+rpos,2,90,4
+rdisc,0,90,4
+rcor,3.10.56,90,4
+rrestyp,4,90,4
+rele,3.23.46,90,4
+srat,0,90,4
+rewin,0.21.35,90,4
+rrwin,0.838,90,4
+rrset,0,90,4
+rdisc,0,90,5
+rrestyp,0,90,5
+srat,0,90,5
+rrset,0,90,5
+rdisc,0,90,120
+rrestyp,0,90,120
+srat,0,90,120
+rrset,0,90,120
+rdisc,0,91,2
+rrestyp,0,91,2
+srat,0,91,2
+rrset,0,91,2
+rcod,DNC,91,3
+rpts,4,91,3
+rpos,3,91,3
+rdisc,0,91,3
+rrestyp,3,91,3
+srat,0,91,3
+rrset,1,91,3
+rft,17.20.33,91,4
+rst,14.15.00,91,4
+rpts,1,91,4
+rpos,1,91,4
+rdisc,0,91,4
+rcor,2.50.42,91,4
+rrestyp,4,91,4
+rele,3.05.33,91,4
+srat,0,91,4
+rewin,0.00.00,91,4
+rrwin,0.92,91,4
+rrset,0,91,4
+rdisc,0,91,5
+rrestyp,0,91,5
+srat,0,91,5
+rrset,0,91,5
+rdisc,0,91,120
+rrestyp,0,91,120
+srat,0,91,120
+rrset,0,91,120
+rdisc,0,92,2
+rrestyp,0,92,2
+rrat,0.976,92,2
+srat,0,92,2
+rrset,0,92,2
+rdisc,0,92,3
+rrestyp,0,92,3
+srat,0,92,3
+rrset,0,92,3
+rdisc,0,92,4
+rrestyp,0,92,4
+srat,0,92,4
+rrset,0,92,4
+rdisc,0,92,5
+rrestyp,0,92,5
+srat,0,92,5
+rrset,0,92,5
+rdisc,0,92,120
+rrestyp,0,92,120
+srat,0,92,120
+rrset,0,92,120
+rdisc,0,94,2
+rrestyp,0,94,2
+srat,0,94,2
+rrset,0,94,2
+rdisc,0,94,3
+rrestyp,0,94,3
+srat,0,94,3
+rrset,0,94,3
+rdisc,0,94,4
+rrestyp,0,94,4
+srat,0,94,4
+rrset,0,94,4
+rdisc,0,94,5
+rrestyp,0,94,5
+srat,0,94,5
+rrset,0,94,5
+rdisc,0,94,120
+rrestyp,0,94,120
+srat,0,94,120
+rrset,0,94,120
+rdisc,0,95,2
+rrestyp,0,95,2
+srat,0,95,2
+rrset,0,95,2
+rdisc,0,95,3
+rrestyp,0,95,3
+srat,0,95,3
+rrset,0,95,3
+rdisc,0,95,4
+rrestyp,0,95,4
+srat,0,95,4
+rrset,0,95,4
+rdisc,0,95,5
+rrestyp,0,95,5
+srat,0,95,5
+rrset,0,95,5
+rdisc,0,95,120
+rrestyp,0,95,120
+srat,0,95,120
+rrset,0,95,120
+rdisc,0,96,2
+rrestyp,0,96,2
+srat,0,96,2
+rrset,0,96,2
+rdisc,0,96,3
+rrestyp,0,96,3
+srat,0,96,3
+rrset,0,96,3
+rdisc,0,96,4
+rrestyp,0,96,4
+srat,0,96,4
+rrset,0,96,4
+rdisc,0,96,5
+rrestyp,0,96,5
+srat,0,96,5
+rrset,0,96,5
+rdisc,0,96,120
+rrestyp,0,96,120
+srat,0,96,120
+rrset,0,96,120
+rdisc,0,97,2
+rrestyp,0,97,2
+srat,0,97,2
+rrset,0,97,2
+rdisc,0,97,3
+rrestyp,0,97,3
+srat,0,97,3
+rrset,0,97,3
+rdisc,0,97,4
+rrestyp,0,97,4
+srat,0,97,4
+rrset,0,97,4
+rdisc,0,97,5
+rrestyp,0,97,5
+srat,0,97,5
+rrset,0,97,5
+rdisc,0,97,120
+rrestyp,0,97,120
+srat,0,97,120
+rrset,0,97,120
+rdisc,0,98,2
+rrestyp,0,98,2
+srat,0,98,2
+rrset,0,98,2
+rdisc,0,98,3
+rrestyp,0,98,3
+srat,0,98,3
+rrset,0,98,3
+rdisc,0,98,4
+rrestyp,0,98,4
+srat,0,98,4
+rrset,0,98,4
+rdisc,0,98,5
+rrestyp,0,98,5
+srat,0,98,5
+rrset,0,98,5
+rdisc,0,98,120
+rrestyp,0,98,120
+srat,0,98,120
+rrset,0,98,120
+rdisc,0,99,2
+rrestyp,0,99,2
+rrat,1.009,99,2
+srat,0,99,2
+rrset,0,99,2
+rdisc,0,99,3
+rrestyp,0,99,3
+srat,0,99,3
+rrset,0,99,3
+rdisc,0,99,4
+rrestyp,0,99,4
+srat,0,99,4
+rrset,0,99,4
+rdisc,0,99,5
+rrestyp,0,99,5
+srat,0,99,5
+rrset,0,99,5
+rdisc,0,99,120
+rrestyp,0,99,120
+srat,0,99,120
+rrset,0,99,120
+rdisc,0,100,2
+rrestyp,0,100,2
+srat,0,100,2
+rrset,0,100,2
+rdisc,0,100,3
+rrestyp,0,100,3
+srat,0,100,3
+rrset,0,100,3
+rdisc,0,100,4
+rrestyp,0,100,4
+srat,0,100,4
+rrset,0,100,4
+rdisc,0,100,5
+rrestyp,0,100,5
+srat,0,100,5
+rrset,0,100,5
+rdisc,0,100,120
+rrestyp,0,100,120
+srat,0,100,120
+rrset,0,100,120
+rdisc,0,101,2
+rrestyp,0,101,2
+srat,0,101,2
+rrset,0,101,2
+rdisc,0,101,3
+rrestyp,0,101,3
+srat,0,101,3
+rrset,0,101,3
+rdisc,0,101,4
+rrestyp,0,101,4
+srat,0,101,4
+rrset,0,101,4
+rdisc,0,101,5
+rrestyp,0,101,5
+srat,0,101,5
+rrset,0,101,5
+rdisc,0,101,120
+rrestyp,0,101,120
+srat,0,101,120
+rrset,0,101,120
+rdisc,0,102,2
+rrestyp,0,102,2
+srat,0,102,2
+rrset,0,102,2
+rdisc,0,102,3
+rrestyp,0,102,3
+srat,0,102,3
+rrset,0,102,3
+rdisc,0,102,4
+rrestyp,0,102,4
+srat,0,102,4
+rrset,0,102,4
+rdisc,0,102,5
+rrestyp,0,102,5
+srat,0,102,5
+rrset,0,102,5
+rdisc,0,102,120
+rrestyp,0,102,120
+srat,0,102,120
+rrset,0,102,120
+rdisc,0,103,2
+rrestyp,0,103,2
+rrat,0.850,103,2
+srat,0,103,2
+rrset,0,103,2
+rdisc,0,103,3
+rrestyp,0,103,3
+srat,0,103,3
+rrset,0,103,3
+rdisc,0,103,4
+rrestyp,0,103,4
+srat,0,103,4
+rrset,0,103,4
+rdisc,0,103,5
+rrestyp,0,103,5
+srat,0,103,5
+rrset,0,103,5
+rdisc,0,103,120
+rrestyp,0,103,120
+srat,0,103,120
+rrset,0,103,120
+rdisc,0,104,2
+rrestyp,0,104,2
+rrat,0.951,104,2
+srat,0,104,2
+rrset,0,104,2
+rcod,DNC,104,3
+rpts,5,104,3
+rpos,3,104,3
+rdisc,0,104,3
+rrestyp,3,104,3
+rrat,0.951,104,3
+srat,0,104,3
+rrset,1,104,3
+rft,17.20.33,104,4
+rst,14.15.00,104,4
+rpts,1,104,4
+rpos,1,104,4
+rdisc,0,104,4
+rcor,2.56.27,104,4
+rrestyp,4,104,4
+rele,3.05.33,104,4
+rrat,0.951,104,4
+srat,0,104,4
+rewin,0.00.00,104,4
+rrwin,0.951,104,4
+rrset,0,104,4
+rdisc,0,104,5
+rrestyp,0,104,5
+rrat,0.951,104,5
+srat,0,104,5
+rrset,0,104,5
+rdisc,0,104,120
+rrestyp,0,104,120
+srat,0,104,120
+rrset,0,104,120
+rdisc,0,105,2
+rrestyp,0,105,2
+rrat,0.960,105,2
+srat,0,105,2
+rrset,0,105,2
+rdisc,0,105,3
+rrestyp,0,105,3
+srat,0,105,3
+rrset,0,105,3
+rdisc,0,105,4
+rrestyp,0,105,4
+srat,0,105,4
+rrset,0,105,4
+rdisc,0,105,5
+rrestyp,0,105,5
+srat,0,105,5
+rrset,0,105,5
+rdisc,0,105,120
+rrestyp,0,105,120
+srat,0,105,120
+rrset,0,105,120
+rdisc,0,106,2
+rrestyp,0,106,2
+rrat,0.880,106,2
+srat,0,106,2
+rrset,0,106,2
+rft,12.43.54,106,3
+rst,10.30.00,106,3
+rpts,2,106,3
+rpos,2,106,3
+rdisc,0,106,3
+rcor,1.57.50,106,3
+rrestyp,4,106,3
+rele,2.13.54,106,3
+rrat,0.880,106,3
+srat,0,106,3
+rewin,0.06.22,106,3
+rrwin,0.838,106,3
+rrset,0,106,3
+rft,17.38.46,106,4
+rst,14.15.00,106,4
+rpts,2,106,4
+rpos,2,106,4
+rdisc,0,106,4
+rcor,2.59.19,106,4
+rrestyp,4,106,4
+rele,3.23.46,106,4
+rrat,0.880,106,4
+srat,0,106,4
+rewin,0.03.15,106,4
+rrwin,0.866,106,4
+rrset,0,106,4
+rdisc,0,106,5
+rrestyp,0,106,5
+rrat,0.877,106,5
+srat,0,106,5
+rrset,0,106,5
+rdisc,0,106,120
+rrestyp,0,106,120
+srat,0,106,120
+rrset,0,106,120
+rdisc,0,107,2
+rrestyp,0,107,2
+rrat,0.920,107,2
+srat,0,107,2
+rrset,0,107,2
+rdisc,0,107,3
+rrestyp,0,107,3
+srat,0,107,3
+rrset,0,107,3
+rdisc,0,107,4
+rrestyp,0,107,4
+srat,0,107,4
+rrset,0,107,4
+rdisc,0,107,5
+rrestyp,0,107,5
+srat,0,107,5
+rrset,0,107,5
+rdisc,0,107,120
+rrestyp,0,107,120
+srat,0,107,120
+rrset,0,107,120
+rdisc,0,108,2
+rrestyp,0,108,2
+rrat,0.825,108,2
+srat,0,108,2
+rrset,0,108,2
+rdisc,0,108,3
+rrestyp,0,108,3
+srat,0,108,3
+rrset,0,108,3
+rdisc,0,108,4
+rrestyp,0,108,4
+srat,0,108,4
+rrset,0,108,4
+rdisc,0,108,5
+rrestyp,0,108,5
+srat,0,108,5
+rrset,0,108,5
+rdisc,0,108,120
+rrestyp,0,108,120
+srat,0,108,120
+rrset,0,108,120
+rdisc,0,109,2
+rrestyp,0,109,2
+rrat,0.940,109,2
+srat,0,109,2
+rrset,0,109,2
+rdisc,0,109,3
+rrestyp,0,109,3
+srat,0,109,3
+rrset,0,109,3
+rdisc,0,109,4
+rrestyp,0,109,4
+srat,0,109,4
+rrset,0,109,4
+rdisc,0,109,5
+rrestyp,0,109,5
+srat,0,109,5
+rrset,0,109,5
+rdisc,0,109,120
+rrestyp,0,109,120
+srat,0,109,120
+rrset,0,109,120
+rdisc,0,110,2
+rrestyp,0,110,2
+rrat,0.905,110,2
+srat,0,110,2
+rrset,0,110,2
+rft,12.34.01,110,3
+rst,10.30.00,110,3
+rpts,1,110,3
+rpos,1,110,3
+rdisc,0,110,3
+rcor,1.52.14,110,3
+rrestyp,4,110,3
+rele,2.04.01,110,3
+rrat,0.905,110,3
+srat,0,110,3
+rewin,0.00.00,110,3
+rrwin,0.905,110,3
+rrset,0,110,3
+rcod,DNC,110,4
+rpts,5,110,4
+rpos,4,110,4
+rdisc,0,110,4
+rrestyp,3,110,4
+rrat,0.905,110,4
+srat,0,110,4
+rrset,1,110,4
+rdisc,0,110,5
+rrestyp,0,110,5
+rrat,0.905,110,5
+srat,0,110,5
+rrset,0,110,5
+rdisc,0,110,120
+rrestyp,0,110,120
+srat,0,110,120
+rrset,0,110,120
+rdisc,0,111,2
+rrestyp,0,111,2
+rrat,0.940,111,2
+srat,0,111,2
+rrset,0,111,2
+rdisc,0,111,3
+rrestyp,0,111,3
+srat,0,111,3
+rrset,0,111,3
+rdisc,0,111,4
+rrestyp,0,111,4
+srat,0,111,4
+rrset,0,111,4
+rdisc,0,111,5
+rrestyp,0,111,5
+srat,0,111,5
+rrset,0,111,5
+rdisc,0,111,120
+rrestyp,0,111,120
+srat,0,111,120
+rrset,0,111,120
+rdisc,0,112,2
+rrestyp,0,112,2
+rrat,0.934,112,2
+srat,0,112,2
+rrset,0,112,2
+rdisc,0,112,3
+rrestyp,0,112,3
+srat,0,112,3
+rrset,0,112,3
+rdisc,0,112,4
+rrestyp,0,112,4
+srat,0,112,4
+rrset,0,112,4
+rdisc,0,112,5
+rrestyp,0,112,5
+srat,0,112,5
+rrset,0,112,5
+rdisc,0,112,120
+rrestyp,0,112,120
+srat,0,112,120
+rrset,0,112,120
+rdisc,0,114,2
+rrestyp,0,114,2
+srat,0,114,2
+rrset,0,114,2
+rdisc,0,114,3
+rrestyp,0,114,3
+srat,0,114,3
+rrset,0,114,3
+rdisc,0,114,4
+rrestyp,0,114,4
+srat,0,114,4
+rrset,0,114,4
+rdisc,0,114,5
+rrestyp,0,114,5
+srat,0,114,5
+rrset,0,114,5
+rdisc,0,114,120
+rrestyp,0,114,120
+srat,0,114,120
+rrset,0,114,120
+rdisc,0,115,2
+rrestyp,0,115,2
+srat,0,115,2
+rrset,0,115,2
+rdisc,0,115,3
+rrestyp,0,115,3
+srat,0,115,3
+rrset,0,115,3
+rdisc,0,115,4
+rrestyp,0,115,4
+srat,0,115,4
+rrset,0,115,4
+rdisc,0,115,5
+rrestyp,0,115,5
+srat,0,115,5
+rrset,0,115,5
+rdisc,0,115,120
+rrestyp,0,115,120
+srat,0,115,120
+rrset,0,115,120
+rft,12.05.33,116,2
+rst,10.35.00,116,2
+rpts,1,116,2
+rpos,1,116,2
+rdisc,0,116,2
+rcor,1.22.40,116,2
+rrestyp,4,116,2
+rele,1.30.33,116,2
+srat,0,116,2
+rewin,0.00.00,116,2
+rrwin,0.913,116,2
+rrset,0,116,2
+rft,12.30.53,116,3
+rst,10.30.00,116,3
+rpts,1,116,3
+rpos,1,116,3
+rdisc,0,116,3
+rcor,1.50.22,116,3
+rrestyp,4,116,3
+rele,2.00.53,116,3
+srat,0,116,3
+rewin,0.00.00,116,3
+rrwin,0.913,116,3
+rrset,0,116,3
+rft,17.29.06,116,4
+rst,14.15.00,116,4
+rpts,1,116,4
+rpos,1,116,4
+rdisc,0,116,4
+rcor,2.57.13,116,4
+rrestyp,4,116,4
+rele,3.14.06,116,4
+srat,0,116,4
+rewin,0.00.00,116,4
+rrwin,0.913,116,4
+rrset,0,116,4
+rdisc,0,116,5
+rrestyp,0,116,5
+srat,0,116,5
+rrset,0,116,5
+rdisc,0,116,120
+rrestyp,0,116,120
+srat,0,116,120
+rrset,0,116,120
+rft,12.07.00,117,2
+rst,10.35.00,117,2
+rpts,2,117,2
+rpos,2,117,2
+rdisc,0,117,2
+rcor,1.23.32,117,2
+rrestyp,4,117,2
+rele,1.32.00,117,2
+srat,0,117,2
+rewin,0.00.57,117,2
+rrwin,0.899,117,2
+rrset,0,117,2
+rft,12.46.35,117,3
+rst,10.30.00,117,3
+rcod,DNC,117,3
+rpts,2,117,3
+rpos,2,117,3
+rdisc,0,117,3
+rcor,2.04.01,117,3
+rrestyp,4,117,3
+rele,2.16.35,117,3
+srat,0,117,3
+rewin,0.15.02,117,3
+rrwin,0.808,117,3
+rrset,0,117,3
+rcod,DNF,117,4
+rpts,3,117,4
+rpos,2,117,4
+rdisc,0,117,4
+rrestyp,3,117,4
+srat,0,117,4
+rrset,0,117,4
+rdisc,0,117,5
+rrestyp,0,117,5
+srat,0,117,5
+rrset,0,117,5
+rdisc,0,117,120
+rrestyp,0,117,120
+srat,0,117,120
+rrset,0,117,120
+rdisc,0,121,2
+rrestyp,0,121,2
+srat,0,121,2
+rrset,0,121,2
+rft,12.34.01,121,3
+rst,10.30.00,121,3
+rpts,1,121,3
+rpos,1,121,3
+rdisc,0,121,3
+rcor,1.51.15,121,3
+rrestyp,4,121,3
+rele,2.04.01,121,3
+srat,0,121,3
+rewin,0.00.00,121,3
+rrwin,0.897,121,3
+rrset,0,121,3
+rcod,DNC,121,4
+rpts,4,121,4
+rpos,3,121,4
+rdisc,0,121,4
+rrestyp,3,121,4
+srat,0,121,4
+rrset,1,121,4
+rdisc,0,121,5
+rrestyp,0,121,5
+srat,0,121,5
+rrset,0,121,5
+rdisc,0,121,120
+rrestyp,0,121,120
+srat,0,121,120
+rrset,0,121,120
+rdisc,0,123,2
+rrestyp,0,123,2
+srat,0,123,2
+rrset,0,123,2
+rcod,DNC,123,3
+rpts,5,123,3
+rpos,3,123,3
+rdisc,0,123,3
+rrestyp,3,123,3
+rrat,0.925,123,3
+srat,0,123,3
+rrset,1,123,3
+rft,17.47.00,123,4
+rst,14.15.00,123,4
+rpts,3,123,4
+rpos,3,123,4
+rdisc,0,123,4
+rcor,3.16.06,123,4
+rrestyp,4,123,4
+rele,3.32.00,123,4
+rrat,0.925,123,4
+srat,0,123,4
+rewin,0.21.14,123,4
+rrwin,0.832,123,4
+rrset,0,123,4
+rdisc,0,123,5
+rrestyp,0,123,5
+rrat,0.919,123,5
+srat,0,123,5
+rrset,0,123,5
+rdisc,0,123,120
+rrestyp,0,123,120
+srat,0,123,120
+rrset,0,123,120
+column,1|Alias|4|Yes|No|10|BLANK|,,
+column,1|AltSailNo|14|No|No|40||,,
+column,1|Boat|10|Yes|Yes|75|Boat Name|,,
+column,1|BowNumber|7|No|No|40||,,
+column,1|CarriedFwd|48|No|No|20||,,
+column,1|Class|13|Yes|No|114|Model|,,
+column,1|Club|15|No|No|40||,,
+column,1|CrewAddress|42|No|No|40||,,
+column,1|CrewAgeGroup|33|No|No|40||,,
+column,1|CrewEmail|34|No|No|40||,,
+column,1|CrewId|32|No|No|40||,,
+column,1|CrewMemberNo|38|No|No|40||,,
+column,1|CrewName|17|No|No|40||,,
+column,1|CrewNotes|43|No|No|40||,,
+column,1|CrewPhone|39|No|No|40||,,
+column,1|CrewPhoto|41|No|No|40||,,
+column,1|CrewSex|36|No|No|40||,,
+column,1|CrewWebsite|35|No|No|40||,,
+column,1|Division|11|No|No|40||,,
+column,1|Exclude|2|Yes|No|10|Exclude|,,
+column,1|Fee|45|No|No|40||,,
+column,1|Fleet|8|Yes|No|77|Fleet|,,
+column,1|HelmAddress|30|No|No|40||,,
+column,1|HelmAgeGroup|23|No|No|40||,,
+column,1|HelmEmail|24|No|No|111|Owner Contact Email|,,
+column,1|HelmId|22|No|No|40||,,
+column,1|HelmMemberNo|27|No|No|40||,,
+column,1|HelmName|16|Yes|Yes|166|Owner Name|,,
+column,1|HelmNotes|31|No|No|40||,,
+column,1|HelmPhone|28|No|No|143|Owner Mobile Number|,,
+column,1|HelmPhoto|29|No|No|40||,,
+column,1|HelmSex|26|No|No|40||,,
+column,1|HelmWebsite|25|No|No|40||,,
+column,1|Medical|5|No|No|40||,,
+column,1|MedicalFlag|1|No|No|10|BLANK|,,
+column,1|Nat|20|No|No|40|National Lettering|,,
+column,1|Nett|53|Yes|Yes|40||,,
+column,1|NewRating|19|Yes|No|49||,,
+column,1|Notes|54|No|No|40||,,
+column,1|Paid|46|No|No|40||,,
+column,1|Penalties|49|No|No|20||,,
+column,1|PrivateNotes|55|No|No|40||,,
+column,1|Rank|3|Yes|Yes|40||,,
+column,1|Rating|18|Yes|Yes|40||,,
+column,1|SailNo|9|Yes|Yes|79|Sail Number|,,
+column,1|Status|44|No|No|40||,,
+column,1|Tally|6|No|No|40|Number|,,
+column,1|Total|52|Yes|Yes|40||,,
+column,2||47|Yes|Yes|45||,,
+column,3||1000|Yes|No|40|BLANK|,,
+column,1|Flight|12|No|No|40||,,
+column,1|Seeding|21|No|No|40||,,
+column,1|WindRats|37|No|No|40||,,
+column,1|Formula|40|No|No|40||,,
+column,1|Platform|50|No|No|40||,,
+column,1|Rig|51|No|No|40||,,
+column,1|Sailmaker|56|No|No|40||,,
+column,1|Foils|57|No|No|40||,,
+column,1|SkipperName|58|No|No|40||,,
+column,1|SkipperId|59|No|No|40||,,
+column,1|SkipperAgeGroup|60|No|No|40||,,
+column,1|SkipperEmail|61|No|No|40||,,
+column,1|SkipperWebsite|62|No|No|40||,,
+column,1|SkipperSex|63|No|No|40||,,
+column,1|SkipperMemberNo|64|No|No|40||,,
+column,1|SkipperPhone|65|No|No|40||,,
+column,1|SkipperPhoto|66|No|No|40||,,
+column,1|SkipperAddress|67|No|No|40||,,
+column,1|SkipperNotes|68|No|No|40||,,
+column,1|TacticianName|69|No|No|40||,,
+column,1|TacticianId|70|No|No|40||,,
+column,1|TacticianAgeGroup|71|No|No|40||,,
+column,1|TacticianEmail|72|No|No|40||,,
+column,1|TacticianWebsite|73|No|No|40||,,
+column,1|TacticianSex|74|No|No|40||,,
+column,1|TacticianMemberNo|75|No|No|40||,,
+column,1|TacticianPhone|76|No|No|40||,,
+column,1|TacticianPhoto|77|No|No|40||,,
+column,1|TacticianAddress|78|No|No|40||,,
+column,1|TacticianNotes|79|No|No|40||,,
+column,1|NavigatorName|80|No|No|40||,,
+column,1|NavigatorId|81|No|No|40||,,
+column,1|NavigatorAgeGroup|82|No|No|40||,,
+column,1|NavigatorEmail|83|No|No|40||,,
+column,1|NavigatorWebsite|84|No|No|40||,,
+column,1|NavigatorSex|85|No|No|40||,,
+column,1|NavigatorMemberNo|86|No|No|40||,,
+column,1|NavigatorPhone|87|No|No|40||,,
+column,1|NavigatorPhoto|88|No|No|40||,,
+column,1|NavigatorAddress|89|No|No|40||,,
+column,1|NavigatorNotes|90|No|No|40||,,
+column,1|BowmanName|91|No|No|40||,,
+column,1|BowmanId|92|No|No|40||,,
+column,1|BowmanAgeGroup|93|No|No|40||,,
+column,1|BowmanEmail|94|No|No|40||,,
+column,1|BowmanWebsite|95|No|No|40||,,
+column,1|BowmanSex|96|No|No|40||,,
+column,1|BowmanMemberNo|97|No|No|40||,,
+column,1|BowmanPhone|98|No|No|40||,,
+column,1|BowmanPhoto|99|No|No|40||,,
+column,1|BowmanAddress|100|No|No|40||,,
+column,1|BowmanNotes|101|No|No|40||,,
+column,1|MastName|102|No|No|40||,,
+column,1|MastId|103|No|No|40||,,
+column,1|MastAgeGroup|104|No|No|40||,,
+column,1|MastEmail|105|No|No|40||,,
+column,1|MastWebsite|106|No|No|40||,,
+column,1|MastSex|107|No|No|40||,,
+column,1|MastMemberNo|108|No|No|40||,,
+column,1|MastPhone|109|No|No|40||,,
+column,1|MastPhoto|110|No|No|40||,,
+column,1|MastAddress|111|No|No|40||,,
+column,1|MastNotes|112|No|No|40||,,
+column,1|PitName|113|No|No|40||,,
+column,1|PitId|114|No|No|40||,,
+column,1|PitAgeGroup|115|No|No|40||,,
+column,1|PitEmail|116|No|No|40||,,
+column,1|PitWebsite|117|No|No|40||,,
+column,1|PitSex|118|No|No|40||,,
+column,1|PitMemberNo|119|No|No|40||,,
+column,1|PitPhone|120|No|No|40||,,
+column,1|PitPhoto|121|No|No|40||,,
+column,1|PitAddress|122|No|No|40||,,
+column,1|PitNotes|123|No|No|40||,,
+column,1|MaintrimName|124|No|No|40||,,
+column,1|MaintrimId|125|No|No|40||,,
+column,1|MaintrimAgeGroup|126|No|No|40||,,
+column,1|MaintrimEmail|127|No|No|40||,,
+column,1|MaintrimWebsite|128|No|No|40||,,
+column,1|MaintrimSex|129|No|No|40||,,
+column,1|MaintrimMemberNo|130|No|No|40||,,
+column,1|MaintrimPhone|131|No|No|40||,,
+column,1|MaintrimPhoto|132|No|No|40||,,
+column,1|MaintrimAddress|133|No|No|40||,,
+column,1|MaintrimNotes|134|No|No|40||,,
+column,1|PorttrimName|135|No|No|40||,,
+column,1|PorttrimId|136|No|No|40||,,
+column,1|PorttrimAgeGroup|137|No|No|40||,,
+column,1|PorttrimEmail|138|No|No|40||,,
+column,1|PorttrimWebsite|139|No|No|40||,,
+column,1|PorttrimSex|140|No|No|40||,,
+column,1|PorttrimMemberNo|141|No|No|40||,,
+column,1|PorttrimPhone|142|No|No|40||,,
+column,1|PorttrimPhoto|143|No|No|40||,,
+column,1|PorttrimAddress|144|No|No|40||,,
+column,1|PorttrimNotes|145|No|No|40||,,
+column,1|StartrimName|146|No|No|40||,,
+column,1|StartrimId|147|No|No|40||,,
+column,1|StartrimAgeGroup|148|No|No|40||,,
+column,1|StartrimEmail|149|No|No|40||,,
+column,1|StartrimWebsite|150|No|No|40||,,
+column,1|StartrimSex|151|No|No|40||,,
+column,1|StartrimMemberNo|152|No|No|40||,,
+column,1|StartrimPhone|153|No|No|40||,,
+column,1|StartrimPhoto|154|No|No|40||,,
+column,1|StartrimAddress|155|No|No|40||,,
+column,1|StartrimNotes|156|No|No|40||,,
+column,1|PortgrindName|157|No|No|40||,,
+column,1|PortgrindId|158|No|No|40||,,
+column,1|PortgrindAgeGroup|159|No|No|40||,,
+column,1|PortgrindEmail|160|No|No|40||,,
+column,1|PortgrindWebsite|161|No|No|40||,,
+column,1|PortgrindSex|162|No|No|40||,,
+column,1|PortgrindMemberNo|163|No|No|40||,,
+column,1|PortgrindPhone|164|No|No|40||,,
+column,1|PortgrindPhoto|165|No|No|40||,,
+column,1|PortgrindAddress|166|No|No|40||,,
+column,1|PortgrindNotes|167|No|No|40||,,
+column,1|StargrindName|168|No|No|40||,,
+column,1|StargrindId|169|No|No|40||,,
+column,1|StargrindAgeGroup|170|No|No|40||,,
+column,1|StargrindEmail|171|No|No|40||,,
+column,1|StargrindWebsite|172|No|No|40||,,
+column,1|StargrindSex|173|No|No|40||,,
+column,1|StargrindMemberNo|174|No|No|40||,,
+column,1|StargrindPhone|175|No|No|40||,,
+column,1|StargrindPhoto|176|No|No|40||,,
+column,1|StargrindAddress|177|No|No|40||,,
+column,1|StargrindNotes|178|No|No|40||,,
+column,1|OwnerName|179|No|No|40||,,
+column,1|OwnerId|180|No|No|40||,,
+column,1|OwnerAgeGroup|181|No|No|40||,,
+column,1|OwnerEmail|182|No|No|40||,,
+column,1|OwnerWebsite|183|No|No|40||,,
+column,1|OwnerSex|184|No|No|40||,,
+column,1|OwnerMemberNo|185|No|No|40||,,
+column,1|OwnerPhone|186|No|No|40||,,
+column,1|OwnerPhoto|187|No|No|40||,,
+column,1|OwnerAddress|188|No|No|40||,,
+column,1|OwnerNotes|189|No|No|40||,,
+column,1|GuestName|190|No|No|40||,,
+column,1|GuestId|191|No|No|40||,,
+column,1|GuestAgeGroup|192|No|No|40||,,
+column,1|GuestEmail|193|No|No|40||,,
+column,1|GuestWebsite|194|No|No|40||,,
+column,1|GuestSex|195|No|No|40||,,
+column,1|GuestMemberNo|196|No|No|40||,,
+column,1|GuestPhone|197|No|No|40||,,
+column,1|GuestPhoto|198|No|No|40||,,
+column,1|GuestAddress|199|No|No|40||,,
+column,1|GuestNotes|200|No|No|40||,,
+column,1|District|201|No|No|40||,,
+column,1|Squad|202|No|No|40||,,
+column,1|Area|203|No|No|40||,,
+column,1|Region|204|No|No|40||,,
+column,1|Group|205|No|No|40||,,
+column,1|Medalist|206|No|No|40||,,
+column,1|Sponsor|207|No|No|40||,,
+column,1|SponsorWebsite|208|No|No|40||,,
+column,1|SponsorEmail|209|No|No|40||,,
+column,1|Team|210|No|No|40||,,
+column,1|TeamWebsite|211|No|No|40||,,
+column,1|TeamEmail|212|No|No|40||,,

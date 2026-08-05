@@ -21,7 +21,11 @@
  */
 import { readFileSync } from 'node:fs';
 
-import { calculateFleetStandings, getDiscardCount } from '../../sailscoring/lib/scoring';
+import {
+  calculateFleetStandings,
+  calculateSubSeriesFleetStandings,
+  getDiscardCount,
+} from '../../sailscoring/lib/scoring';
 import {
   buildSeriesFileFromSailwave,
   parseSailwaveBlw,
@@ -32,6 +36,41 @@ import type { SeriesFile } from '../../sailscoring/lib/series-file';
  * finishes inside each race. Flattening is all that separates them, so these
  * casts are the seam between the two shapes rather than a shortcut. */
 /* eslint-disable @typescript-eslint/no-explicit-any */
+
+/** Score every block the way the app does — not by scoring a race subset as if
+ *  it were a whole series, which would miss `excludeDncOnlyCompetitors` and the
+ *  handicap carry between blocks. */
+function scoreBlocks(file: SeriesFile): any[] {
+  const { races, finishes, starts } = flatten(file);
+  return calculateSubSeriesFleetStandings(
+    (file.subSeries ?? []) as any,
+    file.fleets as any,
+    file.competitors as any,
+    races,
+    finishes,
+    [],
+    file.series.dnfScoring as any,
+    starts,
+    [],
+    (file.subSeries ?? []).some((b) => b.excludeDncOnlyCompetitors),
+    file.series.proportionalDiscard as any,
+  );
+}
+
+function flatten(file: SeriesFile, raceSubset?: Set<string>) {
+  const races = file.races.filter((r) => !raceSubset || raceSubset.has(r.id));
+  return {
+    races: races.map((r) => ({ ...r, seriesId: 'merged', name: r.name ?? null })) as any,
+    finishes: races.flatMap((r) =>
+      r.finishes.map((f) => ({
+        ...f,
+        raceId: r.id,
+        tiedWithPrevious: f.tiedWithPrevious ?? false,
+      })),
+    ) as any,
+    starts: races.flatMap((r) => r.starts.map((s) => ({ ...s, raceId: r.id }))) as any,
+  };
+}
 
 function score(file: SeriesFile, raceSubset?: Set<string>): any {
   const races = file.races.filter((r) => !raceSubset || raceSubset.has(r.id));
@@ -118,10 +157,16 @@ function main(): void {
       .join('  ')}`,
   );
 
+  const blockResults = scoreBlocks(merged);
   let mismatches = 0;
   for (const [i, block] of blocks.entries()) {
     const subset = new Set(block.raceIds ?? []);
-    const blockResult = score(merged, subset);
+    const blockResult = blockResults.find((r) => r.subSeries.id === block.id);
+    if (!blockResult) {
+      console.log(`\n  ${block.name}: no standings returned`);
+      mismatches += 1;
+      continue;
+    }
     const applied = Math.max(
       0,
       ...blockResult.fleetStandings.flatMap((e: any) =>
@@ -144,13 +189,24 @@ function main(): void {
       continue;
     }
     mismatches += 1;
-    console.log(`    DIFFERS from ${sourcePath} (merged ${a.length} rows, source ${b.length})`);
-    for (let j = 0; j < Math.max(a.length, b.length); j++) {
-      if (a[j] !== b[j]) {
-        console.log(`      merged: ${a[j] ?? '—'}`);
-        console.log(`      source: ${b[j] ?? '—'}`);
-      }
+    // Key on fleet + boat so a row present on one side only is reported as
+    // missing rather than smeared across the whole ordered diff.
+    const key = (row: string) => row.split(' | ').slice(0, 1).concat(row.split(' | ')[2]).join(' | ');
+    const am = new Map(a.map((r) => [key(r), r]));
+    const bm = new Map(b.map((r) => [key(r), r]));
+    const onlySource = [...bm.keys()].filter((k) => !am.has(k));
+    const onlyMerged = [...am.keys()].filter((k) => !bm.has(k));
+    const changed = [...am.keys()].filter((k) => bm.has(k) && am.get(k) !== bm.get(k));
+    console.log(
+      `    DIFFERS from ${sourcePath}: ${changed.length} row(s) scored differently, ` +
+        `${onlySource.length} only in source, ${onlyMerged.length} only in merged`,
+    );
+    for (const k of changed.slice(0, 6)) {
+      console.log(`      merged: ${am.get(k)}`);
+      console.log(`      source: ${bm.get(k)}`);
     }
+    for (const k of onlySource.slice(0, 4)) console.log(`      only in source: ${bm.get(k)}`);
+    for (const k of onlyMerged.slice(0, 4)) console.log(`      only in merged: ${am.get(k)}`);
   }
 
   const whole = score(merged);

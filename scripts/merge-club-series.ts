@@ -68,6 +68,11 @@ interface GroupSpec {
   /** Series name in the app. Drives the default published slug. */
   name: string;
   venue: string;
+  /** The season this group belongs to. Race dates outside it are a scorer's
+   *  typo (HYC's 2026 dinghy file dates one June race to 2025); they pass
+   *  through as published but must not drag the series' own start date into
+   *  the wrong season, which is what the app groups on (ADR-011). */
+  seasonYear: number;
   /** One discard per `everyRaces` sailed, the first at `firstAt`. */
   proportionalDiscard: { firstAt: number; everyRaces: number };
   /** Each block continues the previous block's ratings. */
@@ -91,6 +96,7 @@ const GROUPS: GroupSpec[] = [
     key: 'wednesday-cruisers',
     name: 'Wednesdays - Cruisers 2026',
     venue: 'Howth Yacht Club',
+    seasonYear: 2026,
     proportionalDiscard: { firstAt: 4, everyRaces: 4 },
     carryHandicaps: true,
     blocks: [
@@ -103,6 +109,7 @@ const GROUPS: GroupSpec[] = [
     key: 'tuesday-one-designs',
     name: 'Tuesdays - One Designs 2026',
     venue: 'Howth Yacht Club',
+    seasonYear: 2026,
     proportionalDiscard: { firstAt: 4, everyRaces: 4 },
     carryHandicaps: true,
     blocks: [
@@ -115,6 +122,7 @@ const GROUPS: GroupSpec[] = [
     key: 'tuesday-saturday-howth-17',
     name: "Tuesdays & Saturdays - Howth 17's 2026",
     venue: 'Howth Yacht Club',
+    seasonYear: 2026,
     proportionalDiscard: { firstAt: 4, everyRaces: 4 },
     carryHandicaps: true,
     blocks: [
@@ -127,6 +135,7 @@ const GROUPS: GroupSpec[] = [
     key: 'saturday-one-designs',
     name: 'Saturdays - One Designs 2026',
     venue: 'Howth Yacht Club',
+    seasonYear: 2026,
     proportionalDiscard: { firstAt: 4, everyRaces: 4 },
     carryHandicaps: true,
     blocks: [
@@ -139,6 +148,7 @@ const GROUPS: GroupSpec[] = [
     key: 'saturday-cruisers',
     name: 'Saturday - Cruisers 2026',
     venue: 'Howth Yacht Club',
+    seasonYear: 2026,
     proportionalDiscard: { firstAt: 4, everyRaces: 4 },
     carryHandicaps: true,
     blocks: [
@@ -153,6 +163,7 @@ const GROUPS: GroupSpec[] = [
     key: 'dinghies',
     name: 'Howth YC Dinghy Racing 2026',
     venue: 'Howth YC',
+    seasonYear: 2026,
     proportionalDiscard: { firstAt: 3, everyRaces: 3 },
     carryHandicaps: false,
     blocks: [
@@ -285,7 +296,12 @@ function mergeGroup(group: GroupSpec, repoRoot: string): { file: SeriesFile; not
         continue;
       }
 
-      if (matchedStrength > 0) {
+      // A sail-number-only join is the natural identity in a class that doesn't
+      // name its boats (all of the dinghies), so it isn't worth reporting —
+      // only a sail-number join where both sides *do* carry a boat name, which
+      // means the names disagree. Anything weaker than sail number always is.
+      const bothNamed = Boolean(norm(match.boatName)) && Boolean(norm(c.boatName));
+      if (matchedStrength >= 2 || (matchedStrength === 1 && bothNamed)) {
         notes.weakMatches.push(
           `${group.key} / ${spec.name}: joined "${label}" on ${STRENGTH_LABEL[matchedStrength]} ` +
             `(sail number + boat name did not match) — verify this is the same boat`,
@@ -322,11 +338,45 @@ function mergeGroup(group: GroupSpec, repoRoot: string): { file: SeriesFile; not
   for (const [index, { spec, file }] of blocks.entries()) {
     const compIdMap = buildCompetitorIdMap(file, byKey, notes, group.key, spec.name);
     const raceIds: string[] = [];
+    const blockExclusions: { raceId: string; fleetId: string }[] = [];
+    let emptyRaces = 0;
+
+    // Which fleets actually had a finisher in each source race. The engine
+    // strikes a race for a fleet with no finisher — but the merge unions each
+    // boat's fleets across blocks, and HYC enters the same boat separately per
+    // division (Chinook is one record in Sat Series 1, two in Series 2). That
+    // union can hand a fleet a finisher it never had in that race, un-striking
+    // it. So the source's own answer is recorded here and re-applied below.
+    const sourceFleetsWithFinishers = new Map<string, Set<string>>();
+    for (const r of file.races) {
+      const named = new Set<string>();
+      for (const fin of r.finishes) {
+        if (fin.sortOrder == null || !fin.competitorId) continue;
+        const c = file.competitors.find((x) => x.id === fin.competitorId);
+        for (const fid of c?.fleetIds ?? []) named.add(remapFleet(file, fid, fleetIdByName));
+      }
+      sourceFleetsWithFinishers.set(r.id, named);
+    }
 
     for (const r of file.races) {
+      // Sailwave carries scheduled-but-unsailed races: a `racestart` and a full
+      // grid of competitor rows, but no finishes. HYC's Wednesday Series 3 file
+      // is all seven of them. Importing one would score every boat DNC in a
+      // race that never happened, so they're dropped — the published page
+      // counts them as unsailed too.
+      if (r.finishes.length === 0) {
+        emptyRaces += 1;
+        continue;
+      }
       const id = randomUUID();
       raceIds.push(id);
       raceNumber += 1;
+      // Strike this race for every merged fleet that had no finisher in it in
+      // the source — including fleets the source file didn't carry at all.
+      const had = sourceFleetsWithFinishers.get(r.id) ?? new Set<string>();
+      for (const fleet of fleets) {
+        if (!had.has(fleet.id)) blockExclusions.push({ raceId: id, fleetId: fleet.id });
+      }
       races.push({
         ...r,
         id,
@@ -371,12 +421,32 @@ function mergeGroup(group: GroupSpec, repoRoot: string): { file: SeriesFile; not
       }
     }
 
+    if (emptyRaces) {
+      notes.dropped.push(
+        `${group.key} / ${spec.name}: dropped ${emptyRaces} scheduled race(s) with no finishes ` +
+          `— they are unsailed in the .blw and would otherwise score every boat DNC`,
+      );
+    }
+    // A block with nothing sailed yet isn't published as an empty standings
+    // table; it appears once it has a race.
+    if (raceIds.length === 0) {
+      notes.dropped.push(`${group.key}: ${spec.name} has no sailed races yet — block omitted`);
+      continue;
+    }
+
     const blockId = randomUUID();
     subSeries.push({
       id: blockId,
       name: spec.name,
       displayOrder: index,
       raceIds,
+      raceFleetExclusions: blockExclusions,
+      // The merged series carries every boat that raced in *any* block, but
+      // each source file only ever knew its own entry list. Without this, a
+      // boat that first appeared in Series 2 would be ranked DNC in Series 1
+      // and — worse — inflate the entry count every DNC score is derived from,
+      // shifting the whole block's points away from the published record.
+      excludeDncOnlyCompetitors: true,
       ...(group.carryHandicaps && previousBlockId
         ? { startingHandicapSource: 'continue' as const, continueFromSubSeriesId: previousBlockId }
         : { startingHandicapSource: 'base' as const }),
@@ -386,7 +456,17 @@ function mergeGroup(group: GroupSpec, repoRoot: string): { file: SeriesFile; not
 
   // ---- Series ----
   const base = blocks[0].file;
-  const dates = races.map((r) => r.date).filter(Boolean).sort();
+  const allDates = races.map((r) => r.date).filter(Boolean).sort();
+  // Race dates stay exactly as the club entered them. The series' own start and
+  // end, though, are derived — and the app files a series into a season by its
+  // start date — so a mistyped year must not decide the season.
+  const dates = allDates.filter((d) => d.startsWith(`${group.seasonYear}`));
+  for (const d of allDates.filter((d) => !d.startsWith(`${group.seasonYear}`))) {
+    notes.conflicts.push(
+      `${group.key}: race dated ${d}, outside the ${group.seasonYear} season — kept as published, ` +
+        `but excluded from the series start/end dates`,
+    );
+  }
 
   const file: SeriesFile = {
     ...base,
@@ -407,7 +487,8 @@ function mergeGroup(group: GroupSpec, repoRoot: string): { file: SeriesFile; not
       ftpPaths: {},
       ftpPath: '',
       defaultStartSequence: undefined,
-      raceFleetExclusions: undefined,
+      // Whole-series standings need the same strikes the blocks carry.
+      raceFleetExclusions: subSeries.flatMap((b) => b.raceFleetExclusions ?? []),
     },
     fleets,
     competitors,
