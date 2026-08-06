@@ -1,0 +1,114 @@
+# 2026 club-racing demo: the blocked sub-series import.
+#
+# Separate from `as-published.yml` because it is a different kind of thing.
+# That workflow ingests the archival record and is safe to run on every push:
+# ingest is idempotent server-side on the document hash. This one builds
+# **full-fidelity** series from the club's Sailwave files, and the CLI's
+# `series import` has no update path — it mints a fresh series id per import
+# (`openSeriesFromFile`), deduplicating only a byte-identical replay via the
+# contents-hashed `Idempotency-Key`.
+#
+# So the two halves are split:
+#
+#   on push          build and check the committed output is reproducible.
+#                    Never imports — a .blw change would otherwise land a
+#                    *second* copy of the series rather than updating the one
+#                    already there.
+#   on dispatch      import, deliberately, when someone has decided the
+#                    workspace should take the new build.
+#
+# Automating the import needs an app-side way to replay a `.sailscoring` over
+# an existing series. `updateSeriesFromFile` already does exactly that —
+# preserving the series id, createdAt, category and archived flag — but its
+# only caller is revision-revert; it has no API route. Until it has one, the
+# import stays manual and the old series is deleted by hand first.
+#
+# Secrets:
+#   APP_REPO_TOKEN              read access to sailscoring/sailscoring
+#   SAILSCORING_ARCHIVIST_TOKEN the hyc workspace's API key
+#
+# NOTE: not armed, same as as-published.yml — the import step is gated on the
+# secret being configured.
+name: club-2026
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'sources/blw/**'
+      - 'club-2026/**'
+      - 'scripts/merge-club-series.ts'
+      - 'scripts/verify-club-merge.ts'
+      - '.github/workflows/club-2026.yml'
+  workflow_dispatch:
+    inputs:
+      import:
+        description: >-
+          Import the built series into the hyc workspace. Creates NEW series —
+          delete the previous copies first, or you get duplicates.
+        type: boolean
+        default: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      SAILSCORING_TOKEN: ${{ secrets.SAILSCORING_ARCHIVIST_TOKEN }}
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/checkout@v7
+        with:
+          repository: sailscoring/sailscoring
+          token: ${{ secrets.APP_REPO_TOKEN }}
+          path: app
+
+      - uses: pnpm/action-setup@v6
+        with:
+          package_json_file: app/package.json
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: pnpm
+          cache-dependency-path: app/pnpm-lock.yaml
+
+      - name: Install archive dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Install app dependencies
+        working-directory: app
+        run: pnpm install --frozen-lockfile
+
+      - name: Merge the club series
+        run: pnpm merge-club-series
+
+      # Every id is UUIDv5 over a stable key and the export stamp is derived
+      # from the racing, so a re-run over unchanged .blw files is byte-identical.
+      # A diff here means either the inputs changed without the output being
+      # committed, or something non-deterministic crept back in — and a file
+      # that changes for no reason imports as a duplicate series.
+      - name: Built series are committed and reproducible
+        run: git diff --exit-code club-2026/
+
+      # Informational. The demo knowingly diverges from the source files: a
+      # merged series has one competitor set, so per-block entry lists don't
+      # survive and DNC-derived points move (CLARIFICATIONS.md, app #368).
+      # Printed on every run so a *new* divergence is visible in the log.
+      - name: Fidelity report
+        continue-on-error: true
+        run: |
+          for f in club-2026/*.sailscoring; do
+            g=$(basename "$f" .sailscoring)
+            echo "::group::$g"
+            pnpm verify-club-merge "$f" \
+              "sources/blw/2026/$g/series-1.blw" \
+              "sources/blw/2026/$g/series-2.blw" \
+              "sources/blw/2026/$g/series-3.blw" || true
+            echo "::endgroup::"
+          done
+
+      - name: Import into the workspace
+        if: inputs.import && env.SAILSCORING_TOKEN != ''
+        working-directory: app
+        run: pnpm cli series import ${{ github.workspace }}/club-2026/*.sailscoring --workspace hyc

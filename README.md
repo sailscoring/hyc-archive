@@ -51,11 +51,14 @@ as-published.config.json  generated ingest config (committed; input to the app's
 as-published-skips.json   series the archive-kit can't ingest yet, with reasons
 as-published-race-results.json  one-off events published as a race result, not
                           a series table (app #347) — curated, see CLARIFICATIONS
+club-2026/                the blocked club-racing series (committed: the build is
+                          reproducible, so the diff shows what a merge changed)
 .github/workflows/
   backup-ftp.yml          daily FTP-site capture → PR → auto-merge
   backup-admin.yml        daily admin-DB capture → PR → auto-merge
   backup-summaries.yml    on-demand summaries capture → PR → auto-merge
   as-published.yml        emit → generate → push to the hyc workspace (gated)
+  club-2026.yml           merge → check reproducible; import on dispatch (gated)
 ```
 
 The capture automation moved here from [`markmc/reshyc`](https://github.com/markmc/reshyc)
@@ -134,10 +137,12 @@ with `scripts/ftp-paths.ts` here as the HYC-specific caller.
   Championships and Howth 17 Nationals (entry lists, no racing sailed yet).
   The Double-Handed Race is a coverage gap instead — admin row 2265 names a
   page that has never appeared in the capture.
-- ⬜ For a season actually *scored* this way, weekly updates need an app-side
-  way to replay a `.sailscoring` file over an existing series:
-  `updateSeriesFromFile` already does exactly that but is only reachable via
-  revision-revert.
+- ⬜ The club-2026 import is **manual** (`workflow_dispatch`), because
+  `cli series import` mints a fresh series id per import and so would duplicate
+  rather than update. Automating it needs an app-side way to replay a
+  `.sailscoring` over an existing series: `updateSeriesFromFile` already does
+  exactly that — preserving id, createdAt, category and archived flag — but its
+  only caller is revision-revert and it has no API route.
 
 ## Licensing
 

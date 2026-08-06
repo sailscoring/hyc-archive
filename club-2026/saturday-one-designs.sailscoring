@@ -1,0 +1,971 @@
+{
+  "formatVersion": 29,
+  "seriesId": "1591b20e-4610-5ee2-a6ff-9ea007ebb3a8",
+  "exportedAt": "2026-08-01T00:00:00.000Z",
+  "series": {
+    "id": "1591b20e-4610-5ee2-a6ff-9ea007ebb3a8",
+    "name": "Saturdays - One Designs 2026 (DEMO)",
+    "venue": "Howth Yacht Club",
+    "startDate": "2026-05-16",
+    "endDate": "2026-08-01",
+    "venueLogoUrl": "https://www.hyc.ie/system/sponsor_logos/620/normal/Howth_Yacht_Club_-_Logo_RGB.jpg",
+    "eventLogoUrl": "https://www.hyc.ie/system/sponsor_logos/620/normal/Howth_Yacht_Club_-_Logo_RGB.jpg",
+    "venueUrl": "",
+    "eventUrl": "",
+    "discardThresholds": [
+      {
+        "minRaces": 4,
+        "discardCount": 1
+      },
+      {
+        "minRaces": 9,
+        "discardCount": 2
+      }
+    ],
+    "dnfScoring": "startingArea",
+    "ftpHost": "",
+    "ftpPath": "",
+    "includeJsonExport": true,
+    "enabledCompetitorFields": [
+      "boatName"
+    ],
+    "primaryPersonLabel": "helm",
+    "subdivisionAxes": [],
+    "scoringMode": "handicap",
+    "proportionalDiscard": {
+      "firstAt": 4,
+      "everyRaces": 4
+    },
+    "ftpPaths": {},
+    "raceFleetExclusions": [
+      {
+        "raceId": "c593757a-3467-59cc-9ee4-0f6bd3394591",
+        "fleetId": "d6719088-3eba-54da-a7e4-38d5058f424d"
+      },
+      {
+        "raceId": "c593757a-3467-59cc-9ee4-0f6bd3394591",
+        "fleetId": "0cda2d42-0103-5320-bed2-9ba91160b63f"
+      },
+      {
+        "raceId": "dd855742-34c2-59f8-9acb-ee590cb9fa6a",
+        "fleetId": "d6719088-3eba-54da-a7e4-38d5058f424d"
+      },
+      {
+        "raceId": "dd855742-34c2-59f8-9acb-ee590cb9fa6a",
+        "fleetId": "0cda2d42-0103-5320-bed2-9ba91160b63f"
+      }
+    ]
+  },
+  "fleets": [
+    {
+      "id": "d6719088-3eba-54da-a7e4-38d5058f424d",
+      "name": "Puppeteer HPH",
+      "displayOrder": 0,
+      "scoringSystem": "nhc"
+    },
+    {
+      "id": "0cda2d42-0103-5320-bed2-9ba91160b63f",
+      "name": "Puppeteer Scr",
+      "displayOrder": 1,
+      "scoringSystem": "scratch"
+    },
+    {
+      "id": "17bfe1a3-4b64-5975-b4df-f19b7257cd72",
+      "name": "Squib HPH",
+      "displayOrder": 2,
+      "scoringSystem": "nhc"
+    },
+    {
+      "id": "7d3536e3-1bb9-536e-9f42-bfa3a6efe61e",
+      "name": "Squib Scr",
+      "displayOrder": 3,
+      "scoringSystem": "scratch"
+    }
+  ],
+  "competitors": [
+    {
+      "id": "8a9d2ce0-2ec2-5a14-8a7c-3466be5b1156",
+      "fleetIds": [
+        "d6719088-3eba-54da-a7e4-38d5058f424d",
+        "0cda2d42-0103-5320-bed2-9ba91160b63f"
+      ],
+      "sailNumber": "2021",
+      "boatName": "Harlequin",
+      "names": [
+        "David Clarke"
+      ],
+      "club": "",
+      "gender": "",
+      "age": null,
+      "nhcStartingTcf": 1.385
+    },
+    {
+      "id": "03b663a6-8659-58b8-b8fb-cb5cd9ab561f",
+      "fleetIds": [
+        "d6719088-3eba-54da-a7e4-38d5058f424d",
+        "0cda2d42-0103-5320-bed2-9ba91160b63f"
+      ],
+      "sailNumber": "5526",
+      "boatName": "Blue Velvet",
+      "names": [
+        "Gerard Kennedy"
+      ],
+      "club": "",
+      "gender": "",
+      "age": null,
+      "nhcStartingTcf": 1.277
+    },
+    {
+      "id": "f0f9b83f-a1f6-5e94-bed9-e831e05b2252",
+      "fleetIds": [
+        "d6719088-3eba-54da-a7e4-38d5058f424d",
+        "0cda2d42-0103-5320-bed2-9ba91160b63f"
+      ],
+      "sailNumber": "219",
+      "boatName": "Geppetto",
+      "names": [
+        "O'Reilly / McDyer"
+      ],
+      "club": "",
+      "gender": "",
+      "age": null,
+      "nhcStartingTcf": 1.233
+    },
+    {
+      "id": "2021d93d-53e3-5aaa-abe8-2860953d259d",
+      "fleetIds": [
+        "d6719088-3eba-54da-a7e4-38d5058f424d",
+        "0cda2d42-0103-5320-bed2-9ba91160b63f"
+      ],
+      "sailNumber": "22",
+      "boatName": "Weyhey",
+      "names": [
+        "Ian Dickson"
+      ],
+      "club": "",
+      "gender": "",
+      "age": null,
+      "nhcStartingTcf": 1.345
+    },
+    {
+      "id": "979fd4bf-0132-5a4d-b346-f1f0ff111897",
+      "fleetIds": [
+        "17bfe1a3-4b64-5975-b4df-f19b7257cd72",
+        "7d3536e3-1bb9-536e-9f42-bfa3a6efe61e"
+      ],
+      "sailNumber": "869",
+      "boatName": "Tears in Heaven",
+      "names": [
+        "Tom McMahon"
+      ],
+      "club": "",
+      "gender": "",
+      "age": null,
+      "nhcStartingTcf": 1.051
+    },
+    {
+      "id": "a9b5fd5c-85f1-5f8a-956d-5cd0b7d6d99b",
+      "fleetIds": [
+        "17bfe1a3-4b64-5975-b4df-f19b7257cd72",
+        "7d3536e3-1bb9-536e-9f42-bfa3a6efe61e"
+      ],
+      "sailNumber": "148",
+      "boatName": "Halloween",
+      "names": [
+        "Gerard Loughran / Ross Hattaway"
+      ],
+      "club": "",
+      "gender": "",
+      "age": null,
+      "nhcStartingTcf": 0.911
+    },
+    {
+      "id": "60454ebc-48b9-5456-83f6-d843e74a7368",
+      "fleetIds": [
+        "17bfe1a3-4b64-5975-b4df-f19b7257cd72",
+        "7d3536e3-1bb9-536e-9f42-bfa3a6efe61e"
+      ],
+      "sailNumber": "801",
+      "boatName": "Tears for Fears",
+      "names": [
+        "Niall Monks"
+      ],
+      "club": "",
+      "gender": "",
+      "age": null,
+      "nhcStartingTcf": 1.02
+    },
+    {
+      "id": "dff69adf-f88b-5caf-92a3-a803e9a6d533",
+      "fleetIds": [
+        "17bfe1a3-4b64-5975-b4df-f19b7257cd72",
+        "7d3536e3-1bb9-536e-9f42-bfa3a6efe61e"
+      ],
+      "sailNumber": "872",
+      "boatName": "Treborth",
+      "names": [
+        "Karolina & Eoin Kernan"
+      ],
+      "club": "",
+      "gender": "",
+      "age": null,
+      "nhcStartingTcf": 0.976
+    },
+    {
+      "id": "ae6e8d75-74b8-55d0-a1fb-c9aaf784e4a1",
+      "fleetIds": [
+        "d6719088-3eba-54da-a7e4-38d5058f424d",
+        "0cda2d42-0103-5320-bed2-9ba91160b63f"
+      ],
+      "sailNumber": "187",
+      "boatName": "Flycatcher",
+      "names": [
+        "McKeon / Dunne"
+      ],
+      "club": "",
+      "gender": "",
+      "age": null,
+      "nhcStartingTcf": 1.259
+    },
+    {
+      "id": "797440f8-5342-5e2d-bd5e-5695080011bd",
+      "fleetIds": [
+        "d6719088-3eba-54da-a7e4-38d5058f424d",
+        "0cda2d42-0103-5320-bed2-9ba91160b63f"
+      ],
+      "sailNumber": "79",
+      "boatName": "Mojo",
+      "names": [
+        "Francisco Martinez"
+      ],
+      "club": "",
+      "gender": "",
+      "age": null,
+      "nhcStartingTcf": 1.159
+    },
+    {
+      "id": "d679e7a3-230f-557d-8ef1-540645775c09",
+      "fleetIds": [
+        "17bfe1a3-4b64-5975-b4df-f19b7257cd72",
+        "7d3536e3-1bb9-536e-9f42-bfa3a6efe61e"
+      ],
+      "sailNumber": "56",
+      "boatName": "Crackertoo",
+      "names": [
+        "Jeff and Stephen Kay"
+      ],
+      "club": "",
+      "gender": "",
+      "age": null,
+      "nhcStartingTcf": 1.036
+    },
+    {
+      "id": "9c327d48-8756-5d4c-9f45-0d61d1f48e71",
+      "fleetIds": [
+        "d6719088-3eba-54da-a7e4-38d5058f424d",
+        "0cda2d42-0103-5320-bed2-9ba91160b63f"
+      ],
+      "sailNumber": "101",
+      "boatName": "Eclipse",
+      "names": [
+        "Hogan / Dyson"
+      ],
+      "club": "",
+      "gender": "",
+      "age": null,
+      "nhcStartingTcf": 1.179
+    },
+    {
+      "id": "857423b2-2974-5c16-87fc-1ebdd6a677c6",
+      "fleetIds": [
+        "d6719088-3eba-54da-a7e4-38d5058f424d",
+        "0cda2d42-0103-5320-bed2-9ba91160b63f"
+      ],
+      "sailNumber": "15",
+      "boatName": "Trick or Treat",
+      "names": [
+        "Alan Pearson / Alan Blay"
+      ],
+      "club": "",
+      "gender": "",
+      "age": null,
+      "nhcStartingTcf": 1.381
+    },
+    {
+      "id": "3d0bc2db-1188-5b64-b936-3d6e4e2af166",
+      "fleetIds": [
+        "d6719088-3eba-54da-a7e4-38d5058f424d",
+        "0cda2d42-0103-5320-bed2-9ba91160b63f"
+      ],
+      "sailNumber": "50",
+      "boatName": "Odyssey",
+      "names": [
+        "Roslyn & Philip Byrne"
+      ],
+      "club": "",
+      "gender": "",
+      "age": null,
+      "nhcStartingTcf": 1.324
+    },
+    {
+      "id": "5a8d1d9c-d7cc-53bd-9793-17320b38a839",
+      "fleetIds": [
+        "d6719088-3eba-54da-a7e4-38d5058f424d",
+        "0cda2d42-0103-5320-bed2-9ba91160b63f"
+      ],
+      "sailNumber": "318",
+      "boatName": "Papagena",
+      "names": [
+        "Kieran Barker"
+      ],
+      "club": "",
+      "gender": "",
+      "age": null,
+      "nhcStartingTcf": 1.25
+    },
+    {
+      "id": "227bd4d8-0c09-59d2-9f40-a267a7e22e23",
+      "fleetIds": [
+        "17bfe1a3-4b64-5975-b4df-f19b7257cd72",
+        "7d3536e3-1bb9-536e-9f42-bfa3a6efe61e"
+      ],
+      "sailNumber": "882",
+      "boatName": "Kaizen",
+      "names": [
+        "Ronan MacDonell"
+      ],
+      "club": "",
+      "gender": "",
+      "age": null,
+      "nhcStartingTcf": 1.075
+    },
+    {
+      "id": "45cc9ce1-d8ee-598a-8ba8-8c64c119a8ab",
+      "fleetIds": [
+        "17bfe1a3-4b64-5975-b4df-f19b7257cd72",
+        "7d3536e3-1bb9-536e-9f42-bfa3a6efe61e"
+      ],
+      "sailNumber": "671",
+      "boatName": "Aurora",
+      "names": [
+        "Killian O'Kelly"
+      ],
+      "club": "",
+      "gender": "",
+      "age": null,
+      "nhcStartingTcf": 0.933
+    },
+    {
+      "id": "25da80d4-5fbc-5c35-8468-f525b7bd03c6",
+      "fleetIds": [
+        "17bfe1a3-4b64-5975-b4df-f19b7257cd72",
+        "7d3536e3-1bb9-536e-9f42-bfa3a6efe61e"
+      ],
+      "sailNumber": "639",
+      "boatName": "Tom Thumb",
+      "names": [
+        "Patrick Chambers"
+      ],
+      "club": "",
+      "gender": "",
+      "age": null,
+      "nhcStartingTcf": 0.967
+    }
+  ],
+  "races": [
+    {
+      "id": "de4af499-6684-59d6-ab39-827c21ffdf9c",
+      "raceNumber": 1,
+      "date": "2026-05-16",
+      "starts": [
+        {
+          "id": "1f9ea84c-dac0-51ad-a1b6-72f93d01b4b2",
+          "fleetIds": [
+            "d6719088-3eba-54da-a7e4-38d5058f424d",
+            "0cda2d42-0103-5320-bed2-9ba91160b63f"
+          ],
+          "startTime": "10:40:00"
+        },
+        {
+          "id": "b76f35f0-f9eb-58cc-a270-d2158c4890c1",
+          "fleetIds": [
+            "17bfe1a3-4b64-5975-b4df-f19b7257cd72",
+            "7d3536e3-1bb9-536e-9f42-bfa3a6efe61e"
+          ],
+          "startTime": "10:45:00"
+        }
+      ],
+      "finishes": [
+        {
+          "id": "01f75b0e-6f06-573a-a098-64b9f0a6149a",
+          "competitorId": "2021d93d-53e3-5aaa-abe8-2860953d259d",
+          "sortOrder": 0,
+          "finishTime": "12:10:57",
+          "resultCode": null,
+          "startPresent": null,
+          "penaltyCode": null,
+          "penaltyOverride": null
+        },
+        {
+          "id": "cf595125-b980-59ed-ae51-a15762a7c62a",
+          "competitorId": "8a9d2ce0-2ec2-5a14-8a7c-3466be5b1156",
+          "sortOrder": 1,
+          "finishTime": "12:11:55",
+          "resultCode": null,
+          "startPresent": null,
+          "penaltyCode": null,
+          "penaltyOverride": null
+        },
+        {
+          "id": "d1410e3f-74e2-5b20-b65a-16200e27c1b8",
+          "competitorId": "d679e7a3-230f-557d-8ef1-540645775c09",
+          "sortOrder": 2,
+          "finishTime": "12:15:20",
+          "resultCode": null,
+          "startPresent": null,
+          "penaltyCode": null,
+          "penaltyOverride": null
+        },
+        {
+          "id": "177381b9-4fa2-5df9-bac2-bb0b0a7b4770",
+          "competitorId": "797440f8-5342-5e2d-bd5e-5695080011bd",
+          "sortOrder": 3,
+          "finishTime": "12:17:04",
+          "resultCode": null,
+          "startPresent": null,
+          "penaltyCode": null,
+          "penaltyOverride": null
+        },
+        {
+          "id": "1ea7363b-037c-543b-bb37-2bb2d33c3983",
+          "competitorId": "60454ebc-48b9-5456-83f6-d843e74a7368",
+          "sortOrder": 4,
+          "finishTime": "12:17:28",
+          "resultCode": null,
+          "startPresent": null,
+          "penaltyCode": null,
+          "penaltyOverride": null
+        },
+        {
+          "id": "5db15921-9137-5444-a410-60bfb1249a2b",
+          "competitorId": "f0f9b83f-a1f6-5e94-bed9-e831e05b2252",
+          "sortOrder": 5,
+          "finishTime": "12:20:34",
+          "resultCode": null,
+          "startPresent": null,
+          "penaltyCode": null,
+          "penaltyOverride": null
+        },
+        {
+          "id": "1c126d96-8cfe-5d34-99fe-ae7f1337264d",
+          "competitorId": "03b663a6-8659-58b8-b8fb-cb5cd9ab561f",
+          "sortOrder": 6,
+          "finishTime": "12:21:48",
+          "resultCode": null,
+          "startPresent": null,
+          "penaltyCode": null,
+          "penaltyOverride": null
+        },
+        {
+          "id": "d33b3392-21d4-576d-adf9-1fa64f1be314",
+          "competitorId": "9c327d48-8756-5d4c-9f45-0d61d1f48e71",
+          "sortOrder": 7,
+          "finishTime": "12:21:59",
+          "resultCode": null,
+          "startPresent": null,
+          "penaltyCode": null,
+          "penaltyOverride": null
+        },
+        {
+          "id": "d6c49a1f-b2e5-5ac1-93aa-7da7650bca14",
+          "competitorId": "ae6e8d75-74b8-55d0-a1fb-c9aaf784e4a1",
+          "sortOrder": 8,
+          "finishTime": "12:22:18",
+          "resultCode": null,
+          "startPresent": null,
+          "penaltyCode": null,
+          "penaltyOverride": null
+        },
+        {
+          "id": "fcc3fea4-0cc5-57c5-9e76-ad66b6b14aee",
+          "competitorId": "dff69adf-f88b-5caf-92a3-a803e9a6d533",
+          "sortOrder": 9,
+          "finishTime": "12:28:15",
+          "resultCode": null,
+          "startPresent": null,
+          "penaltyCode": null,
+          "penaltyOverride": null
+        }
+      ],
+      "name": null
+    },
+    {
+      "id": "c593757a-3467-59cc-9ee4-0f6bd3394591",
+      "raceNumber": 2,
+      "date": "2026-06-06",
+      "starts": [
+        {
+          "id": "894cf21c-2587-5861-9602-a0194011ca96",
+          "fleetIds": [
+            "d6719088-3eba-54da-a7e4-38d5058f424d",
+            "0cda2d42-0103-5320-bed2-9ba91160b63f"
+          ],
+          "startTime": "10:40:00"
+        },
+        {
+          "id": "2e2d9f66-e272-5f61-9d21-d05e5d0a2559",
+          "fleetIds": [
+            "17bfe1a3-4b64-5975-b4df-f19b7257cd72",
+            "7d3536e3-1bb9-536e-9f42-bfa3a6efe61e"
+          ],
+          "startTime": "14:20:00"
+        }
+      ],
+      "finishes": [
+        {
+          "id": "b973a0e6-9b40-5999-b6fa-e9ccdb1b2125",
+          "competitorId": "dff69adf-f88b-5caf-92a3-a803e9a6d533",
+          "sortOrder": 0,
+          "finishTime": "16:01:26",
+          "resultCode": null,
+          "startPresent": null,
+          "penaltyCode": null,
+          "penaltyOverride": null
+        },
+        {
+          "id": "e09c5246-a9db-59c2-ba07-5a51e084da25",
+          "competitorId": "979fd4bf-0132-5a4d-b346-f1f0ff111897",
+          "sortOrder": 1,
+          "finishTime": "16:03:03",
+          "resultCode": null,
+          "startPresent": null,
+          "penaltyCode": null,
+          "penaltyOverride": null
+        },
+        {
+          "id": "d6cf4e1a-5d7f-58d1-a38f-397ca0f42dc2",
+          "competitorId": "a9b5fd5c-85f1-5f8a-956d-5cd0b7d6d99b",
+          "sortOrder": 2,
+          "finishTime": "16:06:09",
+          "resultCode": null,
+          "startPresent": null,
+          "penaltyCode": null,
+          "penaltyOverride": null
+        }
+      ],
+      "name": null
+    },
+    {
+      "id": "1f97d3d8-14d2-507e-87fd-60fd516caa75",
+      "raceNumber": 3,
+      "date": "2026-06-13",
+      "starts": [
+        {
+          "id": "fd71f751-0899-5516-a514-77bb0b011581",
+          "fleetIds": [
+            "d6719088-3eba-54da-a7e4-38d5058f424d",
+            "0cda2d42-0103-5320-bed2-9ba91160b63f"
+          ],
+          "startTime": "10:40:00"
+        },
+        {
+          "id": "b2fbbcf4-b2ea-56d3-9e56-c4df327e8245",
+          "fleetIds": [
+            "17bfe1a3-4b64-5975-b4df-f19b7257cd72",
+            "7d3536e3-1bb9-536e-9f42-bfa3a6efe61e"
+          ],
+          "startTime": "10:45:00"
+        }
+      ],
+      "finishes": [
+        {
+          "id": "1639419e-ca8d-59ed-b798-3fc6000deef6",
+          "competitorId": "5a8d1d9c-d7cc-53bd-9793-17320b38a839",
+          "sortOrder": 0,
+          "finishTime": "12:07:24",
+          "resultCode": null,
+          "startPresent": null,
+          "penaltyCode": null,
+          "penaltyOverride": null
+        },
+        {
+          "id": "a321d708-22cb-5876-a558-b0a751e9acd1",
+          "competitorId": "979fd4bf-0132-5a4d-b346-f1f0ff111897",
+          "sortOrder": 1,
+          "finishTime": "12:11:35",
+          "resultCode": null,
+          "startPresent": null,
+          "penaltyCode": null,
+          "penaltyOverride": null
+        },
+        {
+          "id": "75ba905b-a0a6-5185-a910-92b4110a5e01",
+          "competitorId": "8a9d2ce0-2ec2-5a14-8a7c-3466be5b1156",
+          "sortOrder": 2,
+          "finishTime": "12:15:22",
+          "resultCode": null,
+          "startPresent": null,
+          "penaltyCode": null,
+          "penaltyOverride": null
+        },
+        {
+          "id": "6ba3aa6e-4a34-5e65-b590-de45f570c6d6",
+          "competitorId": "797440f8-5342-5e2d-bd5e-5695080011bd",
+          "sortOrder": 3,
+          "finishTime": "12:15:48",
+          "resultCode": null,
+          "startPresent": null,
+          "penaltyCode": null,
+          "penaltyOverride": null
+        },
+        {
+          "id": "6ec83c94-a968-518e-9e66-691ce62be7e8",
+          "competitorId": "227bd4d8-0c09-59d2-9f40-a267a7e22e23",
+          "sortOrder": 4,
+          "finishTime": "12:18:27",
+          "resultCode": null,
+          "startPresent": null,
+          "penaltyCode": null,
+          "penaltyOverride": null
+        },
+        {
+          "id": "0414ed9e-e882-562d-9679-ca1c95291905",
+          "competitorId": "dff69adf-f88b-5caf-92a3-a803e9a6d533",
+          "sortOrder": null,
+          "resultCode": "RET",
+          "startPresent": null,
+          "penaltyCode": null,
+          "penaltyOverride": null
+        }
+      ],
+      "name": null
+    },
+    {
+      "id": "8f546f6b-ab37-53c8-8614-d13a7db258a0",
+      "raceNumber": 4,
+      "date": "2026-06-20",
+      "starts": [
+        {
+          "id": "6ca32b3c-fbd3-5c7b-ad25-501cc0eb6730",
+          "fleetIds": [
+            "d6719088-3eba-54da-a7e4-38d5058f424d",
+            "0cda2d42-0103-5320-bed2-9ba91160b63f"
+          ],
+          "startTime": "14:15:00"
+        },
+        {
+          "id": "e3afe802-41f3-5b81-90c2-8f7983aabf87",
+          "fleetIds": [
+            "17bfe1a3-4b64-5975-b4df-f19b7257cd72",
+            "7d3536e3-1bb9-536e-9f42-bfa3a6efe61e"
+          ],
+          "startTime": "14:20:00"
+        }
+      ],
+      "finishes": [
+        {
+          "id": "e952056f-1b2f-5a22-9942-acb0a8c6635f",
+          "competitorId": "857423b2-2974-5c16-87fc-1ebdd6a677c6",
+          "sortOrder": 0,
+          "finishTime": "15:35:53",
+          "resultCode": null,
+          "startPresent": null,
+          "penaltyCode": null,
+          "penaltyOverride": null
+        },
+        {
+          "id": "a7f88335-fd21-565d-acb4-85449678c5ec",
+          "competitorId": "3d0bc2db-1188-5b64-b936-3d6e4e2af166",
+          "sortOrder": 1,
+          "finishTime": "15:41:26",
+          "resultCode": null,
+          "startPresent": null,
+          "penaltyCode": null,
+          "penaltyOverride": null
+        },
+        {
+          "id": "1e0647c7-9a71-557d-bb5a-ad40a7fe606d",
+          "competitorId": "d679e7a3-230f-557d-8ef1-540645775c09",
+          "sortOrder": 2,
+          "finishTime": "15:42:45",
+          "resultCode": null,
+          "startPresent": null,
+          "penaltyCode": null,
+          "penaltyOverride": null
+        },
+        {
+          "id": "1a13c3fd-e397-5b48-93c3-152bb89f575a",
+          "competitorId": "60454ebc-48b9-5456-83f6-d843e74a7368",
+          "sortOrder": 3,
+          "finishTime": "15:44:47",
+          "resultCode": null,
+          "startPresent": null,
+          "penaltyCode": null,
+          "penaltyOverride": null
+        },
+        {
+          "id": "a49110d6-b089-5564-84eb-95ea93602618",
+          "competitorId": "f0f9b83f-a1f6-5e94-bed9-e831e05b2252",
+          "sortOrder": 4,
+          "finishTime": "15:48:06",
+          "resultCode": null,
+          "startPresent": null,
+          "penaltyCode": null,
+          "penaltyOverride": null
+        },
+        {
+          "id": "d3d2a5d9-a879-5a36-8f40-a08923dead16",
+          "competitorId": "a9b5fd5c-85f1-5f8a-956d-5cd0b7d6d99b",
+          "sortOrder": 5,
+          "finishTime": "15:55:50",
+          "resultCode": null,
+          "startPresent": null,
+          "penaltyCode": null,
+          "penaltyOverride": null
+        }
+      ],
+      "name": null
+    },
+    {
+      "id": "dd855742-34c2-59f8-9acb-ee590cb9fa6a",
+      "raceNumber": 5,
+      "date": "2026-07-11",
+      "starts": [
+        {
+          "id": "0d8bb0f3-c2a1-51b0-94ad-7c40a71a6819",
+          "fleetIds": [
+            "17bfe1a3-4b64-5975-b4df-f19b7257cd72",
+            "7d3536e3-1bb9-536e-9f42-bfa3a6efe61e"
+          ],
+          "startTime": "10:40:00"
+        }
+      ],
+      "finishes": [
+        {
+          "id": "14b8d265-ec51-5c80-adaa-37b40cb0b452",
+          "competitorId": "60454ebc-48b9-5456-83f6-d843e74a7368",
+          "sortOrder": 0,
+          "finishTime": "12:02:13",
+          "resultCode": null,
+          "startPresent": null,
+          "penaltyCode": null,
+          "penaltyOverride": null
+        },
+        {
+          "id": "8c50d71e-a673-53dc-a768-59645824907e",
+          "competitorId": "dff69adf-f88b-5caf-92a3-a803e9a6d533",
+          "sortOrder": 1,
+          "finishTime": "12:04:30",
+          "resultCode": null,
+          "startPresent": null,
+          "penaltyCode": null,
+          "penaltyOverride": null
+        },
+        {
+          "id": "ba6246a5-0098-5fb9-b35d-733c462dde37",
+          "competitorId": "a9b5fd5c-85f1-5f8a-956d-5cd0b7d6d99b",
+          "sortOrder": 2,
+          "finishTime": "12:11:50",
+          "resultCode": null,
+          "startPresent": null,
+          "penaltyCode": null,
+          "penaltyOverride": null
+        }
+      ],
+      "name": null
+    },
+    {
+      "id": "69099380-53f4-524a-b827-a0c56831e1f5",
+      "raceNumber": 6,
+      "date": "2026-08-01",
+      "starts": [
+        {
+          "id": "5eb82fbe-4d7c-5881-85c6-1abf18b11bf0",
+          "fleetIds": [
+            "d6719088-3eba-54da-a7e4-38d5058f424d",
+            "0cda2d42-0103-5320-bed2-9ba91160b63f"
+          ],
+          "startTime": "10:40:00"
+        },
+        {
+          "id": "8d2ed4db-7fbe-52c6-85b7-7ba3e3fb3972",
+          "fleetIds": [
+            "17bfe1a3-4b64-5975-b4df-f19b7257cd72",
+            "7d3536e3-1bb9-536e-9f42-bfa3a6efe61e"
+          ],
+          "startTime": "10:45:00"
+        }
+      ],
+      "finishes": [
+        {
+          "id": "cdcd08dd-542a-57ef-961b-91a1dc049ee2",
+          "competitorId": "2021d93d-53e3-5aaa-abe8-2860953d259d",
+          "sortOrder": 0,
+          "finishTime": "12:04:42",
+          "resultCode": null,
+          "startPresent": null,
+          "penaltyCode": null,
+          "penaltyOverride": null
+        },
+        {
+          "id": "6c6c5804-0406-5686-8628-f515f3523ad7",
+          "competitorId": "5a8d1d9c-d7cc-53bd-9793-17320b38a839",
+          "sortOrder": 1,
+          "finishTime": "12:07:40",
+          "resultCode": null,
+          "startPresent": null,
+          "penaltyCode": null,
+          "penaltyOverride": null
+        },
+        {
+          "id": "c9d7ae3a-e601-57cd-bf65-dae52946b9a7",
+          "competitorId": "3d0bc2db-1188-5b64-b936-3d6e4e2af166",
+          "sortOrder": 2,
+          "finishTime": "12:07:42",
+          "resultCode": null,
+          "startPresent": null,
+          "penaltyCode": null,
+          "penaltyOverride": null
+        },
+        {
+          "id": "847f5077-d3ac-5daf-886a-a18bc98e4dce",
+          "competitorId": "60454ebc-48b9-5456-83f6-d843e74a7368",
+          "sortOrder": 3,
+          "finishTime": "12:08:47",
+          "resultCode": null,
+          "startPresent": null,
+          "penaltyCode": null,
+          "penaltyOverride": null
+        },
+        {
+          "id": "077b4946-358d-5dde-b856-496e82d99b04",
+          "competitorId": "03b663a6-8659-58b8-b8fb-cb5cd9ab561f",
+          "sortOrder": 4,
+          "finishTime": "12:09:40",
+          "resultCode": null,
+          "startPresent": null,
+          "penaltyCode": null,
+          "penaltyOverride": null
+        },
+        {
+          "id": "8927d8a9-1da3-5a1b-9650-473a3a7e8061",
+          "competitorId": "dff69adf-f88b-5caf-92a3-a803e9a6d533",
+          "sortOrder": 5,
+          "finishTime": "12:10:31",
+          "resultCode": null,
+          "startPresent": null,
+          "penaltyCode": null,
+          "penaltyOverride": null
+        },
+        {
+          "id": "2bae0ea2-46eb-54ed-89e3-20ac6d0f9455",
+          "competitorId": "797440f8-5342-5e2d-bd5e-5695080011bd",
+          "sortOrder": 6,
+          "finishTime": "12:11:11",
+          "resultCode": null,
+          "startPresent": null,
+          "penaltyCode": null,
+          "penaltyOverride": null
+        },
+        {
+          "id": "481dc1fa-b3dd-5c1a-ba70-2c951362fd33",
+          "competitorId": "45cc9ce1-d8ee-598a-8ba8-8c64c119a8ab",
+          "sortOrder": 7,
+          "finishTime": "12:13:39",
+          "resultCode": null,
+          "startPresent": null,
+          "penaltyCode": null,
+          "penaltyOverride": null
+        },
+        {
+          "id": "e72d7e43-ebed-5f33-8c6b-06febb8d0461",
+          "competitorId": "25da80d4-5fbc-5c35-8468-f525b7bd03c6",
+          "sortOrder": 8,
+          "finishTime": "12:15:52",
+          "resultCode": null,
+          "startPresent": null,
+          "penaltyCode": null,
+          "penaltyOverride": null
+        },
+        {
+          "id": "77e8080c-2080-537c-b558-ccf9869aad48",
+          "competitorId": "a9b5fd5c-85f1-5f8a-956d-5cd0b7d6d99b",
+          "sortOrder": 9,
+          "finishTime": "12:23:00",
+          "resultCode": null,
+          "startPresent": null,
+          "penaltyCode": null,
+          "penaltyOverride": null
+        },
+        {
+          "id": "1c093289-1f7e-531d-b8c0-786ccdc0bb2e",
+          "competitorId": "9c327d48-8756-5d4c-9f45-0d61d1f48e71",
+          "sortOrder": null,
+          "resultCode": "RET",
+          "startPresent": null,
+          "penaltyCode": null,
+          "penaltyOverride": null
+        }
+      ],
+      "name": null
+    }
+  ],
+  "subSeries": [
+    {
+      "id": "02cf4a62-7419-5a57-82dc-d5ce4f64ab83",
+      "name": "Series 1",
+      "displayOrder": 0,
+      "raceIds": [
+        "de4af499-6684-59d6-ab39-827c21ffdf9c",
+        "c593757a-3467-59cc-9ee4-0f6bd3394591"
+      ],
+      "raceFleetExclusions": [
+        {
+          "raceId": "c593757a-3467-59cc-9ee4-0f6bd3394591",
+          "fleetId": "d6719088-3eba-54da-a7e4-38d5058f424d"
+        },
+        {
+          "raceId": "c593757a-3467-59cc-9ee4-0f6bd3394591",
+          "fleetId": "0cda2d42-0103-5320-bed2-9ba91160b63f"
+        }
+      ],
+      "excludeDncOnlyCompetitors": true,
+      "startingHandicapSource": "base"
+    },
+    {
+      "id": "2ad08f4c-8dae-52f9-a47c-effc41af1cbf",
+      "name": "Series 2",
+      "displayOrder": 1,
+      "raceIds": [
+        "1f97d3d8-14d2-507e-87fd-60fd516caa75",
+        "8f546f6b-ab37-53c8-8614-d13a7db258a0",
+        "dd855742-34c2-59f8-9acb-ee590cb9fa6a"
+      ],
+      "raceFleetExclusions": [
+        {
+          "raceId": "dd855742-34c2-59f8-9acb-ee590cb9fa6a",
+          "fleetId": "d6719088-3eba-54da-a7e4-38d5058f424d"
+        },
+        {
+          "raceId": "dd855742-34c2-59f8-9acb-ee590cb9fa6a",
+          "fleetId": "0cda2d42-0103-5320-bed2-9ba91160b63f"
+        }
+      ],
+      "excludeDncOnlyCompetitors": true,
+      "startingHandicapSource": "continue",
+      "continueFromSubSeriesId": "02cf4a62-7419-5a57-82dc-d5ce4f64ab83"
+    },
+    {
+      "id": "7fd2317f-61ae-53f9-9632-c6093874e3db",
+      "name": "Series 3",
+      "displayOrder": 2,
+      "raceIds": [
+        "69099380-53f4-524a-b827-a0c56831e1f5"
+      ],
+      "raceFleetExclusions": [],
+      "excludeDncOnlyCompetitors": true,
+      "startingHandicapSource": "continue",
+      "continueFromSubSeriesId": "2ad08f4c-8dae-52f9-a47c-effc41af1cbf"
+    }
+  ]
+}

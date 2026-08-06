@@ -11,7 +11,7 @@
  *
  *   pnpm merge-club-series                       # all groups in the config
  *   pnpm merge-club-series --group wednesday     # just one
- *   cd ../sailscoring && pnpm cli series import ../hyc-archive/build/club-2026/*.sailscoring --workspace hyc
+ *   cd ../sailscoring && pnpm cli series import ../hyc-archive/club-2026/*.sailscoring --workspace hyc
  *
  * The conversion itself is not forked: `lib/sailwave-import.ts` in the app is a
  * pure module, so it's imported by relative path (as dbsc-archive does with the
@@ -37,7 +37,7 @@
  * continues from the one before (`startingHandicapSource: 'continue'`). Set
  * `carryHandicaps: false` on a group whose SIs restart at base ratings.
  */
-import { randomUUID } from 'node:crypto';
+import { createHash } from 'node:crypto';
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { join, resolve } from 'node:path';
 
@@ -81,6 +81,35 @@ interface GroupSpec {
 }
 
 const BLW_ROOT = 'sources/blw/2026';
+
+/**
+ * Every id in the output is UUIDv5 over a stable key, never random — the merge
+ * has to be **reproducible**. Re-running it must produce a byte-identical file,
+ * because the CLI's import keys its `Idempotency-Key` on the file's contents:
+ * a file that changes for no reason is re-imported as a *new* series rather
+ * than recognised as the one already there. Same reasoning as the as-published
+ * ids in `emit-as-published-config.ts`, and the same warning applies — these
+ * keys are load-bearing, so changing one re-mints an id and orphans whatever
+ * was ingested under the old one.
+ *
+ * A distinct prefix from the as-published keys: these are full-fidelity series,
+ * and the two namespaces must never collide.
+ */
+const ID_NS = '7c1f9d54-3e82-5b17-9a60-2f4d8c5e0b39';
+const ID_PREFIX = 'hyc-archive/club-demo';
+
+function uuidv5(name: string): string {
+  const ns = Buffer.from(ID_NS.replace(/-/g, ''), 'hex');
+  const bytes = createHash('sha1')
+    .update(ns)
+    .update(Buffer.from(`${ID_PREFIX}/${name}`, 'utf8'))
+    .digest()
+    .subarray(0, 16);
+  bytes[6] = (bytes[6] & 0x0f) | 0x50;
+  bytes[8] = (bytes[8] & 0x3f) | 0x80;
+  const hex = bytes.toString('hex');
+  return `${hex.slice(0, 8)}-${hex.slice(8, 12)}-${hex.slice(12, 16)}-${hex.slice(16, 20)}-${hex.slice(20, 32)}`;
+}
 
 /**
  * 2026 is a **demonstration** of managing a season's club racing as one series
@@ -263,7 +292,7 @@ function mergeGroup(group: GroupSpec, repoRoot: string): { file: SeriesFile; not
     for (const f of file.fleets) {
       const existingId = fleetIdByName.get(f.name);
       if (!existingId) {
-        const id = randomUUID();
+        const id = uuidv5(`${group.key}/fleet/${f.name}`);
         fleetIdByName.set(f.name, id);
         fleets.push({ ...f, id });
         continue;
@@ -300,9 +329,12 @@ function mergeGroup(group: GroupSpec, repoRoot: string): { file: SeriesFile; not
       const label = `${c.sailNumber || '?'} ${c.boatName || ''} (${c.names?.[0] ?? '?'})`.trim();
 
       if (!match) {
+        // Identify by the strongest key the boat has — the same key that joins
+        // it across blocks — so the id survives a re-run and a later block.
+        const identity = keys[0]?.key ?? `row/${competitors.length}`;
         const merged: Competitor = {
           ...c,
-          id: randomUUID(),
+          id: uuidv5(`${group.key}/competitor/${identity}`),
           fleetIds: c.fleetIds.map((id) => remapFleet(file, id, fleetIdByName)),
         };
         competitors.push(merged);
@@ -382,7 +414,7 @@ function mergeGroup(group: GroupSpec, repoRoot: string): { file: SeriesFile; not
         emptyRaces += 1;
         continue;
       }
-      const id = randomUUID();
+      const id = uuidv5(`${group.key}/race/${spec.name}/${r.raceNumber}`);
       raceIds.push(id);
       raceNumber += 1;
       // Strike this race for every merged fleet that had no finisher in it in
@@ -398,21 +430,21 @@ function mergeGroup(group: GroupSpec, repoRoot: string): { file: SeriesFile; not
         // Keep Sailwave's own label when it has one; it's how the scorer and
         // the published page refer to the race.
         name: r.name ?? null,
-        starts: r.starts.map((s) => ({
+        starts: r.starts.map((s, i) => ({
           ...s,
-          id: randomUUID(),
+          id: uuidv5(`${group.key}/race/${spec.name}/${r.raceNumber}/start/${i}`),
           fleetIds: s.fleetIds.map((fid) => remapFleet(file, fid, fleetIdByName)),
         })),
-        finishes: r.finishes.map((f) => ({
+        finishes: r.finishes.map((f, i) => ({
           ...f,
-          id: randomUUID(),
+          id: uuidv5(`${group.key}/race/${spec.name}/${r.raceNumber}/finish/${i}`),
           competitorId: f.competitorId ? (compIdMap.get(f.competitorId) ?? null) : null,
           penaltyOverrideByFleet: remapFleetKeyedRecord(file, f.penaltyOverrideByFleet, fleetIdByName),
           redressPointsByFleet: remapFleetKeyedRecord(file, f.redressPointsByFleet, fleetIdByName),
         })),
-        ratingOverrides: r.ratingOverrides?.map((o) => ({
+        ratingOverrides: r.ratingOverrides?.map((o, i) => ({
           ...o,
-          id: randomUUID(),
+          id: uuidv5(`${group.key}/race/${spec.name}/${r.raceNumber}/rating/${i}`),
           competitorId: compIdMap.get(o.competitorId) ?? o.competitorId,
         })),
       });
@@ -448,7 +480,7 @@ function mergeGroup(group: GroupSpec, repoRoot: string): { file: SeriesFile; not
       continue;
     }
 
-    const blockId = randomUUID();
+    const blockId = uuidv5(`${group.key}/block/${spec.name}`);
     subSeries.push({
       id: blockId,
       name: spec.name,
@@ -485,10 +517,15 @@ function mergeGroup(group: GroupSpec, repoRoot: string): { file: SeriesFile; not
   const file: SeriesFile = {
     ...base,
     formatVersion: FORMAT_VERSION,
-    seriesId: randomUUID(),
-    exportedAt: new Date().toISOString(),
+    seriesId: uuidv5(group.key),
+    // Derived from the racing, not the clock: a wall-clock stamp would change
+    // the file on every run and defeat the reproducibility the ids are for.
+    exportedAt: `${dates[dates.length - 1] ?? `${group.seasonYear}-01-01`}T00:00:00.000Z`,
     series: {
       ...base.series,
+      // The importer minted this randomly for the first block's file; it has
+      // to match the file's own seriesId, and be stable across runs.
+      id: uuidv5(group.key),
       name: `${group.name}${SERIES_NAME_SUFFIX}`,
       venue: group.venue,
       startDate: dates[0] ?? base.series.startDate,
@@ -575,7 +612,7 @@ function main(): void {
   const groupArg = args[args.indexOf('--group') + 1];
   const outDir = args.includes('--out-dir')
     ? args[args.indexOf('--out-dir') + 1]
-    : join(repoRoot, 'build', 'club-2026');
+    : join(repoRoot, 'club-2026');
   // Lets a scratch tree of `.blw` files stand in for the committed one — used
   // to exercise the merge against the app's HYC fixtures.
   const blwRoot = args.includes('--blw-root') ? args[args.indexOf('--blw-root') + 1] : null;
