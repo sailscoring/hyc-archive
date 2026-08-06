@@ -1,34 +1,20 @@
 # 2026 club-racing demo: the blocked sub-series import.
 #
-# Separate from `as-published.yml` because it is a different kind of thing.
-# That workflow ingests the archival record and is safe to run on every push:
-# ingest is idempotent server-side on the document hash. This one builds
-# **full-fidelity** series from the club's Sailwave files, and the CLI's
-# `series import` has no update path — it mints a fresh series id per import
-# (`openSeriesFromFile`), deduplicating only a byte-identical replay via the
-# contents-hashed `Idempotency-Key`.
+# Separate from `as-published.yml` because it ingests a different kind of
+# thing: that workflow pushes the archival record, this one builds
+# **full-fidelity** series from the club's own Sailwave files.
 #
-# So the two halves are split:
-#
-#   on push          build and check the committed output is reproducible.
-#                    Never imports — a .blw change would otherwise land a
-#                    *second* copy of the series rather than updating the one
-#                    already there.
-#   on dispatch      import, deliberately, when someone has decided the
-#                    workspace should take the new build.
-#
-# Automating the import needs an app-side way to replay a `.sailscoring` over
-# an existing series. `updateSeriesFromFile` already does exactly that —
-# preserving the series id, createdAt, category and archived flag — but its
-# only caller is revision-revert; it has no API route. Until it has one, the
-# import stays manual and the old series is deleted by hand first.
+# Both are re-runnable, by the same trick from opposite ends. As-published is
+# idempotent server-side on the document hash. Here it is the ids: every one is
+# UUIDv5 over a stable key, so the merge is byte-reproducible, and
+# `series import --replace` upserts each file at the id it carries. A re-run
+# over changed .blw files therefore *updates* the series rather than landing a
+# second copy — which is what a plain `series import` would do, since it mints
+# a fresh series id per call and deduplicates only a byte-identical replay.
 #
 # Secrets:
 #   APP_REPO_TOKEN              read access to sailscoring/sailscoring
 #   SAILSCORING_ARCHIVIST_TOKEN the hyc workspace's API key
-#
-# NOTE: not armed, same as as-published.yml — the import step is gated on the
-# secret being configured.
 name: club-2026
 
 on:
@@ -41,13 +27,6 @@ on:
       - 'scripts/verify-club-merge.ts'
       - '.github/workflows/club-2026.yml'
   workflow_dispatch:
-    inputs:
-      import:
-        description: >-
-          Import the built series into the hyc workspace. Creates NEW series —
-          delete the previous copies first, or you get duplicates.
-        type: boolean
-        default: false
 
 jobs:
   build:
@@ -108,7 +87,11 @@ jobs:
             echo "::endgroup::"
           done
 
+      # `--replace` is what makes this safe to run on every push: each file
+      # upserts at its own id, so an updated .blw replaces the series rather
+      # than adding another. Without it, every changed file would be a new
+      # series in the workspace.
       - name: Import into the workspace
-        if: inputs.import && env.SAILSCORING_TOKEN != ''
+        if: env.SAILSCORING_TOKEN != ''
         working-directory: app
-        run: pnpm cli series import ${{ github.workspace }}/club-2026/*.sailscoring --workspace hyc
+        run: pnpm cli series import ${{ github.workspace }}/club-2026/*.sailscoring --workspace hyc --replace

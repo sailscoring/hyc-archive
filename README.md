@@ -57,8 +57,8 @@ club-2026/                the blocked club-racing series (committed: the build i
   backup-ftp.yml          daily FTP-site capture → PR → auto-merge
   backup-admin.yml        daily admin-DB capture → PR → auto-merge
   backup-summaries.yml    on-demand summaries capture → PR → auto-merge
-  as-published.yml        emit → generate → push to the hyc workspace (gated)
-  club-2026.yml           merge → check reproducible; import on dispatch (gated)
+  as-published.yml        emit → generate → push to the hyc workspace
+  club-2026.yml           merge → check reproducible → import into the workspace
 ```
 
 The capture automation moved here from [`markmc/reshyc`](https://github.com/markmc/reshyc)
@@ -85,8 +85,8 @@ The capture automation moved here from [`markmc/reshyc`](https://github.com/mark
    the config (parsing the Sailwave HTML), and pushes the documents with
    `pnpm cli as-published push … --workspace hyc`, authenticated by a
    workspace- and capability-scoped archivist token. Ingest is idempotent —
-   unchanged documents are no-ops by content hash. **Not yet armed**: the push
-   step is skipped until `SAILSCORING_ARCHIVIST_TOKEN` is configured.
+   unchanged documents are no-ops by content hash. **Armed**: every push to
+   `main` re-ingests.
 
 Currently: **386 series / 1,346 fleet pages / ~18,000 competitor rows** across
 2013–2025 plus the finished 2026 club series and open events emit and generate
@@ -116,7 +116,8 @@ with `scripts/ftp-paths.ts` here as the HYC-specific caller.
 - ✅ Capture automation (FTP, admin DB, summaries) moved here from reshyc.
 - ✅ As-published config emission + clean `archive-generate` run over 2013–2025
   and the finished 2026 club series.
-- ⬜ Arm the ingest: provision the hyc workspace archivist token and CI secrets.
+- ✅ Ingest armed: the archivist token and CI secrets are configured, and
+  every push to `main` re-ingests.
 - ⬜ Extend coverage: single-race pages (the skip-list); the ~1,170 captured
   pages the admin catalogue never linked (all of 2011–2014 plus later
   revision/overall pages), which need display names sourced some other way;
@@ -137,12 +138,10 @@ with `scripts/ftp-paths.ts` here as the HYC-specific caller.
   Championships and Howth 17 Nationals (entry lists, no racing sailed yet).
   The Double-Handed Race is a coverage gap instead — admin row 2265 names a
   page that has never appeared in the capture.
-- ⬜ The club-2026 import is **manual** (`workflow_dispatch`), because
-  `cli series import` mints a fresh series id per import and so would duplicate
-  rather than update. Automating it needs an app-side way to replay a
-  `.sailscoring` over an existing series: `updateSeriesFromFile` already does
-  exactly that — preserving id, createdAt, category and archived flag — but its
-  only caller is revision-revert and it has no API route.
+- ✅ The club-2026 import runs on every push, via `cli series import --replace`
+  (app `PUT /api/v1/series/:id/file`): each file upserts at the id it carries,
+  so a re-run updates the series rather than adding a second copy. That id is
+  UUIDv5 over a stable key, which is what makes the merge re-runnable at all.
 
 ## Licensing
 
