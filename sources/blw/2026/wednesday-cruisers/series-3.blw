@@ -9,7 +9,7 @@ serflagstext,0,,
 serhidediscards,0,,
 sernodiscardformat,0,,
 serhidefields,0,,
-serftpfile,/reshyc/2026/club/series3_divc.htm,,
+serftpfile,/reshyc/2026/club/series3_divb.htm,,
 sersep,0,,
 serseprow,0,,
 serpubpbreak,0,,
@@ -26,7 +26,7 @@ serincludespeed,0,,
 serincludeewin,0,,
 serincluderwin,0,,
 serpubwhere,ftp,,
-serpubgroupvalues,Division C HPH|Division C IRC,,
+serpubgroupvalues,Division B HPH|Division B IRC,,
 serpubincluderaces,2,,
 serpubincluderaces2,2,,
 serpubincludenotes,0,,
@@ -369,10 +369,10 @@ scrcode,SCP|Percentage penalty DNF|20|Yes|Yes|||spare|spare|spare|spare|Yes|Yes|
 scrcode,UFD|Score like|DNF|Yes|Yes|||spare|spare|spare|spare|No|No|No|118||U flag disqualification under rule 30.3,,
 scrcode,ZFP|Percentage penalty DNF|20|Yes|Yes|||spare|spare|spare|spare|Yes|Yes|Yes|118||20% penalty under rule 30.2,,
 ui,0|0|0|1|0|0|0|0|0|0|0|0|0|0|0,,
-comptotal,7,65,
-compnett,7,65,
+comptotal,9,65,
+compnett,9,65,
 compboat,Toughnut,65,
-comprank,7,65,
+comprank,2,65,
 compsailno,1411t,65,
 compclass,MG335,65,
 compfleet,Division C HPH,65,
@@ -381,11 +381,11 @@ comptally,4,65,
 compexclude,0,65,
 compalias,0,65,
 comprating,1.010,65,
-compnewrating,1.007,65,
+compnewrating,1.011,65,
 comphelmname,Dermot Skehan,65,
 comphigh,0,65,
-comptotal,13,66,
-compnett,13,66,
+comptotal,26,66,
+compnett,26,66,
 compboat,Out & About,66,
 comprank,11,66,
 compsailno,2070,66,
@@ -399,10 +399,10 @@ comprating,0.867,66,
 compnewrating,0.867,66,
 comphelmname,Terry McCoy,66,
 comphigh,0,66,
-comptotal,9,67,
-compnett,9,67,
+comptotal,13,67,
+compnett,13,67,
 compboat,Arcturus,67,
-comprank,9,67,
+comprank,7,67,
 compsailno,1343,67,
 compclass,Jeanneau SO37,67,
 compfleet,Division C HPH,67,
@@ -414,8 +414,8 @@ comprating,0.930,67,
 compnewrating,0.926,67,
 comphelmname,Peter & Declan McCabe,67,
 comphigh,0,67,
-comptotal,3,68,
-compnett,3,68,
+comptotal,9,68,
+compnett,9,68,
 compboat,Jokers Wild,68,
 comprank,3,68,
 compsailno,8151,68,
@@ -426,13 +426,13 @@ comptally,14,68,
 compexclude,0,68,
 compalias,0,68,
 comprating,0.925,68,
-compnewrating,0.928,68,
+compnewrating,0.924,68,
 comphelmname,Flood - MacQuarrie - Greene,68,
 comphigh,0,68,
-comptotal,8,69,
-compnett,8,69,
+comptotal,21,69,
+compnett,21,69,
 compboat,Helm's Deep,69,
-comprank,8,69,
+comprank,10,69,
 compsailno,3337,69,
 compclass,Beneteau First 33.7,69,
 compfleet,Division C HPH,69,
@@ -444,8 +444,8 @@ comprating,0.941,69,
 compnewrating,0.938,69,
 comphelmname,Paul Harrison,69,
 comphigh,0,69,
-comptotal,13,70,
-compnett,13,70,
+comptotal,26,70,
+compnett,26,70,
 compboat,Mistoffelees,70,
 comprank,11,70,
 compsailno,1793,70,
@@ -459,10 +459,10 @@ comprating,0.852,70,
 compnewrating,0.852,70,
 comphelmname,Enda Mulvihill,70,
 comphigh,0,70,
-comptotal,5,71,
-compnett,5,71,
+comptotal,10,71,
+compnett,10,71,
 compboat,Bite the Bullet,71,
-comprank,5,71,
+comprank,4,71,
 compsailno,3335C,71,
 compclass,Elan 333,71,
 compfleet,Division C HPH,71,
@@ -470,13 +470,13 @@ comptally,23,71,
 compexclude,0,71,
 compalias,0,71,
 comprating,1.065,71,
-compnewrating,1.063,71,
+compnewrating,1.055,71,
 comphelmname,Colm Bermingham,71,
 comphigh,0,71,
-comptotal,2,72,
-compnett,2,72,
+comptotal,15,72,
+compnett,15,72,
 compboat,Mary Ellen,72,
-comprank,2,72,
+comprank,8,72,
 compsailno,1430,72,
 compclass,Jeanneau 33i,72,
 compfleet,Division C HPH,72,
@@ -488,8 +488,8 @@ comprating,0.893,72,
 compnewrating,0.896,72,
 comphelmname,O'Byrne Carty Finucane,72,
 comphigh,0,72,
-comptotal,1,73,
-compnett,1,73,
+comptotal,4,73,
+compnett,4,73,
 compboat,Boojum,73,
 comprank,1,73,
 compsailno,2112,73,
@@ -500,13 +500,13 @@ comptally,32,73,
 compexclude,0,73,
 compalias,0,73,
 comprating,0.894,73,
-compnewrating,0.901,73,
+compnewrating,0.902,73,
 comphelmname,Tom and Laura Fitzpatrick,73,
 comphigh,0,73,
-comptotal,6,74,
-compnett,6,74,
+comptotal,19,74,
+compnett,19,74,
 compboat,Pepsi,74,
-comprank,6,74,
+comprank,9,74,
 compsailno,633,74,
 compclass,Sigma 33,74,
 compfleet,Division C HPH,74,
@@ -518,10 +518,10 @@ comprating,0.879,74,
 compnewrating,0.877,74,
 comphelmname,Doug Anderson & Mark Tattersall,74,
 comphigh,0,74,
-comptotal,11,75,
-compnett,11,75,
+comptotal,12,75,
+compnett,12,75,
 compboat,Splashdance,75,
-comprank,10,75,
+comprank,6,75,
 compsailno,4073,75,
 compclass,Dufour 40,75,
 compfleet,Division C HPH,75,
@@ -530,11 +530,11 @@ comptally,42,75,
 compexclude,0,75,
 compalias,0,75,
 comprating,1.094,75,
-compnewrating,1.094,75,
+compnewrating,1.102,75,
 comphelmname,John Beckett / Andy George,75,
 comphigh,0,75,
-comptotal,1,76,
-compnett,1,76,
+comptotal,2,76,
+compnett,2,76,
 compboat,Dux,76,
 comprank,1,76,
 compsailno,988,76,
@@ -547,8 +547,8 @@ compalias,111,76,
 comprating,0.916,76,
 comphelmname,Caroline and Nicholas Gore-Grimes,76,
 comphigh,0,76,
-comptotal,9,77,
-compnett,9,77,
+comptotal,23,77,
+compnett,23,77,
 compboat,Kilcullen,77,
 comprank,8,77,
 compsailno,680,77,
@@ -561,8 +561,8 @@ compalias,122,77,
 comprating,0.885,77,
 comphelmname,HYC K25 Team,77,
 comphigh,0,77,
-comptotal,7,78,
-compnett,7,78,
+comptotal,21,78,
+compnett,21,78,
 compboat,No Excuse,78,
 comprank,7,78,
 compsailno,1972,78,
@@ -575,8 +575,8 @@ compalias,109,78,
 comprating,0.917,78,
 comphelmname,Wormald Walsh O'Neill,78,
 comphigh,0,78,
-comptotal,7,80,
-compnett,7,80,
+comptotal,14,80,
+compnett,14,80,
 compboat,Jeneral Lee,80,
 comprank,5,80,
 compsailno,6697,80,
@@ -590,8 +590,8 @@ comprating,0.971,80,
 compnewrating,0.971,80,
 comphelmname,Colin & Kathy Kavanagh,80,
 comphigh,0,80,
-comptotal,15,81,
-compnett,15,81,
+comptotal,30,81,
+compnett,30,81,
 compboat,Symmetry,81,
 comprank,10,81,
 compsailno,7797,81,
@@ -605,8 +605,8 @@ comprating,0.920,81,
 compnewrating,0.920,81,
 comphelmname,Anton Korshunov,81,
 comphigh,0,81,
-comptotal,2,82,
-compnett,2,82,
+comptotal,4,82,
+compnett,4,82,
 compboat,The Big Picture,82,
 comprank,2,82,
 compsailno,1840,82,
@@ -617,13 +617,13 @@ comptally,12,82,
 compexclude,0,82,
 compalias,0,82,
 comprating,1.074,82,
-compnewrating,1.077,82,
+compnewrating,1.074,82,
 comphelmname,Michael & Richard,82,
 comphigh,0,82,
-comptotal,2,83,
-compnett,2,83,
+comptotal,5,83,
+compnett,5,83,
 compboat,Indian,83,
-comprank,2,83,
+comprank,3,83,
 compsailno,1543,83,
 compclass,J109,83,
 compfleet,Division A IRC,83,
@@ -634,8 +634,8 @@ compalias,99,83,
 comprating,1.002,83,
 comphelmname,Simon Knowles and Colm Buckley,83,
 comphigh,0,83,
-comptotal,6,85,
-compnett,6,85,
+comptotal,20,85,
+compnett,20,85,
 compboat,Maximus,85,
 comprank,6,85,
 compsailno,7495,85,
@@ -648,8 +648,8 @@ compalias,112,85,
 comprating,0.919,85,
 comphelmname,Paddy Kyne,85,
 comphigh,0,85,
-comptotal,14,86,
-compnett,14,86,
+comptotal,28,86,
+compnett,28,86,
 compboat,Nimon,86,
 comprank,9,86,
 compsailno,21,86,
@@ -662,8 +662,8 @@ compalias,108,86,
 comprating,0.825,86,
 comphelmname,Nigel Biggs,86,
 comphigh,0,86,
-comptotal,14,87,
-compnett,14,87,
+comptotal,28,87,
+compnett,28,87,
 compboat,Ghost Raider,87,
 comprank,9,87,
 compsailno,985,87,
@@ -676,8 +676,8 @@ compalias,105,87,
 comprating,0.944,87,
 comphelmname,Lynn & Norbert Reilly,87,
 comphigh,0,87,
-comptotal,1,88,
-compnett,1,88,
+comptotal,2,88,
+compnett,2,88,
 compboat,Insider Again,88,
 comprank,1,88,
 compsailno,9202,88,
@@ -691,8 +691,8 @@ comprating,0.933,88,
 compnewrating,0.936,88,
 comphelmname,Ian Martin & Stephen Mullaney,88,
 comphigh,0,88,
-comptotal,4,89,
-compnett,4,89,
+comptotal,11,89,
+compnett,11,89,
 compboat,Adrenaline,89,
 comprank,4,89,
 compsailno,32032,89,
@@ -707,8 +707,8 @@ comprating,1.194,89,
 compnewrating,1.187,89,
 comphelmname,Wright,89,
 comphigh,0,89,
-comptotal,14,90,
-compnett,14,90,
+comptotal,28,90,
+compnett,28,90,
 compboat,Chinook,90,
 comprank,9,90,
 compsailno,17793,90,
@@ -721,10 +721,10 @@ compalias,106,90,
 comprating,0.937,90,
 comphelmname,Brian Skehan,90,
 comphigh,0,90,
-comptotal,3,91,
-compnett,3,91,
+comptotal,17,91,
+compnett,17,91,
 compboat,Impetuous,91,
-comprank,3,91,
+comprank,4,91,
 compsailno,2507,91,
 compclass,Corby 25,91,
 compfleet,Division B IRC,91,
@@ -735,8 +735,8 @@ compalias,104,91,
 comprating,0.920,91,
 comphelmname,Noonan/Chambers,91,
 comphigh,0,91,
-comptotal,7,92,
-compnett,7,92,
+comptotal,14,92,
+compnett,14,92,
 compboat,Lambay Rules,92,
 comprank,5,92,
 compsailno,9970,92,
@@ -750,8 +750,8 @@ comprating,0.976,92,
 compnewrating,0.976,92,
 comphelmname,Stephen Quinn,92,
 comphigh,0,92,
-comptotal,7,94,
-compnett,7,94,
+comptotal,14,94,
+compnett,14,94,
 compboat,Jeneral Lee,94,
 comprank,5,94,
 compsailno,6697,94,
@@ -764,8 +764,8 @@ compalias,80,94,
 comprating,0.967,94,
 comphelmname,Colin & Kathy Kavanagh,94,
 comphigh,0,94,
-comptotal,1,95,
-compnett,1,95,
+comptotal,2,95,
+compnett,2,95,
 compboat,The Big Picture,95,
 comprank,1,95,
 compsailno,1840,95,
@@ -778,8 +778,8 @@ compalias,82,95,
 comprating,1.045,95,
 comphelmname,Michael & Richard,95,
 comphigh,0,95,
-comptotal,7,96,
-compnett,7,96,
+comptotal,14,96,
+compnett,14,96,
 compboat,Lambay Rules,96,
 comprank,5,96,
 compsailno,9970,96,
@@ -792,8 +792,8 @@ compalias,92,96,
 comprating,0.965,96,
 comphelmname,Stephen Quinn,96,
 comphigh,0,96,
-comptotal,4,97,
-compnett,4,97,
+comptotal,11,97,
+compnett,11,97,
 compboat,Adrenaline,97,
 comprank,4,97,
 compsailno,32032,97,
@@ -806,10 +806,10 @@ compalias,89,97,
 comprating,1.141,97,
 comphelmname,Wright,97,
 comphigh,0,97,
-comptotal,3,98,
-compnett,3,98,
+comptotal,5,98,
+compnett,5,98,
 compboat,Insider Again,98,
-comprank,3,98,
+comprank,2,98,
 compsailno,9202,98,
 compclass,J92,98,
 compfleet,Division A IRC,98,
@@ -820,8 +820,8 @@ compalias,88,98,
 comprating,0.955,98,
 comphelmname,Ian Martin & Stephen Mullaney,98,
 comphigh,0,98,
-comptotal,3,99,
-compnett,3,99,
+comptotal,6,99,
+compnett,6,99,
 compboat,Indian,99,
 comprank,3,99,
 compsailno,1543,99,
@@ -832,11 +832,11 @@ comptally,18,99,
 compexclude,0,99,
 compalias,0,99,
 comprating,1.018,99,
-compnewrating,1.019,99,
+compnewrating,1.015,99,
 comphelmname,Simon Knowles and Colm Buckley,99,
 comphigh,0,99,
-comptotal,14,100,
-compnett,14,100,
+comptotal,28,100,
+compnett,28,100,
 compboat,Symmetry,100,
 comprank,9,100,
 compsailno,7797,100,
@@ -849,8 +849,8 @@ compalias,81,100,
 comprating,0.907,100,
 comphelmname,Anton Korshunov,100,
 comphigh,0,100,
-comptotal,14,101,
-compnett,14,101,
+comptotal,28,101,
+compnett,28,101,
 compboat,Don Giovanni,101,
 comprank,9,101,
 compsailno,10767,101,
@@ -863,10 +863,10 @@ compalias,103,101,
 comprating,0.874,101,
 comphelmname,Cillian Macken,101,
 comphigh,0,101,
-comptotal,4,102,
-compnett,4,102,
+comptotal,18,102,
+compnett,18,102,
 compboat,Chronos,102,
-comprank,4,102,
+comprank,5,102,
 compsailno,2050,102,
 compclass,Quarter Ton,102,
 compfleet,Division B IRC,102,
@@ -877,8 +877,8 @@ compalias,107,102,
 comprating,0.906,102,
 comphelmname,Byrne/Cullen,102,
 comphigh,0,102,
-comptotal,15,103,
-compnett,15,103,
+comptotal,30,103,
+compnett,30,103,
 compboat,Don Giovanni,103,
 comprank,10,103,
 compsailno,10767,103,
@@ -892,8 +892,8 @@ comprating,0.850,103,
 compnewrating,0.850,103,
 comphelmname,Cillian Macken,103,
 comphigh,0,103,
-comptotal,4,104,
-compnett,4,104,
+comptotal,19,104,
+compnett,19,104,
 compboat,Impetuous,104,
 comprank,4,104,
 compsailno,2507,104,
@@ -907,8 +907,8 @@ comprating,0.953,104,
 compnewrating,0.952,104,
 comphelmname,Noonan/Chambers,104,
 comphigh,0,104,
-comptotal,15,105,
-compnett,15,105,
+comptotal,30,105,
+compnett,30,105,
 compboat,Ghost Raider,105,
 comprank,10,105,
 compsailno,985,105,
@@ -922,8 +922,8 @@ comprating,0.971,105,
 compnewrating,0.971,105,
 comphelmname,Lynn & Norbert Reilly,105,
 comphigh,0,105,
-comptotal,15,106,
-compnett,15,106,
+comptotal,30,106,
+compnett,30,106,
 compboat,Chinook,106,
 comprank,10,106,
 compsailno,17793,106,
@@ -937,8 +937,8 @@ comprating,0.880,106,
 compnewrating,0.880,106,
 comphelmname,Brian Skehan,106,
 comphigh,0,106,
-comptotal,5,107,
-compnett,5,107,
+comptotal,20,107,
+compnett,20,107,
 compboat,Chronos,107,
 comprank,5,107,
 compsailno,2050,107,
@@ -952,8 +952,8 @@ comprating,0.917,107,
 compnewrating,0.915,107,
 comphelmname,Byrne/Cullen,107,
 comphigh,0,107,
-comptotal,15,108,
-compnett,15,108,
+comptotal,30,108,
+compnett,30,108,
 compboat,Nimon,108,
 comprank,10,108,
 compsailno,21,108,
@@ -967,8 +967,8 @@ comprating,0.825,108,
 compnewrating,0.825,108,
 comphelmname,Nigel Biggs,108,
 comphigh,0,108,
-comptotal,7,109,
-compnett,7,109,
+comptotal,22,109,
+compnett,22,109,
 compboat,No Excuse,109,
 comprank,7,109,
 compsailno,1972,109,
@@ -982,10 +982,10 @@ comprating,0.950,109,
 compnewrating,0.947,109,
 comphelmname,Wormald Walsh O'Neill,109,
 comphigh,0,109,
-comptotal,3,110,
-compnett,3,110,
+comptotal,5,110,
+compnett,5,110,
 compboat,Gecko,110,
-comprank,3,110,
+comprank,2,110,
 compsailno,7115,110,
 compclass,Bolero,110,
 compfleet,Division B HPH,110,
@@ -997,8 +997,8 @@ comprating,0.903,110,
 compnewrating,0.902,110,
 comphelmname,Kevin Darmody,110,
 comphigh,0,110,
-comptotal,1,111,
-compnett,1,111,
+comptotal,2,111,
+compnett,2,111,
 compboat,Dux,111,
 comprank,1,111,
 compsailno,988,111,
@@ -1012,8 +1012,8 @@ comprating,0.940,111,
 compnewrating,0.946,111,
 comphelmname,Caroline and Nicholas Gore-Grimes,111,
 comphigh,0,111,
-comptotal,6,112,
-compnett,6,112,
+comptotal,21,112,
+compnett,21,112,
 compboat,Maximus,112,
 comprank,6,112,
 compsailno,7495,112,
@@ -1027,8 +1027,8 @@ comprating,0.945,112,
 compnewrating,0.941,112,
 comphelmname,Paddy Kyne,112,
 comphigh,0,112,
-comptotal,4,114,
-compnett,4,114,
+comptotal,5,114,
+compnett,5,114,
 compboat,Splashdance,114,
 comprank,3,114,
 compsailno,4073,114,
@@ -1041,8 +1041,8 @@ compalias,75,114,
 comprating,0.988,114,
 comphelmname,John Becket / Andy George,114,
 comphigh,0,114,
-comptotal,1,115,
-compnett,1,115,
+comptotal,4,115,
+compnett,4,115,
 compboat,Bite the Bullet,115,
 comprank,1,115,
 compsailno,3335C,115,
@@ -1054,8 +1054,8 @@ compalias,71,115,
 comprating,0.947,115,
 comphelmname,Colm Bermingham,115,
 comphigh,0,115,
-comptotal,2,116,
-compnett,2,116,
+comptotal,4,116,
+compnett,4,116,
 compboat,Toughnut,116,
 comprank,2,116,
 compsailno,1411t,116,
@@ -1068,8 +1068,8 @@ compalias,65,116,
 comprating,0.913,116,
 comphelmname,Dermot Skehan,116,
 comphigh,0,116,
-comptotal,5,117,
-compnett,5,117,
+comptotal,10,117,
+compnett,10,117,
 compboat,Out & About,117,
 comprank,4,117,
 compsailno,2070,117,
@@ -1082,10 +1082,10 @@ compalias,66,117,
 comprating,0.908,117,
 comphelmname,Terry McCoy,117,
 comphigh,0,117,
-comptotal,5,121,
-compnett,5,121,
+comptotal,7,121,
+compnett,7,121,
 compboat,Gecko,121,
-comprank,5,121,
+comprank,3,121,
 compsailno,7115,121,
 compclass,Bolero,121,
 compfleet,Division B IRC,121,
@@ -1096,8 +1096,8 @@ compalias,110,121,
 comprating,0.896,121,
 comphelmname,Kevin Darmody,121,
 comphigh,0,121,
-comptotal,10,122,
-compnett,10,122,
+comptotal,25,122,
+compnett,25,122,
 compboat,Kilcullen,122,
 comprank,9,122,
 compsailno,680,122,
@@ -1111,8 +1111,8 @@ comprating,0.865,122,
 compnewrating,0.865,122,
 comphelmname,HYC K25 Team,122,
 comphigh,0,122,
-comptotal,2,123,
-compnett,2,123,
+comptotal,6,123,
+compnett,6,123,
 compboat,Mojo,123,
 comprank,2,123,
 compsailno,1551,123,
@@ -1125,10 +1125,10 @@ compalias,124,123,
 comprating,0.951,123,
 comphelmname,Pat O'Neill,123,
 comphigh,0,123,
-comptotal,2,124,
-compnett,2,124,
+comptotal,6,124,
+compnett,6,124,
 compboat,Mojo,124,
-comprank,2,124,
+comprank,3,124,
 compsailno,1551,124,
 compclass,J80,124,
 compfleet,Division B HPH,124,
@@ -1140,8 +1140,8 @@ comprating,0.985,124,
 compnewrating,0.994,124,
 comphelmname,Pat O'Neill,124,
 comphigh,0,124,
-comptotal,8,133,
-compnett,8,133,
+comptotal,23,133,
+compnett,23,133,
 comprank,8,133,
 compsailno,393,133,
 compaltsailno,527,133,
@@ -1154,17 +1154,17 @@ comprating,0.920,133,
 compnewrating,0.916,133,
 comphelmname,HYC - Amanda Bishop,133,
 comphigh,0,133,
-comptotal,4,136,
-compnett,4,136,
+comptotal,11,136,
+compnett,11,136,
 compboat,Badger,136,
-comprank,4,136,
+comprank,5,136,
 compsailno,9990,136,
 compfleet,Division C HPH,136,
 comptally,73,136,
 compexclude,0,136,
 compalias,0,136,
 comprating,0.905,136,
-compnewrating,0.907,136,
+compnewrating,0.903,136,
 comphelmname,Mark & Paul Rossiter,136,
 comphigh,0,136,
 racerank,1,,127
@@ -1174,7 +1174,9 @@ racestart,Fleet^Division A HPH^^^Fleet^Division A IRC^^^^^^^=^=^=^=^=^=|19.15.00
 racestart,Fleet^Division B HPH^^^Fleet^Division B IRC^^^^^^^=^=^=^=^=^=|19.20.00|Finish time|Start 2|||0||0|0||||1,,127
 racestart,Fleet^Division C HPH^^^Fleet^Division C IRC^^^^^^^=^=^=^=^=^=|19.25.00|Finish time|Start 3|||0||0|0||||1,,127
 racerank,2,,128
-racesailed,0,,128
+racesailed,1,,128
+racedate,05-08-2026,,128
+racename,R2,,128
 racestart,Fleet^Division A HPH^^^^^^^^^^^=^=^=^=^=^=|19.15.00|Finish time|Start 1|||0||0|0||||1,,128
 racestart,Fleet^Division B HPH^^^^^^^^^^^=^=^=^=^=^=|19.20.00|Finish time|Start 2|||0||0|0||||1,,128
 racestart,Fleet^Division C HPH^^^^^^^^^^^=^=^=^=^=^=|19.25.00|Finish time|Start 3|||0||0|0||||1,,128
@@ -1216,13 +1218,22 @@ srat,0,65,127
 rewin,0.02.29,65,127
 rrwin,0.965,65,127
 rrset,0,65,127
+rft,20:22:12,65,128
+rst,19.25.00,65,128
+rpts,2,65,128
+rpos,2,65,128
 rdisc,0,65,128
-rrestyp,0,65,128
+rcor,0.57.36,65,128
+rrestyp,4,65,128
+rele,0.57.12,65,128
 rrat,1.007,65,128
 srat,0,65,128
+rewin,0.00.38,65,128
+rrwin,0.996,65,128
 rrset,0,65,128
 rdisc,0,65,129
 rrestyp,0,65,129
+rrat,1.011,65,129
 srat,0,65,129
 rrset,0,65,129
 rdisc,0,65,130
@@ -1249,13 +1260,17 @@ rrestyp,3,66,127
 rrat,0.867,66,127
 srat,0,66,127
 rrset,1,66,127
+rcod,DNC,66,128
+rpts,13,66,128
+rpos,8,66,128
 rdisc,0,66,128
-rrestyp,0,66,128
+rrestyp,3,66,128
 rrat,0.867,66,128
 srat,0,66,128
-rrset,0,66,128
+rrset,1,66,128
 rdisc,0,66,129
 rrestyp,0,66,129
+rrat,0.867,66,129
 srat,0,66,129
 rrset,0,66,129
 rdisc,0,66,130
@@ -1287,13 +1302,22 @@ srat,0,67,127
 rewin,0.05.35,67,127
 rrwin,0.849,67,127
 rrset,0,67,127
+rft,20:28:02,67,128
+rst,19.25.00,67,128
+rpts,4,67,128
+rpos,4,67,128
 rdisc,0,67,128
-rrestyp,0,67,128
+rcor,0.58.22,67,128
+rrestyp,4,67,128
+rele,1.03.02,67,128
 rrat,0.926,67,128
 srat,0,67,128
+rewin,0.01.31,67,128
+rrwin,0.904,67,128
 rrset,0,67,128
 rdisc,0,67,129
 rrestyp,0,67,129
+rrat,0.926,67,129
 srat,0,67,129
 rrset,0,67,129
 rdisc,0,67,130
@@ -1325,13 +1349,22 @@ srat,0,68,127
 rewin,0.00.52,68,127
 rrwin,0.912,68,127
 rrset,0,68,127
+rft,20:32:37,68,128
+rst,19.25.00,68,128
+rpts,6,68,128
+rpos,6,68,128
 rdisc,0,68,128
-rrestyp,0,68,128
+rcor,1.02.45,68,128
+rrestyp,4,68,128
+rele,1.07.37,68,128
 rrat,0.928,68,128
 srat,0,68,128
+rewin,0.06.14,68,128
+rrwin,0.842,68,128
 rrset,0,68,128
 rdisc,0,68,129
 rrestyp,0,68,129
+rrat,0.924,68,129
 srat,0,68,129
 rrset,0,68,129
 rdisc,0,68,130
@@ -1363,13 +1396,17 @@ srat,0,69,127
 rewin,0.04.54,69,127
 rrwin,0.868,69,127
 rrset,0,69,127
+rcod,DNC,69,128
+rpts,13,69,128
+rpos,8,69,128
 rdisc,0,69,128
-rrestyp,0,69,128
+rrestyp,3,69,128
 rrat,0.938,69,128
 srat,0,69,128
-rrset,0,69,128
+rrset,1,69,128
 rdisc,0,69,129
 rrestyp,0,69,129
+rrat,0.938,69,129
 srat,0,69,129
 rrset,0,69,129
 rdisc,0,69,130
@@ -1396,13 +1433,17 @@ rrestyp,3,70,127
 rrat,0.852,70,127
 srat,0,70,127
 rrset,1,70,127
+rcod,DNC,70,128
+rpts,13,70,128
+rpos,8,70,128
 rdisc,0,70,128
-rrestyp,0,70,128
+rrestyp,3,70,128
 rrat,0.852,70,128
 srat,0,70,128
-rrset,0,70,128
+rrset,1,70,128
 rdisc,0,70,129
 rrestyp,0,70,129
+rrat,0.852,70,129
 srat,0,70,129
 rrset,0,70,129
 rdisc,0,70,130
@@ -1434,13 +1475,22 @@ srat,0,71,127
 rewin,0.01.52,71,127
 rrwin,1.028,71,127
 rrset,0,71,127
+rft,20:22:49,71,128
+rst,19.25.00,71,128
+rpts,5,71,128
+rpos,5,71,128
 rdisc,0,71,128
-rrestyp,0,71,128
+rcor,1.01.28,71,128
+rrestyp,4,71,128
+rele,0.57.49,71,128
 rrat,1.063,71,128
 srat,0,71,128
+rewin,0.04.14,71,128
+rrwin,0.985,71,128
 rrset,0,71,128
 rdisc,0,71,129
 rrestyp,0,71,129
+rrat,1.055,71,129
 srat,0,71,129
 rrset,0,71,129
 rdisc,0,71,130
@@ -1472,13 +1522,17 @@ srat,0,72,127
 rewin,0.00.53,72,127
 rrwin,0.88,72,127
 rrset,0,72,127
+rcod,DNC,72,128
+rpts,13,72,128
+rpos,8,72,128
 rdisc,0,72,128
-rrestyp,0,72,128
+rrestyp,3,72,128
 rrat,0.896,72,128
 srat,0,72,128
-rrset,0,72,128
+rrset,1,72,128
 rdisc,0,72,129
 rrestyp,0,72,129
+rrat,0.896,72,129
 srat,0,72,129
 rrset,0,72,129
 rdisc,0,72,130
@@ -1510,13 +1564,22 @@ srat,0,73,127
 rewin,0.00.00,73,127
 rrwin,0.894,73,127
 rrset,0,73,127
+rft,20:29:30,73,128
+rst,19.25.00,73,128
+rpts,3,73,128
+rpos,3,73,128
 rdisc,0,73,128
-rrestyp,0,73,128
+rcor,0.58.07,73,128
+rrestyp,4,73,128
+rele,1.04.30,73,128
 rrat,0.901,73,128
 srat,0,73,128
+rewin,0.01.17,73,128
+rrwin,0.883,73,128
 rrset,0,73,128
 rdisc,0,73,129
 rrestyp,0,73,129
+rrat,0.902,73,129
 srat,0,73,129
 rrset,0,73,129
 rdisc,0,73,130
@@ -1548,13 +1611,17 @@ srat,0,74,127
 rewin,0.02.43,74,127
 rrwin,0.842,74,127
 rrset,0,74,127
+rcod,DNC,74,128
+rpts,13,74,128
+rpos,8,74,128
 rdisc,0,74,128
-rrestyp,0,74,128
+rrestyp,3,74,128
 rrat,0.877,74,128
 srat,0,74,128
-rrset,0,74,128
+rrset,1,74,128
 rdisc,0,74,129
 rrestyp,0,74,129
+rrat,0.877,74,129
 srat,0,74,129
 rrset,0,74,129
 rdisc,0,74,130
@@ -1581,13 +1648,22 @@ rrestyp,3,75,127
 rrat,1.094,75,127
 srat,0,75,127
 rrset,0,75,127
+rft,20:17:04,75,128
+rst,19.25.00,75,128
+rpts,1,75,128
+rpos,1,75,128
 rdisc,0,75,128
-rrestyp,0,75,128
+rcor,0.56.58,75,128
+rrestyp,4,75,128
+rele,0.52.04,75,128
 rrat,1.094,75,128
 srat,0,75,128
+rewin,0.00.00,75,128
+rrwin,1.094,75,128
 rrset,0,75,128
 rdisc,0,75,129
 rrestyp,0,75,129
+rrat,1.102,75,129
 srat,0,75,129
 rrset,0,75,129
 rdisc,0,75,130
@@ -1618,9 +1694,17 @@ srat,0,76,127
 rewin,0.00.00,76,127
 rrwin,0.916,76,127
 rrset,0,76,127
+rft,20:16:37,76,128
+rst,19.20.00,76,128
+rpts,1,76,128
+rpos,1,76,128
 rdisc,0,76,128
-rrestyp,0,76,128
+rcor,0.51.52,76,128
+rrestyp,4,76,128
+rele,0.56.37,76,128
 srat,0,76,128
+rewin,0.00.00,76,128
+rrwin,0.916,76,128
 rrset,0,76,128
 rdisc,0,76,129
 rrestyp,0,76,129
@@ -1649,10 +1733,13 @@ rdisc,0,77,127
 rrestyp,3,77,127
 srat,0,77,127
 rrset,0,77,127
+rcod,DNC,77,128
+rpts,14,77,128
+rpos,4,77,128
 rdisc,0,77,128
-rrestyp,0,77,128
+rrestyp,3,77,128
 srat,0,77,128
-rrset,0,77,128
+rrset,1,77,128
 rdisc,0,77,129
 rrestyp,0,77,129
 srat,0,77,129
@@ -1685,10 +1772,13 @@ srat,0,78,127
 rewin,0.05.13,78,127
 rrwin,0.853,78,127
 rrset,0,78,127
+rcod,DNC,78,128
+rpts,14,78,128
+rpos,4,78,128
 rdisc,0,78,128
-rrestyp,0,78,128
+rrestyp,3,78,128
 srat,0,78,128
-rrset,0,78,128
+rrset,1,78,128
 rdisc,0,78,129
 rrestyp,0,78,129
 srat,0,78,129
@@ -1717,13 +1807,17 @@ rrestyp,3,80,127
 rrat,0.971,80,127
 srat,0,80,127
 rrset,1,80,127
+rcod,DNC,80,128
+rpts,7,80,128
+rpos,4,80,128
 rdisc,0,80,128
-rrestyp,0,80,128
+rrestyp,3,80,128
 rrat,0.971,80,128
 srat,0,80,128
-rrset,0,80,128
+rrset,1,80,128
 rdisc,0,80,129
 rrestyp,0,80,129
+rrat,0.971,80,129
 srat,0,80,129
 rrset,0,80,129
 rdisc,0,80,130
@@ -1750,13 +1844,17 @@ rrestyp,3,81,127
 rrat,0.920,81,127
 srat,0,81,127
 rrset,1,81,127
+rcod,DNC,81,128
+rpts,15,81,128
+rpos,4,81,128
 rdisc,0,81,128
-rrestyp,0,81,128
+rrestyp,3,81,128
 rrat,0.920,81,128
 srat,0,81,128
-rrset,0,81,128
+rrset,1,81,128
 rdisc,0,81,129
 rrestyp,0,81,129
+rrat,0.920,81,129
 srat,0,81,129
 rrset,0,81,129
 rdisc,0,81,130
@@ -1788,13 +1886,22 @@ srat,0,82,127
 rewin,0.00.08,82,127
 rrwin,1.072,82,127
 rrset,0,82,127
+rft,20:17:12,82,128
+rst,19.15.00,82,128
+rpts,2,82,128
+rpos,2,82,128
 rdisc,0,82,128
-rrestyp,0,82,128
+rcor,1.06.59,82,128
+rrestyp,4,82,128
+rele,1.02.12,82,128
 rrat,1.077,82,128
 srat,0,82,128
+rewin,0.00.31,82,128
+rrwin,1.068,82,128
 rrset,0,82,128
 rdisc,0,82,129
 rrestyp,0,82,129
+rrat,1.074,82,129
 srat,0,82,129
 rrset,0,82,129
 rdisc,0,82,130
@@ -1825,9 +1932,17 @@ srat,0,83,127
 rewin,0.01.11,83,127
 rrwin,0.984,83,127
 rrset,0,83,127
+rft,20:23:23,83,128
+rst,19.15.00,83,128
+rpts,3,83,128
+rpos,3,83,128
 rdisc,0,83,128
-rrestyp,0,83,128
+rcor,1.08.31,83,128
+rrestyp,4,83,128
+rele,1.08.23,83,128
 srat,0,83,128
+rewin,0.03.31,83,128
+rrwin,0.951,83,128
 rrset,0,83,128
 rdisc,0,83,129
 rrestyp,0,83,129
@@ -1861,10 +1976,13 @@ srat,0,85,127
 rewin,0.04.40,85,127
 rrwin,0.861,85,127
 rrset,0,85,127
+rcod,DNC,85,128
+rpts,14,85,128
+rpos,4,85,128
 rdisc,0,85,128
-rrestyp,0,85,128
+rrestyp,3,85,128
 srat,0,85,128
-rrset,0,85,128
+rrset,1,85,128
 rdisc,0,85,129
 rrestyp,0,85,129
 srat,0,85,129
@@ -1892,10 +2010,13 @@ rdisc,0,86,127
 rrestyp,3,86,127
 srat,0,86,127
 rrset,1,86,127
+rcod,DNC,86,128
+rpts,14,86,128
+rpos,4,86,128
 rdisc,0,86,128
-rrestyp,0,86,128
+rrestyp,3,86,128
 srat,0,86,128
-rrset,0,86,128
+rrset,1,86,128
 rdisc,0,86,129
 rrestyp,0,86,129
 srat,0,86,129
@@ -1923,10 +2044,13 @@ rdisc,0,87,127
 rrestyp,3,87,127
 srat,0,87,127
 rrset,1,87,127
+rcod,DNC,87,128
+rpts,14,87,128
+rpos,4,87,128
 rdisc,0,87,128
-rrestyp,0,87,128
+rrestyp,3,87,128
 srat,0,87,128
-rrset,0,87,128
+rrset,1,87,128
 rdisc,0,87,129
 rrestyp,0,87,129
 srat,0,87,129
@@ -1960,13 +2084,22 @@ srat,0,88,127
 rewin,0.00.00,88,127
 rrwin,0.933,88,127
 rrset,0,88,127
+rft,20:25:58,88,128
+rst,19.15.00,88,128
+rpts,1,88,128
+rpos,1,88,128
 rdisc,0,88,128
-rrestyp,0,88,128
+rcor,1.06.25,88,128
+rrestyp,4,88,128
+rele,1.10.58,88,128
 rrat,0.936,88,128
 srat,0,88,128
+rewin,0.00.00,88,128
+rrwin,0.936,88,128
 rrset,0,88,128
 rdisc,0,88,129
 rrestyp,0,88,129
+rrat,0.936,88,129
 srat,0,88,129
 rrset,0,88,129
 rdisc,0,88,130
@@ -1998,13 +2131,17 @@ srat,0,89,127
 rewin,0.08.30,89,127
 rrwin,1.032,89,127
 rrset,0,89,127
+rcod,DNC,89,128
+rpts,7,89,128
+rpos,4,89,128
 rdisc,0,89,128
-rrestyp,0,89,128
+rrestyp,3,89,128
 rrat,1.187,89,128
 srat,0,89,128
-rrset,0,89,128
+rrset,1,89,128
 rdisc,0,89,129
 rrestyp,0,89,129
+rrat,1.187,89,129
 srat,0,89,129
 rrset,0,89,129
 rdisc,0,89,130
@@ -2030,10 +2167,13 @@ rdisc,0,90,127
 rrestyp,3,90,127
 srat,0,90,127
 rrset,1,90,127
+rcod,DNC,90,128
+rpts,14,90,128
+rpos,4,90,128
 rdisc,0,90,128
-rrestyp,0,90,128
+rrestyp,3,90,128
 srat,0,90,128
-rrset,0,90,128
+rrset,1,90,128
 rdisc,0,90,129
 rrestyp,0,90,129
 srat,0,90,129
@@ -2066,10 +2206,13 @@ srat,0,91,127
 rewin,0.02.43,91,127
 rrwin,0.885,91,127
 rrset,0,91,127
+rcod,DNC,91,128
+rpts,14,91,128
+rpos,4,91,128
 rdisc,0,91,128
-rrestyp,0,91,128
+rrestyp,3,91,128
 srat,0,91,128
-rrset,0,91,128
+rrset,1,91,128
 rdisc,0,91,129
 rrestyp,0,91,129
 srat,0,91,129
@@ -2101,13 +2244,17 @@ rele,1.11.23,92,127
 rrat,0.976,92,127
 srat,0,92,127
 rrset,0,92,127
+rcod,DNC,92,128
+rpts,7,92,128
+rpos,4,92,128
 rdisc,0,92,128
-rrestyp,0,92,128
+rrestyp,3,92,128
 rrat,0.976,92,128
 srat,0,92,128
-rrset,0,92,128
+rrset,1,92,128
 rdisc,0,92,129
 rrestyp,0,92,129
+rrat,0.976,92,129
 srat,0,92,129
 rrset,0,92,129
 rdisc,0,92,130
@@ -2133,10 +2280,13 @@ rdisc,0,94,127
 rrestyp,3,94,127
 srat,0,94,127
 rrset,1,94,127
+rcod,DNC,94,128
+rpts,7,94,128
+rpos,4,94,128
 rdisc,0,94,128
-rrestyp,0,94,128
+rrestyp,3,94,128
 srat,0,94,128
-rrset,0,94,128
+rrset,1,94,128
 rdisc,0,94,129
 rrestyp,0,94,129
 srat,0,94,129
@@ -2169,9 +2319,17 @@ srat,0,95,127
 rewin,0.00.00,95,127
 rrwin,1.045,95,127
 rrset,0,95,127
+rft,20:17:12,95,128
+rst,19.15.00,95,128
+rpts,1,95,128
+rpos,1,95,128
 rdisc,0,95,128
-rrestyp,0,95,128
+rcor,1.05.00,95,128
+rrestyp,4,95,128
+rele,1.02.12,95,128
 srat,0,95,128
+rewin,0.00.00,95,128
+rrwin,1.045,95,128
 rrset,0,95,128
 rdisc,0,95,129
 rrestyp,0,95,129
@@ -2203,10 +2361,13 @@ rrestyp,3,96,127
 rele,1.11.23,96,127
 srat,0,96,127
 rrset,0,96,127
+rcod,DNC,96,128
+rpts,7,96,128
+rpos,4,96,128
 rdisc,0,96,128
-rrestyp,0,96,128
+rrestyp,3,96,128
 srat,0,96,128
-rrset,0,96,128
+rrset,1,96,128
 rdisc,0,96,129
 rrestyp,0,96,129
 srat,0,96,129
@@ -2239,10 +2400,13 @@ srat,0,97,127
 rewin,0.07.24,97,127
 rrwin,1.006,97,127
 rrset,0,97,127
+rcod,DNC,97,128
+rpts,7,97,128
+rpos,4,97,128
 rdisc,0,97,128
-rrestyp,0,97,128
+rrestyp,3,97,128
 srat,0,97,128
-rrset,0,97,128
+rrset,1,97,128
 rdisc,0,97,129
 rrestyp,0,97,129
 srat,0,97,129
@@ -2275,9 +2439,17 @@ srat,0,98,127
 rewin,0.03.17,98,127
 rrwin,0.91,98,127
 rrset,0,98,127
+rft,20:25:58,98,128
+rst,19.15.00,98,128
+rpts,2,98,128
+rpos,2,98,128
 rdisc,0,98,128
-rrestyp,0,98,128
+rcor,1.07.46,98,128
+rrestyp,4,98,128
+rele,1.10.58,98,128
 srat,0,98,128
+rewin,0.02.54,98,128
+rrwin,0.916,98,128
 rrset,0,98,128
 rdisc,0,98,129
 rrestyp,0,98,129
@@ -2312,13 +2484,22 @@ srat,0,99,127
 rewin,0.00.35,99,127
 rrwin,1.009,99,127
 rrset,0,99,127
+rft,20:23:23,99,128
+rst,19.15.00,99,128
+rpts,3,99,128
+rpos,3,99,128
 rdisc,0,99,128
-rrestyp,0,99,128
+rcor,1.09.41,99,128
+rrestyp,4,99,128
+rele,1.08.23,99,128
 rrat,1.019,99,128
 srat,0,99,128
+rewin,0.03.12,99,128
+rrwin,0.971,99,128
 rrset,0,99,128
 rdisc,0,99,129
 rrestyp,0,99,129
+rrat,1.015,99,129
 srat,0,99,129
 rrset,0,99,129
 rdisc,0,99,130
@@ -2344,10 +2525,13 @@ rdisc,0,100,127
 rrestyp,3,100,127
 srat,0,100,127
 rrset,1,100,127
+rcod,DNC,100,128
+rpts,14,100,128
+rpos,4,100,128
 rdisc,0,100,128
-rrestyp,0,100,128
+rrestyp,3,100,128
 srat,0,100,128
-rrset,0,100,128
+rrset,1,100,128
 rdisc,0,100,129
 rrestyp,0,100,129
 srat,0,100,129
@@ -2375,10 +2559,13 @@ rdisc,0,101,127
 rrestyp,3,101,127
 srat,0,101,127
 rrset,1,101,127
+rcod,DNC,101,128
+rpts,14,101,128
+rpos,4,101,128
 rdisc,0,101,128
-rrestyp,0,101,128
+rrestyp,3,101,128
 srat,0,101,128
-rrset,0,101,128
+rrset,1,101,128
 rdisc,0,101,129
 rrestyp,0,101,129
 srat,0,101,129
@@ -2411,10 +2598,13 @@ srat,0,102,127
 rewin,0.04.39,102,127
 rrwin,0.85,102,127
 rrset,0,102,127
+rcod,DNC,102,128
+rpts,14,102,128
+rpos,4,102,128
 rdisc,0,102,128
-rrestyp,0,102,128
+rrestyp,3,102,128
 srat,0,102,128
-rrset,0,102,128
+rrset,1,102,128
 rdisc,0,102,129
 rrestyp,0,102,129
 srat,0,102,129
@@ -2443,13 +2633,17 @@ rrestyp,3,103,127
 rrat,0.850,103,127
 srat,0,103,127
 rrset,1,103,127
+rcod,DNC,103,128
+rpts,15,103,128
+rpos,4,103,128
 rdisc,0,103,128
-rrestyp,0,103,128
+rrestyp,3,103,128
 rrat,0.850,103,128
 srat,0,103,128
-rrset,0,103,128
+rrset,1,103,128
 rdisc,0,103,129
 rrestyp,0,103,129
+rrat,0.850,103,129
 srat,0,103,129
 rrset,0,103,129
 rdisc,0,103,130
@@ -2481,13 +2675,17 @@ srat,0,104,127
 rewin,0.03.22,104,127
 rrwin,0.908,104,127
 rrset,0,104,127
+rcod,DNC,104,128
+rpts,15,104,128
+rpos,4,104,128
 rdisc,0,104,128
-rrestyp,0,104,128
+rrestyp,3,104,128
 rrat,0.952,104,128
 srat,0,104,128
-rrset,0,104,128
+rrset,1,104,128
 rdisc,0,104,129
 rrestyp,0,104,129
+rrat,0.952,104,129
 srat,0,104,129
 rrset,0,104,129
 rdisc,0,104,130
@@ -2514,13 +2712,17 @@ rrestyp,3,105,127
 rrat,0.971,105,127
 srat,0,105,127
 rrset,1,105,127
+rcod,DNC,105,128
+rpts,15,105,128
+rpos,4,105,128
 rdisc,0,105,128
-rrestyp,0,105,128
+rrestyp,3,105,128
 rrat,0.971,105,128
 srat,0,105,128
-rrset,0,105,128
+rrset,1,105,128
 rdisc,0,105,129
 rrestyp,0,105,129
+rrat,0.971,105,129
 srat,0,105,129
 rrset,0,105,129
 rdisc,0,105,130
@@ -2547,13 +2749,17 @@ rrestyp,3,106,127
 rrat,0.880,106,127
 srat,0,106,127
 rrset,1,106,127
+rcod,DNC,106,128
+rpts,15,106,128
+rpos,4,106,128
 rdisc,0,106,128
-rrestyp,0,106,128
+rrestyp,3,106,128
 rrat,0.880,106,128
 srat,0,106,128
-rrset,0,106,128
+rrset,1,106,128
 rdisc,0,106,129
 rrestyp,0,106,129
+rrat,0.880,106,129
 srat,0,106,129
 rrset,0,106,129
 rdisc,0,106,130
@@ -2585,13 +2791,17 @@ srat,0,107,127
 rewin,0.03.40,107,127
 rrwin,0.872,107,127
 rrset,0,107,127
+rcod,DNC,107,128
+rpts,15,107,128
+rpos,4,107,128
 rdisc,0,107,128
-rrestyp,0,107,128
+rrestyp,3,107,128
 rrat,0.915,107,128
 srat,0,107,128
-rrset,0,107,128
+rrset,1,107,128
 rdisc,0,107,129
 rrestyp,0,107,129
+rrat,0.915,107,129
 srat,0,107,129
 rrset,0,107,129
 rdisc,0,107,130
@@ -2618,13 +2828,17 @@ rrestyp,3,108,127
 rrat,0.825,108,127
 srat,0,108,127
 rrset,1,108,127
+rcod,DNC,108,128
+rpts,15,108,128
+rpos,4,108,128
 rdisc,0,108,128
-rrestyp,0,108,128
+rrestyp,3,108,128
 rrat,0.825,108,128
 srat,0,108,128
-rrset,0,108,128
+rrset,1,108,128
 rdisc,0,108,129
 rrestyp,0,108,129
+rrat,0.825,108,129
 srat,0,108,129
 rrset,0,108,129
 rdisc,0,108,130
@@ -2656,13 +2870,17 @@ srat,0,109,127
 rewin,0.05.52,109,127
 rrwin,0.875,109,127
 rrset,0,109,127
+rcod,DNC,109,128
+rpts,15,109,128
+rpos,4,109,128
 rdisc,0,109,128
-rrestyp,0,109,128
+rrestyp,3,109,128
 rrat,0.947,109,128
 srat,0,109,128
-rrset,0,109,128
+rrset,1,109,128
 rdisc,0,109,129
 rrestyp,0,109,129
+rrat,0.947,109,129
 srat,0,109,129
 rrset,0,109,129
 rdisc,0,109,130
@@ -2694,13 +2912,22 @@ srat,0,110,127
 rewin,0.03.26,110,127
 rrwin,0.862,110,127
 rrset,0,110,127
+rft,20:23:55,110,128
+rst,19.20.00,110,128
+rpts,2,110,128
+rpos,2,110,128
 rdisc,0,110,128
-rrestyp,0,110,128
+rcor,0.57.39,110,128
+rrestyp,4,110,128
+rele,1.03.55,110,128
 rrat,0.902,110,128
 srat,0,110,128
+rewin,0.04.32,110,128
+rrwin,0.838,110,128
 rrset,0,110,128
 rdisc,0,110,129
 rrestyp,0,110,129
+rrat,0.902,110,129
 srat,0,110,129
 rrset,0,110,129
 rdisc,0,110,130
@@ -2732,13 +2959,22 @@ srat,0,111,127
 rewin,0.00.00,111,127
 rrwin,0.94,111,127
 rrset,0,111,127
+rft,20:16:37,111,128
+rst,19.20.00,111,128
+rpts,1,111,128
+rpos,1,111,128
 rdisc,0,111,128
-rrestyp,0,111,128
+rcor,0.53.34,111,128
+rrestyp,4,111,128
+rele,0.56.37,111,128
 rrat,0.946,111,128
 srat,0,111,128
+rewin,0.00.00,111,128
+rrwin,0.946,111,128
 rrset,0,111,128
 rdisc,0,111,129
 rrestyp,0,111,129
+rrat,0.946,111,129
 srat,0,111,129
 rrset,0,111,129
 rdisc,0,111,130
@@ -2770,13 +3006,17 @@ srat,0,112,127
 rewin,0.04.48,112,127
 rrwin,0.884,112,127
 rrset,0,112,127
+rcod,DNC,112,128
+rpts,15,112,128
+rpos,4,112,128
 rdisc,0,112,128
-rrestyp,0,112,128
+rrestyp,3,112,128
 rrat,0.941,112,128
 srat,0,112,128
-rrset,0,112,128
+rrset,1,112,128
 rdisc,0,112,129
 rrestyp,0,112,129
+rrat,0.941,112,129
 srat,0,112,129
 rrset,0,112,129
 rdisc,0,112,130
@@ -2802,9 +3042,17 @@ rdisc,0,114,127
 rrestyp,3,114,127
 srat,0,114,127
 rrset,0,114,127
+rft,20:17:04,114,128
+rst,19.25.00,114,128
+rpts,1,114,128
+rpos,1,114,128
 rdisc,0,114,128
-rrestyp,0,114,128
+rcor,0.51.27,114,128
+rrestyp,4,114,128
+rele,0.52.04,114,128
 srat,0,114,128
+rewin,0.00.00,114,128
+rrwin,0.988,114,128
 rrset,0,114,128
 rdisc,0,114,129
 rrestyp,0,114,129
@@ -2838,9 +3086,17 @@ srat,0,115,127
 rewin,0.00.00,115,127
 rrwin,0.947,115,127
 rrset,0,115,127
+rft,20:22:49,115,128
+rst,19.25.00,115,128
+rpts,3,115,128
+rpos,3,115,128
 rdisc,0,115,128
-rrestyp,0,115,128
+rcor,0.54.45,115,128
+rrestyp,4,115,128
+rele,0.57.49,115,128
 srat,0,115,128
+rewin,0.03.30,115,128
+rrwin,0.89,115,128
 rrset,0,115,128
 rdisc,0,115,129
 rrestyp,0,115,129
@@ -2874,9 +3130,17 @@ srat,0,116,127
 rewin,0.01.26,116,127
 rrwin,0.89,116,127
 rrset,0,116,127
+rft,20:22:12,116,128
+rst,19.25.00,116,128
+rpts,2,116,128
+rpos,2,116,128
 rdisc,0,116,128
-rrestyp,0,116,128
+rcor,0.52.13,116,128
+rrestyp,4,116,128
+rele,0.57.12,116,128
 srat,0,116,128
+rewin,0.00.51,116,128
+rrwin,0.899,116,128
 rrset,0,116,128
 rdisc,0,116,129
 rrestyp,0,116,129
@@ -2905,10 +3169,13 @@ rdisc,0,117,127
 rrestyp,3,117,127
 srat,0,117,127
 rrset,1,117,127
+rcod,DNC,117,128
+rpts,5,117,128
+rpos,4,117,128
 rdisc,0,117,128
-rrestyp,0,117,128
+rrestyp,3,117,128
 srat,0,117,128
-rrset,0,117,128
+rrset,1,117,128
 rdisc,0,117,129
 rrestyp,0,117,129
 srat,0,117,129
@@ -2941,9 +3208,17 @@ srat,0,121,127
 rewin,0.04.44,121,127
 rrwin,0.84,121,127
 rrset,0,121,127
+rft,20:23:55,121,128
+rst,19.20.00,121,128
+rpts,2,121,128
+rpos,2,121,128
 rdisc,0,121,128
-rrestyp,0,121,128
+rcor,0.57.16,121,128
+rrestyp,4,121,128
+rele,1.03.55,121,128
 srat,0,121,128
+rewin,0.06.02,121,128
+rrwin,0.811,121,128
 rrset,0,121,128
 rdisc,0,121,129
 rrestyp,0,121,129
@@ -2973,13 +3248,17 @@ rrestyp,3,122,127
 rrat,0.865,122,127
 srat,0,122,127
 rrset,0,122,127
+rcod,DNC,122,128
+rpts,15,122,128
+rpos,4,122,128
 rdisc,0,122,128
-rrestyp,0,122,128
+rrestyp,3,122,128
 rrat,0.865,122,128
 srat,0,122,128
-rrset,0,122,128
+rrset,1,122,128
 rdisc,0,122,129
 rrestyp,0,122,129
+rrat,0.865,122,129
 srat,0,122,129
 rrset,0,122,129
 rdisc,0,122,130
@@ -3010,8 +3289,11 @@ srat,0,123,127
 rewin,0.00.01,123,127
 rrwin,0.951,123,127
 rrset,0,123,127
+rcod,NSC,123,128
+rpts,4,123,128
+rpos,3,123,128
 rdisc,0,123,128
-rrestyp,0,123,128
+rrestyp,3,123,128
 srat,0,123,128
 rrset,0,123,128
 rdisc,0,123,129
@@ -3047,13 +3329,17 @@ srat,0,124,127
 rewin,0.00.38,124,127
 rrwin,0.976,124,127
 rrset,0,124,127
+rcod,NSC,124,128
+rpts,4,124,128
+rpos,3,124,128
 rdisc,0,124,128
-rrestyp,0,124,128
+rrestyp,3,124,128
 rrat,0.994,124,128
 srat,0,124,128
 rrset,0,124,128
 rdisc,0,124,129
 rrestyp,0,124,129
+rrat,0.994,124,129
 srat,0,124,129
 rrset,0,124,129
 rdisc,0,124,130
@@ -3086,13 +3372,17 @@ srat,0,133,127
 rewin,0.07.20,133,127
 rrwin,0.834,133,127
 rrset,0,133,127
+rcod,DNC,133,128
+rpts,15,133,128
+rpos,4,133,128
 rdisc,0,133,128
-rrestyp,0,133,128
+rrestyp,3,133,128
 rrat,0.916,133,128
 srat,0,133,128
-rrset,0,133,128
+rrset,1,133,128
 rdisc,0,133,129
 rrestyp,0,133,129
+rrat,0.916,133,129
 srat,0,133,129
 rrset,0,133,129
 rdisc,0,133,130
@@ -3124,13 +3414,22 @@ srat,0,136,127
 rewin,0.01.07,136,127
 rrwin,0.888,136,127
 rrset,0,136,127
+rft,20:34:29,136,128
+rst,19.25.00,136,128
+rpts,7,136,128
+rpos,7,136,128
 rdisc,0,136,128
-rrestyp,0,136,128
+rcor,1.03.01,136,128
+rrestyp,4,136,128
+rele,1.09.29,136,128
 rrat,0.907,136,128
 srat,0,136,128
+rewin,0.06.41,136,128
+rrwin,0.82,136,128
 rrset,0,136,128
 rdisc,0,136,129
 rrestyp,0,136,129
+rrat,0.903,136,129
 srat,0,136,129
 rrset,0,136,129
 rdisc,0,136,130

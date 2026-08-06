@@ -1,13 +1,13 @@
 {
   "formatVersion": 29,
   "seriesId": "25a472c0-faaf-5b52-8a81-92b30db9e65f",
-  "exportedAt": "2026-07-28T00:00:00.000Z",
+  "exportedAt": "2026-08-05T00:00:00.000Z",
   "series": {
     "id": "25a472c0-faaf-5b52-8a81-92b30db9e65f",
     "name": "Wednesdays - Cruisers 2026 (DEMO)",
     "venue": "Howth Yacht Club",
     "startDate": "2026-05-06",
-    "endDate": "2026-07-28",
+    "endDate": "2026-08-05",
     "venueLogoUrl": "https://www.hyc.ie/system/sponsor_logos/620/normal/Howth_Yacht_Club_-_Logo_RGB.jpg",
     "eventLogoUrl": "https://www.hyc.ie/system/sponsor_logos/620/normal/Howth_Yacht_Club_-_Logo_RGB.jpg",
     "venueUrl": "",
@@ -1845,6 +1845,169 @@
         }
       ],
       "name": null
+    },
+    {
+      "id": "c6c7a80a-53bc-572e-9f42-777557d35aca",
+      "raceNumber": 7,
+      "date": "2026-08-05",
+      "starts": [
+        {
+          "id": "076caa9e-90e1-5c4b-9ef9-fb59702b6611",
+          "fleetIds": [
+            "136c7df9-258b-5a63-a9e3-69d7206a98ac",
+            "6310a11e-eb41-5804-86c5-515d15bc1bdc"
+          ],
+          "startTime": "19:15:00"
+        },
+        {
+          "id": "ecd4fa99-2958-5c94-ac4a-53610c8f9336",
+          "fleetIds": [
+            "2d378669-a3d2-510d-87ed-01766222cd40",
+            "0976cc7a-fd48-508e-853d-db05b6a942d0"
+          ],
+          "startTime": "19:20:00"
+        },
+        {
+          "id": "b1b01fe3-a453-59c4-946c-a21f43216651",
+          "fleetIds": [
+            "d87ba140-cc88-56e9-9713-4caebd61ff32",
+            "cb405872-5fab-5957-9e89-2fa3a21197d2"
+          ],
+          "startTime": "19:25:00"
+        }
+      ],
+      "finishes": [
+        {
+          "id": "255f99b3-d2a3-5758-a41b-add4e055362b",
+          "competitorId": "b411a915-19c4-58b2-912b-42e319986aae",
+          "sortOrder": 0,
+          "finishTime": "20:16:37",
+          "resultCode": null,
+          "startPresent": null,
+          "penaltyCode": null,
+          "penaltyOverride": null
+        },
+        {
+          "id": "f3f66db6-d7ec-5772-b50f-9dcbfb303b06",
+          "competitorId": "a2c1384a-c11b-542a-b683-88dd6b6a98a6",
+          "sortOrder": 1,
+          "finishTime": "20:17:04",
+          "resultCode": null,
+          "startPresent": null,
+          "penaltyCode": null,
+          "penaltyOverride": null
+        },
+        {
+          "id": "ca038f74-5bb9-5029-9d8e-fae1c300440d",
+          "competitorId": "3ede8879-5b4c-547e-9df3-c8bb08df4bf8",
+          "sortOrder": 2,
+          "finishTime": "20:17:12",
+          "resultCode": null,
+          "startPresent": null,
+          "penaltyCode": null,
+          "penaltyOverride": null
+        },
+        {
+          "id": "51473008-eb2b-58d2-ae9e-b386511dbf23",
+          "competitorId": "3f899f0e-c4ed-51d9-92e0-bcb1ef8bee68",
+          "sortOrder": 3,
+          "finishTime": "20:22:12",
+          "resultCode": null,
+          "startPresent": null,
+          "penaltyCode": null,
+          "penaltyOverride": null
+        },
+        {
+          "id": "25190b95-acaf-540d-821a-a0208b14ea1f",
+          "competitorId": "a8622194-ece0-5b2d-9c16-c5edb77cfad7",
+          "sortOrder": 4,
+          "finishTime": "20:22:49",
+          "resultCode": null,
+          "startPresent": null,
+          "penaltyCode": null,
+          "penaltyOverride": null
+        },
+        {
+          "id": "90be1e89-ff86-5f4b-b45a-b6057ec6ae16",
+          "competitorId": "bbc057bc-62af-53c7-bdd1-6335abf8f07a",
+          "sortOrder": 5,
+          "finishTime": "20:23:23",
+          "resultCode": null,
+          "startPresent": null,
+          "penaltyCode": null,
+          "penaltyOverride": null
+        },
+        {
+          "id": "f4142d8f-dd1d-50c4-b01e-eafe3329d0b0",
+          "competitorId": "b5a2cd11-0076-5038-b984-246614364e17",
+          "sortOrder": 6,
+          "finishTime": "20:23:55",
+          "resultCode": null,
+          "startPresent": null,
+          "penaltyCode": null,
+          "penaltyOverride": null
+        },
+        {
+          "id": "76d28b32-d98f-5365-82d1-58dd25941558",
+          "competitorId": "2c6ba9c6-b398-5b1e-9397-01495edb7467",
+          "sortOrder": 7,
+          "finishTime": "20:25:58",
+          "resultCode": null,
+          "startPresent": null,
+          "penaltyCode": null,
+          "penaltyOverride": null
+        },
+        {
+          "id": "76b20825-9f18-5fc3-af71-95f84baeafd2",
+          "competitorId": "d5dca1e9-9d1a-57d5-b949-cdd891ffc0e0",
+          "sortOrder": 8,
+          "finishTime": "20:28:02",
+          "resultCode": null,
+          "startPresent": null,
+          "penaltyCode": null,
+          "penaltyOverride": null
+        },
+        {
+          "id": "d253c7ba-583f-569c-9eeb-8e8db3578d40",
+          "competitorId": "e2e13d01-f552-5839-97bb-c1c1ab11c346",
+          "sortOrder": 9,
+          "finishTime": "20:29:30",
+          "resultCode": null,
+          "startPresent": null,
+          "penaltyCode": null,
+          "penaltyOverride": null
+        },
+        {
+          "id": "3eeeddb4-dfd2-5846-84bf-ac63b947fb6d",
+          "competitorId": "b8a0f24d-7e55-5fbd-a5bc-82368739a925",
+          "sortOrder": 10,
+          "finishTime": "20:32:37",
+          "resultCode": null,
+          "startPresent": null,
+          "penaltyCode": null,
+          "penaltyOverride": null
+        },
+        {
+          "id": "0867a9af-a89a-510d-a658-895423037103",
+          "competitorId": "af0add56-0479-5f13-ba5b-142e039df46d",
+          "sortOrder": 11,
+          "finishTime": "20:34:29",
+          "resultCode": null,
+          "startPresent": null,
+          "penaltyCode": null,
+          "penaltyOverride": null
+        },
+        {
+          "id": "c5a435a1-8bf9-5e42-b82c-7db305afdf21",
+          "competitorId": "f7342fd0-6fbf-529e-9866-fba6d3bc34fd",
+          "sortOrder": null,
+          "resultCode": "NSC",
+          "startPresent": null,
+          "penaltyCode": null,
+          "penaltyOverride": null
+        }
+      ],
+      "name": null
     }
   ],
   "subSeries": [
@@ -1888,7 +2051,8 @@
       "name": "Series 3",
       "displayOrder": 2,
       "raceIds": [
-        "27aef896-ef1a-59ca-b841-6fde7249069a"
+        "27aef896-ef1a-59ca-b841-6fde7249069a",
+        "c6c7a80a-53bc-572e-9f42-777557d35aca"
       ],
       "raceFleetExclusions": [],
       "excludeDncOnlyCompetitors": true,
