@@ -59,6 +59,15 @@ jobs:
         working-directory: app
         run: pnpm install --frozen-lockfile
 
+      # `merge-club-series` and `verify-club-merge` import the app's Sailwave
+      # importer and scoring engine by relative path — one canonical engine,
+      # never forked (CLAUDE.md) — which assumes the sibling checkout this repo
+      # is developed against (`../sailscoring`). Actions can only check out
+      # *inside* the workspace, so the app lands at `app/` and that sibling path
+      # doesn't exist; link it at the checkout.
+      - name: Link the app as a sibling checkout
+        run: ln -sfn "$GITHUB_WORKSPACE/app" "$(dirname "$GITHUB_WORKSPACE")/sailscoring"
+
       - name: Merge the club series
         run: pnpm merge-club-series
 
