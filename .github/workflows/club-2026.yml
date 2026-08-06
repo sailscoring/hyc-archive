@@ -13,8 +13,28 @@
 # a fresh series id per call and deduplicates only a byte-identical replay.
 #
 # Secrets:
-#   APP_REPO_TOKEN              read access to sailscoring/sailscoring
-#   SAILSCORING_ARCHIVIST_TOKEN the hyc workspace's API key
+#   APP_REPO_TOKEN                        read access to sailscoring/sailscoring
+#   SAILSCORING_PRIVILEGED_IMPORTER_TOKEN an hyc-workspace API key holding
+#                                         `manage-series` — see the warning
+#
+# ⚠️  TEMPORARY PRIVILEGE — TO BE REMOVED.
+#
+# This workflow does NOT use `SAILSCORING_ARCHIVIST_TOKEN`, and must not. That
+# key is deliberately powerless outside the archive (ADR-010: `read` +
+# `archive-ingest`, so a leak can touch nothing but already-public results).
+# The series built here are **full-fidelity** — live, re-scoreable scoring data
+# — so writing them needs `manage-series`, which is a far bigger key: it can
+# rewrite HYC's real club racing, not just the archive.
+#
+# It is deliberately a *separate* secret so the blast radius stays visible and
+# revoking it costs nothing else: the as-published ingest keeps its narrow key
+# and is unaffected.
+#
+# Accepted for now because 2026 is a one-off demonstration of the sub-series
+# method. If HYC adopts the shape for a season they actually score, this wants
+# a properly scoped permission rather than a borrowed admin-grade key —
+# tracked as sailscoring#370. Until then: revoke this key the moment the demo
+# stops needing refreshing.
 name: club-2026
 
 on:
@@ -32,7 +52,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      SAILSCORING_TOKEN: ${{ secrets.SAILSCORING_ARCHIVIST_TOKEN }}
+      # The CLI reads the token from the environment; the `if:` gate below
+      # tests it through the job env because `secrets` isn't available in `if:`.
+      SAILSCORING_TOKEN: ${{ secrets.SAILSCORING_PRIVILEGED_IMPORTER_TOKEN }}
     steps:
       - uses: actions/checkout@v7
 
@@ -100,6 +122,9 @@ jobs:
       # upserts at its own id, so an updated .blw replaces the series rather
       # than adding another. Without it, every changed file would be a new
       # series in the workspace.
+      #
+      # Runs under the privileged importer key, not the archivist one — see the
+      # warning at the top of this file.
       - name: Import into the workspace
         if: env.SAILSCORING_TOKEN != ''
         working-directory: app

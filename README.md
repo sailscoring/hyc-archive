@@ -59,6 +59,7 @@ club-2026/                the blocked club-racing series (committed: the build i
   backup-summaries.yml    on-demand summaries capture → PR → auto-merge
   as-published.yml        emit → generate → push to the hyc workspace
   club-2026.yml           merge → check reproducible → import into the workspace
+                          (⚠️ uses a privileged token — see its header, app #370)
 ```
 
 The capture automation moved here from [`markmc/reshyc`](https://github.com/markmc/reshyc)
@@ -142,6 +143,14 @@ with `scripts/ftp-paths.ts` here as the HYC-specific caller.
   (app `PUT /api/v1/series/:id/file`): each file upserts at the id it carries,
   so a re-run updates the series rather than adding a second copy. That id is
   UUIDv5 over a stable key, which is what makes the merge re-runnable at all.
+- ⚠️ **Temporary privilege, to be removed** (app #370). That import writes
+  *full-fidelity* series, which needs `manage-series` — far more than the
+  archivist key's `read` + `archive-ingest`, which by design *"can touch
+  nothing but its workspace's already-public archive"* (ADR-010). So it runs
+  under a **separate** secret, `SAILSCORING_PRIVILEGED_IMPORTER_TOKEN`, kept
+  apart from `SAILSCORING_ARCHIVIST_TOKEN` so the blast radius stays visible
+  and revoking it costs nothing else. Accepted while 2026 is a one-off demo;
+  revoke it once the demo stops being refreshed.
 
 ## Licensing
 
