@@ -161,6 +161,24 @@ is where the demo diverges and why.
   the dinghy files: sail 741 (Harry George) and 1519 (Eliana Duffy) changed sail
   number between Series 1 and 2.
 
+- **The Tuesday Puppeteers get an `Overall` block**, scoring all 12 Tuesday
+  races as one series. HYC has published one since 2025 (`Tues Overall -
+  Puppeteer 22`, `sources/reshyc/.../2025/club/overall_tuepup.htm`: 16 races,
+  4 discards, HPH and Scratch). It is scoped by `fleetIds` to the two Puppeteer
+  fleets — the Squibs sail the same races and have no equivalent — and unlike
+  the per-series blocks it ranks the **full entry list**
+  (`excludeDncOnlyCompetitors: false`): over a season as a whole, a boat that
+  entered is an entrant, which is why the club's own 2025 page reads
+  `Entries: 24` against 16 races. Handicaps run from base across the season
+  rather than continuing the last block, since the overall is its own
+  progression over all the races.
+
+  Only 10 of the 12 races count for the Puppeteers: they did not race on 23
+  June or 7 July, when only the Squibs finished, so those are struck per fleet
+  and the allowance is `floor(10/4) = 2` rather than 3. That matches the
+  published pages, where Tuesday Series 2 shows 3 races for the Puppeteers and
+  5 for the Squibs.
+
 - **Per-block entry lists don't survive the merge — blocks rank only boats that
   sailed.** The largest divergence, and the reason the demo isn't the record.
 

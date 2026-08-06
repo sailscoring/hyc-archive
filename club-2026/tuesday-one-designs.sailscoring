@@ -53,6 +53,22 @@
       {
         "raceId": "c3af72ce-e2e5-5ef4-a516-05858e3fd8ef",
         "fleetId": "a3efe6dd-d12c-59ad-bea2-2d5a904935c8"
+      },
+      {
+        "raceId": "ac89ec22-5de0-55c6-887a-fc454fe0a69e",
+        "fleetId": "8c886312-cd0f-5572-9b6c-52d91b5ce704"
+      },
+      {
+        "raceId": "ac89ec22-5de0-55c6-887a-fc454fe0a69e",
+        "fleetId": "a3efe6dd-d12c-59ad-bea2-2d5a904935c8"
+      },
+      {
+        "raceId": "c3af72ce-e2e5-5ef4-a516-05858e3fd8ef",
+        "fleetId": "8c886312-cd0f-5572-9b6c-52d91b5ce704"
+      },
+      {
+        "raceId": "c3af72ce-e2e5-5ef4-a516-05858e3fd8ef",
+        "fleetId": "a3efe6dd-d12c-59ad-bea2-2d5a904935c8"
       }
     ]
   },
@@ -3338,6 +3354,49 @@
       "excludeDncOnlyCompetitors": true,
       "startingHandicapSource": "continue",
       "continueFromSubSeriesId": "5aff25b5-f3a0-57c4-9a91-ff7811c06f33"
+    },
+    {
+      "id": "49b3fa0d-c3f3-5da2-96ab-5c4adbba0d1b",
+      "name": "Overall",
+      "displayOrder": 3,
+      "raceIds": [
+        "93856e89-fc9b-556f-a339-3f214d454d30",
+        "f3c16267-1e26-5209-acd2-080e3bc6ae11",
+        "cefc3d59-6b88-510e-8ad4-64ab9b5f9d2a",
+        "b3363ca9-45ee-5f86-bf6c-fdafc5576144",
+        "c1ffa8d9-f481-52f6-b191-60444d15a3dc",
+        "726498d3-d0ae-51b6-8bc1-76401af74525",
+        "ac89ec22-5de0-55c6-887a-fc454fe0a69e",
+        "ca667ff3-ef0c-5f0c-bcf3-c2a0e23341cb",
+        "c3af72ce-e2e5-5ef4-a516-05858e3fd8ef",
+        "9cf4efec-11b9-5449-83aa-901196e6de27",
+        "82c2b570-f209-5f14-a58d-59e8356f09da",
+        "49a77a45-eedf-5622-84d2-18184ae8a674"
+      ],
+      "fleetIds": [
+        "8c886312-cd0f-5572-9b6c-52d91b5ce704",
+        "a3efe6dd-d12c-59ad-bea2-2d5a904935c8"
+      ],
+      "raceFleetExclusions": [
+        {
+          "raceId": "ac89ec22-5de0-55c6-887a-fc454fe0a69e",
+          "fleetId": "8c886312-cd0f-5572-9b6c-52d91b5ce704"
+        },
+        {
+          "raceId": "ac89ec22-5de0-55c6-887a-fc454fe0a69e",
+          "fleetId": "a3efe6dd-d12c-59ad-bea2-2d5a904935c8"
+        },
+        {
+          "raceId": "c3af72ce-e2e5-5ef4-a516-05858e3fd8ef",
+          "fleetId": "8c886312-cd0f-5572-9b6c-52d91b5ce704"
+        },
+        {
+          "raceId": "c3af72ce-e2e5-5ef4-a516-05858e3fd8ef",
+          "fleetId": "a3efe6dd-d12c-59ad-bea2-2d5a904935c8"
+        }
+      ],
+      "startingHandicapSource": "base",
+      "excludeDncOnlyCompetitors": false
     }
   ]
 }

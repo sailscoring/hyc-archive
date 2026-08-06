@@ -78,6 +78,17 @@ interface GroupSpec {
   /** Each block continues the previous block's ratings. */
   carryHandicaps: boolean;
   blocks: BlockSpec[];
+  /**
+   * An extra sub-series scoring **every** race of the group as one series — the
+   * season-long table alongside the individual series. HYC publishes one for
+   * the Tuesday Puppeteers (`Tues Overall - Puppeteer 22`, from 2025), which is
+   * the shape this reproduces: all races, scoped to the named fleets.
+   *
+   * Its `fleets` are matched by name; omit the field for a group that has no
+   * overall. Fleet scoping is what keeps it to the Puppeteers — the Squibs
+   * sailing the same races have no overall of their own.
+   */
+  overall?: { name: string; fleets: string[] };
 }
 
 const BLW_ROOT = 'sources/blw/2026';
@@ -160,6 +171,11 @@ const GROUPS: GroupSpec[] = [
       { name: 'Series 2', file: `${BLW_ROOT}/tuesday-one-designs/series-2.blw`, defaultRaceDate: '2026-06-09' },
       { name: 'Series 3', file: `${BLW_ROOT}/tuesday-one-designs/series-3.blw`, defaultRaceDate: '2026-07-21' },
     ],
+    // HYC has published a Tuesday Puppeteer overall since 2025
+    // (sources/reshyc/.../2025/club/overall_tuepup.htm: 16 races, 4 discards,
+    // "Puppeteer 22 HPH Fleet" and "Puppeteer 22 Scratch Fleet"). The Squibs
+    // sail the same races and have no equivalent, hence the fleet scoping.
+    overall: { name: 'Overall', fleets: ['Puppeteer HPH', 'Puppeteer Scr'] },
   },
   {
     key: 'tuesday-saturday-howth-17',
@@ -498,6 +514,38 @@ function mergeGroup(group: GroupSpec, repoRoot: string): { file: SeriesFile; not
         : { startingHandicapSource: 'base' as const }),
     });
     previousBlockId = blockId;
+  }
+
+  // ---- The season-long overall, if the group publishes one ----
+  if (group.overall) {
+    const scoped = group.overall.fleets.map((name) => {
+      const id = fleetIdByName.get(name);
+      if (!id) {
+        throw new Error(
+          `${group.key}: overall names fleet "${name}", which no block has — ` +
+            `known fleets: ${[...fleetIdByName.keys()].join(', ')}`,
+        );
+      }
+      return id;
+    });
+    subSeries.push({
+      id: uuidv5(`${group.key}/block/${group.overall.name}`),
+      name: group.overall.name,
+      displayOrder: subSeries.length,
+      // Every race of the group, scored as one series.
+      raceIds: races.map((r) => r.id),
+      fleetIds: scoped,
+      // The strikes the blocks carry apply here too: a race that didn't count
+      // for a fleet doesn't start counting because the overall spans them all.
+      raceFleetExclusions: subSeries.flatMap((b) => b.raceFleetExclusions ?? []),
+      // Ratings run from base across the whole season — the overall is its own
+      // progression over all the races, not a continuation of the last block.
+      startingHandicapSource: 'base',
+      // Unlike a block, this ranks the full entry list: over the season as a
+      // whole, a boat that entered is an entrant, and HYC's own 2025 overall
+      // reads `Entries: 24` against 16 races for exactly that reason.
+      excludeDncOnlyCompetitors: false,
+    });
   }
 
   // ---- Series ----
