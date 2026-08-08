@@ -28,7 +28,21 @@ jobs:
           branch: create-pull-request/ftp-backup
       - name: Merge pull request
         if: ${{ steps.cpr.outputs.pull-request-number }}
-        run: gh pr merge --rebase "${{ steps.cpr.outputs.pull-request-number }}"
+        run: |
+          # GitHub computes mergeability asynchronously and we ask barely a
+          # second after the branch is pushed; merging too early fails with a
+          # spurious "Base branch was modified". Wait for it to settle.
+          pr=${{ steps.cpr.outputs.pull-request-number }}
+          for attempt in 1 2 3 4 5; do
+            state=$(gh pr view "$pr" --json mergeable --jq .mergeable || echo UNKNOWN)
+            if [ "$state" = MERGEABLE ] && gh pr merge --rebase "$pr"; then
+              exit 0
+            fi
+            echo "attempt $attempt did not merge (mergeable=$state); retrying in 15s"
+            sleep 15
+          done
+          echo "::error::could not merge PR $pr after 5 attempts"
+          exit 1
         env:
           GH_TOKEN: ${{ github.token }}
       - name: Delete pull request branch
