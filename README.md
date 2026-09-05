@@ -128,7 +128,12 @@ with `scripts/ftp-paths.ts` here as the HYC-specific caller.
   pages the admin catalogue never linked (all of 2011–2014 plus later
   revision/overall pages), which need display names sourced some other way;
   the identity manifest; prize-winner (summaries/) data — mirror
-  dbsc-archive's `yearbook/`.
+  dbsc-archive's `yearbook/`. Before drafting the identity manifest, set the
+  workspace's **home club** (`provision-org set-home-club hyc "Howth Yacht
+  Club"`, app #507) and pass the same name to `cluster-rows` as
+  `{ homeClub, rows }`: 12,874 of this corpus's 20,662 rows leave the club
+  blank because members were assumed, and without it the matcher has no club
+  signal at all for them.
 - ⬜ Thread the 2026 live-series FTP paths into the HYC workspace.
 - ✅ 2026 as-published: the ten finished club series (Series 1 and 2 of each
   racing group) plus five finished open events — Fireball Nationals, Dinghy
