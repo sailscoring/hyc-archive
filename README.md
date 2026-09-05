@@ -49,8 +49,13 @@ Makefile                  the capture targets: backup / admin-backup / summaries
 as-published.config.json  generated ingest config (committed; input to the app's
                           archive-generate)
 as-published-skips.json   series the archive-kit can't ingest yet, with reasons
+                          (empty since app #355)
 as-published-race-results.json  one-off events published as a race result, not
                           a series table (app #347) — curated, see CLARIFICATIONS
+as-published-race-sections.json  race-only pages whose race tables are several
+                          fleets, not several races (app #355) — curated
+as-published-display-only.json  pages re-presenting racing another page of the
+                          same event already carries (app #363) — curated
 club-2026/                the blocked club-racing series (committed: the build is
                           reproducible, so the diff shows what a merge changed)
 .github/workflows/

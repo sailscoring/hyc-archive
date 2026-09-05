@@ -1039,6 +1039,118 @@
       ]
     },
     {
+      "key": "hyc-2015-open-lambay-inshore",
+      "id": "99f165c7-fbb1-5da1-800c-d32224d93f7d",
+      "publishedSlug": "2015",
+      "name": "Lambay Inshore 2015",
+      "venue": "Howth",
+      "venueUrl": "https://www.hyc.ie",
+      "venueLogoUrl": "https://logos.sailscoring.ie/hyc.png",
+      "startDate": "2015-04-01",
+      "source": "sailwave",
+      "category": "Open Events",
+      "fleets": [
+        {
+          "name": "Howth 17 Hcap",
+          "subPath": "lambay-inshore/howth-17-hcap",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2015/open/lambay_inshore/seventeen_hcap.htm",
+          "includeRaces": true
+        },
+        {
+          "name": "Puppeteer Hcap",
+          "subPath": "lambay-inshore/puppeteer-hcap",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2015/open/lambay_inshore/puppeteer_hcap.htm",
+          "includeRaces": true
+        },
+        {
+          "name": "Puppeteer Scr",
+          "subPath": "lambay-inshore/puppeteer-scr",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2015/open/lambay_inshore/puppeteer_scr.htm",
+          "includeRaces": true
+        },
+        {
+          "name": "Howth 17 Scr",
+          "subPath": "lambay-inshore/howth-17-scr",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2015/open/lambay_inshore/seventeen_scr.htm",
+          "includeRaces": true
+        }
+      ]
+    },
+    {
+      "key": "hyc-2015-open-lambay-offshore",
+      "id": "49e32a47-7b2e-5b2e-9542-24a7834769d9",
+      "publishedSlug": "2015",
+      "name": "Lambay Offshore 2015",
+      "venue": "Howth",
+      "venueUrl": "https://www.hyc.ie",
+      "venueLogoUrl": "https://logos.sailscoring.ie/hyc.png",
+      "startDate": "2015-04-01",
+      "source": "sailwave",
+      "category": "Open Events",
+      "fleets": [
+        {
+          "name": "Class 1 Echo",
+          "subPath": "lambay-offshore/class-1-echo",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2015/open/lambay_offshore/class1_echo.htm",
+          "includeRaces": true
+        },
+        {
+          "name": "Class 1 IRC",
+          "subPath": "lambay-offshore/class-1-irc",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2015/open/lambay_offshore/class1_irc.htm",
+          "includeRaces": true
+        },
+        {
+          "name": "Non Spinnaker 4 IRC",
+          "subPath": "lambay-offshore/non-spinnaker-4-irc",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2015/open/lambay_offshore/whitesail4_irc.htm",
+          "includeRaces": true
+        },
+        {
+          "name": "Non Spinnaker 4 ECHO",
+          "subPath": "lambay-offshore/non-spinnaker-4-echo",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2015/open/lambay_offshore/whitesail4_echo.htm",
+          "includeRaces": true
+        },
+        {
+          "name": "Class 2 Echo",
+          "subPath": "lambay-offshore/class-2-echo",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2015/open/lambay_offshore/class2_echo.htm",
+          "includeRaces": true
+        },
+        {
+          "name": "Class 2 IRC",
+          "subPath": "lambay-offshore/class-2-irc",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2015/open/lambay_offshore/class2_irc.htm",
+          "includeRaces": true
+        },
+        {
+          "name": "Class 3 IRC",
+          "subPath": "lambay-offshore/class-3-irc",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2015/open/lambay_offshore/class3_irc.htm",
+          "includeRaces": true
+        },
+        {
+          "name": "Class 3 Echo",
+          "subPath": "lambay-offshore/class-3-echo",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2015/open/lambay_offshore/class3_echo.htm",
+          "includeRaces": true
+        },
+        {
+          "name": "Non Spinnaker 5 IRC",
+          "subPath": "lambay-offshore/non-spinnaker-5-irc",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2015/open/lambay_offshore/whitesail5_irc.htm",
+          "includeRaces": true
+        },
+        {
+          "name": "Non Spinnaker 5 ECHO",
+          "subPath": "lambay-offshore/non-spinnaker-5-echo",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2015/open/lambay_offshore/whitesail5_echo.htm",
+          "includeRaces": true
+        }
+      ]
+    },
+    {
       "key": "hyc-2015-open-squib-irish-championship",
       "id": "244f15ba-1840-5738-a9ed-d87ec9c53632",
       "publishedSlug": "2015",
@@ -1055,6 +1167,32 @@
           "subPath": "squib-irish-championship/scratch",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2015/open/squibIrishChamps/squibIrishChamps.htm",
           "includeRaces": true
+        }
+      ]
+    },
+    {
+      "key": "hyc-2015-open-howth-to-drogheda",
+      "id": "93b687ac-5786-58da-93b7-533ac48239b0",
+      "publishedSlug": "2015",
+      "name": "Howth to Drogheda 2015",
+      "venue": "Howth",
+      "venueUrl": "https://www.hyc.ie",
+      "venueLogoUrl": "https://logos.sailscoring.ie/hyc.png",
+      "startDate": "2015-04-01",
+      "source": "sailwave",
+      "category": "Open Events",
+      "fleets": [
+        {
+          "name": "Yacht Challenge",
+          "subPath": "howth-to-drogheda/yacht-challenge",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2015/open/howth_drogheda/howth_drogheda_hcap.htm",
+          "includeRaces": true
+        }
+      ],
+      "folders": [
+        {
+          "path": "howth-to-drogheda",
+          "label": "Howth to Drogheda"
         }
       ]
     },
@@ -1131,6 +1269,44 @@
       ]
     },
     {
+      "key": "hyc-2015-open-double-handed-race",
+      "id": "8bf6098a-e552-592f-a9ec-af917d7b6b5e",
+      "publishedSlug": "2015",
+      "name": "Double Handed Race 2015",
+      "venue": "Howth",
+      "venueUrl": "https://www.hyc.ie",
+      "venueLogoUrl": "https://logos.sailscoring.ie/hyc.png",
+      "startDate": "2015-04-01",
+      "source": "sailwave",
+      "category": "Open Events",
+      "fleets": [
+        {
+          "name": "White Sails IRC",
+          "subPath": "double-handed-race/white-sails-irc",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2015/open/double_handed_race/White Sails IRC.htm",
+          "includeRaces": true
+        },
+        {
+          "name": "White Sails Hcap",
+          "subPath": "double-handed-race/white-sails-hcap",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2015/open/double_handed_race/White Sails Hcap.htm",
+          "includeRaces": true
+        },
+        {
+          "name": "Spinnaker IRC",
+          "subPath": "double-handed-race/spinnaker-irc",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2015/open/double_handed_race/Spinnaker IRC.htm",
+          "includeRaces": true
+        },
+        {
+          "name": "Spinnaker Hcap",
+          "subPath": "double-handed-race/spinnaker-hcap",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2015/open/double_handed_race/Spinnaker Hcap.htm",
+          "includeRaces": true
+        }
+      ]
+    },
+    {
       "key": "hyc-2015-open-topper-travellers-trophy-no-4",
       "id": "6623590a-e3e4-52de-be43-ac74c3df4fd2",
       "publishedSlug": "2015",
@@ -1159,6 +1335,148 @@
         {
           "path": "topper-travellers-trophy-no-4",
           "label": "Topper Travellers Trophy No.4"
+        }
+      ]
+    },
+    {
+      "key": "hyc-2015-open-gibney-classic",
+      "id": "6dbbb3c9-55e9-519f-af7d-a048d2d09e9d",
+      "publishedSlug": "2015",
+      "name": "Gibney Classic 2015",
+      "venue": "Howth",
+      "venueUrl": "https://www.hyc.ie",
+      "venueLogoUrl": "https://logos.sailscoring.ie/hyc.png",
+      "startDate": "2015-04-01",
+      "source": "sailwave",
+      "category": "Open Events",
+      "fleets": [
+        {
+          "name": "Class 1 IRC",
+          "subPath": "gibney-classic/class-1-irc",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2015/open/gibney classic/class1_irc.htm",
+          "includeRaces": true
+        },
+        {
+          "name": "Class 1 Echo",
+          "subPath": "gibney-classic/class-1-echo",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2015/open/gibney classic/class1_echo.htm",
+          "includeRaces": true
+        },
+        {
+          "name": "Class 2 IRC",
+          "subPath": "gibney-classic/class-2-irc",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2015/open/gibney classic/class2_irc.htm",
+          "includeRaces": true
+        },
+        {
+          "name": "Class 2 Echo",
+          "subPath": "gibney-classic/class-2-echo",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2015/open/gibney classic/class2_echo.htm",
+          "includeRaces": true
+        },
+        {
+          "name": "Class 3 IRC",
+          "subPath": "gibney-classic/class-3-irc",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2015/open/gibney classic/class3_irc.htm",
+          "includeRaces": true
+        },
+        {
+          "name": "Class 3 Echo",
+          "subPath": "gibney-classic/class-3-echo",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2015/open/gibney classic/class3_echo.htm",
+          "includeRaces": true
+        },
+        {
+          "name": "White Sails IRC",
+          "subPath": "gibney-classic/white-sails-irc",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2015/open/gibney classic/whitesail_irc.htm",
+          "includeRaces": true
+        },
+        {
+          "name": "White Sails Echo",
+          "subPath": "gibney-classic/white-sails-echo",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2015/open/gibney classic/whitesail_echo.htm",
+          "includeRaces": true
+        },
+        {
+          "name": "Puppeteer Scr",
+          "subPath": "gibney-classic/puppeteer-scr",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2015/open/gibney classic/puppeteer_scr.htm",
+          "includeRaces": true
+        },
+        {
+          "name": "Howth 17 Scr",
+          "subPath": "gibney-classic/howth-17-scr",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2015/open/gibney classic/17scr.htm",
+          "includeRaces": true
+        },
+        {
+          "name": "Howth 17 Hcap",
+          "subPath": "gibney-classic/howth-17-hcap",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2015/open/gibney classic/17hcap.htm",
+          "includeRaces": true
+        },
+        {
+          "name": "Squib Scr",
+          "subPath": "gibney-classic/squib-scr",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2015/open/gibney classic/squib_scr.htm",
+          "includeRaces": true
+        },
+        {
+          "name": "Squib Hcap",
+          "subPath": "gibney-classic/squib-hcap",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2015/open/gibney classic/squib_hcap.htm",
+          "includeRaces": true
+        }
+      ]
+    },
+    {
+      "key": "hyc-2015-open-dinghy-regatta",
+      "id": "452736fc-8367-5987-9810-a8745eccbf46",
+      "publishedSlug": "2015",
+      "name": "Dinghy Regatta 2015",
+      "venue": "Howth",
+      "venueUrl": "https://www.hyc.ie",
+      "venueLogoUrl": "https://logos.sailscoring.ie/hyc.png",
+      "startDate": "2015-04-01",
+      "source": "sailwave",
+      "category": "Open Events",
+      "fleets": [
+        {
+          "name": "Optimist - Main Fleet",
+          "subPath": "dinghy-regatta/optimist-main-fleet",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2015/open/dinghyRegatta/optimist_main.htm",
+          "includeRaces": true
+        },
+        {
+          "name": "Optimist - Regatta Fleet",
+          "subPath": "dinghy-regatta/optimist-regatta-fleet",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2015/open/dinghyRegatta/optimist_regatta.htm",
+          "includeRaces": true
+        },
+        {
+          "name": "420",
+          "subPath": "dinghy-regatta/420",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2015/open/dinghyRegatta/420.htm",
+          "includeRaces": true
+        },
+        {
+          "name": "Laser Radial",
+          "subPath": "dinghy-regatta/laser-radial",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2015/open/dinghyRegatta/radial.htm",
+          "includeRaces": true
+        },
+        {
+          "name": "Laser 4.7",
+          "subPath": "dinghy-regatta/laser-4-7",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2015/open/dinghyRegatta/4.7.htm",
+          "includeRaces": true
+        },
+        {
+          "name": "Topper",
+          "subPath": "dinghy-regatta/topper",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2015/open/dinghyRegatta/topper.htm",
+          "includeRaces": true
         }
       ]
     },
@@ -2177,6 +2495,64 @@
       ]
     },
     {
+      "key": "hyc-2016-open-laser-round-the-island-race",
+      "id": "8a90a09d-886f-5b5b-bd15-b2a44d77d7cf",
+      "publishedSlug": "2016",
+      "name": "Laser Round the Island Race 2016",
+      "venue": "Howth",
+      "venueUrl": "https://www.hyc.ie",
+      "venueLogoUrl": "https://logos.sailscoring.ie/hyc.png",
+      "startDate": "2016-04-01",
+      "source": "sailwave",
+      "category": "Open Events",
+      "fleets": [
+        {
+          "name": "4.7 Fleet",
+          "subPath": "laser-round-the-island-race/4-7-fleet",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2016/open/Laserfrost_RoundTheIslandRace/4.7.htm",
+          "includeRaces": true
+        },
+        {
+          "name": "Radial Fleet",
+          "subPath": "laser-round-the-island-race/radial-fleet",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2016/open/Laserfrost_RoundTheIslandRace/radial.htm",
+          "includeRaces": true
+        },
+        {
+          "name": "Standard Fleet",
+          "subPath": "laser-round-the-island-race/standard-fleet",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2016/open/Laserfrost_RoundTheIslandRace/standard.htm",
+          "includeRaces": true
+        }
+      ],
+      "folders": [
+        {
+          "path": "laser-round-the-island-race",
+          "label": "Laser Round the Island Race"
+        }
+      ]
+    },
+    {
+      "key": "hyc-2016-open-brassed-off-cup",
+      "id": "f018098e-4b0a-540b-ace5-d0ff277416bc",
+      "publishedSlug": "2016",
+      "name": "Brassed Off Cup 2016",
+      "venue": "Howth",
+      "venueUrl": "https://www.hyc.ie",
+      "venueLogoUrl": "https://logos.sailscoring.ie/hyc.png",
+      "startDate": "2016-04-01",
+      "source": "sailwave",
+      "category": "Open Events",
+      "fleets": [
+        {
+          "name": "Main Fleet",
+          "subPath": "brassed-off-cup/main-fleet",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2016/open/brassedOffCup/main.htm",
+          "includeRaces": true
+        }
+      ]
+    },
+    {
       "key": "hyc-2016-open-isa-youth-nationals",
       "id": "99fd7f82-b144-5c23-b770-6b012c40e822",
       "publishedSlug": "2016",
@@ -2344,6 +2720,122 @@
       ]
     },
     {
+      "key": "hyc-2016-open-lambay-inshore",
+      "id": "8a1e988f-849e-5739-809d-939a5c494234",
+      "publishedSlug": "2016",
+      "name": "Lambay Inshore 2016",
+      "venue": "Howth",
+      "venueUrl": "https://www.hyc.ie",
+      "venueLogoUrl": "https://logos.sailscoring.ie/hyc.png",
+      "startDate": "2016-04-01",
+      "source": "sailwave",
+      "category": "Open Events",
+      "fleets": [
+        {
+          "name": "Puppeteer Scr",
+          "subPath": "lambay-inshore/puppeteer-scr",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2016/open/lambay_inshore/puppeteer_scr.htm"
+        },
+        {
+          "name": "Puppeteer Hcap",
+          "subPath": "lambay-inshore/puppeteer-hcap",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2016/open/lambay_inshore/puppeteer_hcap.htm"
+        },
+        {
+          "name": "Howth 17 Scr",
+          "subPath": "lambay-inshore/howth-17-scr",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2016/open/lambay_inshore/seventeen_scr.htm",
+          "includeRaces": true
+        },
+        {
+          "name": "Howth 17 Hcap",
+          "subPath": "lambay-inshore/howth-17-hcap",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2016/open/lambay_inshore/seventeen_hcap.htm",
+          "includeRaces": true
+        },
+        {
+          "name": "Ruffian",
+          "subPath": "lambay-inshore/ruffian",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2016/open/lambay_inshore/ruffian_scr.htm",
+          "includeRaces": true
+        }
+      ]
+    },
+    {
+      "key": "hyc-2016-open-lambay-offshore",
+      "id": "c96bbd02-243b-55c5-b783-6d11e899cb83",
+      "publishedSlug": "2016",
+      "name": "Lambay Offshore 2016",
+      "venue": "Howth",
+      "venueUrl": "https://www.hyc.ie",
+      "venueLogoUrl": "https://logos.sailscoring.ie/hyc.png",
+      "startDate": "2016-04-01",
+      "source": "sailwave",
+      "category": "Open Events",
+      "fleets": [
+        {
+          "name": "Class 1 IRC",
+          "subPath": "lambay-offshore/class-1-irc",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2016/open/lambay_offshore/class1_irc.htm",
+          "includeRaces": true
+        },
+        {
+          "name": "Class 1 Echo",
+          "subPath": "lambay-offshore/class-1-echo",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2016/open/lambay_offshore/class1_echo.htm",
+          "includeRaces": true
+        },
+        {
+          "name": "Class 2 IRC",
+          "subPath": "lambay-offshore/class-2-irc",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2016/open/lambay_offshore/class2_irc.htm",
+          "includeRaces": true
+        },
+        {
+          "name": "Class 2 Echo",
+          "subPath": "lambay-offshore/class-2-echo",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2016/open/lambay_offshore/class2_echo.htm",
+          "includeRaces": true
+        },
+        {
+          "name": "Class 3 IRC",
+          "subPath": "lambay-offshore/class-3-irc",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2016/open/lambay_offshore/class3_irc.htm",
+          "includeRaces": true
+        },
+        {
+          "name": "Class 3 Echo",
+          "subPath": "lambay-offshore/class-3-echo",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2016/open/lambay_offshore/class3_echo.htm",
+          "includeRaces": true
+        },
+        {
+          "name": "Non Spinnaker 4 IRC",
+          "subPath": "lambay-offshore/non-spinnaker-4-irc",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2016/open/lambay_offshore/whitesail4_irc.htm",
+          "includeRaces": true
+        },
+        {
+          "name": "Non Spinnaker 4 Echo",
+          "subPath": "lambay-offshore/non-spinnaker-4-echo",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2016/open/lambay_offshore/whitesail4_echo.htm",
+          "includeRaces": true
+        },
+        {
+          "name": "Non Spinnaker 5 IRC",
+          "subPath": "lambay-offshore/non-spinnaker-5-irc",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2016/open/lambay_offshore/whitesail5_irc.htm",
+          "includeRaces": true
+        },
+        {
+          "name": "Non Spinnaker 5 Echo",
+          "subPath": "lambay-offshore/non-spinnaker-5-echo",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2016/open/lambay_offshore/whitesail5_echo.htm",
+          "includeRaces": true
+        }
+      ]
+    },
+    {
       "key": "hyc-2016-open-gibney-classic",
       "id": "344e5b4b-0dde-5a55-adf0-95f30bfe300e",
       "publishedSlug": "2016",
@@ -2407,6 +2899,70 @@
       ]
     },
     {
+      "key": "hyc-2016-open-howth-to-drogheda",
+      "id": "b36fa886-acd5-59c0-aaa5-c6e7f7e9db2a",
+      "publishedSlug": "2016",
+      "name": "Howth to Drogheda 2016",
+      "venue": "Howth",
+      "venueUrl": "https://www.hyc.ie",
+      "venueLogoUrl": "https://logos.sailscoring.ie/hyc.png",
+      "startDate": "2016-04-01",
+      "source": "sailwave",
+      "category": "Open Events",
+      "fleets": [
+        {
+          "name": "Yacht Challenge",
+          "subPath": "howth-to-drogheda/yacht-challenge",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2016/open/howth_drogheda/howth_drogheda_hcap.htm",
+          "includeRaces": true
+        }
+      ],
+      "folders": [
+        {
+          "path": "howth-to-drogheda",
+          "label": "Howth to Drogheda"
+        }
+      ]
+    },
+    {
+      "key": "hyc-2016-open-double-handed-race",
+      "id": "96880b0b-9982-5d9b-9abd-98ec155405c0",
+      "publishedSlug": "2016",
+      "name": "Double Handed Race 2016",
+      "venue": "Howth",
+      "venueUrl": "https://www.hyc.ie",
+      "venueLogoUrl": "https://logos.sailscoring.ie/hyc.png",
+      "startDate": "2016-04-01",
+      "source": "sailwave",
+      "category": "Open Events",
+      "fleets": [
+        {
+          "name": "White Sails IRC",
+          "subPath": "double-handed-race/white-sails-irc",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2016/open/double_handed_race/White Sails IRC.htm",
+          "includeRaces": true
+        },
+        {
+          "name": "White Sails Hcap",
+          "subPath": "double-handed-race/white-sails-hcap",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2016/open/double_handed_race/White Sails Hcap.htm",
+          "includeRaces": true
+        },
+        {
+          "name": "Spinnaker IRC",
+          "subPath": "double-handed-race/spinnaker-irc",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2016/open/double_handed_race/Spinnaker IRC.htm",
+          "includeRaces": true
+        },
+        {
+          "name": "Spinnaker Hcap",
+          "subPath": "double-handed-race/spinnaker-hcap",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2016/open/double_handed_race/Spinnaker Hcap.htm",
+          "includeRaces": true
+        }
+      ]
+    },
+    {
       "key": "hyc-2016-open-puppeteer-nationals",
       "id": "d5d51617-26e0-54d3-a657-485e5eb66629",
       "publishedSlug": "2016",
@@ -2455,6 +3011,45 @@
           "subPath": "howth-17-footer-championship/17-footer-hcap",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2016/open/17Championships/seventeen_hcap.htm",
           "includeRaces": true
+        }
+      ]
+    },
+    {
+      "key": "hyc-2016-open-mermaid-national-championship",
+      "id": "eed94dd1-7414-5074-a42b-1ce9b6557d50",
+      "publishedSlug": "2016",
+      "name": "Mermaid National Championship 2016",
+      "venue": "Howth",
+      "venueUrl": "https://www.hyc.ie",
+      "venueLogoUrl": "https://logos.sailscoring.ie/hyc.png",
+      "startDate": "2016-04-01",
+      "source": "sailwave",
+      "category": "Open Events",
+      "fleets": [
+        {
+          "name": "Mermaid",
+          "subPath": "mermaid-national-championship/mermaid",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2016/open/mermaid_nats/mermaid.htm"
+        },
+        {
+          "name": "Daphne",
+          "subPath": "mermaid-national-championship/daphne",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2016/open/mermaid_nats/daphne.htm"
+        },
+        {
+          "name": "Designer",
+          "subPath": "mermaid-national-championship/designer",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2016/open/mermaid_nats/designer.htm"
+        },
+        {
+          "name": "Celia",
+          "subPath": "mermaid-national-championship/celia",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2016/open/mermaid_nats/celia.htm"
+        },
+        {
+          "name": "Munster",
+          "subPath": "mermaid-national-championship/munster",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2016/open/mermaid_nats/munster.htm"
         }
       ]
     },
@@ -3749,6 +4344,130 @@
       ]
     },
     {
+      "key": "hyc-2017-open-lambay-offshore",
+      "id": "c6d7a591-7917-58f5-97aa-0fc76ec29a43",
+      "publishedSlug": "2017",
+      "name": "Lambay Offshore 2017",
+      "venue": "Howth",
+      "venueUrl": "https://www.hyc.ie",
+      "venueLogoUrl": "https://logos.sailscoring.ie/hyc.png",
+      "startDate": "2017-04-01",
+      "source": "sailwave",
+      "category": "Open Events",
+      "fleets": [
+        {
+          "name": "Class 1 IRC",
+          "subPath": "lambay-offshore/class-1-irc",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2017/open/lambay_offshore/class1_irc.htm",
+          "includeRaces": true
+        },
+        {
+          "name": "Class 1 Echo",
+          "subPath": "lambay-offshore/class-1-echo",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2017/open/lambay_offshore/class1_echo.htm",
+          "includeRaces": true
+        },
+        {
+          "name": "Class 2 IRC",
+          "subPath": "lambay-offshore/class-2-irc",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2017/open/lambay_offshore/class2_irc.htm",
+          "includeRaces": true
+        },
+        {
+          "name": "Class 2 Echo",
+          "subPath": "lambay-offshore/class-2-echo",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2017/open/lambay_offshore/class2_echo.htm",
+          "includeRaces": true
+        },
+        {
+          "name": "Class 3 IRC",
+          "subPath": "lambay-offshore/class-3-irc",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2017/open/lambay_offshore/class3_irc.htm",
+          "includeRaces": true
+        },
+        {
+          "name": "Class 3 Echo",
+          "subPath": "lambay-offshore/class-3-echo",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2017/open/lambay_offshore/class3_echo.htm",
+          "includeRaces": true
+        },
+        {
+          "name": "Non Spinnaker 4 IRC",
+          "subPath": "lambay-offshore/non-spinnaker-4-irc",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2017/open/lambay_offshore/whitesail4_irc.htm",
+          "includeRaces": true
+        },
+        {
+          "name": "Non Spinnaker 4 Echo",
+          "subPath": "lambay-offshore/non-spinnaker-4-echo",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2017/open/lambay_offshore/whitesail4_echo.htm",
+          "includeRaces": true
+        },
+        {
+          "name": "Non Spinnaker 5 IRC",
+          "subPath": "lambay-offshore/non-spinnaker-5-irc",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2017/open/lambay_offshore/whitesail5_irc.htm",
+          "includeRaces": true
+        },
+        {
+          "name": "Non Spinnaker 5 Echo",
+          "subPath": "lambay-offshore/non-spinnaker-5-echo",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2017/open/lambay_offshore/whitesail5_echo.htm",
+          "includeRaces": true
+        },
+        {
+          "name": "Class 31.7",
+          "subPath": "lambay-offshore/class-31-7",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2017/open/lambay_offshore/class31.7.htm",
+          "includeRaces": true
+        }
+      ]
+    },
+    {
+      "key": "hyc-2017-open-lambay-inshore",
+      "id": "31f8ae6f-0fa0-56d9-ae9b-4ebda38c179c",
+      "publishedSlug": "2017",
+      "name": "Lambay Inshore 2017",
+      "venue": "Howth",
+      "venueUrl": "https://www.hyc.ie",
+      "venueLogoUrl": "https://logos.sailscoring.ie/hyc.png",
+      "startDate": "2017-04-01",
+      "source": "sailwave",
+      "category": "Open Events",
+      "fleets": [
+        {
+          "name": "Puppeteer Scr",
+          "subPath": "lambay-inshore/puppeteer-scr",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2017/open/lambay_inshore/puppeteer_scr.htm",
+          "includeRaces": true
+        },
+        {
+          "name": "Puppeteer Hcap",
+          "subPath": "lambay-inshore/puppeteer-hcap",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2017/open/lambay_inshore/puppeteer_hcap.htm",
+          "includeRaces": true
+        },
+        {
+          "name": "Howth 17 Scr",
+          "subPath": "lambay-inshore/howth-17-scr",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2017/open/lambay_inshore/seventeen_scr.htm",
+          "includeRaces": true
+        },
+        {
+          "name": "Howth 17 Hcap",
+          "subPath": "lambay-inshore/howth-17-hcap",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2017/open/lambay_inshore/seventeen_hcap.htm",
+          "includeRaces": true
+        },
+        {
+          "name": "Ruffian",
+          "subPath": "lambay-inshore/ruffian",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2017/open/lambay_inshore/ruffian_scr.htm",
+          "includeRaces": true
+        }
+      ]
+    },
+    {
       "key": "hyc-2017-open-howth-to-drogheda",
       "id": "935a8372-da36-57f1-9690-bf0e3bec5581",
       "publishedSlug": "2017",
@@ -3846,6 +4565,38 @@
           "name": "Class 2 Echo",
           "subPath": "gibney-classic/class-2-echo",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2017/open/gibney classic/class2_echo.htm",
+          "includeRaces": true
+        }
+      ]
+    },
+    {
+      "key": "hyc-2017-open-double-handed-race",
+      "id": "338250e4-3c8c-5986-bc6f-e4bf7ea92bf2",
+      "publishedSlug": "2017",
+      "name": "Double Handed Race 2017",
+      "venue": "Howth",
+      "venueUrl": "https://www.hyc.ie",
+      "venueLogoUrl": "https://logos.sailscoring.ie/hyc.png",
+      "startDate": "2017-04-01",
+      "source": "sailwave",
+      "category": "Open Events",
+      "fleets": [
+        {
+          "name": "White Sails IRC",
+          "subPath": "double-handed-race/white-sails-irc",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2017/open/double_handed_race/White Sails IRC.htm",
+          "includeRaces": true
+        },
+        {
+          "name": "White Sails Hcap",
+          "subPath": "double-handed-race/white-sails-hcap",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2017/open/double_handed_race/White Sails Hcap.htm",
+          "includeRaces": true
+        },
+        {
+          "name": "Spinnaker Hcap",
+          "subPath": "double-handed-race/spinnaker-hcap",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2017/open/double_handed_race/Spinnaker Hcap.htm",
           "includeRaces": true
         }
       ]
@@ -4867,6 +5618,104 @@
       ]
     },
     {
+      "key": "hyc-2018-open-gibney",
+      "id": "c1f128cb-7f25-59dc-9ec9-0f920387dde4",
+      "publishedSlug": "2018",
+      "name": "Gibney 2018",
+      "venue": "Howth",
+      "venueUrl": "https://www.hyc.ie",
+      "venueLogoUrl": "https://logos.sailscoring.ie/hyc.png",
+      "startDate": "2018-04-01",
+      "source": "sailwave",
+      "category": "Open Events",
+      "fleets": [
+        {
+          "name": "Class 2 irc",
+          "subPath": "gibney/class-2-irc",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2018/open_gibney_class2_irc.htm",
+          "includeRaces": true
+        },
+        {
+          "name": "Class 3 echo",
+          "subPath": "gibney/class-3-echo",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2018/open_gibney_class3_echo.htm",
+          "includeRaces": true
+        },
+        {
+          "name": "Class 3 irc",
+          "subPath": "gibney/class-3-irc",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2018/open_gibney_class3_irc.htm",
+          "includeRaces": true
+        },
+        {
+          "name": "White Sails irc",
+          "subPath": "gibney/white-sails-irc",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2018/open_gibney_whitesails_irc.htm",
+          "includeRaces": true
+        },
+        {
+          "name": "White Sails echo",
+          "subPath": "gibney/white-sails-echo",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2018/open_gibney_whitesails_echo.htm",
+          "includeRaces": true
+        },
+        {
+          "name": "Puppeteer hcap",
+          "subPath": "gibney/puppeteer-hcap",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2018/open_gibney_puppeteers_hcap.htm",
+          "includeRaces": true
+        },
+        {
+          "name": "Puppeteer scr",
+          "subPath": "gibney/puppeteer-scr",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2018/open_gibney_puppeteers_scr.htm",
+          "includeRaces": true
+        },
+        {
+          "name": "Squib scr",
+          "subPath": "gibney/squib-scr",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2018/open_gibney_squib_scr.htm",
+          "includeRaces": true
+        },
+        {
+          "name": "Squib hcap",
+          "subPath": "gibney/squib-hcap",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2018/open_gibney_squib_hcap.htm",
+          "includeRaces": true
+        },
+        {
+          "name": "Howth 17 hcap",
+          "subPath": "gibney/howth-17-hcap",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2018/open_gibney_17footer_hcap.htm",
+          "includeRaces": true
+        },
+        {
+          "name": "Howth 17 scr",
+          "subPath": "gibney/howth-17-scr",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2018/open_gibney_17footer_scr.htm",
+          "includeRaces": true
+        },
+        {
+          "name": "Class 1 echo",
+          "subPath": "gibney/class-1-echo",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2018/open_gibney_class1_echo.htm",
+          "includeRaces": true
+        },
+        {
+          "name": "Class 1 irc",
+          "subPath": "gibney/class-1-irc",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2018/open_gibney_class1_irc.htm",
+          "includeRaces": true
+        },
+        {
+          "name": "Class 2 echo",
+          "subPath": "gibney/class-2-echo",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2018/open_gibney_class2_echo.htm",
+          "includeRaces": true
+        }
+      ]
+    },
+    {
       "key": "hyc-2018-open-howth-17-footer-championship",
       "id": "34627f5e-28de-51af-b215-39f86ce88e1d",
       "publishedSlug": "2018",
@@ -5259,6 +6108,38 @@
       ]
     },
     {
+      "key": "hyc-2018-open-laser-round-the-island-race",
+      "id": "19a3b3aa-6622-58dc-a5ae-ee973df3ef50",
+      "publishedSlug": "2018",
+      "name": "Laser Round the Island Race 2018",
+      "venue": "Howth",
+      "venueUrl": "https://www.hyc.ie",
+      "venueLogoUrl": "https://logos.sailscoring.ie/hyc.png",
+      "startDate": "2018-04-01",
+      "source": "sailwave",
+      "category": "Open Events",
+      "fleets": [
+        {
+          "name": "Standard",
+          "subPath": "laser-round-the-island-race/standard",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2018/open/laserfrost_roundtheislandrace/standard.htm",
+          "includeRaces": true
+        },
+        {
+          "name": "Radial Fleet",
+          "subPath": "laser-round-the-island-race/radial-fleet",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2018/open/laserfrost_roundtheislandrace/radial.htm",
+          "includeRaces": true
+        }
+      ],
+      "folders": [
+        {
+          "path": "laser-round-the-island-race",
+          "label": "Laser Round the Island Race"
+        }
+      ]
+    },
+    {
       "key": "hyc-2018-open-brassed-off-cup",
       "id": "95a032aa-6eef-5efe-862f-eba8f38fb688",
       "publishedSlug": "2018",
@@ -5364,6 +6245,44 @@
           "name": "Sundry Slow",
           "subPath": "dinghy-ice-breaker-series/sundry-slow",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2018/open/dinghyIceBreaker/sundry_slow.htm",
+          "includeRaces": true
+        }
+      ]
+    },
+    {
+      "key": "hyc-2018-open-lambay-inshore",
+      "id": "c36f81fa-dc3c-5fe2-b4e6-74e179a7ad6f",
+      "publishedSlug": "2018",
+      "name": "Lambay Inshore 2018",
+      "venue": "Howth",
+      "venueUrl": "https://www.hyc.ie",
+      "venueLogoUrl": "https://logos.sailscoring.ie/hyc.png",
+      "startDate": "2018-04-01",
+      "source": "sailwave",
+      "category": "Open Events",
+      "fleets": [
+        {
+          "name": "Puppeteer Scr",
+          "subPath": "lambay-inshore/puppeteer-scr",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2018/open_lambay_inshore_puppeteer_scr_1.htm",
+          "includeRaces": true
+        },
+        {
+          "name": "Puppeteer Hcap",
+          "subPath": "lambay-inshore/puppeteer-hcap",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2018/open_lambay_inshore_puppeteer_hcap_1.htm",
+          "includeRaces": true
+        },
+        {
+          "name": "Howth 17 Hcap",
+          "subPath": "lambay-inshore/howth-17-hcap",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2018/open_lambay_inshore_howth17_hcap.htm",
+          "includeRaces": true
+        },
+        {
+          "name": "Taste of Racing",
+          "subPath": "lambay-inshore/taste-of-racing",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2018/open_lambay_inshore_tasteofracing.htm",
           "includeRaces": true
         }
       ]
@@ -5489,6 +6408,130 @@
         {
           "path": "wave-regatta-offshore",
           "label": "Wave Regatta offshore"
+        }
+      ]
+    },
+    {
+      "key": "hyc-2018-open-wave-regatta-inshore",
+      "id": "e2d18ec6-699f-5f13-8eb5-7bc5006d1390",
+      "publishedSlug": "2018",
+      "name": "Wave Regatta inshore 2018",
+      "venue": "Howth",
+      "venueUrl": "https://www.hyc.ie",
+      "venueLogoUrl": "https://logos.sailscoring.ie/hyc.png",
+      "startDate": "2018-04-01",
+      "source": "sailwave",
+      "category": "Open Events",
+      "fleets": [
+        {
+          "name": "Howth 17 Scr",
+          "subPath": "wave-regatta-inshore/howth-17-scr",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2018/open_wave_seventeen_scr.htm",
+          "includeRaces": true
+        },
+        {
+          "name": "Howth 17 Hcap",
+          "subPath": "wave-regatta-inshore/howth-17-hcap",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2018/open_wave_seventeen_hcap.htm",
+          "includeRaces": true
+        }
+      ],
+      "folders": [
+        {
+          "path": "wave-regatta-inshore",
+          "label": "Wave Regatta inshore"
+        }
+      ]
+    },
+    {
+      "key": "hyc-2018-open-lambay-offshore",
+      "id": "16083e94-9029-5691-be7b-197b2c8e2a7b",
+      "publishedSlug": "2018",
+      "name": "Lambay Offshore 2018",
+      "venue": "Howth",
+      "venueUrl": "https://www.hyc.ie",
+      "venueLogoUrl": "https://logos.sailscoring.ie/hyc.png",
+      "startDate": "2018-04-01",
+      "source": "sailwave",
+      "category": "Open Events",
+      "fleets": [
+        {
+          "name": "Class 0 IRC",
+          "subPath": "lambay-offshore/class-0-irc",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2018/open_lambay_offshore_class0_irc.htm",
+          "includeRaces": true
+        },
+        {
+          "name": "Class 0 Echo",
+          "subPath": "lambay-offshore/class-0-echo",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2018/open_lambay_offshore_class0_echo.htm",
+          "includeRaces": true
+        },
+        {
+          "name": "Class 1 IRC",
+          "subPath": "lambay-offshore/class-1-irc",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2018/open_lambay_offshore_class1_irc.htm",
+          "includeRaces": true
+        },
+        {
+          "name": "Class 1 Echo",
+          "subPath": "lambay-offshore/class-1-echo",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2018/open_lambay_offshore_class1_echo.htm",
+          "includeRaces": true
+        },
+        {
+          "name": "Class 2 IRC",
+          "subPath": "lambay-offshore/class-2-irc",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2018/open_lambay_offshore_class2_irc.htm",
+          "includeRaces": true
+        },
+        {
+          "name": "Class 2 Echo",
+          "subPath": "lambay-offshore/class-2-echo",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2018/open_lambay_offshore_class2_echo.htm",
+          "includeRaces": true
+        },
+        {
+          "name": "Class 3 IRC",
+          "subPath": "lambay-offshore/class-3-irc",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2018/open_lambay_offshore_class3_irc.htm",
+          "includeRaces": true
+        },
+        {
+          "name": "Class 3 Echo",
+          "subPath": "lambay-offshore/class-3-echo",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2018/open_lambay_offshore_class3_echo.htm",
+          "includeRaces": true
+        },
+        {
+          "name": "Class 4 IRC",
+          "subPath": "lambay-offshore/class-4-irc",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2018/open_lambay_offshore_class4_irc.htm",
+          "includeRaces": true
+        },
+        {
+          "name": "Class 4 Echo",
+          "subPath": "lambay-offshore/class-4-echo",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2018/open_lambay_offshore_class4_echo.htm",
+          "includeRaces": true
+        },
+        {
+          "name": "Class 5 IRC",
+          "subPath": "lambay-offshore/class-5-irc",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2018/open_lambay_offshore_class5_irc.htm",
+          "includeRaces": true
+        },
+        {
+          "name": "Class 5 Echo",
+          "subPath": "lambay-offshore/class-5-echo",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2018/open_lambay_offshore_class5_echo.htm",
+          "includeRaces": true
+        },
+        {
+          "name": "ISORA",
+          "subPath": "lambay-offshore/isora",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2018/open_lambay_offshore_isora.htm",
+          "includeRaces": true
         }
       ]
     },
@@ -6608,6 +7651,130 @@
       ]
     },
     {
+      "key": "hyc-2019-open-lambay-offshore",
+      "id": "718566c1-2f2d-5e79-91a6-a391b85131ee",
+      "publishedSlug": "2019",
+      "name": "Lambay Offshore 2019",
+      "venue": "Howth",
+      "venueUrl": "https://www.hyc.ie",
+      "venueLogoUrl": "https://logos.sailscoring.ie/hyc.png",
+      "startDate": "2019-04-01",
+      "source": "sailwave",
+      "category": "Open Events",
+      "fleets": [
+        {
+          "name": "J80 Scratch",
+          "subPath": "lambay-offshore/j80-scratch",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2019/open_lambay_offshore_j80_scr.htm",
+          "includeRaces": true
+        },
+        {
+          "name": "Class 2 irc",
+          "subPath": "lambay-offshore/class-2-irc",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2019/open_lambay_offshore_class2_irc.htm",
+          "includeRaces": true
+        },
+        {
+          "name": "Class 1 irc",
+          "subPath": "lambay-offshore/class-1-irc",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2019/open_lambay_offshore_class1_irc.htm",
+          "includeRaces": true
+        },
+        {
+          "name": "Class 3 irc",
+          "subPath": "lambay-offshore/class-3-irc",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2019/open_lambay_offshore_class3_irc.htm",
+          "includeRaces": true
+        },
+        {
+          "name": "Class 4 irc",
+          "subPath": "lambay-offshore/class-4-irc",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2019/open_lambay_offshore_class4_irc.htm",
+          "includeRaces": true
+        },
+        {
+          "name": "Class 5 irc",
+          "subPath": "lambay-offshore/class-5-irc",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2019/open_lambay_offshore_class5_irc.htm",
+          "includeRaces": true
+        },
+        {
+          "name": "Class 1 echo",
+          "subPath": "lambay-offshore/class-1-echo",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2019/open_lambay_offshore_class1_echo.htm",
+          "includeRaces": true
+        },
+        {
+          "name": "Class 2 echo",
+          "subPath": "lambay-offshore/class-2-echo",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2019/open_lambay_offshore_class2_echo.htm",
+          "includeRaces": true
+        },
+        {
+          "name": "Class 3 echo",
+          "subPath": "lambay-offshore/class-3-echo",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2019/open_lambay_offshore_class3_echo.htm",
+          "includeRaces": true
+        },
+        {
+          "name": "Class 4 echo",
+          "subPath": "lambay-offshore/class-4-echo",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2019/open_lambay_offshore_class4_echo.htm",
+          "includeRaces": true
+        },
+        {
+          "name": "Class 5 echo",
+          "subPath": "lambay-offshore/class-5-echo",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2019/open_lambay_offshore_class5_echo.htm",
+          "includeRaces": true
+        }
+      ]
+    },
+    {
+      "key": "hyc-2019-open-lambay-inshore",
+      "id": "325d440a-492b-5207-87ed-35d8e8e486d1",
+      "publishedSlug": "2019",
+      "name": "Lambay Inshore 2019",
+      "venue": "Howth",
+      "venueUrl": "https://www.hyc.ie",
+      "venueLogoUrl": "https://logos.sailscoring.ie/hyc.png",
+      "startDate": "2019-04-01",
+      "source": "sailwave",
+      "category": "Open Events",
+      "fleets": [
+        {
+          "name": "Puppeteer 22 scr",
+          "subPath": "lambay-inshore/puppeteer-22-scr",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2019/open_lambay_inshore_puppeteer_scr.htm",
+          "includeRaces": true
+        },
+        {
+          "name": "Puppeteer 22 hcap",
+          "subPath": "lambay-inshore/puppeteer-22-hcap",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2019/open_lambay_inshore_puppeteer_hcap.htm",
+          "includeRaces": true
+        },
+        {
+          "name": "Ruffian",
+          "subPath": "lambay-inshore/ruffian",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2019/open_lambay_inshore_ruffian.htm",
+          "includeRaces": true
+        },
+        {
+          "name": "Howth 17 scr",
+          "subPath": "lambay-inshore/howth-17-scr",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2019/open_lambay_inshore_howth17_scr.htm",
+          "includeRaces": true
+        },
+        {
+          "name": "Howth 17 hcap",
+          "subPath": "lambay-inshore/howth-17-hcap",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2019/open_lambay_inshore_howth17_hcap.htm",
+          "includeRaces": true
+        }
+      ]
+    },
+    {
       "key": "hyc-2019-open-squib-eastern-championships",
       "id": "6a58db23-e2d3-5335-9f5b-17f029ac3e80",
       "publishedSlug": "2019",
@@ -6643,6 +7810,110 @@
           "name": "J24",
           "subPath": "j24-eastern-championships/j24",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2019/open_j24eastern_j24.htm",
+          "includeRaces": true
+        }
+      ]
+    },
+    {
+      "key": "hyc-2019-open-gibney-classic",
+      "id": "95444cac-6828-572b-8de7-818d6d9e02e5",
+      "publishedSlug": "2019",
+      "name": "Gibney Classic 2019",
+      "venue": "Howth",
+      "venueUrl": "https://www.hyc.ie",
+      "venueLogoUrl": "https://logos.sailscoring.ie/hyc.png",
+      "startDate": "2019-04-01",
+      "source": "sailwave",
+      "category": "Open Events",
+      "fleets": [
+        {
+          "name": "Class 1 echo",
+          "subPath": "gibney-classic/class-1-echo",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2019/open_gibney_class1_echo.htm",
+          "includeRaces": true
+        },
+        {
+          "name": "Class 1 irc",
+          "subPath": "gibney-classic/class-1-irc",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2019/open_gibney_class1_irc.htm",
+          "includeRaces": true
+        },
+        {
+          "name": "Class 2 irc",
+          "subPath": "gibney-classic/class-2-irc",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2019/open_gibney_class2_irc.htm",
+          "includeRaces": true
+        },
+        {
+          "name": "Class 2 echo",
+          "subPath": "gibney-classic/class-2-echo",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2019/open_gibney_class2_echo.htm",
+          "includeRaces": true
+        },
+        {
+          "name": "Class 3 irc",
+          "subPath": "gibney-classic/class-3-irc",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2019/open_gibney_class3_irc.htm",
+          "includeRaces": true
+        },
+        {
+          "name": "Class 3 echo",
+          "subPath": "gibney-classic/class-3-echo",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2019/open_gibney_class3_echo.htm",
+          "includeRaces": true
+        },
+        {
+          "name": "White Sail irc",
+          "subPath": "gibney-classic/white-sail-irc",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2019/open_gibney_whitesails_irc.htm",
+          "includeRaces": true
+        },
+        {
+          "name": "White Sail hcap",
+          "subPath": "gibney-classic/white-sail-hcap",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2019/open_gibney_whitesails_echo.htm",
+          "includeRaces": true
+        },
+        {
+          "name": "Puppeteer hcap",
+          "subPath": "gibney-classic/puppeteer-hcap",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2019/open_gibney_puppeteers_hcap.htm",
+          "includeRaces": true
+        },
+        {
+          "name": "Puppeteer scr",
+          "subPath": "gibney-classic/puppeteer-scr",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2019/open_gibney_puppeteers_scr.htm",
+          "includeRaces": true
+        },
+        {
+          "name": "Squib scr",
+          "subPath": "gibney-classic/squib-scr",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2019/open_gibney_squib_scr.htm",
+          "includeRaces": true
+        },
+        {
+          "name": "Squib hcap",
+          "subPath": "gibney-classic/squib-hcap",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2019/open_gibney_squib_hcap.htm",
+          "includeRaces": true
+        },
+        {
+          "name": "17 Footer hcap",
+          "subPath": "gibney-classic/17-footer-hcap",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2019/open_gibney_17footer_hcap.htm",
+          "includeRaces": true
+        },
+        {
+          "name": "17 Footer scr",
+          "subPath": "gibney-classic/17-footer-scr",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2019/open_gibney_17footer_scr.htm",
+          "includeRaces": true
+        },
+        {
+          "name": "J80",
+          "subPath": "gibney-classic/j80",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2019/open_gibney_j80_scr.htm",
           "includeRaces": true
         }
       ]
@@ -8867,6 +10138,122 @@
       ]
     },
     {
+      "key": "hyc-2021-open-lambay-race-howth-regatta",
+      "id": "d669e655-ad43-5fab-9d7f-13e1dbea2de9",
+      "publishedSlug": "2021",
+      "name": "Lambay Race Howth Regatta 2021",
+      "venue": "Howth",
+      "venueUrl": "https://www.hyc.ie",
+      "venueLogoUrl": "https://logos.sailscoring.ie/hyc.png",
+      "startDate": "2021-04-01",
+      "source": "sailwave",
+      "category": "Open Events",
+      "fleets": [
+        {
+          "name": "White Sails IRC",
+          "subPath": "lambay-race-howth-regatta/white-sails-irc",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2021/lambay_whitesails_irc.htm",
+          "includeRaces": true
+        },
+        {
+          "name": "White Sails HPH",
+          "subPath": "lambay-race-howth-regatta/white-sails-hph",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2021/lambay_whitesails_hph.htm",
+          "includeRaces": true
+        },
+        {
+          "name": "Class 1 IRC",
+          "subPath": "lambay-race-howth-regatta/class-1-irc",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2021/lambay_class1_irc.htm",
+          "includeRaces": true
+        },
+        {
+          "name": "Class 1 HPH",
+          "subPath": "lambay-race-howth-regatta/class-1-hph",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2021/lambay_class1_hph.htm",
+          "includeRaces": true
+        },
+        {
+          "name": "Class 2 HPH",
+          "subPath": "lambay-race-howth-regatta/class-2-hph",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2021/lambay_class2_hph.htm",
+          "includeRaces": true
+        },
+        {
+          "name": "Class 2 IRC",
+          "subPath": "lambay-race-howth-regatta/class-2-irc",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2021/lambay_class2_irc.htm",
+          "includeRaces": true
+        },
+        {
+          "name": "Class 3 IRC",
+          "subPath": "lambay-race-howth-regatta/class-3-irc",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2021/lambay_class3_irc.htm",
+          "includeRaces": true
+        },
+        {
+          "name": "Class 3 HPH",
+          "subPath": "lambay-race-howth-regatta/class-3-hph",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2021/lambay_class3_hph.htm",
+          "includeRaces": true
+        },
+        {
+          "name": "J80 HPH",
+          "subPath": "lambay-race-howth-regatta/j80-hph",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2021/lambay_j80_hph.htm",
+          "includeRaces": true
+        },
+        {
+          "name": "J80 SCR",
+          "subPath": "lambay-race-howth-regatta/j80-scr",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2021/lambay_j80_scr.htm",
+          "includeRaces": true
+        },
+        {
+          "name": "H17 SCR",
+          "subPath": "lambay-race-howth-regatta/h17-scr",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2021/lambay_h17_scr.htm",
+          "includeRaces": true
+        },
+        {
+          "name": "H17 HPH",
+          "subPath": "lambay-race-howth-regatta/h17-hph",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2021/lambay_h17_hph.htm",
+          "includeRaces": true
+        },
+        {
+          "name": "Puppeteer HPH",
+          "subPath": "lambay-race-howth-regatta/puppeteer-hph",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2021/lambay_pup_hph.htm",
+          "includeRaces": true
+        },
+        {
+          "name": "Puppeteer Scr",
+          "subPath": "lambay-race-howth-regatta/puppeteer-scr",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2021/lambay_pup_scr.htm",
+          "includeRaces": true
+        },
+        {
+          "name": "Squib SCR",
+          "subPath": "lambay-race-howth-regatta/squib-scr",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2021/lambay_squib_scr.htm",
+          "includeRaces": true
+        },
+        {
+          "name": "Squib HPH",
+          "subPath": "lambay-race-howth-regatta/squib-hph",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2021/lambay_squib_hph.htm",
+          "includeRaces": true
+        },
+        {
+          "name": "J80 IRC",
+          "subPath": "lambay-race-howth-regatta/j80-irc",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2021/lambay_j80_irc.htm",
+          "includeRaces": true
+        }
+      ]
+    },
+    {
       "key": "hyc-2021-open-1720-s-easterns",
       "id": "2af17ba2-c822-5bc9-a46b-ec77d2a8f735",
       "publishedSlug": "2021",
@@ -9300,6 +10687,38 @@
         {
           "path": "keycapital-winter-frostbite",
           "label": "KeyCapital Winter Frostbite"
+        }
+      ]
+    },
+    {
+      "key": "hyc-2021-open-brass-monkey-winter",
+      "id": "d95dd329-b234-5979-b340-ac35b4c404ad",
+      "publishedSlug": "2021",
+      "name": "Brass Monkey Winter 2021",
+      "venue": "Howth",
+      "venueUrl": "https://www.hyc.ie",
+      "venueLogoUrl": "https://logos.sailscoring.ie/hyc.png",
+      "startDate": "2021-04-01",
+      "source": "sailwave",
+      "category": "Open Events",
+      "fleets": [
+        {
+          "name": "Class 1 HPH",
+          "subPath": "brass-monkey-winter/class-1-hph",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2021/open_bmwinter_class1_hph.htm",
+          "includeRaces": true
+        },
+        {
+          "name": "Class 2 HPH",
+          "subPath": "brass-monkey-winter/class-2-hph",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2021/open_bmwinter_class2_hph.htm",
+          "includeRaces": true
+        },
+        {
+          "name": "Class 3 HPH",
+          "subPath": "brass-monkey-winter/class-3-hph",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2021/open_bmwinter_class3_hph.htm",
+          "includeRaces": true
         }
       ]
     },
@@ -10146,6 +11565,122 @@
       ]
     },
     {
+      "key": "hyc-2022-open-lambay-race",
+      "id": "88665f90-54b5-58a5-a703-5be784060fc6",
+      "publishedSlug": "2022",
+      "name": "Lambay Race 2022",
+      "venue": "Howth",
+      "venueUrl": "https://www.hyc.ie",
+      "venueLogoUrl": "https://logos.sailscoring.ie/hyc.png",
+      "startDate": "2022-04-01",
+      "source": "sailwave",
+      "category": "Open Events",
+      "fleets": [
+        {
+          "name": "Class 0",
+          "subPath": "lambay-race/class-0",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2022/open_lambay_class0.htm",
+          "includeRaces": true,
+          "raceSections": [
+            {
+              "raceTitle": "Lambay - Class 0 IRC Boat Class",
+              "name": "Class 0 IRC"
+            },
+            {
+              "raceTitle": "Lambay - Class 0 ECHO Boat Class",
+              "name": "Class 0 ECHO"
+            }
+          ]
+        },
+        {
+          "name": "Class 1",
+          "subPath": "lambay-race/class-1",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2022/open_lambay_class1.htm",
+          "includeRaces": true,
+          "raceSections": [
+            {
+              "raceTitle": "Lambay - Class 1 IRC Boat Class",
+              "name": "Class 1 IRC"
+            },
+            {
+              "raceTitle": "Lambay - Class 1 ECHO Boat Class",
+              "name": "Class 1 ECHO"
+            }
+          ]
+        },
+        {
+          "name": "Class 2",
+          "subPath": "lambay-race/class-2",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2022/open_lambay_class2.htm",
+          "includeRaces": true,
+          "raceSections": [
+            {
+              "raceTitle": "Lambay - Class 2 IRC Boat Class",
+              "name": "Class 2 IRC"
+            },
+            {
+              "raceTitle": "Lambay - Class 2 ECHO Boat Class",
+              "name": "Class 2 ECHO"
+            }
+          ]
+        },
+        {
+          "name": "Class 3",
+          "subPath": "lambay-race/class-3",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2022/open_lambay_class3.htm",
+          "includeRaces": true,
+          "raceSections": [
+            {
+              "raceTitle": "Lambay - Class 3 IRC Boat Class",
+              "name": "Class 3 IRC"
+            },
+            {
+              "raceTitle": "Lambay - Class 3 ECHO Boat Class",
+              "name": "Class 3 ECHO"
+            }
+          ]
+        },
+        {
+          "name": "Class 4",
+          "subPath": "lambay-race/class-4",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2022/open_lambay_class4.htm",
+          "includeRaces": true,
+          "raceSections": [
+            {
+              "raceTitle": "Lambay - Class 4 IRC Boat Class",
+              "name": "Class 4 IRC"
+            },
+            {
+              "raceTitle": "Lambay - Class 4 ECHO Boat Class",
+              "name": "Class 4 ECHO"
+            }
+          ]
+        },
+        {
+          "name": "Class 5",
+          "subPath": "lambay-race/class-5",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2022/open_lambay_class5.htm",
+          "includeRaces": true,
+          "raceSections": [
+            {
+              "raceTitle": "Lambay - Class 5 IRC Boat Class",
+              "name": "Class 5 IRC"
+            },
+            {
+              "raceTitle": "Lambay - Class 5 ECHO Boat Class",
+              "name": "Class 5 ECHO"
+            }
+          ]
+        },
+        {
+          "name": "Sigma 33's",
+          "subPath": "lambay-race/sigma-33-s",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2022/open_lambay_s33.htm",
+          "includeRaces": true
+        }
+      ]
+    },
+    {
       "key": "hyc-2022-open-420-leinsters",
       "id": "e3fdbde5-599e-5c09-b98e-85a15676a3d3",
       "publishedSlug": "2022",
@@ -10234,6 +11769,61 @@
         {
           "path": "j-24-irish-eastern-champions",
           "label": "J/24 Irish Eastern Champions"
+        }
+      ]
+    },
+    {
+      "key": "hyc-2022-open-j24-european-championships",
+      "id": "e79f4495-8041-517b-bd4d-0937e8bdca4f",
+      "publishedSlug": "2022",
+      "name": "J24 European Championships 2022",
+      "venue": "Howth",
+      "venueUrl": "https://www.hyc.ie",
+      "venueLogoUrl": "https://logos.sailscoring.ie/hyc.png",
+      "startDate": "2022-04-01",
+      "source": "sailwave",
+      "category": "Open Events",
+      "fleets": [
+        {
+          "name": "Overall",
+          "subPath": "j24-european-championships/overall",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2022/open_j24euros.htm",
+          "includeRaces": true
+        },
+        {
+          "name": "Day 1",
+          "subPath": "j24-european-championships/day-1",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2022/open_j24euros_d1.htm",
+          "includeRaces": true,
+          "displayOnly": true
+        },
+        {
+          "name": "Day 2",
+          "subPath": "j24-european-championships/day-2",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2022/open_j24euros_d2.htm",
+          "includeRaces": true,
+          "displayOnly": true
+        },
+        {
+          "name": "Day 3",
+          "subPath": "j24-european-championships/day-3",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2022/open_j24euros_d3.htm",
+          "includeRaces": true,
+          "displayOnly": true
+        },
+        {
+          "name": "Day 4",
+          "subPath": "j24-european-championships/day-4",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2022/open_j24euros_d4.htm",
+          "includeRaces": true,
+          "displayOnly": true
+        },
+        {
+          "name": "Day 5",
+          "subPath": "j24-european-championships/day-5",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2022/open_j24euros_d5.htm",
+          "includeRaces": true,
+          "displayOnly": true
         }
       ]
     },
@@ -10386,6 +11976,140 @@
             },
             {
               "sectionTitle": "Class 3 HPH Fleet",
+              "includeRaces": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "hyc-2022-open-autumn-league",
+      "id": "06c29e28-bc20-5c91-8370-c8c74c17c020",
+      "publishedSlug": "2022",
+      "name": "Autumn League 2022",
+      "venue": "Howth",
+      "venueUrl": "https://www.hyc.ie",
+      "venueLogoUrl": "https://logos.sailscoring.ie/hyc.png",
+      "startDate": "2022-04-01",
+      "source": "sailwave",
+      "category": "Open Events",
+      "fleets": [
+        {
+          "name": "Class 1",
+          "subPath": "autumn-league/class-1",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2022/AL_class1.htm",
+          "sections": [
+            {
+              "sectionTitle": "Class 1 IRC Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Class 1 HPH Fleet",
+              "includeRaces": true
+            }
+          ]
+        },
+        {
+          "name": "Class 2",
+          "subPath": "autumn-league/class-2",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2022/AL_class2.htm",
+          "sections": [
+            {
+              "sectionTitle": "Class 2 IRC Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Class 2 HPH Fleet",
+              "includeRaces": true
+            }
+          ]
+        },
+        {
+          "name": "Class 3",
+          "subPath": "autumn-league/class-3",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2022/AL_class3.htm",
+          "sections": [
+            {
+              "sectionTitle": "Class 3 IRC Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Class 3 HPH Fleet",
+              "includeRaces": true
+            }
+          ]
+        },
+        {
+          "name": "Class 4",
+          "subPath": "autumn-league/class-4",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2022/AL_class4.htm",
+          "sections": [
+            {
+              "sectionTitle": "Class 4 IRC Non Spinnaker Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Class 4 HPH Non Spinnaker Fleet",
+              "includeRaces": true
+            }
+          ]
+        },
+        {
+          "name": "Class 5",
+          "subPath": "autumn-league/class-5",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2022/AL_class5.htm",
+          "sections": [
+            {
+              "sectionTitle": "Class 5 IRC Non Spinnaker Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Class 5 HPH Non Spinnaker Fleet",
+              "includeRaces": true
+            }
+          ]
+        },
+        {
+          "name": "Howth 17",
+          "subPath": "autumn-league/howth-17",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2022/AL_h17.htm",
+          "sections": [
+            {
+              "sectionTitle": "Howth 17 Scratch Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Howth 17 HPH Fleet",
+              "includeRaces": true
+            }
+          ]
+        },
+        {
+          "name": "Puppeteers",
+          "subPath": "autumn-league/puppeteers",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2022/AL_pup.htm",
+          "sections": [
+            {
+              "sectionTitle": "Puppeteers Scratch Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Puppeteers HPH Fleet",
+              "includeRaces": true
+            }
+          ]
+        },
+        {
+          "name": "Squib",
+          "subPath": "autumn-league/squib",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2022/AL_squib.htm",
+          "sections": [
+            {
+              "sectionTitle": "Squib Scratch Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Squib HPH Fleet",
               "includeRaces": true
             }
           ]
@@ -11430,6 +13154,146 @@
       ]
     },
     {
+      "key": "hyc-2023-open-lambay-races",
+      "id": "7372ccb1-4040-5115-b5c9-4e40af80215e",
+      "publishedSlug": "2023",
+      "name": "Lambay Races 2023",
+      "venue": "Howth",
+      "venueUrl": "https://www.hyc.ie",
+      "venueLogoUrl": "https://logos.sailscoring.ie/hyc.png",
+      "startDate": "2023-04-01",
+      "source": "sailwave",
+      "category": "Open Events",
+      "fleets": [
+        {
+          "name": "Class 1",
+          "subPath": "lambay-races/class-1",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2023/open/lambay/class1.htm",
+          "sections": [
+            {
+              "sectionTitle": "Class 1 IRC Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Class 1 HPH Fleet",
+              "includeRaces": true
+            }
+          ]
+        },
+        {
+          "name": "Class 2",
+          "subPath": "lambay-races/class-2",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2023/open/lambay/class2.htm",
+          "sections": [
+            {
+              "sectionTitle": "Class 2 IRC Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Class 2 HPH Fleet",
+              "includeRaces": true
+            }
+          ]
+        },
+        {
+          "name": "Class 3",
+          "subPath": "lambay-races/class-3",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2023/open/lambay/class3.htm",
+          "sections": [
+            {
+              "sectionTitle": "Class 3 HPH Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Class 3 IRC Fleet",
+              "includeRaces": true
+            }
+          ]
+        },
+        {
+          "name": "Class 4",
+          "subPath": "lambay-races/class-4",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2023/open/lambay/class4.htm",
+          "sections": [
+            {
+              "sectionTitle": "Class 4 IRC Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Class 4 HPH Fleet",
+              "includeRaces": true
+            }
+          ]
+        },
+        {
+          "name": "Class 5",
+          "subPath": "lambay-races/class-5",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2023/open/lambay/class5.htm",
+          "sections": [
+            {
+              "sectionTitle": "Class 5 HPH Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Class 5 IRC Fleet",
+              "includeRaces": true
+            }
+          ]
+        },
+        {
+          "name": "E Boat",
+          "subPath": "lambay-races/e-boat",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2023/open/lambay/eboat.htm",
+          "includeRaces": true
+        },
+        {
+          "name": "Puppeteers",
+          "subPath": "lambay-races/puppeteers",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2023/open/lambay/puppeteer.htm",
+          "sections": [
+            {
+              "sectionTitle": "Puppeteer SCR Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Puppeteer Hcap Fleet",
+              "includeRaces": true
+            }
+          ]
+        },
+        {
+          "name": "Howth 17s",
+          "subPath": "lambay-races/howth-17s",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2023/open/lambay/howth17.htm",
+          "sections": [
+            {
+              "sectionTitle": "Howth 17 HPH Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Howth 17 SCR Fleet",
+              "includeRaces": true
+            }
+          ]
+        },
+        {
+          "name": "Squibs",
+          "subPath": "lambay-races/squibs",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2023/open/lambay/squib.htm",
+          "sections": [
+            {
+              "sectionTitle": "Squib SCR Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Squib Hcap Fleet",
+              "includeRaces": true
+            }
+          ]
+        }
+      ]
+    },
+    {
       "key": "hyc-2023-open-dinghy-regatta",
       "id": "a35e0d9c-8afa-5642-a87f-29fcb9b94038",
       "publishedSlug": "2023",
@@ -11629,6 +13493,41 @@
               "includeRaces": true
             }
           ]
+        }
+      ]
+    },
+    {
+      "key": "hyc-2023-open-ilca-national-championships",
+      "id": "97b3366f-f874-5eff-bb27-cdc2205247e9",
+      "publishedSlug": "2023",
+      "name": "ILCA National Championships 2023",
+      "venue": "Howth",
+      "venueUrl": "https://www.hyc.ie",
+      "venueLogoUrl": "https://logos.sailscoring.ie/hyc.png",
+      "startDate": "2023-04-01",
+      "source": "sailwave",
+      "category": "Open Events",
+      "fleets": [
+        {
+          "name": "ILCA 4",
+          "subPath": "ilca-national-championships/ilca-4",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2023/open/ilca/4.htm"
+        },
+        {
+          "name": "ILCA 6",
+          "subPath": "ilca-national-championships/ilca-6",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2023/open/ilca/6.htm"
+        },
+        {
+          "name": "ILCA 7",
+          "subPath": "ilca-national-championships/ilca-7",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2023/open/ilca/7.htm"
+        }
+      ],
+      "folders": [
+        {
+          "path": "ilca-national-championships",
+          "label": "ILCA National Championships"
         }
       ]
     },
@@ -12822,6 +14721,40 @@
       ]
     },
     {
+      "key": "hyc-2024-open-dinghy-new-years-day-race",
+      "id": "bef0a6fa-a25f-5ee6-8656-fb0929003e9d",
+      "publishedSlug": "2024",
+      "name": "Dinghy New Years Day Race 2024",
+      "venue": "Howth",
+      "venueUrl": "https://www.hyc.ie",
+      "venueLogoUrl": "https://logos.sailscoring.ie/hyc.png",
+      "startDate": "2024-04-01",
+      "source": "sailwave",
+      "category": "Open Events",
+      "fleets": [
+        {
+          "name": "Overall",
+          "subPath": "dinghy-new-years-day-race/overall",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2024/open/NewYearsDay/overall.htm",
+          "includeRaces": true,
+          "raceSections": [
+            {
+              "raceTitle": "New Year's Day - PY Class Fleet",
+              "name": "PY Class"
+            },
+            {
+              "raceTitle": "New Year's Day - ILCA 6 Fleet",
+              "name": "ILCA 6"
+            },
+            {
+              "raceTitle": "New Year's Day - ILCA 7 Fleet",
+              "name": "ILCA 7"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "key": "hyc-2024-open-dinghy-f-bite-spring-series",
       "id": "9ba4a684-c326-541c-a187-5bf1f18eb31d",
       "publishedSlug": "2024",
@@ -13607,6 +15540,121 @@
         {
           "path": "autumn-league-inshore",
           "label": "Autumn League - Inshore"
+        }
+      ]
+    },
+    {
+      "key": "hyc-2024-open-autumn-league-offshore",
+      "id": "b11acc84-021a-5eba-8b47-11cc6bb00eb9",
+      "publishedSlug": "2024",
+      "name": "Autumn League - Offshore 2024",
+      "venue": "Howth",
+      "venueUrl": "https://www.hyc.ie",
+      "venueLogoUrl": "https://logos.sailscoring.ie/hyc.png",
+      "startDate": "2024-04-01",
+      "source": "sailwave",
+      "category": "Open Events",
+      "fleets": [
+        {
+          "name": "Cruiser 1 - Overall",
+          "subPath": "autumn-league-offshore/cruiser-1-overall",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2024/open/al_offshore_cr1.htm",
+          "sections": [
+            {
+              "sectionTitle": "Class 1 IRC Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Class 1 HPH Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Class 1 ECHO Fleet",
+              "includeRaces": true
+            }
+          ]
+        },
+        {
+          "name": "Cruiser 2 - Overall",
+          "subPath": "autumn-league-offshore/cruiser-2-overall",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2024/open/al_offshore_cr2.htm",
+          "sections": [
+            {
+              "sectionTitle": "Class 2 IRC Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Class 2 HPH Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Class 2 ECHO Fleet",
+              "includeRaces": true
+            }
+          ]
+        },
+        {
+          "name": "Cruiser 3 - Overall",
+          "subPath": "autumn-league-offshore/cruiser-3-overall",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2024/open/al_offshore_cr3.htm",
+          "sections": [
+            {
+              "sectionTitle": "Class 3 IRC Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Class 3 HPH Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Class 3 ECHO Fleet",
+              "includeRaces": true
+            }
+          ]
+        },
+        {
+          "name": "Cruisers 4 - Overall",
+          "subPath": "autumn-league-offshore/cruisers-4-overall",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2024/open/al_offshore_cr4.htm",
+          "sections": [
+            {
+              "sectionTitle": "Class 4 NS IRC Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Class 4 NS HPH Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Class 4 NS ECHO Fleet",
+              "includeRaces": true
+            }
+          ]
+        },
+        {
+          "name": "Cruisers 5 - Overall",
+          "subPath": "autumn-league-offshore/cruisers-5-overall",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2024/open/al_offshore_cr5.htm",
+          "sections": [
+            {
+              "sectionTitle": "Class 5 NS IRC Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Class 5 NS HPH Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Class 5 NS ECHO Fleet",
+              "includeRaces": true
+            }
+          ]
+        }
+      ],
+      "folders": [
+        {
+          "path": "autumn-league-offshore",
+          "label": "Autumn League - Offshore"
         }
       ]
     },

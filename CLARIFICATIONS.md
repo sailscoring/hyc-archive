@@ -30,21 +30,62 @@ reproducible by re-running it.
   class names contain commas can't be split unambiguously. All current cases
   are `SC TESTING` rows for the publishing test pages (`/reshyc/sc-test/`),
   which we exclude anyway.
-- **33 open events on the skip-list**
-  ([`as-published-skips.json`](as-published-skips.json)): Lambay Races,
-  Double Handed, Round the Island, Howth→Drogheda, etc. Most are genuine
-  Sailwave pages that publish race results only, with no series summary
-  section, and the app's archive-kit Sailwave parser requires a summary.
-  Tracked as app #355; remove entries from the skip-list as it lands.
+- **The skip-list is empty.** All 33 open events it held — the Lambay Races,
+  Double Handed, Round the Island, Howth→Drogheda, the Gibney Classics — now
+  ingest: app #355 taught the archive-kit to build a fleet's standings from a
+  race-only Sailwave page, and the 18 pages below are dropped per class rather
+  than failing their whole event. 229 fleet pages joined the archive, 211 of
+  them results.
 
-  The recorded reason is a blanket one and **is wrong for about eight of
-  them** — `hyc-2015-open-dinghy-regatta`, `hyc-2022-open-autumn-league`,
-  `hyc-2023-open-lambay-races` and `hyc-2024-open-autumn-league-offshore`
-  among them carry no race-only page at all; every captured page has its
-  summary table, so something else blocks those. Re-diagnose per entry when
-  #355 lands rather than assuming the whole list clears. By page shape the
-  split is: 10 events race-only throughout, ~12 mixed, ~8 with no race-only
-  page.
+  The recorded reason had been a blanket one, and was wrong for a third of the
+  list: eight of those events carry no race-only page at all. What actually
+  blocked them is in the next entry.
+
+- **18 captured pages are not results, and are dropped.** The emit run reports
+  each one (`! not a results page`). They resolve from a real admin row and
+  the file is in the capture, but there is nothing an archive can hold:
+
+  | Shape | Pages | Where |
+  |---|---|---|
+  | Sailwave **Competitor List** (`table.entry`) — an entry list, published before racing | 10 | 2023 ILCA Nationals `Competitors.htm`; the Lambay Inshore J80 / Squib / Howth 17 / B211 / Taste of Racing pages, 2016–2019; 2015 Dinghy Regatta Mirror; 2016 Brassed Off Cup Regatta Fleet; 2016 Mermaid Nationals Crew Race |
+  | **Team Ranking Table** (`table.prize`) — the Autumn League's team competition, a scoring shape the archive has no home for | 2 | 2022 + 2024 Autumn League `AL_teams.htm` |
+  | A note and no table — "There are no IRC divisions in 2020/21 Brass Monkeys" | 3 | 2021 Brass Monkeys Class 1/2/3 IRC |
+  | No table at all, or an empty file | 3 | 2022 Lambay `open_lambay_j24.htm`, `open_lambay_j80.htm`; 2023 Lambay `ruffian.htm` (0 bytes) |
+
+  A single one of these used to fail the entire event, which is what really
+  kept 2015 Dinghy Regatta, 2016 Brassed Off Cup, 2016 Mermaid Nationals, 2021
+  Brass Monkeys, 2022 Autumn League, 2023 ILCA Nationals, 2023 Lambay Races
+  and 2024 Autumn League Offshore off the archive. The entry lists would be
+  ingestible if the archive-kit grows an entry-list page (the app publishes
+  one for live series, app #423); the rest have no obvious home.
+
+## Race-only pages, and what a place means on one
+
+Many of HYC's one-off events were published as a race result and nothing else
+— a Sailwave page carrying race tables and no summary section. The archive
+builds the fleet's standings out of the race table itself (app #355), so the
+published page and the ingested record are the same table. 165 fleets across
+the corpus come in this way.
+
+Two curated files say what the markup cannot:
+
+- [`as-published-race-sections.json`](as-published-race-sections.json) — pages
+  whose race tables are several **fleets** rather than several races of one.
+  2022's Lambay pages carry each class's IRC and ECHO results side by side,
+  and the 2024 New Year's Day race put PY, ILCA 6 and ILCA 7 on one page. Each
+  named table becomes a fleet of its own, published together as one page, so
+  each states the places its own table published.
+- [`as-published-display-only.json`](as-published-display-only.json) — pages
+  that re-present racing another page of the same event already accounts for.
+  The 2022 J24 Europeans published a day-by-day race result beside the
+  championship's Overall standings; the day pages still publish, but their
+  boats are the Overall page's boats (34 sailors, not 204) and their lines
+  take no place in a career arc.
+
+Where a race-only page carries **several races of one fleet** and no
+standings, its rows rank nowhere. Two races and no published standing state no
+place between them, and inventing one would put a position in a sailor's
+record that the club never published.
 
 ## Capture paths that fold together by case
 

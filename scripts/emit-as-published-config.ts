@@ -215,6 +215,14 @@ interface ConfigFleet {
    *  app emits one combined page (#321) with a section per summary rather than
    *  dropping all but the first. */
   sections?: ConfigSection[];
+  /** The race-only counterpart (app #355): a page whose race tables are
+   *  several fleets rather than several races of one class. Curated in
+   *  as-published-race-sections.json. */
+  raceSections?: Array<{ raceTitle: string; name?: string }>;
+  /** This page is a second presentation of racing another page of the same
+   *  event already accounts for (app #363). Curated in
+   *  as-published-display-only.json. */
+  displayOnly?: true;
 }
 
 /** The summary-section headings of a capture, in document order, normalised
@@ -301,11 +309,50 @@ function loadRaceResults(): Record<string, string> {
   }
 }
 
+/** Race-only pages (app #355) whose race tables are several *fleets* rather
+ *  than several races of one class — 2022's Lambay pages carry each class's
+ *  IRC and ECHO results side by side, and the 2024 New Year's Day race put
+ *  PY, ILCA 6 and ILCA 7 on one page. Keyed `<series key>|<class name>`,
+ *  valued by the race-table headings to split on, so each fleet states the
+ *  places its own table published. Un-split, such a page is one fleet whose
+ *  rows rank nowhere.
+ *
+ *  Hand-curated: whether two tables are two fleets or two races of one is a
+ *  fact about the event, and the page's markup does not say which. */
+function loadRaceSections(): Record<
+  string,
+  Array<{ raceTitle: string; name?: string }>
+> {
+  try {
+    return JSON.parse(readFileSync('as-published-race-sections.json', 'utf8'));
+  } catch {
+    return {};
+  }
+}
+
+/** Pages that re-present racing another page of the same event already
+ *  accounts for (app #363) — the J24 Europeans' per-day race results beside
+ *  the championship's own overall standings. Keyed `<series key>|<class
+ *  name>`, valued by the reason. Their tables still publish; their rows join
+ *  the competitors the structural page minted rather than minting a second
+ *  set, and they take no place in a career arc. */
+function loadDisplayOnly(): Record<string, string> {
+  try {
+    return JSON.parse(readFileSync('as-published-display-only.json', 'utf8'));
+  } catch {
+    return {};
+  }
+}
+
 function run(): number {
   const captureIndex = buildCaptureIndex();
   const skips = loadSkips();
   const raceResults = loadRaceResults();
   const raceResultKeys = new Set<string>();
+  const raceSections = loadRaceSections();
+  const displayOnly = loadDisplayOnly();
+  const usedRaceSections = new Set<string>();
+  const usedDisplayOnly = new Set<string>();
 
   const catalogues = readdirSync(ADMIN_DIR)
     .map((f) => /^(\d{4})_(club|open)\.csv$/.exec(f))
@@ -325,6 +372,7 @@ function run(): number {
   const missing: string[] = [];
   const ambiguousPaths: string[] = [];
   const skippedMalformed: string[] = [];
+  const notResults: string[] = [];
 
   for (const cat of catalogues) {
     const { rows, malformed } = parseAdminCsv(cat.file);
@@ -378,6 +426,28 @@ function run(): number {
         while (usedSubPaths.has(subPath)) subPath = `${base}-${n++}`;
         usedSubPaths.add(subPath);
         const { titles, tableCount, hasRaces } = sectionsOf(readFileSync(file, 'utf8'));
+        if (tableCount === 0 && !hasRaces) {
+          // Not a result at all: an entry list, a team ranking table, a note
+          // saying the divisions were dropped, or an empty file. The page is
+          // real and captured, but there is nothing for the archive to hold —
+          // dropping the class keeps the rest of the event ingestible, where
+          // failing on it used to cost the whole series. CLARIFICATIONS.md
+          // carries the inventory.
+          notResults.push(
+            `${cat.year} ${cat.type} | ${event} | ${row.className} | ${file}`,
+          );
+          usedNames.delete(name);
+          usedSubPaths.delete(subPath);
+          continue;
+        }
+        const curationKey = `${key}|${name}`;
+        const sectioned = raceSections[curationKey];
+        if (sectioned) usedRaceSections.add(curationKey);
+        if (displayOnly[curationKey]) usedDisplayOnly.add(curationKey);
+        const extras = {
+          ...(sectioned ? { raceSections: sectioned } : {}),
+          ...(displayOnly[curationKey] ? { displayOnly: true as const } : {}),
+        };
         if (tableCount > 1 && titles.length === tableCount) {
           // A single page publishing several summary sections — publish it as
           // one combined page (#321), a member fleet per section.
@@ -389,9 +459,16 @@ function run(): number {
               sectionTitle,
               ...(hasRaces ? { includeRaces: true as const } : {}),
             })),
+            ...extras,
           });
         } else {
-          fleets.push({ name, subPath, file, ...(hasRaces ? { includeRaces: true } : {}) });
+          fleets.push({
+            name,
+            subPath,
+            file,
+            ...(hasRaces ? { includeRaces: true as const } : {}),
+            ...extras,
+          });
         }
       }
       if (fleets.length === 0) continue;
@@ -461,6 +538,7 @@ function run(): number {
   }
 
   for (const line of skippedMalformed) console.error(`  ! malformed row: ${line}`);
+  for (const line of notResults) console.error(`  ! not a results page: ${line}`);
   for (const line of missing) console.error(`  ! not in capture: ${line}`);
   for (const line of ambiguousPaths) console.error(`  ! ambiguous case fold: ${line}`);
 
@@ -477,14 +555,20 @@ function run(): number {
   console.log(
     `as-published.config.json: ${series.length} series, ${fleetCount} fleet pages ` +
       `(${emptyPath} rows had no ftp_path, ${missing.length} pages not in capture, ` +
-      `${skippedMalformed.length} malformed rows, ${skippedKeys.size} series on the skip-list, ` +
-      `${raceResultKeys.size} single-race events)`,
+      `${notResults.length} pages that aren't results, ${skippedMalformed.length} malformed rows, ` +
+      `${skippedKeys.size} series on the skip-list, ${raceResultKeys.size} single-race events)`,
   );
   for (const k of Object.keys(skips)) {
     if (!skippedKeys.has(k)) console.error(`  ! stale skip-list entry (no such series): ${k}`);
   }
   for (const k of Object.keys(raceResults)) {
     if (!raceResultKeys.has(k)) console.error(`  ! stale race-results entry (no such series): ${k}`);
+  }
+  for (const k of Object.keys(raceSections)) {
+    if (!usedRaceSections.has(k)) console.error(`  ! stale race-sections entry (no such page): ${k}`);
+  }
+  for (const k of Object.keys(displayOnly)) {
+    if (!usedDisplayOnly.has(k)) console.error(`  ! stale display-only entry (no such page): ${k}`);
   }
   return 0;
 }

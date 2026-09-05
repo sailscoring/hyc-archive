@@ -1,0 +1,31 @@
+{
+  "hyc-2022-open-lambay-race|Class 0": [
+    { "raceTitle": "Lambay - Class 0 IRC Boat Class", "name": "Class 0 IRC" },
+    { "raceTitle": "Lambay - Class 0 ECHO Boat Class", "name": "Class 0 ECHO" }
+  ],
+  "hyc-2022-open-lambay-race|Class 1": [
+    { "raceTitle": "Lambay - Class 1 IRC Boat Class", "name": "Class 1 IRC" },
+    { "raceTitle": "Lambay - Class 1 ECHO Boat Class", "name": "Class 1 ECHO" }
+  ],
+  "hyc-2022-open-lambay-race|Class 2": [
+    { "raceTitle": "Lambay - Class 2 IRC Boat Class", "name": "Class 2 IRC" },
+    { "raceTitle": "Lambay - Class 2 ECHO Boat Class", "name": "Class 2 ECHO" }
+  ],
+  "hyc-2022-open-lambay-race|Class 3": [
+    { "raceTitle": "Lambay - Class 3 IRC Boat Class", "name": "Class 3 IRC" },
+    { "raceTitle": "Lambay - Class 3 ECHO Boat Class", "name": "Class 3 ECHO" }
+  ],
+  "hyc-2022-open-lambay-race|Class 4": [
+    { "raceTitle": "Lambay - Class 4 IRC Boat Class", "name": "Class 4 IRC" },
+    { "raceTitle": "Lambay - Class 4 ECHO Boat Class", "name": "Class 4 ECHO" }
+  ],
+  "hyc-2022-open-lambay-race|Class 5": [
+    { "raceTitle": "Lambay - Class 5 IRC Boat Class", "name": "Class 5 IRC" },
+    { "raceTitle": "Lambay - Class 5 ECHO Boat Class", "name": "Class 5 ECHO" }
+  ],
+  "hyc-2024-open-dinghy-new-years-day-race|Overall": [
+    { "raceTitle": "New Year's Day - PY Class Fleet", "name": "PY Class" },
+    { "raceTitle": "New Year's Day - ILCA 6 Fleet", "name": "ILCA 6" },
+    { "raceTitle": "New Year's Day - ILCA 7 Fleet", "name": "ILCA 7" }
+  ]
+}
