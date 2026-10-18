@@ -54,9 +54,13 @@ td.excluded { color: #888; text-align: center; }
 .penaltylabels { font-size: 0.85em; color: #444; margin: -20px auto 30px auto; max-width: 60em; }
 .notscored { font-size: 0.85em; color: #444; margin: -20px auto 30px auto; max-width: 60em; }
 .racelimitnote { font-size: 0.85em; color: #444; margin: 0 auto 24px auto; max-width: 60em; }
-/* The course drawing, folded away: the legs line states the course in words,
-   so the picture is there for whoever wants to look at it. */
+/* The course, folded away: the map and the leg record under it, for whoever
+   wants to check the course the audit line above summarises. */
 details.orc-course { margin: 0 0 8px 0; text-align: center; }
+div.orc-course-legs-wrap { max-width: 480px; margin: 0 auto 6px auto; overflow-x: auto; }
+table.orc-course-legs { margin: 0 auto; font-size: 0.8em; }
+table.orc-course-legs th, table.orc-course-legs td { padding: 3px 6px; white-space: nowrap; }
+table.orc-course-legs td.num { text-align: right; }
 details.orc-course > summary { font-size: 0.85em; color: #444; cursor: pointer; display: inline-block; list-style: none; }
 details.orc-course > summary::-webkit-details-marker { display: none; }
 details.orc-course > summary::before { content: '▸ '; }
@@ -161,7 +165,7 @@ th[aria-sort="descending"]::after { content: " ▼"; font-size: 0.75em; }
 </table>
 <div style="clear:both;"></div>
 <style>div.applicant-break {page-break-after:always;}</style>
-<h3 class="seriestitle">Results are provisional as of 19:29 IST on 10 October 2026</h3>
+<h3 class="seriestitle">Results are provisional as of 17:01 IST on 17 October 2026</h3>
 <h2>Non-Spinnaker Class 4</h2>
 
 
@@ -169,12 +173,13 @@ th[aria-sort="descending"]::after { content: " ▼"; font-size: 0.75em; }
 
 <h2>Non-Spinnaker Class 4 (IRC)</h2>
 <div class="tablewrap"><table class="summarytable" cellspacing="0" cellpadding="0" border="0">
-<colgroup span="11">
+<colgroup span="12">
 <col class="rank" />
 <col class="sailno" />
 <col class="boatname" />
 <col class="helmname" />
 <col class="club" />
+<col class="race" />
 <col class="race" />
 <col class="race" />
 <col class="race" />
@@ -189,10 +194,11 @@ th[aria-sort="descending"]::after { content: " ▼"; font-size: 0.75em; }
 <th>Boat</th>
 <th>Owners</th>
 <th>Club</th>
-<th><a class="racelink" href="#non-spinnaker-class-4-irc-r1">R1</a><span class="racedate">12 Sept</span></th>
-<th><a class="racelink" href="#non-spinnaker-class-4-irc-r2">R2</a><span class="racedate">19 Sept</span></th>
-<th><a class="racelink" href="#non-spinnaker-class-4-irc-r3">R3</a><span class="racedate">26 Sept</span></th>
+<th><a class="racelink" href="#non-spinnaker-class-4-irc-r1">R1</a><span class="racedate">12 Sep</span></th>
+<th><a class="racelink" href="#non-spinnaker-class-4-irc-r2">R2</a><span class="racedate">19 Sep</span></th>
+<th><a class="racelink" href="#non-spinnaker-class-4-irc-r3">R3</a><span class="racedate">26 Sep</span></th>
 <th><a class="racelink" href="#non-spinnaker-class-4-irc-r4">R4</a><span class="racedate">10 Oct</span></th>
+<th><a class="racelink" href="#non-spinnaker-class-4-irc-r5">R5</a><span class="racedate">17 Oct</span></th>
 <th>Total</th>
 <th>Nett</th>
 </tr>
@@ -208,8 +214,9 @@ th[aria-sort="descending"]::after { content: " ▼"; font-size: 0.75em; }
 <td class="rank1">1.0</td>
 <td class="rank2">2.0</td>
 <td class="rank2">2.0</td>
-<td>7.0</td>
-<td>5.0</td>
+<td class="rank1">1.0</td>
+<td>8.0</td>
+<td>6.0</td>
 </tr>
 <tr class="even summaryrow">
 <td>2nd</td>
@@ -218,27 +225,15 @@ th[aria-sort="descending"]::after { content: " ▼"; font-size: 0.75em; }
 <td>David Greene</td>
 <td>Malahide YC</td>
 <td class="rank1">1.0</td>
-<td class="discard rank3">(3.0)</td>
 <td class="rank3">3.0</td>
 <td class="rank3">3.0</td>
+<td class="rank3">3.0</td>
+<td class="discard">(4.0)</td>
+<td>14.0</td>
 <td>10.0</td>
-<td>7.0</td>
 </tr>
 <tr class="odd summaryrow">
 <td>3rd</td>
-<td>2070</td>
-<td>Out &amp; About</td>
-<td>Terry McCoy</td>
-<td>Howth YC<br>Skerries SC</td>
-<td class="rank3">3.0</td>
-<td class="discard">(8.0 DNC)</td>
-<td>4.0</td>
-<td class="rank1">1.0</td>
-<td>16.0</td>
-<td>8.0</td>
-</tr>
-<tr class="even summaryrow">
-<td>4th</td>
 <td>3335C</td>
 <td>Bite the Bullet</td>
 <td>Colm Bermingham</td>
@@ -247,8 +242,23 @@ th[aria-sort="descending"]::after { content: " ▼"; font-size: 0.75em; }
 <td class="rank2">2.0</td>
 <td>5.0</td>
 <td>4.0</td>
-<td>18.0</td>
-<td>11.0</td>
+<td class="rank2">2.0</td>
+<td>20.0</td>
+<td>13.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>4th</td>
+<td>2070</td>
+<td>Out &amp; About</td>
+<td>Terry McCoy</td>
+<td>Howth YC<br>Skerries SC</td>
+<td class="rank3">3.0</td>
+<td class="discard">(8.0 DNC)</td>
+<td>4.0</td>
+<td class="rank1">1.0</td>
+<td>6.0</td>
+<td>22.0</td>
+<td>14.0</td>
 </tr>
 <tr class="odd summaryrow">
 <td>5th</td>
@@ -260,8 +270,9 @@ th[aria-sort="descending"]::after { content: " ▼"; font-size: 0.75em; }
 <td>6.0 RET</td>
 <td class="rank1">1.0</td>
 <td class="discard">(8.0 DNC)</td>
-<td>22.0</td>
-<td>14.0</td>
+<td>5.0</td>
+<td>27.0</td>
+<td>19.0</td>
 </tr>
 <tr class="even summaryrow">
 <td>6th</td>
@@ -273,8 +284,9 @@ th[aria-sort="descending"]::after { content: " ▼"; font-size: 0.75em; }
 <td>6.0 RET</td>
 <td class="discard">(8.0 DNC)</td>
 <td>8.0 DNC</td>
-<td>29.0</td>
-<td>21.0</td>
+<td class="rank3">3.0</td>
+<td>32.0</td>
+<td>24.0</td>
 </tr>
 <tr class="odd summaryrow">
 <td>7th</td>
@@ -286,19 +298,21 @@ th[aria-sort="descending"]::after { content: " ▼"; font-size: 0.75em; }
 <td>8.0 DNC</td>
 <td>8.0 DNC</td>
 <td>8.0 DNC</td>
+<td>8.0 DNC</td>
+<td>40.0</td>
 <td>32.0</td>
-<td>24.0</td>
 </tr>
 </tbody>
 </table></div>
 <h2>Non-Spinnaker Class 4 (HPH)</h2>
 <div class="tablewrap"><table class="summarytable" cellspacing="0" cellpadding="0" border="0">
-<colgroup span="11">
+<colgroup span="12">
 <col class="rank" />
 <col class="sailno" />
 <col class="boatname" />
 <col class="helmname" />
 <col class="club" />
+<col class="race" />
 <col class="race" />
 <col class="race" />
 <col class="race" />
@@ -313,10 +327,11 @@ th[aria-sort="descending"]::after { content: " ▼"; font-size: 0.75em; }
 <th>Boat</th>
 <th>Owners</th>
 <th>Club</th>
-<th><a class="racelink" href="#non-spinnaker-class-4-hph-r1">R1</a><span class="racedate">12 Sept</span></th>
-<th><a class="racelink" href="#non-spinnaker-class-4-hph-r2">R2</a><span class="racedate">19 Sept</span></th>
-<th><a class="racelink" href="#non-spinnaker-class-4-hph-r3">R3</a><span class="racedate">26 Sept</span></th>
+<th><a class="racelink" href="#non-spinnaker-class-4-hph-r1">R1</a><span class="racedate">12 Sep</span></th>
+<th><a class="racelink" href="#non-spinnaker-class-4-hph-r2">R2</a><span class="racedate">19 Sep</span></th>
+<th><a class="racelink" href="#non-spinnaker-class-4-hph-r3">R3</a><span class="racedate">26 Sep</span></th>
 <th><a class="racelink" href="#non-spinnaker-class-4-hph-r4">R4</a><span class="racedate">10 Oct</span></th>
+<th><a class="racelink" href="#non-spinnaker-class-4-hph-r5">R5</a><span class="racedate">17 Oct</span></th>
 <th>Total</th>
 <th>Nett</th>
 </tr>
@@ -324,32 +339,20 @@ th[aria-sort="descending"]::after { content: " ▼"; font-size: 0.75em; }
 <tbody>
 <tr class="odd summaryrow">
 <td>1st</td>
-<td>2070</td>
-<td>Out &amp; About</td>
-<td>Terry McCoy</td>
-<td>Howth YC<br>Skerries SC</td>
-<td class="rank2">2.0</td>
-<td class="discard">(13.0 DNC)</td>
-<td>4.0</td>
-<td class="rank1">1.0</td>
-<td>20.0</td>
-<td>7.0</td>
-</tr>
-<tr class="even summaryrow">
-<td>2nd</td>
 <td>33301</td>
 <td>White Pearl</td>
 <td>David Greene</td>
 <td>Malahide YC</td>
 <td class="rank1">1.0</td>
-<td class="discard">(5.0)</td>
+<td>5.0</td>
 <td class="rank3">3.0</td>
 <td class="rank3">3.0</td>
+<td class="discard">(8.0)</td>
+<td>20.0</td>
 <td>12.0</td>
-<td>7.0</td>
 </tr>
-<tr class="odd summaryrow">
-<td>3rd</td>
+<tr class="even summaryrow">
+<td>2nd</td>
 <td>8331</td>
 <td>Changeling</td>
 <td>Kieran Jameson</td>
@@ -358,8 +361,23 @@ th[aria-sort="descending"]::after { content: " ▼"; font-size: 0.75em; }
 <td class="discard">(9.0 OCS)</td>
 <td class="rank2">2.0</td>
 <td class="rank2">2.0</td>
-<td>16.0</td>
-<td>7.0</td>
+<td>5.0</td>
+<td>21.0</td>
+<td>12.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>3rd</td>
+<td>3154</td>
+<td>Alchemy</td>
+<td>Russell Camier</td>
+<td>Malahide YC</td>
+<td>4.0</td>
+<td class="rank3">3.0</td>
+<td class="discard">(7.0)</td>
+<td>6.0</td>
+<td class="rank1">1.0</td>
+<td>21.0</td>
+<td>14.0</td>
 </tr>
 <tr class="even summaryrow">
 <td>4th</td>
@@ -371,21 +389,23 @@ th[aria-sort="descending"]::after { content: " ▼"; font-size: 0.75em; }
 <td class="rank2">2.0</td>
 <td>5.0</td>
 <td>5.0</td>
-<td>17.0</td>
-<td>12.0</td>
+<td class="rank2">2.0</td>
+<td>19.0</td>
+<td>14.0</td>
 </tr>
 <tr class="odd summaryrow">
 <td>5th</td>
-<td>3154</td>
-<td>Alchemy</td>
-<td>Russell Camier</td>
-<td>Malahide YC</td>
+<td>2070</td>
+<td>Out &amp; About</td>
+<td>Terry McCoy</td>
+<td>Howth YC<br>Skerries SC</td>
+<td class="rank2">2.0</td>
+<td class="discard">(13.0 DNC)</td>
 <td>4.0</td>
-<td class="rank3">3.0</td>
-<td class="discard">(7.0)</td>
-<td>6.0</td>
-<td>20.0</td>
-<td>13.0</td>
+<td class="rank1">1.0</td>
+<td>9.0</td>
+<td>29.0</td>
+<td>16.0</td>
 </tr>
 <tr class="even summaryrow">
 <td>6th</td>
@@ -397,24 +417,12 @@ th[aria-sort="descending"]::after { content: " ▼"; font-size: 0.75em; }
 <td class="rank1">1.0</td>
 <td>8.0</td>
 <td>7.0</td>
-<td>28.0</td>
-<td>16.0</td>
+<td class="rank3">3.0</td>
+<td>31.0</td>
+<td>19.0</td>
 </tr>
 <tr class="odd summaryrow">
 <td>7th</td>
-<td>22</td>
-<td>Vixen</td>
-<td>Ken Burke<br>Brian Curtis</td>
-<td>Howth YC</td>
-<td>12.0 DNF</td>
-<td>9.0 RET</td>
-<td class="rank1">1.0</td>
-<td class="discard">(13.0 DNC)</td>
-<td>35.0</td>
-<td>22.0</td>
-</tr>
-<tr class="even summaryrow">
-<td>8th</td>
 <td>8151</td>
 <td>Joker's Wild</td>
 <td>MacQuarrie<br>Flood<br>Greene</td>
@@ -423,11 +431,12 @@ th[aria-sort="descending"]::after { content: " ▼"; font-size: 0.75em; }
 <td>4.0</td>
 <td>6.0</td>
 <td class="discard">(13.0 DNC)</td>
-<td>35.0</td>
-<td>22.0</td>
+<td>6.0</td>
+<td>41.0</td>
+<td>28.0</td>
 </tr>
-<tr class="odd summaryrow">
-<td>9th</td>
+<tr class="even summaryrow">
+<td>8th</td>
 <td>3337</td>
 <td>Helm's Deep</td>
 <td>Paul Harrison</td>
@@ -436,24 +445,26 @@ th[aria-sort="descending"]::after { content: " ▼"; font-size: 0.75em; }
 <td class="discard">(13.0 DNC)</td>
 <td>9.0</td>
 <td>4.0</td>
-<td>38.0</td>
-<td>25.0</td>
+<td>4.0</td>
+<td>42.0</td>
+<td>29.0</td>
 </tr>
-<tr class="even summaryrow">
-<td>10th</td>
-<td>4073</td>
-<td>Splashdance</td>
-<td>John Beckett<br>Andy George</td>
+<tr class="odd summaryrow">
+<td>9th</td>
+<td>22</td>
+<td>Vixen</td>
+<td>Ken Burke<br>Brian Curtis</td>
 <td>Howth YC</td>
 <td>12.0 DNF</td>
 <td>9.0 RET</td>
+<td class="rank1">1.0</td>
 <td class="discard">(13.0 DNC)</td>
-<td>13.0 DNC</td>
-<td>47.0</td>
-<td>34.0</td>
+<td>10.0</td>
+<td>45.0</td>
+<td>32.0</td>
 </tr>
-<tr class="odd summaryrow">
-<td>11th</td>
+<tr class="even summaryrow">
+<td>10th</td>
 <td>4615</td>
 <td>Freelance</td>
 <td>Allen<br>Johns<br>Arthurs<br>Somers</td>
@@ -462,8 +473,23 @@ th[aria-sort="descending"]::after { content: " ▼"; font-size: 0.75em; }
 <td class="discard">(13.0 DNC)</td>
 <td>10.0</td>
 <td>13.0 DNC</td>
-<td>48.0</td>
-<td>35.0</td>
+<td>7.0</td>
+<td>55.0</td>
+<td>42.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>11th</td>
+<td>4073</td>
+<td>Splashdance</td>
+<td>John Beckett<br>Andy George</td>
+<td>Howth YC</td>
+<td>12.0 DNF</td>
+<td>9.0 RET</td>
+<td class="discard">(13.0 DNC)</td>
+<td>13.0 DNC</td>
+<td>11.0</td>
+<td>58.0</td>
+<td>45.0</td>
 </tr>
 <tr class="even summaryrow">
 <td>12th</td>
@@ -475,16 +501,17 @@ th[aria-sort="descending"]::after { content: " ▼"; font-size: 0.75em; }
 <td>13.0 DNC</td>
 <td>13.0 DNC</td>
 <td>13.0 DNC</td>
+<td>13.0 DNC</td>
+<td>65.0</td>
 <td>52.0</td>
-<td>39.0</td>
 </tr>
 </tbody>
 </table></div>
 <section class="fleetraces" id="non-spinnaker-class-4-irc-races">
 <h2>Non-Spinnaker Class 4 (IRC) &mdash; race results</h2>
-<h3 class="racetitle" id="non-spinnaker-class-4-irc-r1">R1&nbsp;&mdash;&nbsp;12 Sept 2026 &mdash; Start: 13:59:00</h3>
+<h3 class="racetitle" id="non-spinnaker-class-4-irc-r1">R1&nbsp;&mdash;&nbsp;12 Sep 2026 &mdash; Start: 13:59:00</h3>
 <div class="tablewrap"><table class="racetable" cellspacing="0" cellpadding="0" border="0">
-<colgroup span="10">
+<colgroup span="11">
 <col class="rank" />
 <col class="sailno" />
 <col class="boatname" />
@@ -495,6 +522,7 @@ th[aria-sort="descending"]::after { content: " ▼"; font-size: 0.75em; }
 <col class="et" />
 <col class="tcc" />
 <col class="ct" />
+<col class="delta" />
 <col class="points" />
 </colgroup>
 <thead>
@@ -508,6 +536,7 @@ th[aria-sort="descending"]::after { content: " ▼"; font-size: 0.75em; }
 <th>ET</th>
 <th>TCC</th>
 <th>CT</th>
+<th title="Corrected time behind the winner">Delta</th>
 <th>Points</th>
 </tr>
 </thead>
@@ -522,6 +551,7 @@ th[aria-sort="descending"]::after { content: " ▼"; font-size: 0.75em; }
 <td class="mono">1:29:06</td>
 <td class="mono">0.935</td>
 <td class="mono">1:23:19</td>
+<td class="mono">0:00:00</td>
 <td>1.0</td>
 </tr>
 <tr class="even racerow">
@@ -534,6 +564,7 @@ th[aria-sort="descending"]::after { content: " ▼"; font-size: 0.75em; }
 <td class="mono">1:33:18</td>
 <td class="mono">0.913</td>
 <td class="mono">1:25:11</td>
+<td class="mono">0:01:52</td>
 <td>2.0</td>
 </tr>
 <tr class="odd racerow">
@@ -546,6 +577,7 @@ th[aria-sort="descending"]::after { content: " ▼"; font-size: 0.75em; }
 <td class="mono">1:35:20</td>
 <td class="mono">0.908</td>
 <td class="mono">1:26:34</td>
+<td class="mono">0:03:15</td>
 <td>3.0</td>
 </tr>
 <tr class="even racerow">
@@ -557,6 +589,7 @@ th[aria-sort="descending"]::after { content: " ▼"; font-size: 0.75em; }
 <td class="mono"></td>
 <td class="mono"></td>
 <td class="mono">1.038</td>
+<td class="mono"></td>
 <td class="mono"></td>
 <td>7.0 DNF</td>
 </tr>
@@ -570,6 +603,7 @@ th[aria-sort="descending"]::after { content: " ▼"; font-size: 0.75em; }
 <td class="mono"></td>
 <td class="mono">0.947</td>
 <td class="mono"></td>
+<td class="mono"></td>
 <td>7.0 DNF</td>
 </tr>
 <tr class="even racerow">
@@ -582,13 +616,14 @@ th[aria-sort="descending"]::after { content: " ▼"; font-size: 0.75em; }
 <td class="mono"></td>
 <td class="mono">0.988</td>
 <td class="mono"></td>
+<td class="mono"></td>
 <td>7.0 DNF</td>
 </tr>
 </tbody>
 </table></div>
-<h3 class="racetitle" id="non-spinnaker-class-4-irc-r2">R2&nbsp;&mdash;&nbsp;19 Sept 2026 &mdash; Start: 13:28:00</h3>
+<h3 class="racetitle" id="non-spinnaker-class-4-irc-r2">R2&nbsp;&mdash;&nbsp;19 Sep 2026 &mdash; Start: 13:28:00</h3>
 <div class="tablewrap"><table class="racetable" cellspacing="0" cellpadding="0" border="0">
-<colgroup span="10">
+<colgroup span="11">
 <col class="rank" />
 <col class="sailno" />
 <col class="boatname" />
@@ -599,6 +634,7 @@ th[aria-sort="descending"]::after { content: " ▼"; font-size: 0.75em; }
 <col class="et" />
 <col class="tcc" />
 <col class="ct" />
+<col class="delta" />
 <col class="points" />
 </colgroup>
 <thead>
@@ -612,6 +648,7 @@ th[aria-sort="descending"]::after { content: " ▼"; font-size: 0.75em; }
 <th>ET</th>
 <th>TCC</th>
 <th>CT</th>
+<th title="Corrected time behind the winner">Delta</th>
 <th>Points</th>
 </tr>
 </thead>
@@ -626,6 +663,7 @@ th[aria-sort="descending"]::after { content: " ▼"; font-size: 0.75em; }
 <td class="mono">1:17:41</td>
 <td class="mono">0.913</td>
 <td class="mono">1:10:55</td>
+<td class="mono">0:00:00</td>
 <td>1.0</td>
 </tr>
 <tr class="even racerow">
@@ -638,6 +676,7 @@ th[aria-sort="descending"]::after { content: " ▼"; font-size: 0.75em; }
 <td class="mono">1:16:07</td>
 <td class="mono">0.947</td>
 <td class="mono">1:12:05</td>
+<td class="mono">0:01:10</td>
 <td>2.0</td>
 </tr>
 <tr class="odd racerow">
@@ -650,6 +689,7 @@ th[aria-sort="descending"]::after { content: " ▼"; font-size: 0.75em; }
 <td class="mono">1:27:16</td>
 <td class="mono">0.935</td>
 <td class="mono">1:21:36</td>
+<td class="mono">0:10:41</td>
 <td>3.0</td>
 </tr>
 <tr class="even racerow">
@@ -662,6 +702,7 @@ th[aria-sort="descending"]::after { content: " ▼"; font-size: 0.75em; }
 <td class="mono">1:10:57</td>
 <td class="mono">1.038</td>
 <td class="mono">1:13:39</td>
+<td class="mono"></td>
 <td>6.0 RET</td>
 </tr>
 <tr class="odd racerow">
@@ -674,13 +715,14 @@ th[aria-sort="descending"]::after { content: " ▼"; font-size: 0.75em; }
 <td class="mono">1:11:24</td>
 <td class="mono">0.988</td>
 <td class="mono">1:10:33</td>
+<td class="mono"></td>
 <td>6.0 RET</td>
 </tr>
 </tbody>
 </table></div>
-<h3 class="racetitle" id="non-spinnaker-class-4-irc-r3">R3&nbsp;&mdash;&nbsp;26 Sept 2026 &mdash; Start: 13:43:00</h3>
+<h3 class="racetitle" id="non-spinnaker-class-4-irc-r3">R3&nbsp;&mdash;&nbsp;26 Sep 2026 &mdash; Start: 13:43:00</h3>
 <div class="tablewrap"><table class="racetable" cellspacing="0" cellpadding="0" border="0">
-<colgroup span="10">
+<colgroup span="11">
 <col class="rank" />
 <col class="sailno" />
 <col class="boatname" />
@@ -691,6 +733,7 @@ th[aria-sort="descending"]::after { content: " ▼"; font-size: 0.75em; }
 <col class="et" />
 <col class="tcc" />
 <col class="ct" />
+<col class="delta" />
 <col class="points" />
 </colgroup>
 <thead>
@@ -704,6 +747,7 @@ th[aria-sort="descending"]::after { content: " ▼"; font-size: 0.75em; }
 <th>ET</th>
 <th>TCC</th>
 <th>CT</th>
+<th title="Corrected time behind the winner">Delta</th>
 <th>Points</th>
 </tr>
 </thead>
@@ -718,6 +762,7 @@ th[aria-sort="descending"]::after { content: " ▼"; font-size: 0.75em; }
 <td class="mono">42:39</td>
 <td class="mono">1.038</td>
 <td class="mono">44:16</td>
+<td class="mono">0:00:00</td>
 <td>1.0</td>
 </tr>
 <tr class="even racerow">
@@ -730,6 +775,7 @@ th[aria-sort="descending"]::after { content: " ▼"; font-size: 0.75em; }
 <td class="mono">48:55</td>
 <td class="mono">0.913</td>
 <td class="mono">44:40</td>
+<td class="mono">0:00:24</td>
 <td>2.0</td>
 </tr>
 <tr class="odd racerow">
@@ -742,6 +788,7 @@ th[aria-sort="descending"]::after { content: " ▼"; font-size: 0.75em; }
 <td class="mono">47:47</td>
 <td class="mono">0.935</td>
 <td class="mono">44:41</td>
+<td class="mono">0:00:25</td>
 <td>3.0</td>
 </tr>
 <tr class="even racerow">
@@ -754,6 +801,7 @@ th[aria-sort="descending"]::after { content: " ▼"; font-size: 0.75em; }
 <td class="mono">50:15</td>
 <td class="mono">0.908</td>
 <td class="mono">45:38</td>
+<td class="mono">0:01:22</td>
 <td>4.0</td>
 </tr>
 <tr class="odd racerow">
@@ -766,13 +814,14 @@ th[aria-sort="descending"]::after { content: " ▼"; font-size: 0.75em; }
 <td class="mono">49:48</td>
 <td class="mono">0.947</td>
 <td class="mono">47:10</td>
+<td class="mono">0:02:54</td>
 <td>5.0</td>
 </tr>
 </tbody>
 </table></div>
 <h3 class="racetitle" id="non-spinnaker-class-4-irc-r4">R4&nbsp;&mdash;&nbsp;10 Oct 2026 &mdash; Start: 13:25:00</h3>
 <div class="tablewrap"><table class="racetable" cellspacing="0" cellpadding="0" border="0">
-<colgroup span="10">
+<colgroup span="11">
 <col class="rank" />
 <col class="sailno" />
 <col class="boatname" />
@@ -783,6 +832,7 @@ th[aria-sort="descending"]::after { content: " ▼"; font-size: 0.75em; }
 <col class="et" />
 <col class="tcc" />
 <col class="ct" />
+<col class="delta" />
 <col class="points" />
 </colgroup>
 <thead>
@@ -796,6 +846,7 @@ th[aria-sort="descending"]::after { content: " ▼"; font-size: 0.75em; }
 <th>ET</th>
 <th>TCC</th>
 <th>CT</th>
+<th title="Corrected time behind the winner">Delta</th>
 <th>Points</th>
 </tr>
 </thead>
@@ -810,6 +861,7 @@ th[aria-sort="descending"]::after { content: " ▼"; font-size: 0.75em; }
 <td class="mono">1:15:32</td>
 <td class="mono">0.908</td>
 <td class="mono">1:08:35</td>
+<td class="mono">0:00:00</td>
 <td>1.0</td>
 </tr>
 <tr class="even racerow">
@@ -822,6 +874,7 @@ th[aria-sort="descending"]::after { content: " ▼"; font-size: 0.75em; }
 <td class="mono">1:16:54</td>
 <td class="mono">0.913</td>
 <td class="mono">1:10:13</td>
+<td class="mono">0:01:38</td>
 <td>2.0</td>
 </tr>
 <tr class="odd racerow">
@@ -834,6 +887,7 @@ th[aria-sort="descending"]::after { content: " ▼"; font-size: 0.75em; }
 <td class="mono">1:16:03</td>
 <td class="mono">0.935</td>
 <td class="mono">1:11:06</td>
+<td class="mono">0:02:31</td>
 <td>3.0</td>
 </tr>
 <tr class="even racerow">
@@ -846,14 +900,12 @@ th[aria-sort="descending"]::after { content: " ▼"; font-size: 0.75em; }
 <td class="mono">1:20:31</td>
 <td class="mono">0.947</td>
 <td class="mono">1:16:15</td>
+<td class="mono">0:07:40</td>
 <td>4.0</td>
 </tr>
 </tbody>
 </table></div>
-</section>
-<section class="fleetraces" id="non-spinnaker-class-4-hph-races">
-<h2>Non-Spinnaker Class 4 (HPH) &mdash; race results</h2>
-<h3 class="racetitle" id="non-spinnaker-class-4-hph-r1">R1&nbsp;&mdash;&nbsp;12 Sept 2026 &mdash; Start: 13:59:00</h3>
+<h3 class="racetitle" id="non-spinnaker-class-4-irc-r5">R5&nbsp;&mdash;&nbsp;17 Oct 2026 &mdash; Start: 13:25:00</h3>
 <div class="tablewrap"><table class="racetable" cellspacing="0" cellpadding="0" border="0">
 <colgroup span="11">
 <col class="rank" />
@@ -864,8 +916,124 @@ th[aria-sort="descending"]::after { content: " ▼"; font-size: 0.75em; }
 
 <col class="finish" />
 <col class="et" />
+<col class="tcc" />
+<col class="ct" />
+<col class="delta" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Sail Number</th>
+<th>Boat</th>
+<th>Owners</th>
+<th>Club</th>
+<th>Finish</th>
+<th>ET</th>
+<th>TCC</th>
+<th>CT</th>
+<th title="Corrected time behind the winner">Delta</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td class="rank1">1</td>
+<td>1411</td>
+<td>Toughnut</td>
+<td>Dermot Skehan</td>
+<td>Howth YC</td>
+<td class="mono">15:02:30</td>
+<td class="mono">1:37:30</td>
+<td class="mono">0.913</td>
+<td class="mono">1:29:01</td>
+<td class="mono">0:00:00</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td class="rank2">2</td>
+<td>3335C</td>
+<td>Bite the Bullet</td>
+<td>Colm Bermingham</td>
+<td>Howth YC</td>
+<td class="mono">15:02:07</td>
+<td class="mono">1:37:07</td>
+<td class="mono">0.947</td>
+<td class="mono">1:31:58</td>
+<td class="mono">0:02:57</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td class="rank3">3</td>
+<td>4073</td>
+<td>Splashdance</td>
+<td>John Beckett<br>Andy George</td>
+<td>Howth YC</td>
+<td class="mono">14:58:43</td>
+<td class="mono">1:33:43</td>
+<td class="mono">0.988</td>
+<td class="mono">1:32:36</td>
+<td class="mono">0:03:35</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>33301</td>
+<td>White Pearl</td>
+<td>David Greene</td>
+<td>Malahide YC</td>
+<td class="mono">15:10:42</td>
+<td class="mono">1:45:42</td>
+<td class="mono">0.935</td>
+<td class="mono">1:38:50</td>
+<td class="mono">0:09:49</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>22</td>
+<td>Vixen</td>
+<td>Ken Burke<br>Brian Curtis</td>
+<td>Howth YC</td>
+<td class="mono">15:01:46</td>
+<td class="mono">1:36:46</td>
+<td class="mono">1.038</td>
+<td class="mono">1:40:27</td>
+<td class="mono">0:11:26</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>2070</td>
+<td>Out &amp; About</td>
+<td>Terry McCoy</td>
+<td>Howth YC<br>Skerries SC</td>
+<td class="mono">15:15:39</td>
+<td class="mono">1:50:39</td>
+<td class="mono">0.908</td>
+<td class="mono">1:40:28</td>
+<td class="mono">0:11:27</td>
+<td>6.0</td>
+</tr>
+</tbody>
+</table></div>
+</section>
+<section class="fleetraces" id="non-spinnaker-class-4-hph-races">
+<h2>Non-Spinnaker Class 4 (HPH) &mdash; race results</h2>
+<h3 class="racetitle" id="non-spinnaker-class-4-hph-r1">R1&nbsp;&mdash;&nbsp;12 Sep 2026 &mdash; Start: 13:59:00</h3>
+<div class="tablewrap"><table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="12">
+<col class="rank" />
+<col class="sailno" />
+<col class="boatname" />
+<col class="helmname" />
+<col class="club" />
+
+<col class="finish" />
+<col class="et" />
 <col class="tcf" />
 <col class="ct" />
+<col class="delta" />
 <col class="newtcf" />
 <col class="points" />
 </colgroup>
@@ -880,6 +1048,7 @@ th[aria-sort="descending"]::after { content: " ▼"; font-size: 0.75em; }
 <th>ET</th>
 <th>TCF</th>
 <th>CT</th>
+<th title="Corrected time behind the winner">Delta</th>
 <th>New TCF</th>
 <th>Points</th>
 </tr>
@@ -895,6 +1064,7 @@ th[aria-sort="descending"]::after { content: " ▼"; font-size: 0.75em; }
 <td class="mono">1:29:06</td>
 <td class="mono">0.962</td>
 <td class="mono">1:25:43</td>
+<td class="mono">0:00:00</td>
 <td class="mono">0.968</td>
 <td>1.0</td>
 </tr>
@@ -908,6 +1078,7 @@ th[aria-sort="descending"]::after { content: " ▼"; font-size: 0.75em; }
 <td class="mono">1:35:20</td>
 <td class="mono">0.915</td>
 <td class="mono">1:27:14</td>
+<td class="mono">0:01:31</td>
 <td class="mono">0.916</td>
 <td>2.0</td>
 </tr>
@@ -921,6 +1092,7 @@ th[aria-sort="descending"]::after { content: " ▼"; font-size: 0.75em; }
 <td class="mono">1:30:04</td>
 <td class="mono">0.976</td>
 <td class="mono">1:27:54</td>
+<td class="mono">0:02:11</td>
 <td class="mono">0.975</td>
 <td>3.0</td>
 </tr>
@@ -934,6 +1106,7 @@ th[aria-sort="descending"]::after { content: " ▼"; font-size: 0.75em; }
 <td class="mono">1:36:12</td>
 <td class="mono">0.935</td>
 <td class="mono">1:29:57</td>
+<td class="mono">0:04:14</td>
 <td class="mono">0.931</td>
 <td>4.0</td>
 </tr>
@@ -947,6 +1120,7 @@ th[aria-sort="descending"]::after { content: " ▼"; font-size: 0.75em; }
 <td class="mono">1:33:18</td>
 <td class="mono">0.980</td>
 <td class="mono">1:31:26</td>
+<td class="mono">0:05:43</td>
 <td class="mono">0.977</td>
 <td>5.0</td>
 </tr>
@@ -959,6 +1133,7 @@ th[aria-sort="descending"]::after { content: " ▼"; font-size: 0.75em; }
 <td class="mono"></td>
 <td class="mono"></td>
 <td class="mono">1.060</td>
+<td class="mono"></td>
 <td class="mono"></td>
 <td class="mono">unchanged</td>
 <td>12.0 DNF</td>
@@ -973,6 +1148,7 @@ th[aria-sort="descending"]::after { content: " ▼"; font-size: 0.75em; }
 <td class="mono"></td>
 <td class="mono">0.995</td>
 <td class="mono"></td>
+<td class="mono"></td>
 <td class="mono">unchanged</td>
 <td>12.0 DNF</td>
 </tr>
@@ -985,6 +1161,7 @@ th[aria-sort="descending"]::after { content: " ▼"; font-size: 0.75em; }
 <td class="mono"></td>
 <td class="mono"></td>
 <td class="mono">0.928</td>
+<td class="mono"></td>
 <td class="mono"></td>
 <td class="mono">unchanged</td>
 <td>12.0 DNF</td>
@@ -999,6 +1176,7 @@ th[aria-sort="descending"]::after { content: " ▼"; font-size: 0.75em; }
 <td class="mono"></td>
 <td class="mono">1.160</td>
 <td class="mono"></td>
+<td class="mono"></td>
 <td class="mono">unchanged</td>
 <td>12.0 DNF</td>
 </tr>
@@ -1011,6 +1189,7 @@ th[aria-sort="descending"]::after { content: " ▼"; font-size: 0.75em; }
 <td class="mono"></td>
 <td class="mono"></td>
 <td class="mono">0.955</td>
+<td class="mono"></td>
 <td class="mono"></td>
 <td class="mono">unchanged</td>
 <td>12.0 DNF</td>
@@ -1025,14 +1204,15 @@ th[aria-sort="descending"]::after { content: " ▼"; font-size: 0.75em; }
 <td class="mono"></td>
 <td class="mono">0.942</td>
 <td class="mono"></td>
+<td class="mono"></td>
 <td class="mono">unchanged</td>
 <td>12.0 DNF</td>
 </tr>
 </tbody>
 </table></div>
-<h3 class="racetitle" id="non-spinnaker-class-4-hph-r2">R2&nbsp;&mdash;&nbsp;19 Sept 2026 &mdash; Start: 13:28:00</h3>
+<h3 class="racetitle" id="non-spinnaker-class-4-hph-r2">R2&nbsp;&mdash;&nbsp;19 Sep 2026 &mdash; Start: 13:28:00</h3>
 <div class="tablewrap"><table class="racetable" cellspacing="0" cellpadding="0" border="0">
-<colgroup span="11">
+<colgroup span="12">
 <col class="rank" />
 <col class="sailno" />
 <col class="boatname" />
@@ -1043,6 +1223,7 @@ th[aria-sort="descending"]::after { content: " ▼"; font-size: 0.75em; }
 <col class="et" />
 <col class="tcf" />
 <col class="ct" />
+<col class="delta" />
 <col class="newtcf" />
 <col class="points" />
 </colgroup>
@@ -1057,6 +1238,7 @@ th[aria-sort="descending"]::after { content: " ▼"; font-size: 0.75em; }
 <th>ET</th>
 <th>TCF</th>
 <th>CT</th>
+<th title="Corrected time behind the winner">Delta</th>
 <th>New TCF</th>
 <th>Points</th>
 </tr>
@@ -1072,6 +1254,7 @@ th[aria-sort="descending"]::after { content: " ▼"; font-size: 0.75em; }
 <td class="mono">1:16:07</td>
 <td class="mono">0.995</td>
 <td class="mono">1:15:44</td>
+<td class="mono">0:00:00</td>
 <td class="mono">0.998</td>
 <td>1.0</td>
 </tr>
@@ -1085,6 +1268,7 @@ th[aria-sort="descending"]::after { content: " ▼"; font-size: 0.75em; }
 <td class="mono">1:17:41</td>
 <td class="mono">0.977</td>
 <td class="mono">1:15:54</td>
+<td class="mono">0:00:10</td>
 <td class="mono">0.979</td>
 <td>2.0</td>
 </tr>
@@ -1098,6 +1282,7 @@ th[aria-sort="descending"]::after { content: " ▼"; font-size: 0.75em; }
 <td class="mono">1:22:00</td>
 <td class="mono">0.931</td>
 <td class="mono">1:16:21</td>
+<td class="mono">0:00:37</td>
 <td class="mono">0.932</td>
 <td>3.0</td>
 </tr>
@@ -1111,6 +1296,7 @@ th[aria-sort="descending"]::after { content: " ▼"; font-size: 0.75em; }
 <td class="mono">1:21:11</td>
 <td class="mono">0.942</td>
 <td class="mono">1:16:28</td>
+<td class="mono">0:00:44</td>
 <td class="mono">0.942</td>
 <td>4.0</td>
 </tr>
@@ -1124,6 +1310,7 @@ th[aria-sort="descending"]::after { content: " ▼"; font-size: 0.75em; }
 <td class="mono">1:27:16</td>
 <td class="mono">0.968</td>
 <td class="mono">1:24:28</td>
+<td class="mono">0:08:44</td>
 <td class="mono">0.963</td>
 <td>5.0</td>
 </tr>
@@ -1137,6 +1324,7 @@ th[aria-sort="descending"]::after { content: " ▼"; font-size: 0.75em; }
 <td class="mono">1:10:57</td>
 <td class="mono">1.060</td>
 <td class="mono">1:15:12</td>
+<td class="mono"></td>
 <td class="mono">unchanged</td>
 <td>9.0 RET</td>
 </tr>
@@ -1150,6 +1338,7 @@ th[aria-sort="descending"]::after { content: " ▼"; font-size: 0.75em; }
 <td class="mono">1:11:24</td>
 <td class="mono">1.160</td>
 <td class="mono">1:22:49</td>
+<td class="mono"></td>
 <td class="mono">unchanged</td>
 <td>9.0 RET</td>
 </tr>
@@ -1163,14 +1352,15 @@ th[aria-sort="descending"]::after { content: " ▼"; font-size: 0.75em; }
 <td class="mono">1:13:09</td>
 <td class="mono">0.975</td>
 <td class="mono">1:11:19</td>
+<td class="mono"></td>
 <td class="mono">unchanged</td>
 <td>9.0 OCS</td>
 </tr>
 </tbody>
 </table></div>
-<h3 class="racetitle" id="non-spinnaker-class-4-hph-r3">R3&nbsp;&mdash;&nbsp;26 Sept 2026 &mdash; Start: 13:43:00</h3>
+<h3 class="racetitle" id="non-spinnaker-class-4-hph-r3">R3&nbsp;&mdash;&nbsp;26 Sep 2026 &mdash; Start: 13:43:00</h3>
 <div class="tablewrap"><table class="racetable" cellspacing="0" cellpadding="0" border="0">
-<colgroup span="11">
+<colgroup span="12">
 <col class="rank" />
 <col class="sailno" />
 <col class="boatname" />
@@ -1181,6 +1371,7 @@ th[aria-sort="descending"]::after { content: " ▼"; font-size: 0.75em; }
 <col class="et" />
 <col class="tcf" />
 <col class="ct" />
+<col class="delta" />
 <col class="newtcf" />
 <col class="points" />
 </colgroup>
@@ -1195,6 +1386,7 @@ th[aria-sort="descending"]::after { content: " ▼"; font-size: 0.75em; }
 <th>ET</th>
 <th>TCF</th>
 <th>CT</th>
+<th title="Corrected time behind the winner">Delta</th>
 <th>New TCF</th>
 <th>Points</th>
 </tr>
@@ -1210,6 +1402,7 @@ th[aria-sort="descending"]::after { content: " ▼"; font-size: 0.75em; }
 <td class="mono">42:39</td>
 <td class="mono">1.060</td>
 <td class="mono">45:13</td>
+<td class="mono">0:00:00</td>
 <td class="mono">1.073</td>
 <td>1.0</td>
 </tr>
@@ -1223,6 +1416,7 @@ th[aria-sort="descending"]::after { content: " ▼"; font-size: 0.75em; }
 <td class="mono">47:04</td>
 <td class="mono">0.975</td>
 <td class="mono">45:53</td>
+<td class="mono">0:00:40</td>
 <td class="mono">0.982</td>
 <td>2.0</td>
 </tr>
@@ -1236,6 +1430,7 @@ th[aria-sort="descending"]::after { content: " ▼"; font-size: 0.75em; }
 <td class="mono">47:47</td>
 <td class="mono">0.963</td>
 <td class="mono">46:01</td>
+<td class="mono">0:00:48</td>
 <td class="mono">0.969</td>
 <td>3.0</td>
 </tr>
@@ -1249,6 +1444,7 @@ th[aria-sort="descending"]::after { content: " ▼"; font-size: 0.75em; }
 <td class="mono">50:15</td>
 <td class="mono">0.916</td>
 <td class="mono">46:02</td>
+<td class="mono">0:00:49</td>
 <td class="mono">0.922</td>
 <td>4.0</td>
 </tr>
@@ -1262,6 +1458,7 @@ th[aria-sort="descending"]::after { content: " ▼"; font-size: 0.75em; }
 <td class="mono">48:55</td>
 <td class="mono">0.979</td>
 <td class="mono">47:53</td>
+<td class="mono">0:02:40</td>
 <td class="mono">0.976</td>
 <td>5.0</td>
 </tr>
@@ -1275,6 +1472,7 @@ th[aria-sort="descending"]::after { content: " ▼"; font-size: 0.75em; }
 <td class="mono">51:15</td>
 <td class="mono">0.942</td>
 <td class="mono">48:17</td>
+<td class="mono">0:03:04</td>
 <td class="mono">0.938</td>
 <td>6.0</td>
 </tr>
@@ -1288,6 +1486,7 @@ th[aria-sort="descending"]::after { content: " ▼"; font-size: 0.75em; }
 <td class="mono">52:18</td>
 <td class="mono">0.932</td>
 <td class="mono">48:45</td>
+<td class="mono">0:03:32</td>
 <td class="mono">0.927</td>
 <td>7.0</td>
 </tr>
@@ -1301,6 +1500,7 @@ th[aria-sort="descending"]::after { content: " ▼"; font-size: 0.75em; }
 <td class="mono">49:48</td>
 <td class="mono">0.998</td>
 <td class="mono">49:42</td>
+<td class="mono">0:04:29</td>
 <td class="mono">0.989</td>
 <td>8.0</td>
 </tr>
@@ -1314,6 +1514,7 @@ th[aria-sort="descending"]::after { content: " ▼"; font-size: 0.75em; }
 <td class="mono">54:25</td>
 <td class="mono">0.928</td>
 <td class="mono">50:30</td>
+<td class="mono">0:05:17</td>
 <td class="mono">0.923</td>
 <td>9.0</td>
 </tr>
@@ -1327,6 +1528,7 @@ th[aria-sort="descending"]::after { content: " ▼"; font-size: 0.75em; }
 <td class="mono">53:28</td>
 <td class="mono">0.955</td>
 <td class="mono">51:04</td>
+<td class="mono">0:05:51</td>
 <td class="mono">0.950</td>
 <td>10.0</td>
 </tr>
@@ -1334,7 +1536,7 @@ th[aria-sort="descending"]::after { content: " ▼"; font-size: 0.75em; }
 </table></div>
 <h3 class="racetitle" id="non-spinnaker-class-4-hph-r4">R4&nbsp;&mdash;&nbsp;10 Oct 2026 &mdash; Start: 13:25:00</h3>
 <div class="tablewrap"><table class="racetable" cellspacing="0" cellpadding="0" border="0">
-<colgroup span="11">
+<colgroup span="12">
 <col class="rank" />
 <col class="sailno" />
 <col class="boatname" />
@@ -1345,6 +1547,7 @@ th[aria-sort="descending"]::after { content: " ▼"; font-size: 0.75em; }
 <col class="et" />
 <col class="tcf" />
 <col class="ct" />
+<col class="delta" />
 <col class="newtcf" />
 <col class="points" />
 </colgroup>
@@ -1359,6 +1562,7 @@ th[aria-sort="descending"]::after { content: " ▼"; font-size: 0.75em; }
 <th>ET</th>
 <th>TCF</th>
 <th>CT</th>
+<th title="Corrected time behind the winner">Delta</th>
 <th>New TCF</th>
 <th>Points</th>
 </tr>
@@ -1374,6 +1578,7 @@ th[aria-sort="descending"]::after { content: " ▼"; font-size: 0.75em; }
 <td class="mono">1:15:32</td>
 <td class="mono">0.922</td>
 <td class="mono">1:09:39</td>
+<td class="mono">0:00:00</td>
 <td class="mono">0.930</td>
 <td>1.0</td>
 </tr>
@@ -1387,6 +1592,7 @@ th[aria-sort="descending"]::after { content: " ▼"; font-size: 0.75em; }
 <td class="mono">1:12:29</td>
 <td class="mono">0.982</td>
 <td class="mono">1:11:11</td>
+<td class="mono">0:01:32</td>
 <td class="mono">0.992</td>
 <td>2.0</td>
 </tr>
@@ -1400,6 +1606,7 @@ th[aria-sort="descending"]::after { content: " ▼"; font-size: 0.75em; }
 <td class="mono">1:16:03</td>
 <td class="mono">0.969</td>
 <td class="mono">1:13:42</td>
+<td class="mono">0:04:03</td>
 <td class="mono">0.968</td>
 <td>3.0</td>
 </tr>
@@ -1413,6 +1620,7 @@ th[aria-sort="descending"]::after { content: " ▼"; font-size: 0.75em; }
 <td class="mono">1:19:57</td>
 <td class="mono">0.923</td>
 <td class="mono">1:13:48</td>
+<td class="mono">0:04:09</td>
 <td class="mono">0.922</td>
 <td>4.0</td>
 </tr>
@@ -1426,6 +1634,7 @@ th[aria-sort="descending"]::after { content: " ▼"; font-size: 0.75em; }
 <td class="mono">1:16:54</td>
 <td class="mono">0.976</td>
 <td class="mono">1:15:03</td>
+<td class="mono">0:05:24</td>
 <td class="mono">0.973</td>
 <td>5.0</td>
 </tr>
@@ -1439,6 +1648,7 @@ th[aria-sort="descending"]::after { content: " ▼"; font-size: 0.75em; }
 <td class="mono">1:21:15</td>
 <td class="mono">0.927</td>
 <td class="mono">1:15:19</td>
+<td class="mono">0:05:40</td>
 <td class="mono">0.923</td>
 <td>6.0</td>
 </tr>
@@ -1452,8 +1662,199 @@ th[aria-sort="descending"]::after { content: " ▼"; font-size: 0.75em; }
 <td class="mono">1:20:31</td>
 <td class="mono">0.989</td>
 <td class="mono">1:19:38</td>
+<td class="mono">0:09:59</td>
 <td class="mono">0.983</td>
 <td>7.0</td>
+</tr>
+</tbody>
+</table></div>
+<h3 class="racetitle" id="non-spinnaker-class-4-hph-r5">R5&nbsp;&mdash;&nbsp;17 Oct 2026 &mdash; Start: 13:25:00</h3>
+<div class="tablewrap"><table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="12">
+<col class="rank" />
+<col class="sailno" />
+<col class="boatname" />
+<col class="helmname" />
+<col class="club" />
+
+<col class="finish" />
+<col class="et" />
+<col class="tcf" />
+<col class="ct" />
+<col class="delta" />
+<col class="newtcf" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Sail Number</th>
+<th>Boat</th>
+<th>Owners</th>
+<th>Club</th>
+<th>Finish</th>
+<th>ET</th>
+<th>TCF</th>
+<th>CT</th>
+<th title="Corrected time behind the winner">Delta</th>
+<th>New TCF</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td class="rank1">1</td>
+<td>3154</td>
+<td>Alchemy</td>
+<td>Russell Camier</td>
+<td>Malahide YC</td>
+<td class="mono">15:07:38</td>
+<td class="mono">1:42:38</td>
+<td class="mono">0.923</td>
+<td class="mono">1:34:44</td>
+<td class="mono">0:00:00</td>
+<td class="mono">0.933</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td class="rank2">2</td>
+<td>1411</td>
+<td>Toughnut</td>
+<td>Dermot Skehan</td>
+<td>Howth YC</td>
+<td class="mono">15:02:30</td>
+<td class="mono">1:37:30</td>
+<td class="mono">0.973</td>
+<td class="mono">1:34:52</td>
+<td class="mono">0:00:08</td>
+<td class="mono">0.983</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td class="rank3">3</td>
+<td>3335C</td>
+<td>Bite the Bullet</td>
+<td>Colm Bermingham</td>
+<td>Howth YC</td>
+<td class="mono">15:02:07</td>
+<td class="mono">1:37:07</td>
+<td class="mono">0.983</td>
+<td class="mono">1:35:28</td>
+<td class="mono">0:00:44</td>
+<td class="mono">0.992</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>3337</td>
+<td>Helm's Deep</td>
+<td>Paul Harrison</td>
+<td>Howth YC</td>
+<td class="mono">15:09:29</td>
+<td class="mono">1:44:29</td>
+<td class="mono">0.922</td>
+<td class="mono">1:36:20</td>
+<td class="mono">0:01:36</td>
+<td class="mono">0.928</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>8331</td>
+<td>Changeling</td>
+<td>Kieran Jameson</td>
+<td>Howth YC</td>
+<td class="mono">15:02:10</td>
+<td class="mono">1:37:10</td>
+<td class="mono">0.992</td>
+<td class="mono">1:36:23</td>
+<td class="mono">0:01:39</td>
+<td class="mono">0.998</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>8151</td>
+<td>Joker's Wild</td>
+<td>MacQuarrie<br>Flood<br>Greene</td>
+<td>Howth YC</td>
+<td class="mono">15:13:04</td>
+<td class="mono">1:48:04</td>
+<td class="mono">0.938</td>
+<td class="mono">1:41:22</td>
+<td class="mono">0:06:38</td>
+<td class="mono">0.933</td>
+<td>6.0</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>4615</td>
+<td>Freelance</td>
+<td>Allen<br>Johns<br>Arthurs<br>Somers</td>
+<td>Malahide YC</td>
+<td class="mono">15:12:22</td>
+<td class="mono">1:47:22</td>
+<td class="mono">0.950</td>
+<td class="mono">1:42:00</td>
+<td class="mono">0:07:16</td>
+<td class="mono">0.944</td>
+<td>7.0</td>
+</tr>
+<tr class="even racerow">
+<td>8</td>
+<td>33301</td>
+<td>White Pearl</td>
+<td>David Greene</td>
+<td>Malahide YC</td>
+<td class="mono">15:10:42</td>
+<td class="mono">1:45:42</td>
+<td class="mono">0.968</td>
+<td class="mono">1:42:19</td>
+<td class="mono">0:07:35</td>
+<td class="mono">0.961</td>
+<td>8.0</td>
+</tr>
+<tr class="odd racerow">
+<td>9</td>
+<td>2070</td>
+<td>Out &amp; About</td>
+<td>Terry McCoy</td>
+<td>Howth YC<br>Skerries SC</td>
+<td class="mono">15:15:39</td>
+<td class="mono">1:50:39</td>
+<td class="mono">0.930</td>
+<td class="mono">1:42:54</td>
+<td class="mono">0:08:10</td>
+<td class="mono">0.923</td>
+<td>9.0</td>
+</tr>
+<tr class="even racerow">
+<td>10</td>
+<td>22</td>
+<td>Vixen</td>
+<td>Ken Burke<br>Brian Curtis</td>
+<td>Howth YC</td>
+<td class="mono">15:01:46</td>
+<td class="mono">1:36:46</td>
+<td class="mono">1.073</td>
+<td class="mono">1:43:50</td>
+<td class="mono">0:09:06</td>
+<td class="mono">1.063</td>
+<td>10.0</td>
+</tr>
+<tr class="odd racerow">
+<td>11</td>
+<td>4073</td>
+<td>Splashdance</td>
+<td>John Beckett<br>Andy George</td>
+<td>Howth YC</td>
+<td class="mono">14:58:43</td>
+<td class="mono">1:33:43</td>
+<td class="mono">1.160</td>
+<td class="mono">1:48:43</td>
+<td class="mono">0:13:59</td>
+<td class="mono">1.151</td>
+<td>11.0</td>
 </tr>
 </tbody>
 </table></div>
@@ -1467,8 +1868,8 @@ try{collator=new Intl.Collator(undefined,{numeric:true,sensitivity:'base'});}cat
 function keyOf(text){
   var t=text.replace(/\s+/g,' ').trim();
   if(t===''||t==='\u2014')return null;
-  var p=/^(\d+):(\d\d)(?::(\d\d))?$/.exec(t);
-  if(p)return{num:p[3]!=null?(+p[1])*3600+(+p[2])*60+(+p[3]):(+p[1])*60+(+p[2]),text:t};
+  var p=/^(\d+):(\d\d)(?::(\d\d))?(\.\d+)?$/.exec(t);
+  if(p)return{num:(p[3]!=null?(+p[1])*3600+(+p[2])*60+(+p[3]):(+p[1])*60+(+p[2]))+(p[4]?+p[4]:0),text:t};
   var m=/-?\d+(?:\.\d+)?/.exec(t);
   return m?{num:parseFloat(m[0]),text:t}:{text:t};
 }
