@@ -4,17 +4,17 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-<meta name="description" content="Provisional results for Autumn League 2026 - Offshore Fleets at Howth Yacht Club — ECHO Results - Experimental.">
+<meta name="description" content="Final results for Autumn League 2026 - Offshore Fleets at Howth Yacht Club — ECHO Results - Experimental.">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Results for Autumn League 2026 - Offshore Fleets at Howth Yacht Club — ECHO Results - Experimental</title>
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Sail Scoring">
 <meta property="og:title" content="Results for Autumn League 2026 - Offshore Fleets at Howth Yacht Club — ECHO Results - Experimental">
-<meta property="og:description" content="Provisional results for Autumn League 2026 - Offshore Fleets at Howth Yacht Club — ECHO Results - Experimental.">
+<meta property="og:description" content="Final results for Autumn League 2026 - Offshore Fleets at Howth Yacht Club — ECHO Results - Experimental.">
 <meta property="og:image" content="https://app.sailscoring.ie/opengraph-image.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Results for Autumn League 2026 - Offshore Fleets at Howth Yacht Club — ECHO Results - Experimental">
-<meta name="twitter:description" content="Provisional results for Autumn League 2026 - Offshore Fleets at Howth Yacht Club — ECHO Results - Experimental.">
+<meta name="twitter:description" content="Final results for Autumn League 2026 - Offshore Fleets at Howth Yacht Club — ECHO Results - Experimental.">
 <meta name="twitter:image" content="https://app.sailscoring.ie/opengraph-image.png">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%22205%20205%20840%20840%22%3E%3Cpath%20fill%3D%22%23fb3a3b%22%20d%3D%22M551%2C757.3c-5.6-11.7-3.5-26.2%2C6.2-35.9%2C12.4-12.4%2C32.4-12.4%2C44.7%2C0%2C12.4%2C12.4%2C12.4%2C32.4%2C0%2C44.7-9.7%2C9.7-24.2%2C11.8-35.9%2C6.2l-125.9%2C125.9c29.4-.8%2C58.5-.7%2C87.4.3l191.1-191.1c-5.6-11.7-3.5-26.2%2C6.2-35.9%2C12.4-12.4%2C32.4-12.4%2C44.7%2C0%2C12.4%2C12.4%2C12.4%2C32.4%2C0%2C44.7-9.7%2C9.7-24.2%2C11.8-35.9%2C6.2l-177.3%2C177.3c33.3%2C1.8%2C66.2%2C4.7%2C98.7%2C8.8l59.9-59.9c-5.6-11.7-3.5-26.2%2C6.2-35.9%2C12.4-12.4%2C32.4-12.4%2C44.7%2C0%2C12.4%2C12.4%2C12.4%2C32.4%2C0%2C44.7-9.7%2C9.7-24.2%2C11.8-35.9%2C6.2l-48.4%2C48.4c87.3%2C12.9%2C171.9%2C34.6%2C253.4%2C65.8-95.4-229.3-112.6-465-9.6-706L315.1%2C906.2c31.6-3.2%2C62.9-5.5%2C93.9-6.9l142.1-142Z%22%2F%3E%3C%2Fsvg%3E">
 <link rel="alternate" type="application/json" href="https://app.sailscoring.ie/p/hyc/2026/autumn-league-2026-offshore-fleets.sailscoring.json">
@@ -54,9 +54,13 @@ td.excluded { color: #888; text-align: center; }
 .penaltylabels { font-size: 0.85em; color: #444; margin: -20px auto 30px auto; max-width: 60em; }
 .notscored { font-size: 0.85em; color: #444; margin: -20px auto 30px auto; max-width: 60em; }
 .racelimitnote { font-size: 0.85em; color: #444; margin: 0 auto 24px auto; max-width: 60em; }
-/* The course drawing, folded away: the legs line states the course in words,
-   so the picture is there for whoever wants to look at it. */
+/* The course, folded away: the map and the leg record under it, for whoever
+   wants to check the course the audit line above summarises. */
 details.orc-course { margin: 0 0 8px 0; text-align: center; }
+div.orc-course-legs-wrap { max-width: 480px; margin: 0 auto 6px auto; overflow-x: auto; }
+table.orc-course-legs { margin: 0 auto; font-size: 0.8em; }
+table.orc-course-legs th, table.orc-course-legs td { padding: 3px 6px; white-space: nowrap; }
+table.orc-course-legs td.num { text-align: right; }
 details.orc-course > summary { font-size: 0.85em; color: #444; cursor: pointer; display: inline-block; list-style: none; }
 details.orc-course > summary::-webkit-details-marker { display: none; }
 details.orc-course > summary::before { content: '▸ '; }
@@ -147,6 +151,7 @@ th[aria-sort="descending"]::after { content: " ▼"; font-size: 0.75em; }
 
 </head>
 <body>
+<p class="breadcrumb"><a href="https://app.sailscoring.ie/p/hyc/2026/autumn-league" target="_top" rel="noopener">&larr; Autumn League 2026 - Offshore Fleets</a></p>
 <table class="headertable" cellspacing="0" width="100%" cellpadding="0" border="0">
 <tbody>
 <tr>
@@ -161,7 +166,7 @@ th[aria-sort="descending"]::after { content: " ▼"; font-size: 0.75em; }
 </table>
 <div style="clear:both;"></div>
 <style>div.applicant-break {page-break-after:always;}</style>
-<h3 class="seriestitle">Results are provisional as of 18:44 IST on 10 October 2026</h3>
+<h3 class="seriestitle">Final results — declared 19 October 2026</h3>
 <h2>ECHO Results - Experimental</h2>
 <div class="pagenotes">
 <p>The ECHO results are experimental and not considered official.</p>
@@ -196,6 +201,8 @@ body:has(#class-1-echo-r4:target) .gsec-class-1-echo-r4,body:has(#class-1-echo-r
 body:has(#class-1-echo-r5:target) .gsec-class-1-echo-r5,body:has(#class-1-echo-r5:target) .gblock-class-1-echo{display:block}
 body:has(#class-1-echo-r6:target) .gsec-class-1-echo-r6,body:has(#class-1-echo-r6:target) .gblock-class-1-echo{display:block}
 body:has(#class-1-echo-r7:target) .gsec-class-1-echo-r7,body:has(#class-1-echo-r7:target) .gblock-class-1-echo{display:block}
+body:has(#class-1-echo-r8:target) .gsec-class-1-echo-r8,body:has(#class-1-echo-r8:target) .gblock-class-1-echo{display:block}
+body:has(#class-1-echo-r9:target) .gsec-class-1-echo-r9,body:has(#class-1-echo-r9:target) .gblock-class-1-echo{display:block}
 body:has(#class-2-echo-r1:target) .gsec-class-2-echo-r1,body:has(#class-2-echo-r1:target) .gblock-class-2-echo{display:block}
 body:has(#class-2-echo-r2:target) .gsec-class-2-echo-r2,body:has(#class-2-echo-r2:target) .gblock-class-2-echo{display:block}
 body:has(#class-2-echo-r3:target) .gsec-class-2-echo-r3,body:has(#class-2-echo-r3:target) .gblock-class-2-echo{display:block}
@@ -203,6 +210,8 @@ body:has(#class-2-echo-r4:target) .gsec-class-2-echo-r4,body:has(#class-2-echo-r
 body:has(#class-2-echo-r5:target) .gsec-class-2-echo-r5,body:has(#class-2-echo-r5:target) .gblock-class-2-echo{display:block}
 body:has(#class-2-echo-r6:target) .gsec-class-2-echo-r6,body:has(#class-2-echo-r6:target) .gblock-class-2-echo{display:block}
 body:has(#class-2-echo-r7:target) .gsec-class-2-echo-r7,body:has(#class-2-echo-r7:target) .gblock-class-2-echo{display:block}
+body:has(#class-2-echo-r8:target) .gsec-class-2-echo-r8,body:has(#class-2-echo-r8:target) .gblock-class-2-echo{display:block}
+body:has(#class-2-echo-r9:target) .gsec-class-2-echo-r9,body:has(#class-2-echo-r9:target) .gblock-class-2-echo{display:block}
 body:has(#class-3-echo-r1:target) .gsec-class-3-echo-r1,body:has(#class-3-echo-r1:target) .gblock-class-3-echo{display:block}
 body:has(#class-3-echo-r2:target) .gsec-class-3-echo-r2,body:has(#class-3-echo-r2:target) .gblock-class-3-echo{display:block}
 body:has(#class-3-echo-r3:target) .gsec-class-3-echo-r3,body:has(#class-3-echo-r3:target) .gblock-class-3-echo{display:block}
@@ -210,39 +219,45 @@ body:has(#class-3-echo-r4:target) .gsec-class-3-echo-r4,body:has(#class-3-echo-r
 body:has(#class-3-echo-r5:target) .gsec-class-3-echo-r5,body:has(#class-3-echo-r5:target) .gblock-class-3-echo{display:block}
 body:has(#class-3-echo-r6:target) .gsec-class-3-echo-r6,body:has(#class-3-echo-r6:target) .gblock-class-3-echo{display:block}
 body:has(#class-3-echo-r7:target) .gsec-class-3-echo-r7,body:has(#class-3-echo-r7:target) .gblock-class-3-echo{display:block}
+body:has(#class-3-echo-r8:target) .gsec-class-3-echo-r8,body:has(#class-3-echo-r8:target) .gblock-class-3-echo{display:block}
+body:has(#class-3-echo-r9:target) .gsec-class-3-echo-r9,body:has(#class-3-echo-r9:target) .gblock-class-3-echo{display:block}
 body:has(#non-spinnaker-class-4-echo-r1:target) .gsec-non-spinnaker-class-4-echo-r1,body:has(#non-spinnaker-class-4-echo-r1:target) .gblock-non-spinnaker-class-4-echo{display:block}
 body:has(#non-spinnaker-class-4-echo-r2:target) .gsec-non-spinnaker-class-4-echo-r2,body:has(#non-spinnaker-class-4-echo-r2:target) .gblock-non-spinnaker-class-4-echo{display:block}
 body:has(#non-spinnaker-class-4-echo-r3:target) .gsec-non-spinnaker-class-4-echo-r3,body:has(#non-spinnaker-class-4-echo-r3:target) .gblock-non-spinnaker-class-4-echo{display:block}
 body:has(#non-spinnaker-class-4-echo-r4:target) .gsec-non-spinnaker-class-4-echo-r4,body:has(#non-spinnaker-class-4-echo-r4:target) .gblock-non-spinnaker-class-4-echo{display:block}
+body:has(#non-spinnaker-class-4-echo-r5:target) .gsec-non-spinnaker-class-4-echo-r5,body:has(#non-spinnaker-class-4-echo-r5:target) .gblock-non-spinnaker-class-4-echo{display:block}
 body:has(#non-spinnaker-class-5-echo-r1:target) .gsec-non-spinnaker-class-5-echo-r1,body:has(#non-spinnaker-class-5-echo-r1:target) .gblock-non-spinnaker-class-5-echo{display:block}
 body:has(#non-spinnaker-class-5-echo-r2:target) .gsec-non-spinnaker-class-5-echo-r2,body:has(#non-spinnaker-class-5-echo-r2:target) .gblock-non-spinnaker-class-5-echo{display:block}
 body:has(#non-spinnaker-class-5-echo-r3:target) .gsec-non-spinnaker-class-5-echo-r3,body:has(#non-spinnaker-class-5-echo-r3:target) .gblock-non-spinnaker-class-5-echo{display:block}
 body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo-r4,body:has(#non-spinnaker-class-5-echo-r4:target) .gblock-non-spinnaker-class-5-echo{display:block}
+body:has(#non-spinnaker-class-5-echo-r5:target) .gsec-non-spinnaker-class-5-echo-r5,body:has(#non-spinnaker-class-5-echo-r5:target) .gblock-non-spinnaker-class-5-echo{display:block}
 }
 @media print {
   .gsec, .gblock { display: block !important; }
   table.racegrid, p.racegridall { display: none; }
 }
-</style><div class="racegrid-anchors"><i class="racegrid-all" id="all-standings"></i><i class="racegrid-a" id="standings-class-1-echo"></i><i class="racegrid-a" id="standings-class-2-echo"></i><i class="racegrid-a" id="standings-class-3-echo"></i><i class="racegrid-a" id="standings-non-spinnaker-class-4-echo"></i><i class="racegrid-a" id="standings-non-spinnaker-class-5-echo"></i><i class="racegrid-a" id="class-1-echo-r1"></i><i class="racegrid-a" id="class-1-echo-r2"></i><i class="racegrid-a" id="class-1-echo-r3"></i><i class="racegrid-a" id="class-1-echo-r4"></i><i class="racegrid-a" id="class-1-echo-r5"></i><i class="racegrid-a" id="class-1-echo-r6"></i><i class="racegrid-a" id="class-1-echo-r7"></i><i class="racegrid-a" id="class-2-echo-r1"></i><i class="racegrid-a" id="class-2-echo-r2"></i><i class="racegrid-a" id="class-2-echo-r3"></i><i class="racegrid-a" id="class-2-echo-r4"></i><i class="racegrid-a" id="class-2-echo-r5"></i><i class="racegrid-a" id="class-2-echo-r6"></i><i class="racegrid-a" id="class-2-echo-r7"></i><i class="racegrid-a" id="class-3-echo-r1"></i><i class="racegrid-a" id="class-3-echo-r2"></i><i class="racegrid-a" id="class-3-echo-r3"></i><i class="racegrid-a" id="class-3-echo-r4"></i><i class="racegrid-a" id="class-3-echo-r5"></i><i class="racegrid-a" id="class-3-echo-r6"></i><i class="racegrid-a" id="class-3-echo-r7"></i><i class="racegrid-a" id="non-spinnaker-class-4-echo-r1"></i><i class="racegrid-a" id="non-spinnaker-class-4-echo-r2"></i><i class="racegrid-a" id="non-spinnaker-class-4-echo-r3"></i><i class="racegrid-a" id="non-spinnaker-class-4-echo-r4"></i><i class="racegrid-a" id="non-spinnaker-class-5-echo-r1"></i><i class="racegrid-a" id="non-spinnaker-class-5-echo-r2"></i><i class="racegrid-a" id="non-spinnaker-class-5-echo-r3"></i><i class="racegrid-a" id="non-spinnaker-class-5-echo-r4"></i></div>
+</style><div class="racegrid-anchors"><i class="racegrid-all" id="all-standings"></i><i class="racegrid-a" id="standings-class-1-echo"></i><i class="racegrid-a" id="standings-class-2-echo"></i><i class="racegrid-a" id="standings-class-3-echo"></i><i class="racegrid-a" id="standings-non-spinnaker-class-4-echo"></i><i class="racegrid-a" id="standings-non-spinnaker-class-5-echo"></i><i class="racegrid-a" id="class-1-echo-r1"></i><i class="racegrid-a" id="class-1-echo-r2"></i><i class="racegrid-a" id="class-1-echo-r3"></i><i class="racegrid-a" id="class-1-echo-r4"></i><i class="racegrid-a" id="class-1-echo-r5"></i><i class="racegrid-a" id="class-1-echo-r6"></i><i class="racegrid-a" id="class-1-echo-r7"></i><i class="racegrid-a" id="class-1-echo-r8"></i><i class="racegrid-a" id="class-1-echo-r9"></i><i class="racegrid-a" id="class-2-echo-r1"></i><i class="racegrid-a" id="class-2-echo-r2"></i><i class="racegrid-a" id="class-2-echo-r3"></i><i class="racegrid-a" id="class-2-echo-r4"></i><i class="racegrid-a" id="class-2-echo-r5"></i><i class="racegrid-a" id="class-2-echo-r6"></i><i class="racegrid-a" id="class-2-echo-r7"></i><i class="racegrid-a" id="class-2-echo-r8"></i><i class="racegrid-a" id="class-2-echo-r9"></i><i class="racegrid-a" id="class-3-echo-r1"></i><i class="racegrid-a" id="class-3-echo-r2"></i><i class="racegrid-a" id="class-3-echo-r3"></i><i class="racegrid-a" id="class-3-echo-r4"></i><i class="racegrid-a" id="class-3-echo-r5"></i><i class="racegrid-a" id="class-3-echo-r6"></i><i class="racegrid-a" id="class-3-echo-r7"></i><i class="racegrid-a" id="class-3-echo-r8"></i><i class="racegrid-a" id="class-3-echo-r9"></i><i class="racegrid-a" id="non-spinnaker-class-4-echo-r1"></i><i class="racegrid-a" id="non-spinnaker-class-4-echo-r2"></i><i class="racegrid-a" id="non-spinnaker-class-4-echo-r3"></i><i class="racegrid-a" id="non-spinnaker-class-4-echo-r4"></i><i class="racegrid-a" id="non-spinnaker-class-4-echo-r5"></i><i class="racegrid-a" id="non-spinnaker-class-5-echo-r1"></i><i class="racegrid-a" id="non-spinnaker-class-5-echo-r2"></i><i class="racegrid-a" id="non-spinnaker-class-5-echo-r3"></i><i class="racegrid-a" id="non-spinnaker-class-5-echo-r4"></i><i class="racegrid-a" id="non-spinnaker-class-5-echo-r5"></i></div>
 <table class="racegrid" cellspacing="0" cellpadding="0" border="0">
-<thead><tr><th class="racegrid-corner"></th><th>Standings</th><th>12 Sept</th><th>19 Sept</th><th>19 Sept</th><th>26 Sept</th><th>3 Oct</th><th>10 Oct</th><th>10 Oct</th></tr></thead>
+<thead><tr><th class="racegrid-corner"></th><th>Standings</th><th>12 Sept</th><th>19 Sept</th><th>19 Sept</th><th>26 Sept</th><th>3 Oct</th><th>10 Oct</th><th>10 Oct</th><th>17 Oct</th><th>17 Oct</th></tr></thead>
 <tbody>
-<tr class="odd"><td class="racegrid-fleet">Class 1 (Echo)</td><td><a href="#standings-class-1-echo">Series</a></td><td><a href="#class-1-echo-r1">R1</a></td><td><a href="#class-1-echo-r2">R2</a></td><td><a href="#class-1-echo-r3">R3</a></td><td><a href="#class-1-echo-r4">R4</a></td><td><a href="#class-1-echo-r5">R5</a></td><td><a href="#class-1-echo-r6">R6</a></td><td><a href="#class-1-echo-r7">R7</a></td></tr>
-<tr class="even"><td class="racegrid-fleet">Class 2 (Echo)</td><td><a href="#standings-class-2-echo">Series</a></td><td><a href="#class-2-echo-r1">R1</a></td><td><a href="#class-2-echo-r2">R2</a></td><td><a href="#class-2-echo-r3">R3</a></td><td><a href="#class-2-echo-r4">R4</a></td><td><a href="#class-2-echo-r5">R5</a></td><td><a href="#class-2-echo-r6">R6</a></td><td><a href="#class-2-echo-r7">R7</a></td></tr>
-<tr class="odd"><td class="racegrid-fleet">Class 3 (Echo)</td><td><a href="#standings-class-3-echo">Series</a></td><td><a href="#class-3-echo-r1">R1</a></td><td><a href="#class-3-echo-r2">R2</a></td><td><a href="#class-3-echo-r3">R3</a></td><td><a href="#class-3-echo-r4">R4</a></td><td><a href="#class-3-echo-r5">R5</a></td><td><a href="#class-3-echo-r6">R6</a></td><td><a href="#class-3-echo-r7">R7</a></td></tr>
-<tr class="even"><td class="racegrid-fleet">Non-Spinnaker Class 4 (Echo)</td><td><a href="#standings-non-spinnaker-class-4-echo">Series</a></td><td><a href="#non-spinnaker-class-4-echo-r1">R1</a></td><td><a href="#non-spinnaker-class-4-echo-r2">R2</a></td><td class="racegrid-none" title="Not sailed by this fleet">&middot;</td><td><a href="#non-spinnaker-class-4-echo-r3">R3</a></td><td class="racegrid-none" title="Not sailed by this fleet">&middot;</td><td><a href="#non-spinnaker-class-4-echo-r4">R4</a></td><td class="racegrid-none" title="Not sailed by this fleet">&middot;</td></tr>
-<tr class="odd"><td class="racegrid-fleet">Non-Spinnaker Class 5 (Echo)</td><td><a href="#standings-non-spinnaker-class-5-echo">Series</a></td><td><a href="#non-spinnaker-class-5-echo-r1">R1</a></td><td><a href="#non-spinnaker-class-5-echo-r2">R2</a></td><td class="racegrid-none" title="Not sailed by this fleet">&middot;</td><td><a href="#non-spinnaker-class-5-echo-r3">R3</a></td><td class="racegrid-none" title="Not sailed by this fleet">&middot;</td><td><a href="#non-spinnaker-class-5-echo-r4">R4</a></td><td class="racegrid-none" title="Not sailed by this fleet">&middot;</td></tr>
+<tr class="odd"><td class="racegrid-fleet">Class 1 (Echo)</td><td><a href="#standings-class-1-echo">Series</a></td><td><a href="#class-1-echo-r1">R1</a></td><td><a href="#class-1-echo-r2">R2</a></td><td><a href="#class-1-echo-r3">R3</a></td><td><a href="#class-1-echo-r4">R4</a></td><td><a href="#class-1-echo-r5">R5</a></td><td><a href="#class-1-echo-r6">R6</a></td><td><a href="#class-1-echo-r7">R7</a></td><td><a href="#class-1-echo-r8">R8</a></td><td><a href="#class-1-echo-r9">R9</a></td></tr>
+<tr class="even"><td class="racegrid-fleet">Class 2 (Echo)</td><td><a href="#standings-class-2-echo">Series</a></td><td><a href="#class-2-echo-r1">R1</a></td><td><a href="#class-2-echo-r2">R2</a></td><td><a href="#class-2-echo-r3">R3</a></td><td><a href="#class-2-echo-r4">R4</a></td><td><a href="#class-2-echo-r5">R5</a></td><td><a href="#class-2-echo-r6">R6</a></td><td><a href="#class-2-echo-r7">R7</a></td><td><a href="#class-2-echo-r8">R8</a></td><td><a href="#class-2-echo-r9">R9</a></td></tr>
+<tr class="odd"><td class="racegrid-fleet">Class 3 (Echo)</td><td><a href="#standings-class-3-echo">Series</a></td><td><a href="#class-3-echo-r1">R1</a></td><td><a href="#class-3-echo-r2">R2</a></td><td><a href="#class-3-echo-r3">R3</a></td><td><a href="#class-3-echo-r4">R4</a></td><td><a href="#class-3-echo-r5">R5</a></td><td><a href="#class-3-echo-r6">R6</a></td><td><a href="#class-3-echo-r7">R7</a></td><td><a href="#class-3-echo-r8">R8</a></td><td><a href="#class-3-echo-r9">R9</a></td></tr>
+<tr class="even"><td class="racegrid-fleet">Non-Spinnaker Class 4 (Echo)</td><td><a href="#standings-non-spinnaker-class-4-echo">Series</a></td><td><a href="#non-spinnaker-class-4-echo-r1">R1</a></td><td><a href="#non-spinnaker-class-4-echo-r2">R2</a></td><td class="racegrid-none" title="Not sailed by this fleet">&middot;</td><td><a href="#non-spinnaker-class-4-echo-r3">R3</a></td><td class="racegrid-none" title="Not sailed by this fleet">&middot;</td><td><a href="#non-spinnaker-class-4-echo-r4">R4</a></td><td class="racegrid-none" title="Not sailed by this fleet">&middot;</td><td><a href="#non-spinnaker-class-4-echo-r5">R5</a></td><td class="racegrid-none" title="Not sailed by this fleet">&middot;</td></tr>
+<tr class="odd"><td class="racegrid-fleet">Non-Spinnaker Class 5 (Echo)</td><td><a href="#standings-non-spinnaker-class-5-echo">Series</a></td><td><a href="#non-spinnaker-class-5-echo-r1">R1</a></td><td><a href="#non-spinnaker-class-5-echo-r2">R2</a></td><td class="racegrid-none" title="Not sailed by this fleet">&middot;</td><td><a href="#non-spinnaker-class-5-echo-r3">R3</a></td><td class="racegrid-none" title="Not sailed by this fleet">&middot;</td><td><a href="#non-spinnaker-class-5-echo-r4">R4</a></td><td class="racegrid-none" title="Not sailed by this fleet">&middot;</td><td><a href="#non-spinnaker-class-5-echo-r5">R5</a></td><td class="racegrid-none" title="Not sailed by this fleet">&middot;</td></tr>
 </tbody></table>
 <p class="racegridall"><a href="#all-standings">All standings</a></p>
 <section class="gsec gsec-standings gsec-standings-class-1-echo">
 <h2>Class 1 (Echo)</h2>
 <div class="tablewrap"><table class="summarytable" cellspacing="0" cellpadding="0" border="0">
-<colgroup span="14">
+<colgroup span="16">
 <col class="rank" />
 <col class="sailno" />
 <col class="boatname" />
 <col class="helmname" />
 <col class="club" />
+<col class="race" />
+<col class="race" />
 <col class="race" />
 <col class="race" />
 <col class="race" />
@@ -267,6 +282,8 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <th><a class="racelink" href="#class-1-echo-r5">R5</a><span class="racedate">3 Oct</span></th>
 <th><a class="racelink" href="#class-1-echo-r6">R6</a><span class="racedate">10 Oct</span></th>
 <th><a class="racelink" href="#class-1-echo-r7">R7</a><span class="racedate">10 Oct</span></th>
+<th><a class="racelink" href="#class-1-echo-r8">R8</a><span class="racedate">17 Oct</span></th>
+<th><a class="racelink" href="#class-1-echo-r9">R9</a><span class="racedate">17 Oct</span></th>
 <th>Total</th>
 <th>Nett</th>
 </tr>
@@ -285,27 +302,13 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <td class="rank3">3.0</td>
 <td class="rank1">1.0</td>
 <td class="rank2">2.0</td>
-<td>18.0</td>
-<td>11.0</td>
+<td class="rank2">2.0</td>
+<td class="rank3">3.0</td>
+<td>23.0</td>
+<td>16.0</td>
 </tr>
 <tr class="even summaryrow">
 <td>2nd</td>
-<td>1840</td>
-<td>The Big Picture</td>
-<td>Michael Evans<br>Richard Evans</td>
-<td>Howth YC</td>
-<td class="rank2">2.0</td>
-<td class="rank1">1.0</td>
-<td class="rank1">1.0</td>
-<td>4.0</td>
-<td class="discard">(5.0)</td>
-<td class="rank2">2.0</td>
-<td class="rank3">3.0</td>
-<td>18.0</td>
-<td>13.0</td>
-</tr>
-<tr class="odd summaryrow">
-<td>3rd</td>
 <td>9970</td>
 <td>Lambay Rules</td>
 <td>Stephen Quinn</td>
@@ -317,8 +320,28 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <td>4.0</td>
 <td class="rank3">3.0</td>
 <td>4.0</td>
+<td class="rank3">3.0</td>
+<td class="rank2">2.0</td>
+<td>28.0</td>
+<td>22.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>3rd</td>
+<td>1840</td>
+<td>The Big Picture</td>
+<td>Michael Evans<br>Richard Evans</td>
+<td>Howth YC</td>
+<td class="rank2">2.0</td>
+<td class="rank1">1.0</td>
+<td class="rank1">1.0</td>
+<td>4.0</td>
+<td>5.0</td>
+<td class="rank2">2.0</td>
+<td class="rank3">3.0</td>
+<td>5.0</td>
+<td class="discard">(6.0)</td>
+<td>29.0</td>
 <td>23.0</td>
-<td>17.0</td>
 </tr>
 <tr class="even summaryrow">
 <td>4th</td>
@@ -333,8 +356,10 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <td class="rank1">1.0</td>
 <td>5.0</td>
 <td>6.0</td>
-<td>32.0</td>
-<td>25.0</td>
+<td>4.0</td>
+<td class="rank1">1.0</td>
+<td>37.0</td>
+<td>30.0</td>
 </tr>
 <tr class="odd summaryrow">
 <td>5th</td>
@@ -349,8 +374,10 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <td class="rank2">2.0</td>
 <td>4.0</td>
 <td>5.0</td>
-<td>32.0</td>
-<td>25.0</td>
+<td>6.0</td>
+<td>4.0</td>
+<td>42.0</td>
+<td>35.0</td>
 </tr>
 <tr class="even summaryrow">
 <td>6th</td>
@@ -365,8 +392,10 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <td>7.0 DNC</td>
 <td>6.0</td>
 <td class="rank1">1.0</td>
-<td>42.0</td>
-<td>35.0</td>
+<td class="rank1">1.0</td>
+<td>5.0</td>
+<td>48.0</td>
+<td>41.0</td>
 </tr>
 </tbody>
 </table></div>
@@ -374,12 +403,14 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <section class="gsec gsec-standings gsec-standings-class-2-echo">
 <h2>Class 2 (Echo)</h2>
 <div class="tablewrap"><table class="summarytable" cellspacing="0" cellpadding="0" border="0">
-<colgroup span="14">
+<colgroup span="16">
 <col class="rank" />
 <col class="sailno" />
 <col class="boatname" />
 <col class="helmname" />
 <col class="club" />
+<col class="race" />
+<col class="race" />
 <col class="race" />
 <col class="race" />
 <col class="race" />
@@ -404,6 +435,8 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <th><a class="racelink" href="#class-2-echo-r5">R5</a><span class="racedate">3 Oct</span></th>
 <th><a class="racelink" href="#class-2-echo-r6">R6</a><span class="racedate">10 Oct</span></th>
 <th><a class="racelink" href="#class-2-echo-r7">R7</a><span class="racedate">10 Oct</span></th>
+<th><a class="racelink" href="#class-2-echo-r8">R8</a><span class="racedate">17 Oct</span></th>
+<th><a class="racelink" href="#class-2-echo-r9">R9</a><span class="racedate">17 Oct</span></th>
 <th>Total</th>
 <th>Nett</th>
 </tr>
@@ -422,8 +455,10 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <td class="discard">(7.0)</td>
 <td class="rank1">1.0</td>
 <td class="rank3">3.0</td>
-<td>21.0</td>
-<td>14.0</td>
+<td>4.0</td>
+<td class="rank1">1.0</td>
+<td>26.0</td>
+<td>19.0</td>
 </tr>
 <tr class="even summaryrow">
 <td>2nd</td>
@@ -431,15 +466,17 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <td>Dux</td>
 <td>Caroline Gore-Grimes<br>Nico Gore-Grimes</td>
 <td>Howth YC</td>
-<td class="discard">(5.0)</td>
+<td>5.0</td>
 <td class="rank1">1.0</td>
 <td class="rank1">1.0</td>
 <td>4.0</td>
 <td>5.0</td>
 <td class="rank2">2.0</td>
 <td class="rank2">2.0</td>
-<td>20.0</td>
-<td>15.0</td>
+<td class="rank1">1.0</td>
+<td class="discard">(7.0)</td>
+<td>28.0</td>
+<td>21.0</td>
 </tr>
 <tr class="odd summaryrow">
 <td>3rd</td>
@@ -454,8 +491,10 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <td class="rank3">3.0</td>
 <td class="rank3">3.0</td>
 <td class="rank1">1.0</td>
-<td>26.0</td>
-<td>18.0</td>
+<td class="rank2">2.0</td>
+<td class="rank3">3.0</td>
+<td>31.0</td>
+<td>23.0</td>
 </tr>
 <tr class="even summaryrow">
 <td>4th</td>
@@ -470,8 +509,10 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <td class="rank1">1.0</td>
 <td class="discard">(8.0 DNC)</td>
 <td>8.0 DNC</td>
+<td>6.0</td>
+<td class="rank2">2.0</td>
+<td>38.0</td>
 <td>30.0</td>
-<td>22.0</td>
 </tr>
 <tr class="odd summaryrow">
 <td>5th</td>
@@ -485,9 +526,11 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <td class="rank2">2.0</td>
 <td>4.0</td>
 <td>4.0</td>
-<td class="discard">(8.0 DNC)</td>
-<td>30.0</td>
-<td>22.0</td>
+<td>5.0 DNF</td>
+<td class="discard">(7.0)</td>
+<td>5.0</td>
+<td>39.0</td>
+<td>32.0</td>
 </tr>
 <tr class="even summaryrow">
 <td>6th</td>
@@ -502,8 +545,10 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <td class="rank2">2.0</td>
 <td>8.0 DNC</td>
 <td>8.0 DNC</td>
-<td>43.0</td>
-<td>35.0</td>
+<td class="rank3">3.0</td>
+<td>4.0</td>
+<td>50.0</td>
+<td>42.0</td>
 </tr>
 <tr class="odd summaryrow">
 <td>7th</td>
@@ -518,8 +563,10 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <td>6.0</td>
 <td>8.0 DNC</td>
 <td>8.0 DNC</td>
-<td>54.0</td>
-<td>46.0</td>
+<td>5.0</td>
+<td>6.0</td>
+<td>65.0</td>
+<td>57.0</td>
 </tr>
 </tbody>
 </table></div>
@@ -527,12 +574,14 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <section class="gsec gsec-standings gsec-standings-class-3-echo">
 <h2>Class 3 (Echo)</h2>
 <div class="tablewrap"><table class="summarytable" cellspacing="0" cellpadding="0" border="0">
-<colgroup span="14">
+<colgroup span="16">
 <col class="rank" />
 <col class="sailno" />
 <col class="boatname" />
 <col class="helmname" />
 <col class="club" />
+<col class="race" />
+<col class="race" />
 <col class="race" />
 <col class="race" />
 <col class="race" />
@@ -557,6 +606,8 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <th><a class="racelink" href="#class-3-echo-r5">R5</a><span class="racedate">3 Oct</span></th>
 <th><a class="racelink" href="#class-3-echo-r6">R6</a><span class="racedate">10 Oct</span></th>
 <th><a class="racelink" href="#class-3-echo-r7">R7</a><span class="racedate">10 Oct</span></th>
+<th><a class="racelink" href="#class-3-echo-r8">R8</a><span class="racedate">17 Oct</span></th>
+<th><a class="racelink" href="#class-3-echo-r9">R9</a><span class="racedate">17 Oct</span></th>
 <th>Total</th>
 <th>Nett</th>
 </tr>
@@ -575,8 +626,10 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <td class="discard">(4.0)</td>
 <td class="rank1">1.0</td>
 <td class="rank3">3.0</td>
-<td>14.0</td>
-<td>10.0</td>
+<td>4.0</td>
+<td class="rank3">3.0</td>
+<td>21.0</td>
+<td>17.0</td>
 </tr>
 <tr class="even summaryrow">
 <td>2nd</td>
@@ -591,27 +644,13 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <td class="rank2">2.0</td>
 <td class="rank3">3.0</td>
 <td class="rank1">1.0</td>
+<td class="rank3">3.0</td>
+<td class="rank2">2.0</td>
+<td>23.0</td>
 <td>18.0</td>
-<td>13.0</td>
 </tr>
 <tr class="odd summaryrow">
 <td>3rd</td>
-<td>4084</td>
-<td>Billy Whizz</td>
-<td>MYC J24 Race Team</td>
-<td>Malahide YC</td>
-<td class="rank2">2.0</td>
-<td class="rank2">2.0</td>
-<td class="rank1">1.0</td>
-<td class="rank3">3.0</td>
-<td class="rank1">1.0</td>
-<td class="discard">(6.0 DNC)</td>
-<td>6.0 DNC</td>
-<td>21.0</td>
-<td>15.0</td>
-</tr>
-<tr class="even summaryrow">
-<td>4th</td>
 <td>7115</td>
 <td>Gecko</td>
 <td>Kevin Darmody</td>
@@ -623,8 +662,28 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <td class="rank3">3.0</td>
 <td class="rank2">2.0</td>
 <td class="rank2">2.0</td>
-<td>22.0</td>
-<td>18.0</td>
+<td class="rank1">1.0</td>
+<td class="rank1">1.0</td>
+<td>24.0</td>
+<td>20.0</td>
+</tr>
+<tr class="even summaryrow">
+<td>4th</td>
+<td>4084</td>
+<td>Billy Whizz</td>
+<td>MYC J24 Race Team</td>
+<td>Malahide YC</td>
+<td class="rank2">2.0</td>
+<td class="rank2">2.0</td>
+<td class="rank1">1.0</td>
+<td class="rank3">3.0</td>
+<td class="rank1">1.0</td>
+<td class="discard">(6.0 DNC)</td>
+<td>6.0 DNC</td>
+<td class="rank2">2.0</td>
+<td>4.0</td>
+<td>27.0</td>
+<td>21.0</td>
 </tr>
 <tr class="odd summaryrow">
 <td>5th</td>
@@ -639,8 +698,10 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <td>6.0 DNC</td>
 <td>6.0 DNC</td>
 <td>6.0 DNC</td>
-<td>42.0</td>
-<td>36.0</td>
+<td>6.0 DNC</td>
+<td>6.0 DNC</td>
+<td>54.0</td>
+<td>48.0</td>
 </tr>
 </tbody>
 </table></div>
@@ -648,12 +709,13 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <section class="gsec gsec-standings gsec-standings-non-spinnaker-class-4-echo">
 <h2>Non-Spinnaker Class 4 (Echo)</h2>
 <div class="tablewrap"><table class="summarytable" cellspacing="0" cellpadding="0" border="0">
-<colgroup span="11">
+<colgroup span="12">
 <col class="rank" />
 <col class="sailno" />
 <col class="boatname" />
 <col class="helmname" />
 <col class="club" />
+<col class="race" />
 <col class="race" />
 <col class="race" />
 <col class="race" />
@@ -672,6 +734,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <th><a class="racelink" href="#non-spinnaker-class-4-echo-r2">R2</a><span class="racedate">19 Sept</span></th>
 <th><a class="racelink" href="#non-spinnaker-class-4-echo-r3">R3</a><span class="racedate">26 Sept</span></th>
 <th><a class="racelink" href="#non-spinnaker-class-4-echo-r4">R4</a><span class="racedate">10 Oct</span></th>
+<th><a class="racelink" href="#non-spinnaker-class-4-echo-r5">R5</a><span class="racedate">17 Oct</span></th>
 <th>Total</th>
 <th>Nett</th>
 </tr>
@@ -687,24 +750,12 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <td class="discard">(5.0)</td>
 <td class="rank1">1.0</td>
 <td class="rank2">2.0</td>
+<td>5.0</td>
+<td>14.0</td>
 <td>9.0</td>
-<td>4.0</td>
 </tr>
 <tr class="even summaryrow">
 <td>2nd</td>
-<td>2070</td>
-<td>Out &amp; About</td>
-<td>Terry McCoy</td>
-<td>Howth YC<br>Skerries SC</td>
-<td class="rank2">2.0</td>
-<td class="discard">(10.0 DNC)</td>
-<td class="rank3">3.0</td>
-<td class="rank1">1.0</td>
-<td>16.0</td>
-<td>6.0</td>
-</tr>
-<tr class="odd summaryrow">
-<td>3rd</td>
 <td>1411</td>
 <td>Toughnut</td>
 <td>Dermot Skehan</td>
@@ -713,24 +764,26 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <td class="rank1">1.0</td>
 <td class="discard">(4.0)</td>
 <td class="rank3">3.0</td>
-<td>11.0</td>
-<td>7.0</td>
+<td class="rank2">2.0</td>
+<td>13.0</td>
+<td>9.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>3rd</td>
+<td>2070</td>
+<td>Out &amp; About</td>
+<td>Terry McCoy</td>
+<td>Howth YC<br>Skerries SC</td>
+<td class="rank2">2.0</td>
+<td class="discard">(10.0 DNC)</td>
+<td class="rank3">3.0</td>
+<td class="rank1">1.0</td>
+<td>8.0</td>
+<td>24.0</td>
+<td>14.0</td>
 </tr>
 <tr class="even summaryrow">
 <td>4th</td>
-<td>3154</td>
-<td>Alchemy</td>
-<td>Russell Camier</td>
-<td>Malahide YC</td>
-<td>4.0</td>
-<td>4.0</td>
-<td class="discard">(7.0)</td>
-<td>4.0</td>
-<td>19.0</td>
-<td>12.0</td>
-</tr>
-<tr class="odd summaryrow">
-<td>5th</td>
 <td>3335C</td>
 <td>Bite the Bullet</td>
 <td>Colm Bermingham</td>
@@ -739,8 +792,23 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <td class="rank3">3.0</td>
 <td>6.0</td>
 <td>5.0</td>
-<td>23.0</td>
-<td>14.0</td>
+<td class="rank1">1.0</td>
+<td>24.0</td>
+<td>15.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>5th</td>
+<td>3154</td>
+<td>Alchemy</td>
+<td>Russell Camier</td>
+<td>Malahide YC</td>
+<td>4.0</td>
+<td>4.0</td>
+<td class="discard">(7.0)</td>
+<td>4.0</td>
+<td class="rank3">3.0</td>
+<td>22.0</td>
+<td>15.0</td>
 </tr>
 <tr class="even summaryrow">
 <td>6th</td>
@@ -752,8 +820,9 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <td class="rank2">2.0</td>
 <td>5.0</td>
 <td class="discard">(10.0 DNC)</td>
-<td>26.0</td>
-<td>16.0</td>
+<td>4.0</td>
+<td>30.0</td>
+<td>20.0</td>
 </tr>
 <tr class="odd summaryrow">
 <td>7th</td>
@@ -765,8 +834,9 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <td>8.0 RET</td>
 <td class="rank2">2.0</td>
 <td class="discard">(10.0 DNC)</td>
-<td>29.0</td>
-<td>19.0</td>
+<td>7.0</td>
+<td>36.0</td>
+<td>26.0</td>
 </tr>
 <tr class="even summaryrow">
 <td>8th</td>
@@ -778,8 +848,9 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <td>8.0 RET</td>
 <td class="discard">(10.0 DNC)</td>
 <td>10.0 DNC</td>
-<td>37.0</td>
-<td>27.0</td>
+<td>6.0</td>
+<td>43.0</td>
+<td>33.0</td>
 </tr>
 <tr class="odd summaryrow">
 <td>9th</td>
@@ -791,8 +862,9 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <td>10.0 DNC</td>
 <td>10.0 DNC</td>
 <td>10.0 DNC</td>
+<td>10.0 DNC</td>
+<td>50.0</td>
 <td>40.0</td>
-<td>30.0</td>
 </tr>
 </tbody>
 </table></div>
@@ -800,12 +872,13 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <section class="gsec gsec-standings gsec-standings-non-spinnaker-class-5-echo">
 <h2>Non-Spinnaker Class 5 (Echo)</h2>
 <div class="tablewrap"><table class="summarytable" cellspacing="0" cellpadding="0" border="0">
-<colgroup span="11">
+<colgroup span="12">
 <col class="rank" />
 <col class="sailno" />
 <col class="boatname" />
 <col class="helmname" />
 <col class="club" />
+<col class="race" />
 <col class="race" />
 <col class="race" />
 <col class="race" />
@@ -824,6 +897,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <th><a class="racelink" href="#non-spinnaker-class-5-echo-r2">R2</a><span class="racedate">19 Sept</span></th>
 <th><a class="racelink" href="#non-spinnaker-class-5-echo-r3">R3</a><span class="racedate">26 Sept</span></th>
 <th><a class="racelink" href="#non-spinnaker-class-5-echo-r4">R4</a><span class="racedate">10 Oct</span></th>
+<th><a class="racelink" href="#non-spinnaker-class-5-echo-r5">R5</a><span class="racedate">17 Oct</span></th>
 <th>Total</th>
 <th>Nett</th>
 </tr>
@@ -839,8 +913,9 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <td class="rank1">1.0</td>
 <td class="discard rank2">(2.0)</td>
 <td class="rank1">1.0</td>
-<td>5.0</td>
-<td>3.0</td>
+<td class="rank1">1.0</td>
+<td>6.0</td>
+<td>4.0</td>
 </tr>
 <tr class="even summaryrow">
 <td>2nd</td>
@@ -852,24 +927,12 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <td class="rank3">3.0</td>
 <td class="discard">(6.0 DNC)</td>
 <td>4.0 DNF</td>
-<td>15.0</td>
-<td>9.0</td>
+<td>4.0</td>
+<td>19.0</td>
+<td>13.0</td>
 </tr>
 <tr class="odd summaryrow">
 <td>3rd</td>
-<td>1775</td>
-<td>Blue Sky Action</td>
-<td>Robin Blandford</td>
-<td>Howth YC</td>
-<td class="discard">(6.0 DNC)</td>
-<td>6.0 DNC</td>
-<td class="rank3">3.0</td>
-<td class="rank2">2.0</td>
-<td>17.0</td>
-<td>11.0</td>
-</tr>
-<tr class="even summaryrow">
-<td>4th</td>
 <td>100</td>
 <td>Demelza</td>
 <td>Steffi Ennis<br>Windsor Laudan</td>
@@ -878,11 +941,12 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <td class="discard">(6.0 DNC)</td>
 <td class="rank1">1.0</td>
 <td>6.0 DNC</td>
-<td>18.0</td>
-<td>12.0</td>
+<td class="rank3">3.0</td>
+<td>21.0</td>
+<td>15.0</td>
 </tr>
-<tr class="odd summaryrow">
-<td>5th</td>
+<tr class="even summaryrow">
+<td>4th</td>
 <td>17793</td>
 <td>Chinook</td>
 <td>Brian Skehan</td>
@@ -891,8 +955,23 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <td class="rank2">2.0</td>
 <td class="discard">(6.0 DNC)</td>
 <td>6.0 DNC</td>
-<td>19.0</td>
-<td>13.0</td>
+<td class="rank2">2.0</td>
+<td>21.0</td>
+<td>15.0</td>
+</tr>
+<tr class="odd summaryrow">
+<td>5th</td>
+<td>1775</td>
+<td>Blue Sky Action</td>
+<td>Robin Blandford</td>
+<td>Howth YC</td>
+<td class="discard">(6.0 DNC)</td>
+<td>6.0 DNC</td>
+<td class="rank3">3.0</td>
+<td class="rank2">2.0</td>
+<td>5.0</td>
+<td>22.0</td>
+<td>16.0</td>
 </tr>
 </tbody>
 </table></div>
@@ -902,7 +981,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <section class="gsec gsec-class-1-echo-r1">
 <h3 class="racetitle">R1&nbsp;&mdash;&nbsp;12 Sept 2026 &mdash; Start: 13:22:00</h3>
 <div class="tablewrap"><table class="racetable" cellspacing="0" cellpadding="0" border="0">
-<colgroup span="11">
+<colgroup span="12">
 <col class="rank" />
 <col class="sailno" />
 <col class="boatname" />
@@ -913,6 +992,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <col class="et" />
 <col class="starth" />
 <col class="ct" />
+<col class="delta" />
 <col class="newh" />
 <col class="points" />
 </colgroup>
@@ -927,6 +1007,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <th>ET</th>
 <th>Starting H</th>
 <th>CT</th>
+<th title="Corrected time behind the winner">Delta</th>
 <th>New H</th>
 <th>Points</th>
 </tr>
@@ -942,6 +1023,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <td class="mono">1:03:58</td>
 <td class="mono">1.010</td>
 <td class="mono">1:04:36</td>
+<td class="mono">0:00:00</td>
 <td class="mono">1.028</td>
 <td>1.0</td>
 </tr>
@@ -955,6 +1037,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <td class="mono">57:45</td>
 <td class="mono">1.126</td>
 <td class="mono">1:05:02</td>
+<td class="mono">0:00:26</td>
 <td class="mono">1.143</td>
 <td>2.0</td>
 </tr>
@@ -968,6 +1051,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <td class="mono">59:22</td>
 <td class="mono">1.169</td>
 <td class="mono">1:09:24</td>
+<td class="mono">0:04:48</td>
 <td class="mono">1.156</td>
 <td>3.0</td>
 </tr>
@@ -981,6 +1065,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <td class="mono">1:07:39</td>
 <td class="mono">1.056</td>
 <td class="mono">1:11:26</td>
+<td class="mono">0:06:50</td>
 <td class="mono">1.033</td>
 <td>4.0</td>
 </tr>
@@ -994,6 +1079,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <td class="mono"></td>
 <td class="mono">1.028</td>
 <td class="mono"></td>
+<td class="mono"></td>
 <td class="mono">unchanged</td>
 <td>6.0 DNF</td>
 </tr>
@@ -1003,7 +1089,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <section class="gsec gsec-class-1-echo-r2">
 <h3 class="racetitle">R2&nbsp;&mdash;&nbsp;19 Sept 2026 &mdash; Start: 13:13:00</h3>
 <div class="tablewrap"><table class="racetable" cellspacing="0" cellpadding="0" border="0">
-<colgroup span="11">
+<colgroup span="12">
 <col class="rank" />
 <col class="sailno" />
 <col class="boatname" />
@@ -1014,6 +1100,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <col class="et" />
 <col class="starth" />
 <col class="ct" />
+<col class="delta" />
 <col class="newh" />
 <col class="points" />
 </colgroup>
@@ -1028,6 +1115,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <th>ET</th>
 <th>Starting H</th>
 <th>CT</th>
+<th title="Corrected time behind the winner">Delta</th>
 <th>New H</th>
 <th>Points</th>
 </tr>
@@ -1043,6 +1131,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <td class="mono">39:00</td>
 <td class="mono">1.143</td>
 <td class="mono">44:35</td>
+<td class="mono">0:00:00</td>
 <td class="mono">1.163</td>
 <td>1.0</td>
 </tr>
@@ -1056,6 +1145,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <td class="mono">46:12</td>
 <td class="mono">1.028</td>
 <td class="mono">47:30</td>
+<td class="mono">0:02:55</td>
 <td class="mono">1.019</td>
 <td>2.0</td>
 </tr>
@@ -1069,6 +1159,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <td class="mono">46:27</td>
 <td class="mono">1.028</td>
 <td class="mono">47:45</td>
+<td class="mono">0:03:10</td>
 <td class="mono">1.017</td>
 <td>3.0</td>
 </tr>
@@ -1078,7 +1169,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <section class="gsec gsec-class-1-echo-r3">
 <h3 class="racetitle">R3&nbsp;&mdash;&nbsp;19 Sept 2026 &mdash; Start: 14:15:00</h3>
 <div class="tablewrap"><table class="racetable" cellspacing="0" cellpadding="0" border="0">
-<colgroup span="11">
+<colgroup span="12">
 <col class="rank" />
 <col class="sailno" />
 <col class="boatname" />
@@ -1089,6 +1180,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <col class="et" />
 <col class="starth" />
 <col class="ct" />
+<col class="delta" />
 <col class="newh" />
 <col class="points" />
 </colgroup>
@@ -1103,6 +1195,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <th>ET</th>
 <th>Starting H</th>
 <th>CT</th>
+<th title="Corrected time behind the winner">Delta</th>
 <th>New H</th>
 <th>Points</th>
 </tr>
@@ -1118,6 +1211,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <td class="mono">43:36</td>
 <td class="mono">1.163</td>
 <td class="mono">50:42</td>
+<td class="mono">0:00:00</td>
 <td class="mono">1.184</td>
 <td>1.0</td>
 </tr>
@@ -1131,6 +1225,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <td class="mono">51:14</td>
 <td class="mono">1.017</td>
 <td class="mono">52:06</td>
+<td class="mono">0:01:24</td>
 <td class="mono">1.024</td>
 <td>2.0</td>
 </tr>
@@ -1144,6 +1239,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <td class="mono">48:52</td>
 <td class="mono">1.156</td>
 <td class="mono">56:29</td>
+<td class="mono">0:05:47</td>
 <td class="mono">1.128</td>
 <td>3.0</td>
 </tr>
@@ -1153,7 +1249,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <section class="gsec gsec-class-1-echo-r4">
 <h3 class="racetitle">R4&nbsp;&mdash;&nbsp;26 Sept 2026 &mdash; Start: 13:05:00</h3>
 <div class="tablewrap"><table class="racetable" cellspacing="0" cellpadding="0" border="0">
-<colgroup span="11">
+<colgroup span="12">
 <col class="rank" />
 <col class="sailno" />
 <col class="boatname" />
@@ -1164,6 +1260,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <col class="et" />
 <col class="starth" />
 <col class="ct" />
+<col class="delta" />
 <col class="newh" />
 <col class="points" />
 </colgroup>
@@ -1178,6 +1275,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <th>ET</th>
 <th>Starting H</th>
 <th>CT</th>
+<th title="Corrected time behind the winner">Delta</th>
 <th>New H</th>
 <th>Points</th>
 </tr>
@@ -1193,6 +1291,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <td class="mono">1:34:13</td>
 <td class="mono">1.024</td>
 <td class="mono">1:36:29</td>
+<td class="mono">0:00:00</td>
 <td class="mono">1.035</td>
 <td>1.0</td>
 </tr>
@@ -1206,6 +1305,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <td class="mono">1:36:42</td>
 <td class="mono">1.019</td>
 <td class="mono">1:38:32</td>
+<td class="mono">0:02:03</td>
 <td class="mono">1.021</td>
 <td>2.0</td>
 </tr>
@@ -1219,6 +1319,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <td class="mono">1:36:15</td>
 <td class="mono">1.033</td>
 <td class="mono">1:39:26</td>
+<td class="mono">0:02:57</td>
 <td class="mono">1.031</td>
 <td>3.0</td>
 </tr>
@@ -1232,6 +1333,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <td class="mono">1:25:45</td>
 <td class="mono">1.184</td>
 <td class="mono">1:41:32</td>
+<td class="mono">0:05:03</td>
 <td class="mono">1.172</td>
 <td>4.0</td>
 </tr>
@@ -1241,7 +1343,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <section class="gsec gsec-class-1-echo-r5">
 <h3 class="racetitle">R5&nbsp;&mdash;&nbsp;3 Oct 2026 &mdash; Start: 13:05:00</h3>
 <div class="tablewrap"><table class="racetable" cellspacing="0" cellpadding="0" border="0">
-<colgroup span="11">
+<colgroup span="12">
 <col class="rank" />
 <col class="sailno" />
 <col class="boatname" />
@@ -1252,6 +1354,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <col class="et" />
 <col class="starth" />
 <col class="ct" />
+<col class="delta" />
 <col class="newh" />
 <col class="points" />
 </colgroup>
@@ -1266,6 +1369,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <th>ET</th>
 <th>Starting H</th>
 <th>CT</th>
+<th title="Corrected time behind the winner">Delta</th>
 <th>New H</th>
 <th>Points</th>
 </tr>
@@ -1281,6 +1385,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <td class="mono">1:07:37</td>
 <td class="mono">1.128</td>
 <td class="mono">1:16:16</td>
+<td class="mono">0:00:00</td>
 <td class="mono">1.162</td>
 <td>1.0</td>
 </tr>
@@ -1294,6 +1399,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <td class="mono">1:16:59</td>
 <td class="mono">1.031</td>
 <td class="mono">1:19:22</td>
+<td class="mono">0:03:06</td>
 <td class="mono">1.045</td>
 <td>2.0</td>
 </tr>
@@ -1307,6 +1413,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <td class="mono">1:22:39</td>
 <td class="mono">1.021</td>
 <td class="mono">1:24:23</td>
+<td class="mono">0:08:07</td>
 <td class="mono">1.009</td>
 <td>3.0</td>
 </tr>
@@ -1320,6 +1427,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <td class="mono">1:22:33</td>
 <td class="mono">1.035</td>
 <td class="mono">1:25:26</td>
+<td class="mono">0:09:10</td>
 <td class="mono">1.018</td>
 <td>4.0</td>
 </tr>
@@ -1333,6 +1441,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <td class="mono">1:12:58</td>
 <td class="mono">1.172</td>
 <td class="mono">1:25:31</td>
+<td class="mono">0:09:15</td>
 <td class="mono">1.153</td>
 <td>5.0</td>
 </tr>
@@ -1342,7 +1451,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <section class="gsec gsec-class-1-echo-r6">
 <h3 class="racetitle">R6&nbsp;&mdash;&nbsp;10 Oct 2026 &mdash; Start: 13:05:00</h3>
 <div class="tablewrap"><table class="racetable" cellspacing="0" cellpadding="0" border="0">
-<colgroup span="11">
+<colgroup span="12">
 <col class="rank" />
 <col class="sailno" />
 <col class="boatname" />
@@ -1353,6 +1462,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <col class="et" />
 <col class="starth" />
 <col class="ct" />
+<col class="delta" />
 <col class="newh" />
 <col class="points" />
 </colgroup>
@@ -1367,6 +1477,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <th>ET</th>
 <th>Starting H</th>
 <th>CT</th>
+<th title="Corrected time behind the winner">Delta</th>
 <th>New H</th>
 <th>Points</th>
 </tr>
@@ -1382,6 +1493,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <td class="mono">52:18</td>
 <td class="mono">1.009</td>
 <td class="mono">52:46</td>
+<td class="mono">0:00:00</td>
 <td class="mono">1.031</td>
 <td>1.0</td>
 </tr>
@@ -1395,6 +1507,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <td class="mono">46:23</td>
 <td class="mono">1.153</td>
 <td class="mono">53:29</td>
+<td class="mono">0:00:43</td>
 <td class="mono">1.172</td>
 <td>2.0</td>
 </tr>
@@ -1408,6 +1521,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <td class="mono">54:10</td>
 <td class="mono">1.018</td>
 <td class="mono">55:09</td>
+<td class="mono">0:02:23</td>
 <td class="mono">1.022</td>
 <td>3.0</td>
 </tr>
@@ -1421,6 +1535,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <td class="mono">53:33</td>
 <td class="mono">1.045</td>
 <td class="mono">55:58</td>
+<td class="mono">0:03:12</td>
 <td class="mono">1.043</td>
 <td>4.0</td>
 </tr>
@@ -1434,6 +1549,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <td class="mono">49:17</td>
 <td class="mono">1.162</td>
 <td class="mono">57:16</td>
+<td class="mono">0:04:30</td>
 <td class="mono">1.149</td>
 <td>5.0</td>
 </tr>
@@ -1447,6 +1563,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <td class="mono">54:30</td>
 <td class="mono">1.100</td>
 <td class="mono">59:57</td>
+<td class="mono">0:07:11</td>
 <td class="mono">1.069</td>
 <td>6.0</td>
 </tr>
@@ -1456,7 +1573,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <section class="gsec gsec-class-1-echo-r7">
 <h3 class="racetitle">R7&nbsp;&mdash;&nbsp;10 Oct 2026 &mdash; Start: 14:25:00</h3>
 <div class="tablewrap"><table class="racetable" cellspacing="0" cellpadding="0" border="0">
-<colgroup span="11">
+<colgroup span="12">
 <col class="rank" />
 <col class="sailno" />
 <col class="boatname" />
@@ -1467,6 +1584,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <col class="et" />
 <col class="starth" />
 <col class="ct" />
+<col class="delta" />
 <col class="newh" />
 <col class="points" />
 </colgroup>
@@ -1481,6 +1599,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <th>ET</th>
 <th>Starting H</th>
 <th>CT</th>
+<th title="Corrected time behind the winner">Delta</th>
 <th>New H</th>
 <th>Points</th>
 </tr>
@@ -1496,6 +1615,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <td class="mono">47:06</td>
 <td class="mono">1.069</td>
 <td class="mono">50:21</td>
+<td class="mono">0:00:00</td>
 <td class="mono">1.098</td>
 <td>1.0</td>
 </tr>
@@ -1509,6 +1629,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <td class="mono">50:05</td>
 <td class="mono">1.031</td>
 <td class="mono">51:38</td>
+<td class="mono">0:01:17</td>
 <td class="mono">1.048</td>
 <td>2.0</td>
 </tr>
@@ -1522,6 +1643,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <td class="mono">45:22</td>
 <td class="mono">1.172</td>
 <td class="mono">53:10</td>
+<td class="mono">0:02:49</td>
 <td class="mono">1.177</td>
 <td>3.0</td>
 </tr>
@@ -1535,6 +1657,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <td class="mono">52:34</td>
 <td class="mono">1.022</td>
 <td class="mono">53:43</td>
+<td class="mono">0:03:22</td>
 <td class="mono">1.022</td>
 <td>4.0</td>
 </tr>
@@ -1548,6 +1671,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <td class="mono">53:11</td>
 <td class="mono">1.043</td>
 <td class="mono">55:28</td>
+<td class="mono">0:05:07</td>
 <td class="mono">1.030</td>
 <td>5.0</td>
 </tr>
@@ -1561,19 +1685,17 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <td class="mono">51:14</td>
 <td class="mono">1.149</td>
 <td class="mono">58:52</td>
+<td class="mono">0:08:31</td>
 <td class="mono">1.109</td>
 <td>6.0</td>
 </tr>
 </tbody>
 </table></div>
 </section>
-</section>
-<section class="fleetraces gblock gblock-class-2-echo" id="class-2-echo-races">
-<h2>Class 2 (Echo) &mdash; race results</h2>
-<section class="gsec gsec-class-2-echo-r1">
-<h3 class="racetitle">R1&nbsp;&mdash;&nbsp;12 Sept 2026 &mdash; Start: 13:43:00</h3>
+<section class="gsec gsec-class-1-echo-r8">
+<h3 class="racetitle">R8&nbsp;&mdash;&nbsp;17 Oct 2026 &mdash; Start: 13:05:00</h3>
 <div class="tablewrap"><table class="racetable" cellspacing="0" cellpadding="0" border="0">
-<colgroup span="11">
+<colgroup span="12">
 <col class="rank" />
 <col class="sailno" />
 <col class="boatname" />
@@ -1584,6 +1706,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <col class="et" />
 <col class="starth" />
 <col class="ct" />
+<col class="delta" />
 <col class="newh" />
 <col class="points" />
 </colgroup>
@@ -1598,6 +1721,254 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <th>ET</th>
 <th>Starting H</th>
 <th>CT</th>
+<th title="Corrected time behind the winner">Delta</th>
+<th>New H</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td class="rank1">1</td>
+<td>3721</td>
+<td>ValenTina</td>
+<td>John Treanor</td>
+<td>RIYC<br>NYC</td>
+<td class="mono">13:55:10</td>
+<td class="mono">50:10</td>
+<td class="mono">1.098</td>
+<td class="mono">55:05</td>
+<td class="mono">0:00:00</td>
+<td class="mono">1.113</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td class="rank2">2</td>
+<td>1543</td>
+<td>Indian</td>
+<td>Simon Knowles</td>
+<td>Howth YC</td>
+<td class="mono">13:58:43</td>
+<td class="mono">53:43</td>
+<td class="mono">1.048</td>
+<td class="mono">56:18</td>
+<td class="mono">0:01:13</td>
+<td class="mono">1.053</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td class="rank3">3</td>
+<td>9970</td>
+<td>Lambay Rules</td>
+<td>Stephen Quinn</td>
+<td>Howth YC</td>
+<td class="mono">14:00:56</td>
+<td class="mono">55:56</td>
+<td class="mono">1.022</td>
+<td class="mono">57:10</td>
+<td class="mono">0:02:05</td>
+<td class="mono">1.021</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>32032</td>
+<td>Adrenaline</td>
+<td>Darren Wright</td>
+<td>Howth YC</td>
+<td class="mono">13:56:56</td>
+<td class="mono">51:56</td>
+<td class="mono">1.109</td>
+<td class="mono">57:36</td>
+<td class="mono">0:02:31</td>
+<td class="mono">1.105</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>1840</td>
+<td>The Big Picture</td>
+<td>Michael Evans<br>Richard Evans</td>
+<td>Howth YC</td>
+<td class="mono">13:53:58</td>
+<td class="mono">48:58</td>
+<td class="mono">1.177</td>
+<td class="mono">57:38</td>
+<td class="mono">0:02:33</td>
+<td class="mono">1.172</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>6697</td>
+<td>Jeneral Lee</td>
+<td>Colin Kavanagh<br>Kathy Kavanagh</td>
+<td>Howth YC</td>
+<td class="mono">14:01:50</td>
+<td class="mono">56:50</td>
+<td class="mono">1.030</td>
+<td class="mono">58:32</td>
+<td class="mono">0:03:27</td>
+<td class="mono">1.019</td>
+<td>6.0</td>
+</tr>
+</tbody>
+</table></div>
+</section>
+<section class="gsec gsec-class-1-echo-r9">
+<h3 class="racetitle">R9&nbsp;&mdash;&nbsp;17 Oct 2026 &mdash; Start: 14:25:00</h3>
+<div class="tablewrap"><table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="12">
+<col class="rank" />
+<col class="sailno" />
+<col class="boatname" />
+<col class="helmname" />
+<col class="club" />
+
+<col class="finish" />
+<col class="et" />
+<col class="starth" />
+<col class="ct" />
+<col class="delta" />
+<col class="newh" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Sail Number</th>
+<th>Boat</th>
+<th>Owners</th>
+<th>Club</th>
+<th>Finish</th>
+<th>ET</th>
+<th>Starting H</th>
+<th>CT</th>
+<th title="Corrected time behind the winner">Delta</th>
+<th>New H</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td class="rank1">1</td>
+<td>32032</td>
+<td>Adrenaline</td>
+<td>Darren Wright</td>
+<td>Howth YC</td>
+<td class="mono">15:17:27</td>
+<td class="mono">52:27</td>
+<td class="mono">1.105</td>
+<td class="mono">57:57</td>
+<td class="mono">0:00:00</td>
+<td class="mono">1.131</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td class="rank2">2</td>
+<td>9970</td>
+<td>Lambay Rules</td>
+<td>Stephen Quinn</td>
+<td>Howth YC</td>
+<td class="mono">15:24:21</td>
+<td class="mono">59:21</td>
+<td class="mono">1.021</td>
+<td class="mono">1:00:36</td>
+<td class="mono">0:02:39</td>
+<td class="mono">1.026</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td class="rank3">3</td>
+<td>1543</td>
+<td>Indian</td>
+<td>Simon Knowles</td>
+<td>Howth YC</td>
+<td class="mono">15:23:30</td>
+<td class="mono">58:30</td>
+<td class="mono">1.053</td>
+<td class="mono">1:01:36</td>
+<td class="mono">0:03:39</td>
+<td class="mono">1.052</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>6697</td>
+<td>Jeneral Lee</td>
+<td>Colin Kavanagh<br>Kathy Kavanagh</td>
+<td>Howth YC</td>
+<td class="mono">15:25:54</td>
+<td class="mono">1:00:54</td>
+<td class="mono">1.019</td>
+<td class="mono">1:02:03</td>
+<td class="mono">0:04:06</td>
+<td class="mono">1.015</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>3721</td>
+<td>ValenTina</td>
+<td>John Treanor</td>
+<td>RIYC<br>NYC</td>
+<td class="mono">15:21:02</td>
+<td class="mono">56:02</td>
+<td class="mono">1.113</td>
+<td class="mono">1:02:22</td>
+<td class="mono">0:04:25</td>
+<td class="mono">1.106</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>1840</td>
+<td>The Big Picture</td>
+<td>Michael Evans<br>Richard Evans</td>
+<td>Howth YC</td>
+<td class="mono">15:19:40</td>
+<td class="mono">54:40</td>
+<td class="mono">1.172</td>
+<td class="mono">1:04:04</td>
+<td class="mono">0:06:07</td>
+<td class="mono">1.153</td>
+<td>6.0</td>
+</tr>
+</tbody>
+</table></div>
+</section>
+</section>
+<section class="fleetraces gblock gblock-class-2-echo" id="class-2-echo-races">
+<h2>Class 2 (Echo) &mdash; race results</h2>
+<section class="gsec gsec-class-2-echo-r1">
+<h3 class="racetitle">R1&nbsp;&mdash;&nbsp;12 Sept 2026 &mdash; Start: 13:43:00</h3>
+<div class="tablewrap"><table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="12">
+<col class="rank" />
+<col class="sailno" />
+<col class="boatname" />
+<col class="helmname" />
+<col class="club" />
+
+<col class="finish" />
+<col class="et" />
+<col class="starth" />
+<col class="ct" />
+<col class="delta" />
+<col class="newh" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Sail Number</th>
+<th>Boat</th>
+<th>Owners</th>
+<th>Club</th>
+<th>Finish</th>
+<th>ET</th>
+<th>Starting H</th>
+<th>CT</th>
+<th title="Corrected time behind the winner">Delta</th>
 <th>New H</th>
 <th>Points</th>
 </tr>
@@ -1613,6 +1984,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <td class="mono">1:05:59</td>
 <td class="mono">0.970</td>
 <td class="mono">1:04:00</td>
+<td class="mono">0:00:00</td>
 <td class="mono">0.986</td>
 <td>1.0</td>
 </tr>
@@ -1626,6 +1998,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <td class="mono">1:09:14</td>
 <td class="mono">0.939</td>
 <td class="mono">1:05:01</td>
+<td class="mono">0:01:01</td>
 <td class="mono">0.948</td>
 <td>2.0</td>
 </tr>
@@ -1639,6 +2012,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <td class="mono">1:09:36</td>
 <td class="mono">0.959</td>
 <td class="mono">1:06:45</td>
+<td class="mono">0:02:45</td>
 <td class="mono">0.958</td>
 <td>3.0</td>
 </tr>
@@ -1652,6 +2026,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <td class="mono">1:13:20</td>
 <td class="mono">0.934</td>
 <td class="mono">1:08:30</td>
+<td class="mono">0:04:30</td>
 <td class="mono">0.924</td>
 <td>4.0</td>
 </tr>
@@ -1665,6 +2040,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <td class="mono">1:13:46</td>
 <td class="mono">0.940</td>
 <td class="mono">1:09:20</td>
+<td class="mono">0:05:20</td>
 <td class="mono">0.925</td>
 <td>5.0</td>
 </tr>
@@ -1674,7 +2050,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <section class="gsec gsec-class-2-echo-r2">
 <h3 class="racetitle">R2&nbsp;&mdash;&nbsp;19 Sept 2026 &mdash; Start: 13:18:00</h3>
 <div class="tablewrap"><table class="racetable" cellspacing="0" cellpadding="0" border="0">
-<colgroup span="11">
+<colgroup span="12">
 <col class="rank" />
 <col class="sailno" />
 <col class="boatname" />
@@ -1685,6 +2061,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <col class="et" />
 <col class="starth" />
 <col class="ct" />
+<col class="delta" />
 <col class="newh" />
 <col class="points" />
 </colgroup>
@@ -1699,6 +2076,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <th>ET</th>
 <th>Starting H</th>
 <th>CT</th>
+<th title="Corrected time behind the winner">Delta</th>
 <th>New H</th>
 <th>Points</th>
 </tr>
@@ -1714,6 +2092,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <td class="mono">47:27</td>
 <td class="mono">0.925</td>
 <td class="mono">43:53</td>
+<td class="mono">0:00:00</td>
 <td class="mono">0.937</td>
 <td>1.0</td>
 </tr>
@@ -1727,6 +2106,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <td class="mono">45:37</td>
 <td class="mono">0.986</td>
 <td class="mono">44:59</td>
+<td class="mono">0:01:06</td>
 <td class="mono">0.989</td>
 <td>2.0</td>
 </tr>
@@ -1740,6 +2120,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <td class="mono">47:32</td>
 <td class="mono">0.948</td>
 <td class="mono">45:04</td>
+<td class="mono">0:01:11</td>
 <td class="mono">0.951</td>
 <td>3.0</td>
 </tr>
@@ -1753,6 +2134,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <td class="mono">49:52</td>
 <td class="mono">0.924</td>
 <td class="mono">46:05</td>
+<td class="mono">0:02:12</td>
 <td class="mono">0.918</td>
 <td>4.0</td>
 </tr>
@@ -1766,6 +2148,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <td class="mono">49:01</td>
 <td class="mono">0.958</td>
 <td class="mono">46:57</td>
+<td class="mono">0:03:04</td>
 <td class="mono">0.945</td>
 <td>5.0</td>
 </tr>
@@ -1775,7 +2158,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <section class="gsec gsec-class-2-echo-r3">
 <h3 class="racetitle">R3&nbsp;&mdash;&nbsp;19 Sept 2026 &mdash; Start: 14:20:00</h3>
 <div class="tablewrap"><table class="racetable" cellspacing="0" cellpadding="0" border="0">
-<colgroup span="11">
+<colgroup span="12">
 <col class="rank" />
 <col class="sailno" />
 <col class="boatname" />
@@ -1786,6 +2169,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <col class="et" />
 <col class="starth" />
 <col class="ct" />
+<col class="delta" />
 <col class="newh" />
 <col class="points" />
 </colgroup>
@@ -1800,6 +2184,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <th>ET</th>
 <th>Starting H</th>
 <th>CT</th>
+<th title="Corrected time behind the winner">Delta</th>
 <th>New H</th>
 <th>Points</th>
 </tr>
@@ -1815,6 +2200,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <td class="mono">51:14</td>
 <td class="mono">0.937</td>
 <td class="mono">48:00</td>
+<td class="mono">0:00:00</td>
 <td class="mono">0.953</td>
 <td>1.0</td>
 </tr>
@@ -1828,6 +2214,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <td class="mono">49:20</td>
 <td class="mono">0.989</td>
 <td class="mono">48:47</td>
+<td class="mono">0:00:47</td>
 <td class="mono">1.000</td>
 <td>2.0</td>
 </tr>
@@ -1841,6 +2228,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <td class="mono">54:24</td>
 <td class="mono">0.918</td>
 <td class="mono">49:56</td>
+<td class="mono">0:01:56</td>
 <td class="mono">0.919</td>
 <td>3.0</td>
 </tr>
@@ -1854,6 +2242,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <td class="mono">54:48</td>
 <td class="mono">0.945</td>
 <td class="mono">51:47</td>
+<td class="mono">0:03:47</td>
 <td class="mono">0.933</td>
 <td>4.0</td>
 </tr>
@@ -1867,6 +2256,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <td class="mono">55:04</td>
 <td class="mono">0.951</td>
 <td class="mono">52:22</td>
+<td class="mono">0:04:22</td>
 <td class="mono">0.935</td>
 <td>5.0</td>
 </tr>
@@ -1876,7 +2266,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <section class="gsec gsec-class-2-echo-r4">
 <h3 class="racetitle">R4&nbsp;&mdash;&nbsp;26 Sept 2026 &mdash; Start: 13:25:00</h3>
 <div class="tablewrap"><table class="racetable" cellspacing="0" cellpadding="0" border="0">
-<colgroup span="11">
+<colgroup span="12">
 <col class="rank" />
 <col class="sailno" />
 <col class="boatname" />
@@ -1887,6 +2277,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <col class="et" />
 <col class="starth" />
 <col class="ct" />
+<col class="delta" />
 <col class="newh" />
 <col class="points" />
 </colgroup>
@@ -1901,6 +2292,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <th>ET</th>
 <th>Starting H</th>
 <th>CT</th>
+<th title="Corrected time behind the winner">Delta</th>
 <th>New H</th>
 <th>Points</th>
 </tr>
@@ -1916,6 +2308,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <td class="mono">1:38:27</td>
 <td class="mono">0.905</td>
 <td class="mono">1:29:06</td>
+<td class="mono">0:00:00</td>
 <td class="mono">0.910</td>
 <td>1.0</td>
 </tr>
@@ -1929,6 +2322,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <td class="mono">1:35:55</td>
 <td class="mono">0.933</td>
 <td class="mono">1:29:29</td>
+<td class="mono">0:00:23</td>
 <td class="mono">0.936</td>
 <td>2.0</td>
 </tr>
@@ -1942,6 +2336,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <td class="mono">1:36:45</td>
 <td class="mono">0.935</td>
 <td class="mono">1:30:28</td>
+<td class="mono">0:01:22</td>
 <td class="mono">0.934</td>
 <td>3.0</td>
 </tr>
@@ -1955,6 +2350,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <td class="mono">1:35:15</td>
 <td class="mono">0.953</td>
 <td class="mono">1:30:46</td>
+<td class="mono">0:01:40</td>
 <td class="mono">0.951</td>
 <td>4.0</td>
 </tr>
@@ -1968,6 +2364,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <td class="mono">1:31:40</td>
 <td class="mono">1.000</td>
 <td class="mono">1:31:40</td>
+<td class="mono">0:02:34</td>
 <td class="mono">0.994</td>
 <td>5.0</td>
 </tr>
@@ -1981,6 +2378,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <td class="mono">1:36:39</td>
 <td class="mono">0.926</td>
 <td class="mono">1:29:30</td>
+<td class="mono"></td>
 <td class="mono">unchanged</td>
 <td>8.0 DSQ</td>
 </tr>
@@ -1994,6 +2392,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <td class="mono"></td>
 <td class="mono">0.919</td>
 <td class="mono"></td>
+<td class="mono"></td>
 <td class="mono">unchanged</td>
 <td>8.0 DNF</td>
 </tr>
@@ -2003,7 +2402,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <section class="gsec gsec-class-2-echo-r5">
 <h3 class="racetitle">R5&nbsp;&mdash;&nbsp;3 Oct 2026 &mdash; Start: 13:10:00</h3>
 <div class="tablewrap"><table class="racetable" cellspacing="0" cellpadding="0" border="0">
-<colgroup span="11">
+<colgroup span="12">
 <col class="rank" />
 <col class="sailno" />
 <col class="boatname" />
@@ -2014,6 +2413,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <col class="et" />
 <col class="starth" />
 <col class="ct" />
+<col class="delta" />
 <col class="newh" />
 <col class="points" />
 </colgroup>
@@ -2028,6 +2428,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <th>ET</th>
 <th>Starting H</th>
 <th>CT</th>
+<th title="Corrected time behind the winner">Delta</th>
 <th>New H</th>
 <th>Points</th>
 </tr>
@@ -2043,6 +2444,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <td class="mono">1:26:52</td>
 <td class="mono">0.934</td>
 <td class="mono">1:21:08</td>
+<td class="mono">0:00:00</td>
 <td class="mono">0.960</td>
 <td>1.0</td>
 </tr>
@@ -2056,6 +2458,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <td class="mono">1:29:32</td>
 <td class="mono">0.910</td>
 <td class="mono">1:21:29</td>
+<td class="mono">0:00:21</td>
 <td class="mono">0.934</td>
 <td>2.0</td>
 </tr>
@@ -2069,6 +2472,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <td class="mono">1:33:55</td>
 <td class="mono">0.919</td>
 <td class="mono">1:26:19</td>
+<td class="mono">0:05:11</td>
 <td class="mono">0.921</td>
 <td>3.0</td>
 </tr>
@@ -2082,6 +2486,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <td class="mono">1:34:50</td>
 <td class="mono">0.936</td>
 <td class="mono">1:28:46</td>
+<td class="mono">0:07:38</td>
 <td class="mono">0.928</td>
 <td>4.0</td>
 </tr>
@@ -2095,6 +2500,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <td class="mono">1:34:28</td>
 <td class="mono">0.951</td>
 <td class="mono">1:29:50</td>
+<td class="mono">0:08:42</td>
 <td class="mono">0.938</td>
 <td>5.0</td>
 </tr>
@@ -2108,6 +2514,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <td class="mono">1:37:42</td>
 <td class="mono">0.926</td>
 <td class="mono">1:30:28</td>
+<td class="mono">0:09:20</td>
 <td class="mono">0.911</td>
 <td>6.0</td>
 </tr>
@@ -2121,6 +2528,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <td class="mono">1:31:23</td>
 <td class="mono">0.994</td>
 <td class="mono">1:30:50</td>
+<td class="mono">0:09:42</td>
 <td class="mono">0.977</td>
 <td>7.0</td>
 </tr>
@@ -2130,7 +2538,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <section class="gsec gsec-class-2-echo-r6">
 <h3 class="racetitle">R6&nbsp;&mdash;&nbsp;10 Oct 2026 &mdash; Start: 13:10:00</h3>
 <div class="tablewrap"><table class="racetable" cellspacing="0" cellpadding="0" border="0">
-<colgroup span="11">
+<colgroup span="12">
 <col class="rank" />
 <col class="sailno" />
 <col class="boatname" />
@@ -2141,6 +2549,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <col class="et" />
 <col class="starth" />
 <col class="ct" />
+<col class="delta" />
 <col class="newh" />
 <col class="points" />
 </colgroup>
@@ -2155,6 +2564,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <th>ET</th>
 <th>Starting H</th>
 <th>CT</th>
+<th title="Corrected time behind the winner">Delta</th>
 <th>New H</th>
 <th>Points</th>
 </tr>
@@ -2170,6 +2580,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <td class="mono">52:43</td>
 <td class="mono">0.977</td>
 <td class="mono">51:30</td>
+<td class="mono">0:00:00</td>
 <td class="mono">0.989</td>
 <td>1.0</td>
 </tr>
@@ -2183,6 +2594,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <td class="mono">56:06</td>
 <td class="mono">0.938</td>
 <td class="mono">52:37</td>
+<td class="mono">0:01:07</td>
 <td class="mono">0.941</td>
 <td>2.0</td>
 </tr>
@@ -2196,6 +2608,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <td class="mono">58:06</td>
 <td class="mono">0.921</td>
 <td class="mono">53:31</td>
+<td class="mono">0:02:01</td>
 <td class="mono">0.918</td>
 <td>3.0</td>
 </tr>
@@ -2209,6 +2622,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <td class="mono">59:02</td>
 <td class="mono">0.928</td>
 <td class="mono">54:47</td>
+<td class="mono">0:03:17</td>
 <td class="mono">0.916</td>
 <td>4.0</td>
 </tr>
@@ -2218,7 +2632,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <section class="gsec gsec-class-2-echo-r7">
 <h3 class="racetitle">R7&nbsp;&mdash;&nbsp;10 Oct 2026 &mdash; Start: 14:30:00</h3>
 <div class="tablewrap"><table class="racetable" cellspacing="0" cellpadding="0" border="0">
-<colgroup span="11">
+<colgroup span="12">
 <col class="rank" />
 <col class="sailno" />
 <col class="boatname" />
@@ -2229,6 +2643,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <col class="et" />
 <col class="starth" />
 <col class="ct" />
+<col class="delta" />
 <col class="newh" />
 <col class="points" />
 </colgroup>
@@ -2243,6 +2658,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <th>ET</th>
 <th>Starting H</th>
 <th>CT</th>
+<th title="Corrected time behind the winner">Delta</th>
 <th>New H</th>
 <th>Points</th>
 </tr>
@@ -2258,6 +2674,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <td class="mono">56:55</td>
 <td class="mono">0.918</td>
 <td class="mono">52:15</td>
+<td class="mono">0:00:00</td>
 <td class="mono">0.920</td>
 <td>1.0</td>
 </tr>
@@ -2271,6 +2688,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <td class="mono">55:43</td>
 <td class="mono">0.941</td>
 <td class="mono">52:26</td>
+<td class="mono">0:00:11</td>
 <td class="mono">0.942</td>
 <td>2.0</td>
 </tr>
@@ -2284,19 +2702,31 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <td class="mono">53:40</td>
 <td class="mono">0.989</td>
 <td class="mono">53:05</td>
+<td class="mono">0:00:50</td>
 <td class="mono">0.985</td>
 <td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td></td>
+<td>7495</td>
+<td>Maximus</td>
+<td>Paddy Kyne</td>
+<td>Howth YC</td>
+<td class="mono"></td>
+<td class="mono"></td>
+<td class="mono">0.916</td>
+<td class="mono"></td>
+<td class="mono"></td>
+<td class="mono">unchanged</td>
+<td>5.0 DNF</td>
 </tr>
 </tbody>
 </table></div>
 </section>
-</section>
-<section class="fleetraces gblock gblock-class-3-echo" id="class-3-echo-races">
-<h2>Class 3 (Echo) &mdash; race results</h2>
-<section class="gsec gsec-class-3-echo-r1">
-<h3 class="racetitle">R1&nbsp;&mdash;&nbsp;12 Sept 2026 &mdash; Start: 13:48:00</h3>
+<section class="gsec gsec-class-2-echo-r8">
+<h3 class="racetitle">R8&nbsp;&mdash;&nbsp;17 Oct 2026 &mdash; Start: 13:10:00</h3>
 <div class="tablewrap"><table class="racetable" cellspacing="0" cellpadding="0" border="0">
-<colgroup span="11">
+<colgroup span="12">
 <col class="rank" />
 <col class="sailno" />
 <col class="boatname" />
@@ -2307,6 +2737,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <col class="et" />
 <col class="starth" />
 <col class="ct" />
+<col class="delta" />
 <col class="newh" />
 <col class="points" />
 </colgroup>
@@ -2321,6 +2752,282 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <th>ET</th>
 <th>Starting H</th>
 <th>CT</th>
+<th title="Corrected time behind the winner">Delta</th>
+<th>New H</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td class="rank1">1</td>
+<td>988</td>
+<td>Dux</td>
+<td>Caroline Gore-Grimes<br>Nico Gore-Grimes</td>
+<td>Howth YC</td>
+<td class="mono">14:06:59</td>
+<td class="mono">56:59</td>
+<td class="mono">0.942</td>
+<td class="mono">53:41</td>
+<td class="mono">0:00:00</td>
+<td class="mono">0.956</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td class="rank2">2</td>
+<td>2507</td>
+<td>Impetuous</td>
+<td>Fergal Noonan<br>Robert Chambers</td>
+<td>Howth YC</td>
+<td class="mono">14:09:18</td>
+<td class="mono">59:18</td>
+<td class="mono">0.920</td>
+<td class="mono">54:33</td>
+<td class="mono">0:00:52</td>
+<td class="mono">0.928</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td class="rank3">3</td>
+<td>2050</td>
+<td>Chronos</td>
+<td>Declan Byrne<br>Dave Cullen</td>
+<td>Howth YC</td>
+<td class="mono">14:09:17</td>
+<td class="mono">59:17</td>
+<td class="mono">0.934</td>
+<td class="mono">55:22</td>
+<td class="mono">0:01:41</td>
+<td class="mono">0.936</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>9202</td>
+<td>Insider Again</td>
+<td>Ian Martin<br>Stephen Mullaney</td>
+<td>Howth YC</td>
+<td class="mono">14:07:00</td>
+<td class="mono">57:00</td>
+<td class="mono">0.985</td>
+<td class="mono">56:09</td>
+<td class="mono">0:02:28</td>
+<td class="mono">0.982</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>1972</td>
+<td>No Excuse</td>
+<td>Wormald<br>Walsh<br>O'Neill</td>
+<td>Howth YC</td>
+<td class="mono">14:12:08</td>
+<td class="mono">1:02:08</td>
+<td class="mono">0.911</td>
+<td class="mono">56:36</td>
+<td class="mono">0:02:55</td>
+<td class="mono">0.905</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>7797</td>
+<td>Symmetry</td>
+<td>Anton Korshunov</td>
+<td>Howth YC</td>
+<td class="mono">14:08:59</td>
+<td class="mono">58:59</td>
+<td class="mono">0.960</td>
+<td class="mono">56:37</td>
+<td class="mono">0:02:56</td>
+<td class="mono">0.954</td>
+<td>6.0</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>7495</td>
+<td>Maximus</td>
+<td>Paddy Kyne</td>
+<td>Howth YC</td>
+<td class="mono">14:12:34</td>
+<td class="mono">1:02:34</td>
+<td class="mono">0.916</td>
+<td class="mono">57:19</td>
+<td class="mono">0:03:38</td>
+<td class="mono">0.906</td>
+<td>7.0</td>
+</tr>
+</tbody>
+</table></div>
+</section>
+<section class="gsec gsec-class-2-echo-r9">
+<h3 class="racetitle">R9&nbsp;&mdash;&nbsp;17 Oct 2026 &mdash; Start: 14:30:00</h3>
+<div class="tablewrap"><table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="12">
+<col class="rank" />
+<col class="sailno" />
+<col class="boatname" />
+<col class="helmname" />
+<col class="club" />
+
+<col class="finish" />
+<col class="et" />
+<col class="starth" />
+<col class="ct" />
+<col class="delta" />
+<col class="newh" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Sail Number</th>
+<th>Boat</th>
+<th>Owners</th>
+<th>Club</th>
+<th>Finish</th>
+<th>ET</th>
+<th>Starting H</th>
+<th>CT</th>
+<th title="Corrected time behind the winner">Delta</th>
+<th>New H</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td class="rank1">1</td>
+<td>9202</td>
+<td>Insider Again</td>
+<td>Ian Martin<br>Stephen Mullaney</td>
+<td>Howth YC</td>
+<td class="mono">15:28:42</td>
+<td class="mono">58:42</td>
+<td class="mono">0.982</td>
+<td class="mono">57:39</td>
+<td class="mono">0:00:00</td>
+<td class="mono">0.990</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td class="rank2">2</td>
+<td>7797</td>
+<td>Symmetry</td>
+<td>Anton Korshunov</td>
+<td>Howth YC</td>
+<td class="mono">15:30:42</td>
+<td class="mono">1:00:42</td>
+<td class="mono">0.954</td>
+<td class="mono">57:54</td>
+<td class="mono">0:00:15</td>
+<td class="mono">0.960</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td class="rank3">3</td>
+<td>2507</td>
+<td>Impetuous</td>
+<td>Fergal Noonan<br>Robert Chambers</td>
+<td>Howth YC</td>
+<td class="mono">15:32:28</td>
+<td class="mono">1:02:28</td>
+<td class="mono">0.928</td>
+<td class="mono">57:58</td>
+<td class="mono">0:00:19</td>
+<td class="mono">0.933</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>2050</td>
+<td>Chronos</td>
+<td>Declan Byrne<br>Dave Cullen</td>
+<td>Howth YC</td>
+<td class="mono">15:32:37</td>
+<td class="mono">1:02:37</td>
+<td class="mono">0.936</td>
+<td class="mono">58:37</td>
+<td class="mono">0:00:58</td>
+<td class="mono">0.937</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>7495</td>
+<td>Maximus</td>
+<td>Paddy Kyne</td>
+<td>Howth YC</td>
+<td class="mono">15:35:23</td>
+<td class="mono">1:05:23</td>
+<td class="mono">0.906</td>
+<td class="mono">59:14</td>
+<td class="mono">0:01:35</td>
+<td class="mono">0.903</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>1972</td>
+<td>No Excuse</td>
+<td>Wormald<br>Walsh<br>O'Neill</td>
+<td>Howth YC</td>
+<td class="mono">15:36:17</td>
+<td class="mono">1:06:17</td>
+<td class="mono">0.905</td>
+<td class="mono">59:59</td>
+<td class="mono">0:02:20</td>
+<td class="mono">0.898</td>
+<td>6.0</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>988</td>
+<td>Dux</td>
+<td>Caroline Gore-Grimes<br>Nico Gore-Grimes</td>
+<td>Howth YC</td>
+<td class="mono">15:33:19</td>
+<td class="mono">1:03:19</td>
+<td class="mono">0.956</td>
+<td class="mono">1:00:32</td>
+<td class="mono">0:02:53</td>
+<td class="mono">0.945</td>
+<td>7.0</td>
+</tr>
+</tbody>
+</table></div>
+</section>
+</section>
+<section class="fleetraces gblock gblock-class-3-echo" id="class-3-echo-races">
+<h2>Class 3 (Echo) &mdash; race results</h2>
+<section class="gsec gsec-class-3-echo-r1">
+<h3 class="racetitle">R1&nbsp;&mdash;&nbsp;12 Sept 2026 &mdash; Start: 13:48:00</h3>
+<div class="tablewrap"><table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="12">
+<col class="rank" />
+<col class="sailno" />
+<col class="boatname" />
+<col class="helmname" />
+<col class="club" />
+
+<col class="finish" />
+<col class="et" />
+<col class="starth" />
+<col class="ct" />
+<col class="delta" />
+<col class="newh" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Sail Number</th>
+<th>Boat</th>
+<th>Owners</th>
+<th>Club</th>
+<th>Finish</th>
+<th>ET</th>
+<th>Starting H</th>
+<th>CT</th>
+<th title="Corrected time behind the winner">Delta</th>
 <th>New H</th>
 <th>Points</th>
 </tr>
@@ -2336,6 +3043,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <td class="mono">1:08:07</td>
 <td class="mono">0.900</td>
 <td class="mono">1:01:18</td>
+<td class="mono">0:00:00</td>
 <td class="mono">0.920</td>
 <td>1.0</td>
 </tr>
@@ -2349,6 +3057,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <td class="mono">1:16:13</td>
 <td class="mono">0.840</td>
 <td class="mono">1:04:01</td>
+<td class="mono">0:02:43</td>
 <td class="mono">0.843</td>
 <td>2.0</td>
 </tr>
@@ -2362,6 +3071,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <td class="mono">1:09:51</td>
 <td class="mono">0.984</td>
 <td class="mono">1:08:44</td>
+<td class="mono">0:07:26</td>
 <td class="mono">0.961</td>
 <td>3.0</td>
 </tr>
@@ -2375,6 +3085,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <td class="mono"></td>
 <td class="mono">0.886</td>
 <td class="mono"></td>
+<td class="mono"></td>
 <td class="mono">unchanged</td>
 <td>5.0 DNF</td>
 </tr>
@@ -2384,7 +3095,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <section class="gsec gsec-class-3-echo-r2">
 <h3 class="racetitle">R2&nbsp;&mdash;&nbsp;19 Sept 2026 &mdash; Start: 13:23:00</h3>
 <div class="tablewrap"><table class="racetable" cellspacing="0" cellpadding="0" border="0">
-<colgroup span="11">
+<colgroup span="12">
 <col class="rank" />
 <col class="sailno" />
 <col class="boatname" />
@@ -2395,6 +3106,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <col class="et" />
 <col class="starth" />
 <col class="ct" />
+<col class="delta" />
 <col class="newh" />
 <col class="points" />
 </colgroup>
@@ -2409,6 +3121,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <th>ET</th>
 <th>Starting H</th>
 <th>CT</th>
+<th title="Corrected time behind the winner">Delta</th>
 <th>New H</th>
 <th>Points</th>
 </tr>
@@ -2424,6 +3137,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <td class="mono">37:45</td>
 <td class="mono">0.920</td>
 <td class="mono">34:44</td>
+<td class="mono">0:00:00</td>
 <td class="mono">0.932</td>
 <td>1.0</td>
 </tr>
@@ -2437,6 +3151,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <td class="mono">41:45</td>
 <td class="mono">0.843</td>
 <td class="mono">35:12</td>
+<td class="mono">0:00:28</td>
 <td class="mono">0.849</td>
 <td>2.0</td>
 </tr>
@@ -2450,6 +3165,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <td class="mono">41:20</td>
 <td class="mono">0.886</td>
 <td class="mono">36:37</td>
+<td class="mono">0:01:53</td>
 <td class="mono">0.878</td>
 <td>3.0</td>
 </tr>
@@ -2463,6 +3179,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <td class="mono">38:14</td>
 <td class="mono">0.961</td>
 <td class="mono">36:45</td>
+<td class="mono">0:02:01</td>
 <td class="mono">0.951</td>
 <td>4.0</td>
 </tr>
@@ -2472,7 +3189,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <section class="gsec gsec-class-3-echo-r3">
 <h3 class="racetitle">R3&nbsp;&mdash;&nbsp;19 Sept 2026 &mdash; Start: 14:25:00</h3>
 <div class="tablewrap"><table class="racetable" cellspacing="0" cellpadding="0" border="0">
-<colgroup span="11">
+<colgroup span="12">
 <col class="rank" />
 <col class="sailno" />
 <col class="boatname" />
@@ -2483,6 +3200,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <col class="et" />
 <col class="starth" />
 <col class="ct" />
+<col class="delta" />
 <col class="newh" />
 <col class="points" />
 </colgroup>
@@ -2497,6 +3215,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <th>ET</th>
 <th>Starting H</th>
 <th>CT</th>
+<th title="Corrected time behind the winner">Delta</th>
 <th>New H</th>
 <th>Points</th>
 </tr>
@@ -2512,6 +3231,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <td class="mono">46:02</td>
 <td class="mono">0.849</td>
 <td class="mono">39:05</td>
+<td class="mono">0:00:00</td>
 <td class="mono">0.861</td>
 <td>1.0</td>
 </tr>
@@ -2525,6 +3245,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <td class="mono">45:30</td>
 <td class="mono">0.878</td>
 <td class="mono">39:57</td>
+<td class="mono">0:00:52</td>
 <td class="mono">0.882</td>
 <td>2.0</td>
 </tr>
@@ -2538,6 +3259,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <td class="mono">42:58</td>
 <td class="mono">0.932</td>
 <td class="mono">40:03</td>
+<td class="mono">0:00:58</td>
 <td class="mono">0.936</td>
 <td>3.0</td>
 </tr>
@@ -2551,6 +3273,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <td class="mono">44:52</td>
 <td class="mono">0.951</td>
 <td class="mono">42:40</td>
+<td class="mono">0:03:35</td>
 <td class="mono">0.931</td>
 <td>4.0</td>
 </tr>
@@ -2560,7 +3283,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <section class="gsec gsec-class-3-echo-r4">
 <h3 class="racetitle">R4&nbsp;&mdash;&nbsp;26 Sept 2026 &mdash; Start: 13:33:00</h3>
 <div class="tablewrap"><table class="racetable" cellspacing="0" cellpadding="0" border="0">
-<colgroup span="11">
+<colgroup span="12">
 <col class="rank" />
 <col class="sailno" />
 <col class="boatname" />
@@ -2571,6 +3294,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <col class="et" />
 <col class="starth" />
 <col class="ct" />
+<col class="delta" />
 <col class="newh" />
 <col class="points" />
 </colgroup>
@@ -2585,6 +3309,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <th>ET</th>
 <th>Starting H</th>
 <th>CT</th>
+<th title="Corrected time behind the winner">Delta</th>
 <th>New H</th>
 <th>Points</th>
 </tr>
@@ -2600,6 +3325,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <td class="mono">1:22:55</td>
 <td class="mono">0.936</td>
 <td class="mono">1:17:37</td>
+<td class="mono">0:00:00</td>
 <td class="mono">0.946</td>
 <td>1.0</td>
 </tr>
@@ -2613,6 +3339,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <td class="mono">1:29:19</td>
 <td class="mono">0.882</td>
 <td class="mono">1:18:47</td>
+<td class="mono">0:01:10</td>
 <td class="mono">0.886</td>
 <td>2.0</td>
 </tr>
@@ -2626,6 +3353,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <td class="mono">1:33:11</td>
 <td class="mono">0.861</td>
 <td class="mono">1:20:14</td>
+<td class="mono">0:02:37</td>
 <td class="mono">0.858</td>
 <td>3.0</td>
 </tr>
@@ -2639,6 +3367,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <td class="mono">1:27:57</td>
 <td class="mono">0.931</td>
 <td class="mono">1:21:53</td>
+<td class="mono">0:04:16</td>
 <td class="mono">0.921</td>
 <td>4.0</td>
 </tr>
@@ -2648,7 +3377,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <section class="gsec gsec-class-3-echo-r5">
 <h3 class="racetitle">R5&nbsp;&mdash;&nbsp;3 Oct 2026 &mdash; Start: 13:15:00</h3>
 <div class="tablewrap"><table class="racetable" cellspacing="0" cellpadding="0" border="0">
-<colgroup span="11">
+<colgroup span="12">
 <col class="rank" />
 <col class="sailno" />
 <col class="boatname" />
@@ -2659,6 +3388,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <col class="et" />
 <col class="starth" />
 <col class="ct" />
+<col class="delta" />
 <col class="newh" />
 <col class="points" />
 </colgroup>
@@ -2673,6 +3403,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <th>ET</th>
 <th>Starting H</th>
 <th>CT</th>
+<th title="Corrected time behind the winner">Delta</th>
 <th>New H</th>
 <th>Points</th>
 </tr>
@@ -2688,6 +3419,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <td class="mono">47:12</td>
 <td class="mono">0.858</td>
 <td class="mono">40:30</td>
+<td class="mono">0:00:00</td>
 <td class="mono">0.878</td>
 <td>1.0</td>
 </tr>
@@ -2701,6 +3433,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <td class="mono">48:35</td>
 <td class="mono">0.886</td>
 <td class="mono">43:03</td>
+<td class="mono">0:02:33</td>
 <td class="mono">0.884</td>
 <td>2.0</td>
 </tr>
@@ -2714,6 +3447,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <td class="mono">46:48</td>
 <td class="mono">0.921</td>
 <td class="mono">43:06</td>
+<td class="mono">0:02:36</td>
 <td class="mono">0.918</td>
 <td>3.0</td>
 </tr>
@@ -2727,6 +3461,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <td class="mono">47:06</td>
 <td class="mono">0.946</td>
 <td class="mono">44:33</td>
+<td class="mono">0:04:03</td>
 <td class="mono">0.931</td>
 <td>4.0</td>
 </tr>
@@ -2736,7 +3471,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <section class="gsec gsec-class-3-echo-r6">
 <h3 class="racetitle">R6&nbsp;&mdash;&nbsp;10 Oct 2026 &mdash; Start: 13:15:00</h3>
 <div class="tablewrap"><table class="racetable" cellspacing="0" cellpadding="0" border="0">
-<colgroup span="11">
+<colgroup span="12">
 <col class="rank" />
 <col class="sailno" />
 <col class="boatname" />
@@ -2747,6 +3482,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <col class="et" />
 <col class="starth" />
 <col class="ct" />
+<col class="delta" />
 <col class="newh" />
 <col class="points" />
 </colgroup>
@@ -2761,6 +3497,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <th>ET</th>
 <th>Starting H</th>
 <th>CT</th>
+<th title="Corrected time behind the winner">Delta</th>
 <th>New H</th>
 <th>Points</th>
 </tr>
@@ -2776,6 +3513,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <td class="mono">47:43</td>
 <td class="mono">0.931</td>
 <td class="mono">44:25</td>
+<td class="mono">0:00:00</td>
 <td class="mono">0.953</td>
 <td>1.0</td>
 </tr>
@@ -2789,6 +3527,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <td class="mono">51:56</td>
 <td class="mono">0.918</td>
 <td class="mono">47:40</td>
+<td class="mono">0:03:15</td>
 <td class="mono">0.913</td>
 <td>2.0</td>
 </tr>
@@ -2802,6 +3541,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <td class="mono">55:56</td>
 <td class="mono">0.884</td>
 <td class="mono">49:27</td>
+<td class="mono">0:05:02</td>
 <td class="mono">0.867</td>
 <td>3.0</td>
 </tr>
@@ -2811,7 +3551,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <section class="gsec gsec-class-3-echo-r7">
 <h3 class="racetitle">R7&nbsp;&mdash;&nbsp;10 Oct 2026 &mdash; Start: 14:35:00</h3>
 <div class="tablewrap"><table class="racetable" cellspacing="0" cellpadding="0" border="0">
-<colgroup span="11">
+<colgroup span="12">
 <col class="rank" />
 <col class="sailno" />
 <col class="boatname" />
@@ -2822,6 +3562,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <col class="et" />
 <col class="starth" />
 <col class="ct" />
+<col class="delta" />
 <col class="newh" />
 <col class="points" />
 </colgroup>
@@ -2836,6 +3577,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <th>ET</th>
 <th>Starting H</th>
 <th>CT</th>
+<th title="Corrected time behind the winner">Delta</th>
 <th>New H</th>
 <th>Points</th>
 </tr>
@@ -2851,6 +3593,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <td class="mono">55:30</td>
 <td class="mono">0.867</td>
 <td class="mono">48:07</td>
+<td class="mono">0:00:00</td>
 <td class="mono">0.876</td>
 <td>1.0</td>
 </tr>
@@ -2864,6 +3607,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <td class="mono">54:38</td>
 <td class="mono">0.913</td>
 <td class="mono">49:53</td>
+<td class="mono">0:01:46</td>
 <td class="mono">0.909</td>
 <td>2.0</td>
 </tr>
@@ -2877,19 +3621,17 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <td class="mono">52:33</td>
 <td class="mono">0.953</td>
 <td class="mono">50:05</td>
+<td class="mono">0:01:58</td>
 <td class="mono">0.948</td>
 <td>3.0</td>
 </tr>
 </tbody>
 </table></div>
 </section>
-</section>
-<section class="fleetraces gblock gblock-non-spinnaker-class-4-echo" id="non-spinnaker-class-4-echo-races">
-<h2>Non-Spinnaker Class 4 (Echo) &mdash; race results</h2>
-<section class="gsec gsec-non-spinnaker-class-4-echo-r1">
-<h3 class="racetitle">R1&nbsp;&mdash;&nbsp;12 Sept 2026 &mdash; Start: 13:59:00</h3>
+<section class="gsec gsec-class-3-echo-r8">
+<h3 class="racetitle">R8&nbsp;&mdash;&nbsp;17 Oct 2026 &mdash; Start: 13:15:00</h3>
 <div class="tablewrap"><table class="racetable" cellspacing="0" cellpadding="0" border="0">
-<colgroup span="11">
+<colgroup span="12">
 <col class="rank" />
 <col class="sailno" />
 <col class="boatname" />
@@ -2900,6 +3642,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <col class="et" />
 <col class="starth" />
 <col class="ct" />
+<col class="delta" />
 <col class="newh" />
 <col class="points" />
 </colgroup>
@@ -2914,6 +3657,198 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <th>ET</th>
 <th>Starting H</th>
 <th>CT</th>
+<th title="Corrected time behind the winner">Delta</th>
+<th>New H</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td class="rank1">1</td>
+<td>7115</td>
+<td>Gecko</td>
+<td>Kevin Darmody</td>
+<td>Howth YC</td>
+<td class="mono">14:05:00</td>
+<td class="mono">50:00</td>
+<td class="mono">0.909</td>
+<td class="mono">45:27</td>
+<td class="mono">0:00:00</td>
+<td class="mono">0.924</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td class="rank2">2</td>
+<td>4084</td>
+<td>Billy Whizz</td>
+<td>MYC J24 Race Team</td>
+<td>Malahide YC</td>
+<td class="mono">14:07:54</td>
+<td class="mono">52:54</td>
+<td class="mono">0.878</td>
+<td class="mono">46:27</td>
+<td class="mono">0:01:00</td>
+<td class="mono">0.885</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td class="rank3">3</td>
+<td>158</td>
+<td>Lazy Bones</td>
+<td>Pat Higginbotham<br>Neil Higginbotham</td>
+<td>Malahide YC</td>
+<td class="mono">14:10:15</td>
+<td class="mono">55:15</td>
+<td class="mono">0.876</td>
+<td class="mono">48:24</td>
+<td class="mono">0:02:57</td>
+<td class="mono">0.868</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>8188</td>
+<td>Alliance II</td>
+<td>Vincent Gaffney</td>
+<td>Howth YC</td>
+<td class="mono">14:06:58</td>
+<td class="mono">51:58</td>
+<td class="mono">0.948</td>
+<td class="mono">49:16</td>
+<td class="mono">0:03:49</td>
+<td class="mono">0.933</td>
+<td>4.0</td>
+</tr>
+</tbody>
+</table></div>
+</section>
+<section class="gsec gsec-class-3-echo-r9">
+<h3 class="racetitle">R9&nbsp;&mdash;&nbsp;17 Oct 2026 &mdash; Start: 14:35:00</h3>
+<div class="tablewrap"><table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="12">
+<col class="rank" />
+<col class="sailno" />
+<col class="boatname" />
+<col class="helmname" />
+<col class="club" />
+
+<col class="finish" />
+<col class="et" />
+<col class="starth" />
+<col class="ct" />
+<col class="delta" />
+<col class="newh" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Sail Number</th>
+<th>Boat</th>
+<th>Owners</th>
+<th>Club</th>
+<th>Finish</th>
+<th>ET</th>
+<th>Starting H</th>
+<th>CT</th>
+<th title="Corrected time behind the winner">Delta</th>
+<th>New H</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td class="rank1">1</td>
+<td>7115</td>
+<td>Gecko</td>
+<td>Kevin Darmody</td>
+<td>Howth YC</td>
+<td class="mono">15:29:07</td>
+<td class="mono">54:07</td>
+<td class="mono">0.924</td>
+<td class="mono">50:00</td>
+<td class="mono">0:00:00</td>
+<td class="mono">0.931</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td class="rank2">2</td>
+<td>158</td>
+<td>Lazy Bones</td>
+<td>Pat Higginbotham<br>Neil Higginbotham</td>
+<td>Malahide YC</td>
+<td class="mono">15:34:03</td>
+<td class="mono">59:03</td>
+<td class="mono">0.868</td>
+<td class="mono">51:15</td>
+<td class="mono">0:01:15</td>
+<td class="mono">0.866</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td class="rank3">3</td>
+<td>8188</td>
+<td>Alliance II</td>
+<td>Vincent Gaffney</td>
+<td>Howth YC</td>
+<td class="mono">15:30:00</td>
+<td class="mono">55:00</td>
+<td class="mono">0.933</td>
+<td class="mono">51:19</td>
+<td class="mono">0:01:19</td>
+<td class="mono">0.931</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>4084</td>
+<td>Billy Whizz</td>
+<td>MYC J24 Race Team</td>
+<td>Malahide YC</td>
+<td class="mono">15:33:03</td>
+<td class="mono">58:03</td>
+<td class="mono">0.885</td>
+<td class="mono">51:22</td>
+<td class="mono">0:01:22</td>
+<td class="mono">0.882</td>
+<td>4.0</td>
+</tr>
+</tbody>
+</table></div>
+</section>
+</section>
+<section class="fleetraces gblock gblock-non-spinnaker-class-4-echo" id="non-spinnaker-class-4-echo-races">
+<h2>Non-Spinnaker Class 4 (Echo) &mdash; race results</h2>
+<section class="gsec gsec-non-spinnaker-class-4-echo-r1">
+<h3 class="racetitle">R1&nbsp;&mdash;&nbsp;12 Sept 2026 &mdash; Start: 13:59:00</h3>
+<div class="tablewrap"><table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="12">
+<col class="rank" />
+<col class="sailno" />
+<col class="boatname" />
+<col class="helmname" />
+<col class="club" />
+
+<col class="finish" />
+<col class="et" />
+<col class="starth" />
+<col class="ct" />
+<col class="delta" />
+<col class="newh" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Sail Number</th>
+<th>Boat</th>
+<th>Owners</th>
+<th>Club</th>
+<th>Finish</th>
+<th>ET</th>
+<th>Starting H</th>
+<th>CT</th>
+<th title="Corrected time behind the winner">Delta</th>
 <th>New H</th>
 <th>Points</th>
 </tr>
@@ -2929,6 +3864,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <td class="mono">1:29:06</td>
 <td class="mono">0.931</td>
 <td class="mono">1:22:57</td>
+<td class="mono">0:00:00</td>
 <td class="mono">0.955</td>
 <td>1.0</td>
 </tr>
@@ -2942,6 +3878,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <td class="mono">1:35:20</td>
 <td class="mono">0.905</td>
 <td class="mono">1:26:17</td>
+<td class="mono">0:03:20</td>
 <td class="mono">0.914</td>
 <td>2.0</td>
 </tr>
@@ -2955,6 +3892,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <td class="mono">1:33:18</td>
 <td class="mono">0.943</td>
 <td class="mono">1:27:59</td>
+<td class="mono">0:05:02</td>
 <td class="mono">0.945</td>
 <td>3.0</td>
 </tr>
@@ -2968,6 +3906,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <td class="mono">1:36:12</td>
 <td class="mono">1.004</td>
 <td class="mono">1:36:35</td>
+<td class="mono">0:13:38</td>
 <td class="mono">0.970</td>
 <td>4.0</td>
 </tr>
@@ -2980,6 +3919,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <td class="mono"></td>
 <td class="mono"></td>
 <td class="mono">1.063</td>
+<td class="mono"></td>
 <td class="mono"></td>
 <td class="mono">unchanged</td>
 <td>9.0 DNF</td>
@@ -2994,6 +3934,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <td class="mono"></td>
 <td class="mono">0.975</td>
 <td class="mono"></td>
+<td class="mono"></td>
 <td class="mono">unchanged</td>
 <td>9.0 DNF</td>
 </tr>
@@ -3006,6 +3947,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <td class="mono"></td>
 <td class="mono"></td>
 <td class="mono">1.086</td>
+<td class="mono"></td>
 <td class="mono"></td>
 <td class="mono">unchanged</td>
 <td>9.0 DNF</td>
@@ -3020,6 +3962,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <td class="mono"></td>
 <td class="mono">0.906</td>
 <td class="mono"></td>
+<td class="mono"></td>
 <td class="mono">unchanged</td>
 <td>9.0 DNF</td>
 </tr>
@@ -3029,7 +3972,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <section class="gsec gsec-non-spinnaker-class-4-echo-r2">
 <h3 class="racetitle">R2&nbsp;&mdash;&nbsp;19 Sept 2026 &mdash; Start: 13:28:00</h3>
 <div class="tablewrap"><table class="racetable" cellspacing="0" cellpadding="0" border="0">
-<colgroup span="11">
+<colgroup span="12">
 <col class="rank" />
 <col class="sailno" />
 <col class="boatname" />
@@ -3040,6 +3983,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <col class="et" />
 <col class="starth" />
 <col class="ct" />
+<col class="delta" />
 <col class="newh" />
 <col class="points" />
 </colgroup>
@@ -3054,6 +3998,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <th>ET</th>
 <th>Starting H</th>
 <th>CT</th>
+<th title="Corrected time behind the winner">Delta</th>
 <th>New H</th>
 <th>Points</th>
 </tr>
@@ -3069,6 +4014,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <td class="mono">1:17:41</td>
 <td class="mono">0.945</td>
 <td class="mono">1:13:25</td>
+<td class="mono">0:00:00</td>
 <td class="mono">0.962</td>
 <td>1.0</td>
 </tr>
@@ -3082,6 +4028,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <td class="mono">1:21:11</td>
 <td class="mono">0.906</td>
 <td class="mono">1:13:33</td>
+<td class="mono">0:00:08</td>
 <td class="mono">0.921</td>
 <td>2.0</td>
 </tr>
@@ -3095,6 +4042,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <td class="mono">1:16:07</td>
 <td class="mono">0.975</td>
 <td class="mono">1:14:13</td>
+<td class="mono">0:00:48</td>
 <td class="mono">0.988</td>
 <td>3.0</td>
 </tr>
@@ -3108,6 +4056,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <td class="mono">1:22:00</td>
 <td class="mono">0.970</td>
 <td class="mono">1:19:32</td>
+<td class="mono">0:06:07</td>
 <td class="mono">0.956</td>
 <td>4.0</td>
 </tr>
@@ -3121,6 +4070,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <td class="mono">1:27:16</td>
 <td class="mono">0.955</td>
 <td class="mono">1:23:20</td>
+<td class="mono">0:09:55</td>
 <td class="mono">0.924</td>
 <td>5.0</td>
 </tr>
@@ -3134,6 +4084,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <td class="mono">1:10:57</td>
 <td class="mono">1.063</td>
 <td class="mono">1:15:25</td>
+<td class="mono"></td>
 <td class="mono">unchanged</td>
 <td>8.0 RET</td>
 </tr>
@@ -3147,6 +4098,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <td class="mono">1:11:24</td>
 <td class="mono">1.086</td>
 <td class="mono">1:17:32</td>
+<td class="mono"></td>
 <td class="mono">unchanged</td>
 <td>8.0 RET</td>
 </tr>
@@ -3156,7 +4108,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <section class="gsec gsec-non-spinnaker-class-4-echo-r3">
 <h3 class="racetitle">R3&nbsp;&mdash;&nbsp;26 Sept 2026 &mdash; Start: 13:43:00</h3>
 <div class="tablewrap"><table class="racetable" cellspacing="0" cellpadding="0" border="0">
-<colgroup span="11">
+<colgroup span="12">
 <col class="rank" />
 <col class="sailno" />
 <col class="boatname" />
@@ -3167,6 +4119,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <col class="et" />
 <col class="starth" />
 <col class="ct" />
+<col class="delta" />
 <col class="newh" />
 <col class="points" />
 </colgroup>
@@ -3181,6 +4134,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <th>ET</th>
 <th>Starting H</th>
 <th>CT</th>
+<th title="Corrected time behind the winner">Delta</th>
 <th>New H</th>
 <th>Points</th>
 </tr>
@@ -3196,6 +4150,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <td class="mono">47:47</td>
 <td class="mono">0.924</td>
 <td class="mono">44:09</td>
+<td class="mono">0:00:00</td>
 <td class="mono">0.947</td>
 <td>1.0</td>
 </tr>
@@ -3209,6 +4164,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <td class="mono">42:39</td>
 <td class="mono">1.063</td>
 <td class="mono">45:20</td>
+<td class="mono">0:01:11</td>
 <td class="mono">1.078</td>
 <td>2.0</td>
 </tr>
@@ -3222,6 +4178,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <td class="mono">50:15</td>
 <td class="mono">0.914</td>
 <td class="mono">45:56</td>
+<td class="mono">0:01:47</td>
 <td class="mono">0.922</td>
 <td>3.0</td>
 </tr>
@@ -3235,6 +4192,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <td class="mono">48:55</td>
 <td class="mono">0.962</td>
 <td class="mono">47:03</td>
+<td class="mono">0:02:54</td>
 <td class="mono">0.961</td>
 <td>4.0</td>
 </tr>
@@ -3248,6 +4206,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <td class="mono">51:15</td>
 <td class="mono">0.921</td>
 <td class="mono">47:12</td>
+<td class="mono">0:03:03</td>
 <td class="mono">0.919</td>
 <td>5.0</td>
 </tr>
@@ -3261,6 +4220,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <td class="mono">49:48</td>
 <td class="mono">0.988</td>
 <td class="mono">49:12</td>
+<td class="mono">0:05:03</td>
 <td class="mono">0.970</td>
 <td>6.0</td>
 </tr>
@@ -3274,6 +4234,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <td class="mono">52:18</td>
 <td class="mono">0.956</td>
 <td class="mono">50:00</td>
+<td class="mono">0:05:51</td>
 <td class="mono">0.932</td>
 <td>7.0</td>
 </tr>
@@ -3283,7 +4244,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <section class="gsec gsec-non-spinnaker-class-4-echo-r4">
 <h3 class="racetitle">R4&nbsp;&mdash;&nbsp;10 Oct 2026 &mdash; Start: 13:25:00</h3>
 <div class="tablewrap"><table class="racetable" cellspacing="0" cellpadding="0" border="0">
-<colgroup span="11">
+<colgroup span="12">
 <col class="rank" />
 <col class="sailno" />
 <col class="boatname" />
@@ -3294,6 +4255,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <col class="et" />
 <col class="starth" />
 <col class="ct" />
+<col class="delta" />
 <col class="newh" />
 <col class="points" />
 </colgroup>
@@ -3308,6 +4270,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <th>ET</th>
 <th>Starting H</th>
 <th>CT</th>
+<th title="Corrected time behind the winner">Delta</th>
 <th>New H</th>
 <th>Points</th>
 </tr>
@@ -3323,6 +4286,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <td class="mono">1:15:32</td>
 <td class="mono">0.922</td>
 <td class="mono">1:09:39</td>
+<td class="mono">0:00:00</td>
 <td class="mono">0.944</td>
 <td>1.0</td>
 </tr>
@@ -3336,6 +4300,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <td class="mono">1:16:03</td>
 <td class="mono">0.947</td>
 <td class="mono">1:12:01</td>
+<td class="mono">0:02:22</td>
 <td class="mono">0.956</td>
 <td>2.0</td>
 </tr>
@@ -3349,6 +4314,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <td class="mono">1:16:54</td>
 <td class="mono">0.961</td>
 <td class="mono">1:13:54</td>
+<td class="mono">0:04:15</td>
 <td class="mono">0.960</td>
 <td>3.0</td>
 </tr>
@@ -3362,6 +4328,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <td class="mono">1:21:15</td>
 <td class="mono">0.932</td>
 <td class="mono">1:15:44</td>
+<td class="mono">0:06:05</td>
 <td class="mono">0.923</td>
 <td>4.0</td>
 </tr>
@@ -3375,19 +4342,17 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <td class="mono">1:20:31</td>
 <td class="mono">0.970</td>
 <td class="mono">1:18:06</td>
+<td class="mono">0:08:27</td>
 <td class="mono">0.949</td>
 <td>5.0</td>
 </tr>
 </tbody>
 </table></div>
 </section>
-</section>
-<section class="fleetraces gblock gblock-non-spinnaker-class-5-echo" id="non-spinnaker-class-5-echo-races">
-<h2>Non-Spinnaker Class 5 (Echo) &mdash; race results</h2>
-<section class="gsec gsec-non-spinnaker-class-5-echo-r1">
-<h3 class="racetitle">R1&nbsp;&mdash;&nbsp;12 Sept 2026 &mdash; Start: 14:04:00</h3>
+<section class="gsec gsec-non-spinnaker-class-4-echo-r5">
+<h3 class="racetitle">R5&nbsp;&mdash;&nbsp;17 Oct 2026 &mdash; Start: 13:25:00</h3>
 <div class="tablewrap"><table class="racetable" cellspacing="0" cellpadding="0" border="0">
-<colgroup span="11">
+<colgroup span="12">
 <col class="rank" />
 <col class="sailno" />
 <col class="boatname" />
@@ -3398,6 +4363,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <col class="et" />
 <col class="starth" />
 <col class="ct" />
+<col class="delta" />
 <col class="newh" />
 <col class="points" />
 </colgroup>
@@ -3412,6 +4378,160 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <th>ET</th>
 <th>Starting H</th>
 <th>CT</th>
+<th title="Corrected time behind the winner">Delta</th>
+<th>New H</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td class="rank1">1</td>
+<td>3335C</td>
+<td>Bite the Bullet</td>
+<td>Colm Bermingham</td>
+<td>Howth YC</td>
+<td class="mono">15:02:07</td>
+<td class="mono">1:37:07</td>
+<td class="mono">0.949</td>
+<td class="mono">1:32:10</td>
+<td class="mono">0:00:00</td>
+<td class="mono">0.977</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td class="rank2">2</td>
+<td>1411</td>
+<td>Toughnut</td>
+<td>Dermot Skehan</td>
+<td>Howth YC</td>
+<td class="mono">15:02:30</td>
+<td class="mono">1:37:30</td>
+<td class="mono">0.960</td>
+<td class="mono">1:33:36</td>
+<td class="mono">0:01:26</td>
+<td class="mono">0.982</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td class="rank3">3</td>
+<td>3154</td>
+<td>Alchemy</td>
+<td>Russell Camier</td>
+<td>Malahide YC</td>
+<td class="mono">15:07:38</td>
+<td class="mono">1:42:38</td>
+<td class="mono">0.923</td>
+<td class="mono">1:34:44</td>
+<td class="mono">0:02:34</td>
+<td class="mono">0.939</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>8151</td>
+<td>Joker's Wild</td>
+<td>MacQuarrie<br>Flood<br>Greene</td>
+<td>Howth YC</td>
+<td class="mono">15:13:04</td>
+<td class="mono">1:48:04</td>
+<td class="mono">0.919</td>
+<td class="mono">1:39:19</td>
+<td class="mono">0:07:09</td>
+<td class="mono">0.917</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>33301</td>
+<td>White Pearl</td>
+<td>David Greene</td>
+<td>Malahide YC</td>
+<td class="mono">15:10:42</td>
+<td class="mono">1:45:42</td>
+<td class="mono">0.956</td>
+<td class="mono">1:41:03</td>
+<td class="mono">0:08:53</td>
+<td class="mono">0.948</td>
+<td>5.0</td>
+</tr>
+<tr class="even racerow">
+<td>6</td>
+<td>4073</td>
+<td>Splashdance</td>
+<td>John Beckett<br>Andy George</td>
+<td>Howth YC</td>
+<td class="mono">14:58:43</td>
+<td class="mono">1:33:43</td>
+<td class="mono">1.086</td>
+<td class="mono">1:41:47</td>
+<td class="mono">0:09:37</td>
+<td class="mono">1.074</td>
+<td>6.0</td>
+</tr>
+<tr class="odd racerow">
+<td>7</td>
+<td>22</td>
+<td>Vixen</td>
+<td>Ken Burke<br>Brian Curtis</td>
+<td>Howth YC</td>
+<td class="mono">15:01:46</td>
+<td class="mono">1:36:46</td>
+<td class="mono">1.078</td>
+<td class="mono">1:44:19</td>
+<td class="mono">0:12:09</td>
+<td class="mono">1.055</td>
+<td>7.0</td>
+</tr>
+<tr class="even racerow">
+<td>8</td>
+<td>2070</td>
+<td>Out &amp; About</td>
+<td>Terry McCoy</td>
+<td>Howth YC<br>Skerries SC</td>
+<td class="mono">15:15:39</td>
+<td class="mono">1:50:39</td>
+<td class="mono">0.944</td>
+<td class="mono">1:44:27</td>
+<td class="mono">0:12:17</td>
+<td class="mono">0.924</td>
+<td>8.0</td>
+</tr>
+</tbody>
+</table></div>
+</section>
+</section>
+<section class="fleetraces gblock gblock-non-spinnaker-class-5-echo" id="non-spinnaker-class-5-echo-races">
+<h2>Non-Spinnaker Class 5 (Echo) &mdash; race results</h2>
+<section class="gsec gsec-non-spinnaker-class-5-echo-r1">
+<h3 class="racetitle">R1&nbsp;&mdash;&nbsp;12 Sept 2026 &mdash; Start: 14:04:00</h3>
+<div class="tablewrap"><table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="12">
+<col class="rank" />
+<col class="sailno" />
+<col class="boatname" />
+<col class="helmname" />
+<col class="club" />
+
+<col class="finish" />
+<col class="et" />
+<col class="starth" />
+<col class="ct" />
+<col class="delta" />
+<col class="newh" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Sail Number</th>
+<th>Boat</th>
+<th>Owners</th>
+<th>Club</th>
+<th>Finish</th>
+<th>ET</th>
+<th>Starting H</th>
+<th>CT</th>
+<th title="Corrected time behind the winner">Delta</th>
 <th>New H</th>
 <th>Points</th>
 </tr>
@@ -3427,6 +4547,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <td class="mono">1:32:57</td>
 <td class="mono">0.937</td>
 <td class="mono">1:27:06</td>
+<td class="mono">0:00:00</td>
 <td class="mono">0.937</td>
 <td>1.0</td>
 </tr>
@@ -3440,6 +4561,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <td class="mono">1:41:58</td>
 <td class="mono">0.940</td>
 <td class="mono">1:35:51</td>
+<td class="mono">0:08:45</td>
 <td class="mono">0.940</td>
 <td>2.0</td>
 </tr>
@@ -3452,6 +4574,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <td class="mono"></td>
 <td class="mono"></td>
 <td class="mono">0.906</td>
+<td class="mono"></td>
 <td class="mono"></td>
 <td class="mono">unchanged</td>
 <td>5.0 DNF</td>
@@ -3466,6 +4589,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <td class="mono"></td>
 <td class="mono">0.916</td>
 <td class="mono"></td>
+<td class="mono"></td>
 <td class="mono">unchanged</td>
 <td>5.0 DNF</td>
 </tr>
@@ -3475,7 +4599,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <section class="gsec gsec-non-spinnaker-class-5-echo-r2">
 <h3 class="racetitle">R2&nbsp;&mdash;&nbsp;19 Sept 2026 &mdash; Start: 13:33:00</h3>
 <div class="tablewrap"><table class="racetable" cellspacing="0" cellpadding="0" border="0">
-<colgroup span="11">
+<colgroup span="12">
 <col class="rank" />
 <col class="sailno" />
 <col class="boatname" />
@@ -3486,6 +4610,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <col class="et" />
 <col class="starth" />
 <col class="ct" />
+<col class="delta" />
 <col class="newh" />
 <col class="points" />
 </colgroup>
@@ -3500,6 +4625,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <th>ET</th>
 <th>Starting H</th>
 <th>CT</th>
+<th title="Corrected time behind the winner">Delta</th>
 <th>New H</th>
 <th>Points</th>
 </tr>
@@ -3515,6 +4641,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <td class="mono">1:19:21</td>
 <td class="mono">0.937</td>
 <td class="mono">1:14:21</td>
+<td class="mono">0:00:00</td>
 <td class="mono">0.953</td>
 <td>1.0</td>
 </tr>
@@ -3528,6 +4655,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <td class="mono">1:25:43</td>
 <td class="mono">0.916</td>
 <td class="mono">1:18:31</td>
+<td class="mono">0:04:10</td>
 <td class="mono">0.911</td>
 <td>2.0</td>
 </tr>
@@ -3541,6 +4669,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <td class="mono">1:24:57</td>
 <td class="mono">0.940</td>
 <td class="mono">1:19:51</td>
+<td class="mono">0:05:30</td>
 <td class="mono">0.929</td>
 <td>3.0</td>
 </tr>
@@ -3550,7 +4679,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <section class="gsec gsec-non-spinnaker-class-5-echo-r3">
 <h3 class="racetitle">R3&nbsp;&mdash;&nbsp;26 Sept 2026 &mdash; Start: 13:48:00</h3>
 <div class="tablewrap"><table class="racetable" cellspacing="0" cellpadding="0" border="0">
-<colgroup span="11">
+<colgroup span="12">
 <col class="rank" />
 <col class="sailno" />
 <col class="boatname" />
@@ -3561,6 +4690,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <col class="et" />
 <col class="starth" />
 <col class="ct" />
+<col class="delta" />
 <col class="newh" />
 <col class="points" />
 </colgroup>
@@ -3575,6 +4705,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <th>ET</th>
 <th>Starting H</th>
 <th>CT</th>
+<th title="Corrected time behind the winner">Delta</th>
 <th>New H</th>
 <th>Points</th>
 </tr>
@@ -3590,6 +4721,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <td class="mono">48:28</td>
 <td class="mono">0.906</td>
 <td class="mono">43:55</td>
+<td class="mono">0:00:00</td>
 <td class="mono">0.972</td>
 <td>1.0</td>
 </tr>
@@ -3603,6 +4735,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <td class="mono">50:35</td>
 <td class="mono">0.953</td>
 <td class="mono">48:12</td>
+<td class="mono">0:04:17</td>
 <td class="mono">0.982</td>
 <td>2.0</td>
 </tr>
@@ -3616,6 +4749,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <td class="mono">1:11:47</td>
 <td class="mono">0.960</td>
 <td class="mono">1:08:55</td>
+<td class="mono">0:25:00</td>
 <td class="mono">0.865</td>
 <td>3.0</td>
 </tr>
@@ -3625,7 +4759,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <section class="gsec gsec-non-spinnaker-class-5-echo-r4">
 <h3 class="racetitle">R4&nbsp;&mdash;&nbsp;10 Oct 2026 &mdash; Start: 13:30:00</h3>
 <div class="tablewrap"><table class="racetable" cellspacing="0" cellpadding="0" border="0">
-<colgroup span="11">
+<colgroup span="12">
 <col class="rank" />
 <col class="sailno" />
 <col class="boatname" />
@@ -3636,6 +4770,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <col class="et" />
 <col class="starth" />
 <col class="ct" />
+<col class="delta" />
 <col class="newh" />
 <col class="points" />
 </colgroup>
@@ -3650,6 +4785,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <th>ET</th>
 <th>Starting H</th>
 <th>CT</th>
+<th title="Corrected time behind the winner">Delta</th>
 <th>New H</th>
 <th>Points</th>
 </tr>
@@ -3665,6 +4801,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <td class="mono">1:16:16</td>
 <td class="mono">0.982</td>
 <td class="mono">1:14:54</td>
+<td class="mono">0:00:00</td>
 <td class="mono">0.982</td>
 <td>1.0</td>
 </tr>
@@ -3678,6 +4815,7 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <td class="mono">1:39:10</td>
 <td class="mono">0.865</td>
 <td class="mono">1:25:47</td>
+<td class="mono">0:10:53</td>
 <td class="mono">0.865</td>
 <td>2.0</td>
 </tr>
@@ -3691,8 +4829,117 @@ body:has(#non-spinnaker-class-5-echo-r4:target) .gsec-non-spinnaker-class-5-echo
 <td class="mono">1:22:40</td>
 <td class="mono">0.929</td>
 <td class="mono">1:16:48</td>
+<td class="mono"></td>
 <td class="mono">unchanged</td>
 <td>4.0 DNF</td>
+</tr>
+</tbody>
+</table></div>
+</section>
+<section class="gsec gsec-non-spinnaker-class-5-echo-r5">
+<h3 class="racetitle">R5&nbsp;&mdash;&nbsp;17 Oct 2026 &mdash; Start: 13:30:00</h3>
+<div class="tablewrap"><table class="racetable" cellspacing="0" cellpadding="0" border="0">
+<colgroup span="12">
+<col class="rank" />
+<col class="sailno" />
+<col class="boatname" />
+<col class="helmname" />
+<col class="club" />
+
+<col class="finish" />
+<col class="et" />
+<col class="starth" />
+<col class="ct" />
+<col class="delta" />
+<col class="newh" />
+<col class="points" />
+</colgroup>
+<thead>
+<tr class="titlerow">
+<th>Rank</th>
+<th>Sail Number</th>
+<th>Boat</th>
+<th>Owners</th>
+<th>Club</th>
+<th>Finish</th>
+<th>ET</th>
+<th>Starting H</th>
+<th>CT</th>
+<th title="Corrected time behind the winner">Delta</th>
+<th>New H</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd racerow">
+<td class="rank1">1</td>
+<td>971</td>
+<td>Leeuwin</td>
+<td>Jason Murray<br>Eamonn Burke</td>
+<td>Howth YC</td>
+<td class="mono">15:12:40</td>
+<td class="mono">1:42:40</td>
+<td class="mono">0.982</td>
+<td class="mono">1:40:49</td>
+<td class="mono">0:00:00</td>
+<td class="mono">1.011</td>
+<td>1.0</td>
+</tr>
+<tr class="even racerow">
+<td class="rank2">2</td>
+<td>17793</td>
+<td>Chinook</td>
+<td>Brian Skehan</td>
+<td>Howth YC</td>
+<td class="mono">15:21:26</td>
+<td class="mono">1:51:26</td>
+<td class="mono">0.911</td>
+<td class="mono">1:41:31</td>
+<td class="mono">0:00:42</td>
+<td class="mono">0.935</td>
+<td>2.0</td>
+</tr>
+<tr class="odd racerow">
+<td class="rank3">3</td>
+<td>100</td>
+<td>Demelza</td>
+<td>Steffi Ennis<br>Windsor Laudan</td>
+<td>Howth YC</td>
+<td class="mono">15:15:20</td>
+<td class="mono">1:45:20</td>
+<td class="mono">0.972</td>
+<td class="mono">1:42:23</td>
+<td class="mono">0:01:34</td>
+<td class="mono">0.994</td>
+<td>3.0</td>
+</tr>
+<tr class="even racerow">
+<td>4</td>
+<td>2848</td>
+<td>Bandersnatch of Howth</td>
+<td>Kyran O'Grady</td>
+<td>Wicklow SC</td>
+<td class="mono">15:34:35</td>
+<td class="mono">2:04:35</td>
+<td class="mono">0.929</td>
+<td class="mono">1:55:44</td>
+<td class="mono">0:14:55</td>
+<td class="mono">0.905</td>
+<td>4.0</td>
+</tr>
+<tr class="odd racerow">
+<td>5</td>
+<td>1775</td>
+<td>Blue Sky Action</td>
+<td>Robin Blandford</td>
+<td>Howth YC</td>
+<td class="mono">15:56:30</td>
+<td class="mono">2:26:30</td>
+<td class="mono">0.865</td>
+<td class="mono">2:06:43</td>
+<td class="mono">0:25:54</td>
+<td class="mono">0.814</td>
+<td>5.0</td>
 </tr>
 </tbody>
 </table></div>
@@ -3708,8 +4955,8 @@ try{collator=new Intl.Collator(undefined,{numeric:true,sensitivity:'base'});}cat
 function keyOf(text){
   var t=text.replace(/\s+/g,' ').trim();
   if(t===''||t==='\u2014')return null;
-  var p=/^(\d+):(\d\d)(?::(\d\d))?$/.exec(t);
-  if(p)return{num:p[3]!=null?(+p[1])*3600+(+p[2])*60+(+p[3]):(+p[1])*60+(+p[2]),text:t};
+  var p=/^(\d+):(\d\d)(?::(\d\d))?(\.\d+)?$/.exec(t);
+  if(p)return{num:(p[3]!=null?(+p[1])*3600+(+p[2])*60+(+p[3]):(+p[1])*60+(+p[2]))+(p[4]?+p[4]:0),text:t};
   var m=/-?\d+(?:\.\d+)?/.exec(t);
   return m?{num:parseFloat(m[0]),text:t}:{text:t};
 }
