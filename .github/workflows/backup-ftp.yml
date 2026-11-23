@@ -7,6 +7,7 @@ on:
 permissions:
   contents: write
   pull-requests: write
+  actions: write   # dispatch the as-published ingest after a merge
 jobs:
   create-ftp-backup-pr:
     runs-on: ubuntu-latest
@@ -48,5 +49,14 @@ jobs:
       - name: Delete pull request branch
         if: ${{ steps.cpr.outputs.pull-request-number }}
         run: git push origin :create-pull-request/ftp-backup
+        env:
+          GH_TOKEN: ${{ github.token }}
+      # A merge made with GITHUB_TOKEN fires no `push` event (GitHub's guard
+      # against workflow loops), so as-published.yml's push trigger never sees
+      # these commits. Dispatching is the documented exception: kick the
+      # ingest off explicitly once something has actually landed on main.
+      - name: Trigger the as-published ingest
+        if: ${{ steps.cpr.outputs.pull-request-number }}
+        run: gh workflow run as-published.yml --repo "${{ github.repository }}" --ref main
         env:
           GH_TOKEN: ${{ github.token }}

@@ -84,8 +84,8 @@ The capture automation moved here from [`markmc/reshyc`](https://github.com/mark
    the config (parsing the Sailwave HTML), and pushes the documents with
    `pnpm cli as-published push … --workspace hyc`, authenticated by a
    workspace- and capability-scoped archivist token. Ingest is idempotent —
-   unchanged documents are no-ops by content hash. **Armed**: every push to
-   `main` re-ingests.
+   unchanged documents are no-ops by content hash. **Armed**: every change to
+   `main` re-ingests, including the backups' automated merges.
 
 Currently: **386 series / 1,346 fleet pages / ~18,000 competitor rows** across
 2013–2025 plus the finished 2026 club series and open events emit and generate
@@ -116,7 +116,10 @@ with `scripts/ftp-paths.ts` here as the HYC-specific caller.
 - ✅ As-published config emission + clean `archive-generate` run over 2013–2025
   and the finished 2026 club series.
 - ✅ Ingest armed: the archivist token and CI secrets are configured, and
-  every push to `main` re-ingests.
+  every change to `main` re-ingests — human pushes directly, and the daily
+  backups by dispatching `as-published` after they merge (a `GITHUB_TOKEN`
+  merge fires no `push` event; until 2026-11 that left ingest silent after
+  every automated capture since early August).
 - ⬜ Extend coverage: single-race pages (the skip-list); the ~1,170 captured
   pages the admin catalogue never linked (all of 2011–2014 plus later
   revision/overall pages), which need display names sourced some other way;

@@ -1,11 +1,17 @@
 # As-published archive ingest (ADR-010, sailscoring#283).
 #
-# On every push to main, regenerate the ingest documents from the reshyc
+# On every change to main, regenerate the ingest documents from the reshyc
 # capture and push them to the production workspace. Ingest is idempotent —
 # the server no-ops unchanged documents by content hash — so this can run on
-# every push without churn. The idempotency key is the document, though, so a
-# render-only change in the app doesn't re-publish; dispatch manually with
+# every change without churn. The idempotency key is the document, though, so
+# a render-only change in the app doesn't re-publish; dispatch manually with
 # `force` to re-apply everything after one.
+#
+# Two triggers cover "every change to main":
+#   push              human commits touching the paths below
+#   workflow_dispatch the backup-* workflows, after merging a capture PR.
+#                     Their merges are made with GITHUB_TOKEN, which fires no
+#                     `push` event, so they dispatch this explicitly.
 #
 # Secrets:
 #   APP_REPO_TOKEN              read access to sailscoring/sailscoring
@@ -13,8 +19,7 @@
 #                               (workspace- and capability-scoped: it can
 #                               only write as-published series)
 #
-# NOTE: not armed until the HYC workspace onboarding is approved — the push
-# step is gated on the secret being configured.
+# The push step is gated on the archivist secret being configured.
 name: as-published
 
 on:
@@ -36,6 +41,14 @@ on:
           otherwise re-publish the pages.
         type: boolean
         default: false
+
+# A dispatch from a backup can land while a push-triggered run is still going.
+# Ingest is idempotent, so overlapping runs would be harmless but wasteful:
+# queue them instead (never cancel — a cancelled push can leave half the
+# documents un-applied until the next run).
+concurrency:
+  group: as-published
+  cancel-in-progress: false
 
 jobs:
   ingest:
