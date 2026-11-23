@@ -33,12 +33,6 @@ const CUTOFF_YEAR = 2026;
  * Events from the current season that are nonetheless archived as-published:
  * club series that have **finished**, so their pages will not change again.
  *
- * 2026 club racing is also imported full-fidelity as one blocked series per
- * racing group (`pnpm merge-club-series`), but that import is a *demo* of the
- * sub-series method and diverges from the published tables. These entries are
- * the faithful record of the same racing, and the two are kept apart by the
- * demo's " (DEMO)" name suffix.
- *
  * Series 3 is deliberately absent: it is still being sailed. Add it — and the
  * dinghies' Series 3, once it starts — when the club stops updating the pages.
  * An event only ever joins this list after its last race, because an

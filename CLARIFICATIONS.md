@@ -149,123 +149,21 @@ other twelve pairs happened to resolve correctly by luck.
   standings table: a league abandoned after its first day is a league, and
   the published record should say so.
 
-## 2026 club racing — told twice, on purpose
+## 2026 club racing
 
-2026 club racing appears in the workspace two ways, and only one of them is the
-archival record:
+2026 club racing is in the workspace as-published only, like every other
+season: the finished club series are ingested from the captured pages, listed
+in `CURRENT_SEASON_EVENTS` in `scripts/emit-as-published-config.ts`. Nothing is
+recomputed, so the coverage rules at the top of this file apply and no results
+delta can arise. A series joins the list once the club stops updating its
+pages.
 
-- **As-published (the record).** The ten *finished* club series — Series 1 and
-  2 of each racing group — are ingested from the captured pages like any other
-  season, listed in `CURRENT_SEASON_EVENTS` in
-  `scripts/emit-as-published-config.ts`. Nothing is recomputed, so the coverage
-  rules at the top of this file apply and no results delta can arise. Series 3
-  joins the list when the club stops updating its pages.
-- **The blocked demo.** `pnpm merge-club-series` builds one full-fidelity
-  series per racing group with Series 1/2/3 as sub-series — a demonstration of
-  managing a whole season that way, which as-published cannot express (it has
-  no sub-series concept; it deliberately replaced DBSC's sub-series-composed
-  reconstruction). These carry a **" (DEMO)"** name suffix and are *not*
-  authoritative for 2026.
-
-The demo is scored by our engine, so unlike everything above a **results**
-delta can arise — and does. It is accepted, not outstanding: the faithful
-telling of the same racing is the as-published one alongside it. What follows
-is where the demo diverges and why.
-
-- **Discards follow the SIs, not the `.blw`.** The SIs allow "one discard for
-  every three races completed" (dinghies) and "every four" (keelboats); the
-  merge sets `proportionalDiscard` accordingly (`{firstAt: 3, everyRaces: 3}`
-  and `{firstAt: 4, everyRaces: 4}`), which replaces the threshold ladder each
-  Sailwave file carries.
-
-  Those ladders are hand-entered and **disagree with each other and with the
-  SIs**, so this is a real divergence, not a re-statement:
-
-  | Sailwave file | ladder in the `.blw` | matches `floor(sailed/N)`? |
-  |---|---|---|
-  | Tues & Sat (Howth 17s) | 4→1, 8→2 | yes |
-  | Tues (One Designs) | 4→1, 9→2 | diverges from 8 races |
-  | Wed (Cruisers) | 5→1 | diverges from 4 races |
-  | Sat (Cruisers) | 5→1 | diverges from 4 races |
-  | Dinghies | 3→1, 6→2, 9→3, 13→4, 16→5, 19→6, 22→7 | diverges from 12 races |
-
-  At **every race count actually sailed in 2026 they agree**, so no published
-  standing changes today; the divergence would only show in a longer series.
-  Verify with `pnpm verify-club-merge`, which scores each block against its
-  source file and prints the allowance ladder.
-
-- **Boats are joined across blocks** on sail number + boat name, falling back
-  to boat name + helm and then helm alone — the same boat carries a different
-  Sailwave handle in each series file. Joins on sail number alone aren't
-  reported for classes that don't name their boats (all of the dinghies), where
-  the sail number *is* the identity. Two joins on helm name alone stand out in
-  the dinghy files: sail 741 (Harry George) and 1519 (Eliana Duffy) changed sail
-  number between Series 1 and 2.
-
-- **The Tuesday Puppeteers get an `Overall` block**, scoring all 12 Tuesday
-  races as one series. HYC has published one since 2025 (`Tues Overall -
-  Puppeteer 22`, `sources/reshyc/.../2025/club/overall_tuepup.htm`: 16 races,
-  4 discards, HPH and Scratch). It is scoped by `fleetIds` to the two Puppeteer
-  fleets — the Squibs sail the same races and have no equivalent — and unlike
-  the per-series blocks it ranks the **full entry list**
-  (`excludeDncOnlyCompetitors: false`): over a season as a whole, a boat that
-  entered is an entrant, which is why the club's own 2025 page reads
-  `Entries: 24` against 16 races. Handicaps run from base across the season
-  rather than continuing the last block, since the overall is its own
-  progression over all the races.
-
-  Only 10 of the 12 races count for the Puppeteers: they did not race on 23
-  June or 7 July, when only the Squibs finished, so those are struck per fleet
-  and the allowance is `floor(10/4) = 2` rather than 3. That matches the
-  published pages, where Tuesday Series 2 shows 3 races for the Puppeteers and
-  5 for the Squibs.
-
-- **Per-block entry lists don't survive the merge — blocks rank only boats that
-  sailed.** The largest divergence, and the reason the demo isn't the record.
-
-  Each Sailwave file has its own entry list, and Sailwave ranks a boat that
-  entered a series but never sailed it as all-DNC. A merged series has one
-  competitor set, so "entered Series 1" is not expressible. The blocks
-  therefore carry `excludeDncOnlyCompetitors`, which ranks only boats that
-  actually raced — and because DNC is scored off the entry count, dropping
-  those boats lowers every DNC score in the block:
-
-  | | published / source / as-published | merged demo |
-  |---|---|---|
-  | Wed Series 1, Division A HPH | DNC = 7 (6 entries) | DNC = 6 (5 sailed) |
-  | Dinghy Series 1, Optimist | DNC = 19 | DNC = 12 |
-
-  Concretely, in Wednesday Series 1 Division A HPH the as-published page carries
-  `32032 Adrenaline` 6th on 21 points (DNC in all three races), verbatim as
-  published; the demo drops the boat and every other boat's DNC falls from 7 to
-  6. Both tellings are in the workspace, and the faithful one is labelled as
-  such by the absence of "(DEMO)".
-
-  Finishing positions are untouched; only DNC values, and the net points and
-  ranks derived from them, move. Whether excluding a boat from the *ranking*
-  should also remove it from the A5.2 *entry count* is under review as app
-  issue #368 — RRS A5.2 scores DNC from boats **entered**, and a boat that
-  entered and never sailed is arguably still one. Turning the flag off is worse, not better: the
-  block would then also carry boats that only ever raced a *later* series,
-  pushing DNC the other way.
-
-- **A boat entered twice in one file, once per division, merges into one.**
-  HYC's Saturday Series 2 file carries Chinook (17793) as two competitor
-  records — one in Division B HPH, one in B IRC — where Series 1 carries it
-  once in both. Joined on sail number + boat name, the merged boat holds both
-  records' finishes, so a race counts for a division that didn't sail it. The
-  merge re-applies each source file's own answer as `raceFleetExclusions`,
-  which fixes the whole-fleet cases; two rows in Saturday Series 2 (Toughnut
-  and Helm's Deep, Division C HPH) still differ.
-
-  Both of these are visible in `pnpm verify-club-merge`, which reports rows
-  scored differently, rows only in the source, and rows only in the merge.
-
-- **Race dates come from Sailwave's `racedate`,** which several HYC files leave
-  empty (the 2026 Wednesday file labels its races only in `racename`, e.g.
-  "6th May"). Those races fall back to the per-block `defaultRaceDate` in
-  `scripts/merge-club-series.ts` — approximate, and flagged rather than guessed
-  per race.
+Until 2026-11 the same racing was also imported full-fidelity, as a blocked
+demo built from the club's own `.blw` files: one series per racing group with
+Series 1/2/3 as sub-series, labelled "(DEMO)". It was never the record and was
+knowingly not a match for the published tables. It has been withdrawn (the
+build, its CI import and its privileged token are gone, and so are the series).
+Its divergence notes are in git history before that removal.
 
 ## Naming approximations
 
