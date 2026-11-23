@@ -64,7 +64,7 @@ reproducible by re-running it.
 Many of HYC's one-off events were published as a race result and nothing else
 — a Sailwave page carrying race tables and no summary section. The archive
 builds the fleet's standings out of the race table itself (app #355), so the
-published page and the ingested record are the same table. 165 fleets across
+published page and the ingested record are the same table. 186 fleets across
 the corpus come in this way.
 
 Two curated files say what the markup cannot:
@@ -72,7 +72,12 @@ Two curated files say what the markup cannot:
 - [`as-published-race-sections.json`](as-published-race-sections.json) — pages
   whose race tables are several **fleets** rather than several races of one.
   2022's Lambay pages carry each class's IRC and ECHO results side by side,
-  and the 2024 New Year's Day race put PY, ILCA 6 and ILCA 7 on one page. Each
+  and the 2024 New Year's Day race put PY, ILCA 6 and ILCA 7 on one page. In
+  2026 the Gibney Classic (12 fleets), the Double Handed Race (5) and the
+  Lambay Puppeteer 22 and Howth 17 pages (Scratch and HPH) are the same shape;
+  each fleet is named by its race heading less the event prefix and date
+  (`Gibney - Div A IRC Fleet - Aug 15` → `Div A IRC Fleet`), the form the
+  2024–25 editions' summary sections used. Each
   named table becomes a fleet of its own, published together as one page, so
   each states the places its own table published.
 - [`as-published-display-only.json`](as-published-display-only.json) — pages
@@ -114,7 +119,7 @@ other twelve pairs happened to resolve correctly by luck.
 
 ## Presentation decisions
 
-- **20 one-off events publish as a race result, not a series table**
+- **24 one-off events publish as a race result, not a series table**
   ([`as-published-race-results.json`](as-published-race-results.json)): the
   Gibney Classic, the Lambay Race, Round the Island, the Double Handed Race,
   the New Year's Day races, Howth→Drogheda, the Brass Monkey, the Autumn
@@ -122,7 +127,12 @@ other twelve pairs happened to resolve correctly by luck.
   of these with a standings table *and* the race table; the standings add a
   Total and a Nett equal to the race score, under a caption reading
   `Sailed: 1, Discards: 0, To count: 1`. The archive drops that table (app
-  #347) and publishes the race result the event actually produced.
+  #347) and publishes the race result the event actually produced. (The
+  2026 Gibney and Double Handed pages, and Lambay's one-design pages, carry
+  no standings table at all, so for those there is nothing to drop. The
+  2026 Lambay Race joins the list because every class sailed the single
+  race on 30 May, as in 2024. In 2025 it was a two-day event and stays a
+  series.)
 
   This is the one place the archive departs from the source page's shape. It
   is a presentation decision, not a results one — every score, rank and
@@ -149,16 +159,43 @@ other twelve pairs happened to resolve correctly by luck.
   standings table: a league abandoned after its first day is a league, and
   the published record should say so.
 
-## 2026 club racing
+## 2026 season
 
-2026 club racing is in the workspace as-published only, like every other
-season: the finished club series are ingested from the captured pages, listed
-in `CURRENT_SEASON_EVENTS` in `scripts/emit-as-published-config.ts`. Nothing is
-recomputed, so the coverage rules at the top of this file apply and no results
-delta can arise. A series joins the list once the club stops updating its
-pages.
+2026 is the first season HYC scored partly in Sail Scoring, so the archive
+holds only part of it. The dividing line is the published page. Where the
+club published Sailwave HTML (and linked it from the admin DB), the event is
+ingested as-published, listed in `CURRENT_SEASON_EVENTS` in
+`scripts/emit-as-published-config.ts` once the club stops updating its pages.
+Nothing is recomputed, so the coverage rules at the top of this file apply
+and no results delta can arise. Where the club published Sail Scoring HTML,
+the event is a live series in the workspace and isn't this archive's to
+ingest: the Autumn League, Puppeteer 22 Championships, Dinghy Regatta, GP14
+Leinsters, ILCA Masters, Melges 15 Northerns, Women at the Helm and the Dinghy
+Frostbite Winter series.
 
-Until 2026-11 the same racing was also imported full-fidelity, as a blocked
+- **Held back while racing continues:** Brass Monkeys – Winter
+  (`open_bm_overall.htm`, first published 22 Nov). An as-published key can
+  never be renamed (CLAUDE.md rule 4), so an event joins only after its last
+  race.
+- **Captured 2026 pages deliberately not ingested.** None is linked from the
+  admin DB, and none is a separate result:
+  - `open/doublehanded_overall.htm` is a standings page reading `Sailed: 0`
+    for every fleet. The admin DB links `open/doublehanded.htm`, the race
+    result, instead.
+  - `open/dinghyregatta.htm` is a Sailwave entry list for the Dinghy Regatta,
+    which was then scored and published in Sail Scoring.
+  - `open_ilcamasters_ilca{6,7}_{sw,sc}.htm` are the ILCA Masters scored
+    side by side in Sailwave and Sail Scoring on 24 May, before the Sail
+    Scoring pages became the published result.
+  - `open/autumnleague/pup22.htm` ("TESTING PURPOSES ONLY") and
+    `open/the-brassed-off-cup.htm` ("test (2) at test") are Sail Scoring test
+    publishes.
+  - 16 alternate filenames (`series2_tue_xxxxx.htm`, `lambay_n45.htm`,
+    `bmspring_class1.htm`, `rti_icla.htm`, …) carrying the same fleets as
+    pages the admin DB does link. Per the no-guessing rule, the admin DB's
+    choice of page stands.
+
+Until 2026-11, 2026 club racing was also imported full-fidelity, as a blocked
 demo built from the club's own `.blw` files: one series per racing group with
 Series 1/2/3 as sub-series, labelled "(DEMO)". It was never the record and was
 knowingly not a match for the published tables. It has been withdrawn (the
@@ -169,7 +206,9 @@ Its divergence notes are in git history before that removal.
 
 - **Series display names** are `"<admin event title> <year>"` (e.g. “Wave
   Regatta 2022”), taken verbatim from the admin DB backup (trimmed of stray
-  whitespace). Typos in the admin DB pass through as published.
+  whitespace). Typos in the admin DB pass through as published, and so does
+  a title that already carries the year: `Dinghy F'bite Spring 2026 2026`,
+  `Double-Handed Race 2026 2026`.
 - **Start dates are approximate.** The admin DB carries no dates; every
   series gets `<year>-04-01` so the app's per-year grouping reads correctly.
   Real dates would need to be read from the result pages themselves.

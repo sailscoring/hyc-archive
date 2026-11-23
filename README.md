@@ -87,7 +87,7 @@ The capture automation moved here from [`markmc/reshyc`](https://github.com/mark
    unchanged documents are no-ops by content hash. **Armed**: every change to
    `main` re-ingests, including the backups' automated merges.
 
-Currently: **386 series / 1,346 fleet pages / ~18,000 competitor rows** across
+Currently: **429 series / 1,578 fleet pages / ~21,200 competitor rows** across
 2013–2025 plus the finished 2026 club series and open events emit and generate
 cleanly; see
 [CLARIFICATIONS.md](CLARIFICATIONS.md) for what doesn't (and why).
@@ -131,19 +131,22 @@ with `scripts/ftp-paths.ts` here as the HYC-specific caller.
   On this corpus that takes the draft from 6,312 clusters and 4,199 review
   suggestions to 5,714 and 1,019.
 - ⬜ Thread the 2026 live-series FTP paths into the HYC workspace.
-- ✅ 2026 as-published: the ten finished club series (Series 1 and 2 of each
-  racing group) plus five finished open events — Fireball Nationals, Dinghy
-  F'bite Spring, Brass Monkeys, New Year's Day Dinghies, Round the Island —
-  emit and generate cleanly alongside 2013–2025.
-- ⬜ Add to `CURRENT_SEASON_EVENTS` as they finish: 2026 club Series 3, the
-  Fingal Cruiser Challenge (still being updated), the Puppeteer 22
-  Championships and Howth 17 Nationals (entry lists, no racing sailed yet).
-  The Double-Handed Race is a coverage gap instead — admin row 2265 names a
-  page that has never appeared in the capture.
+- ✅ 2026 as-published: every finished event the club published from
+  Sailwave — all three series of each club racing group (the dinghies sailed
+  two), the Tuesday Puppeteer Overall, and ten open events: Fireball
+  Nationals, Dinghy F'bite Spring, Brass Monkeys, New Year's Day Dinghies,
+  Round the Island, Fingal Cruiser Challenge, Howth 17 Nationals, and the
+  Lambay, Gibney and Double-Handed races — emit and generate cleanly
+  alongside 2013–2025. The season's other events were scored in Sail Scoring
+  itself and are live series in the workspace, not archive entries (see
+  CLARIFICATIONS, "2026 season").
+- ⬜ Add to `CURRENT_SEASON_EVENTS` as it finishes: Brass Monkeys – Winter
+  (racing since November).
 - ✅ The 2026 club-racing blocked demo (full-fidelity sub-series built from
   the club's `.blw` files, imported under a separate `manage-series` key, app
-  #370) is withdrawn: 2026 is as-published only, like every other season, and
-  the archivist key is the only credential that writes to the workspace.
+  #370) is withdrawn: 2026 club racing is as-published only, like every other
+  season, and the archivist key is the only credential that writes to the
+  workspace.
 
 ## Licensing
 

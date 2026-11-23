@@ -27,5 +27,34 @@
     { "raceTitle": "New Year's Day - PY Class Fleet", "name": "PY Class" },
     { "raceTitle": "New Year's Day - ILCA 6 Fleet", "name": "ILCA 6" },
     { "raceTitle": "New Year's Day - ILCA 7 Fleet", "name": "ILCA 7" }
+  ],
+  "hyc-2026-open-gibney-classic|Overall": [
+    { "raceTitle": "Gibney - Div A IRC Fleet - Aug 15", "name": "Div A IRC Fleet" },
+    { "raceTitle": "Gibney - Div A HPH Fleet - Aug 15", "name": "Div A HPH Fleet" },
+    { "raceTitle": "Gibney - Div B IRC Fleet - Aug 15", "name": "Div B IRC Fleet" },
+    { "raceTitle": "Gibney - Div B HPH Fleet - Aug 15", "name": "Div B HPH Fleet" },
+    { "raceTitle": "Gibney - Div C IRC Fleet - Aug 15", "name": "Div C IRC Fleet" },
+    { "raceTitle": "Gibney - Div C HPH Fleet - Aug 15", "name": "Div C HPH Fleet" },
+    { "raceTitle": "Gibney - Puppeteer Scratch Fleet - Aug 15", "name": "Puppeteer Scratch Fleet" },
+    { "raceTitle": "Gibney - Puppeteer HPH Fleet - Aug 15", "name": "Puppeteer HPH Fleet" },
+    { "raceTitle": "Gibney - Howth 17 Scratch Fleet - Aug 15", "name": "Howth 17 Scratch Fleet" },
+    { "raceTitle": "Gibney - Howth 17 HPH Fleet - Aug 15", "name": "Howth 17 HPH Fleet" },
+    { "raceTitle": "Gibney - Squib Scratch Fleet - Aug 15", "name": "Squib Scratch Fleet" },
+    { "raceTitle": "Gibney - Squib HPH Fleet - Aug 15", "name": "Squib HPH Fleet" }
+  ],
+  "hyc-2026-open-double-handed-race-2026|Overall": [
+    { "raceTitle": "Double Handed - Cruiser Non-Spinnaker IRC Fleet - August 9th", "name": "Cruiser Non-Spinnaker IRC Fleet" },
+    { "raceTitle": "Double Handed - Cruiser Non-Spinnaker HPH Fleet - August 9th", "name": "Cruiser Non-Spinnaker HPH Fleet" },
+    { "raceTitle": "Double Handed - Cruiser Spinnaker IRC Fleet - August 9th", "name": "Cruiser Spinnaker IRC Fleet" },
+    { "raceTitle": "Double Handed - Cruiser Spinnaker HPH Fleet - August 9th", "name": "Cruiser Spinnaker HPH Fleet" },
+    { "raceTitle": "Double Handed - Puppeteer 22 HPH Fleet - August 9th", "name": "Puppeteer 22 HPH Fleet" }
+  ],
+  "hyc-2026-open-lambay-races|Puppeteer 22": [
+    { "raceTitle": "Lambay Race - Puppeteer 22 Scratch Fleet - May 30th", "name": "Puppeteer 22 Scratch Fleet" },
+    { "raceTitle": "Lambay Race - Puppeteer 22 HPH Fleet - May 30th", "name": "Puppeteer 22 HPH Fleet" }
+  ],
+  "hyc-2026-open-lambay-races|Howth 17": [
+    { "raceTitle": "Lambay Race - Howth 17 Scratch Fleet - May 30th", "name": "Howth 17 Scratch Fleet" },
+    { "raceTitle": "Lambay Race - Howth 17 HPH Fleet - May 30th", "name": "Howth 17 HPH Fleet" }
   ]
 }

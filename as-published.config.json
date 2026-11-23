@@ -18031,6 +18031,252 @@
       ]
     },
     {
+      "key": "hyc-2026-club-tuesday-saturday-series-3",
+      "id": "aada2481-263e-590d-866b-993c758a8ba6",
+      "publishedSlug": "2026",
+      "name": "Tuesday & Saturday Series 3 2026",
+      "venue": "Howth",
+      "venueUrl": "https://www.hyc.ie",
+      "venueLogoUrl": "https://logos.sailscoring.ie/hyc.png",
+      "startDate": "2026-04-01",
+      "source": "sailwave",
+      "category": "Club Racing",
+      "fleets": [
+        {
+          "name": "Howth 17",
+          "subPath": "tuesday-saturday-series-3/howth-17",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2026/club/series3_tuesat_h17.htm",
+          "sections": [
+            {
+              "sectionTitle": "Howth 17 HPH Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Howth 17 Scr Fleet",
+              "includeRaces": true
+            }
+          ]
+        }
+      ],
+      "folders": [
+        {
+          "path": "tuesday-saturday-series-3",
+          "label": "Tuesday & Saturday Series 3"
+        }
+      ]
+    },
+    {
+      "key": "hyc-2026-club-tuesday-series-3",
+      "id": "0625ccd2-4be0-59d4-8690-cb1a797ad01e",
+      "publishedSlug": "2026",
+      "name": "Tuesday Series 3 2026",
+      "venue": "Howth",
+      "venueUrl": "https://www.hyc.ie",
+      "venueLogoUrl": "https://logos.sailscoring.ie/hyc.png",
+      "startDate": "2026-04-01",
+      "source": "sailwave",
+      "category": "Club Racing",
+      "fleets": [
+        {
+          "name": "Squibs",
+          "subPath": "tuesday-series-3/squibs",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2026/club/series3_tue_squib.htm",
+          "sections": [
+            {
+              "sectionTitle": "Squib HPH Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Squib Scr Fleet",
+              "includeRaces": true
+            }
+          ]
+        },
+        {
+          "name": "Puppeteers",
+          "subPath": "tuesday-series-3/puppeteers",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2026/club/series3_tue_pup.htm",
+          "sections": [
+            {
+              "sectionTitle": "Puppeteer HPH Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Puppeteer Scr Fleet",
+              "includeRaces": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "hyc-2026-club-wednesday-series-3",
+      "id": "dfc7f40d-b00f-5bf7-920b-81b975da78f4",
+      "publishedSlug": "2026",
+      "name": "Wednesday Series 3 2026",
+      "venue": "Howth",
+      "venueUrl": "https://www.hyc.ie",
+      "venueLogoUrl": "https://logos.sailscoring.ie/hyc.png",
+      "startDate": "2026-04-01",
+      "source": "sailwave",
+      "category": "Club Racing",
+      "fleets": [
+        {
+          "name": "Division A",
+          "subPath": "wednesday-series-3/division-a",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2026/club/series3_diva.htm",
+          "sections": [
+            {
+              "sectionTitle": "Division A HPH Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Division A IRC Fleet",
+              "includeRaces": true
+            }
+          ]
+        },
+        {
+          "name": "Division B",
+          "subPath": "wednesday-series-3/division-b",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2026/club/series3_divb.htm",
+          "sections": [
+            {
+              "sectionTitle": "Division B HPH Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Division B IRC Fleet",
+              "includeRaces": true
+            }
+          ]
+        },
+        {
+          "name": "Division C",
+          "subPath": "wednesday-series-3/division-c",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2026/club/series3_divc.htm",
+          "sections": [
+            {
+              "sectionTitle": "Division C HPH Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Division C IRC Fleet",
+              "includeRaces": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "hyc-2026-club-saturday-series-3",
+      "id": "281acc1d-271b-569b-af24-efb8f6fd081a",
+      "publishedSlug": "2026",
+      "name": "Saturday Series 3 2026",
+      "venue": "Howth",
+      "venueUrl": "https://www.hyc.ie",
+      "venueLogoUrl": "https://logos.sailscoring.ie/hyc.png",
+      "startDate": "2026-04-01",
+      "source": "sailwave",
+      "category": "Club Racing",
+      "fleets": [
+        {
+          "name": "Cruisers",
+          "subPath": "saturday-series-3/cruisers",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2026/club/series3_satcruisers.htm",
+          "sections": [
+            {
+              "sectionTitle": "Division A HPH Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Division A IRC Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Division B HPH Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Division B IRC Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Division C HPH Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Division C IRC Fleet",
+              "includeRaces": true
+            }
+          ]
+        },
+        {
+          "name": "Squibs",
+          "subPath": "saturday-series-3/squibs",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2026/club/series3_satsquibs.htm",
+          "sections": [
+            {
+              "sectionTitle": "Squib HPH Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Squib Scr Fleet",
+              "includeRaces": true
+            }
+          ]
+        },
+        {
+          "name": "Puppeteer 22",
+          "subPath": "saturday-series-3/puppeteer-22",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2026/club/series3_satpups.htm",
+          "sections": [
+            {
+              "sectionTitle": "Puppeteer HPH Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Puppeteer Scr Fleet",
+              "includeRaces": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "hyc-2026-club-tues-overall-puppeteer-22",
+      "id": "10158967-7b05-5b51-bec3-177f16a33359",
+      "publishedSlug": "2026",
+      "name": "Tues Overall - Puppeteer 22 2026",
+      "venue": "Howth",
+      "venueUrl": "https://www.hyc.ie",
+      "venueLogoUrl": "https://logos.sailscoring.ie/hyc.png",
+      "startDate": "2026-04-01",
+      "source": "sailwave",
+      "category": "Club Racing",
+      "fleets": [
+        {
+          "name": "Overall",
+          "subPath": "tues-overall-puppeteer-22/overall",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2026/club/overall_tuepup.htm",
+          "sections": [
+            {
+              "sectionTitle": "Puppeteer 22 HPH Fleet"
+            },
+            {
+              "sectionTitle": "Puppeteer 22 Scratch Fleet"
+            }
+          ]
+        }
+      ],
+      "folders": [
+        {
+          "path": "tues-overall-puppeteer-22",
+          "label": "Tues Overall - Puppeteer 22"
+        }
+      ]
+    },
+    {
       "key": "hyc-2026-open-new-year-s-day-dinghies",
       "id": "1220a8df-65e7-5189-9665-eef0cd19136f",
       "publishedSlug": "2026",
@@ -18178,6 +18424,173 @@
       ]
     },
     {
+      "key": "hyc-2026-open-fingal-cruiser-challenge",
+      "id": "f31a9b9e-0c83-5e7c-a71a-c41ef4ba6150",
+      "publishedSlug": "2026",
+      "name": "Fingal Cruiser Challenge 2026",
+      "venue": "Howth",
+      "venueUrl": "https://www.hyc.ie",
+      "venueLogoUrl": "https://logos.sailscoring.ie/hyc.png",
+      "startDate": "2026-04-01",
+      "source": "sailwave",
+      "category": "Open Events",
+      "fleets": [
+        {
+          "name": "Overall",
+          "subPath": "fingal-cruiser-challenge/overall",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2026/open/open_fingal_overall.htm",
+          "sections": [
+            {
+              "sectionTitle": "Division A HPH Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Division A IRC Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Division B HPH Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Division B IRC Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Division C HPH Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Division C IRC Fleet",
+              "includeRaces": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "hyc-2026-open-lambay-races",
+      "id": "6d1429d2-9ad9-57df-8279-af7271e07dc1",
+      "publishedSlug": "2026",
+      "name": "Lambay Races 2026",
+      "venue": "Howth",
+      "venueUrl": "https://www.hyc.ie",
+      "venueLogoUrl": "https://logos.sailscoring.ie/hyc.png",
+      "startDate": "2026-04-01",
+      "source": "sailwave",
+      "detail": "races",
+      "category": "Open Events",
+      "fleets": [
+        {
+          "name": "Puppeteer 22",
+          "subPath": "lambay-races/puppeteer-22",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2026/open/lambay_pup22.htm",
+          "includeRaces": true,
+          "raceSections": [
+            {
+              "raceTitle": "Lambay Race - Puppeteer 22 Scratch Fleet - May 30th",
+              "name": "Puppeteer 22 Scratch Fleet"
+            },
+            {
+              "raceTitle": "Lambay Race - Puppeteer 22 HPH Fleet - May 30th",
+              "name": "Puppeteer 22 HPH Fleet"
+            }
+          ]
+        },
+        {
+          "name": "Howth 17",
+          "subPath": "lambay-races/howth-17",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2026/open/lambay_howth17.htm",
+          "includeRaces": true,
+          "raceSections": [
+            {
+              "raceTitle": "Lambay Race - Howth 17 Scratch Fleet - May 30th",
+              "name": "Howth 17 Scratch Fleet"
+            },
+            {
+              "raceTitle": "Lambay Race - Howth 17 HPH Fleet - May 30th",
+              "name": "Howth 17 HPH Fleet"
+            }
+          ]
+        },
+        {
+          "name": "Class 1",
+          "subPath": "lambay-races/class-1",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2026/open/lambay_class1.htm",
+          "sections": [
+            {
+              "sectionTitle": "Class 1 HPH Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Class 1 IRC Fleet",
+              "includeRaces": true
+            }
+          ]
+        },
+        {
+          "name": "Class 2",
+          "subPath": "lambay-races/class-2",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2026/open/lambay_class2.htm",
+          "sections": [
+            {
+              "sectionTitle": "Class 2 HPH Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Class 2 IRC Fleet",
+              "includeRaces": true
+            }
+          ]
+        },
+        {
+          "name": "Class 3",
+          "subPath": "lambay-races/class-3",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2026/open/lambay_class3.htm",
+          "sections": [
+            {
+              "sectionTitle": "Class 3 HPH Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Class 3 IRC Fleet",
+              "includeRaces": true
+            }
+          ]
+        },
+        {
+          "name": "Non Spinnaker Class 4",
+          "subPath": "lambay-races/non-spinnaker-class-4",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2026/open/lambay_ns4.htm",
+          "sections": [
+            {
+              "sectionTitle": "Class 4 NS HPH Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Class 4 NS IRC Fleet",
+              "includeRaces": true
+            }
+          ]
+        },
+        {
+          "name": "Non Spinnaker Class 5",
+          "subPath": "lambay-races/non-spinnaker-class-5",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2026/open/lambay_ns5.htm",
+          "sections": [
+            {
+              "sectionTitle": "Class 5 NS HPH Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "Class 5 NS IRC Fleet",
+              "includeRaces": true
+            }
+          ]
+        }
+      ]
+    },
+    {
       "key": "hyc-2026-open-fireball-nationals",
       "id": "8d1a4fad-e323-5a07-bd4e-c689b168a57a",
       "publishedSlug": "2026",
@@ -18194,6 +18607,155 @@
           "subPath": "fireball-nationals/fireballs",
           "file": "sources/reshyc/results.hyc.ie/reshyc/2026/open_fireballnats.htm",
           "includeRaces": true
+        }
+      ]
+    },
+    {
+      "key": "hyc-2026-open-double-handed-race-2026",
+      "id": "849a3cfd-4ee2-5516-aaf7-dc364e4f374b",
+      "publishedSlug": "2026",
+      "name": "Double-Handed Race 2026 2026",
+      "venue": "Howth",
+      "venueUrl": "https://www.hyc.ie",
+      "venueLogoUrl": "https://logos.sailscoring.ie/hyc.png",
+      "startDate": "2026-04-01",
+      "source": "sailwave",
+      "detail": "races",
+      "category": "Open Events",
+      "fleets": [
+        {
+          "name": "Overall",
+          "subPath": "double-handed-race-2026/overall",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2026/open/doublehanded.htm",
+          "includeRaces": true,
+          "raceSections": [
+            {
+              "raceTitle": "Double Handed - Cruiser Non-Spinnaker IRC Fleet - August 9th",
+              "name": "Cruiser Non-Spinnaker IRC Fleet"
+            },
+            {
+              "raceTitle": "Double Handed - Cruiser Non-Spinnaker HPH Fleet - August 9th",
+              "name": "Cruiser Non-Spinnaker HPH Fleet"
+            },
+            {
+              "raceTitle": "Double Handed - Cruiser Spinnaker IRC Fleet - August 9th",
+              "name": "Cruiser Spinnaker IRC Fleet"
+            },
+            {
+              "raceTitle": "Double Handed - Cruiser Spinnaker HPH Fleet - August 9th",
+              "name": "Cruiser Spinnaker HPH Fleet"
+            },
+            {
+              "raceTitle": "Double Handed - Puppeteer 22 HPH Fleet - August 9th",
+              "name": "Puppeteer 22 HPH Fleet"
+            }
+          ]
+        }
+      ],
+      "folders": [
+        {
+          "path": "double-handed-race-2026",
+          "label": "Double-Handed Race 2026"
+        }
+      ]
+    },
+    {
+      "key": "hyc-2026-open-howth-17-footer-nationals",
+      "id": "5f1dc5a1-d5ad-52de-bc23-b719df65841a",
+      "publishedSlug": "2026",
+      "name": "Howth 17 Footer Nationals 2026",
+      "venue": "Howth",
+      "venueUrl": "https://www.hyc.ie",
+      "venueLogoUrl": "https://logos.sailscoring.ie/hyc.png",
+      "startDate": "2026-04-01",
+      "source": "sailwave",
+      "category": "Open Events",
+      "fleets": [
+        {
+          "name": "Overall",
+          "subPath": "howth-17-footer-nationals/overall",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2026/open/h17nationals.htm",
+          "sections": [
+            {
+              "sectionTitle": "Scratch Fleet",
+              "includeRaces": true
+            },
+            {
+              "sectionTitle": "HPH Fleet",
+              "includeRaces": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "hyc-2026-open-gibney-classic",
+      "id": "8c531aa0-be4e-50f4-b7ed-b8cb33d22031",
+      "publishedSlug": "2026",
+      "name": "Gibney Classic 2026",
+      "venue": "Howth",
+      "venueUrl": "https://www.hyc.ie",
+      "venueLogoUrl": "https://logos.sailscoring.ie/hyc.png",
+      "startDate": "2026-04-01",
+      "source": "sailwave",
+      "detail": "races",
+      "category": "Open Events",
+      "fleets": [
+        {
+          "name": "Overall",
+          "subPath": "gibney-classic/overall",
+          "file": "sources/reshyc/results.hyc.ie/reshyc/2026/open/gibneyclassic_overall.htm",
+          "includeRaces": true,
+          "raceSections": [
+            {
+              "raceTitle": "Gibney - Div A IRC Fleet - Aug 15",
+              "name": "Div A IRC Fleet"
+            },
+            {
+              "raceTitle": "Gibney - Div A HPH Fleet - Aug 15",
+              "name": "Div A HPH Fleet"
+            },
+            {
+              "raceTitle": "Gibney - Div B IRC Fleet - Aug 15",
+              "name": "Div B IRC Fleet"
+            },
+            {
+              "raceTitle": "Gibney - Div B HPH Fleet - Aug 15",
+              "name": "Div B HPH Fleet"
+            },
+            {
+              "raceTitle": "Gibney - Div C IRC Fleet - Aug 15",
+              "name": "Div C IRC Fleet"
+            },
+            {
+              "raceTitle": "Gibney - Div C HPH Fleet - Aug 15",
+              "name": "Div C HPH Fleet"
+            },
+            {
+              "raceTitle": "Gibney - Puppeteer Scratch Fleet - Aug 15",
+              "name": "Puppeteer Scratch Fleet"
+            },
+            {
+              "raceTitle": "Gibney - Puppeteer HPH Fleet - Aug 15",
+              "name": "Puppeteer HPH Fleet"
+            },
+            {
+              "raceTitle": "Gibney - Howth 17 Scratch Fleet - Aug 15",
+              "name": "Howth 17 Scratch Fleet"
+            },
+            {
+              "raceTitle": "Gibney - Howth 17 HPH Fleet - Aug 15",
+              "name": "Howth 17 HPH Fleet"
+            },
+            {
+              "raceTitle": "Gibney - Squib Scratch Fleet - Aug 15",
+              "name": "Squib Scratch Fleet"
+            },
+            {
+              "raceTitle": "Gibney - Squib HPH Fleet - Aug 15",
+              "name": "Squib HPH Fleet"
+            }
+          ]
         }
       ]
     }

@@ -65,6 +65,22 @@ const CURRENT_SEASON_EVENTS = new Set([
   'hyc-2026-club-saturday-series-2',
   'hyc-2026-club-dinghy-series-1',
   'hyc-2026-club-dinghy-series-2',
+  // Club Series 3 (the dinghies sailed only two series) and the season-long
+  // Tuesday Puppeteer Overall: last updated by the club 30 Aug / 5 Sep 2026.
+  'hyc-2026-club-wednesday-series-3',
+  'hyc-2026-club-tuesday-series-3',
+  'hyc-2026-club-tuesday-saturday-series-3',
+  'hyc-2026-club-saturday-series-3',
+  'hyc-2026-club-tues-overall-puppeteer-22',
+  // Open events over by mid-August, their pages unchanged since.
+  'hyc-2026-open-fingal-cruiser-challenge',
+  'hyc-2026-open-howth-17-footer-nationals',
+  // One race each, published as race results — see
+  // as-published-race-results.json; their race-only pages carry several
+  // fleets apiece, split in as-published-race-sections.json.
+  'hyc-2026-open-lambay-races',
+  'hyc-2026-open-gibney-classic',
+  'hyc-2026-open-double-handed-race-2026',
 ]);
 
 const CAPTURE_ROOT = 'sources/reshyc/results.hyc.ie';
